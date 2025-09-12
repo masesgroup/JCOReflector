@@ -161,9 +161,13 @@ public class RuleExpressionWalker extends NetObject  {
     
     public static boolean Match(CodeExpression firstExpression, CodeExpression secondExpression) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMatch = null;
         try {
-            return (boolean)classType.Invoke("Match", firstExpression == null ? null : firstExpression.getJCOInstance(), secondExpression == null ? null : secondExpression.getJCOInstance());
+            retObjectMatch = classType.Invoke("Match", firstExpression == null ? null : firstExpression.getJCOInstance(), secondExpression == null ? null : secondExpression.getJCOInstance());
+            return (boolean)retObjectMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatch != null ? retObjectMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class RuleExpressionWalker extends NetObject  {
 
     public static CodeExpression Clone(CodeExpression originalExpression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classType.Invoke("Clone", originalExpression == null ? null : originalExpression.getJCOInstance());
+            retObjectClone = classType.Invoke("Clone", originalExpression == null ? null : originalExpression.getJCOInstance());
+            JCObject objClone = (JCObject)retObjectClone;
             return new CodeExpression(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class RuleExpressionWalker extends NetObject  {
 
     public static RuleExpressionInfo Validate(RuleValidation validation, CodeExpression expression, boolean isWritten) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectValidate = null;
         try {
-            JCObject objValidate = (JCObject)classType.Invoke("Validate", validation == null ? null : validation.getJCOInstance(), expression == null ? null : expression.getJCOInstance(), isWritten);
+            retObjectValidate = classType.Invoke("Validate", validation == null ? null : validation.getJCOInstance(), expression == null ? null : expression.getJCOInstance(), isWritten);
+            JCObject objValidate = (JCObject)retObjectValidate;
             return new RuleExpressionInfo(objValidate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,14 @@ public class RuleExpressionWalker extends NetObject  {
 
     public static RuleExpressionResult Evaluate(RuleExecution execution, CodeExpression expression) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEvaluate = null;
         try {
-            JCObject objEvaluate = (JCObject)classType.Invoke("Evaluate", execution == null ? null : execution.getJCOInstance(), expression == null ? null : expression.getJCOInstance());
+            retObjectEvaluate = classType.Invoke("Evaluate", execution == null ? null : execution.getJCOInstance(), expression == null ? null : expression.getJCOInstance());
+            JCObject objEvaluate = (JCObject)retObjectEvaluate;
             return new RuleExpressionResult(objEvaluate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvaluate != null ? retObjectEvaluate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +220,7 @@ public class RuleExpressionWalker extends NetObject  {
 
     public static void AnalyzeUsage(RuleAnalysis analysis, CodeExpression expression, boolean isRead, boolean isWritten, RulePathQualifier qualifier) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AnalyzeUsage", analysis == null ? null : analysis.getJCOInstance(), expression == null ? null : expression.getJCOInstance(), isRead, isWritten, qualifier == null ? null : qualifier.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -214,7 +230,7 @@ public class RuleExpressionWalker extends NetObject  {
 
     public static void Decompile(StringBuilder stringBuilder, CodeExpression expression, CodeExpression parentExpression) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Decompile", stringBuilder == null ? null : stringBuilder.getJCOInstance(), expression == null ? null : expression.getJCOInstance(), parentExpression == null ? null : parentExpression.getJCOInstance());
         } catch (JCNativeException jcne) {

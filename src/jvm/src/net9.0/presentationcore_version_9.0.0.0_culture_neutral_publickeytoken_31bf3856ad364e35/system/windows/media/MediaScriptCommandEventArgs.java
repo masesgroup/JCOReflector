@@ -160,9 +160,13 @@ public class MediaScriptCommandEventArgs extends EventArgs  {
     
     public java.lang.String getParameterType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterType = null;
         try {
-            return (java.lang.String)classInstance.Get("ParameterType");
+            retObjectParameterType = classInstance.Get("ParameterType");
+            return (java.lang.String)retObjectParameterType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectParameterType != null ? retObjectParameterType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class MediaScriptCommandEventArgs extends EventArgs  {
 
     public java.lang.String getParameterValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterValue = null;
         try {
-            return (java.lang.String)classInstance.Get("ParameterValue");
+            retObjectParameterValue = classInstance.Get("ParameterValue");
+            return (java.lang.String)retObjectParameterValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectParameterValue != null ? retObjectParameterValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

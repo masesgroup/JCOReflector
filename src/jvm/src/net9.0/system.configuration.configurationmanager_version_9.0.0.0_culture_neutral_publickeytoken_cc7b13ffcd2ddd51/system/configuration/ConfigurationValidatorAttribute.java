@@ -171,10 +171,14 @@ public class ConfigurationValidatorAttribute extends Attribute  {
     
     public ConfigurationValidatorBase getValidatorInstance() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidatorInstance = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidatorInstance");
+            retObjectValidatorInstance = classInstance.Get("ValidatorInstance");
+            JCObject val = (JCObject)retObjectValidatorInstance;
             return new ConfigurationValidatorBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidatorInstance != null ? retObjectValidatorInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class ConfigurationValidatorAttribute extends Attribute  {
 
     public NetType getValidatorType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidatorType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidatorType");
+            retObjectValidatorType = classInstance.Get("ValidatorType");
+            JCObject val = (JCObject)retObjectValidatorType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidatorType != null ? retObjectValidatorType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

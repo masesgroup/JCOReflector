@@ -160,10 +160,14 @@ public class IPInterfaceProperties extends NetObject  {
     
     public IPv4InterfaceProperties GetIPv4Properties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIPv4Properties = null;
         try {
-            JCObject objGetIPv4Properties = (JCObject)classInstance.Invoke("GetIPv4Properties");
+            retObjectGetIPv4Properties = classInstance.Invoke("GetIPv4Properties");
+            JCObject objGetIPv4Properties = (JCObject)retObjectGetIPv4Properties;
             return new IPv4InterfaceProperties(objGetIPv4Properties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIPv4Properties != null ? retObjectGetIPv4Properties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class IPInterfaceProperties extends NetObject  {
 
     public IPv6InterfaceProperties GetIPv6Properties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIPv6Properties = null;
         try {
-            JCObject objGetIPv6Properties = (JCObject)classInstance.Invoke("GetIPv6Properties");
+            retObjectGetIPv6Properties = classInstance.Invoke("GetIPv6Properties");
+            JCObject objGetIPv6Properties = (JCObject)retObjectGetIPv6Properties;
             return new IPv6InterfaceProperties(objGetIPv6Properties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIPv6Properties != null ? retObjectGetIPv6Properties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,13 @@ public class IPInterfaceProperties extends NetObject  {
     
     public boolean getIsDnsEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDnsEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsDnsEnabled");
+            retObjectIsDnsEnabled = classInstance.Get("IsDnsEnabled");
+            return (boolean)retObjectIsDnsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDnsEnabled != null ? retObjectIsDnsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +208,13 @@ public class IPInterfaceProperties extends NetObject  {
 
     public boolean getIsDynamicDnsEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDynamicDnsEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsDynamicDnsEnabled");
+            retObjectIsDynamicDnsEnabled = classInstance.Get("IsDynamicDnsEnabled");
+            return (boolean)retObjectIsDynamicDnsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDynamicDnsEnabled != null ? retObjectIsDynamicDnsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +222,14 @@ public class IPInterfaceProperties extends NetObject  {
 
     public GatewayIPAddressInformationCollection getGatewayAddresses() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGatewayAddresses = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GatewayAddresses");
+            retObjectGatewayAddresses = classInstance.Get("GatewayAddresses");
+            JCObject val = (JCObject)retObjectGatewayAddresses;
             return new GatewayIPAddressInformationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGatewayAddresses != null ? retObjectGatewayAddresses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +237,14 @@ public class IPInterfaceProperties extends NetObject  {
 
     public IPAddressCollection getDhcpServerAddresses() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDhcpServerAddresses = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DhcpServerAddresses");
+            retObjectDhcpServerAddresses = classInstance.Get("DhcpServerAddresses");
+            JCObject val = (JCObject)retObjectDhcpServerAddresses;
             return new IPAddressCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDhcpServerAddresses != null ? retObjectDhcpServerAddresses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +252,14 @@ public class IPInterfaceProperties extends NetObject  {
 
     public IPAddressCollection getDnsAddresses() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDnsAddresses = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DnsAddresses");
+            retObjectDnsAddresses = classInstance.Get("DnsAddresses");
+            JCObject val = (JCObject)retObjectDnsAddresses;
             return new IPAddressCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDnsAddresses != null ? retObjectDnsAddresses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +267,14 @@ public class IPInterfaceProperties extends NetObject  {
 
     public IPAddressCollection getWinsServersAddresses() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWinsServersAddresses = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WinsServersAddresses");
+            retObjectWinsServersAddresses = classInstance.Get("WinsServersAddresses");
+            JCObject val = (JCObject)retObjectWinsServersAddresses;
             return new IPAddressCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWinsServersAddresses != null ? retObjectWinsServersAddresses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +282,14 @@ public class IPInterfaceProperties extends NetObject  {
 
     public IPAddressInformationCollection getAnycastAddresses() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnycastAddresses = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AnycastAddresses");
+            retObjectAnycastAddresses = classInstance.Get("AnycastAddresses");
+            JCObject val = (JCObject)retObjectAnycastAddresses;
             return new IPAddressInformationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnycastAddresses != null ? retObjectAnycastAddresses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +297,14 @@ public class IPInterfaceProperties extends NetObject  {
 
     public MulticastIPAddressInformationCollection getMulticastAddresses() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMulticastAddresses = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MulticastAddresses");
+            retObjectMulticastAddresses = classInstance.Get("MulticastAddresses");
+            JCObject val = (JCObject)retObjectMulticastAddresses;
             return new MulticastIPAddressInformationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMulticastAddresses != null ? retObjectMulticastAddresses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,10 +312,14 @@ public class IPInterfaceProperties extends NetObject  {
 
     public UnicastIPAddressInformationCollection getUnicastAddresses() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnicastAddresses = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnicastAddresses");
+            retObjectUnicastAddresses = classInstance.Get("UnicastAddresses");
+            JCObject val = (JCObject)retObjectUnicastAddresses;
             return new UnicastIPAddressInformationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnicastAddresses != null ? retObjectUnicastAddresses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,9 +327,13 @@ public class IPInterfaceProperties extends NetObject  {
 
     public java.lang.String getDnsSuffix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDnsSuffix = null;
         try {
-            return (java.lang.String)classInstance.Get("DnsSuffix");
+            retObjectDnsSuffix = classInstance.Get("DnsSuffix");
+            return (java.lang.String)retObjectDnsSuffix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDnsSuffix != null ? retObjectDnsSuffix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

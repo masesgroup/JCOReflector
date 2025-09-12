@@ -174,9 +174,13 @@ public class Section extends Block  {
     
     public boolean ShouldSerializeBlocks(XamlDesignerSerializationManager manager) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeBlocks = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeBlocks", manager == null ? null : manager.getJCOInstance());
+            retObjectShouldSerializeBlocks = classInstance.Invoke("ShouldSerializeBlocks", manager == null ? null : manager.getJCOInstance());
+            return (boolean)retObjectShouldSerializeBlocks;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeBlocks != null ? retObjectShouldSerializeBlocks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +192,13 @@ public class Section extends Block  {
     
     public boolean getHasTrailingParagraphBreakOnPaste() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasTrailingParagraphBreakOnPaste = null;
         try {
-            return (boolean)classInstance.Get("HasTrailingParagraphBreakOnPaste");
+            retObjectHasTrailingParagraphBreakOnPaste = classInstance.Get("HasTrailingParagraphBreakOnPaste");
+            return (boolean)retObjectHasTrailingParagraphBreakOnPaste;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasTrailingParagraphBreakOnPaste != null ? retObjectHasTrailingParagraphBreakOnPaste.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class Section extends Block  {
 
     public void setHasTrailingParagraphBreakOnPaste(boolean HasTrailingParagraphBreakOnPaste) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HasTrailingParagraphBreakOnPaste", HasTrailingParagraphBreakOnPaste);
         } catch (JCNativeException jcne) {
@@ -208,10 +216,14 @@ public class Section extends Block  {
 
     public BlockCollection getBlocks() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBlocks = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Blocks");
+            retObjectBlocks = classInstance.Get("Blocks");
+            JCObject val = (JCObject)retObjectBlocks;
             return new BlockCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlocks != null ? retObjectBlocks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

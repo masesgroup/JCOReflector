@@ -162,10 +162,14 @@ public class DbProviderFactoriesConfigurationHandler extends NetObject  {
     
     public NetObject Create(NetObject parent, NetObject configContext, XmlNode section) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.OutOfMemoryException, system.data.DataException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classInstance.Invoke("Create", parent == null ? null : parent.getJCOInstance(), configContext == null ? null : configContext.getJCOInstance(), section == null ? null : section.getJCOInstance());
+            retObjectCreate = classInstance.Invoke("Create", parent == null ? null : parent.getJCOInstance(), configContext == null ? null : configContext.getJCOInstance(), section == null ? null : section.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new NetObject(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

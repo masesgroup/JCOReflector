@@ -159,10 +159,14 @@ public class CacheEntryChangeMonitor extends ChangeMonitor  {
     
     public DateTimeOffset getLastModified() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastModified = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastModified");
+            retObjectLastModified = classInstance.Get("LastModified");
+            JCObject val = (JCObject)retObjectLastModified;
             return new DateTimeOffset(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastModified != null ? retObjectLastModified.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class CacheEntryChangeMonitor extends ChangeMonitor  {
 
     public java.lang.String getRegionName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegionName = null;
         try {
-            return (java.lang.String)classInstance.Get("RegionName");
+            retObjectRegionName = classInstance.Get("RegionName");
+            return (java.lang.String)retObjectRegionName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRegionName != null ? retObjectRegionName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

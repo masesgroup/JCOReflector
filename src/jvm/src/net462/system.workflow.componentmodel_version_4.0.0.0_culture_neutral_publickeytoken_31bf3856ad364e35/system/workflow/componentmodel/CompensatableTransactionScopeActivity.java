@@ -181,7 +181,7 @@ public class CompensatableTransactionScopeActivity extends CompositeActivity imp
      */
     @Deprecated 
     public ActivityExecutionStatus Compensate(ActivityExecutionContext executionContext) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompensatableActivity to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompensatableActivity to obtain the full interface.");
     }
 
 
@@ -190,10 +190,14 @@ public class CompensatableTransactionScopeActivity extends CompositeActivity imp
     
     public WorkflowTransactionOptions getTransactionOptions() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactionOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransactionOptions");
+            retObjectTransactionOptions = classInstance.Get("TransactionOptions");
+            JCObject val = (JCObject)retObjectTransactionOptions;
             return new WorkflowTransactionOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransactionOptions != null ? retObjectTransactionOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +205,7 @@ public class CompensatableTransactionScopeActivity extends CompositeActivity imp
 
     public void setTransactionOptions(WorkflowTransactionOptions TransactionOptions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransactionOptions", TransactionOptions == null ? null : TransactionOptions.getJCOInstance());
         } catch (JCNativeException jcne) {

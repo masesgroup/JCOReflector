@@ -165,7 +165,7 @@ public class TextDataBindingHandler extends DataBindingHandler  {
     
     public void DataBindControl(IDesignerHost designerHost, Control control) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DataBindControl", designerHost == null ? null : designerHost.getJCOInstance(), control == null ? null : control.getJCOInstance());
         } catch (JCNativeException jcne) {

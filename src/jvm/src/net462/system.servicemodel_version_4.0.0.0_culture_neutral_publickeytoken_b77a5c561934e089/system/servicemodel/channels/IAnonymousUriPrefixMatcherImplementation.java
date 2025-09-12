@@ -143,7 +143,7 @@ public class IAnonymousUriPrefixMatcherImplementation extends NetObject implemen
     
     public void Register(Uri anonymousUriPrefix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Register", anonymousUriPrefix == null ? null : anonymousUriPrefix.getJCOInstance());
         } catch (JCNativeException jcne) {

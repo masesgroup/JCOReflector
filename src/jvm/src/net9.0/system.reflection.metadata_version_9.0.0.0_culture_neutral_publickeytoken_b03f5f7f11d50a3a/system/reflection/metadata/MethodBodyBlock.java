@@ -158,10 +158,12 @@ public class MethodBodyBlock extends NetObject  {
     
     public byte[] GetILBytes() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetILBytes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetILBytes");
+            retObjectGetILBytes = classInstance.Invoke("GetILBytes");
+            JCObject resultingObjects = (JCObject)retObjectGetILBytes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -170,6 +172,8 @@ public class MethodBodyBlock extends NetObject  {
 				resultingArray[indexGetILBytes] = (byte)resultingArrayList.get(indexGetILBytes);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetILBytes != null ? retObjectGetILBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class MethodBodyBlock extends NetObject  {
 
     public BlobReader GetILReader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetILReader = null;
         try {
-            JCObject objGetILReader = (JCObject)classInstance.Invoke("GetILReader");
+            retObjectGetILReader = classInstance.Invoke("GetILReader");
+            JCObject objGetILReader = (JCObject)retObjectGetILReader;
             return new BlobReader(objGetILReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetILReader != null ? retObjectGetILReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +196,14 @@ public class MethodBodyBlock extends NetObject  {
 
     public static MethodBodyBlock Create(BlobReader reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.RankException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", reader == null ? null : reader.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", reader == null ? null : reader.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new MethodBodyBlock(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +215,13 @@ public class MethodBodyBlock extends NetObject  {
     
     public boolean getLocalVariablesInitialized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalVariablesInitialized = null;
         try {
-            return (boolean)classInstance.Get("LocalVariablesInitialized");
+            retObjectLocalVariablesInitialized = classInstance.Get("LocalVariablesInitialized");
+            return (boolean)retObjectLocalVariablesInitialized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLocalVariablesInitialized != null ? retObjectLocalVariablesInitialized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +229,19 @@ public class MethodBodyBlock extends NetObject  {
 
     public int getMaxStack() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxStack = null;
         try {
-            return (int)classInstance.Get("MaxStack");
+            retObjectMaxStack = classInstance.Get("MaxStack");
+            return (int)retObjectMaxStack;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxStackNumber = (java.lang.Number)retObjectMaxStack;
+                return retObjectMaxStackNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxStack != null ? retObjectMaxStack.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +249,19 @@ public class MethodBodyBlock extends NetObject  {
 
     public int getSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            return (int)classInstance.Get("Size");
+            retObjectSize = classInstance.Get("Size");
+            return (int)retObjectSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSizeNumber = (java.lang.Number)retObjectSize;
+                return retObjectSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSize != null ? retObjectSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +269,14 @@ public class MethodBodyBlock extends NetObject  {
 
     public StandaloneSignatureHandle getLocalSignature() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalSignature = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalSignature");
+            retObjectLocalSignature = classInstance.Get("LocalSignature");
+            JCObject val = (JCObject)retObjectLocalSignature;
             return new StandaloneSignatureHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalSignature != null ? retObjectLocalSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

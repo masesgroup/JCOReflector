@@ -174,7 +174,7 @@ public class ServiceCreatorCallback extends JCDelegate implements IJCEventEmit, 
         } else if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
         } else
-            throw new UnsupportedOperationException(
+            throw new java.lang.UnsupportedOperationException(
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
@@ -188,10 +188,14 @@ public class ServiceCreatorCallback extends JCDelegate implements IJCEventEmit, 
 
     public NetObject DynamicInvoke(IServiceContainer container, NetType serviceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicInvoke = null;
         try {
-            JCObject objDynamicInvoke = (JCObject)classInstance.Invoke("DynamicInvoke", container == null ? null : container.getJCOInstance(), serviceType == null ? null : serviceType.getJCOInstance());
+            retObjectDynamicInvoke = classInstance.Invoke("DynamicInvoke", container == null ? null : container.getJCOInstance(), serviceType == null ? null : serviceType.getJCOInstance());
+            JCObject objDynamicInvoke = (JCObject)retObjectDynamicInvoke;
             return new NetObject(objDynamicInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamicInvoke != null ? retObjectDynamicInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

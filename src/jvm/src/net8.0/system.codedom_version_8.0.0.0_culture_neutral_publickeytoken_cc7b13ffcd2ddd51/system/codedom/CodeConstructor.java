@@ -167,10 +167,14 @@ public class CodeConstructor extends CodeMemberMethod  {
     
     public CodeExpressionCollection getBaseConstructorArgs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseConstructorArgs = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseConstructorArgs");
+            retObjectBaseConstructorArgs = classInstance.Get("BaseConstructorArgs");
+            JCObject val = (JCObject)retObjectBaseConstructorArgs;
             return new CodeExpressionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseConstructorArgs != null ? retObjectBaseConstructorArgs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class CodeConstructor extends CodeMemberMethod  {
 
     public CodeExpressionCollection getChainedConstructorArgs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChainedConstructorArgs = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ChainedConstructorArgs");
+            retObjectChainedConstructorArgs = classInstance.Get("ChainedConstructorArgs");
+            JCObject val = (JCObject)retObjectChainedConstructorArgs;
             return new CodeExpressionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChainedConstructorArgs != null ? retObjectChainedConstructorArgs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

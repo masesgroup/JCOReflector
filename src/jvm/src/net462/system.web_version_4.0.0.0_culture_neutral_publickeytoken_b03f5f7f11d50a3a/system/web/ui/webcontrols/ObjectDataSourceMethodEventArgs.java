@@ -172,10 +172,14 @@ public class ObjectDataSourceMethodEventArgs extends CancelEventArgs  {
     
     public IOrderedDictionary getInputParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InputParameters");
+            retObjectInputParameters = classInstance.Get("InputParameters");
+            JCObject val = (JCObject)retObjectInputParameters;
             return new IOrderedDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInputParameters != null ? retObjectInputParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

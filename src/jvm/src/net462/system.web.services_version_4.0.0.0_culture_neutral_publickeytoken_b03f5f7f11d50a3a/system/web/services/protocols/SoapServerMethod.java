@@ -181,9 +181,13 @@ public class SoapServerMethod extends NetObject  {
     
     public boolean getOneWay() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOneWay = null;
         try {
-            return (boolean)classInstance.Get("OneWay");
+            retObjectOneWay = classInstance.Get("OneWay");
+            return (boolean)retObjectOneWay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOneWay != null ? retObjectOneWay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +195,13 @@ public class SoapServerMethod extends NetObject  {
 
     public boolean getRpc() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRpc = null;
         try {
-            return (boolean)classInstance.Get("Rpc");
+            retObjectRpc = classInstance.Get("Rpc");
+            return (boolean)retObjectRpc;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRpc != null ? retObjectRpc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +209,13 @@ public class SoapServerMethod extends NetObject  {
 
     public java.lang.String getAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAction = null;
         try {
-            return (java.lang.String)classInstance.Get("Action");
+            retObjectAction = classInstance.Get("Action");
+            return (java.lang.String)retObjectAction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +223,14 @@ public class SoapServerMethod extends NetObject  {
 
     public SoapBindingUse getBindingUse() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingUse = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BindingUse");
+            retObjectBindingUse = classInstance.Get("BindingUse");
+            JCObject val = (JCObject)retObjectBindingUse;
             return new SoapBindingUse(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindingUse != null ? retObjectBindingUse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +238,14 @@ public class SoapServerMethod extends NetObject  {
 
     public LogicalMethodInfo getMethodInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MethodInfo");
+            retObjectMethodInfo = classInstance.Get("MethodInfo");
+            JCObject val = (JCObject)retObjectMethodInfo;
             return new LogicalMethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethodInfo != null ? retObjectMethodInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,16 +253,20 @@ public class SoapServerMethod extends NetObject  {
 
     public final SoapHeaderMapping[] getInHeaderMappings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInHeaderMappings = null;
         try {
             ArrayList<SoapHeaderMapping> resultingArrayList = new ArrayList<SoapHeaderMapping>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("InHeaderMappings");
+            retObjectInHeaderMappings = classInstance.Get("InHeaderMappings");
+            JCObject resultingObjects = (JCObject)retObjectInHeaderMappings;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new SoapHeaderMapping(resultingObject));
             }
             SoapHeaderMapping[] resultingArray = new SoapHeaderMapping[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInHeaderMappings != null ? retObjectInHeaderMappings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,16 +274,20 @@ public class SoapServerMethod extends NetObject  {
 
     public final SoapHeaderMapping[] getOutHeaderMappings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutHeaderMappings = null;
         try {
             ArrayList<SoapHeaderMapping> resultingArrayList = new ArrayList<SoapHeaderMapping>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("OutHeaderMappings");
+            retObjectOutHeaderMappings = classInstance.Get("OutHeaderMappings");
+            JCObject resultingObjects = (JCObject)retObjectOutHeaderMappings;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new SoapHeaderMapping(resultingObject));
             }
             SoapHeaderMapping[] resultingArray = new SoapHeaderMapping[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutHeaderMappings != null ? retObjectOutHeaderMappings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +295,14 @@ public class SoapServerMethod extends NetObject  {
 
     public SoapParameterStyle getParameterStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParameterStyle");
+            retObjectParameterStyle = classInstance.Get("ParameterStyle");
+            JCObject val = (JCObject)retObjectParameterStyle;
             return new SoapParameterStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameterStyle != null ? retObjectParameterStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +310,14 @@ public class SoapServerMethod extends NetObject  {
 
     public WsiProfiles getWsiClaims() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWsiClaims = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WsiClaims");
+            retObjectWsiClaims = classInstance.Get("WsiClaims");
+            JCObject val = (JCObject)retObjectWsiClaims;
             return new WsiProfiles(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWsiClaims != null ? retObjectWsiClaims.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,10 +325,14 @@ public class SoapServerMethod extends NetObject  {
 
     public XmlSerializer getInHeaderSerializer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInHeaderSerializer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InHeaderSerializer");
+            retObjectInHeaderSerializer = classInstance.Get("InHeaderSerializer");
+            JCObject val = (JCObject)retObjectInHeaderSerializer;
             return new XmlSerializer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInHeaderSerializer != null ? retObjectInHeaderSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,10 +340,14 @@ public class SoapServerMethod extends NetObject  {
 
     public XmlSerializer getOutHeaderSerializer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutHeaderSerializer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutHeaderSerializer");
+            retObjectOutHeaderSerializer = classInstance.Get("OutHeaderSerializer");
+            JCObject val = (JCObject)retObjectOutHeaderSerializer;
             return new XmlSerializer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutHeaderSerializer != null ? retObjectOutHeaderSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,10 +355,14 @@ public class SoapServerMethod extends NetObject  {
 
     public XmlSerializer getParameterSerializer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterSerializer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParameterSerializer");
+            retObjectParameterSerializer = classInstance.Get("ParameterSerializer");
+            JCObject val = (JCObject)retObjectParameterSerializer;
             return new XmlSerializer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameterSerializer != null ? retObjectParameterSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,10 +370,14 @@ public class SoapServerMethod extends NetObject  {
 
     public XmlSerializer getReturnSerializer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnSerializer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnSerializer");
+            retObjectReturnSerializer = classInstance.Get("ReturnSerializer");
+            JCObject val = (JCObject)retObjectReturnSerializer;
             return new XmlSerializer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturnSerializer != null ? retObjectReturnSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

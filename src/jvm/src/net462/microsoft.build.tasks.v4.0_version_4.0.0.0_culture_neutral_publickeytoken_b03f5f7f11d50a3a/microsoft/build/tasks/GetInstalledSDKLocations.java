@@ -164,9 +164,13 @@ public class GetInstalledSDKLocations extends TaskExtension  {
     
     public boolean Execute() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.OverflowException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,16 +182,20 @@ public class GetInstalledSDKLocations extends TaskExtension  {
     
     public final ITaskItem[] getInstalledSDKs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstalledSDKs = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("InstalledSDKs");
+            retObjectInstalledSDKs = classInstance.Get("InstalledSDKs");
+            JCObject resultingObjects = (JCObject)retObjectInstalledSDKs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstalledSDKs != null ? retObjectInstalledSDKs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class GetInstalledSDKLocations extends TaskExtension  {
 
     public void setInstalledSDKs(ITaskItem[] InstalledSDKs) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstalledSDKs", toObjectFromArray(InstalledSDKs));
         } catch (JCNativeException jcne) {
@@ -205,9 +213,13 @@ public class GetInstalledSDKLocations extends TaskExtension  {
 
     public java.lang.String getSDKRegistryRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSDKRegistryRoot = null;
         try {
-            return (java.lang.String)classInstance.Get("SDKRegistryRoot");
+            retObjectSDKRegistryRoot = classInstance.Get("SDKRegistryRoot");
+            return (java.lang.String)retObjectSDKRegistryRoot;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSDKRegistryRoot != null ? retObjectSDKRegistryRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class GetInstalledSDKLocations extends TaskExtension  {
 
     public void setSDKRegistryRoot(java.lang.String SDKRegistryRoot) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SDKRegistryRoot", SDKRegistryRoot);
         } catch (JCNativeException jcne) {
@@ -225,9 +237,13 @@ public class GetInstalledSDKLocations extends TaskExtension  {
 
     public java.lang.String getTargetPlatformIdentifier() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetPlatformIdentifier = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetPlatformIdentifier");
+            retObjectTargetPlatformIdentifier = classInstance.Get("TargetPlatformIdentifier");
+            return (java.lang.String)retObjectTargetPlatformIdentifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetPlatformIdentifier != null ? retObjectTargetPlatformIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +251,7 @@ public class GetInstalledSDKLocations extends TaskExtension  {
 
     public void setTargetPlatformIdentifier(java.lang.String TargetPlatformIdentifier) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetPlatformIdentifier", TargetPlatformIdentifier);
         } catch (JCNativeException jcne) {
@@ -245,9 +261,13 @@ public class GetInstalledSDKLocations extends TaskExtension  {
 
     public java.lang.String getTargetPlatformVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetPlatformVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetPlatformVersion");
+            retObjectTargetPlatformVersion = classInstance.Get("TargetPlatformVersion");
+            return (java.lang.String)retObjectTargetPlatformVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetPlatformVersion != null ? retObjectTargetPlatformVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +275,7 @@ public class GetInstalledSDKLocations extends TaskExtension  {
 
     public void setTargetPlatformVersion(java.lang.String TargetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetPlatformVersion", TargetPlatformVersion);
         } catch (JCNativeException jcne) {
@@ -265,10 +285,12 @@ public class GetInstalledSDKLocations extends TaskExtension  {
 
     public java.lang.String[] getSDKDirectoryRoots() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSDKDirectoryRoots = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SDKDirectoryRoots");
+            retObjectSDKDirectoryRoots = classInstance.Get("SDKDirectoryRoots");
+            JCObject resultingObjects = (JCObject)retObjectSDKDirectoryRoots;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -277,6 +299,8 @@ public class GetInstalledSDKLocations extends TaskExtension  {
 				resultingArray[indexSDKDirectoryRoots] = (java.lang.String)resultingArrayList.get(indexSDKDirectoryRoots);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectSDKDirectoryRoots != null ? retObjectSDKDirectoryRoots.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +308,7 @@ public class GetInstalledSDKLocations extends TaskExtension  {
 
     public void setSDKDirectoryRoots(java.lang.String[] SDKDirectoryRoots) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SDKDirectoryRoots", SDKDirectoryRoots);
         } catch (JCNativeException jcne) {

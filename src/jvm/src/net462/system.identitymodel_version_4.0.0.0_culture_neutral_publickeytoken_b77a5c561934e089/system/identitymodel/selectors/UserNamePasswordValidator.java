@@ -155,10 +155,14 @@ public class UserNamePasswordValidator extends NetObject  {
     
     public static UserNamePasswordValidator CreateMembershipProviderValidator(MembershipProvider provider) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMembershipProviderValidator = null;
         try {
-            JCObject objCreateMembershipProviderValidator = (JCObject)classType.Invoke("CreateMembershipProviderValidator", provider == null ? null : provider.getJCOInstance());
+            retObjectCreateMembershipProviderValidator = classType.Invoke("CreateMembershipProviderValidator", provider == null ? null : provider.getJCOInstance());
+            JCObject objCreateMembershipProviderValidator = (JCObject)retObjectCreateMembershipProviderValidator;
             return new UserNamePasswordValidator(objCreateMembershipProviderValidator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMembershipProviderValidator != null ? retObjectCreateMembershipProviderValidator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,7 +170,7 @@ public class UserNamePasswordValidator extends NetObject  {
 
     public void Validate(java.lang.String userName, java.lang.String password) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate", userName, password);
         } catch (JCNativeException jcne) {
@@ -180,10 +184,14 @@ public class UserNamePasswordValidator extends NetObject  {
     
     public static UserNamePasswordValidator getNone() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNone = null;
         try {
-            JCObject val = (JCObject)classType.Get("None");
+            retObjectNone = classType.Get("None");
+            JCObject val = (JCObject)retObjectNone;
             return new UserNamePasswordValidator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNone != null ? retObjectNone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

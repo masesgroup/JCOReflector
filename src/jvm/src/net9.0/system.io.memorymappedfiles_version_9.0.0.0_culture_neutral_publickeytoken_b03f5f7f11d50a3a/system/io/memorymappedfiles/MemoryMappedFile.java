@@ -166,10 +166,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
     
     public static MemoryMappedFile CreateFromFile(SafeFileHandle fileHandle, java.lang.String mapName, long capacity, MemoryMappedFileAccess access, HandleInheritability inheritability, boolean leaveOpen) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromFile = null;
         try {
-            JCObject objCreateFromFile = (JCObject)classType.Invoke("CreateFromFile", fileHandle == null ? null : fileHandle.getJCOInstance(), mapName, capacity, access == null ? null : access.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance(), leaveOpen);
+            retObjectCreateFromFile = classType.Invoke("CreateFromFile", fileHandle == null ? null : fileHandle.getJCOInstance(), mapName, capacity, access == null ? null : access.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance(), leaveOpen);
+            JCObject objCreateFromFile = (JCObject)retObjectCreateFromFile;
             return new MemoryMappedFile(objCreateFromFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromFile != null ? retObjectCreateFromFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public static MemoryMappedFile CreateFromFile(FileStream fileStream, java.lang.String mapName, long capacity, MemoryMappedFileAccess access, HandleInheritability inheritability, boolean leaveOpen) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromFile = null;
         try {
-            JCObject objCreateFromFile = (JCObject)classType.Invoke("CreateFromFile", fileStream == null ? null : fileStream.getJCOInstance(), mapName, capacity, access == null ? null : access.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance(), leaveOpen);
+            retObjectCreateFromFile = classType.Invoke("CreateFromFile", fileStream == null ? null : fileStream.getJCOInstance(), mapName, capacity, access == null ? null : access.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance(), leaveOpen);
+            JCObject objCreateFromFile = (JCObject)retObjectCreateFromFile;
             return new MemoryMappedFile(objCreateFromFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromFile != null ? retObjectCreateFromFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +196,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public static MemoryMappedFile CreateFromFile(java.lang.String path, FileMode mode, java.lang.String mapName, long capacity, MemoryMappedFileAccess access) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.runtime.serialization.SerializationException, system.io.IOException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromFile = null;
         try {
-            JCObject objCreateFromFile = (JCObject)classType.Invoke("CreateFromFile", path, mode == null ? null : mode.getJCOInstance(), mapName, capacity, access == null ? null : access.getJCOInstance());
+            retObjectCreateFromFile = classType.Invoke("CreateFromFile", path, mode == null ? null : mode.getJCOInstance(), mapName, capacity, access == null ? null : access.getJCOInstance());
+            JCObject objCreateFromFile = (JCObject)retObjectCreateFromFile;
             return new MemoryMappedFile(objCreateFromFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromFile != null ? retObjectCreateFromFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +211,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public static MemoryMappedFile CreateFromFile(java.lang.String path, FileMode mode, java.lang.String mapName, long capacity) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromFile = null;
         try {
-            JCObject objCreateFromFile = (JCObject)classType.Invoke("CreateFromFile", path, mode == null ? null : mode.getJCOInstance(), mapName, capacity);
+            retObjectCreateFromFile = classType.Invoke("CreateFromFile", path, mode == null ? null : mode.getJCOInstance(), mapName, capacity);
+            JCObject objCreateFromFile = (JCObject)retObjectCreateFromFile;
             return new MemoryMappedFile(objCreateFromFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromFile != null ? retObjectCreateFromFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +226,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public static MemoryMappedFile CreateFromFile(java.lang.String path, FileMode mode, java.lang.String mapName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromFile = null;
         try {
-            JCObject objCreateFromFile = (JCObject)classType.Invoke("CreateFromFile", path, mode == null ? null : mode.getJCOInstance(), mapName);
+            retObjectCreateFromFile = classType.Invoke("CreateFromFile", path, mode == null ? null : mode.getJCOInstance(), mapName);
+            JCObject objCreateFromFile = (JCObject)retObjectCreateFromFile;
             return new MemoryMappedFile(objCreateFromFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromFile != null ? retObjectCreateFromFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +241,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public static MemoryMappedFile CreateFromFile(java.lang.String path, FileMode mode) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromFile = null;
         try {
-            JCObject objCreateFromFile = (JCObject)classType.Invoke("CreateFromFile", path, mode == null ? null : mode.getJCOInstance());
+            retObjectCreateFromFile = classType.Invoke("CreateFromFile", path, mode == null ? null : mode.getJCOInstance());
+            JCObject objCreateFromFile = (JCObject)retObjectCreateFromFile;
             return new MemoryMappedFile(objCreateFromFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromFile != null ? retObjectCreateFromFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +256,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public static MemoryMappedFile CreateFromFile(java.lang.String path) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromFile = null;
         try {
-            JCObject objCreateFromFile = (JCObject)classType.Invoke("CreateFromFile", path);
+            retObjectCreateFromFile = classType.Invoke("CreateFromFile", path);
+            JCObject objCreateFromFile = (JCObject)retObjectCreateFromFile;
             return new MemoryMappedFile(objCreateFromFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromFile != null ? retObjectCreateFromFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +271,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public static MemoryMappedFile CreateNew(java.lang.String mapName, long capacity, MemoryMappedFileAccess access, MemoryMappedFileOptions options, HandleInheritability inheritability) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateNew = null;
         try {
-            JCObject objCreateNew = (JCObject)classType.Invoke("CreateNew", mapName, capacity, access == null ? null : access.getJCOInstance(), options == null ? null : options.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance());
+            retObjectCreateNew = classType.Invoke("CreateNew", mapName, capacity, access == null ? null : access.getJCOInstance(), options == null ? null : options.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance());
+            JCObject objCreateNew = (JCObject)retObjectCreateNew;
             return new MemoryMappedFile(objCreateNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateNew != null ? retObjectCreateNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +286,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public static MemoryMappedFile CreateNew(java.lang.String mapName, long capacity, MemoryMappedFileAccess access) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateNew = null;
         try {
-            JCObject objCreateNew = (JCObject)classType.Invoke("CreateNew", mapName, capacity, access == null ? null : access.getJCOInstance());
+            retObjectCreateNew = classType.Invoke("CreateNew", mapName, capacity, access == null ? null : access.getJCOInstance());
+            JCObject objCreateNew = (JCObject)retObjectCreateNew;
             return new MemoryMappedFile(objCreateNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateNew != null ? retObjectCreateNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +301,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public static MemoryMappedFile CreateNew(java.lang.String mapName, long capacity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateNew = null;
         try {
-            JCObject objCreateNew = (JCObject)classType.Invoke("CreateNew", mapName, capacity);
+            retObjectCreateNew = classType.Invoke("CreateNew", mapName, capacity);
+            JCObject objCreateNew = (JCObject)retObjectCreateNew;
             return new MemoryMappedFile(objCreateNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateNew != null ? retObjectCreateNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +316,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public static MemoryMappedFile CreateOrOpen(java.lang.String mapName, long capacity, MemoryMappedFileAccess access, MemoryMappedFileOptions options, HandleInheritability inheritability) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateOrOpen = null;
         try {
-            JCObject objCreateOrOpen = (JCObject)classType.Invoke("CreateOrOpen", mapName, capacity, access == null ? null : access.getJCOInstance(), options == null ? null : options.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance());
+            retObjectCreateOrOpen = classType.Invoke("CreateOrOpen", mapName, capacity, access == null ? null : access.getJCOInstance(), options == null ? null : options.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance());
+            JCObject objCreateOrOpen = (JCObject)retObjectCreateOrOpen;
             return new MemoryMappedFile(objCreateOrOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateOrOpen != null ? retObjectCreateOrOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +331,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public static MemoryMappedFile CreateOrOpen(java.lang.String mapName, long capacity, MemoryMappedFileAccess access) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateOrOpen = null;
         try {
-            JCObject objCreateOrOpen = (JCObject)classType.Invoke("CreateOrOpen", mapName, capacity, access == null ? null : access.getJCOInstance());
+            retObjectCreateOrOpen = classType.Invoke("CreateOrOpen", mapName, capacity, access == null ? null : access.getJCOInstance());
+            JCObject objCreateOrOpen = (JCObject)retObjectCreateOrOpen;
             return new MemoryMappedFile(objCreateOrOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateOrOpen != null ? retObjectCreateOrOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +346,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public static MemoryMappedFile CreateOrOpen(java.lang.String mapName, long capacity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateOrOpen = null;
         try {
-            JCObject objCreateOrOpen = (JCObject)classType.Invoke("CreateOrOpen", mapName, capacity);
+            retObjectCreateOrOpen = classType.Invoke("CreateOrOpen", mapName, capacity);
+            JCObject objCreateOrOpen = (JCObject)retObjectCreateOrOpen;
             return new MemoryMappedFile(objCreateOrOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateOrOpen != null ? retObjectCreateOrOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,10 +361,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public static MemoryMappedFile OpenExisting(java.lang.String mapName, MemoryMappedFileRights desiredAccessRights, HandleInheritability inheritability) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenExisting = null;
         try {
-            JCObject objOpenExisting = (JCObject)classType.Invoke("OpenExisting", mapName, desiredAccessRights == null ? null : desiredAccessRights.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance());
+            retObjectOpenExisting = classType.Invoke("OpenExisting", mapName, desiredAccessRights == null ? null : desiredAccessRights.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance());
+            JCObject objOpenExisting = (JCObject)retObjectOpenExisting;
             return new MemoryMappedFile(objOpenExisting);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenExisting != null ? retObjectOpenExisting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,10 +376,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public static MemoryMappedFile OpenExisting(java.lang.String mapName, MemoryMappedFileRights desiredAccessRights) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenExisting = null;
         try {
-            JCObject objOpenExisting = (JCObject)classType.Invoke("OpenExisting", mapName, desiredAccessRights == null ? null : desiredAccessRights.getJCOInstance());
+            retObjectOpenExisting = classType.Invoke("OpenExisting", mapName, desiredAccessRights == null ? null : desiredAccessRights.getJCOInstance());
+            JCObject objOpenExisting = (JCObject)retObjectOpenExisting;
             return new MemoryMappedFile(objOpenExisting);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenExisting != null ? retObjectOpenExisting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,10 +391,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public static MemoryMappedFile OpenExisting(java.lang.String mapName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenExisting = null;
         try {
-            JCObject objOpenExisting = (JCObject)classType.Invoke("OpenExisting", mapName);
+            retObjectOpenExisting = classType.Invoke("OpenExisting", mapName);
+            JCObject objOpenExisting = (JCObject)retObjectOpenExisting;
             return new MemoryMappedFile(objOpenExisting);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenExisting != null ? retObjectOpenExisting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,10 +406,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public MemoryMappedViewAccessor CreateViewAccessor() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateViewAccessor = null;
         try {
-            JCObject objCreateViewAccessor = (JCObject)classInstance.Invoke("CreateViewAccessor");
+            retObjectCreateViewAccessor = classInstance.Invoke("CreateViewAccessor");
+            JCObject objCreateViewAccessor = (JCObject)retObjectCreateViewAccessor;
             return new MemoryMappedViewAccessor(objCreateViewAccessor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateViewAccessor != null ? retObjectCreateViewAccessor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,10 +421,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public MemoryMappedViewAccessor CreateViewAccessor(long offset, long size, MemoryMappedFileAccess access) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateViewAccessor = null;
         try {
-            JCObject objCreateViewAccessor = (JCObject)classInstance.Invoke("CreateViewAccessor", offset, size, access == null ? null : access.getJCOInstance());
+            retObjectCreateViewAccessor = classInstance.Invoke("CreateViewAccessor", offset, size, access == null ? null : access.getJCOInstance());
+            JCObject objCreateViewAccessor = (JCObject)retObjectCreateViewAccessor;
             return new MemoryMappedViewAccessor(objCreateViewAccessor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateViewAccessor != null ? retObjectCreateViewAccessor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,10 +436,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public MemoryMappedViewAccessor CreateViewAccessor(long offset, long size) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateViewAccessor = null;
         try {
-            JCObject objCreateViewAccessor = (JCObject)classInstance.Invoke("CreateViewAccessor", offset, size);
+            retObjectCreateViewAccessor = classInstance.Invoke("CreateViewAccessor", offset, size);
+            JCObject objCreateViewAccessor = (JCObject)retObjectCreateViewAccessor;
             return new MemoryMappedViewAccessor(objCreateViewAccessor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateViewAccessor != null ? retObjectCreateViewAccessor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,10 +451,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public MemoryMappedViewStream CreateViewStream() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateViewStream = null;
         try {
-            JCObject objCreateViewStream = (JCObject)classInstance.Invoke("CreateViewStream");
+            retObjectCreateViewStream = classInstance.Invoke("CreateViewStream");
+            JCObject objCreateViewStream = (JCObject)retObjectCreateViewStream;
             return new MemoryMappedViewStream(objCreateViewStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateViewStream != null ? retObjectCreateViewStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,10 +466,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public MemoryMappedViewStream CreateViewStream(long offset, long size, MemoryMappedFileAccess access) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateViewStream = null;
         try {
-            JCObject objCreateViewStream = (JCObject)classInstance.Invoke("CreateViewStream", offset, size, access == null ? null : access.getJCOInstance());
+            retObjectCreateViewStream = classInstance.Invoke("CreateViewStream", offset, size, access == null ? null : access.getJCOInstance());
+            JCObject objCreateViewStream = (JCObject)retObjectCreateViewStream;
             return new MemoryMappedViewStream(objCreateViewStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateViewStream != null ? retObjectCreateViewStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,10 +481,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public MemoryMappedViewStream CreateViewStream(long offset, long size) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateViewStream = null;
         try {
-            JCObject objCreateViewStream = (JCObject)classInstance.Invoke("CreateViewStream", offset, size);
+            retObjectCreateViewStream = classInstance.Invoke("CreateViewStream", offset, size);
+            JCObject objCreateViewStream = (JCObject)retObjectCreateViewStream;
             return new MemoryMappedViewStream(objCreateViewStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateViewStream != null ? retObjectCreateViewStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,7 +496,7 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -419,7 +507,7 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -435,10 +523,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
     
     public SafeMemoryMappedFileHandle getSafeMemoryMappedFileHandle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSafeMemoryMappedFileHandle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SafeMemoryMappedFileHandle");
+            retObjectSafeMemoryMappedFileHandle = classInstance.Get("SafeMemoryMappedFileHandle");
+            JCObject val = (JCObject)retObjectSafeMemoryMappedFileHandle;
             return new SafeMemoryMappedFileHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSafeMemoryMappedFileHandle != null ? retObjectSafeMemoryMappedFileHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

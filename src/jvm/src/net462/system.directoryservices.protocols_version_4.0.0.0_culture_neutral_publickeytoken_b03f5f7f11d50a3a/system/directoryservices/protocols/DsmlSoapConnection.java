@@ -155,7 +155,7 @@ public class DsmlSoapConnection extends DirectoryConnection  {
     
     public void BeginSession() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginSession");
         } catch (JCNativeException jcne) {
@@ -165,7 +165,7 @@ public class DsmlSoapConnection extends DirectoryConnection  {
 
     public void EndSession() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndSession");
         } catch (JCNativeException jcne) {
@@ -179,9 +179,13 @@ public class DsmlSoapConnection extends DirectoryConnection  {
     
     public java.lang.String getSessionId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSessionId = null;
         try {
-            return (java.lang.String)classInstance.Get("SessionId");
+            retObjectSessionId = classInstance.Get("SessionId");
+            return (java.lang.String)retObjectSessionId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSessionId != null ? retObjectSessionId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +193,14 @@ public class DsmlSoapConnection extends DirectoryConnection  {
 
     public XmlNode getSoapRequestHeader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSoapRequestHeader = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SoapRequestHeader");
+            retObjectSoapRequestHeader = classInstance.Get("SoapRequestHeader");
+            JCObject val = (JCObject)retObjectSoapRequestHeader;
             return new XmlNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoapRequestHeader != null ? retObjectSoapRequestHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class DsmlSoapConnection extends DirectoryConnection  {
 
     public void setSoapRequestHeader(XmlNode SoapRequestHeader) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SoapRequestHeader", SoapRequestHeader == null ? null : SoapRequestHeader.getJCOInstance());
         } catch (JCNativeException jcne) {

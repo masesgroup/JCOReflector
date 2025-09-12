@@ -143,7 +143,7 @@ public class IInputLanguageSourceImplementation extends NetObject implements IIn
     
     public void Initialize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize");
         } catch (JCNativeException jcne) {
@@ -153,7 +153,7 @@ public class IInputLanguageSourceImplementation extends NetObject implements IIn
 
     public void Uninitialize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Uninitialize");
         } catch (JCNativeException jcne) {
@@ -167,10 +167,14 @@ public class IInputLanguageSourceImplementation extends NetObject implements IIn
     
     public IEnumerable getInputLanguageList() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputLanguageList = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InputLanguageList");
+            retObjectInputLanguageList = classInstance.Get("InputLanguageList");
+            JCObject val = (JCObject)retObjectInputLanguageList;
             return new IEnumerableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInputLanguageList != null ? retObjectInputLanguageList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class IInputLanguageSourceImplementation extends NetObject implements IIn
 
     public CultureInfo getCurrentInputLanguage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentInputLanguage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentInputLanguage");
+            retObjectCurrentInputLanguage = classInstance.Get("CurrentInputLanguage");
+            JCObject val = (JCObject)retObjectCurrentInputLanguage;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentInputLanguage != null ? retObjectCurrentInputLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class IInputLanguageSourceImplementation extends NetObject implements IIn
 
     public void setCurrentInputLanguage(CultureInfo CurrentInputLanguage) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentInputLanguage", CurrentInputLanguage == null ? null : CurrentInputLanguage.getJCOInstance());
         } catch (JCNativeException jcne) {

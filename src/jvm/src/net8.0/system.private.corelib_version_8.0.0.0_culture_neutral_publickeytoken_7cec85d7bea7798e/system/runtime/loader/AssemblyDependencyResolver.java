@@ -166,9 +166,13 @@ public class AssemblyDependencyResolver extends NetObject  {
     
     public java.lang.String ResolveAssemblyToPath(AssemblyName assemblyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveAssemblyToPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ResolveAssemblyToPath", assemblyName == null ? null : assemblyName.getJCOInstance());
+            retObjectResolveAssemblyToPath = classInstance.Invoke("ResolveAssemblyToPath", assemblyName == null ? null : assemblyName.getJCOInstance());
+            return (java.lang.String)retObjectResolveAssemblyToPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectResolveAssemblyToPath != null ? retObjectResolveAssemblyToPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class AssemblyDependencyResolver extends NetObject  {
 
     public java.lang.String ResolveUnmanagedDllToPath(java.lang.String unmanagedDllName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveUnmanagedDllToPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ResolveUnmanagedDllToPath", unmanagedDllName);
+            retObjectResolveUnmanagedDllToPath = classInstance.Invoke("ResolveUnmanagedDllToPath", unmanagedDllName);
+            return (java.lang.String)retObjectResolveUnmanagedDllToPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectResolveUnmanagedDllToPath != null ? retObjectResolveUnmanagedDllToPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

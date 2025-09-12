@@ -159,9 +159,13 @@ public class ResourceExpressionFields extends NetObject  {
     
     public java.lang.String getClassKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClassKey = null;
         try {
-            return (java.lang.String)classInstance.Get("ClassKey");
+            retObjectClassKey = classInstance.Get("ClassKey");
+            return (java.lang.String)retObjectClassKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClassKey != null ? retObjectClassKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class ResourceExpressionFields extends NetObject  {
 
     public java.lang.String getResourceKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourceKey = null;
         try {
-            return (java.lang.String)classInstance.Get("ResourceKey");
+            retObjectResourceKey = classInstance.Get("ResourceKey");
+            return (java.lang.String)retObjectResourceKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectResourceKey != null ? retObjectResourceKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

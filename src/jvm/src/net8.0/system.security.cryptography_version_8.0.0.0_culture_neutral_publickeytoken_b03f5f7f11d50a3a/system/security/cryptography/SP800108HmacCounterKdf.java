@@ -166,10 +166,12 @@ public class SP800108HmacCounterKdf extends NetObject implements AutoCloseable {
     
     public static byte[] DeriveBytes(byte[] key, HashAlgorithmName hashAlgorithm, byte[] label, byte[] context, int derivedKeyLengthInBytes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeriveBytes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("DeriveBytes", key, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), label, context, derivedKeyLengthInBytes);
+            retObjectDeriveBytes = classType.Invoke("DeriveBytes", key, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), label, context, derivedKeyLengthInBytes);
+            JCObject resultingObjects = (JCObject)retObjectDeriveBytes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -178,6 +180,8 @@ public class SP800108HmacCounterKdf extends NetObject implements AutoCloseable {
 				resultingArray[indexDeriveBytes] = (byte)resultingArrayList.get(indexDeriveBytes);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDeriveBytes != null ? retObjectDeriveBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +189,12 @@ public class SP800108HmacCounterKdf extends NetObject implements AutoCloseable {
 
     public static byte[] DeriveBytes(JCORefOut dupParam0, HashAlgorithmName dupParam1, JCORefOut dupParam2, JCORefOut dupParam3, int dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeriveBytes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("DeriveBytes", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut(), dupParam3.getJCRefOut(), dupParam4);
+            retObjectDeriveBytes = classType.Invoke("DeriveBytes", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut(), dupParam3.getJCRefOut(), dupParam4);
+            JCObject resultingObjects = (JCObject)retObjectDeriveBytes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -197,6 +203,8 @@ public class SP800108HmacCounterKdf extends NetObject implements AutoCloseable {
 				resultingArray[indexDeriveBytes] = (byte)resultingArrayList.get(indexDeriveBytes);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDeriveBytes != null ? retObjectDeriveBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +212,12 @@ public class SP800108HmacCounterKdf extends NetObject implements AutoCloseable {
 
     public static byte[] DeriveBytes(byte[] key, HashAlgorithmName hashAlgorithm, java.lang.String label, java.lang.String context, int derivedKeyLengthInBytes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeriveBytes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("DeriveBytes", key, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), label, context, derivedKeyLengthInBytes);
+            retObjectDeriveBytes = classType.Invoke("DeriveBytes", key, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), label, context, derivedKeyLengthInBytes);
+            JCObject resultingObjects = (JCObject)retObjectDeriveBytes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -216,6 +226,8 @@ public class SP800108HmacCounterKdf extends NetObject implements AutoCloseable {
 				resultingArray[indexDeriveBytes] = (byte)resultingArrayList.get(indexDeriveBytes);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDeriveBytes != null ? retObjectDeriveBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +235,12 @@ public class SP800108HmacCounterKdf extends NetObject implements AutoCloseable {
 
     public static byte[] DeriveBytes(JCORefOut dupParam0, HashAlgorithmName dupParam1, java.lang.String dupParam2, java.lang.String dupParam3, int dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeriveBytes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("DeriveBytes", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, dupParam3, dupParam4);
+            retObjectDeriveBytes = classType.Invoke("DeriveBytes", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, dupParam3, dupParam4);
+            JCObject resultingObjects = (JCObject)retObjectDeriveBytes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -235,6 +249,8 @@ public class SP800108HmacCounterKdf extends NetObject implements AutoCloseable {
 				resultingArray[indexDeriveBytes] = (byte)resultingArrayList.get(indexDeriveBytes);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDeriveBytes != null ? retObjectDeriveBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +258,12 @@ public class SP800108HmacCounterKdf extends NetObject implements AutoCloseable {
 
     public byte[] DeriveKey(byte[] label, byte[] context, int derivedKeyLengthInBytes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeriveKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DeriveKey", label, context, derivedKeyLengthInBytes);
+            retObjectDeriveKey = classInstance.Invoke("DeriveKey", label, context, derivedKeyLengthInBytes);
+            JCObject resultingObjects = (JCObject)retObjectDeriveKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -254,6 +272,8 @@ public class SP800108HmacCounterKdf extends NetObject implements AutoCloseable {
 				resultingArray[indexDeriveKey] = (byte)resultingArrayList.get(indexDeriveKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDeriveKey != null ? retObjectDeriveKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +281,12 @@ public class SP800108HmacCounterKdf extends NetObject implements AutoCloseable {
 
     public byte[] DeriveKey(JCORefOut dupParam0, JCORefOut dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeriveKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DeriveKey", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2);
+            retObjectDeriveKey = classInstance.Invoke("DeriveKey", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2);
+            JCObject resultingObjects = (JCObject)retObjectDeriveKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -273,6 +295,8 @@ public class SP800108HmacCounterKdf extends NetObject implements AutoCloseable {
 				resultingArray[indexDeriveKey] = (byte)resultingArrayList.get(indexDeriveKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDeriveKey != null ? retObjectDeriveKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +304,12 @@ public class SP800108HmacCounterKdf extends NetObject implements AutoCloseable {
 
     public byte[] DeriveKey(java.lang.String label, java.lang.String context, int derivedKeyLengthInBytes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeriveKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DeriveKey", label, context, derivedKeyLengthInBytes);
+            retObjectDeriveKey = classInstance.Invoke("DeriveKey", label, context, derivedKeyLengthInBytes);
+            JCObject resultingObjects = (JCObject)retObjectDeriveKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -292,6 +318,8 @@ public class SP800108HmacCounterKdf extends NetObject implements AutoCloseable {
 				resultingArray[indexDeriveKey] = (byte)resultingArrayList.get(indexDeriveKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDeriveKey != null ? retObjectDeriveKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +327,7 @@ public class SP800108HmacCounterKdf extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -310,7 +338,7 @@ public class SP800108HmacCounterKdf extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }

@@ -170,9 +170,13 @@ public class CompilerFeatureRequiredAttribute extends Attribute  {
     
     public boolean getIsOptional() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOptional = null;
         try {
-            return (boolean)classInstance.Get("IsOptional");
+            retObjectIsOptional = classInstance.Get("IsOptional");
+            return (boolean)retObjectIsOptional;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOptional != null ? retObjectIsOptional.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class CompilerFeatureRequiredAttribute extends Attribute  {
 
     public void setIsOptional(boolean IsOptional) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsOptional", IsOptional);
         } catch (JCNativeException jcne) {
@@ -190,9 +194,13 @@ public class CompilerFeatureRequiredAttribute extends Attribute  {
 
     public java.lang.String getFeatureName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFeatureName = null;
         try {
-            return (java.lang.String)classInstance.Get("FeatureName");
+            retObjectFeatureName = classInstance.Get("FeatureName");
+            return (java.lang.String)retObjectFeatureName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFeatureName != null ? retObjectFeatureName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

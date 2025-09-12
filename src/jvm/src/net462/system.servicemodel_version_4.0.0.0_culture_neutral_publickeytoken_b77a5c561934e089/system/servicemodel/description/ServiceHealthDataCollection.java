@@ -161,7 +161,7 @@ public class ServiceHealthDataCollection extends NetObjectEnumerable  {
     
     public void Add(java.lang.String key, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", key, value);
         } catch (JCNativeException jcne) {
@@ -171,7 +171,7 @@ public class ServiceHealthDataCollection extends NetObjectEnumerable  {
 
     public void Add(java.lang.String key, java.lang.String[] values) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", key, values);
         } catch (JCNativeException jcne) {
@@ -181,7 +181,7 @@ public class ServiceHealthDataCollection extends NetObjectEnumerable  {
 
     public void Add(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {

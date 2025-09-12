@@ -150,9 +150,13 @@ public class IValueSerializerContextImplementation extends NetObject implements 
     
     public boolean OnComponentChanging() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnComponentChanging = null;
         try {
-            return (boolean)classInstance.Invoke("OnComponentChanging");
+            retObjectOnComponentChanging = classInstance.Invoke("OnComponentChanging");
+            return (boolean)retObjectOnComponentChanging;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectOnComponentChanging != null ? retObjectOnComponentChanging.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,10 +164,14 @@ public class IValueSerializerContextImplementation extends NetObject implements 
 
     public NetObject GetService(NetType serviceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetService = null;
         try {
-            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            retObjectGetService = classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            JCObject objGetService = (JCObject)retObjectGetService;
             return new NetObject(objGetService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetService != null ? retObjectGetService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +179,14 @@ public class IValueSerializerContextImplementation extends NetObject implements 
 
     public ValueSerializer GetValueSerializerFor(PropertyDescriptor descriptor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValueSerializerFor = null;
         try {
-            JCObject objGetValueSerializerFor = (JCObject)classInstance.Invoke("GetValueSerializerFor", descriptor == null ? null : descriptor.getJCOInstance());
+            retObjectGetValueSerializerFor = classInstance.Invoke("GetValueSerializerFor", descriptor == null ? null : descriptor.getJCOInstance());
+            JCObject objGetValueSerializerFor = (JCObject)retObjectGetValueSerializerFor;
             return new ValueSerializer(objGetValueSerializerFor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValueSerializerFor != null ? retObjectGetValueSerializerFor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +194,14 @@ public class IValueSerializerContextImplementation extends NetObject implements 
 
     public ValueSerializer GetValueSerializerFor(NetType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValueSerializerFor = null;
         try {
-            JCObject objGetValueSerializerFor = (JCObject)classInstance.Invoke("GetValueSerializerFor", type == null ? null : type.getJCOInstance());
+            retObjectGetValueSerializerFor = classInstance.Invoke("GetValueSerializerFor", type == null ? null : type.getJCOInstance());
+            JCObject objGetValueSerializerFor = (JCObject)retObjectGetValueSerializerFor;
             return new ValueSerializer(objGetValueSerializerFor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValueSerializerFor != null ? retObjectGetValueSerializerFor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +209,7 @@ public class IValueSerializerContextImplementation extends NetObject implements 
 
     public void OnComponentChanged() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnComponentChanged");
         } catch (JCNativeException jcne) {
@@ -207,10 +223,14 @@ public class IValueSerializerContextImplementation extends NetObject implements 
     
     public IContainer getContainer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Container");
+            retObjectContainer = classInstance.Get("Container");
+            JCObject val = (JCObject)retObjectContainer;
             return new IContainerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContainer != null ? retObjectContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +238,14 @@ public class IValueSerializerContextImplementation extends NetObject implements 
 
     public PropertyDescriptor getPropertyDescriptor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyDescriptor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyDescriptor");
+            retObjectPropertyDescriptor = classInstance.Get("PropertyDescriptor");
+            JCObject val = (JCObject)retObjectPropertyDescriptor;
             return new PropertyDescriptor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyDescriptor != null ? retObjectPropertyDescriptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +253,14 @@ public class IValueSerializerContextImplementation extends NetObject implements 
 
     public NetObject getInstance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstance = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Instance");
+            retObjectInstance = classInstance.Get("Instance");
+            JCObject val = (JCObject)retObjectInstance;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstance != null ? retObjectInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

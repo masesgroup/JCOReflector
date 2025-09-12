@@ -188,9 +188,13 @@ public class DataGridBoolColumn extends DataGridColumnStyle  {
     
     public boolean getAllowNull() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowNull = null;
         try {
-            return (boolean)classInstance.Get("AllowNull");
+            retObjectAllowNull = classInstance.Get("AllowNull");
+            return (boolean)retObjectAllowNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowNull != null ? retObjectAllowNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +202,7 @@ public class DataGridBoolColumn extends DataGridColumnStyle  {
 
     public void setAllowNull(boolean AllowNull) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowNull", AllowNull);
         } catch (JCNativeException jcne) {
@@ -208,10 +212,14 @@ public class DataGridBoolColumn extends DataGridColumnStyle  {
 
     public NetObject getFalseValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFalseValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FalseValue");
+            retObjectFalseValue = classInstance.Get("FalseValue");
+            JCObject val = (JCObject)retObjectFalseValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFalseValue != null ? retObjectFalseValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +227,7 @@ public class DataGridBoolColumn extends DataGridColumnStyle  {
 
     public void setFalseValue(NetObject FalseValue) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FalseValue", FalseValue == null ? null : FalseValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -229,10 +237,14 @@ public class DataGridBoolColumn extends DataGridColumnStyle  {
 
     public NetObject getNullValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNullValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NullValue");
+            retObjectNullValue = classInstance.Get("NullValue");
+            JCObject val = (JCObject)retObjectNullValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNullValue != null ? retObjectNullValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +252,7 @@ public class DataGridBoolColumn extends DataGridColumnStyle  {
 
     public void setNullValue(NetObject NullValue) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NullValue", NullValue == null ? null : NullValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -250,10 +262,14 @@ public class DataGridBoolColumn extends DataGridColumnStyle  {
 
     public NetObject getTrueValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrueValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TrueValue");
+            retObjectTrueValue = classInstance.Get("TrueValue");
+            JCObject val = (JCObject)retObjectTrueValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrueValue != null ? retObjectTrueValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +277,7 @@ public class DataGridBoolColumn extends DataGridColumnStyle  {
 
     public void setTrueValue(NetObject TrueValue) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TrueValue", TrueValue == null ? null : TrueValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -276,7 +292,7 @@ public class DataGridBoolColumn extends DataGridColumnStyle  {
 
     public void addAllowNullChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AllowNullChanged", handler);
         } catch (JCNativeException jcne) {
@@ -286,7 +302,7 @@ public class DataGridBoolColumn extends DataGridColumnStyle  {
 
     public void removeAllowNullChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AllowNullChanged", handler);
         } catch (JCNativeException jcne) {
@@ -296,7 +312,7 @@ public class DataGridBoolColumn extends DataGridColumnStyle  {
 
     public void addFalseValueChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FalseValueChanged", handler);
         } catch (JCNativeException jcne) {
@@ -306,7 +322,7 @@ public class DataGridBoolColumn extends DataGridColumnStyle  {
 
     public void removeFalseValueChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FalseValueChanged", handler);
         } catch (JCNativeException jcne) {
@@ -316,7 +332,7 @@ public class DataGridBoolColumn extends DataGridColumnStyle  {
 
     public void addTrueValueChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TrueValueChanged", handler);
         } catch (JCNativeException jcne) {
@@ -326,7 +342,7 @@ public class DataGridBoolColumn extends DataGridColumnStyle  {
 
     public void removeTrueValueChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TrueValueChanged", handler);
         } catch (JCNativeException jcne) {

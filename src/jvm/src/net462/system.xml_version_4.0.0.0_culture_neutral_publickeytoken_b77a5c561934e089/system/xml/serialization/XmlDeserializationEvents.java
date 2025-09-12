@@ -164,9 +164,13 @@ public class XmlDeserializationEvents extends ValueType  {
     
     public UnreferencedObjectEventHandler getOnUnreferencedObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnUnreferencedObject = null;
         try {
-            return (UnreferencedObjectEventHandler)classInstance.Get("OnUnreferencedObject");
+            retObjectOnUnreferencedObject = classInstance.Get("OnUnreferencedObject");
+            return (UnreferencedObjectEventHandler)retObjectOnUnreferencedObject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into UnreferencedObjectEventHandler", retObjectOnUnreferencedObject != null ? retObjectOnUnreferencedObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +178,7 @@ public class XmlDeserializationEvents extends ValueType  {
 
     public void setOnUnreferencedObject(UnreferencedObjectEventHandler OnUnreferencedObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OnUnreferencedObject", OnUnreferencedObject);
         } catch (JCNativeException jcne) {
@@ -184,9 +188,13 @@ public class XmlDeserializationEvents extends ValueType  {
 
     public XmlAttributeEventHandler getOnUnknownAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnUnknownAttribute = null;
         try {
-            return (XmlAttributeEventHandler)classInstance.Get("OnUnknownAttribute");
+            retObjectOnUnknownAttribute = classInstance.Get("OnUnknownAttribute");
+            return (XmlAttributeEventHandler)retObjectOnUnknownAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into XmlAttributeEventHandler", retObjectOnUnknownAttribute != null ? retObjectOnUnknownAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +202,7 @@ public class XmlDeserializationEvents extends ValueType  {
 
     public void setOnUnknownAttribute(XmlAttributeEventHandler OnUnknownAttribute) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OnUnknownAttribute", OnUnknownAttribute);
         } catch (JCNativeException jcne) {
@@ -204,9 +212,13 @@ public class XmlDeserializationEvents extends ValueType  {
 
     public XmlElementEventHandler getOnUnknownElement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnUnknownElement = null;
         try {
-            return (XmlElementEventHandler)classInstance.Get("OnUnknownElement");
+            retObjectOnUnknownElement = classInstance.Get("OnUnknownElement");
+            return (XmlElementEventHandler)retObjectOnUnknownElement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into XmlElementEventHandler", retObjectOnUnknownElement != null ? retObjectOnUnknownElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +226,7 @@ public class XmlDeserializationEvents extends ValueType  {
 
     public void setOnUnknownElement(XmlElementEventHandler OnUnknownElement) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OnUnknownElement", OnUnknownElement);
         } catch (JCNativeException jcne) {
@@ -224,9 +236,13 @@ public class XmlDeserializationEvents extends ValueType  {
 
     public XmlNodeEventHandler getOnUnknownNode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnUnknownNode = null;
         try {
-            return (XmlNodeEventHandler)classInstance.Get("OnUnknownNode");
+            retObjectOnUnknownNode = classInstance.Get("OnUnknownNode");
+            return (XmlNodeEventHandler)retObjectOnUnknownNode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into XmlNodeEventHandler", retObjectOnUnknownNode != null ? retObjectOnUnknownNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +250,7 @@ public class XmlDeserializationEvents extends ValueType  {
 
     public void setOnUnknownNode(XmlNodeEventHandler OnUnknownNode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OnUnknownNode", OnUnknownNode);
         } catch (JCNativeException jcne) {

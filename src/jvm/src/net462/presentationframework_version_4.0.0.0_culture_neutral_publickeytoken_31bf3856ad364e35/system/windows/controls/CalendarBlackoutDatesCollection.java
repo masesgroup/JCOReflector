@@ -168,9 +168,13 @@ public class CalendarBlackoutDatesCollection extends NetObjectEnumerable  {
     
     public boolean Contains(DateTime date) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", date == null ? null : date.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", date == null ? null : date.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class CalendarBlackoutDatesCollection extends NetObjectEnumerable  {
 
     public boolean Contains(DateTime start, DateTime end) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", start == null ? null : start.getJCOInstance(), end == null ? null : end.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", start == null ? null : start.getJCOInstance(), end == null ? null : end.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +196,13 @@ public class CalendarBlackoutDatesCollection extends NetObjectEnumerable  {
 
     public boolean ContainsAny(CalendarDateRange range) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsAny = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsAny", range == null ? null : range.getJCOInstance());
+            retObjectContainsAny = classInstance.Invoke("ContainsAny", range == null ? null : range.getJCOInstance());
+            return (boolean)retObjectContainsAny;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsAny != null ? retObjectContainsAny.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +210,7 @@ public class CalendarBlackoutDatesCollection extends NetObjectEnumerable  {
 
     public void AddDatesInPast() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddDatesInPast");
         } catch (JCNativeException jcne) {

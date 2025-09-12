@@ -143,10 +143,14 @@ public class IEditableCollectionViewImplementation extends NetObject implements 
     
     public NetObject AddNew() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddNew = null;
         try {
-            JCObject objAddNew = (JCObject)classInstance.Invoke("AddNew");
+            retObjectAddNew = classInstance.Invoke("AddNew");
+            JCObject objAddNew = (JCObject)retObjectAddNew;
             return new NetObject(objAddNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddNew != null ? retObjectAddNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,7 +158,7 @@ public class IEditableCollectionViewImplementation extends NetObject implements 
 
     public void CancelEdit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelEdit");
         } catch (JCNativeException jcne) {
@@ -164,7 +168,7 @@ public class IEditableCollectionViewImplementation extends NetObject implements 
 
     public void CancelNew() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelNew");
         } catch (JCNativeException jcne) {
@@ -174,7 +178,7 @@ public class IEditableCollectionViewImplementation extends NetObject implements 
 
     public void CommitEdit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CommitEdit");
         } catch (JCNativeException jcne) {
@@ -184,7 +188,7 @@ public class IEditableCollectionViewImplementation extends NetObject implements 
 
     public void CommitNew() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CommitNew");
         } catch (JCNativeException jcne) {
@@ -194,7 +198,7 @@ public class IEditableCollectionViewImplementation extends NetObject implements 
 
     public void EditItem(NetObject item) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EditItem", item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,7 +208,7 @@ public class IEditableCollectionViewImplementation extends NetObject implements 
 
     public void Remove(NetObject item) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -214,7 +218,7 @@ public class IEditableCollectionViewImplementation extends NetObject implements 
 
     public void RemoveAt(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", index);
         } catch (JCNativeException jcne) {
@@ -228,9 +232,13 @@ public class IEditableCollectionViewImplementation extends NetObject implements 
     
     public boolean getCanAddNew() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanAddNew = null;
         try {
-            return (boolean)classInstance.Get("CanAddNew");
+            retObjectCanAddNew = classInstance.Get("CanAddNew");
+            return (boolean)retObjectCanAddNew;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanAddNew != null ? retObjectCanAddNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,9 +246,13 @@ public class IEditableCollectionViewImplementation extends NetObject implements 
 
     public boolean getCanCancelEdit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCancelEdit = null;
         try {
-            return (boolean)classInstance.Get("CanCancelEdit");
+            retObjectCanCancelEdit = classInstance.Get("CanCancelEdit");
+            return (boolean)retObjectCanCancelEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanCancelEdit != null ? retObjectCanCancelEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,9 +260,13 @@ public class IEditableCollectionViewImplementation extends NetObject implements 
 
     public boolean getCanRemove() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRemove = null;
         try {
-            return (boolean)classInstance.Get("CanRemove");
+            retObjectCanRemove = classInstance.Get("CanRemove");
+            return (boolean)retObjectCanRemove;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanRemove != null ? retObjectCanRemove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,9 +274,13 @@ public class IEditableCollectionViewImplementation extends NetObject implements 
 
     public boolean getIsAddingNew() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAddingNew = null;
         try {
-            return (boolean)classInstance.Get("IsAddingNew");
+            retObjectIsAddingNew = classInstance.Get("IsAddingNew");
+            return (boolean)retObjectIsAddingNew;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAddingNew != null ? retObjectIsAddingNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,9 +288,13 @@ public class IEditableCollectionViewImplementation extends NetObject implements 
 
     public boolean getIsEditingItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEditingItem = null;
         try {
-            return (boolean)classInstance.Get("IsEditingItem");
+            retObjectIsEditingItem = classInstance.Get("IsEditingItem");
+            return (boolean)retObjectIsEditingItem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEditingItem != null ? retObjectIsEditingItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +302,14 @@ public class IEditableCollectionViewImplementation extends NetObject implements 
 
     public NewItemPlaceholderPosition getNewItemPlaceholderPosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewItemPlaceholderPosition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewItemPlaceholderPosition");
+            retObjectNewItemPlaceholderPosition = classInstance.Get("NewItemPlaceholderPosition");
+            JCObject val = (JCObject)retObjectNewItemPlaceholderPosition;
             return new NewItemPlaceholderPosition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewItemPlaceholderPosition != null ? retObjectNewItemPlaceholderPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +317,7 @@ public class IEditableCollectionViewImplementation extends NetObject implements 
 
     public void setNewItemPlaceholderPosition(NewItemPlaceholderPosition NewItemPlaceholderPosition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewItemPlaceholderPosition", NewItemPlaceholderPosition == null ? null : NewItemPlaceholderPosition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -299,10 +327,14 @@ public class IEditableCollectionViewImplementation extends NetObject implements 
 
     public NetObject getCurrentAddItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentAddItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentAddItem");
+            retObjectCurrentAddItem = classInstance.Get("CurrentAddItem");
+            JCObject val = (JCObject)retObjectCurrentAddItem;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentAddItem != null ? retObjectCurrentAddItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,10 +342,14 @@ public class IEditableCollectionViewImplementation extends NetObject implements 
 
     public NetObject getCurrentEditItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentEditItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentEditItem");
+            retObjectCurrentEditItem = classInstance.Get("CurrentEditItem");
+            JCObject val = (JCObject)retObjectCurrentEditItem;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentEditItem != null ? retObjectCurrentEditItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

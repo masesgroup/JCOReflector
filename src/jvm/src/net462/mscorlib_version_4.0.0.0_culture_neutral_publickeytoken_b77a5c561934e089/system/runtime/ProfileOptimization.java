@@ -153,7 +153,7 @@ public class ProfileOptimization extends NetObject  {
     
     public static void SetProfileRoot(java.lang.String directoryPath) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetProfileRoot", directoryPath);
         } catch (JCNativeException jcne) {
@@ -163,7 +163,7 @@ public class ProfileOptimization extends NetObject  {
 
     public static void StartProfile(java.lang.String profile) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("StartProfile", profile);
         } catch (JCNativeException jcne) {

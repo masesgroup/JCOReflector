@@ -171,7 +171,7 @@ public class XamlSetTypeConverterEventArgs extends XamlSetValueEventArgs  {
     
     public void CallBase() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.xaml.XamlSchemaException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CallBase");
         } catch (JCNativeException jcne) {
@@ -185,10 +185,14 @@ public class XamlSetTypeConverterEventArgs extends XamlSetValueEventArgs  {
     
     public ITypeDescriptorContext getServiceProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceProvider");
+            retObjectServiceProvider = classInstance.Get("ServiceProvider");
+            JCObject val = (JCObject)retObjectServiceProvider;
             return new ITypeDescriptorContextImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceProvider != null ? retObjectServiceProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +200,7 @@ public class XamlSetTypeConverterEventArgs extends XamlSetValueEventArgs  {
 
     public void setServiceProvider(ITypeDescriptorContext ServiceProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServiceProvider", ServiceProvider == null ? null : ServiceProvider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -206,10 +210,14 @@ public class XamlSetTypeConverterEventArgs extends XamlSetValueEventArgs  {
 
     public TypeConverter getTypeConverter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeConverter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeConverter");
+            retObjectTypeConverter = classInstance.Get("TypeConverter");
+            JCObject val = (JCObject)retObjectTypeConverter;
             return new TypeConverter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeConverter != null ? retObjectTypeConverter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +225,7 @@ public class XamlSetTypeConverterEventArgs extends XamlSetValueEventArgs  {
 
     public void setTypeConverter(TypeConverter TypeConverter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypeConverter", TypeConverter == null ? null : TypeConverter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -227,10 +235,14 @@ public class XamlSetTypeConverterEventArgs extends XamlSetValueEventArgs  {
 
     public CultureInfo getCultureInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCultureInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CultureInfo");
+            retObjectCultureInfo = classInstance.Get("CultureInfo");
+            JCObject val = (JCObject)retObjectCultureInfo;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCultureInfo != null ? retObjectCultureInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +250,7 @@ public class XamlSetTypeConverterEventArgs extends XamlSetValueEventArgs  {
 
     public void setCultureInfo(CultureInfo CultureInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CultureInfo", CultureInfo == null ? null : CultureInfo.getJCOInstance());
         } catch (JCNativeException jcne) {

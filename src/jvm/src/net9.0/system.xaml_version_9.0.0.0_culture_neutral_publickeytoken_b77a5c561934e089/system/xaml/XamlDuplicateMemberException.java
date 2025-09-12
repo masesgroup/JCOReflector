@@ -184,7 +184,7 @@ public class XamlDuplicateMemberException extends XamlException {
     
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,10 +198,14 @@ public class XamlDuplicateMemberException extends XamlException {
     
     public XamlMember getDuplicateMember() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDuplicateMember = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DuplicateMember");
+            retObjectDuplicateMember = classInstance.Get("DuplicateMember");
+            JCObject val = (JCObject)retObjectDuplicateMember;
             return new XamlMember(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDuplicateMember != null ? retObjectDuplicateMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +213,7 @@ public class XamlDuplicateMemberException extends XamlException {
 
     public void setDuplicateMember(XamlMember DuplicateMember) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DuplicateMember", DuplicateMember == null ? null : DuplicateMember.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -219,10 +223,14 @@ public class XamlDuplicateMemberException extends XamlException {
 
     public XamlType getParentType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParentType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParentType");
+            retObjectParentType = classInstance.Get("ParentType");
+            JCObject val = (JCObject)retObjectParentType;
             return new XamlType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParentType != null ? retObjectParentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +238,7 @@ public class XamlDuplicateMemberException extends XamlException {
 
     public void setParentType(XamlType ParentType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParentType", ParentType == null ? null : ParentType.getJCOInstance());
         } catch (JCNativeException jcne) {

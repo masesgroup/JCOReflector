@@ -157,10 +157,14 @@ public class Queryable extends NetObject  {
     
     public static IQueryable AsQueryable(IEnumerable source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsQueryable = null;
         try {
-            JCObject objAsQueryable = (JCObject)classType.Invoke("AsQueryable", source == null ? null : source.getJCOInstance());
+            retObjectAsQueryable = classType.Invoke("AsQueryable", source == null ? null : source.getJCOInstance());
+            JCObject objAsQueryable = (JCObject)retObjectAsQueryable;
             return new IQueryableImplementation(objAsQueryable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsQueryable != null ? retObjectAsQueryable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

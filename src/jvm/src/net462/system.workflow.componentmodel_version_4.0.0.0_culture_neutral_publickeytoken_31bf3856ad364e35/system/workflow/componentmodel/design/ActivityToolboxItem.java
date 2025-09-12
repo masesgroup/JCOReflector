@@ -177,16 +177,20 @@ public class ActivityToolboxItem extends ToolboxItem  {
     
     public IComponent[] CreateComponentsWithUI(IDesignerHost host) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateComponentsWithUI = null;
         try {
             ArrayList<IComponent> resultingArrayList = new ArrayList<IComponent>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateComponentsWithUI", host == null ? null : host.getJCOInstance());
+            retObjectCreateComponentsWithUI = classInstance.Invoke("CreateComponentsWithUI", host == null ? null : host.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectCreateComponentsWithUI;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IComponentImplementation(resultingObject));
             }
             IComponent[] resultingArray = new IComponent[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateComponentsWithUI != null ? retObjectCreateComponentsWithUI.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +198,14 @@ public class ActivityToolboxItem extends ToolboxItem  {
 
     public static Image GetToolboxImage(NetType activityType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetToolboxImage = null;
         try {
-            JCObject objGetToolboxImage = (JCObject)classType.Invoke("GetToolboxImage", activityType == null ? null : activityType.getJCOInstance());
+            retObjectGetToolboxImage = classType.Invoke("GetToolboxImage", activityType == null ? null : activityType.getJCOInstance());
+            JCObject objGetToolboxImage = (JCObject)retObjectGetToolboxImage;
             return new Image(objGetToolboxImage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetToolboxImage != null ? retObjectGetToolboxImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +213,13 @@ public class ActivityToolboxItem extends ToolboxItem  {
 
     public static java.lang.String GetToolboxDisplayName(NetType activityType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetToolboxDisplayName = null;
         try {
-            return (java.lang.String)classType.Invoke("GetToolboxDisplayName", activityType == null ? null : activityType.getJCOInstance());
+            retObjectGetToolboxDisplayName = classType.Invoke("GetToolboxDisplayName", activityType == null ? null : activityType.getJCOInstance());
+            return (java.lang.String)retObjectGetToolboxDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetToolboxDisplayName != null ? retObjectGetToolboxDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

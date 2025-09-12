@@ -142,7 +142,7 @@ public class IEventImplementation extends NetObject implements IEvent {
     
     public void Fire() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Fire");
         } catch (JCNativeException jcne) {

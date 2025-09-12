@@ -156,10 +156,14 @@ public class DebugInfoGenerator extends NetObject  {
     
     public static DebugInfoGenerator CreatePdbGenerator() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePdbGenerator = null;
         try {
-            JCObject objCreatePdbGenerator = (JCObject)classType.Invoke("CreatePdbGenerator");
+            retObjectCreatePdbGenerator = classType.Invoke("CreatePdbGenerator");
+            JCObject objCreatePdbGenerator = (JCObject)retObjectCreatePdbGenerator;
             return new DebugInfoGenerator(objCreatePdbGenerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePdbGenerator != null ? retObjectCreatePdbGenerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class DebugInfoGenerator extends NetObject  {
 
     public void MarkSequencePoint(LambdaExpression method, int ilOffset, DebugInfoExpression sequencePoint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MarkSequencePoint", method == null ? null : method.getJCOInstance(), ilOffset, sequencePoint == null ? null : sequencePoint.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -171,10 +171,14 @@ public class WebPartEventArgs extends EventArgs  {
     
     public WebPart getWebPart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebPart = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WebPart");
+            retObjectWebPart = classInstance.Get("WebPart");
+            JCObject val = (JCObject)retObjectWebPart;
             return new WebPart(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebPart != null ? retObjectWebPart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

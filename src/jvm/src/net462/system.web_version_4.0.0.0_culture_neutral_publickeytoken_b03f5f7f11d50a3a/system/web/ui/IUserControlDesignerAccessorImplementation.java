@@ -146,9 +146,13 @@ public class IUserControlDesignerAccessorImplementation extends NetObject implem
     
     public java.lang.String getInnerText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInnerText = null;
         try {
-            return (java.lang.String)classInstance.Get("InnerText");
+            retObjectInnerText = classInstance.Get("InnerText");
+            return (java.lang.String)retObjectInnerText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInnerText != null ? retObjectInnerText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,7 +160,7 @@ public class IUserControlDesignerAccessorImplementation extends NetObject implem
 
     public void setInnerText(java.lang.String InnerText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InnerText", InnerText);
         } catch (JCNativeException jcne) {
@@ -166,9 +170,13 @@ public class IUserControlDesignerAccessorImplementation extends NetObject implem
 
     public java.lang.String getTagName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTagName = null;
         try {
-            return (java.lang.String)classInstance.Get("TagName");
+            retObjectTagName = classInstance.Get("TagName");
+            return (java.lang.String)retObjectTagName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTagName != null ? retObjectTagName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +184,7 @@ public class IUserControlDesignerAccessorImplementation extends NetObject implem
 
     public void setTagName(java.lang.String TagName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TagName", TagName);
         } catch (JCNativeException jcne) {

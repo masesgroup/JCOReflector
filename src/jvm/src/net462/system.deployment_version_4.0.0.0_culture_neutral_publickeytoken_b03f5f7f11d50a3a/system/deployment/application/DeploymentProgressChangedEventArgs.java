@@ -161,9 +161,19 @@ public class DeploymentProgressChangedEventArgs extends ProgressChangedEventArgs
     
     public long getBytesCompleted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBytesCompleted = null;
         try {
-            return (long)classInstance.Get("BytesCompleted");
+            retObjectBytesCompleted = classInstance.Get("BytesCompleted");
+            return (long)retObjectBytesCompleted;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBytesCompletedNumber = (java.lang.Number)retObjectBytesCompleted;
+                return retObjectBytesCompletedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectBytesCompleted != null ? retObjectBytesCompleted.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +181,19 @@ public class DeploymentProgressChangedEventArgs extends ProgressChangedEventArgs
 
     public long getBytesTotal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBytesTotal = null;
         try {
-            return (long)classInstance.Get("BytesTotal");
+            retObjectBytesTotal = classInstance.Get("BytesTotal");
+            return (long)retObjectBytesTotal;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBytesTotalNumber = (java.lang.Number)retObjectBytesTotal;
+                return retObjectBytesTotalNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectBytesTotal != null ? retObjectBytesTotal.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +201,14 @@ public class DeploymentProgressChangedEventArgs extends ProgressChangedEventArgs
 
     public DeploymentProgressState getState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("State");
+            retObjectState = classInstance.Get("State");
+            JCObject val = (JCObject)retObjectState;
             return new DeploymentProgressState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectState != null ? retObjectState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +216,13 @@ public class DeploymentProgressChangedEventArgs extends ProgressChangedEventArgs
 
     public java.lang.String getGroup() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroup = null;
         try {
-            return (java.lang.String)classInstance.Get("Group");
+            retObjectGroup = classInstance.Get("Group");
+            return (java.lang.String)retObjectGroup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGroup != null ? retObjectGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

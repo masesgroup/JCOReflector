@@ -143,10 +143,14 @@ public class IComponentEditorPageSiteImplementation extends NetObject implements
     
     public Control GetControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetControl = null;
         try {
-            JCObject objGetControl = (JCObject)classInstance.Invoke("GetControl");
+            retObjectGetControl = classInstance.Invoke("GetControl");
+            JCObject objGetControl = (JCObject)retObjectGetControl;
             return new Control(objGetControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetControl != null ? retObjectGetControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,7 +158,7 @@ public class IComponentEditorPageSiteImplementation extends NetObject implements
 
     public void SetDirty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDirty");
         } catch (JCNativeException jcne) {

@@ -170,10 +170,14 @@ public class CustomLoaderAttribute extends Attribute  {
     
     public NetType getCustomLoaderType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomLoaderType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomLoaderType");
+            retObjectCustomLoaderType = classInstance.Get("CustomLoaderType");
+            JCObject val = (JCObject)retObjectCustomLoaderType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomLoaderType != null ? retObjectCustomLoaderType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class CustomLoaderAttribute extends Attribute  {
 
     public void setCustomLoaderType(NetType CustomLoaderType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CustomLoaderType", CustomLoaderType == null ? null : CustomLoaderType.getJCOInstance());
         } catch (JCNativeException jcne) {

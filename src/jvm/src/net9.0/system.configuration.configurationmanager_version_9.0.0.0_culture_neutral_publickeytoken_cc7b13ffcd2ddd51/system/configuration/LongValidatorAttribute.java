@@ -167,9 +167,13 @@ public class LongValidatorAttribute extends ConfigurationValidatorAttribute  {
     
     public boolean getExcludeRange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExcludeRange = null;
         try {
-            return (boolean)classInstance.Get("ExcludeRange");
+            retObjectExcludeRange = classInstance.Get("ExcludeRange");
+            return (boolean)retObjectExcludeRange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExcludeRange != null ? retObjectExcludeRange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class LongValidatorAttribute extends ConfigurationValidatorAttribute  {
 
     public void setExcludeRange(boolean ExcludeRange) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExcludeRange", ExcludeRange);
         } catch (JCNativeException jcne) {
@@ -187,9 +191,19 @@ public class LongValidatorAttribute extends ConfigurationValidatorAttribute  {
 
     public long getMaxValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxValue = null;
         try {
-            return (long)classInstance.Get("MaxValue");
+            retObjectMaxValue = classInstance.Get("MaxValue");
+            return (long)retObjectMaxValue;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxValueNumber = (java.lang.Number)retObjectMaxValue;
+                return retObjectMaxValueNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMaxValue != null ? retObjectMaxValue.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +211,7 @@ public class LongValidatorAttribute extends ConfigurationValidatorAttribute  {
 
     public void setMaxValue(long MaxValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxValue", MaxValue);
         } catch (JCNativeException jcne) {
@@ -207,9 +221,19 @@ public class LongValidatorAttribute extends ConfigurationValidatorAttribute  {
 
     public long getMinValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinValue = null;
         try {
-            return (long)classInstance.Get("MinValue");
+            retObjectMinValue = classInstance.Get("MinValue");
+            return (long)retObjectMinValue;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinValueNumber = (java.lang.Number)retObjectMinValue;
+                return retObjectMinValueNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMinValue != null ? retObjectMinValue.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +241,7 @@ public class LongValidatorAttribute extends ConfigurationValidatorAttribute  {
 
     public void setMinValue(long MinValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinValue", MinValue);
         } catch (JCNativeException jcne) {

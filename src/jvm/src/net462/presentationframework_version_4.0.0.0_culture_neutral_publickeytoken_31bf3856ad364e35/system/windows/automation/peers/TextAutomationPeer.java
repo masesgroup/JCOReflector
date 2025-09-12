@@ -155,7 +155,7 @@ public class TextAutomationPeer extends FrameworkElementAutomationPeer  {
     
     public void RaiseActiveTextPositionChangedEvent(TextPointer rangeStart, TextPointer rangeEnd) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.io.IOException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RaiseActiveTextPositionChangedEvent", rangeStart == null ? null : rangeStart.getJCOInstance(), rangeEnd == null ? null : rangeEnd.getJCOInstance());
         } catch (JCNativeException jcne) {

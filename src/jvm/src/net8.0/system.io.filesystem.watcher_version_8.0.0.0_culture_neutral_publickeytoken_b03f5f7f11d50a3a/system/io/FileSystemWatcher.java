@@ -193,10 +193,14 @@ public class FileSystemWatcher extends Component  {
     
     public WaitForChangedResult WaitForChanged(WatcherChangeTypes changeType, int timeout) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.ApplicationException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitForChanged = null;
         try {
-            JCObject objWaitForChanged = (JCObject)classInstance.Invoke("WaitForChanged", changeType == null ? null : changeType.getJCOInstance(), timeout);
+            retObjectWaitForChanged = classInstance.Invoke("WaitForChanged", changeType == null ? null : changeType.getJCOInstance(), timeout);
+            JCObject objWaitForChanged = (JCObject)retObjectWaitForChanged;
             return new WaitForChangedResult(objWaitForChanged);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitForChanged != null ? retObjectWaitForChanged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +208,14 @@ public class FileSystemWatcher extends Component  {
 
     public WaitForChangedResult WaitForChanged(WatcherChangeTypes changeType, TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitForChanged = null;
         try {
-            JCObject objWaitForChanged = (JCObject)classInstance.Invoke("WaitForChanged", changeType == null ? null : changeType.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
+            retObjectWaitForChanged = classInstance.Invoke("WaitForChanged", changeType == null ? null : changeType.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
+            JCObject objWaitForChanged = (JCObject)retObjectWaitForChanged;
             return new WaitForChangedResult(objWaitForChanged);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitForChanged != null ? retObjectWaitForChanged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +223,14 @@ public class FileSystemWatcher extends Component  {
 
     public WaitForChangedResult WaitForChanged(WatcherChangeTypes changeType) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.FormatException, system.io.FileNotFoundException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitForChanged = null;
         try {
-            JCObject objWaitForChanged = (JCObject)classInstance.Invoke("WaitForChanged", changeType == null ? null : changeType.getJCOInstance());
+            retObjectWaitForChanged = classInstance.Invoke("WaitForChanged", changeType == null ? null : changeType.getJCOInstance());
+            JCObject objWaitForChanged = (JCObject)retObjectWaitForChanged;
             return new WaitForChangedResult(objWaitForChanged);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitForChanged != null ? retObjectWaitForChanged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +238,7 @@ public class FileSystemWatcher extends Component  {
 
     public void BeginInit() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginInit");
         } catch (JCNativeException jcne) {
@@ -236,7 +248,7 @@ public class FileSystemWatcher extends Component  {
 
     public void EndInit() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.io.FileNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndInit");
         } catch (JCNativeException jcne) {
@@ -250,9 +262,13 @@ public class FileSystemWatcher extends Component  {
     
     public boolean getEnableRaisingEvents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableRaisingEvents = null;
         try {
-            return (boolean)classInstance.Get("EnableRaisingEvents");
+            retObjectEnableRaisingEvents = classInstance.Get("EnableRaisingEvents");
+            return (boolean)retObjectEnableRaisingEvents;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableRaisingEvents != null ? retObjectEnableRaisingEvents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +276,7 @@ public class FileSystemWatcher extends Component  {
 
     public void setEnableRaisingEvents(boolean EnableRaisingEvents) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.FormatException, system.io.FileNotFoundException, system.ApplicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableRaisingEvents", EnableRaisingEvents);
         } catch (JCNativeException jcne) {
@@ -270,9 +286,13 @@ public class FileSystemWatcher extends Component  {
 
     public boolean getIncludeSubdirectories() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludeSubdirectories = null;
         try {
-            return (boolean)classInstance.Get("IncludeSubdirectories");
+            retObjectIncludeSubdirectories = classInstance.Get("IncludeSubdirectories");
+            return (boolean)retObjectIncludeSubdirectories;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIncludeSubdirectories != null ? retObjectIncludeSubdirectories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +300,7 @@ public class FileSystemWatcher extends Component  {
 
     public void setIncludeSubdirectories(boolean IncludeSubdirectories) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.ApplicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncludeSubdirectories", IncludeSubdirectories);
         } catch (JCNativeException jcne) {
@@ -290,9 +310,19 @@ public class FileSystemWatcher extends Component  {
 
     public int getInternalBufferSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInternalBufferSize = null;
         try {
-            return (int)classInstance.Get("InternalBufferSize");
+            retObjectInternalBufferSize = classInstance.Get("InternalBufferSize");
+            return (int)retObjectInternalBufferSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectInternalBufferSizeNumber = (java.lang.Number)retObjectInternalBufferSize;
+                return retObjectInternalBufferSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectInternalBufferSize != null ? retObjectInternalBufferSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +330,7 @@ public class FileSystemWatcher extends Component  {
 
     public void setInternalBufferSize(int InternalBufferSize) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.ApplicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InternalBufferSize", InternalBufferSize);
         } catch (JCNativeException jcne) {
@@ -310,10 +340,14 @@ public class FileSystemWatcher extends Component  {
 
     public ISynchronizeInvoke getSynchronizingObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSynchronizingObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SynchronizingObject");
+            retObjectSynchronizingObject = classInstance.Get("SynchronizingObject");
+            JCObject val = (JCObject)retObjectSynchronizingObject;
             return new ISynchronizeInvokeImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSynchronizingObject != null ? retObjectSynchronizingObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,7 +355,7 @@ public class FileSystemWatcher extends Component  {
 
     public void setSynchronizingObject(ISynchronizeInvoke SynchronizingObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SynchronizingObject", SynchronizingObject == null ? null : SynchronizingObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -331,10 +365,14 @@ public class FileSystemWatcher extends Component  {
 
     public NotifyFilters getNotifyFilter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNotifyFilter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NotifyFilter");
+            retObjectNotifyFilter = classInstance.Get("NotifyFilter");
+            JCObject val = (JCObject)retObjectNotifyFilter;
             return new NotifyFilters(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNotifyFilter != null ? retObjectNotifyFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +380,7 @@ public class FileSystemWatcher extends Component  {
 
     public void setNotifyFilter(NotifyFilters NotifyFilter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.OutOfMemoryException, system.ApplicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NotifyFilter", NotifyFilter == null ? null : NotifyFilter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -352,9 +390,13 @@ public class FileSystemWatcher extends Component  {
 
     public java.lang.String getFilter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilter = null;
         try {
-            return (java.lang.String)classInstance.Get("Filter");
+            retObjectFilter = classInstance.Get("Filter");
+            return (java.lang.String)retObjectFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFilter != null ? retObjectFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +404,7 @@ public class FileSystemWatcher extends Component  {
 
     public void setFilter(java.lang.String Filter) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Filter", Filter);
         } catch (JCNativeException jcne) {
@@ -372,9 +414,13 @@ public class FileSystemWatcher extends Component  {
 
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPath = null;
         try {
-            return (java.lang.String)classInstance.Get("Path");
+            retObjectPath = classInstance.Get("Path");
+            return (java.lang.String)retObjectPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPath != null ? retObjectPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +428,7 @@ public class FileSystemWatcher extends Component  {
 
     public void setPath(java.lang.String Path) throws Throwable, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.io.FileNotFoundException, system.ApplicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Path", Path);
         } catch (JCNativeException jcne) {
@@ -397,7 +443,7 @@ public class FileSystemWatcher extends Component  {
 
     public void addError(ErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Error", handler);
         } catch (JCNativeException jcne) {
@@ -407,7 +453,7 @@ public class FileSystemWatcher extends Component  {
 
     public void removeError(ErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Error", handler);
         } catch (JCNativeException jcne) {
@@ -417,7 +463,7 @@ public class FileSystemWatcher extends Component  {
 
     public void addChanged(FileSystemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Changed", handler);
         } catch (JCNativeException jcne) {
@@ -427,7 +473,7 @@ public class FileSystemWatcher extends Component  {
 
     public void removeChanged(FileSystemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Changed", handler);
         } catch (JCNativeException jcne) {
@@ -437,7 +483,7 @@ public class FileSystemWatcher extends Component  {
 
     public void addCreated(FileSystemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Created", handler);
         } catch (JCNativeException jcne) {
@@ -447,7 +493,7 @@ public class FileSystemWatcher extends Component  {
 
     public void removeCreated(FileSystemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Created", handler);
         } catch (JCNativeException jcne) {
@@ -457,7 +503,7 @@ public class FileSystemWatcher extends Component  {
 
     public void addDeleted(FileSystemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Deleted", handler);
         } catch (JCNativeException jcne) {
@@ -467,7 +513,7 @@ public class FileSystemWatcher extends Component  {
 
     public void removeDeleted(FileSystemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Deleted", handler);
         } catch (JCNativeException jcne) {
@@ -477,7 +523,7 @@ public class FileSystemWatcher extends Component  {
 
     public void addRenamed(RenamedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Renamed", handler);
         } catch (JCNativeException jcne) {
@@ -487,7 +533,7 @@ public class FileSystemWatcher extends Component  {
 
     public void removeRenamed(RenamedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Renamed", handler);
         } catch (JCNativeException jcne) {

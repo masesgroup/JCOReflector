@@ -190,9 +190,19 @@ public class MulticastOption extends NetObject  {
     
     public int getInterfaceIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInterfaceIndex = null;
         try {
-            return (int)classInstance.Get("InterfaceIndex");
+            retObjectInterfaceIndex = classInstance.Get("InterfaceIndex");
+            return (int)retObjectInterfaceIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectInterfaceIndexNumber = (java.lang.Number)retObjectInterfaceIndex;
+                return retObjectInterfaceIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectInterfaceIndex != null ? retObjectInterfaceIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +210,7 @@ public class MulticastOption extends NetObject  {
 
     public void setInterfaceIndex(int InterfaceIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InterfaceIndex", InterfaceIndex);
         } catch (JCNativeException jcne) {
@@ -210,10 +220,14 @@ public class MulticastOption extends NetObject  {
 
     public IPAddress getGroup() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroup = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Group");
+            retObjectGroup = classInstance.Get("Group");
+            JCObject val = (JCObject)retObjectGroup;
             return new IPAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroup != null ? retObjectGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +235,7 @@ public class MulticastOption extends NetObject  {
 
     public void setGroup(IPAddress Group) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Group", Group == null ? null : Group.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,10 +245,14 @@ public class MulticastOption extends NetObject  {
 
     public IPAddress getLocalAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalAddress");
+            retObjectLocalAddress = classInstance.Get("LocalAddress");
+            JCObject val = (JCObject)retObjectLocalAddress;
             return new IPAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalAddress != null ? retObjectLocalAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +260,7 @@ public class MulticastOption extends NetObject  {
 
     public void setLocalAddress(IPAddress LocalAddress) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LocalAddress", LocalAddress == null ? null : LocalAddress.getJCOInstance());
         } catch (JCNativeException jcne) {

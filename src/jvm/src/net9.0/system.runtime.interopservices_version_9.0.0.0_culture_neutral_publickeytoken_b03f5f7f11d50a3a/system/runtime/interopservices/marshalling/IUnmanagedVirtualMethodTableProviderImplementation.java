@@ -143,10 +143,14 @@ public class IUnmanagedVirtualMethodTableProviderImplementation extends NetObjec
     
     public VirtualMethodTableInfo GetVirtualMethodTableInfoForKey(NetType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetVirtualMethodTableInfoForKey = null;
         try {
-            JCObject objGetVirtualMethodTableInfoForKey = (JCObject)classInstance.Invoke("GetVirtualMethodTableInfoForKey", type == null ? null : type.getJCOInstance());
+            retObjectGetVirtualMethodTableInfoForKey = classInstance.Invoke("GetVirtualMethodTableInfoForKey", type == null ? null : type.getJCOInstance());
+            JCObject objGetVirtualMethodTableInfoForKey = (JCObject)retObjectGetVirtualMethodTableInfoForKey;
             return new VirtualMethodTableInfo(objGetVirtualMethodTableInfoForKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetVirtualMethodTableInfoForKey != null ? retObjectGetVirtualMethodTableInfoForKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

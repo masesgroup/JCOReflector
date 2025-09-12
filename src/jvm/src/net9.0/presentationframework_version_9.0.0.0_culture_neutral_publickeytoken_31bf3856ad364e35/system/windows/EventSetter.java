@@ -167,9 +167,13 @@ public class EventSetter extends SetterBase  {
     
     public boolean getHandledEventsToo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHandledEventsToo = null;
         try {
-            return (boolean)classInstance.Get("HandledEventsToo");
+            retObjectHandledEventsToo = classInstance.Get("HandledEventsToo");
+            return (boolean)retObjectHandledEventsToo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHandledEventsToo != null ? retObjectHandledEventsToo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class EventSetter extends SetterBase  {
 
     public void setHandledEventsToo(boolean HandledEventsToo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HandledEventsToo", HandledEventsToo);
         } catch (JCNativeException jcne) {
@@ -187,10 +191,14 @@ public class EventSetter extends SetterBase  {
 
     public RoutedEvent getEvent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Event");
+            retObjectEvent = classInstance.Get("Event");
+            JCObject val = (JCObject)retObjectEvent;
             return new RoutedEvent(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvent != null ? retObjectEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class EventSetter extends SetterBase  {
 
     public void setEvent(RoutedEvent Event) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Event", Event == null ? null : Event.getJCOInstance());
         } catch (JCNativeException jcne) {

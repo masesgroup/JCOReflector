@@ -154,7 +154,7 @@ public class ObjectiveCMarshal extends NetObject  {
     
     public static void SetMessageSendPendingException(NetException exception) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetMessageSendPendingException", exception == null ? null : exception.getJCOInstance());
         } catch (JCNativeException jcne) {

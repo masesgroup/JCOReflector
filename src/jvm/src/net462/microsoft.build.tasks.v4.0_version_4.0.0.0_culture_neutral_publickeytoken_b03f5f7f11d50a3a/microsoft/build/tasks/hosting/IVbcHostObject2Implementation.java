@@ -148,9 +148,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
     
     public boolean Compile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompile = null;
         try {
-            return (boolean)classInstance.Invoke("Compile");
+            retObjectCompile = classInstance.Invoke("Compile");
+            return (boolean)retObjectCompile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCompile != null ? retObjectCompile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,9 +162,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean IsDesignTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDesignTime = null;
         try {
-            return (boolean)classInstance.Invoke("IsDesignTime");
+            retObjectIsDesignTime = classInstance.Invoke("IsDesignTime");
+            return (boolean)retObjectIsDesignTime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDesignTime != null ? retObjectIsDesignTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +176,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean IsUpToDate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsUpToDate = null;
         try {
-            return (boolean)classInstance.Invoke("IsUpToDate");
+            retObjectIsUpToDate = classInstance.Invoke("IsUpToDate");
+            return (boolean)retObjectIsUpToDate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsUpToDate != null ? retObjectIsUpToDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +190,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetAdditionalLibPaths(java.lang.String[] additionalLibPaths) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetAdditionalLibPaths = null;
         try {
-            return (boolean)classInstance.Invoke("SetAdditionalLibPaths", (java.lang.Object)additionalLibPaths);
+            retObjectSetAdditionalLibPaths = classInstance.Invoke("SetAdditionalLibPaths", (java.lang.Object)additionalLibPaths);
+            return (boolean)retObjectSetAdditionalLibPaths;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetAdditionalLibPaths != null ? retObjectSetAdditionalLibPaths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +204,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetAdditionalLibPaths(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetAdditionalLibPaths = null;
         try {
-            return (boolean)classInstance.Invoke("SetAdditionalLibPaths", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectSetAdditionalLibPaths = classInstance.Invoke("SetAdditionalLibPaths", (java.lang.Object)dupParam0.getJCRefOut());
+            return (boolean)retObjectSetAdditionalLibPaths;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetAdditionalLibPaths != null ? retObjectSetAdditionalLibPaths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +218,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetAddModules(java.lang.String[] addModules) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetAddModules = null;
         try {
-            return (boolean)classInstance.Invoke("SetAddModules", (java.lang.Object)addModules);
+            retObjectSetAddModules = classInstance.Invoke("SetAddModules", (java.lang.Object)addModules);
+            return (boolean)retObjectSetAddModules;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetAddModules != null ? retObjectSetAddModules.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +232,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetAddModules(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetAddModules = null;
         try {
-            return (boolean)classInstance.Invoke("SetAddModules", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectSetAddModules = classInstance.Invoke("SetAddModules", (java.lang.Object)dupParam0.getJCRefOut());
+            return (boolean)retObjectSetAddModules;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetAddModules != null ? retObjectSetAddModules.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +246,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetBaseAddress(java.lang.String targetType, java.lang.String baseAddress) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetBaseAddress = null;
         try {
-            return (boolean)classInstance.Invoke("SetBaseAddress", targetType, baseAddress);
+            retObjectSetBaseAddress = classInstance.Invoke("SetBaseAddress", targetType, baseAddress);
+            return (boolean)retObjectSetBaseAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetBaseAddress != null ? retObjectSetBaseAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +260,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetCodePage(int codePage) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetCodePage = null;
         try {
-            return (boolean)classInstance.Invoke("SetCodePage", codePage);
+            retObjectSetCodePage = classInstance.Invoke("SetCodePage", codePage);
+            return (boolean)retObjectSetCodePage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetCodePage != null ? retObjectSetCodePage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,9 +274,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetDebugType(boolean emitDebugInformation, java.lang.String debugType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetDebugType = null;
         try {
-            return (boolean)classInstance.Invoke("SetDebugType", emitDebugInformation, debugType);
+            retObjectSetDebugType = classInstance.Invoke("SetDebugType", emitDebugInformation, debugType);
+            return (boolean)retObjectSetDebugType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetDebugType != null ? retObjectSetDebugType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,9 +288,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetDefineConstants(java.lang.String defineConstants) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetDefineConstants = null;
         try {
-            return (boolean)classInstance.Invoke("SetDefineConstants", defineConstants);
+            retObjectSetDefineConstants = classInstance.Invoke("SetDefineConstants", defineConstants);
+            return (boolean)retObjectSetDefineConstants;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetDefineConstants != null ? retObjectSetDefineConstants.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,9 +302,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetDelaySign(boolean delaySign) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetDelaySign = null;
         try {
-            return (boolean)classInstance.Invoke("SetDelaySign", delaySign);
+            retObjectSetDelaySign = classInstance.Invoke("SetDelaySign", delaySign);
+            return (boolean)retObjectSetDelaySign;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetDelaySign != null ? retObjectSetDelaySign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,9 +316,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetDisabledWarnings(java.lang.String disabledWarnings) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetDisabledWarnings = null;
         try {
-            return (boolean)classInstance.Invoke("SetDisabledWarnings", disabledWarnings);
+            retObjectSetDisabledWarnings = classInstance.Invoke("SetDisabledWarnings", disabledWarnings);
+            return (boolean)retObjectSetDisabledWarnings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetDisabledWarnings != null ? retObjectSetDisabledWarnings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,9 +330,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetDocumentationFile(java.lang.String documentationFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetDocumentationFile = null;
         try {
-            return (boolean)classInstance.Invoke("SetDocumentationFile", documentationFile);
+            retObjectSetDocumentationFile = classInstance.Invoke("SetDocumentationFile", documentationFile);
+            return (boolean)retObjectSetDocumentationFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetDocumentationFile != null ? retObjectSetDocumentationFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,9 +344,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetErrorReport(java.lang.String errorReport) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetErrorReport = null;
         try {
-            return (boolean)classInstance.Invoke("SetErrorReport", errorReport);
+            retObjectSetErrorReport = classInstance.Invoke("SetErrorReport", errorReport);
+            return (boolean)retObjectSetErrorReport;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetErrorReport != null ? retObjectSetErrorReport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,9 +358,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetFileAlignment(int fileAlignment) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetFileAlignment = null;
         try {
-            return (boolean)classInstance.Invoke("SetFileAlignment", fileAlignment);
+            retObjectSetFileAlignment = classInstance.Invoke("SetFileAlignment", fileAlignment);
+            return (boolean)retObjectSetFileAlignment;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetFileAlignment != null ? retObjectSetFileAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,9 +372,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetGenerateDocumentation(boolean generateDocumentation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetGenerateDocumentation = null;
         try {
-            return (boolean)classInstance.Invoke("SetGenerateDocumentation", generateDocumentation);
+            retObjectSetGenerateDocumentation = classInstance.Invoke("SetGenerateDocumentation", generateDocumentation);
+            return (boolean)retObjectSetGenerateDocumentation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetGenerateDocumentation != null ? retObjectSetGenerateDocumentation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,9 +386,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetImports(ITaskItem[] importsList) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetImports = null;
         try {
-            return (boolean)classInstance.Invoke("SetImports", (java.lang.Object)toObjectFromArray(importsList));
+            retObjectSetImports = classInstance.Invoke("SetImports", (java.lang.Object)toObjectFromArray(importsList));
+            return (boolean)retObjectSetImports;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetImports != null ? retObjectSetImports.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,9 +400,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetKeyContainer(java.lang.String keyContainer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetKeyContainer = null;
         try {
-            return (boolean)classInstance.Invoke("SetKeyContainer", keyContainer);
+            retObjectSetKeyContainer = classInstance.Invoke("SetKeyContainer", keyContainer);
+            return (boolean)retObjectSetKeyContainer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetKeyContainer != null ? retObjectSetKeyContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,9 +414,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetKeyFile(java.lang.String keyFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetKeyFile = null;
         try {
-            return (boolean)classInstance.Invoke("SetKeyFile", keyFile);
+            retObjectSetKeyFile = classInstance.Invoke("SetKeyFile", keyFile);
+            return (boolean)retObjectSetKeyFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetKeyFile != null ? retObjectSetKeyFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,9 +428,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetLinkResources(ITaskItem[] linkResources) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetLinkResources = null;
         try {
-            return (boolean)classInstance.Invoke("SetLinkResources", (java.lang.Object)toObjectFromArray(linkResources));
+            retObjectSetLinkResources = classInstance.Invoke("SetLinkResources", (java.lang.Object)toObjectFromArray(linkResources));
+            return (boolean)retObjectSetLinkResources;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetLinkResources != null ? retObjectSetLinkResources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,9 +442,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetMainEntryPoint(java.lang.String mainEntryPoint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetMainEntryPoint = null;
         try {
-            return (boolean)classInstance.Invoke("SetMainEntryPoint", mainEntryPoint);
+            retObjectSetMainEntryPoint = classInstance.Invoke("SetMainEntryPoint", mainEntryPoint);
+            return (boolean)retObjectSetMainEntryPoint;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetMainEntryPoint != null ? retObjectSetMainEntryPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -368,9 +456,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetModuleAssemblyName(java.lang.String moduleAssemblyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetModuleAssemblyName = null;
         try {
-            return (boolean)classInstance.Invoke("SetModuleAssemblyName", moduleAssemblyName);
+            retObjectSetModuleAssemblyName = classInstance.Invoke("SetModuleAssemblyName", moduleAssemblyName);
+            return (boolean)retObjectSetModuleAssemblyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetModuleAssemblyName != null ? retObjectSetModuleAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,9 +470,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetNoConfig(boolean noConfig) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetNoConfig = null;
         try {
-            return (boolean)classInstance.Invoke("SetNoConfig", noConfig);
+            retObjectSetNoConfig = classInstance.Invoke("SetNoConfig", noConfig);
+            return (boolean)retObjectSetNoConfig;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetNoConfig != null ? retObjectSetNoConfig.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -388,9 +484,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetNoStandardLib(boolean noStandardLib) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetNoStandardLib = null;
         try {
-            return (boolean)classInstance.Invoke("SetNoStandardLib", noStandardLib);
+            retObjectSetNoStandardLib = classInstance.Invoke("SetNoStandardLib", noStandardLib);
+            return (boolean)retObjectSetNoStandardLib;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetNoStandardLib != null ? retObjectSetNoStandardLib.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,9 +498,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetNoWarnings(boolean noWarnings) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetNoWarnings = null;
         try {
-            return (boolean)classInstance.Invoke("SetNoWarnings", noWarnings);
+            retObjectSetNoWarnings = classInstance.Invoke("SetNoWarnings", noWarnings);
+            return (boolean)retObjectSetNoWarnings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetNoWarnings != null ? retObjectSetNoWarnings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,9 +512,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetOptimize(boolean optimize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetOptimize = null;
         try {
-            return (boolean)classInstance.Invoke("SetOptimize", optimize);
+            retObjectSetOptimize = classInstance.Invoke("SetOptimize", optimize);
+            return (boolean)retObjectSetOptimize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetOptimize != null ? retObjectSetOptimize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,9 +526,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetOptionCompare(java.lang.String optionCompare) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetOptionCompare = null;
         try {
-            return (boolean)classInstance.Invoke("SetOptionCompare", optionCompare);
+            retObjectSetOptionCompare = classInstance.Invoke("SetOptionCompare", optionCompare);
+            return (boolean)retObjectSetOptionCompare;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetOptionCompare != null ? retObjectSetOptionCompare.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,9 +540,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetOptionExplicit(boolean optionExplicit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetOptionExplicit = null;
         try {
-            return (boolean)classInstance.Invoke("SetOptionExplicit", optionExplicit);
+            retObjectSetOptionExplicit = classInstance.Invoke("SetOptionExplicit", optionExplicit);
+            return (boolean)retObjectSetOptionExplicit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetOptionExplicit != null ? retObjectSetOptionExplicit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,9 +554,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetOptionInfer(boolean optionInfer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetOptionInfer = null;
         try {
-            return (boolean)classInstance.Invoke("SetOptionInfer", optionInfer);
+            retObjectSetOptionInfer = classInstance.Invoke("SetOptionInfer", optionInfer);
+            return (boolean)retObjectSetOptionInfer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetOptionInfer != null ? retObjectSetOptionInfer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -448,9 +568,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetOptionStrict(boolean optionStrict) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetOptionStrict = null;
         try {
-            return (boolean)classInstance.Invoke("SetOptionStrict", optionStrict);
+            retObjectSetOptionStrict = classInstance.Invoke("SetOptionStrict", optionStrict);
+            return (boolean)retObjectSetOptionStrict;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetOptionStrict != null ? retObjectSetOptionStrict.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -458,9 +582,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetOptionStrictType(java.lang.String optionStrictType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetOptionStrictType = null;
         try {
-            return (boolean)classInstance.Invoke("SetOptionStrictType", optionStrictType);
+            retObjectSetOptionStrictType = classInstance.Invoke("SetOptionStrictType", optionStrictType);
+            return (boolean)retObjectSetOptionStrictType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetOptionStrictType != null ? retObjectSetOptionStrictType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -468,9 +596,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetOutputAssembly(java.lang.String outputAssembly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetOutputAssembly = null;
         try {
-            return (boolean)classInstance.Invoke("SetOutputAssembly", outputAssembly);
+            retObjectSetOutputAssembly = classInstance.Invoke("SetOutputAssembly", outputAssembly);
+            return (boolean)retObjectSetOutputAssembly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetOutputAssembly != null ? retObjectSetOutputAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -478,9 +610,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetPlatform(java.lang.String platform) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetPlatform = null;
         try {
-            return (boolean)classInstance.Invoke("SetPlatform", platform);
+            retObjectSetPlatform = classInstance.Invoke("SetPlatform", platform);
+            return (boolean)retObjectSetPlatform;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetPlatform != null ? retObjectSetPlatform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -488,9 +624,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetReferences(ITaskItem[] references) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetReferences = null;
         try {
-            return (boolean)classInstance.Invoke("SetReferences", (java.lang.Object)toObjectFromArray(references));
+            retObjectSetReferences = classInstance.Invoke("SetReferences", (java.lang.Object)toObjectFromArray(references));
+            return (boolean)retObjectSetReferences;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetReferences != null ? retObjectSetReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -498,9 +638,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetRemoveIntegerChecks(boolean removeIntegerChecks) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetRemoveIntegerChecks = null;
         try {
-            return (boolean)classInstance.Invoke("SetRemoveIntegerChecks", removeIntegerChecks);
+            retObjectSetRemoveIntegerChecks = classInstance.Invoke("SetRemoveIntegerChecks", removeIntegerChecks);
+            return (boolean)retObjectSetRemoveIntegerChecks;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetRemoveIntegerChecks != null ? retObjectSetRemoveIntegerChecks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -508,9 +652,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetResources(ITaskItem[] resources) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetResources = null;
         try {
-            return (boolean)classInstance.Invoke("SetResources", (java.lang.Object)toObjectFromArray(resources));
+            retObjectSetResources = classInstance.Invoke("SetResources", (java.lang.Object)toObjectFromArray(resources));
+            return (boolean)retObjectSetResources;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetResources != null ? retObjectSetResources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -518,9 +666,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetResponseFiles(ITaskItem[] responseFiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetResponseFiles = null;
         try {
-            return (boolean)classInstance.Invoke("SetResponseFiles", (java.lang.Object)toObjectFromArray(responseFiles));
+            retObjectSetResponseFiles = classInstance.Invoke("SetResponseFiles", (java.lang.Object)toObjectFromArray(responseFiles));
+            return (boolean)retObjectSetResponseFiles;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetResponseFiles != null ? retObjectSetResponseFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -528,9 +680,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetRootNamespace(java.lang.String rootNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetRootNamespace = null;
         try {
-            return (boolean)classInstance.Invoke("SetRootNamespace", rootNamespace);
+            retObjectSetRootNamespace = classInstance.Invoke("SetRootNamespace", rootNamespace);
+            return (boolean)retObjectSetRootNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetRootNamespace != null ? retObjectSetRootNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,9 +694,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetSdkPath(java.lang.String sdkPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetSdkPath = null;
         try {
-            return (boolean)classInstance.Invoke("SetSdkPath", sdkPath);
+            retObjectSetSdkPath = classInstance.Invoke("SetSdkPath", sdkPath);
+            return (boolean)retObjectSetSdkPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetSdkPath != null ? retObjectSetSdkPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -548,9 +708,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetSources(ITaskItem[] sources) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetSources = null;
         try {
-            return (boolean)classInstance.Invoke("SetSources", (java.lang.Object)toObjectFromArray(sources));
+            retObjectSetSources = classInstance.Invoke("SetSources", (java.lang.Object)toObjectFromArray(sources));
+            return (boolean)retObjectSetSources;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetSources != null ? retObjectSetSources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -558,9 +722,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetTargetCompactFramework(boolean targetCompactFramework) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetTargetCompactFramework = null;
         try {
-            return (boolean)classInstance.Invoke("SetTargetCompactFramework", targetCompactFramework);
+            retObjectSetTargetCompactFramework = classInstance.Invoke("SetTargetCompactFramework", targetCompactFramework);
+            return (boolean)retObjectSetTargetCompactFramework;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetTargetCompactFramework != null ? retObjectSetTargetCompactFramework.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -568,9 +736,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetTargetType(java.lang.String targetType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetTargetType = null;
         try {
-            return (boolean)classInstance.Invoke("SetTargetType", targetType);
+            retObjectSetTargetType = classInstance.Invoke("SetTargetType", targetType);
+            return (boolean)retObjectSetTargetType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetTargetType != null ? retObjectSetTargetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -578,9 +750,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetTreatWarningsAsErrors(boolean treatWarningsAsErrors) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetTreatWarningsAsErrors = null;
         try {
-            return (boolean)classInstance.Invoke("SetTreatWarningsAsErrors", treatWarningsAsErrors);
+            retObjectSetTreatWarningsAsErrors = classInstance.Invoke("SetTreatWarningsAsErrors", treatWarningsAsErrors);
+            return (boolean)retObjectSetTreatWarningsAsErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetTreatWarningsAsErrors != null ? retObjectSetTreatWarningsAsErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -588,9 +764,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetWarningsAsErrors(java.lang.String warningsAsErrors) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetWarningsAsErrors = null;
         try {
-            return (boolean)classInstance.Invoke("SetWarningsAsErrors", warningsAsErrors);
+            retObjectSetWarningsAsErrors = classInstance.Invoke("SetWarningsAsErrors", warningsAsErrors);
+            return (boolean)retObjectSetWarningsAsErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetWarningsAsErrors != null ? retObjectSetWarningsAsErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -598,9 +778,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetWarningsNotAsErrors(java.lang.String warningsNotAsErrors) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetWarningsNotAsErrors = null;
         try {
-            return (boolean)classInstance.Invoke("SetWarningsNotAsErrors", warningsNotAsErrors);
+            retObjectSetWarningsNotAsErrors = classInstance.Invoke("SetWarningsNotAsErrors", warningsNotAsErrors);
+            return (boolean)retObjectSetWarningsNotAsErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetWarningsNotAsErrors != null ? retObjectSetWarningsNotAsErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -608,9 +792,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetWin32Icon(java.lang.String win32Icon) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetWin32Icon = null;
         try {
-            return (boolean)classInstance.Invoke("SetWin32Icon", win32Icon);
+            retObjectSetWin32Icon = classInstance.Invoke("SetWin32Icon", win32Icon);
+            return (boolean)retObjectSetWin32Icon;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetWin32Icon != null ? retObjectSetWin32Icon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -618,9 +806,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetWin32Manifest(java.lang.String win32Manifest) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetWin32Manifest = null;
         try {
-            return (boolean)classInstance.Invoke("SetWin32Manifest", win32Manifest);
+            retObjectSetWin32Manifest = classInstance.Invoke("SetWin32Manifest", win32Manifest);
+            return (boolean)retObjectSetWin32Manifest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetWin32Manifest != null ? retObjectSetWin32Manifest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -628,9 +820,13 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public boolean SetWin32Resource(java.lang.String win32Resource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetWin32Resource = null;
         try {
-            return (boolean)classInstance.Invoke("SetWin32Resource", win32Resource);
+            retObjectSetWin32Resource = classInstance.Invoke("SetWin32Resource", win32Resource);
+            return (boolean)retObjectSetWin32Resource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetWin32Resource != null ? retObjectSetWin32Resource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -638,7 +834,7 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public void BeginInitialization() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginInitialization");
         } catch (JCNativeException jcne) {
@@ -648,7 +844,7 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     public void EndInitialization() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndInitialization");
         } catch (JCNativeException jcne) {

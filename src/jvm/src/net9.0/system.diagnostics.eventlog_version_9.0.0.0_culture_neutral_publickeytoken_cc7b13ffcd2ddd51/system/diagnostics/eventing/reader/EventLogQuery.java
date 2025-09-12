@@ -181,9 +181,13 @@ public class EventLogQuery extends NetObject  {
     
     public boolean getReverseDirection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReverseDirection = null;
         try {
-            return (boolean)classInstance.Get("ReverseDirection");
+            retObjectReverseDirection = classInstance.Get("ReverseDirection");
+            return (boolean)retObjectReverseDirection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReverseDirection != null ? retObjectReverseDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +195,7 @@ public class EventLogQuery extends NetObject  {
 
     public void setReverseDirection(boolean ReverseDirection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReverseDirection", ReverseDirection);
         } catch (JCNativeException jcne) {
@@ -201,9 +205,13 @@ public class EventLogQuery extends NetObject  {
 
     public boolean getTolerateQueryErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTolerateQueryErrors = null;
         try {
-            return (boolean)classInstance.Get("TolerateQueryErrors");
+            retObjectTolerateQueryErrors = classInstance.Get("TolerateQueryErrors");
+            return (boolean)retObjectTolerateQueryErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTolerateQueryErrors != null ? retObjectTolerateQueryErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +219,7 @@ public class EventLogQuery extends NetObject  {
 
     public void setTolerateQueryErrors(boolean TolerateQueryErrors) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TolerateQueryErrors", TolerateQueryErrors);
         } catch (JCNativeException jcne) {
@@ -221,10 +229,14 @@ public class EventLogQuery extends NetObject  {
 
     public EventLogSession getSession() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSession = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Session");
+            retObjectSession = classInstance.Get("Session");
+            JCObject val = (JCObject)retObjectSession;
             return new EventLogSession(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSession != null ? retObjectSession.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +244,7 @@ public class EventLogQuery extends NetObject  {
 
     public void setSession(EventLogSession Session) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Session", Session == null ? null : Session.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -166,10 +166,14 @@ public class Message extends NamedItem  {
     
     public MessagePart FindPartByName(java.lang.String partName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindPartByName = null;
         try {
-            JCObject objFindPartByName = (JCObject)classInstance.Invoke("FindPartByName", partName);
+            retObjectFindPartByName = classInstance.Invoke("FindPartByName", partName);
+            JCObject objFindPartByName = (JCObject)retObjectFindPartByName;
             return new MessagePart(objFindPartByName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindPartByName != null ? retObjectFindPartByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,16 +181,20 @@ public class Message extends NamedItem  {
 
     public MessagePart[] FindPartsByName(java.lang.String[] partNames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindPartsByName = null;
         try {
             ArrayList<MessagePart> resultingArrayList = new ArrayList<MessagePart>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindPartsByName", (java.lang.Object)partNames);
+            retObjectFindPartsByName = classInstance.Invoke("FindPartsByName", (java.lang.Object)partNames);
+            JCObject resultingObjects = (JCObject)retObjectFindPartsByName;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MessagePart(resultingObject));
             }
             MessagePart[] resultingArray = new MessagePart[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindPartsByName != null ? retObjectFindPartsByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,16 +202,20 @@ public class Message extends NamedItem  {
 
     public MessagePart[] FindPartsByName(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindPartsByName = null;
         try {
             ArrayList<MessagePart> resultingArrayList = new ArrayList<MessagePart>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindPartsByName", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectFindPartsByName = classInstance.Invoke("FindPartsByName", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectFindPartsByName;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MessagePart(resultingObject));
             }
             MessagePart[] resultingArray = new MessagePart[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindPartsByName != null ? retObjectFindPartsByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +227,14 @@ public class Message extends NamedItem  {
     
     public MessagePartCollection getParts() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParts = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parts");
+            retObjectParts = classInstance.Get("Parts");
+            JCObject val = (JCObject)retObjectParts;
             return new MessagePartCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParts != null ? retObjectParts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +242,14 @@ public class Message extends NamedItem  {
 
     public ServiceDescription getServiceDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceDescription = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceDescription");
+            retObjectServiceDescription = classInstance.Get("ServiceDescription");
+            JCObject val = (JCObject)retObjectServiceDescription;
             return new ServiceDescription(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceDescription != null ? retObjectServiceDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

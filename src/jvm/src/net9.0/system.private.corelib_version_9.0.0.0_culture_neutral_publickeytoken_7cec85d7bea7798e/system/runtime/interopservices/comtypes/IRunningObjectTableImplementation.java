@@ -147,9 +147,19 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
     
     public int GetObject(IMoniker pmkObjectName, JCORefOut<NetObject> ppunkObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetObject = null;
         try {
-            return (int)classInstance.Invoke("GetObject", pmkObjectName == null ? null : pmkObjectName.getJCOInstance(), ppunkObject.getJCRefOut());
+            retObjectGetObject = classInstance.Invoke("GetObject", pmkObjectName == null ? null : pmkObjectName.getJCOInstance(), ppunkObject.getJCRefOut());
+            return (int)retObjectGetObject;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetObjectNumber = (java.lang.Number)retObjectGetObject;
+                return retObjectGetObjectNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetObject != null ? retObjectGetObject.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,9 +167,19 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
 
     public int GetTimeOfLastChange(IMoniker pmkObjectName, JCORefOut<FILETIME> pfiletime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTimeOfLastChange = null;
         try {
-            return (int)classInstance.Invoke("GetTimeOfLastChange", pmkObjectName == null ? null : pmkObjectName.getJCOInstance(), pfiletime.getJCRefOut());
+            retObjectGetTimeOfLastChange = classInstance.Invoke("GetTimeOfLastChange", pmkObjectName == null ? null : pmkObjectName.getJCOInstance(), pfiletime.getJCRefOut());
+            return (int)retObjectGetTimeOfLastChange;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTimeOfLastChangeNumber = (java.lang.Number)retObjectGetTimeOfLastChange;
+                return retObjectGetTimeOfLastChangeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTimeOfLastChange != null ? retObjectGetTimeOfLastChange.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +187,19 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
 
     public int IsRunning(IMoniker pmkObjectName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRunning = null;
         try {
-            return (int)classInstance.Invoke("IsRunning", pmkObjectName == null ? null : pmkObjectName.getJCOInstance());
+            retObjectIsRunning = classInstance.Invoke("IsRunning", pmkObjectName == null ? null : pmkObjectName.getJCOInstance());
+            return (int)retObjectIsRunning;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIsRunningNumber = (java.lang.Number)retObjectIsRunning;
+                return retObjectIsRunningNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIsRunning != null ? retObjectIsRunning.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +207,19 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
 
     public int Register(int grfFlags, NetObject punkObject, IMoniker pmkObjectName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegister = null;
         try {
-            return (int)classInstance.Invoke("Register", grfFlags, punkObject == null ? null : punkObject.getJCOInstance(), pmkObjectName == null ? null : pmkObjectName.getJCOInstance());
+            retObjectRegister = classInstance.Invoke("Register", grfFlags, punkObject == null ? null : punkObject.getJCOInstance(), pmkObjectName == null ? null : pmkObjectName.getJCOInstance());
+            return (int)retObjectRegister;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRegisterNumber = (java.lang.Number)retObjectRegister;
+                return retObjectRegisterNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRegister != null ? retObjectRegister.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +227,7 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
 
     public void EnumRunning(JCORefOut<IEnumMoniker> ppenumMoniker) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnumRunning", ppenumMoniker.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -197,7 +237,7 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
 
     public void NoteChangeTime(int dwRegister, JCORefOut<FILETIME> pfiletime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("NoteChangeTime", dwRegister, pfiletime.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -207,7 +247,7 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
 
     public void Revoke(int dwRegister) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Revoke", dwRegister);
         } catch (JCNativeException jcne) {

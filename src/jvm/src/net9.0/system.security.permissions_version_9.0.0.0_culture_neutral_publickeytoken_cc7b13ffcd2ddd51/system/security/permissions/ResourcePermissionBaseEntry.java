@@ -175,9 +175,19 @@ public class ResourcePermissionBaseEntry extends NetObject  {
     
     public int getPermissionAccess() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPermissionAccess = null;
         try {
-            return (int)classInstance.Get("PermissionAccess");
+            retObjectPermissionAccess = classInstance.Get("PermissionAccess");
+            return (int)retObjectPermissionAccess;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPermissionAccessNumber = (java.lang.Number)retObjectPermissionAccess;
+                return retObjectPermissionAccessNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPermissionAccess != null ? retObjectPermissionAccess.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +195,12 @@ public class ResourcePermissionBaseEntry extends NetObject  {
 
     public java.lang.String[] getPermissionAccessPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPermissionAccessPath = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("PermissionAccessPath");
+            retObjectPermissionAccessPath = classInstance.Get("PermissionAccessPath");
+            JCObject resultingObjects = (JCObject)retObjectPermissionAccessPath;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -197,6 +209,8 @@ public class ResourcePermissionBaseEntry extends NetObject  {
 				resultingArray[indexPermissionAccessPath] = (java.lang.String)resultingArrayList.get(indexPermissionAccessPath);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectPermissionAccessPath != null ? retObjectPermissionAccessPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

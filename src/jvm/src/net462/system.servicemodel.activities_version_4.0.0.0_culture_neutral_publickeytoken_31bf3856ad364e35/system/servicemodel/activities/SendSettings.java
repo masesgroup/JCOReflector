@@ -168,9 +168,13 @@ public class SendSettings extends NetObject  {
     
     public boolean getIsOneWay() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOneWay = null;
         try {
-            return (boolean)classInstance.Get("IsOneWay");
+            retObjectIsOneWay = classInstance.Get("IsOneWay");
+            return (boolean)retObjectIsOneWay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOneWay != null ? retObjectIsOneWay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class SendSettings extends NetObject  {
 
     public void setIsOneWay(boolean IsOneWay) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsOneWay", IsOneWay);
         } catch (JCNativeException jcne) {
@@ -188,9 +192,13 @@ public class SendSettings extends NetObject  {
 
     public boolean getRequirePersistBeforeSend() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequirePersistBeforeSend = null;
         try {
-            return (boolean)classInstance.Get("RequirePersistBeforeSend");
+            retObjectRequirePersistBeforeSend = classInstance.Get("RequirePersistBeforeSend");
+            return (boolean)retObjectRequirePersistBeforeSend;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequirePersistBeforeSend != null ? retObjectRequirePersistBeforeSend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class SendSettings extends NetObject  {
 
     public void setRequirePersistBeforeSend(boolean RequirePersistBeforeSend) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequirePersistBeforeSend", RequirePersistBeforeSend);
         } catch (JCNativeException jcne) {
@@ -208,10 +216,14 @@ public class SendSettings extends NetObject  {
 
     public TokenImpersonationLevel getTokenImpersonationLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenImpersonationLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TokenImpersonationLevel");
+            retObjectTokenImpersonationLevel = classInstance.Get("TokenImpersonationLevel");
+            JCObject val = (JCObject)retObjectTokenImpersonationLevel;
             return new TokenImpersonationLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTokenImpersonationLevel != null ? retObjectTokenImpersonationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class SendSettings extends NetObject  {
 
     public void setTokenImpersonationLevel(TokenImpersonationLevel TokenImpersonationLevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TokenImpersonationLevel", TokenImpersonationLevel == null ? null : TokenImpersonationLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -229,10 +241,14 @@ public class SendSettings extends NetObject  {
 
     public Endpoint getEndpoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndpoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Endpoint");
+            retObjectEndpoint = classInstance.Get("Endpoint");
+            JCObject val = (JCObject)retObjectEndpoint;
             return new Endpoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndpoint != null ? retObjectEndpoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +256,7 @@ public class SendSettings extends NetObject  {
 
     public void setEndpoint(Endpoint Endpoint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Endpoint", Endpoint == null ? null : Endpoint.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -250,9 +266,13 @@ public class SendSettings extends NetObject  {
 
     public java.lang.String getEndpointConfigurationName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndpointConfigurationName = null;
         try {
-            return (java.lang.String)classInstance.Get("EndpointConfigurationName");
+            retObjectEndpointConfigurationName = classInstance.Get("EndpointConfigurationName");
+            return (java.lang.String)retObjectEndpointConfigurationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEndpointConfigurationName != null ? retObjectEndpointConfigurationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +280,7 @@ public class SendSettings extends NetObject  {
 
     public void setEndpointConfigurationName(java.lang.String EndpointConfigurationName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EndpointConfigurationName", EndpointConfigurationName);
         } catch (JCNativeException jcne) {
@@ -270,9 +290,13 @@ public class SendSettings extends NetObject  {
 
     public java.lang.String getOwnerDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwnerDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("OwnerDisplayName");
+            retObjectOwnerDisplayName = classInstance.Get("OwnerDisplayName");
+            return (java.lang.String)retObjectOwnerDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOwnerDisplayName != null ? retObjectOwnerDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +304,7 @@ public class SendSettings extends NetObject  {
 
     public void setOwnerDisplayName(java.lang.String OwnerDisplayName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OwnerDisplayName", OwnerDisplayName);
         } catch (JCNativeException jcne) {
@@ -290,10 +314,14 @@ public class SendSettings extends NetObject  {
 
     public Uri getEndpointAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndpointAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EndpointAddress");
+            retObjectEndpointAddress = classInstance.Get("EndpointAddress");
+            JCObject val = (JCObject)retObjectEndpointAddress;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndpointAddress != null ? retObjectEndpointAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,7 +329,7 @@ public class SendSettings extends NetObject  {
 
     public void setEndpointAddress(Uri EndpointAddress) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EndpointAddress", EndpointAddress == null ? null : EndpointAddress.getJCOInstance());
         } catch (JCNativeException jcne) {

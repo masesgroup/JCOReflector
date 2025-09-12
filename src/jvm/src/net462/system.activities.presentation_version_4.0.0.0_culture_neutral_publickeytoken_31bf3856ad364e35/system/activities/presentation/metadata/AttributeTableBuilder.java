@@ -167,10 +167,14 @@ public class AttributeTableBuilder extends NetObject  {
     
     public AttributeTable CreateTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateTable = null;
         try {
-            JCObject objCreateTable = (JCObject)classInstance.Invoke("CreateTable");
+            retObjectCreateTable = classInstance.Invoke("CreateTable");
+            JCObject objCreateTable = (JCObject)retObjectCreateTable;
             return new AttributeTable(objCreateTable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTable != null ? retObjectCreateTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class AttributeTableBuilder extends NetObject  {
 
     public void AddCallback(NetType type, AttributeCallback callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCallback", type == null ? null : type.getJCOInstance(), callback);
         } catch (JCNativeException jcne) {
@@ -188,7 +192,7 @@ public class AttributeTableBuilder extends NetObject  {
 
     public void AddCustomAttributes(NetType type, Attribute... attributes) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCustomAttributes", type == null ? null : type.getJCOInstance(), toObjectFromArray(attributes));
         } catch (JCNativeException jcne) {
@@ -198,7 +202,7 @@ public class AttributeTableBuilder extends NetObject  {
 
     public void AddCustomAttributes(NetType ownerType, MemberDescriptor descriptor, Attribute... attributes) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCustomAttributes", ownerType == null ? null : ownerType.getJCOInstance(), descriptor == null ? null : descriptor.getJCOInstance(), toObjectFromArray(attributes));
         } catch (JCNativeException jcne) {
@@ -208,7 +212,7 @@ public class AttributeTableBuilder extends NetObject  {
 
     public void AddCustomAttributes(NetType ownerType, MemberInfo member, Attribute... attributes) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCustomAttributes", ownerType == null ? null : ownerType.getJCOInstance(), member == null ? null : member.getJCOInstance(), toObjectFromArray(attributes));
         } catch (JCNativeException jcne) {
@@ -218,7 +222,7 @@ public class AttributeTableBuilder extends NetObject  {
 
     public void AddCustomAttributes(NetType ownerType, java.lang.String memberName, Attribute... attributes) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCustomAttributes", ownerType == null ? null : ownerType.getJCOInstance(), memberName, toObjectFromArray(attributes));
         } catch (JCNativeException jcne) {
@@ -228,7 +232,7 @@ public class AttributeTableBuilder extends NetObject  {
 
     public void AddCustomAttributes(NetType ownerType, DependencyProperty dp, Attribute... attributes) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCustomAttributes", ownerType == null ? null : ownerType.getJCOInstance(), dp == null ? null : dp.getJCOInstance(), toObjectFromArray(attributes));
         } catch (JCNativeException jcne) {
@@ -238,7 +242,7 @@ public class AttributeTableBuilder extends NetObject  {
 
     public void AddTable(AttributeTable table) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddTable", table == null ? null : table.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -248,7 +252,7 @@ public class AttributeTableBuilder extends NetObject  {
 
     public void ValidateTable() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ValidateTable");
         } catch (JCNativeException jcne) {

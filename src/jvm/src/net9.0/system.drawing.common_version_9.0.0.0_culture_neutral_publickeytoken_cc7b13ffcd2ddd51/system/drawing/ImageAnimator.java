@@ -157,9 +157,13 @@ public class ImageAnimator extends NetObject  {
     
     public static boolean CanAnimate(Image image) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCanAnimate = null;
         try {
-            return (boolean)classType.Invoke("CanAnimate", image == null ? null : image.getJCOInstance());
+            retObjectCanAnimate = classType.Invoke("CanAnimate", image == null ? null : image.getJCOInstance());
+            return (boolean)retObjectCanAnimate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanAnimate != null ? retObjectCanAnimate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class ImageAnimator extends NetObject  {
 
     public static void Animate(Image image, EventHandler onFrameChangedHandler) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.NullReferenceException, system.threading.AbandonedMutexException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Animate", image == null ? null : image.getJCOInstance(), onFrameChangedHandler);
         } catch (JCNativeException jcne) {
@@ -177,7 +181,7 @@ public class ImageAnimator extends NetObject  {
 
     public static void StopAnimate(Image image, EventHandler onFrameChangedHandler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.NullReferenceException, system.threading.AbandonedMutexException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("StopAnimate", image == null ? null : image.getJCOInstance(), onFrameChangedHandler);
         } catch (JCNativeException jcne) {
@@ -187,7 +191,7 @@ public class ImageAnimator extends NetObject  {
 
     public static void UpdateFrames() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.NullReferenceException, system.threading.AbandonedMutexException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("UpdateFrames");
         } catch (JCNativeException jcne) {
@@ -197,7 +201,7 @@ public class ImageAnimator extends NetObject  {
 
     public static void UpdateFrames(Image image) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.NullReferenceException, system.threading.AbandonedMutexException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("UpdateFrames", image == null ? null : image.getJCOInstance());
         } catch (JCNativeException jcne) {

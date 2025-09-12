@@ -166,9 +166,13 @@ public class ClientBuildManagerParameter extends NetObject  {
     
     public java.lang.String getStrongNameKeyContainer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrongNameKeyContainer = null;
         try {
-            return (java.lang.String)classInstance.Get("StrongNameKeyContainer");
+            retObjectStrongNameKeyContainer = classInstance.Get("StrongNameKeyContainer");
+            return (java.lang.String)retObjectStrongNameKeyContainer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStrongNameKeyContainer != null ? retObjectStrongNameKeyContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class ClientBuildManagerParameter extends NetObject  {
 
     public void setStrongNameKeyContainer(java.lang.String StrongNameKeyContainer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StrongNameKeyContainer", StrongNameKeyContainer);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class ClientBuildManagerParameter extends NetObject  {
 
     public java.lang.String getStrongNameKeyFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrongNameKeyFile = null;
         try {
-            return (java.lang.String)classInstance.Get("StrongNameKeyFile");
+            retObjectStrongNameKeyFile = classInstance.Get("StrongNameKeyFile");
+            return (java.lang.String)retObjectStrongNameKeyFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStrongNameKeyFile != null ? retObjectStrongNameKeyFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class ClientBuildManagerParameter extends NetObject  {
 
     public void setStrongNameKeyFile(java.lang.String StrongNameKeyFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StrongNameKeyFile", StrongNameKeyFile);
         } catch (JCNativeException jcne) {
@@ -206,10 +214,14 @@ public class ClientBuildManagerParameter extends NetObject  {
 
     public PrecompilationFlags getPrecompilationFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrecompilationFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrecompilationFlags");
+            retObjectPrecompilationFlags = classInstance.Get("PrecompilationFlags");
+            JCObject val = (JCObject)retObjectPrecompilationFlags;
             return new PrecompilationFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrecompilationFlags != null ? retObjectPrecompilationFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class ClientBuildManagerParameter extends NetObject  {
 
     public void setPrecompilationFlags(PrecompilationFlags PrecompilationFlags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrecompilationFlags", PrecompilationFlags == null ? null : PrecompilationFlags.getJCOInstance());
         } catch (JCNativeException jcne) {

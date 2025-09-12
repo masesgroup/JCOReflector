@@ -165,10 +165,14 @@ public class PeerCollaboration extends NetObject  {
     
     public static PeerApplicationCollection GetLocalRegisteredApplications() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.net.peertopeer.PeerToPeerException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLocalRegisteredApplications = null;
         try {
-            JCObject objGetLocalRegisteredApplications = (JCObject)classType.Invoke("GetLocalRegisteredApplications");
+            retObjectGetLocalRegisteredApplications = classType.Invoke("GetLocalRegisteredApplications");
+            JCObject objGetLocalRegisteredApplications = (JCObject)retObjectGetLocalRegisteredApplications;
             return new PeerApplicationCollection(objGetLocalRegisteredApplications);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocalRegisteredApplications != null ? retObjectGetLocalRegisteredApplications.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class PeerCollaboration extends NetObject  {
 
     public static PeerApplicationCollection GetLocalRegisteredApplications(PeerApplicationRegistrationType type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.net.peertopeer.PeerToPeerException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLocalRegisteredApplications = null;
         try {
-            JCObject objGetLocalRegisteredApplications = (JCObject)classType.Invoke("GetLocalRegisteredApplications", type == null ? null : type.getJCOInstance());
+            retObjectGetLocalRegisteredApplications = classType.Invoke("GetLocalRegisteredApplications", type == null ? null : type.getJCOInstance());
+            JCObject objGetLocalRegisteredApplications = (JCObject)retObjectGetLocalRegisteredApplications;
             return new PeerApplicationCollection(objGetLocalRegisteredApplications);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocalRegisteredApplications != null ? retObjectGetLocalRegisteredApplications.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +195,14 @@ public class PeerCollaboration extends NetObject  {
 
     public static PeerNearMeCollection GetPeersNearMe() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.net.peertopeer.PeerToPeerException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPeersNearMe = null;
         try {
-            JCObject objGetPeersNearMe = (JCObject)classType.Invoke("GetPeersNearMe");
+            retObjectGetPeersNearMe = classType.Invoke("GetPeersNearMe");
+            JCObject objGetPeersNearMe = (JCObject)retObjectGetPeersNearMe;
             return new PeerNearMeCollection(objGetPeersNearMe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPeersNearMe != null ? retObjectGetPeersNearMe.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +210,14 @@ public class PeerCollaboration extends NetObject  {
 
     public static PeerObjectCollection GetLocalSetObjects() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.net.peertopeer.PeerToPeerException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLocalSetObjects = null;
         try {
-            JCObject objGetLocalSetObjects = (JCObject)classType.Invoke("GetLocalSetObjects");
+            retObjectGetLocalSetObjects = classType.Invoke("GetLocalSetObjects");
+            JCObject objGetLocalSetObjects = (JCObject)retObjectGetLocalSetObjects;
             return new PeerObjectCollection(objGetLocalSetObjects);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocalSetObjects != null ? retObjectGetLocalSetObjects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +225,7 @@ public class PeerCollaboration extends NetObject  {
 
     public static void DeleteObject(PeerObject peerObject) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException, system.net.peertopeer.PeerToPeerException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DeleteObject", peerObject == null ? null : peerObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -219,7 +235,7 @@ public class PeerCollaboration extends NetObject  {
 
     public static void RegisterApplication(PeerApplication application, PeerApplicationRegistrationType type) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException, system.net.peertopeer.PeerToPeerException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterApplication", application == null ? null : application.getJCOInstance(), type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -229,7 +245,7 @@ public class PeerCollaboration extends NetObject  {
 
     public static void SetObject(PeerObject peerObject) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException, system.net.peertopeer.PeerToPeerException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetObject", peerObject == null ? null : peerObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -239,7 +255,7 @@ public class PeerCollaboration extends NetObject  {
 
     public static void SignIn(PeerScope peerScope) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.net.peertopeer.PeerToPeerException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SignIn", peerScope == null ? null : peerScope.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -249,7 +265,7 @@ public class PeerCollaboration extends NetObject  {
 
     public static void SignOut(PeerScope peerScope) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.net.peertopeer.PeerToPeerException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SignOut", peerScope == null ? null : peerScope.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -259,7 +275,7 @@ public class PeerCollaboration extends NetObject  {
 
     public static void UnregisterApplication(PeerApplication application, PeerApplicationRegistrationType type) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException, system.net.peertopeer.PeerToPeerException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("UnregisterApplication", application == null ? null : application.getJCOInstance(), type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -273,10 +289,14 @@ public class PeerCollaboration extends NetObject  {
     
     public static ISynchronizeInvoke getSynchronizingObject() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSynchronizingObject = null;
         try {
-            JCObject val = (JCObject)classType.Get("SynchronizingObject");
+            retObjectSynchronizingObject = classType.Get("SynchronizingObject");
+            JCObject val = (JCObject)retObjectSynchronizingObject;
             return new ISynchronizeInvokeImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSynchronizingObject != null ? retObjectSynchronizingObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +304,7 @@ public class PeerCollaboration extends NetObject  {
 
     public static void setSynchronizingObject(ISynchronizeInvoke SynchronizingObject) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("SynchronizingObject", SynchronizingObject == null ? null : SynchronizingObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -294,10 +314,14 @@ public class PeerCollaboration extends NetObject  {
 
     public static ContactManager getContactManager() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.net.peertopeer.PeerToPeerException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContactManager = null;
         try {
-            JCObject val = (JCObject)classType.Get("ContactManager");
+            retObjectContactManager = classType.Get("ContactManager");
+            JCObject val = (JCObject)retObjectContactManager;
             return new ContactManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContactManager != null ? retObjectContactManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,10 +329,14 @@ public class PeerCollaboration extends NetObject  {
 
     public static PeerApplicationLaunchInfo getApplicationLaunchInfo() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.net.peertopeer.PeerToPeerException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.AccessViolationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectApplicationLaunchInfo = null;
         try {
-            JCObject val = (JCObject)classType.Get("ApplicationLaunchInfo");
+            retObjectApplicationLaunchInfo = classType.Get("ApplicationLaunchInfo");
+            JCObject val = (JCObject)retObjectApplicationLaunchInfo;
             return new PeerApplicationLaunchInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationLaunchInfo != null ? retObjectApplicationLaunchInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,10 +344,14 @@ public class PeerCollaboration extends NetObject  {
 
     public static PeerPresenceInfo getLocalPresenceInfo() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException, system.net.peertopeer.PeerToPeerException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLocalPresenceInfo = null;
         try {
-            JCObject val = (JCObject)classType.Get("LocalPresenceInfo");
+            retObjectLocalPresenceInfo = classType.Get("LocalPresenceInfo");
+            JCObject val = (JCObject)retObjectLocalPresenceInfo;
             return new PeerPresenceInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalPresenceInfo != null ? retObjectLocalPresenceInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,7 +359,7 @@ public class PeerCollaboration extends NetObject  {
 
     public static void setLocalPresenceInfo(PeerPresenceInfo LocalPresenceInfo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException, system.net.peertopeer.PeerToPeerException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("LocalPresenceInfo", LocalPresenceInfo == null ? null : LocalPresenceInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -337,10 +369,14 @@ public class PeerCollaboration extends NetObject  {
 
     public static PeerScope getSignInScope() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException, system.net.peertopeer.PeerToPeerException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSignInScope = null;
         try {
-            JCObject val = (JCObject)classType.Get("SignInScope");
+            retObjectSignInScope = classType.Get("SignInScope");
+            JCObject val = (JCObject)retObjectSignInScope;
             return new PeerScope(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignInScope != null ? retObjectSignInScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,9 +384,13 @@ public class PeerCollaboration extends NetObject  {
 
     public static java.lang.String getLocalEndPointName() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLocalEndPointName = null;
         try {
-            return (java.lang.String)classType.Get("LocalEndPointName");
+            retObjectLocalEndPointName = classType.Get("LocalEndPointName");
+            return (java.lang.String)retObjectLocalEndPointName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLocalEndPointName != null ? retObjectLocalEndPointName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,7 +398,7 @@ public class PeerCollaboration extends NetObject  {
 
     public static void setLocalEndPointName(java.lang.String LocalEndPointName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.net.peertopeer.PeerToPeerException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("LocalEndPointName", LocalEndPointName);
         } catch (JCNativeException jcne) {

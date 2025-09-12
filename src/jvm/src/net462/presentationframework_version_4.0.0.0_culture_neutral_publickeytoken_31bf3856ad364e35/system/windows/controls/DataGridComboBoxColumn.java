@@ -169,10 +169,14 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
     
     public IEnumerable getItemsSource() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemsSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemsSource");
+            retObjectItemsSource = classInstance.Get("ItemsSource");
+            JCObject val = (JCObject)retObjectItemsSource;
             return new IEnumerableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemsSource != null ? retObjectItemsSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
 
     public void setItemsSource(IEnumerable ItemsSource) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemsSource", ItemsSource == null ? null : ItemsSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -190,9 +194,13 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
 
     public java.lang.String getDisplayMemberPath() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayMemberPath = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayMemberPath");
+            retObjectDisplayMemberPath = classInstance.Get("DisplayMemberPath");
+            return (java.lang.String)retObjectDisplayMemberPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayMemberPath != null ? retObjectDisplayMemberPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
 
     public void setDisplayMemberPath(java.lang.String DisplayMemberPath) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayMemberPath", DisplayMemberPath);
         } catch (JCNativeException jcne) {
@@ -210,9 +218,13 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
 
     public java.lang.String getSelectedValuePath() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedValuePath = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectedValuePath");
+            retObjectSelectedValuePath = classInstance.Get("SelectedValuePath");
+            return (java.lang.String)retObjectSelectedValuePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectedValuePath != null ? retObjectSelectedValuePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +232,7 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
 
     public void setSelectedValuePath(java.lang.String SelectedValuePath) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedValuePath", SelectedValuePath);
         } catch (JCNativeException jcne) {
@@ -230,10 +242,14 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
 
     public static ComponentResourceKey getTextBlockComboBoxStyleKey() throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTextBlockComboBoxStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("TextBlockComboBoxStyleKey");
+            retObjectTextBlockComboBoxStyleKey = classType.Get("TextBlockComboBoxStyleKey");
+            JCObject val = (JCObject)retObjectTextBlockComboBoxStyleKey;
             return new ComponentResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextBlockComboBoxStyleKey != null ? retObjectTextBlockComboBoxStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +257,14 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
 
     public BindingBase getSelectedItemBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedItemBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedItemBinding");
+            retObjectSelectedItemBinding = classInstance.Get("SelectedItemBinding");
+            JCObject val = (JCObject)retObjectSelectedItemBinding;
             return new BindingBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedItemBinding != null ? retObjectSelectedItemBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +272,7 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
 
     public void setSelectedItemBinding(BindingBase SelectedItemBinding) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedItemBinding", SelectedItemBinding == null ? null : SelectedItemBinding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -262,10 +282,14 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
 
     public BindingBase getSelectedValueBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedValueBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedValueBinding");
+            retObjectSelectedValueBinding = classInstance.Get("SelectedValueBinding");
+            JCObject val = (JCObject)retObjectSelectedValueBinding;
             return new BindingBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedValueBinding != null ? retObjectSelectedValueBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,7 +297,7 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
 
     public void setSelectedValueBinding(BindingBase SelectedValueBinding) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedValueBinding", SelectedValueBinding == null ? null : SelectedValueBinding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -283,10 +307,14 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
 
     public BindingBase getTextBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextBinding");
+            retObjectTextBinding = classInstance.Get("TextBinding");
+            JCObject val = (JCObject)retObjectTextBinding;
             return new BindingBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextBinding != null ? retObjectTextBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,7 +322,7 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
 
     public void setTextBinding(BindingBase TextBinding) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextBinding", TextBinding == null ? null : TextBinding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -304,10 +332,14 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
 
     public static Style getDefaultEditingElementStyle() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultEditingElementStyle = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultEditingElementStyle");
+            retObjectDefaultEditingElementStyle = classType.Get("DefaultEditingElementStyle");
+            JCObject val = (JCObject)retObjectDefaultEditingElementStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultEditingElementStyle != null ? retObjectDefaultEditingElementStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +347,14 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
 
     public static Style getDefaultElementStyle() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultElementStyle = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultElementStyle");
+            retObjectDefaultElementStyle = classType.Get("DefaultElementStyle");
+            JCObject val = (JCObject)retObjectDefaultElementStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultElementStyle != null ? retObjectDefaultElementStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,10 +362,14 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
 
     public Style getEditingElementStyle() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditingElementStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditingElementStyle");
+            retObjectEditingElementStyle = classInstance.Get("EditingElementStyle");
+            JCObject val = (JCObject)retObjectEditingElementStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditingElementStyle != null ? retObjectEditingElementStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,7 +377,7 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
 
     public void setEditingElementStyle(Style EditingElementStyle) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EditingElementStyle", EditingElementStyle == null ? null : EditingElementStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -347,10 +387,14 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
 
     public Style getElementStyle() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElementStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ElementStyle");
+            retObjectElementStyle = classInstance.Get("ElementStyle");
+            JCObject val = (JCObject)retObjectElementStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElementStyle != null ? retObjectElementStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,7 +402,7 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
 
     public void setElementStyle(Style ElementStyle) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ElementStyle", ElementStyle == null ? null : ElementStyle.getJCOInstance());
         } catch (JCNativeException jcne) {

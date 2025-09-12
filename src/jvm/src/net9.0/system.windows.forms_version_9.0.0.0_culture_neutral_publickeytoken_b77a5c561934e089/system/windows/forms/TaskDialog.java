@@ -160,10 +160,14 @@ public class TaskDialog extends NetObject  {
     
     public static TaskDialogButton ShowDialog(IWin32Window owner, TaskDialogPage page, TaskDialogStartupLocation startupLocation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShowDialog = null;
         try {
-            JCObject objShowDialog = (JCObject)classType.Invoke("ShowDialog", owner == null ? null : owner.getJCOInstance(), page == null ? null : page.getJCOInstance(), startupLocation == null ? null : startupLocation.getJCOInstance());
+            retObjectShowDialog = classType.Invoke("ShowDialog", owner == null ? null : owner.getJCOInstance(), page == null ? null : page.getJCOInstance(), startupLocation == null ? null : startupLocation.getJCOInstance());
+            JCObject objShowDialog = (JCObject)retObjectShowDialog;
             return new TaskDialogButton(objShowDialog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowDialog != null ? retObjectShowDialog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class TaskDialog extends NetObject  {
 
     public static TaskDialogButton ShowDialog(TaskDialogPage page, TaskDialogStartupLocation startupLocation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShowDialog = null;
         try {
-            JCObject objShowDialog = (JCObject)classType.Invoke("ShowDialog", page == null ? null : page.getJCOInstance(), startupLocation == null ? null : startupLocation.getJCOInstance());
+            retObjectShowDialog = classType.Invoke("ShowDialog", page == null ? null : page.getJCOInstance(), startupLocation == null ? null : startupLocation.getJCOInstance());
+            JCObject objShowDialog = (JCObject)retObjectShowDialog;
             return new TaskDialogButton(objShowDialog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowDialog != null ? retObjectShowDialog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +190,7 @@ public class TaskDialog extends NetObject  {
 
     public void Close() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {

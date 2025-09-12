@@ -157,10 +157,14 @@ public class ProvidersHelper extends NetObject  {
     
     public static ProviderBase InstantiateProvider(ProviderSettings providerSettings, NetType providerType) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.FormatException, system.configuration.ConfigurationException, system.TypeLoadException, system.web.HttpException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.reflection.AmbiguousMatchException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInstantiateProvider = null;
         try {
-            JCObject objInstantiateProvider = (JCObject)classType.Invoke("InstantiateProvider", providerSettings == null ? null : providerSettings.getJCOInstance(), providerType == null ? null : providerType.getJCOInstance());
+            retObjectInstantiateProvider = classType.Invoke("InstantiateProvider", providerSettings == null ? null : providerSettings.getJCOInstance(), providerType == null ? null : providerType.getJCOInstance());
+            JCObject objInstantiateProvider = (JCObject)retObjectInstantiateProvider;
             return new ProviderBase(objInstantiateProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstantiateProvider != null ? retObjectInstantiateProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class ProvidersHelper extends NetObject  {
 
     public static void InstantiateProviders(ProviderSettingsCollection configProviders, ProviderCollection providers, NetType providerType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.configuration.ConfigurationException, system.TypeLoadException, system.web.HttpException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("InstantiateProviders", configProviders == null ? null : configProviders.getJCOInstance(), providers == null ? null : providers.getJCOInstance(), providerType == null ? null : providerType.getJCOInstance());
         } catch (JCNativeException jcne) {

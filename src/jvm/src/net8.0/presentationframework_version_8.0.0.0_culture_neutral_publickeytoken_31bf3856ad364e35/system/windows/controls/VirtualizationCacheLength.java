@@ -177,9 +177,13 @@ public class VirtualizationCacheLength extends ValueType  {
     
     public boolean Equals(VirtualizationCacheLength cacheLength) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", cacheLength == null ? null : cacheLength.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", cacheLength == null ? null : cacheLength.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +195,19 @@ public class VirtualizationCacheLength extends ValueType  {
     
     public double getCacheAfterViewport() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCacheAfterViewport = null;
         try {
-            return (double)classInstance.Get("CacheAfterViewport");
+            retObjectCacheAfterViewport = classInstance.Get("CacheAfterViewport");
+            return (double)retObjectCacheAfterViewport;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCacheAfterViewportNumber = (java.lang.Number)retObjectCacheAfterViewport;
+                return retObjectCacheAfterViewportNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectCacheAfterViewport != null ? retObjectCacheAfterViewport.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +215,19 @@ public class VirtualizationCacheLength extends ValueType  {
 
     public double getCacheBeforeViewport() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCacheBeforeViewport = null;
         try {
-            return (double)classInstance.Get("CacheBeforeViewport");
+            retObjectCacheBeforeViewport = classInstance.Get("CacheBeforeViewport");
+            return (double)retObjectCacheBeforeViewport;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCacheBeforeViewportNumber = (java.lang.Number)retObjectCacheBeforeViewport;
+                return retObjectCacheBeforeViewportNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectCacheBeforeViewport != null ? retObjectCacheBeforeViewport.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

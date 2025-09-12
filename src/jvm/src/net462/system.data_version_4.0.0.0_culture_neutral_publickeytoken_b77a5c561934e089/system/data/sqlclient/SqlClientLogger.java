@@ -161,9 +161,13 @@ public class SqlClientLogger extends NetObject  {
     
     public boolean LogAssert(boolean value, java.lang.String type, java.lang.String method, java.lang.String message) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogAssert = null;
         try {
-            return (boolean)classInstance.Invoke("LogAssert", value, type, method, message);
+            retObjectLogAssert = classInstance.Invoke("LogAssert", value, type, method, message);
+            return (boolean)retObjectLogAssert;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectLogAssert != null ? retObjectLogAssert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class SqlClientLogger extends NetObject  {
 
     public void LogError(java.lang.String type, java.lang.String method, java.lang.String message) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogError", type, method, message);
         } catch (JCNativeException jcne) {
@@ -181,7 +185,7 @@ public class SqlClientLogger extends NetObject  {
 
     public void LogInfo(java.lang.String type, java.lang.String method, java.lang.String message) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogInfo", type, method, message);
         } catch (JCNativeException jcne) {
@@ -195,9 +199,13 @@ public class SqlClientLogger extends NetObject  {
     
     public boolean getIsLoggingEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLoggingEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsLoggingEnabled");
+            retObjectIsLoggingEnabled = classInstance.Get("IsLoggingEnabled");
+            return (boolean)retObjectIsLoggingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLoggingEnabled != null ? retObjectIsLoggingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

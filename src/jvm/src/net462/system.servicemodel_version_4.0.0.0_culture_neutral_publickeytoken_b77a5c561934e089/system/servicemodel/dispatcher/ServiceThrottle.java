@@ -159,9 +159,19 @@ public class ServiceThrottle extends NetObject  {
     
     public int getMaxConcurrentCalls() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxConcurrentCalls = null;
         try {
-            return (int)classInstance.Get("MaxConcurrentCalls");
+            retObjectMaxConcurrentCalls = classInstance.Get("MaxConcurrentCalls");
+            return (int)retObjectMaxConcurrentCalls;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxConcurrentCallsNumber = (java.lang.Number)retObjectMaxConcurrentCalls;
+                return retObjectMaxConcurrentCallsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxConcurrentCalls != null ? retObjectMaxConcurrentCalls.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +179,7 @@ public class ServiceThrottle extends NetObject  {
 
     public void setMaxConcurrentCalls(int MaxConcurrentCalls) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxConcurrentCalls", MaxConcurrentCalls);
         } catch (JCNativeException jcne) {
@@ -179,9 +189,19 @@ public class ServiceThrottle extends NetObject  {
 
     public int getMaxConcurrentInstances() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxConcurrentInstances = null;
         try {
-            return (int)classInstance.Get("MaxConcurrentInstances");
+            retObjectMaxConcurrentInstances = classInstance.Get("MaxConcurrentInstances");
+            return (int)retObjectMaxConcurrentInstances;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxConcurrentInstancesNumber = (java.lang.Number)retObjectMaxConcurrentInstances;
+                return retObjectMaxConcurrentInstancesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxConcurrentInstances != null ? retObjectMaxConcurrentInstances.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +209,7 @@ public class ServiceThrottle extends NetObject  {
 
     public void setMaxConcurrentInstances(int MaxConcurrentInstances) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxConcurrentInstances", MaxConcurrentInstances);
         } catch (JCNativeException jcne) {
@@ -199,9 +219,19 @@ public class ServiceThrottle extends NetObject  {
 
     public int getMaxConcurrentSessions() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxConcurrentSessions = null;
         try {
-            return (int)classInstance.Get("MaxConcurrentSessions");
+            retObjectMaxConcurrentSessions = classInstance.Get("MaxConcurrentSessions");
+            return (int)retObjectMaxConcurrentSessions;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxConcurrentSessionsNumber = (java.lang.Number)retObjectMaxConcurrentSessions;
+                return retObjectMaxConcurrentSessionsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxConcurrentSessions != null ? retObjectMaxConcurrentSessions.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +239,7 @@ public class ServiceThrottle extends NetObject  {
 
     public void setMaxConcurrentSessions(int MaxConcurrentSessions) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxConcurrentSessions", MaxConcurrentSessions);
         } catch (JCNativeException jcne) {

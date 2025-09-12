@@ -188,10 +188,14 @@ public class X509SecurityTokenParameters extends SecurityTokenParameters  {
     
     public X509KeyIdentifierClauseType getX509ReferenceStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectX509ReferenceStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("X509ReferenceStyle");
+            retObjectX509ReferenceStyle = classInstance.Get("X509ReferenceStyle");
+            JCObject val = (JCObject)retObjectX509ReferenceStyle;
             return new X509KeyIdentifierClauseType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectX509ReferenceStyle != null ? retObjectX509ReferenceStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +203,7 @@ public class X509SecurityTokenParameters extends SecurityTokenParameters  {
 
     public void setX509ReferenceStyle(X509KeyIdentifierClauseType X509ReferenceStyle) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("X509ReferenceStyle", X509ReferenceStyle == null ? null : X509ReferenceStyle.getJCOInstance());
         } catch (JCNativeException jcne) {

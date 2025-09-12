@@ -183,10 +183,14 @@ public class TimerEventSubscription extends NetObject  {
     
     public DateTime getExpiresAt() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpiresAt = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExpiresAt");
+            retObjectExpiresAt = classInstance.Get("ExpiresAt");
+            JCObject val = (JCObject)retObjectExpiresAt;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpiresAt != null ? retObjectExpiresAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +198,14 @@ public class TimerEventSubscription extends NetObject  {
 
     public Guid getSubscriptionId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubscriptionId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SubscriptionId");
+            retObjectSubscriptionId = classInstance.Get("SubscriptionId");
+            JCObject val = (JCObject)retObjectSubscriptionId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubscriptionId != null ? retObjectSubscriptionId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +213,14 @@ public class TimerEventSubscription extends NetObject  {
 
     public Guid getWorkflowInstanceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowInstanceId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowInstanceId");
+            retObjectWorkflowInstanceId = classInstance.Get("WorkflowInstanceId");
+            JCObject val = (JCObject)retObjectWorkflowInstanceId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowInstanceId != null ? retObjectWorkflowInstanceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +228,14 @@ public class TimerEventSubscription extends NetObject  {
 
     public IComparable getQueueName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQueueName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("QueueName");
+            retObjectQueueName = classInstance.Get("QueueName");
+            JCObject val = (JCObject)retObjectQueueName;
             return new IComparableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQueueName != null ? retObjectQueueName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +243,7 @@ public class TimerEventSubscription extends NetObject  {
 
     public void setQueueName(IComparable QueueName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QueueName", QueueName == null ? null : QueueName.getJCOInstance());
         } catch (JCNativeException jcne) {

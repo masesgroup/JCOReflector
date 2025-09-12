@@ -144,7 +144,7 @@ public class IBindableControlImplementation extends NetObject implements IBindab
     
     public void ExtractValues(IOrderedDictionary dictionary) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExtractValues", dictionary == null ? null : dictionary.getJCOInstance());
         } catch (JCNativeException jcne) {

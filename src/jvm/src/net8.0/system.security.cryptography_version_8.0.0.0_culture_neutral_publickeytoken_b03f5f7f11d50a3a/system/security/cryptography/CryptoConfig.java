@@ -161,10 +161,12 @@ public class CryptoConfig extends NetObject  {
     
     public static byte[] EncodeOID(java.lang.String str) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEncodeOID = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("EncodeOID", str);
+            retObjectEncodeOID = classType.Invoke("EncodeOID", str);
+            JCObject resultingObjects = (JCObject)retObjectEncodeOID;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -173,6 +175,8 @@ public class CryptoConfig extends NetObject  {
 				resultingArray[indexEncodeOID] = (byte)resultingArrayList.get(indexEncodeOID);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncodeOID != null ? retObjectEncodeOID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class CryptoConfig extends NetObject  {
 
     public static NetObject CreateFromName(java.lang.String name, NetObject... args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.TypeLoadException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromName = null;
         try {
-            JCObject objCreateFromName = (JCObject)classType.Invoke("CreateFromName", name, toObjectFromArray(args));
+            retObjectCreateFromName = classType.Invoke("CreateFromName", name, toObjectFromArray(args));
+            JCObject objCreateFromName = (JCObject)retObjectCreateFromName;
             return new NetObject(objCreateFromName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromName != null ? retObjectCreateFromName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +199,14 @@ public class CryptoConfig extends NetObject  {
 
     public static NetObject CreateFromName(java.lang.String name) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.TypeLoadException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromName = null;
         try {
-            JCObject objCreateFromName = (JCObject)classType.Invoke("CreateFromName", name);
+            retObjectCreateFromName = classType.Invoke("CreateFromName", name);
+            JCObject objCreateFromName = (JCObject)retObjectCreateFromName;
             return new NetObject(objCreateFromName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromName != null ? retObjectCreateFromName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +214,13 @@ public class CryptoConfig extends NetObject  {
 
     public static java.lang.String MapNameToOID(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMapNameToOID = null;
         try {
-            return (java.lang.String)classType.Invoke("MapNameToOID", name);
+            retObjectMapNameToOID = classType.Invoke("MapNameToOID", name);
+            return (java.lang.String)retObjectMapNameToOID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMapNameToOID != null ? retObjectMapNameToOID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +228,7 @@ public class CryptoConfig extends NetObject  {
 
     public static void AddAlgorithm(NetType algorithm, java.lang.String... names) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddAlgorithm", algorithm == null ? null : algorithm.getJCOInstance(), names);
         } catch (JCNativeException jcne) {
@@ -222,7 +238,7 @@ public class CryptoConfig extends NetObject  {
 
     public static void AddAlgorithm(NetType dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddAlgorithm", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -232,7 +248,7 @@ public class CryptoConfig extends NetObject  {
 
     public static void AddOID(java.lang.String oid, java.lang.String... names) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddOID", oid, names);
         } catch (JCNativeException jcne) {
@@ -242,7 +258,7 @@ public class CryptoConfig extends NetObject  {
 
     public static void AddOID(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddOID", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -256,9 +272,13 @@ public class CryptoConfig extends NetObject  {
     
     public static boolean getAllowOnlyFipsAlgorithms() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAllowOnlyFipsAlgorithms = null;
         try {
-            return (boolean)classType.Get("AllowOnlyFipsAlgorithms");
+            retObjectAllowOnlyFipsAlgorithms = classType.Get("AllowOnlyFipsAlgorithms");
+            return (boolean)retObjectAllowOnlyFipsAlgorithms;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowOnlyFipsAlgorithms != null ? retObjectAllowOnlyFipsAlgorithms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -159,10 +159,14 @@ public class RightsManagementInformation extends NetObject  {
     
     public PublishLicense LoadPublishLicense() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.io.EndOfStreamException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.io.FileFormatException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.rightsmanagement.RightsManagementException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadPublishLicense = null;
         try {
-            JCObject objLoadPublishLicense = (JCObject)classInstance.Invoke("LoadPublishLicense");
+            retObjectLoadPublishLicense = classInstance.Invoke("LoadPublishLicense");
+            JCObject objLoadPublishLicense = (JCObject)retObjectLoadPublishLicense;
             return new PublishLicense(objLoadPublishLicense);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadPublishLicense != null ? retObjectLoadPublishLicense.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class RightsManagementInformation extends NetObject  {
 
     public UseLicense LoadUseLicense(ContentUser userKey) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.ArgumentOutOfRangeException, system.io.FileFormatException, system.security.rightsmanagement.RightsManagementException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadUseLicense = null;
         try {
-            JCObject objLoadUseLicense = (JCObject)classInstance.Invoke("LoadUseLicense", userKey == null ? null : userKey.getJCOInstance());
+            retObjectLoadUseLicense = classInstance.Invoke("LoadUseLicense", userKey == null ? null : userKey.getJCOInstance());
+            JCObject objLoadUseLicense = (JCObject)retObjectLoadUseLicense;
             return new UseLicense(objLoadUseLicense);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadUseLicense != null ? retObjectLoadUseLicense.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +189,7 @@ public class RightsManagementInformation extends NetObject  {
 
     public void DeleteUseLicense(ContentUser userKey) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.ArgumentOutOfRangeException, system.io.FileFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteUseLicense", userKey == null ? null : userKey.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -191,7 +199,7 @@ public class RightsManagementInformation extends NetObject  {
 
     public void SavePublishLicense(PublishLicense publishLicense) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SavePublishLicense", publishLicense == null ? null : publishLicense.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,7 +209,7 @@ public class RightsManagementInformation extends NetObject  {
 
     public void SaveUseLicense(ContentUser userKey, UseLicense useLicense) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.io.IOException, system.InvalidOperationException, system.UnauthorizedAccessException, system.ArgumentOutOfRangeException, system.io.FileFormatException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveUseLicense", userKey == null ? null : userKey.getJCOInstance(), useLicense == null ? null : useLicense.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -215,10 +223,14 @@ public class RightsManagementInformation extends NetObject  {
     
     public CryptoProvider getCryptoProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCryptoProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CryptoProvider");
+            retObjectCryptoProvider = classInstance.Get("CryptoProvider");
+            JCObject val = (JCObject)retObjectCryptoProvider;
             return new CryptoProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCryptoProvider != null ? retObjectCryptoProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +238,7 @@ public class RightsManagementInformation extends NetObject  {
 
     public void setCryptoProvider(CryptoProvider CryptoProvider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CryptoProvider", CryptoProvider == null ? null : CryptoProvider.getJCOInstance());
         } catch (JCNativeException jcne) {

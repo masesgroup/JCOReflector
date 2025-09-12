@@ -154,9 +154,13 @@ public class DesignerProperties extends NetObject  {
     
     public static boolean GetIsInDesignMode(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIsInDesignMode = null;
         try {
-            return (boolean)classType.Invoke("GetIsInDesignMode", element == null ? null : element.getJCOInstance());
+            retObjectGetIsInDesignMode = classType.Invoke("GetIsInDesignMode", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetIsInDesignMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsInDesignMode != null ? retObjectGetIsInDesignMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,7 +168,7 @@ public class DesignerProperties extends NetObject  {
 
     public static void SetIsInDesignMode(DependencyObject element, boolean value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIsInDesignMode", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {

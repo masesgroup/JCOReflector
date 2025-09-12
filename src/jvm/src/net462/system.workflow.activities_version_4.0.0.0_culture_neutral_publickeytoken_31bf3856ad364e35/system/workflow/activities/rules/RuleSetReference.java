@@ -176,9 +176,13 @@ public class RuleSetReference extends DependencyObject  {
     
     public java.lang.String getRuleSetName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRuleSetName = null;
         try {
-            return (java.lang.String)classInstance.Get("RuleSetName");
+            retObjectRuleSetName = classInstance.Get("RuleSetName");
+            return (java.lang.String)retObjectRuleSetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRuleSetName != null ? retObjectRuleSetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class RuleSetReference extends DependencyObject  {
 
     public void setRuleSetName(java.lang.String RuleSetName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RuleSetName", RuleSetName);
         } catch (JCNativeException jcne) {

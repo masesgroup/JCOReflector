@@ -157,10 +157,14 @@ public class TextModifier extends TextRun  {
     
     public TextRunProperties ModifyProperties(TextRunProperties properties) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModifyProperties = null;
         try {
-            JCObject objModifyProperties = (JCObject)classInstance.Invoke("ModifyProperties", properties == null ? null : properties.getJCOInstance());
+            retObjectModifyProperties = classInstance.Invoke("ModifyProperties", properties == null ? null : properties.getJCOInstance());
+            JCObject objModifyProperties = (JCObject)retObjectModifyProperties;
             return new TextRunProperties(objModifyProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModifyProperties != null ? retObjectModifyProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class TextModifier extends TextRun  {
     
     public boolean getHasDirectionalEmbedding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasDirectionalEmbedding = null;
         try {
-            return (boolean)classInstance.Get("HasDirectionalEmbedding");
+            retObjectHasDirectionalEmbedding = classInstance.Get("HasDirectionalEmbedding");
+            return (boolean)retObjectHasDirectionalEmbedding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasDirectionalEmbedding != null ? retObjectHasDirectionalEmbedding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class TextModifier extends TextRun  {
 
     public FlowDirection getFlowDirection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlowDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FlowDirection");
+            retObjectFlowDirection = classInstance.Get("FlowDirection");
+            JCObject val = (JCObject)retObjectFlowDirection;
             return new FlowDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlowDirection != null ? retObjectFlowDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -156,9 +156,13 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
     
     public boolean CaptureMouse() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaptureMouse = null;
         try {
-            return (boolean)classInstance.Invoke("CaptureMouse");
+            retObjectCaptureMouse = classInstance.Invoke("CaptureMouse");
+            return (boolean)retObjectCaptureMouse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCaptureMouse != null ? retObjectCaptureMouse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public boolean CaptureStylus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaptureStylus = null;
         try {
-            return (boolean)classInstance.Invoke("CaptureStylus");
+            retObjectCaptureStylus = classInstance.Invoke("CaptureStylus");
+            return (boolean)retObjectCaptureStylus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCaptureStylus != null ? retObjectCaptureStylus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +184,13 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public boolean Focus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFocus = null;
         try {
-            return (boolean)classInstance.Invoke("Focus");
+            retObjectFocus = classInstance.Invoke("Focus");
+            return (boolean)retObjectFocus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFocus != null ? retObjectFocus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +198,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void RaiseEvent(RoutedEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RaiseEvent", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -196,7 +208,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void ReleaseMouseCapture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseMouseCapture");
         } catch (JCNativeException jcne) {
@@ -206,7 +218,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void ReleaseStylusCapture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseStylusCapture");
         } catch (JCNativeException jcne) {
@@ -220,9 +232,13 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
     
     public boolean getFocusable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFocusable = null;
         try {
-            return (boolean)classInstance.Get("Focusable");
+            retObjectFocusable = classInstance.Get("Focusable");
+            return (boolean)retObjectFocusable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFocusable != null ? retObjectFocusable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +246,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void setFocusable(boolean Focusable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Focusable", Focusable);
         } catch (JCNativeException jcne) {
@@ -240,9 +256,13 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public boolean getIsEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsEnabled");
+            retObjectIsEnabled = classInstance.Get("IsEnabled");
+            return (boolean)retObjectIsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEnabled != null ? retObjectIsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,9 +270,13 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public boolean getIsKeyboardFocused() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsKeyboardFocused = null;
         try {
-            return (boolean)classInstance.Get("IsKeyboardFocused");
+            retObjectIsKeyboardFocused = classInstance.Get("IsKeyboardFocused");
+            return (boolean)retObjectIsKeyboardFocused;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsKeyboardFocused != null ? retObjectIsKeyboardFocused.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,9 +284,13 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public boolean getIsKeyboardFocusWithin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsKeyboardFocusWithin = null;
         try {
-            return (boolean)classInstance.Get("IsKeyboardFocusWithin");
+            retObjectIsKeyboardFocusWithin = classInstance.Get("IsKeyboardFocusWithin");
+            return (boolean)retObjectIsKeyboardFocusWithin;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsKeyboardFocusWithin != null ? retObjectIsKeyboardFocusWithin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,9 +298,13 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public boolean getIsMouseCaptured() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMouseCaptured = null;
         try {
-            return (boolean)classInstance.Get("IsMouseCaptured");
+            retObjectIsMouseCaptured = classInstance.Get("IsMouseCaptured");
+            return (boolean)retObjectIsMouseCaptured;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMouseCaptured != null ? retObjectIsMouseCaptured.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,9 +312,13 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public boolean getIsMouseDirectlyOver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMouseDirectlyOver = null;
         try {
-            return (boolean)classInstance.Get("IsMouseDirectlyOver");
+            retObjectIsMouseDirectlyOver = classInstance.Get("IsMouseDirectlyOver");
+            return (boolean)retObjectIsMouseDirectlyOver;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMouseDirectlyOver != null ? retObjectIsMouseDirectlyOver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,9 +326,13 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public boolean getIsMouseOver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMouseOver = null;
         try {
-            return (boolean)classInstance.Get("IsMouseOver");
+            retObjectIsMouseOver = classInstance.Get("IsMouseOver");
+            return (boolean)retObjectIsMouseOver;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMouseOver != null ? retObjectIsMouseOver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,9 +340,13 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public boolean getIsStylusCaptured() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStylusCaptured = null;
         try {
-            return (boolean)classInstance.Get("IsStylusCaptured");
+            retObjectIsStylusCaptured = classInstance.Get("IsStylusCaptured");
+            return (boolean)retObjectIsStylusCaptured;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsStylusCaptured != null ? retObjectIsStylusCaptured.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,9 +354,13 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public boolean getIsStylusDirectlyOver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStylusDirectlyOver = null;
         try {
-            return (boolean)classInstance.Get("IsStylusDirectlyOver");
+            retObjectIsStylusDirectlyOver = classInstance.Get("IsStylusDirectlyOver");
+            return (boolean)retObjectIsStylusDirectlyOver;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsStylusDirectlyOver != null ? retObjectIsStylusDirectlyOver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,9 +368,13 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public boolean getIsStylusOver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStylusOver = null;
         try {
-            return (boolean)classInstance.Get("IsStylusOver");
+            retObjectIsStylusOver = classInstance.Get("IsStylusOver");
+            return (boolean)retObjectIsStylusOver;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsStylusOver != null ? retObjectIsStylusOver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,9 +382,13 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +396,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -355,7 +411,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addGotKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GotKeyboardFocus", handler);
         } catch (JCNativeException jcne) {
@@ -365,7 +421,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeGotKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GotKeyboardFocus", handler);
         } catch (JCNativeException jcne) {
@@ -375,7 +431,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addLostKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LostKeyboardFocus", handler);
         } catch (JCNativeException jcne) {
@@ -385,7 +441,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeLostKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LostKeyboardFocus", handler);
         } catch (JCNativeException jcne) {
@@ -395,7 +451,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addPreviewGotKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewGotKeyboardFocus", handler);
         } catch (JCNativeException jcne) {
@@ -405,7 +461,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removePreviewGotKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewGotKeyboardFocus", handler);
         } catch (JCNativeException jcne) {
@@ -415,7 +471,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addPreviewLostKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewLostKeyboardFocus", handler);
         } catch (JCNativeException jcne) {
@@ -425,7 +481,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removePreviewLostKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewLostKeyboardFocus", handler);
         } catch (JCNativeException jcne) {
@@ -435,7 +491,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -445,7 +501,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -455,7 +511,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyUp", handler);
         } catch (JCNativeException jcne) {
@@ -465,7 +521,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyUp", handler);
         } catch (JCNativeException jcne) {
@@ -475,7 +531,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addPreviewKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewKeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -485,7 +541,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removePreviewKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewKeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -495,7 +551,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addPreviewKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewKeyUp", handler);
         } catch (JCNativeException jcne) {
@@ -505,7 +561,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removePreviewKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewKeyUp", handler);
         } catch (JCNativeException jcne) {
@@ -515,7 +571,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addMouseLeftButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseLeftButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -525,7 +581,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeMouseLeftButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseLeftButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -535,7 +591,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addMouseLeftButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseLeftButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -545,7 +601,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeMouseLeftButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseLeftButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -555,7 +611,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addMouseRightButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseRightButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -565,7 +621,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeMouseRightButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseRightButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -575,7 +631,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addMouseRightButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseRightButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -585,7 +641,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeMouseRightButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseRightButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -595,7 +651,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addPreviewMouseLeftButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewMouseLeftButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -605,7 +661,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removePreviewMouseLeftButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewMouseLeftButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -615,7 +671,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addPreviewMouseLeftButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewMouseLeftButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -625,7 +681,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removePreviewMouseLeftButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewMouseLeftButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -635,7 +691,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addPreviewMouseRightButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewMouseRightButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -645,7 +701,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removePreviewMouseRightButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewMouseRightButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -655,7 +711,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addPreviewMouseRightButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewMouseRightButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -665,7 +721,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removePreviewMouseRightButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewMouseRightButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -675,7 +731,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addGotMouseCapture(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GotMouseCapture", handler);
         } catch (JCNativeException jcne) {
@@ -685,7 +741,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeGotMouseCapture(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GotMouseCapture", handler);
         } catch (JCNativeException jcne) {
@@ -695,7 +751,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addLostMouseCapture(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LostMouseCapture", handler);
         } catch (JCNativeException jcne) {
@@ -705,7 +761,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeLostMouseCapture(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LostMouseCapture", handler);
         } catch (JCNativeException jcne) {
@@ -715,7 +771,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addMouseEnter(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseEnter", handler);
         } catch (JCNativeException jcne) {
@@ -725,7 +781,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeMouseEnter(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseEnter", handler);
         } catch (JCNativeException jcne) {
@@ -735,7 +791,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addMouseLeave(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseLeave", handler);
         } catch (JCNativeException jcne) {
@@ -745,7 +801,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeMouseLeave(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseLeave", handler);
         } catch (JCNativeException jcne) {
@@ -755,7 +811,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -765,7 +821,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -775,7 +831,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addPreviewMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewMouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -785,7 +841,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removePreviewMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewMouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -795,7 +851,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addMouseWheel(MouseWheelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseWheel", handler);
         } catch (JCNativeException jcne) {
@@ -805,7 +861,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeMouseWheel(MouseWheelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseWheel", handler);
         } catch (JCNativeException jcne) {
@@ -815,7 +871,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addPreviewMouseWheel(MouseWheelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewMouseWheel", handler);
         } catch (JCNativeException jcne) {
@@ -825,7 +881,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removePreviewMouseWheel(MouseWheelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewMouseWheel", handler);
         } catch (JCNativeException jcne) {
@@ -835,7 +891,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addPreviewStylusButtonDown(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewStylusButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -845,7 +901,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removePreviewStylusButtonDown(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewStylusButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -855,7 +911,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addPreviewStylusButtonUp(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewStylusButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -865,7 +921,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removePreviewStylusButtonUp(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewStylusButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -875,7 +931,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addStylusButtonDown(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -885,7 +941,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeStylusButtonDown(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -895,7 +951,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addStylusButtonUp(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -905,7 +961,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeStylusButtonUp(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -915,7 +971,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addPreviewStylusDown(StylusDownEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewStylusDown", handler);
         } catch (JCNativeException jcne) {
@@ -925,7 +981,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removePreviewStylusDown(StylusDownEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewStylusDown", handler);
         } catch (JCNativeException jcne) {
@@ -935,7 +991,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addStylusDown(StylusDownEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusDown", handler);
         } catch (JCNativeException jcne) {
@@ -945,7 +1001,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeStylusDown(StylusDownEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusDown", handler);
         } catch (JCNativeException jcne) {
@@ -955,7 +1011,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addGotStylusCapture(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GotStylusCapture", handler);
         } catch (JCNativeException jcne) {
@@ -965,7 +1021,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeGotStylusCapture(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GotStylusCapture", handler);
         } catch (JCNativeException jcne) {
@@ -975,7 +1031,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addLostStylusCapture(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LostStylusCapture", handler);
         } catch (JCNativeException jcne) {
@@ -985,7 +1041,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeLostStylusCapture(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LostStylusCapture", handler);
         } catch (JCNativeException jcne) {
@@ -995,7 +1051,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addPreviewStylusInAirMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewStylusInAirMove", handler);
         } catch (JCNativeException jcne) {
@@ -1005,7 +1061,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removePreviewStylusInAirMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewStylusInAirMove", handler);
         } catch (JCNativeException jcne) {
@@ -1015,7 +1071,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addPreviewStylusInRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewStylusInRange", handler);
         } catch (JCNativeException jcne) {
@@ -1025,7 +1081,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removePreviewStylusInRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewStylusInRange", handler);
         } catch (JCNativeException jcne) {
@@ -1035,7 +1091,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addPreviewStylusMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewStylusMove", handler);
         } catch (JCNativeException jcne) {
@@ -1045,7 +1101,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removePreviewStylusMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewStylusMove", handler);
         } catch (JCNativeException jcne) {
@@ -1055,7 +1111,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addPreviewStylusOutOfRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewStylusOutOfRange", handler);
         } catch (JCNativeException jcne) {
@@ -1065,7 +1121,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removePreviewStylusOutOfRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewStylusOutOfRange", handler);
         } catch (JCNativeException jcne) {
@@ -1075,7 +1131,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addPreviewStylusUp(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewStylusUp", handler);
         } catch (JCNativeException jcne) {
@@ -1085,7 +1141,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removePreviewStylusUp(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewStylusUp", handler);
         } catch (JCNativeException jcne) {
@@ -1095,7 +1151,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addStylusEnter(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusEnter", handler);
         } catch (JCNativeException jcne) {
@@ -1105,7 +1161,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeStylusEnter(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusEnter", handler);
         } catch (JCNativeException jcne) {
@@ -1115,7 +1171,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addStylusInAirMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusInAirMove", handler);
         } catch (JCNativeException jcne) {
@@ -1125,7 +1181,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeStylusInAirMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusInAirMove", handler);
         } catch (JCNativeException jcne) {
@@ -1135,7 +1191,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addStylusInRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusInRange", handler);
         } catch (JCNativeException jcne) {
@@ -1145,7 +1201,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeStylusInRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusInRange", handler);
         } catch (JCNativeException jcne) {
@@ -1155,7 +1211,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addStylusLeave(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusLeave", handler);
         } catch (JCNativeException jcne) {
@@ -1165,7 +1221,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeStylusLeave(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusLeave", handler);
         } catch (JCNativeException jcne) {
@@ -1175,7 +1231,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addStylusMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusMove", handler);
         } catch (JCNativeException jcne) {
@@ -1185,7 +1241,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeStylusMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusMove", handler);
         } catch (JCNativeException jcne) {
@@ -1195,7 +1251,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addStylusOutOfRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusOutOfRange", handler);
         } catch (JCNativeException jcne) {
@@ -1205,7 +1261,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeStylusOutOfRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusOutOfRange", handler);
         } catch (JCNativeException jcne) {
@@ -1215,7 +1271,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addStylusUp(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusUp", handler);
         } catch (JCNativeException jcne) {
@@ -1225,7 +1281,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeStylusUp(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusUp", handler);
         } catch (JCNativeException jcne) {
@@ -1235,7 +1291,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addPreviewStylusSystemGesture(StylusSystemGestureEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewStylusSystemGesture", handler);
         } catch (JCNativeException jcne) {
@@ -1245,7 +1301,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removePreviewStylusSystemGesture(StylusSystemGestureEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewStylusSystemGesture", handler);
         } catch (JCNativeException jcne) {
@@ -1255,7 +1311,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addStylusSystemGesture(StylusSystemGestureEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusSystemGesture", handler);
         } catch (JCNativeException jcne) {
@@ -1265,7 +1321,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeStylusSystemGesture(StylusSystemGestureEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusSystemGesture", handler);
         } catch (JCNativeException jcne) {
@@ -1275,7 +1331,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addPreviewTextInput(TextCompositionEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewTextInput", handler);
         } catch (JCNativeException jcne) {
@@ -1285,7 +1341,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removePreviewTextInput(TextCompositionEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewTextInput", handler);
         } catch (JCNativeException jcne) {
@@ -1295,7 +1351,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void addTextInput(TextCompositionEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextInput", handler);
         } catch (JCNativeException jcne) {
@@ -1305,7 +1361,7 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
 
     public void removeTextInput(TextCompositionEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextInput", handler);
         } catch (JCNativeException jcne) {

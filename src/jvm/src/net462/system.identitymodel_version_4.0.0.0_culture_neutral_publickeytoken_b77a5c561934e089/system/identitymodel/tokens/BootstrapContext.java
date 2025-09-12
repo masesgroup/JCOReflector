@@ -189,7 +189,7 @@ public class BootstrapContext extends NetObject  {
     
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,10 +203,12 @@ public class BootstrapContext extends NetObject  {
     
     public byte[] getTokenBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenBytes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("TokenBytes");
+            retObjectTokenBytes = classInstance.Get("TokenBytes");
+            JCObject resultingObjects = (JCObject)retObjectTokenBytes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -215,6 +217,8 @@ public class BootstrapContext extends NetObject  {
 				resultingArray[indexTokenBytes] = (byte)resultingArrayList.get(indexTokenBytes);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectTokenBytes != null ? retObjectTokenBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +226,14 @@ public class BootstrapContext extends NetObject  {
 
     public SecurityToken getSecurityToken() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityToken");
+            retObjectSecurityToken = classInstance.Get("SecurityToken");
+            JCObject val = (JCObject)retObjectSecurityToken;
             return new SecurityToken(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityToken != null ? retObjectSecurityToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +241,14 @@ public class BootstrapContext extends NetObject  {
 
     public SecurityTokenHandler getSecurityTokenHandler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityTokenHandler = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityTokenHandler");
+            retObjectSecurityTokenHandler = classInstance.Get("SecurityTokenHandler");
+            JCObject val = (JCObject)retObjectSecurityTokenHandler;
             return new SecurityTokenHandler(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityTokenHandler != null ? retObjectSecurityTokenHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,9 +256,13 @@ public class BootstrapContext extends NetObject  {
 
     public java.lang.String getToken() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToken = null;
         try {
-            return (java.lang.String)classInstance.Get("Token");
+            retObjectToken = classInstance.Get("Token");
+            return (java.lang.String)retObjectToken;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectToken != null ? retObjectToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

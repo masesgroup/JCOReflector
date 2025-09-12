@@ -154,9 +154,13 @@ public class DbDataReaderExtensions extends NetObject  {
     
     public static boolean CanGetColumnSchema(DbDataReader reader) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCanGetColumnSchema = null;
         try {
-            return (boolean)classType.Invoke("CanGetColumnSchema", reader == null ? null : reader.getJCOInstance());
+            retObjectCanGetColumnSchema = classType.Invoke("CanGetColumnSchema", reader == null ? null : reader.getJCOInstance());
+            return (boolean)retObjectCanGetColumnSchema;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanGetColumnSchema != null ? retObjectCanGetColumnSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

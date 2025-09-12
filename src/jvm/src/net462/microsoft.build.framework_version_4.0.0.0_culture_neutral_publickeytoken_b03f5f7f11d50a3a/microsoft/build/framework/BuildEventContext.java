@@ -190,9 +190,19 @@ public class BuildEventContext extends NetObject  {
     
     public int getNodeId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNodeId = null;
         try {
-            return (int)classInstance.Get("NodeId");
+            retObjectNodeId = classInstance.Get("NodeId");
+            return (int)retObjectNodeId;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNodeIdNumber = (java.lang.Number)retObjectNodeId;
+                return retObjectNodeIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNodeId != null ? retObjectNodeId.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +210,19 @@ public class BuildEventContext extends NetObject  {
 
     public int getProjectContextId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProjectContextId = null;
         try {
-            return (int)classInstance.Get("ProjectContextId");
+            retObjectProjectContextId = classInstance.Get("ProjectContextId");
+            return (int)retObjectProjectContextId;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectProjectContextIdNumber = (java.lang.Number)retObjectProjectContextId;
+                return retObjectProjectContextIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectProjectContextId != null ? retObjectProjectContextId.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +230,19 @@ public class BuildEventContext extends NetObject  {
 
     public int getProjectInstanceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProjectInstanceId = null;
         try {
-            return (int)classInstance.Get("ProjectInstanceId");
+            retObjectProjectInstanceId = classInstance.Get("ProjectInstanceId");
+            return (int)retObjectProjectInstanceId;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectProjectInstanceIdNumber = (java.lang.Number)retObjectProjectInstanceId;
+                return retObjectProjectInstanceIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectProjectInstanceId != null ? retObjectProjectInstanceId.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +250,19 @@ public class BuildEventContext extends NetObject  {
 
     public int getSubmissionId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubmissionId = null;
         try {
-            return (int)classInstance.Get("SubmissionId");
+            retObjectSubmissionId = classInstance.Get("SubmissionId");
+            return (int)retObjectSubmissionId;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSubmissionIdNumber = (java.lang.Number)retObjectSubmissionId;
+                return retObjectSubmissionIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSubmissionId != null ? retObjectSubmissionId.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +270,19 @@ public class BuildEventContext extends NetObject  {
 
     public int getTargetId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetId = null;
         try {
-            return (int)classInstance.Get("TargetId");
+            retObjectTargetId = classInstance.Get("TargetId");
+            return (int)retObjectTargetId;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTargetIdNumber = (java.lang.Number)retObjectTargetId;
+                return retObjectTargetIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTargetId != null ? retObjectTargetId.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +290,19 @@ public class BuildEventContext extends NetObject  {
 
     public int getTaskId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTaskId = null;
         try {
-            return (int)classInstance.Get("TaskId");
+            retObjectTaskId = classInstance.Get("TaskId");
+            return (int)retObjectTaskId;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTaskIdNumber = (java.lang.Number)retObjectTaskId;
+                return retObjectTaskIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTaskId != null ? retObjectTaskId.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,9 +310,19 @@ public class BuildEventContext extends NetObject  {
 
     public long getBuildRequestId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildRequestId = null;
         try {
-            return (long)classInstance.Get("BuildRequestId");
+            retObjectBuildRequestId = classInstance.Get("BuildRequestId");
+            return (long)retObjectBuildRequestId;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBuildRequestIdNumber = (java.lang.Number)retObjectBuildRequestId;
+                return retObjectBuildRequestIdNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectBuildRequestId != null ? retObjectBuildRequestId.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +330,14 @@ public class BuildEventContext extends NetObject  {
 
     public static BuildEventContext getInvalid() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInvalid = null;
         try {
-            JCObject val = (JCObject)classType.Get("Invalid");
+            retObjectInvalid = classType.Get("Invalid");
+            JCObject val = (JCObject)retObjectInvalid;
             return new BuildEventContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvalid != null ? retObjectInvalid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -160,9 +160,13 @@ public class BuildResults extends NetObject  {
     
     public boolean getSucceeded() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSucceeded = null;
         try {
-            return (boolean)classInstance.Get("Succeeded");
+            retObjectSucceeded = classInstance.Get("Succeeded");
+            return (boolean)retObjectSucceeded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSucceeded != null ? retObjectSucceeded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,16 +174,20 @@ public class BuildResults extends NetObject  {
 
     public final BuildMessage[] getMessages() throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessages = null;
         try {
             ArrayList<BuildMessage> resultingArrayList = new ArrayList<BuildMessage>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Messages");
+            retObjectMessages = classInstance.Get("Messages");
+            JCObject resultingObjects = (JCObject)retObjectMessages;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new BuildMessage(resultingObject));
             }
             BuildMessage[] resultingArray = new BuildMessage[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessages != null ? retObjectMessages.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +195,13 @@ public class BuildResults extends NetObject  {
 
     public java.lang.String getKeyFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyFile = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyFile");
+            retObjectKeyFile = classInstance.Get("KeyFile");
+            return (java.lang.String)retObjectKeyFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyFile != null ? retObjectKeyFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +209,12 @@ public class BuildResults extends NetObject  {
 
     public java.lang.String[] getComponentFiles() throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComponentFiles = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ComponentFiles");
+            retObjectComponentFiles = classInstance.Get("ComponentFiles");
+            JCObject resultingObjects = (JCObject)retObjectComponentFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -209,6 +223,8 @@ public class BuildResults extends NetObject  {
 				resultingArray[indexComponentFiles] = (java.lang.String)resultingArrayList.get(indexComponentFiles);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectComponentFiles != null ? retObjectComponentFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

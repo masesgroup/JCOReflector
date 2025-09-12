@@ -143,10 +143,14 @@ public class IDesignTimeResourceProviderFactoryServiceImplementation extends Net
     
     public DesignTimeResourceProviderFactory GetFactory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFactory = null;
         try {
-            JCObject objGetFactory = (JCObject)classInstance.Invoke("GetFactory");
+            retObjectGetFactory = classInstance.Invoke("GetFactory");
+            JCObject objGetFactory = (JCObject)retObjectGetFactory;
             return new DesignTimeResourceProviderFactory(objGetFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFactory != null ? retObjectGetFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

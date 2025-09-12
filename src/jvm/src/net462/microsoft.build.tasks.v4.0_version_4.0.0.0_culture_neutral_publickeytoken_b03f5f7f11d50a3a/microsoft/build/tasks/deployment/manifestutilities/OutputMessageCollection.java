@@ -156,7 +156,7 @@ public class OutputMessageCollection extends NetObjectEnumerable  {
     
     public void Clear() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -170,9 +170,19 @@ public class OutputMessageCollection extends NetObjectEnumerable  {
     
     public int getErrorCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorCount = null;
         try {
-            return (int)classInstance.Get("ErrorCount");
+            retObjectErrorCount = classInstance.Get("ErrorCount");
+            return (int)retObjectErrorCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectErrorCountNumber = (java.lang.Number)retObjectErrorCount;
+                return retObjectErrorCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectErrorCount != null ? retObjectErrorCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +190,19 @@ public class OutputMessageCollection extends NetObjectEnumerable  {
 
     public int getWarningCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWarningCount = null;
         try {
-            return (int)classInstance.Get("WarningCount");
+            retObjectWarningCount = classInstance.Get("WarningCount");
+            return (int)retObjectWarningCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWarningCountNumber = (java.lang.Number)retObjectWarningCount;
+                return retObjectWarningCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWarningCount != null ? retObjectWarningCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

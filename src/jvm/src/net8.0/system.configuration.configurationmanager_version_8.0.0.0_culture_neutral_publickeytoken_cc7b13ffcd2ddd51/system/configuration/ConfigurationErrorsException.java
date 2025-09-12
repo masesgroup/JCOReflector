@@ -236,9 +236,19 @@ public class ConfigurationErrorsException extends ConfigurationException {
     
     public static int GetLineNumber(XmlNode node) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLineNumber = null;
         try {
-            return (int)classType.Invoke("GetLineNumber", node == null ? null : node.getJCOInstance());
+            retObjectGetLineNumber = classType.Invoke("GetLineNumber", node == null ? null : node.getJCOInstance());
+            return (int)retObjectGetLineNumber;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLineNumberNumber = (java.lang.Number)retObjectGetLineNumber;
+                return retObjectGetLineNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetLineNumber != null ? retObjectGetLineNumber.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +256,19 @@ public class ConfigurationErrorsException extends ConfigurationException {
 
     public static int GetLineNumber(XmlReader reader) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLineNumber = null;
         try {
-            return (int)classType.Invoke("GetLineNumber", reader == null ? null : reader.getJCOInstance());
+            retObjectGetLineNumber = classType.Invoke("GetLineNumber", reader == null ? null : reader.getJCOInstance());
+            return (int)retObjectGetLineNumber;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLineNumberNumber = (java.lang.Number)retObjectGetLineNumber;
+                return retObjectGetLineNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetLineNumber != null ? retObjectGetLineNumber.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,9 +276,13 @@ public class ConfigurationErrorsException extends ConfigurationException {
 
     public static java.lang.String GetFilename(XmlNode node) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFilename = null;
         try {
-            return (java.lang.String)classType.Invoke("GetFilename", node == null ? null : node.getJCOInstance());
+            retObjectGetFilename = classType.Invoke("GetFilename", node == null ? null : node.getJCOInstance());
+            return (java.lang.String)retObjectGetFilename;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetFilename != null ? retObjectGetFilename.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,9 +290,13 @@ public class ConfigurationErrorsException extends ConfigurationException {
 
     public static java.lang.String GetFilename(XmlReader reader) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFilename = null;
         try {
-            return (java.lang.String)classType.Invoke("GetFilename", reader == null ? null : reader.getJCOInstance());
+            retObjectGetFilename = classType.Invoke("GetFilename", reader == null ? null : reader.getJCOInstance());
+            return (java.lang.String)retObjectGetFilename;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetFilename != null ? retObjectGetFilename.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +304,7 @@ public class ConfigurationErrorsException extends ConfigurationException {
 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.runtime.serialization.SerializationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -290,10 +318,14 @@ public class ConfigurationErrorsException extends ConfigurationException {
     
     public ICollection getErrors() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrors = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Errors");
+            retObjectErrors = classInstance.Get("Errors");
+            JCObject val = (JCObject)retObjectErrors;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectErrors != null ? retObjectErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

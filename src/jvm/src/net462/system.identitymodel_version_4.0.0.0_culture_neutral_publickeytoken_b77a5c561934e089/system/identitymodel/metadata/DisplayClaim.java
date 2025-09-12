@@ -196,10 +196,14 @@ public class DisplayClaim extends NetObject  {
     
     public static DisplayClaim CreateDisplayClaimFromClaimType(java.lang.String claimType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDisplayClaimFromClaimType = null;
         try {
-            JCObject objCreateDisplayClaimFromClaimType = (JCObject)classType.Invoke("CreateDisplayClaimFromClaimType", claimType);
+            retObjectCreateDisplayClaimFromClaimType = classType.Invoke("CreateDisplayClaimFromClaimType", claimType);
+            JCObject objCreateDisplayClaimFromClaimType = (JCObject)retObjectCreateDisplayClaimFromClaimType;
             return new DisplayClaim(objCreateDisplayClaimFromClaimType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDisplayClaimFromClaimType != null ? retObjectCreateDisplayClaimFromClaimType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +215,13 @@ public class DisplayClaim extends NetObject  {
     
     public boolean getOptional() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptional = null;
         try {
-            return (boolean)classInstance.Get("Optional");
+            retObjectOptional = classInstance.Get("Optional");
+            return (boolean)retObjectOptional;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOptional != null ? retObjectOptional.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +229,7 @@ public class DisplayClaim extends NetObject  {
 
     public void setOptional(boolean Optional) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Optional", Optional);
         } catch (JCNativeException jcne) {
@@ -231,9 +239,13 @@ public class DisplayClaim extends NetObject  {
 
     public boolean getWriteOptionalAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteOptionalAttribute = null;
         try {
-            return (boolean)classInstance.Get("WriteOptionalAttribute");
+            retObjectWriteOptionalAttribute = classInstance.Get("WriteOptionalAttribute");
+            return (boolean)retObjectWriteOptionalAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWriteOptionalAttribute != null ? retObjectWriteOptionalAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +253,7 @@ public class DisplayClaim extends NetObject  {
 
     public void setWriteOptionalAttribute(boolean WriteOptionalAttribute) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WriteOptionalAttribute", WriteOptionalAttribute);
         } catch (JCNativeException jcne) {
@@ -251,9 +263,13 @@ public class DisplayClaim extends NetObject  {
 
     public java.lang.String getClaimType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClaimType = null;
         try {
-            return (java.lang.String)classInstance.Get("ClaimType");
+            retObjectClaimType = classInstance.Get("ClaimType");
+            return (java.lang.String)retObjectClaimType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClaimType != null ? retObjectClaimType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,9 +277,13 @@ public class DisplayClaim extends NetObject  {
 
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +291,7 @@ public class DisplayClaim extends NetObject  {
 
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
@@ -281,9 +301,13 @@ public class DisplayClaim extends NetObject  {
 
     public java.lang.String getDisplayTag() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayTag = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayTag");
+            retObjectDisplayTag = classInstance.Get("DisplayTag");
+            return (java.lang.String)retObjectDisplayTag;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayTag != null ? retObjectDisplayTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,7 +315,7 @@ public class DisplayClaim extends NetObject  {
 
     public void setDisplayTag(java.lang.String DisplayTag) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayTag", DisplayTag);
         } catch (JCNativeException jcne) {
@@ -301,9 +325,13 @@ public class DisplayClaim extends NetObject  {
 
     public java.lang.String getDisplayValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayValue = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayValue");
+            retObjectDisplayValue = classInstance.Get("DisplayValue");
+            return (java.lang.String)retObjectDisplayValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayValue != null ? retObjectDisplayValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,7 +339,7 @@ public class DisplayClaim extends NetObject  {
 
     public void setDisplayValue(java.lang.String DisplayValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayValue", DisplayValue);
         } catch (JCNativeException jcne) {

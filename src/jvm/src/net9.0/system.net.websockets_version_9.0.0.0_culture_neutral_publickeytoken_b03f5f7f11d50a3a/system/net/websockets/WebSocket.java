@@ -162,9 +162,13 @@ public class WebSocket extends NetObject implements AutoCloseable {
     
     public static boolean IsApplicationTargeting45() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsApplicationTargeting45 = null;
         try {
-            return (boolean)classType.Invoke("IsApplicationTargeting45");
+            retObjectIsApplicationTargeting45 = classType.Invoke("IsApplicationTargeting45");
+            return (boolean)retObjectIsApplicationTargeting45;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsApplicationTargeting45 != null ? retObjectIsApplicationTargeting45.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class WebSocket extends NetObject implements AutoCloseable {
 
     public static WebSocket CreateFromStream(Stream stream, boolean isServer, java.lang.String subProtocol, TimeSpan keepAliveInterval) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.OverflowException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromStream = null;
         try {
-            JCObject objCreateFromStream = (JCObject)classType.Invoke("CreateFromStream", stream == null ? null : stream.getJCOInstance(), isServer, subProtocol, keepAliveInterval == null ? null : keepAliveInterval.getJCOInstance());
+            retObjectCreateFromStream = classType.Invoke("CreateFromStream", stream == null ? null : stream.getJCOInstance(), isServer, subProtocol, keepAliveInterval == null ? null : keepAliveInterval.getJCOInstance());
+            JCObject objCreateFromStream = (JCObject)retObjectCreateFromStream;
             return new WebSocket(objCreateFromStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromStream != null ? retObjectCreateFromStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class WebSocket extends NetObject implements AutoCloseable {
 
     public static WebSocket CreateFromStream(Stream stream, WebSocketCreationOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.FormatException, system.threading.SynchronizationLockException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromStream = null;
         try {
-            JCObject objCreateFromStream = (JCObject)classType.Invoke("CreateFromStream", stream == null ? null : stream.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            retObjectCreateFromStream = classType.Invoke("CreateFromStream", stream == null ? null : stream.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objCreateFromStream = (JCObject)retObjectCreateFromStream;
             return new WebSocket(objCreateFromStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromStream != null ? retObjectCreateFromStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +206,14 @@ public class WebSocket extends NetObject implements AutoCloseable {
 
     public Task CloseAsync(WebSocketCloseStatus closeStatus, java.lang.String statusDescription, CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloseAsync = null;
         try {
-            JCObject objCloseAsync = (JCObject)classInstance.Invoke("CloseAsync", closeStatus == null ? null : closeStatus.getJCOInstance(), statusDescription, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectCloseAsync = classInstance.Invoke("CloseAsync", closeStatus == null ? null : closeStatus.getJCOInstance(), statusDescription, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objCloseAsync = (JCObject)retObjectCloseAsync;
             return new Task(objCloseAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloseAsync != null ? retObjectCloseAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +221,14 @@ public class WebSocket extends NetObject implements AutoCloseable {
 
     public Task CloseOutputAsync(WebSocketCloseStatus closeStatus, java.lang.String statusDescription, CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloseOutputAsync = null;
         try {
-            JCObject objCloseOutputAsync = (JCObject)classInstance.Invoke("CloseOutputAsync", closeStatus == null ? null : closeStatus.getJCOInstance(), statusDescription, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectCloseOutputAsync = classInstance.Invoke("CloseOutputAsync", closeStatus == null ? null : closeStatus.getJCOInstance(), statusDescription, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objCloseOutputAsync = (JCObject)retObjectCloseOutputAsync;
             return new Task(objCloseOutputAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloseOutputAsync != null ? retObjectCloseOutputAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +236,7 @@ public class WebSocket extends NetObject implements AutoCloseable {
 
     public void Abort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abort");
         } catch (JCNativeException jcne) {
@@ -226,7 +246,7 @@ public class WebSocket extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -236,7 +256,7 @@ public class WebSocket extends NetObject implements AutoCloseable {
 
     public static void RegisterPrefixes() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterPrefixes");
         } catch (JCNativeException jcne) {
@@ -247,7 +267,7 @@ public class WebSocket extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -263,10 +283,14 @@ public class WebSocket extends NetObject implements AutoCloseable {
     
     public WebSocketState getState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("State");
+            retObjectState = classInstance.Get("State");
+            JCObject val = (JCObject)retObjectState;
             return new WebSocketState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectState != null ? retObjectState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,9 +298,13 @@ public class WebSocket extends NetObject implements AutoCloseable {
 
     public java.lang.String getCloseStatusDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloseStatusDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("CloseStatusDescription");
+            retObjectCloseStatusDescription = classInstance.Get("CloseStatusDescription");
+            return (java.lang.String)retObjectCloseStatusDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCloseStatusDescription != null ? retObjectCloseStatusDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,9 +312,13 @@ public class WebSocket extends NetObject implements AutoCloseable {
 
     public java.lang.String getSubProtocol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubProtocol = null;
         try {
-            return (java.lang.String)classInstance.Get("SubProtocol");
+            retObjectSubProtocol = classInstance.Get("SubProtocol");
+            return (java.lang.String)retObjectSubProtocol;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSubProtocol != null ? retObjectSubProtocol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,10 +326,14 @@ public class WebSocket extends NetObject implements AutoCloseable {
 
     public static TimeSpan getDefaultKeepAliveInterval() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultKeepAliveInterval = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultKeepAliveInterval");
+            retObjectDefaultKeepAliveInterval = classType.Get("DefaultKeepAliveInterval");
+            JCObject val = (JCObject)retObjectDefaultKeepAliveInterval;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultKeepAliveInterval != null ? retObjectDefaultKeepAliveInterval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

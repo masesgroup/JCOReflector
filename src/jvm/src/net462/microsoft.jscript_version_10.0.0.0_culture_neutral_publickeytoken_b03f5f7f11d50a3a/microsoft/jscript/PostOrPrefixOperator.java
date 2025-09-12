@@ -166,10 +166,14 @@ public class PostOrPrefixOperator extends UnaryOp  {
     
     public NetObject EvaluatePostOrPrefix(JCORefOut<NetObject> v) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, microsoft.jscript.JScriptException, microsoft.jscript.EndOfFile, system.MissingMethodException, system.OverflowException, system.FormatException, system.ArithmeticException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluatePostOrPrefix = null;
         try {
-            JCObject objEvaluatePostOrPrefix = (JCObject)classInstance.Invoke("EvaluatePostOrPrefix", v.getJCRefOut());
+            retObjectEvaluatePostOrPrefix = classInstance.Invoke("EvaluatePostOrPrefix", v.getJCRefOut());
+            JCObject objEvaluatePostOrPrefix = (JCObject)retObjectEvaluatePostOrPrefix;
             return new NetObject(objEvaluatePostOrPrefix);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvaluatePostOrPrefix != null ? retObjectEvaluatePostOrPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

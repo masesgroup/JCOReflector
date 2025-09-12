@@ -142,7 +142,7 @@ public class IActivityToolboxServiceImplementation extends NetObject implements 
     
     public void AddCategory(java.lang.String categoryName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCategory", categoryName);
         } catch (JCNativeException jcne) {
@@ -152,7 +152,7 @@ public class IActivityToolboxServiceImplementation extends NetObject implements 
 
     public void AddItem(java.lang.String qualifiedTypeName, java.lang.String categoryName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddItem", qualifiedTypeName, categoryName);
         } catch (JCNativeException jcne) {
@@ -162,7 +162,7 @@ public class IActivityToolboxServiceImplementation extends NetObject implements 
 
     public void RemoveCategory(java.lang.String categoryName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveCategory", categoryName);
         } catch (JCNativeException jcne) {
@@ -172,7 +172,7 @@ public class IActivityToolboxServiceImplementation extends NetObject implements 
 
     public void RemoveItem(java.lang.String qualifiedTypeName, java.lang.String categoryName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveItem", qualifiedTypeName, categoryName);
         } catch (JCNativeException jcne) {

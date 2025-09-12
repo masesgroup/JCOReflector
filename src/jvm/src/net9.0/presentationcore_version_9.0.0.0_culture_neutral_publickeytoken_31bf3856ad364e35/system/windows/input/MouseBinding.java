@@ -181,10 +181,14 @@ public class MouseBinding extends InputBinding  {
     
     public MouseAction getMouseAction() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMouseAction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MouseAction");
+            retObjectMouseAction = classInstance.Get("MouseAction");
+            JCObject val = (JCObject)retObjectMouseAction;
             return new MouseAction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMouseAction != null ? retObjectMouseAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +196,7 @@ public class MouseBinding extends InputBinding  {
 
     public void setMouseAction(MouseAction MouseAction) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MouseAction", MouseAction == null ? null : MouseAction.getJCOInstance());
         } catch (JCNativeException jcne) {

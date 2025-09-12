@@ -165,7 +165,7 @@ public class TabControl extends Selector  {
     
     public void OnApplyTemplate() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {
@@ -179,10 +179,14 @@ public class TabControl extends Selector  {
     
     public NetObject getSelectedContent() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedContent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedContent");
+            retObjectSelectedContent = classInstance.Get("SelectedContent");
+            JCObject val = (JCObject)retObjectSelectedContent;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedContent != null ? retObjectSelectedContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +194,7 @@ public class TabControl extends Selector  {
 
     public void setSelectedContent(NetObject SelectedContent) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedContent", SelectedContent == null ? null : SelectedContent.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -200,9 +204,13 @@ public class TabControl extends Selector  {
 
     public java.lang.String getContentStringFormat() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentStringFormat = null;
         try {
-            return (java.lang.String)classInstance.Get("ContentStringFormat");
+            retObjectContentStringFormat = classInstance.Get("ContentStringFormat");
+            return (java.lang.String)retObjectContentStringFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContentStringFormat != null ? retObjectContentStringFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +218,7 @@ public class TabControl extends Selector  {
 
     public void setContentStringFormat(java.lang.String ContentStringFormat) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContentStringFormat", ContentStringFormat);
         } catch (JCNativeException jcne) {
@@ -220,9 +228,13 @@ public class TabControl extends Selector  {
 
     public java.lang.String getSelectedContentStringFormat() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedContentStringFormat = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectedContentStringFormat");
+            retObjectSelectedContentStringFormat = classInstance.Get("SelectedContentStringFormat");
+            return (java.lang.String)retObjectSelectedContentStringFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectedContentStringFormat != null ? retObjectSelectedContentStringFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +242,7 @@ public class TabControl extends Selector  {
 
     public void setSelectedContentStringFormat(java.lang.String SelectedContentStringFormat) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedContentStringFormat", SelectedContentStringFormat);
         } catch (JCNativeException jcne) {
@@ -240,10 +252,14 @@ public class TabControl extends Selector  {
 
     public DataTemplateSelector getContentTemplateSelector() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentTemplateSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentTemplateSelector");
+            retObjectContentTemplateSelector = classInstance.Get("ContentTemplateSelector");
+            JCObject val = (JCObject)retObjectContentTemplateSelector;
             return new DataTemplateSelector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentTemplateSelector != null ? retObjectContentTemplateSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +267,7 @@ public class TabControl extends Selector  {
 
     public void setContentTemplateSelector(DataTemplateSelector ContentTemplateSelector) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContentTemplateSelector", ContentTemplateSelector == null ? null : ContentTemplateSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -261,10 +277,14 @@ public class TabControl extends Selector  {
 
     public DataTemplateSelector getSelectedContentTemplateSelector() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedContentTemplateSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedContentTemplateSelector");
+            retObjectSelectedContentTemplateSelector = classInstance.Get("SelectedContentTemplateSelector");
+            JCObject val = (JCObject)retObjectSelectedContentTemplateSelector;
             return new DataTemplateSelector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedContentTemplateSelector != null ? retObjectSelectedContentTemplateSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +292,7 @@ public class TabControl extends Selector  {
 
     public void setSelectedContentTemplateSelector(DataTemplateSelector SelectedContentTemplateSelector) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedContentTemplateSelector", SelectedContentTemplateSelector == null ? null : SelectedContentTemplateSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -282,10 +302,14 @@ public class TabControl extends Selector  {
 
     public Dock getTabStripPlacement() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTabStripPlacement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TabStripPlacement");
+            retObjectTabStripPlacement = classInstance.Get("TabStripPlacement");
+            JCObject val = (JCObject)retObjectTabStripPlacement;
             return new Dock(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTabStripPlacement != null ? retObjectTabStripPlacement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,7 +317,7 @@ public class TabControl extends Selector  {
 
     public void setTabStripPlacement(Dock TabStripPlacement) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TabStripPlacement", TabStripPlacement == null ? null : TabStripPlacement.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -303,10 +327,14 @@ public class TabControl extends Selector  {
 
     public DataTemplate getContentTemplate() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentTemplate");
+            retObjectContentTemplate = classInstance.Get("ContentTemplate");
+            JCObject val = (JCObject)retObjectContentTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentTemplate != null ? retObjectContentTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,7 +342,7 @@ public class TabControl extends Selector  {
 
     public void setContentTemplate(DataTemplate ContentTemplate) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContentTemplate", ContentTemplate == null ? null : ContentTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -324,10 +352,14 @@ public class TabControl extends Selector  {
 
     public DataTemplate getSelectedContentTemplate() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedContentTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedContentTemplate");
+            retObjectSelectedContentTemplate = classInstance.Get("SelectedContentTemplate");
+            JCObject val = (JCObject)retObjectSelectedContentTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedContentTemplate != null ? retObjectSelectedContentTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,7 +367,7 @@ public class TabControl extends Selector  {
 
     public void setSelectedContentTemplate(DataTemplate SelectedContentTemplate) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedContentTemplate", SelectedContentTemplate == null ? null : SelectedContentTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -159,10 +159,14 @@ public class CallSiteBinder extends NetObject  {
     
     public static LabelTarget getUpdateLabel() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUpdateLabel = null;
         try {
-            JCObject val = (JCObject)classType.Get("UpdateLabel");
+            retObjectUpdateLabel = classType.Get("UpdateLabel");
+            JCObject val = (JCObject)retObjectUpdateLabel;
             return new LabelTarget(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdateLabel != null ? retObjectUpdateLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -155,10 +155,14 @@ public class ECDsaCertificateExtensions extends NetObject  {
     
     public static ECDsa GetECDsaPrivateKey(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetECDsaPrivateKey = null;
         try {
-            JCObject objGetECDsaPrivateKey = (JCObject)classType.Invoke("GetECDsaPrivateKey", certificate == null ? null : certificate.getJCOInstance());
+            retObjectGetECDsaPrivateKey = classType.Invoke("GetECDsaPrivateKey", certificate == null ? null : certificate.getJCOInstance());
+            JCObject objGetECDsaPrivateKey = (JCObject)retObjectGetECDsaPrivateKey;
             return new ECDsa(objGetECDsaPrivateKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetECDsaPrivateKey != null ? retObjectGetECDsaPrivateKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class ECDsaCertificateExtensions extends NetObject  {
 
     public static ECDsa GetECDsaPublicKey(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetECDsaPublicKey = null;
         try {
-            JCObject objGetECDsaPublicKey = (JCObject)classType.Invoke("GetECDsaPublicKey", certificate == null ? null : certificate.getJCOInstance());
+            retObjectGetECDsaPublicKey = classType.Invoke("GetECDsaPublicKey", certificate == null ? null : certificate.getJCOInstance());
+            JCObject objGetECDsaPublicKey = (JCObject)retObjectGetECDsaPublicKey;
             return new ECDsa(objGetECDsaPublicKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetECDsaPublicKey != null ? retObjectGetECDsaPublicKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +185,14 @@ public class ECDsaCertificateExtensions extends NetObject  {
 
     public static X509Certificate2 CopyWithPrivateKey(X509Certificate2 certificate, ECDsa privateKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCopyWithPrivateKey = null;
         try {
-            JCObject objCopyWithPrivateKey = (JCObject)classType.Invoke("CopyWithPrivateKey", certificate == null ? null : certificate.getJCOInstance(), privateKey == null ? null : privateKey.getJCOInstance());
+            retObjectCopyWithPrivateKey = classType.Invoke("CopyWithPrivateKey", certificate == null ? null : certificate.getJCOInstance(), privateKey == null ? null : privateKey.getJCOInstance());
+            JCObject objCopyWithPrivateKey = (JCObject)retObjectCopyWithPrivateKey;
             return new X509Certificate2(objCopyWithPrivateKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopyWithPrivateKey != null ? retObjectCopyWithPrivateKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

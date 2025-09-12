@@ -180,9 +180,19 @@ public class ObjectDataSourceView extends DataSourceView  {
     
     public int Delete(IDictionary keys, IDictionary oldValues) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelete = null;
         try {
-            return (int)classInstance.Invoke("Delete", keys == null ? null : keys.getJCOInstance(), oldValues == null ? null : oldValues.getJCOInstance());
+            retObjectDelete = classInstance.Invoke("Delete", keys == null ? null : keys.getJCOInstance(), oldValues == null ? null : oldValues.getJCOInstance());
+            return (int)retObjectDelete;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDeleteNumber = (java.lang.Number)retObjectDelete;
+                return retObjectDeleteNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDelete != null ? retObjectDelete.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +200,19 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public int Insert(IDictionary values) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            return (int)classInstance.Invoke("Insert", values == null ? null : values.getJCOInstance());
+            retObjectInsert = classInstance.Invoke("Insert", values == null ? null : values.getJCOInstance());
+            return (int)retObjectInsert;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectInsertNumber = (java.lang.Number)retObjectInsert;
+                return retObjectInsertNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +220,19 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public int Update(IDictionary keys, IDictionary values, IDictionary oldValues) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdate = null;
         try {
-            return (int)classInstance.Invoke("Update", keys == null ? null : keys.getJCOInstance(), values == null ? null : values.getJCOInstance(), oldValues == null ? null : oldValues.getJCOInstance());
+            retObjectUpdate = classInstance.Invoke("Update", keys == null ? null : keys.getJCOInstance(), values == null ? null : values.getJCOInstance(), oldValues == null ? null : oldValues.getJCOInstance());
+            return (int)retObjectUpdate;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUpdateNumber = (java.lang.Number)retObjectUpdate;
+                return retObjectUpdateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectUpdate != null ? retObjectUpdate.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +240,14 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public IEnumerable Select(DataSourceSelectArguments arguments) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelect = null;
         try {
-            JCObject objSelect = (JCObject)classInstance.Invoke("Select", arguments == null ? null : arguments.getJCOInstance());
+            retObjectSelect = classInstance.Invoke("Select", arguments == null ? null : arguments.getJCOInstance());
+            JCObject objSelect = (JCObject)retObjectSelect;
             return new IEnumerableImplementation(objSelect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +259,7 @@ public class ObjectDataSourceView extends DataSourceView  {
      */
     @Deprecated 
     public NetObject SaveViewState() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
 
     /**
@@ -234,7 +268,7 @@ public class ObjectDataSourceView extends DataSourceView  {
      */
     @Deprecated 
     public void LoadViewState(NetObject state) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
 
     /**
@@ -243,7 +277,7 @@ public class ObjectDataSourceView extends DataSourceView  {
      */
     @Deprecated 
     public void TrackViewState() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
 
 
@@ -252,9 +286,13 @@ public class ObjectDataSourceView extends DataSourceView  {
     
     public boolean getConvertNullToDBNull() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertNullToDBNull = null;
         try {
-            return (boolean)classInstance.Get("ConvertNullToDBNull");
+            retObjectConvertNullToDBNull = classInstance.Get("ConvertNullToDBNull");
+            return (boolean)retObjectConvertNullToDBNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectConvertNullToDBNull != null ? retObjectConvertNullToDBNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +300,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void setConvertNullToDBNull(boolean ConvertNullToDBNull) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConvertNullToDBNull", ConvertNullToDBNull);
         } catch (JCNativeException jcne) {
@@ -272,9 +310,13 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public boolean getEnablePaging() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnablePaging = null;
         try {
-            return (boolean)classInstance.Get("EnablePaging");
+            retObjectEnablePaging = classInstance.Get("EnablePaging");
+            return (boolean)retObjectEnablePaging;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnablePaging != null ? retObjectEnablePaging.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +324,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void setEnablePaging(boolean EnablePaging) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnablePaging", EnablePaging);
         } catch (JCNativeException jcne) {
@@ -292,9 +334,13 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public java.lang.String getDataObjectTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataObjectTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("DataObjectTypeName");
+            retObjectDataObjectTypeName = classInstance.Get("DataObjectTypeName");
+            return (java.lang.String)retObjectDataObjectTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataObjectTypeName != null ? retObjectDataObjectTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +348,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void setDataObjectTypeName(java.lang.String DataObjectTypeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataObjectTypeName", DataObjectTypeName);
         } catch (JCNativeException jcne) {
@@ -312,9 +358,13 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public java.lang.String getDeleteMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("DeleteMethod");
+            retObjectDeleteMethod = classInstance.Get("DeleteMethod");
+            return (java.lang.String)retObjectDeleteMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDeleteMethod != null ? retObjectDeleteMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +372,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void setDeleteMethod(java.lang.String DeleteMethod) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeleteMethod", DeleteMethod);
         } catch (JCNativeException jcne) {
@@ -332,9 +382,13 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public java.lang.String getFilterExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilterExpression = null;
         try {
-            return (java.lang.String)classInstance.Get("FilterExpression");
+            retObjectFilterExpression = classInstance.Get("FilterExpression");
+            return (java.lang.String)retObjectFilterExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFilterExpression != null ? retObjectFilterExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +396,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void setFilterExpression(java.lang.String FilterExpression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FilterExpression", FilterExpression);
         } catch (JCNativeException jcne) {
@@ -352,9 +406,13 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public java.lang.String getInsertMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("InsertMethod");
+            retObjectInsertMethod = classInstance.Get("InsertMethod");
+            return (java.lang.String)retObjectInsertMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInsertMethod != null ? retObjectInsertMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +420,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void setInsertMethod(java.lang.String InsertMethod) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InsertMethod", InsertMethod);
         } catch (JCNativeException jcne) {
@@ -372,9 +430,13 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public java.lang.String getMaximumRowsParameterName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumRowsParameterName = null;
         try {
-            return (java.lang.String)classInstance.Get("MaximumRowsParameterName");
+            retObjectMaximumRowsParameterName = classInstance.Get("MaximumRowsParameterName");
+            return (java.lang.String)retObjectMaximumRowsParameterName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMaximumRowsParameterName != null ? retObjectMaximumRowsParameterName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +444,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void setMaximumRowsParameterName(java.lang.String MaximumRowsParameterName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaximumRowsParameterName", MaximumRowsParameterName);
         } catch (JCNativeException jcne) {
@@ -392,9 +454,13 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public java.lang.String getOldValuesParameterFormatString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldValuesParameterFormatString = null;
         try {
-            return (java.lang.String)classInstance.Get("OldValuesParameterFormatString");
+            retObjectOldValuesParameterFormatString = classInstance.Get("OldValuesParameterFormatString");
+            return (java.lang.String)retObjectOldValuesParameterFormatString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOldValuesParameterFormatString != null ? retObjectOldValuesParameterFormatString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,7 +468,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void setOldValuesParameterFormatString(java.lang.String OldValuesParameterFormatString) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OldValuesParameterFormatString", OldValuesParameterFormatString);
         } catch (JCNativeException jcne) {
@@ -412,9 +478,13 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public java.lang.String getSelectCountMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectCountMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectCountMethod");
+            retObjectSelectCountMethod = classInstance.Get("SelectCountMethod");
+            return (java.lang.String)retObjectSelectCountMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectCountMethod != null ? retObjectSelectCountMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,7 +492,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void setSelectCountMethod(java.lang.String SelectCountMethod) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectCountMethod", SelectCountMethod);
         } catch (JCNativeException jcne) {
@@ -432,9 +502,13 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public java.lang.String getSelectMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectMethod");
+            retObjectSelectMethod = classInstance.Get("SelectMethod");
+            return (java.lang.String)retObjectSelectMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectMethod != null ? retObjectSelectMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,7 +516,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void setSelectMethod(java.lang.String SelectMethod) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectMethod", SelectMethod);
         } catch (JCNativeException jcne) {
@@ -452,9 +526,13 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public java.lang.String getSortParameterName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortParameterName = null;
         try {
-            return (java.lang.String)classInstance.Get("SortParameterName");
+            retObjectSortParameterName = classInstance.Get("SortParameterName");
+            return (java.lang.String)retObjectSortParameterName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSortParameterName != null ? retObjectSortParameterName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -462,7 +540,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void setSortParameterName(java.lang.String SortParameterName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SortParameterName", SortParameterName);
         } catch (JCNativeException jcne) {
@@ -472,9 +550,13 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public java.lang.String getStartRowIndexParameterName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartRowIndexParameterName = null;
         try {
-            return (java.lang.String)classInstance.Get("StartRowIndexParameterName");
+            retObjectStartRowIndexParameterName = classInstance.Get("StartRowIndexParameterName");
+            return (java.lang.String)retObjectStartRowIndexParameterName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStartRowIndexParameterName != null ? retObjectStartRowIndexParameterName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,7 +564,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void setStartRowIndexParameterName(java.lang.String StartRowIndexParameterName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StartRowIndexParameterName", StartRowIndexParameterName);
         } catch (JCNativeException jcne) {
@@ -492,9 +574,13 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public java.lang.String getTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("TypeName");
+            retObjectTypeName = classInstance.Get("TypeName");
+            return (java.lang.String)retObjectTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTypeName != null ? retObjectTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -502,7 +588,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void setTypeName(java.lang.String TypeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypeName", TypeName);
         } catch (JCNativeException jcne) {
@@ -512,9 +598,13 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public java.lang.String getUpdateMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("UpdateMethod");
+            retObjectUpdateMethod = classInstance.Get("UpdateMethod");
+            return (java.lang.String)retObjectUpdateMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUpdateMethod != null ? retObjectUpdateMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -522,7 +612,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void setUpdateMethod(java.lang.String UpdateMethod) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateMethod", UpdateMethod);
         } catch (JCNativeException jcne) {
@@ -532,10 +622,14 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public ConflictOptions getConflictDetection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConflictDetection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConflictDetection");
+            retObjectConflictDetection = classInstance.Get("ConflictDetection");
+            JCObject val = (JCObject)retObjectConflictDetection;
             return new ConflictOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConflictDetection != null ? retObjectConflictDetection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -543,7 +637,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void setConflictDetection(ConflictOptions ConflictDetection) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConflictDetection", ConflictDetection == null ? null : ConflictDetection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -553,10 +647,14 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public ParameterCollection getDeleteParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeleteParameters");
+            retObjectDeleteParameters = classInstance.Get("DeleteParameters");
+            JCObject val = (JCObject)retObjectDeleteParameters;
             return new ParameterCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteParameters != null ? retObjectDeleteParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -564,10 +662,14 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public ParameterCollection getFilterParameters() throws Throwable, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilterParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FilterParameters");
+            retObjectFilterParameters = classInstance.Get("FilterParameters");
+            JCObject val = (JCObject)retObjectFilterParameters;
             return new ParameterCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFilterParameters != null ? retObjectFilterParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -575,10 +677,14 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public ParameterCollection getInsertParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InsertParameters");
+            retObjectInsertParameters = classInstance.Get("InsertParameters");
+            JCObject val = (JCObject)retObjectInsertParameters;
             return new ParameterCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsertParameters != null ? retObjectInsertParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -586,10 +692,14 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public ParameterCollection getSelectParameters() throws Throwable, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectParameters");
+            retObjectSelectParameters = classInstance.Get("SelectParameters");
+            JCObject val = (JCObject)retObjectSelectParameters;
             return new ParameterCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectParameters != null ? retObjectSelectParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -597,10 +707,14 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public ParameterCollection getUpdateParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UpdateParameters");
+            retObjectUpdateParameters = classInstance.Get("UpdateParameters");
+            JCObject val = (JCObject)retObjectUpdateParameters;
             return new ParameterCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdateParameters != null ? retObjectUpdateParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -608,10 +722,14 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public ParsingCulture getParsingCulture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParsingCulture = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParsingCulture");
+            retObjectParsingCulture = classInstance.Get("ParsingCulture");
+            JCObject val = (JCObject)retObjectParsingCulture;
             return new ParsingCulture(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParsingCulture != null ? retObjectParsingCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -619,7 +737,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void setParsingCulture(ParsingCulture ParsingCulture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParsingCulture", ParsingCulture == null ? null : ParsingCulture.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -634,7 +752,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void addObjectDisposing(ObjectDataSourceDisposingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ObjectDisposing", handler);
         } catch (JCNativeException jcne) {
@@ -644,7 +762,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void removeObjectDisposing(ObjectDataSourceDisposingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ObjectDisposing", handler);
         } catch (JCNativeException jcne) {
@@ -654,7 +772,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void addFiltering(ObjectDataSourceFilteringEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Filtering", handler);
         } catch (JCNativeException jcne) {
@@ -664,7 +782,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void removeFiltering(ObjectDataSourceFilteringEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Filtering", handler);
         } catch (JCNativeException jcne) {
@@ -674,7 +792,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void addDeleting(ObjectDataSourceMethodEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Deleting", handler);
         } catch (JCNativeException jcne) {
@@ -684,7 +802,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void removeDeleting(ObjectDataSourceMethodEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Deleting", handler);
         } catch (JCNativeException jcne) {
@@ -694,7 +812,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void addInserting(ObjectDataSourceMethodEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Inserting", handler);
         } catch (JCNativeException jcne) {
@@ -704,7 +822,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void removeInserting(ObjectDataSourceMethodEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Inserting", handler);
         } catch (JCNativeException jcne) {
@@ -714,7 +832,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void addUpdating(ObjectDataSourceMethodEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Updating", handler);
         } catch (JCNativeException jcne) {
@@ -724,7 +842,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void removeUpdating(ObjectDataSourceMethodEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Updating", handler);
         } catch (JCNativeException jcne) {
@@ -734,7 +852,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void addObjectCreated(ObjectDataSourceObjectEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ObjectCreated", handler);
         } catch (JCNativeException jcne) {
@@ -744,7 +862,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void removeObjectCreated(ObjectDataSourceObjectEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ObjectCreated", handler);
         } catch (JCNativeException jcne) {
@@ -754,7 +872,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void addObjectCreating(ObjectDataSourceObjectEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ObjectCreating", handler);
         } catch (JCNativeException jcne) {
@@ -764,7 +882,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void removeObjectCreating(ObjectDataSourceObjectEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ObjectCreating", handler);
         } catch (JCNativeException jcne) {
@@ -774,7 +892,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void addSelecting(ObjectDataSourceSelectingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Selecting", handler);
         } catch (JCNativeException jcne) {
@@ -784,7 +902,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void removeSelecting(ObjectDataSourceSelectingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Selecting", handler);
         } catch (JCNativeException jcne) {
@@ -794,7 +912,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void addDeleted(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Deleted", handler);
         } catch (JCNativeException jcne) {
@@ -804,7 +922,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void removeDeleted(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Deleted", handler);
         } catch (JCNativeException jcne) {
@@ -814,7 +932,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void addInserted(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Inserted", handler);
         } catch (JCNativeException jcne) {
@@ -824,7 +942,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void removeInserted(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Inserted", handler);
         } catch (JCNativeException jcne) {
@@ -834,7 +952,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void addSelected(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Selected", handler);
         } catch (JCNativeException jcne) {
@@ -844,7 +962,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void removeSelected(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Selected", handler);
         } catch (JCNativeException jcne) {
@@ -854,7 +972,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void addUpdated(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Updated", handler);
         } catch (JCNativeException jcne) {
@@ -864,7 +982,7 @@ public class ObjectDataSourceView extends DataSourceView  {
 
     public void removeUpdated(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Updated", handler);
         } catch (JCNativeException jcne) {

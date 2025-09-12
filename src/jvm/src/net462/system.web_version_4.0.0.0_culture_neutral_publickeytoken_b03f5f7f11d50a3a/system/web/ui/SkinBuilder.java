@@ -168,10 +168,14 @@ public class SkinBuilder extends ControlBuilder  {
     
     public Control ApplyTheme() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotImplementedException, system.web.HttpException, system.NotSupportedException, system.NullReferenceException, system.RankException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.reflection.AmbiguousMatchException, system.web.HttpParseException, system.FormatException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplyTheme = null;
         try {
-            JCObject objApplyTheme = (JCObject)classInstance.Invoke("ApplyTheme");
+            retObjectApplyTheme = classInstance.Invoke("ApplyTheme");
+            JCObject objApplyTheme = (JCObject)retObjectApplyTheme;
             return new Control(objApplyTheme);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplyTheme != null ? retObjectApplyTheme.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

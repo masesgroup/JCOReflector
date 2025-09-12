@@ -142,7 +142,7 @@ public class IControlDesignerBehaviorImplementation extends NetObject implements
     
     public void OnTemplateModeChanged() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnTemplateModeChanged");
         } catch (JCNativeException jcne) {
@@ -156,10 +156,14 @@ public class IControlDesignerBehaviorImplementation extends NetObject implements
     
     public NetObject getDesignTimeElementView() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesignTimeElementView = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DesignTimeElementView");
+            retObjectDesignTimeElementView = classInstance.Get("DesignTimeElementView");
+            JCObject val = (JCObject)retObjectDesignTimeElementView;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignTimeElementView != null ? retObjectDesignTimeElementView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class IControlDesignerBehaviorImplementation extends NetObject implements
 
     public java.lang.String getDesignTimeHtml() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesignTimeHtml = null;
         try {
-            return (java.lang.String)classInstance.Get("DesignTimeHtml");
+            retObjectDesignTimeHtml = classInstance.Get("DesignTimeHtml");
+            return (java.lang.String)retObjectDesignTimeHtml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDesignTimeHtml != null ? retObjectDesignTimeHtml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +185,7 @@ public class IControlDesignerBehaviorImplementation extends NetObject implements
 
     public void setDesignTimeHtml(java.lang.String DesignTimeHtml) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DesignTimeHtml", DesignTimeHtml);
         } catch (JCNativeException jcne) {

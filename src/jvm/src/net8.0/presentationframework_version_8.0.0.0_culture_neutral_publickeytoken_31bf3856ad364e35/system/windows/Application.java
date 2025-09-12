@@ -186,9 +186,19 @@ public class Application extends DispatcherObject implements system.windows.mark
     
     public int Run() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.TimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRun = null;
         try {
-            return (int)classInstance.Invoke("Run");
+            retObjectRun = classInstance.Invoke("Run");
+            return (int)retObjectRun;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRunNumber = (java.lang.Number)retObjectRun;
+                return retObjectRunNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRun != null ? retObjectRun.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +206,19 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public int Run(Window window) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRun = null;
         try {
-            return (int)classInstance.Invoke("Run", window == null ? null : window.getJCOInstance());
+            retObjectRun = classInstance.Invoke("Run", window == null ? null : window.getJCOInstance());
+            return (int)retObjectRun;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRunNumber = (java.lang.Number)retObjectRun;
+                return retObjectRunNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRun != null ? retObjectRun.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +226,14 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public NetObject FindResource(NetObject resourceKey) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.xaml.XamlParseException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException, system.net.WebException, system.InvalidCastException, system.OverflowException, system.globalization.CultureNotFoundException, system.reflection.AmbiguousMatchException, system.security.SecurityException, system.windows.ResourceReferenceKeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindResource = null;
         try {
-            JCObject objFindResource = (JCObject)classInstance.Invoke("FindResource", resourceKey == null ? null : resourceKey.getJCOInstance());
+            retObjectFindResource = classInstance.Invoke("FindResource", resourceKey == null ? null : resourceKey.getJCOInstance());
+            JCObject objFindResource = (JCObject)retObjectFindResource;
             return new NetObject(objFindResource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindResource != null ? retObjectFindResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +241,14 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public static NetObject LoadComponent(Uri resourceLocator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.InvalidCastException, system.reflection.AmbiguousMatchException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoadComponent = null;
         try {
-            JCObject objLoadComponent = (JCObject)classType.Invoke("LoadComponent", resourceLocator == null ? null : resourceLocator.getJCOInstance());
+            retObjectLoadComponent = classType.Invoke("LoadComponent", resourceLocator == null ? null : resourceLocator.getJCOInstance());
+            JCObject objLoadComponent = (JCObject)retObjectLoadComponent;
             return new NetObject(objLoadComponent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadComponent != null ? retObjectLoadComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +256,14 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public NetObject TryFindResource(NetObject resourceKey) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.xaml.XamlParseException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException, system.net.WebException, system.InvalidCastException, system.OverflowException, system.globalization.CultureNotFoundException, system.reflection.AmbiguousMatchException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryFindResource = null;
         try {
-            JCObject objTryFindResource = (JCObject)classInstance.Invoke("TryFindResource", resourceKey == null ? null : resourceKey.getJCOInstance());
+            retObjectTryFindResource = classInstance.Invoke("TryFindResource", resourceKey == null ? null : resourceKey.getJCOInstance());
+            JCObject objTryFindResource = (JCObject)retObjectTryFindResource;
             return new NetObject(objTryFindResource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTryFindResource != null ? retObjectTryFindResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +271,13 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public static java.lang.String GetCookie(Uri uri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCookie = null;
         try {
-            return (java.lang.String)classType.Invoke("GetCookie", uri == null ? null : uri.getJCOInstance());
+            retObjectGetCookie = classType.Invoke("GetCookie", uri == null ? null : uri.getJCOInstance());
+            return (java.lang.String)retObjectGetCookie;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetCookie != null ? retObjectGetCookie.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +285,14 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public static StreamResourceInfo GetContentStream(Uri uriContent) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetContentStream = null;
         try {
-            JCObject objGetContentStream = (JCObject)classType.Invoke("GetContentStream", uriContent == null ? null : uriContent.getJCOInstance());
+            retObjectGetContentStream = classType.Invoke("GetContentStream", uriContent == null ? null : uriContent.getJCOInstance());
+            JCObject objGetContentStream = (JCObject)retObjectGetContentStream;
             return new StreamResourceInfo(objGetContentStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetContentStream != null ? retObjectGetContentStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +300,14 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public static StreamResourceInfo GetRemoteStream(Uri uriRemote) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UriFormatException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRemoteStream = null;
         try {
-            JCObject objGetRemoteStream = (JCObject)classType.Invoke("GetRemoteStream", uriRemote == null ? null : uriRemote.getJCOInstance());
+            retObjectGetRemoteStream = classType.Invoke("GetRemoteStream", uriRemote == null ? null : uriRemote.getJCOInstance());
+            JCObject objGetRemoteStream = (JCObject)retObjectGetRemoteStream;
             return new StreamResourceInfo(objGetRemoteStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRemoteStream != null ? retObjectGetRemoteStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,10 +315,14 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public static StreamResourceInfo GetResourceStream(Uri uriResource) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetResourceStream = null;
         try {
-            JCObject objGetResourceStream = (JCObject)classType.Invoke("GetResourceStream", uriResource == null ? null : uriResource.getJCOInstance());
+            retObjectGetResourceStream = classType.Invoke("GetResourceStream", uriResource == null ? null : uriResource.getJCOInstance());
+            JCObject objGetResourceStream = (JCObject)retObjectGetResourceStream;
             return new StreamResourceInfo(objGetResourceStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResourceStream != null ? retObjectGetResourceStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +330,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public static void LoadComponent(NetObject component, Uri resourceLocator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.OverflowException, system.io.FileLoadException, system.InvalidCastException, system.FormatException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.NotImplementedException, system.xaml.XamlException, system.windows.markup.XamlParseException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("LoadComponent", component == null ? null : component.getJCOInstance(), resourceLocator == null ? null : resourceLocator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -292,7 +340,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public static void SetCookie(Uri uri, java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.UriFormatException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCookie", uri == null ? null : uri.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -302,7 +350,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void Shutdown() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.tracing.EventSourceException, system.componentmodel.Win32Exception, system.TimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Shutdown");
         } catch (JCNativeException jcne) {
@@ -312,7 +360,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void Shutdown(int exitCode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException, system.RankException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.NullReferenceException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.OverflowException, system.TimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Shutdown", exitCode);
         } catch (JCNativeException jcne) {
@@ -326,7 +374,7 @@ public class Application extends DispatcherObject implements system.windows.mark
      */
     @Deprecated 
     public boolean IsAmbientPropertyAvailable(java.lang.String propertyName) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIQueryAmbient to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIQueryAmbient to obtain the full interface.");
     }
 
 
@@ -335,10 +383,14 @@ public class Application extends DispatcherObject implements system.windows.mark
     
     public IDictionary getProperties() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject val = (JCObject)retObjectProperties;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,10 +398,14 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public static Assembly getResourceAssembly() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResourceAssembly = null;
         try {
-            JCObject val = (JCObject)classType.Get("ResourceAssembly");
+            retObjectResourceAssembly = classType.Get("ResourceAssembly");
+            JCObject val = (JCObject)retObjectResourceAssembly;
             return new Assembly(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResourceAssembly != null ? retObjectResourceAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,7 +413,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public static void setResourceAssembly(Assembly ResourceAssembly) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("ResourceAssembly", ResourceAssembly == null ? null : ResourceAssembly.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -367,10 +423,14 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public Uri getStartupUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartupUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StartupUri");
+            retObjectStartupUri = classInstance.Get("StartupUri");
+            JCObject val = (JCObject)retObjectStartupUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartupUri != null ? retObjectStartupUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,7 +438,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void setStartupUri(Uri StartupUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StartupUri", StartupUri == null ? null : StartupUri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -388,10 +448,14 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public static Application getCurrent() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Current");
+            retObjectCurrent = classType.Get("Current");
+            JCObject val = (JCObject)retObjectCurrent;
             return new Application(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrent != null ? retObjectCurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,10 +463,14 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public ResourceDictionary getResources() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResources = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Resources");
+            retObjectResources = classInstance.Get("Resources");
+            JCObject val = (JCObject)retObjectResources;
             return new ResourceDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResources != null ? retObjectResources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -410,7 +478,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void setResources(ResourceDictionary Resources) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Resources", Resources == null ? null : Resources.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -420,10 +488,14 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public ShutdownMode getShutdownMode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShutdownMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ShutdownMode");
+            retObjectShutdownMode = classInstance.Get("ShutdownMode");
+            JCObject val = (JCObject)retObjectShutdownMode;
             return new ShutdownMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShutdownMode != null ? retObjectShutdownMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,7 +503,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void setShutdownMode(ShutdownMode ShutdownMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShutdownMode", ShutdownMode == null ? null : ShutdownMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -441,10 +513,14 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public Window getMainWindow() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMainWindow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MainWindow");
+            retObjectMainWindow = classInstance.Get("MainWindow");
+            JCObject val = (JCObject)retObjectMainWindow;
             return new Window(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMainWindow != null ? retObjectMainWindow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,7 +528,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void setMainWindow(Window MainWindow) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MainWindow", MainWindow == null ? null : MainWindow.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -462,10 +538,14 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public WindowCollection getWindows() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindows = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Windows");
+            retObjectWindows = classInstance.Get("Windows");
+            JCObject val = (JCObject)retObjectWindows;
             return new WindowCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindows != null ? retObjectWindows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -478,7 +558,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void addActivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Activated", handler);
         } catch (JCNativeException jcne) {
@@ -488,7 +568,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void removeActivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Activated", handler);
         } catch (JCNativeException jcne) {
@@ -498,7 +578,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void addDeactivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Deactivated", handler);
         } catch (JCNativeException jcne) {
@@ -508,7 +588,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void removeDeactivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Deactivated", handler);
         } catch (JCNativeException jcne) {
@@ -518,7 +598,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void addExit(ExitEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Exit", handler);
         } catch (JCNativeException jcne) {
@@ -528,7 +608,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void removeExit(ExitEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Exit", handler);
         } catch (JCNativeException jcne) {
@@ -538,7 +618,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void addFragmentNavigation(FragmentNavigationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FragmentNavigation", handler);
         } catch (JCNativeException jcne) {
@@ -548,7 +628,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void removeFragmentNavigation(FragmentNavigationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FragmentNavigation", handler);
         } catch (JCNativeException jcne) {
@@ -558,7 +638,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void addLoadCompleted(LoadCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LoadCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -568,7 +648,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void removeLoadCompleted(LoadCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LoadCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -578,7 +658,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void addNavigated(NavigatedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Navigated", handler);
         } catch (JCNativeException jcne) {
@@ -588,7 +668,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void removeNavigated(NavigatedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Navigated", handler);
         } catch (JCNativeException jcne) {
@@ -598,7 +678,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void addNavigating(NavigatingCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Navigating", handler);
         } catch (JCNativeException jcne) {
@@ -608,7 +688,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void removeNavigating(NavigatingCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Navigating", handler);
         } catch (JCNativeException jcne) {
@@ -618,7 +698,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void addNavigationFailed(NavigationFailedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("NavigationFailed", handler);
         } catch (JCNativeException jcne) {
@@ -628,7 +708,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void removeNavigationFailed(NavigationFailedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("NavigationFailed", handler);
         } catch (JCNativeException jcne) {
@@ -638,7 +718,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void addNavigationProgress(NavigationProgressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("NavigationProgress", handler);
         } catch (JCNativeException jcne) {
@@ -648,7 +728,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void removeNavigationProgress(NavigationProgressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("NavigationProgress", handler);
         } catch (JCNativeException jcne) {
@@ -658,7 +738,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void addNavigationStopped(NavigationStoppedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("NavigationStopped", handler);
         } catch (JCNativeException jcne) {
@@ -668,7 +748,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void removeNavigationStopped(NavigationStoppedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("NavigationStopped", handler);
         } catch (JCNativeException jcne) {
@@ -678,7 +758,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void addSessionEnding(SessionEndingCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SessionEnding", handler);
         } catch (JCNativeException jcne) {
@@ -688,7 +768,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void removeSessionEnding(SessionEndingCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SessionEnding", handler);
         } catch (JCNativeException jcne) {
@@ -698,7 +778,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void addStartup(StartupEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Startup", handler);
         } catch (JCNativeException jcne) {
@@ -708,7 +788,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void removeStartup(StartupEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Startup", handler);
         } catch (JCNativeException jcne) {
@@ -718,7 +798,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void addDispatcherUnhandledException(DispatcherUnhandledExceptionEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DispatcherUnhandledException", handler);
         } catch (JCNativeException jcne) {
@@ -728,7 +808,7 @@ public class Application extends DispatcherObject implements system.windows.mark
 
     public void removeDispatcherUnhandledException(DispatcherUnhandledExceptionEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DispatcherUnhandledException", handler);
         } catch (JCNativeException jcne) {

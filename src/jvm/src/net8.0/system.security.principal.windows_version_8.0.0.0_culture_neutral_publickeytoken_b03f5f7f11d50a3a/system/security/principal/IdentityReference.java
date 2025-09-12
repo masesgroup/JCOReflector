@@ -154,9 +154,13 @@ public class IdentityReference extends NetObject  {
     
     public boolean IsValidTargetType(NetType targetType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValidTargetType = null;
         try {
-            return (boolean)classInstance.Invoke("IsValidTargetType", targetType == null ? null : targetType.getJCOInstance());
+            retObjectIsValidTargetType = classInstance.Invoke("IsValidTargetType", targetType == null ? null : targetType.getJCOInstance());
+            return (boolean)retObjectIsValidTargetType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValidTargetType != null ? retObjectIsValidTargetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,10 +168,14 @@ public class IdentityReference extends NetObject  {
 
     public IdentityReference Translate(NetType targetType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTranslate = null;
         try {
-            JCObject objTranslate = (JCObject)classInstance.Invoke("Translate", targetType == null ? null : targetType.getJCOInstance());
+            retObjectTranslate = classInstance.Invoke("Translate", targetType == null ? null : targetType.getJCOInstance());
+            JCObject objTranslate = (JCObject)retObjectTranslate;
             return new IdentityReference(objTranslate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTranslate != null ? retObjectTranslate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +187,13 @@ public class IdentityReference extends NetObject  {
     
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (java.lang.String)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (java.lang.String)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

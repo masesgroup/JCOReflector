@@ -162,7 +162,7 @@ public class ActivityListener extends NetObject implements AutoCloseable {
     
     public void Dispose() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class ActivityListener extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -189,9 +189,13 @@ public class ActivityListener extends NetObject implements AutoCloseable {
     
     public ExceptionRecorder getExceptionRecorder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExceptionRecorder = null;
         try {
-            return (ExceptionRecorder)classInstance.Get("ExceptionRecorder");
+            retObjectExceptionRecorder = classInstance.Get("ExceptionRecorder");
+            return (ExceptionRecorder)retObjectExceptionRecorder;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into ExceptionRecorder", retObjectExceptionRecorder != null ? retObjectExceptionRecorder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +203,7 @@ public class ActivityListener extends NetObject implements AutoCloseable {
 
     public void setExceptionRecorder(ExceptionRecorder ExceptionRecorder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExceptionRecorder", ExceptionRecorder);
         } catch (JCNativeException jcne) {

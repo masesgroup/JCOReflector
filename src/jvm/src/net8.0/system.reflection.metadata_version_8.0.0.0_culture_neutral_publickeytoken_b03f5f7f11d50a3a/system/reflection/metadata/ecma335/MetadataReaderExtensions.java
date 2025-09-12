@@ -161,9 +161,19 @@ public class MetadataReaderExtensions extends NetObject  {
     
     public static int GetHeapMetadataOffset(MetadataReader reader, HeapIndex heapIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHeapMetadataOffset = null;
         try {
-            return (int)classType.Invoke("GetHeapMetadataOffset", reader == null ? null : reader.getJCOInstance(), heapIndex == null ? null : heapIndex.getJCOInstance());
+            retObjectGetHeapMetadataOffset = classType.Invoke("GetHeapMetadataOffset", reader == null ? null : reader.getJCOInstance(), heapIndex == null ? null : heapIndex.getJCOInstance());
+            return (int)retObjectGetHeapMetadataOffset;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHeapMetadataOffsetNumber = (java.lang.Number)retObjectGetHeapMetadataOffset;
+                return retObjectGetHeapMetadataOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetHeapMetadataOffset != null ? retObjectGetHeapMetadataOffset.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +181,19 @@ public class MetadataReaderExtensions extends NetObject  {
 
     public static int GetHeapSize(MetadataReader reader, HeapIndex heapIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHeapSize = null;
         try {
-            return (int)classType.Invoke("GetHeapSize", reader == null ? null : reader.getJCOInstance(), heapIndex == null ? null : heapIndex.getJCOInstance());
+            retObjectGetHeapSize = classType.Invoke("GetHeapSize", reader == null ? null : reader.getJCOInstance(), heapIndex == null ? null : heapIndex.getJCOInstance());
+            return (int)retObjectGetHeapSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHeapSizeNumber = (java.lang.Number)retObjectGetHeapSize;
+                return retObjectGetHeapSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetHeapSize != null ? retObjectGetHeapSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +201,19 @@ public class MetadataReaderExtensions extends NetObject  {
 
     public static int GetTableMetadataOffset(MetadataReader reader, TableIndex tableIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTableMetadataOffset = null;
         try {
-            return (int)classType.Invoke("GetTableMetadataOffset", reader == null ? null : reader.getJCOInstance(), tableIndex == null ? null : tableIndex.getJCOInstance());
+            retObjectGetTableMetadataOffset = classType.Invoke("GetTableMetadataOffset", reader == null ? null : reader.getJCOInstance(), tableIndex == null ? null : tableIndex.getJCOInstance());
+            return (int)retObjectGetTableMetadataOffset;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTableMetadataOffsetNumber = (java.lang.Number)retObjectGetTableMetadataOffset;
+                return retObjectGetTableMetadataOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTableMetadataOffset != null ? retObjectGetTableMetadataOffset.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +221,19 @@ public class MetadataReaderExtensions extends NetObject  {
 
     public static int GetTableRowCount(MetadataReader reader, TableIndex tableIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTableRowCount = null;
         try {
-            return (int)classType.Invoke("GetTableRowCount", reader == null ? null : reader.getJCOInstance(), tableIndex == null ? null : tableIndex.getJCOInstance());
+            retObjectGetTableRowCount = classType.Invoke("GetTableRowCount", reader == null ? null : reader.getJCOInstance(), tableIndex == null ? null : tableIndex.getJCOInstance());
+            return (int)retObjectGetTableRowCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTableRowCountNumber = (java.lang.Number)retObjectGetTableRowCount;
+                return retObjectGetTableRowCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTableRowCount != null ? retObjectGetTableRowCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +241,19 @@ public class MetadataReaderExtensions extends NetObject  {
 
     public static int GetTableRowSize(MetadataReader reader, TableIndex tableIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTableRowSize = null;
         try {
-            return (int)classType.Invoke("GetTableRowSize", reader == null ? null : reader.getJCOInstance(), tableIndex == null ? null : tableIndex.getJCOInstance());
+            retObjectGetTableRowSize = classType.Invoke("GetTableRowSize", reader == null ? null : reader.getJCOInstance(), tableIndex == null ? null : tableIndex.getJCOInstance());
+            return (int)retObjectGetTableRowSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTableRowSizeNumber = (java.lang.Number)retObjectGetTableRowSize;
+                return retObjectGetTableRowSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTableRowSize != null ? retObjectGetTableRowSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +261,14 @@ public class MetadataReaderExtensions extends NetObject  {
 
     public static BlobHandle GetNextHandle(MetadataReader reader, BlobHandle handle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNextHandle = null;
         try {
-            JCObject objGetNextHandle = (JCObject)classType.Invoke("GetNextHandle", reader == null ? null : reader.getJCOInstance(), handle == null ? null : handle.getJCOInstance());
+            retObjectGetNextHandle = classType.Invoke("GetNextHandle", reader == null ? null : reader.getJCOInstance(), handle == null ? null : handle.getJCOInstance());
+            JCObject objGetNextHandle = (JCObject)retObjectGetNextHandle;
             return new BlobHandle(objGetNextHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextHandle != null ? retObjectGetNextHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +276,14 @@ public class MetadataReaderExtensions extends NetObject  {
 
     public static SignatureTypeKind ResolveSignatureTypeKind(MetadataReader reader, EntityHandle typeHandle, byte rawTypeKind) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.BadImageFormatException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResolveSignatureTypeKind = null;
         try {
-            JCObject objResolveSignatureTypeKind = (JCObject)classType.Invoke("ResolveSignatureTypeKind", reader == null ? null : reader.getJCOInstance(), typeHandle == null ? null : typeHandle.getJCOInstance(), rawTypeKind);
+            retObjectResolveSignatureTypeKind = classType.Invoke("ResolveSignatureTypeKind", reader == null ? null : reader.getJCOInstance(), typeHandle == null ? null : typeHandle.getJCOInstance(), rawTypeKind);
+            JCObject objResolveSignatureTypeKind = (JCObject)retObjectResolveSignatureTypeKind;
             return new SignatureTypeKind(objResolveSignatureTypeKind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveSignatureTypeKind != null ? retObjectResolveSignatureTypeKind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +291,14 @@ public class MetadataReaderExtensions extends NetObject  {
 
     public static StringHandle GetNextHandle(MetadataReader reader, StringHandle handle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNextHandle = null;
         try {
-            JCObject objGetNextHandle = (JCObject)classType.Invoke("GetNextHandle", reader == null ? null : reader.getJCOInstance(), handle == null ? null : handle.getJCOInstance());
+            retObjectGetNextHandle = classType.Invoke("GetNextHandle", reader == null ? null : reader.getJCOInstance(), handle == null ? null : handle.getJCOInstance());
+            JCObject objGetNextHandle = (JCObject)retObjectGetNextHandle;
             return new StringHandle(objGetNextHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextHandle != null ? retObjectGetNextHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +306,14 @@ public class MetadataReaderExtensions extends NetObject  {
 
     public static UserStringHandle GetNextHandle(MetadataReader reader, UserStringHandle handle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNextHandle = null;
         try {
-            JCObject objGetNextHandle = (JCObject)classType.Invoke("GetNextHandle", reader == null ? null : reader.getJCOInstance(), handle == null ? null : handle.getJCOInstance());
+            retObjectGetNextHandle = classType.Invoke("GetNextHandle", reader == null ? null : reader.getJCOInstance(), handle == null ? null : handle.getJCOInstance());
+            JCObject objGetNextHandle = (JCObject)retObjectGetNextHandle;
             return new UserStringHandle(objGetNextHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextHandle != null ? retObjectGetNextHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

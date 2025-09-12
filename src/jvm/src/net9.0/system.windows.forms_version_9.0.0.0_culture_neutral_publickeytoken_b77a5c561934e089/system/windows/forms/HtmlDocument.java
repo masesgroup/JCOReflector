@@ -164,10 +164,14 @@ public class HtmlDocument extends NetObject  {
     
     public NetObject InvokeScript(java.lang.String scriptName, NetObject[] args) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.runtime.interopservices.InvalidOleVariantTypeException, system.OverflowException, system.runtime.interopservices.SafeArrayTypeMismatchException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeScript = null;
         try {
-            JCObject objInvokeScript = (JCObject)classInstance.Invoke("InvokeScript", scriptName, toObjectFromArray(args));
+            retObjectInvokeScript = classInstance.Invoke("InvokeScript", scriptName, toObjectFromArray(args));
+            JCObject objInvokeScript = (JCObject)retObjectInvokeScript;
             return new NetObject(objInvokeScript);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeScript != null ? retObjectInvokeScript.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class HtmlDocument extends NetObject  {
 
     public NetObject InvokeScript(java.lang.String scriptName) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.runtime.interopservices.InvalidOleVariantTypeException, system.OverflowException, system.runtime.interopservices.SafeArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeScript = null;
         try {
-            JCObject objInvokeScript = (JCObject)classInstance.Invoke("InvokeScript", scriptName);
+            retObjectInvokeScript = classInstance.Invoke("InvokeScript", scriptName);
+            JCObject objInvokeScript = (JCObject)retObjectInvokeScript;
             return new NetObject(objInvokeScript);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeScript != null ? retObjectInvokeScript.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,14 @@ public class HtmlDocument extends NetObject  {
 
     public HtmlDocument OpenNew(boolean replaceInHistory) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenNew = null;
         try {
-            JCObject objOpenNew = (JCObject)classInstance.Invoke("OpenNew", replaceInHistory);
+            retObjectOpenNew = classInstance.Invoke("OpenNew", replaceInHistory);
+            JCObject objOpenNew = (JCObject)retObjectOpenNew;
             return new HtmlDocument(objOpenNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenNew != null ? retObjectOpenNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +209,14 @@ public class HtmlDocument extends NetObject  {
 
     public HtmlElement CreateElement(java.lang.String elementTag) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateElement = null;
         try {
-            JCObject objCreateElement = (JCObject)classInstance.Invoke("CreateElement", elementTag);
+            retObjectCreateElement = classInstance.Invoke("CreateElement", elementTag);
+            JCObject objCreateElement = (JCObject)retObjectCreateElement;
             return new HtmlElement(objCreateElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateElement != null ? retObjectCreateElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +224,14 @@ public class HtmlDocument extends NetObject  {
 
     public HtmlElement GetElementById(java.lang.String id) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetElementById = null;
         try {
-            JCObject objGetElementById = (JCObject)classInstance.Invoke("GetElementById", id);
+            retObjectGetElementById = classInstance.Invoke("GetElementById", id);
+            JCObject objGetElementById = (JCObject)retObjectGetElementById;
             return new HtmlElement(objGetElementById);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetElementById != null ? retObjectGetElementById.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +239,14 @@ public class HtmlDocument extends NetObject  {
 
     public HtmlElement GetElementFromPoint(Point point) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetElementFromPoint = null;
         try {
-            JCObject objGetElementFromPoint = (JCObject)classInstance.Invoke("GetElementFromPoint", point == null ? null : point.getJCOInstance());
+            retObjectGetElementFromPoint = classInstance.Invoke("GetElementFromPoint", point == null ? null : point.getJCOInstance());
+            JCObject objGetElementFromPoint = (JCObject)retObjectGetElementFromPoint;
             return new HtmlElement(objGetElementFromPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetElementFromPoint != null ? retObjectGetElementFromPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +254,14 @@ public class HtmlDocument extends NetObject  {
 
     public HtmlElementCollection GetElementsByTagName(java.lang.String tagName) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetElementsByTagName = null;
         try {
-            JCObject objGetElementsByTagName = (JCObject)classInstance.Invoke("GetElementsByTagName", tagName);
+            retObjectGetElementsByTagName = classInstance.Invoke("GetElementsByTagName", tagName);
+            JCObject objGetElementsByTagName = (JCObject)retObjectGetElementsByTagName;
             return new HtmlElementCollection(objGetElementsByTagName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetElementsByTagName != null ? retObjectGetElementsByTagName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +269,7 @@ public class HtmlDocument extends NetObject  {
 
     public void AttachEventHandler(java.lang.String eventName, EventHandler eventHandler) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AttachEventHandler", eventName, eventHandler);
         } catch (JCNativeException jcne) {
@@ -251,7 +279,7 @@ public class HtmlDocument extends NetObject  {
 
     public void DetachEventHandler(java.lang.String eventName, EventHandler eventHandler) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DetachEventHandler", eventName, eventHandler);
         } catch (JCNativeException jcne) {
@@ -261,7 +289,7 @@ public class HtmlDocument extends NetObject  {
 
     public void ExecCommand(java.lang.String command, boolean showUI, NetObject value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExecCommand", command, showUI, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -271,7 +299,7 @@ public class HtmlDocument extends NetObject  {
 
     public void Focus() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Focus");
         } catch (JCNativeException jcne) {
@@ -281,7 +309,7 @@ public class HtmlDocument extends NetObject  {
 
     public void Write(java.lang.String text) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", text);
         } catch (JCNativeException jcne) {
@@ -295,9 +323,13 @@ public class HtmlDocument extends NetObject  {
     
     public boolean getFocused() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFocused = null;
         try {
-            return (boolean)classInstance.Get("Focused");
+            retObjectFocused = classInstance.Get("Focused");
+            return (boolean)retObjectFocused;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFocused != null ? retObjectFocused.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,9 +337,13 @@ public class HtmlDocument extends NetObject  {
 
     public boolean getRightToLeft() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightToLeft = null;
         try {
-            return (boolean)classInstance.Get("RightToLeft");
+            retObjectRightToLeft = classInstance.Get("RightToLeft");
+            return (boolean)retObjectRightToLeft;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRightToLeft != null ? retObjectRightToLeft.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +351,7 @@ public class HtmlDocument extends NetObject  {
 
     public void setRightToLeft(boolean RightToLeft) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RightToLeft", RightToLeft);
         } catch (JCNativeException jcne) {
@@ -325,10 +361,14 @@ public class HtmlDocument extends NetObject  {
 
     public Color getActiveLinkColor() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.runtime.interopservices.InvalidOleVariantTypeException, system.IndexOutOfRangeException, system.OverflowException, system.runtime.interopservices.SafeArrayTypeMismatchException, system.ArgumentNullException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NullReferenceException, system.FormatException, system.MissingMemberException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActiveLinkColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActiveLinkColor");
+            retObjectActiveLinkColor = classInstance.Get("ActiveLinkColor");
+            JCObject val = (JCObject)retObjectActiveLinkColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveLinkColor != null ? retObjectActiveLinkColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,7 +376,7 @@ public class HtmlDocument extends NetObject  {
 
     public void setActiveLinkColor(Color ActiveLinkColor) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActiveLinkColor", ActiveLinkColor == null ? null : ActiveLinkColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -346,10 +386,14 @@ public class HtmlDocument extends NetObject  {
 
     public Color getBackColor() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.runtime.interopservices.InvalidOleVariantTypeException, system.IndexOutOfRangeException, system.OverflowException, system.runtime.interopservices.SafeArrayTypeMismatchException, system.ArgumentNullException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NullReferenceException, system.FormatException, system.MissingMemberException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackColor");
+            retObjectBackColor = classInstance.Get("BackColor");
+            JCObject val = (JCObject)retObjectBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackColor != null ? retObjectBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,7 +401,7 @@ public class HtmlDocument extends NetObject  {
 
     public void setBackColor(Color BackColor) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackColor", BackColor == null ? null : BackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -367,10 +411,14 @@ public class HtmlDocument extends NetObject  {
 
     public Color getForeColor() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.runtime.interopservices.InvalidOleVariantTypeException, system.IndexOutOfRangeException, system.OverflowException, system.runtime.interopservices.SafeArrayTypeMismatchException, system.ArgumentNullException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NullReferenceException, system.FormatException, system.MissingMemberException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ForeColor");
+            retObjectForeColor = classInstance.Get("ForeColor");
+            JCObject val = (JCObject)retObjectForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForeColor != null ? retObjectForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,7 +426,7 @@ public class HtmlDocument extends NetObject  {
 
     public void setForeColor(Color ForeColor) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ForeColor", ForeColor == null ? null : ForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -388,10 +436,14 @@ public class HtmlDocument extends NetObject  {
 
     public Color getLinkColor() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.runtime.interopservices.InvalidOleVariantTypeException, system.IndexOutOfRangeException, system.OverflowException, system.runtime.interopservices.SafeArrayTypeMismatchException, system.ArgumentNullException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NullReferenceException, system.FormatException, system.MissingMemberException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinkColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LinkColor");
+            retObjectLinkColor = classInstance.Get("LinkColor");
+            JCObject val = (JCObject)retObjectLinkColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLinkColor != null ? retObjectLinkColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,7 +451,7 @@ public class HtmlDocument extends NetObject  {
 
     public void setLinkColor(Color LinkColor) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LinkColor", LinkColor == null ? null : LinkColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -409,10 +461,14 @@ public class HtmlDocument extends NetObject  {
 
     public Color getVisitedLinkColor() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.runtime.interopservices.InvalidOleVariantTypeException, system.IndexOutOfRangeException, system.OverflowException, system.runtime.interopservices.SafeArrayTypeMismatchException, system.ArgumentNullException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NullReferenceException, system.FormatException, system.MissingMemberException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisitedLinkColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VisitedLinkColor");
+            retObjectVisitedLinkColor = classInstance.Get("VisitedLinkColor");
+            JCObject val = (JCObject)retObjectVisitedLinkColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisitedLinkColor != null ? retObjectVisitedLinkColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,7 +476,7 @@ public class HtmlDocument extends NetObject  {
 
     public void setVisitedLinkColor(Color VisitedLinkColor) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VisitedLinkColor", VisitedLinkColor == null ? null : VisitedLinkColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -430,10 +486,14 @@ public class HtmlDocument extends NetObject  {
 
     public NetObject getDomDocument() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDomDocument = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DomDocument");
+            retObjectDomDocument = classInstance.Get("DomDocument");
+            JCObject val = (JCObject)retObjectDomDocument;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDomDocument != null ? retObjectDomDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,9 +501,13 @@ public class HtmlDocument extends NetObject  {
 
     public java.lang.String getCookie() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCookie = null;
         try {
-            return (java.lang.String)classInstance.Get("Cookie");
+            retObjectCookie = classInstance.Get("Cookie");
+            return (java.lang.String)retObjectCookie;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCookie != null ? retObjectCookie.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -451,7 +515,7 @@ public class HtmlDocument extends NetObject  {
 
     public void setCookie(java.lang.String Cookie) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Cookie", Cookie);
         } catch (JCNativeException jcne) {
@@ -461,9 +525,13 @@ public class HtmlDocument extends NetObject  {
 
     public java.lang.String getDefaultEncoding() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultEncoding = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultEncoding");
+            retObjectDefaultEncoding = classInstance.Get("DefaultEncoding");
+            return (java.lang.String)retObjectDefaultEncoding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultEncoding != null ? retObjectDefaultEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -471,9 +539,13 @@ public class HtmlDocument extends NetObject  {
 
     public java.lang.String getDomain() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDomain = null;
         try {
-            return (java.lang.String)classInstance.Get("Domain");
+            retObjectDomain = classInstance.Get("Domain");
+            return (java.lang.String)retObjectDomain;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDomain != null ? retObjectDomain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -481,7 +553,7 @@ public class HtmlDocument extends NetObject  {
 
     public void setDomain(java.lang.String Domain) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Domain", Domain);
         } catch (JCNativeException jcne) {
@@ -491,9 +563,13 @@ public class HtmlDocument extends NetObject  {
 
     public java.lang.String getEncoding() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncoding = null;
         try {
-            return (java.lang.String)classInstance.Get("Encoding");
+            retObjectEncoding = classInstance.Get("Encoding");
+            return (java.lang.String)retObjectEncoding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEncoding != null ? retObjectEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,7 +577,7 @@ public class HtmlDocument extends NetObject  {
 
     public void setEncoding(java.lang.String Encoding) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Encoding", Encoding);
         } catch (JCNativeException jcne) {
@@ -511,9 +587,13 @@ public class HtmlDocument extends NetObject  {
 
     public java.lang.String getTitle() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("Title");
+            retObjectTitle = classInstance.Get("Title");
+            return (java.lang.String)retObjectTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTitle != null ? retObjectTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,7 +601,7 @@ public class HtmlDocument extends NetObject  {
 
     public void setTitle(java.lang.String Title) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Title", Title);
         } catch (JCNativeException jcne) {
@@ -531,10 +611,14 @@ public class HtmlDocument extends NetObject  {
 
     public Uri getUrl() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUrl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Url");
+            retObjectUrl = classInstance.Get("Url");
+            JCObject val = (JCObject)retObjectUrl;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUrl != null ? retObjectUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -542,10 +626,14 @@ public class HtmlDocument extends NetObject  {
 
     public HtmlElement getActiveElement() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActiveElement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActiveElement");
+            retObjectActiveElement = classInstance.Get("ActiveElement");
+            JCObject val = (JCObject)retObjectActiveElement;
             return new HtmlElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveElement != null ? retObjectActiveElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -553,10 +641,14 @@ public class HtmlDocument extends NetObject  {
 
     public HtmlElement getBody() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBody = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Body");
+            retObjectBody = classInstance.Get("Body");
+            JCObject val = (JCObject)retObjectBody;
             return new HtmlElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBody != null ? retObjectBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -564,10 +656,14 @@ public class HtmlDocument extends NetObject  {
 
     public HtmlElementCollection getAll() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAll = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("All");
+            retObjectAll = classInstance.Get("All");
+            JCObject val = (JCObject)retObjectAll;
             return new HtmlElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAll != null ? retObjectAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -575,10 +671,14 @@ public class HtmlDocument extends NetObject  {
 
     public HtmlElementCollection getForms() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForms = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Forms");
+            retObjectForms = classInstance.Get("Forms");
+            JCObject val = (JCObject)retObjectForms;
             return new HtmlElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForms != null ? retObjectForms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -586,10 +686,14 @@ public class HtmlDocument extends NetObject  {
 
     public HtmlElementCollection getImages() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImages = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Images");
+            retObjectImages = classInstance.Get("Images");
+            JCObject val = (JCObject)retObjectImages;
             return new HtmlElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImages != null ? retObjectImages.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -597,10 +701,14 @@ public class HtmlDocument extends NetObject  {
 
     public HtmlElementCollection getLinks() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinks = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Links");
+            retObjectLinks = classInstance.Get("Links");
+            JCObject val = (JCObject)retObjectLinks;
             return new HtmlElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLinks != null ? retObjectLinks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -608,10 +716,14 @@ public class HtmlDocument extends NetObject  {
 
     public HtmlWindow getWindow() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Window");
+            retObjectWindow = classInstance.Get("Window");
+            JCObject val = (JCObject)retObjectWindow;
             return new HtmlWindow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindow != null ? retObjectWindow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -624,7 +736,7 @@ public class HtmlDocument extends NetObject  {
 
     public void addClick(HtmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -634,7 +746,7 @@ public class HtmlDocument extends NetObject  {
 
     public void removeClick(HtmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -644,7 +756,7 @@ public class HtmlDocument extends NetObject  {
 
     public void addContextMenuShowing(HtmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ContextMenuShowing", handler);
         } catch (JCNativeException jcne) {
@@ -654,7 +766,7 @@ public class HtmlDocument extends NetObject  {
 
     public void removeContextMenuShowing(HtmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ContextMenuShowing", handler);
         } catch (JCNativeException jcne) {
@@ -664,7 +776,7 @@ public class HtmlDocument extends NetObject  {
 
     public void addFocusing(HtmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Focusing", handler);
         } catch (JCNativeException jcne) {
@@ -674,7 +786,7 @@ public class HtmlDocument extends NetObject  {
 
     public void removeFocusing(HtmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Focusing", handler);
         } catch (JCNativeException jcne) {
@@ -684,7 +796,7 @@ public class HtmlDocument extends NetObject  {
 
     public void addLosingFocus(HtmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LosingFocus", handler);
         } catch (JCNativeException jcne) {
@@ -694,7 +806,7 @@ public class HtmlDocument extends NetObject  {
 
     public void removeLosingFocus(HtmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LosingFocus", handler);
         } catch (JCNativeException jcne) {
@@ -704,7 +816,7 @@ public class HtmlDocument extends NetObject  {
 
     public void addMouseDown(HtmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseDown", handler);
         } catch (JCNativeException jcne) {
@@ -714,7 +826,7 @@ public class HtmlDocument extends NetObject  {
 
     public void removeMouseDown(HtmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseDown", handler);
         } catch (JCNativeException jcne) {
@@ -724,7 +836,7 @@ public class HtmlDocument extends NetObject  {
 
     public void addMouseLeave(HtmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseLeave", handler);
         } catch (JCNativeException jcne) {
@@ -734,7 +846,7 @@ public class HtmlDocument extends NetObject  {
 
     public void removeMouseLeave(HtmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseLeave", handler);
         } catch (JCNativeException jcne) {
@@ -744,7 +856,7 @@ public class HtmlDocument extends NetObject  {
 
     public void addMouseMove(HtmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -754,7 +866,7 @@ public class HtmlDocument extends NetObject  {
 
     public void removeMouseMove(HtmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -764,7 +876,7 @@ public class HtmlDocument extends NetObject  {
 
     public void addMouseOver(HtmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseOver", handler);
         } catch (JCNativeException jcne) {
@@ -774,7 +886,7 @@ public class HtmlDocument extends NetObject  {
 
     public void removeMouseOver(HtmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseOver", handler);
         } catch (JCNativeException jcne) {
@@ -784,7 +896,7 @@ public class HtmlDocument extends NetObject  {
 
     public void addMouseUp(HtmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseUp", handler);
         } catch (JCNativeException jcne) {
@@ -794,7 +906,7 @@ public class HtmlDocument extends NetObject  {
 
     public void removeMouseUp(HtmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseUp", handler);
         } catch (JCNativeException jcne) {
@@ -804,7 +916,7 @@ public class HtmlDocument extends NetObject  {
 
     public void addStop(HtmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Stop", handler);
         } catch (JCNativeException jcne) {
@@ -814,7 +926,7 @@ public class HtmlDocument extends NetObject  {
 
     public void removeStop(HtmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Stop", handler);
         } catch (JCNativeException jcne) {

@@ -142,7 +142,7 @@ public class IPostBackEventHandlerImplementation extends NetObject implements IP
     
     public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RaisePostBackEvent", eventArgument);
         } catch (JCNativeException jcne) {

@@ -163,10 +163,14 @@ public class XmlSchemaInference extends NetObject  {
     
     public XmlSchemaSet InferSchema(XmlReader instanceDocument, XmlSchemaSet schemas) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.FormatException, system.xml.schema.XmlSchemaInferenceException, system.IndexOutOfRangeException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInferSchema = null;
         try {
-            JCObject objInferSchema = (JCObject)classInstance.Invoke("InferSchema", instanceDocument == null ? null : instanceDocument.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance());
+            retObjectInferSchema = classInstance.Invoke("InferSchema", instanceDocument == null ? null : instanceDocument.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance());
+            JCObject objInferSchema = (JCObject)retObjectInferSchema;
             return new XmlSchemaSet(objInferSchema);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInferSchema != null ? retObjectInferSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class XmlSchemaInference extends NetObject  {
 
     public XmlSchemaSet InferSchema(XmlReader instanceDocument) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.FormatException, system.xml.schema.XmlSchemaInferenceException, system.IndexOutOfRangeException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInferSchema = null;
         try {
-            JCObject objInferSchema = (JCObject)classInstance.Invoke("InferSchema", instanceDocument == null ? null : instanceDocument.getJCOInstance());
+            retObjectInferSchema = classInstance.Invoke("InferSchema", instanceDocument == null ? null : instanceDocument.getJCOInstance());
+            JCObject objInferSchema = (JCObject)retObjectInferSchema;
             return new XmlSchemaSet(objInferSchema);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInferSchema != null ? retObjectInferSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

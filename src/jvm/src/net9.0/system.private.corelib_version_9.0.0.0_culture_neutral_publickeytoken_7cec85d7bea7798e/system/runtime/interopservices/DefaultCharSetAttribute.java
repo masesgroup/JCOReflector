@@ -171,10 +171,14 @@ public class DefaultCharSetAttribute extends Attribute  {
     
     public CharSet getCharSet() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCharSet = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CharSet");
+            retObjectCharSet = classInstance.Get("CharSet");
+            JCObject val = (JCObject)retObjectCharSet;
             return new CharSet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCharSet != null ? retObjectCharSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

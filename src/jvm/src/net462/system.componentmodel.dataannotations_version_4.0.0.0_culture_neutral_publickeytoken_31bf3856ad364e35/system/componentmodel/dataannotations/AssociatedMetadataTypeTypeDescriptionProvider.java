@@ -178,10 +178,14 @@ public class AssociatedMetadataTypeTypeDescriptionProvider extends TypeDescripti
     
     public ICustomTypeDescriptor GetTypeDescriptor(NetType objectType, NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.reflection.AmbiguousMatchException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeDescriptor = null;
         try {
-            JCObject objGetTypeDescriptor = (JCObject)classInstance.Invoke("GetTypeDescriptor", objectType == null ? null : objectType.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
+            retObjectGetTypeDescriptor = classInstance.Invoke("GetTypeDescriptor", objectType == null ? null : objectType.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
+            JCObject objGetTypeDescriptor = (JCObject)retObjectGetTypeDescriptor;
             return new ICustomTypeDescriptorImplementation(objGetTypeDescriptor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeDescriptor != null ? retObjectGetTypeDescriptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

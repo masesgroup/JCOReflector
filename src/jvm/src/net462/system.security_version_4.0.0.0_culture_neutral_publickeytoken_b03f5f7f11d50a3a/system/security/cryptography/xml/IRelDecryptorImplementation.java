@@ -145,10 +145,14 @@ public class IRelDecryptorImplementation extends NetObject implements IRelDecryp
     
     public Stream Decrypt(EncryptionMethod encryptionMethod, KeyInfo keyInfo, Stream toDecrypt) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecrypt = null;
         try {
-            JCObject objDecrypt = (JCObject)classInstance.Invoke("Decrypt", encryptionMethod == null ? null : encryptionMethod.getJCOInstance(), keyInfo == null ? null : keyInfo.getJCOInstance(), toDecrypt == null ? null : toDecrypt.getJCOInstance());
+            retObjectDecrypt = classInstance.Invoke("Decrypt", encryptionMethod == null ? null : encryptionMethod.getJCOInstance(), keyInfo == null ? null : keyInfo.getJCOInstance(), toDecrypt == null ? null : toDecrypt.getJCOInstance());
+            JCObject objDecrypt = (JCObject)retObjectDecrypt;
             return new Stream(objDecrypt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecrypt != null ? retObjectDecrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

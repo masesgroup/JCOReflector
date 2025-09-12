@@ -144,10 +144,14 @@ public class ITypedListImplementation extends NetObject implements ITypedList {
     
     public PropertyDescriptorCollection GetItemProperties(PropertyDescriptor[] listAccessors) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItemProperties = null;
         try {
-            JCObject objGetItemProperties = (JCObject)classInstance.Invoke("GetItemProperties", (java.lang.Object)toObjectFromArray(listAccessors));
+            retObjectGetItemProperties = classInstance.Invoke("GetItemProperties", (java.lang.Object)toObjectFromArray(listAccessors));
+            JCObject objGetItemProperties = (JCObject)retObjectGetItemProperties;
             return new PropertyDescriptorCollection(objGetItemProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItemProperties != null ? retObjectGetItemProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,9 +159,13 @@ public class ITypedListImplementation extends NetObject implements ITypedList {
 
     public java.lang.String GetListName(PropertyDescriptor[] listAccessors) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetListName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetListName", (java.lang.Object)toObjectFromArray(listAccessors));
+            retObjectGetListName = classInstance.Invoke("GetListName", (java.lang.Object)toObjectFromArray(listAccessors));
+            return (java.lang.String)retObjectGetListName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetListName != null ? retObjectGetListName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -175,10 +175,14 @@ public class RootBuilder extends TemplateBuilder  {
     
     public NetType GetChildControlType(java.lang.String tagName, IDictionary attribs) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.web.HttpParseException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildControlType = null;
         try {
-            JCObject objGetChildControlType = (JCObject)classInstance.Invoke("GetChildControlType", tagName, attribs == null ? null : attribs.getJCOInstance());
+            retObjectGetChildControlType = classInstance.Invoke("GetChildControlType", tagName, attribs == null ? null : attribs.getJCOInstance());
+            JCObject objGetChildControlType = (JCObject)retObjectGetChildControlType;
             return new NetType(objGetChildControlType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildControlType != null ? retObjectGetChildControlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +194,14 @@ public class RootBuilder extends TemplateBuilder  {
     
     public IDictionary getBuiltObjects() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuiltObjects = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BuiltObjects");
+            retObjectBuiltObjects = classInstance.Get("BuiltObjects");
+            JCObject val = (JCObject)retObjectBuiltObjects;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuiltObjects != null ? retObjectBuiltObjects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

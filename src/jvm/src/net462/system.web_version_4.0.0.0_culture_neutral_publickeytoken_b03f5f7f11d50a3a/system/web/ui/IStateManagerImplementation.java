@@ -142,10 +142,14 @@ public class IStateManagerImplementation extends NetObject implements IStateMana
     
     public NetObject SaveViewState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSaveViewState = null;
         try {
-            JCObject objSaveViewState = (JCObject)classInstance.Invoke("SaveViewState");
+            retObjectSaveViewState = classInstance.Invoke("SaveViewState");
+            JCObject objSaveViewState = (JCObject)retObjectSaveViewState;
             return new NetObject(objSaveViewState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSaveViewState != null ? retObjectSaveViewState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,7 +157,7 @@ public class IStateManagerImplementation extends NetObject implements IStateMana
 
     public void LoadViewState(NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadViewState", state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -163,7 +167,7 @@ public class IStateManagerImplementation extends NetObject implements IStateMana
 
     public void TrackViewState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TrackViewState");
         } catch (JCNativeException jcne) {
@@ -177,9 +181,13 @@ public class IStateManagerImplementation extends NetObject implements IStateMana
     
     public boolean getIsTrackingViewState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTrackingViewState = null;
         try {
-            return (boolean)classInstance.Get("IsTrackingViewState");
+            retObjectIsTrackingViewState = classInstance.Get("IsTrackingViewState");
+            return (boolean)retObjectIsTrackingViewState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTrackingViewState != null ? retObjectIsTrackingViewState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

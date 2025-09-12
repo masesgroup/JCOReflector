@@ -169,9 +169,13 @@ public class TaskLoggingHelperExtension extends TaskLoggingHelper  {
     
     public java.lang.String FormatResourceString(java.lang.String resourceName, NetObject... args) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatResourceString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("FormatResourceString", resourceName, toObjectFromArray(args));
+            retObjectFormatResourceString = classInstance.Invoke("FormatResourceString", resourceName, toObjectFromArray(args));
+            return (java.lang.String)retObjectFormatResourceString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFormatResourceString != null ? retObjectFormatResourceString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class TaskLoggingHelperExtension extends TaskLoggingHelper  {
     
     public ResourceManager getTaskSharedResources() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTaskSharedResources = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TaskSharedResources");
+            retObjectTaskSharedResources = classInstance.Get("TaskSharedResources");
+            JCObject val = (JCObject)retObjectTaskSharedResources;
             return new ResourceManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTaskSharedResources != null ? retObjectTaskSharedResources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +202,7 @@ public class TaskLoggingHelperExtension extends TaskLoggingHelper  {
 
     public void setTaskSharedResources(ResourceManager TaskSharedResources) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TaskSharedResources", TaskSharedResources == null ? null : TaskSharedResources.getJCOInstance());
         } catch (JCNativeException jcne) {

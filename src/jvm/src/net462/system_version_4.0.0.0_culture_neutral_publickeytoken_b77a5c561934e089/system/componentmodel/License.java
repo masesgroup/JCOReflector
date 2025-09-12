@@ -153,7 +153,7 @@ public class License extends NetObject implements AutoCloseable {
     
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -164,7 +164,7 @@ public class License extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -180,9 +180,13 @@ public class License extends NetObject implements AutoCloseable {
     
     public java.lang.String getLicenseKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLicenseKey = null;
         try {
-            return (java.lang.String)classInstance.Get("LicenseKey");
+            retObjectLicenseKey = classInstance.Get("LicenseKey");
+            return (java.lang.String)retObjectLicenseKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLicenseKey != null ? retObjectLicenseKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

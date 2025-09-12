@@ -166,9 +166,13 @@ public class OutputCacheParameters extends NetObject  {
     
     public boolean getEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnabled = null;
         try {
-            return (boolean)classInstance.Get("Enabled");
+            retObjectEnabled = classInstance.Get("Enabled");
+            return (boolean)retObjectEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnabled != null ? retObjectEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class OutputCacheParameters extends NetObject  {
 
     public void setEnabled(boolean Enabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Enabled", Enabled);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class OutputCacheParameters extends NetObject  {
 
     public boolean getNoStore() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoStore = null;
         try {
-            return (boolean)classInstance.Get("NoStore");
+            retObjectNoStore = classInstance.Get("NoStore");
+            return (boolean)retObjectNoStore;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNoStore != null ? retObjectNoStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class OutputCacheParameters extends NetObject  {
 
     public void setNoStore(boolean NoStore) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoStore", NoStore);
         } catch (JCNativeException jcne) {
@@ -206,9 +214,19 @@ public class OutputCacheParameters extends NetObject  {
 
     public int getDuration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDuration = null;
         try {
-            return (int)classInstance.Get("Duration");
+            retObjectDuration = classInstance.Get("Duration");
+            return (int)retObjectDuration;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDurationNumber = (java.lang.Number)retObjectDuration;
+                return retObjectDurationNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDuration != null ? retObjectDuration.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +234,7 @@ public class OutputCacheParameters extends NetObject  {
 
     public void setDuration(int Duration) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Duration", Duration);
         } catch (JCNativeException jcne) {
@@ -226,9 +244,13 @@ public class OutputCacheParameters extends NetObject  {
 
     public java.lang.String getCacheProfile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCacheProfile = null;
         try {
-            return (java.lang.String)classInstance.Get("CacheProfile");
+            retObjectCacheProfile = classInstance.Get("CacheProfile");
+            return (java.lang.String)retObjectCacheProfile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCacheProfile != null ? retObjectCacheProfile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +258,7 @@ public class OutputCacheParameters extends NetObject  {
 
     public void setCacheProfile(java.lang.String CacheProfile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CacheProfile", CacheProfile);
         } catch (JCNativeException jcne) {
@@ -246,9 +268,13 @@ public class OutputCacheParameters extends NetObject  {
 
     public java.lang.String getSqlDependency() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSqlDependency = null;
         try {
-            return (java.lang.String)classInstance.Get("SqlDependency");
+            retObjectSqlDependency = classInstance.Get("SqlDependency");
+            return (java.lang.String)retObjectSqlDependency;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSqlDependency != null ? retObjectSqlDependency.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +282,7 @@ public class OutputCacheParameters extends NetObject  {
 
     public void setSqlDependency(java.lang.String SqlDependency) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SqlDependency", SqlDependency);
         } catch (JCNativeException jcne) {
@@ -266,9 +292,13 @@ public class OutputCacheParameters extends NetObject  {
 
     public java.lang.String getVaryByContentEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVaryByContentEncoding = null;
         try {
-            return (java.lang.String)classInstance.Get("VaryByContentEncoding");
+            retObjectVaryByContentEncoding = classInstance.Get("VaryByContentEncoding");
+            return (java.lang.String)retObjectVaryByContentEncoding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVaryByContentEncoding != null ? retObjectVaryByContentEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +306,7 @@ public class OutputCacheParameters extends NetObject  {
 
     public void setVaryByContentEncoding(java.lang.String VaryByContentEncoding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VaryByContentEncoding", VaryByContentEncoding);
         } catch (JCNativeException jcne) {
@@ -286,9 +316,13 @@ public class OutputCacheParameters extends NetObject  {
 
     public java.lang.String getVaryByControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVaryByControl = null;
         try {
-            return (java.lang.String)classInstance.Get("VaryByControl");
+            retObjectVaryByControl = classInstance.Get("VaryByControl");
+            return (java.lang.String)retObjectVaryByControl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVaryByControl != null ? retObjectVaryByControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,7 +330,7 @@ public class OutputCacheParameters extends NetObject  {
 
     public void setVaryByControl(java.lang.String VaryByControl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VaryByControl", VaryByControl);
         } catch (JCNativeException jcne) {
@@ -306,9 +340,13 @@ public class OutputCacheParameters extends NetObject  {
 
     public java.lang.String getVaryByCustom() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVaryByCustom = null;
         try {
-            return (java.lang.String)classInstance.Get("VaryByCustom");
+            retObjectVaryByCustom = classInstance.Get("VaryByCustom");
+            return (java.lang.String)retObjectVaryByCustom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVaryByCustom != null ? retObjectVaryByCustom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +354,7 @@ public class OutputCacheParameters extends NetObject  {
 
     public void setVaryByCustom(java.lang.String VaryByCustom) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VaryByCustom", VaryByCustom);
         } catch (JCNativeException jcne) {
@@ -326,9 +364,13 @@ public class OutputCacheParameters extends NetObject  {
 
     public java.lang.String getVaryByHeader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVaryByHeader = null;
         try {
-            return (java.lang.String)classInstance.Get("VaryByHeader");
+            retObjectVaryByHeader = classInstance.Get("VaryByHeader");
+            return (java.lang.String)retObjectVaryByHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVaryByHeader != null ? retObjectVaryByHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,7 +378,7 @@ public class OutputCacheParameters extends NetObject  {
 
     public void setVaryByHeader(java.lang.String VaryByHeader) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VaryByHeader", VaryByHeader);
         } catch (JCNativeException jcne) {
@@ -346,9 +388,13 @@ public class OutputCacheParameters extends NetObject  {
 
     public java.lang.String getVaryByParam() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVaryByParam = null;
         try {
-            return (java.lang.String)classInstance.Get("VaryByParam");
+            retObjectVaryByParam = classInstance.Get("VaryByParam");
+            return (java.lang.String)retObjectVaryByParam;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVaryByParam != null ? retObjectVaryByParam.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,7 +402,7 @@ public class OutputCacheParameters extends NetObject  {
 
     public void setVaryByParam(java.lang.String VaryByParam) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VaryByParam", VaryByParam);
         } catch (JCNativeException jcne) {
@@ -366,10 +412,14 @@ public class OutputCacheParameters extends NetObject  {
 
     public OutputCacheLocation getLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Location");
+            retObjectLocation = classInstance.Get("Location");
+            JCObject val = (JCObject)retObjectLocation;
             return new OutputCacheLocation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocation != null ? retObjectLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,7 +427,7 @@ public class OutputCacheParameters extends NetObject  {
 
     public void setLocation(OutputCacheLocation Location) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Location", Location == null ? null : Location.getJCOInstance());
         } catch (JCNativeException jcne) {

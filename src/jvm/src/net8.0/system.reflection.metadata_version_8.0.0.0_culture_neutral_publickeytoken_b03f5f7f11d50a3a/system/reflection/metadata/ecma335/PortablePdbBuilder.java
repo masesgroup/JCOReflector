@@ -159,10 +159,14 @@ public class PortablePdbBuilder extends NetObject  {
     
     public BlobContentId Serialize(BlobBuilder builder) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerialize = null;
         try {
-            JCObject objSerialize = (JCObject)classInstance.Invoke("Serialize", builder == null ? null : builder.getJCOInstance());
+            retObjectSerialize = classInstance.Invoke("Serialize", builder == null ? null : builder.getJCOInstance());
+            JCObject objSerialize = (JCObject)retObjectSerialize;
             return new BlobContentId(objSerialize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerialize != null ? retObjectSerialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class PortablePdbBuilder extends NetObject  {
     
     public java.lang.String getMetadataVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadataVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("MetadataVersion");
+            retObjectMetadataVersion = classInstance.Get("MetadataVersion");
+            return (java.lang.String)retObjectMetadataVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMetadataVersion != null ? retObjectMetadataVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class PortablePdbBuilder extends NetObject  {
 
     public UInt16 getFormatVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FormatVersion");
+            retObjectFormatVersion = classInstance.Get("FormatVersion");
+            JCObject val = (JCObject)retObjectFormatVersion;
             return new UInt16(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormatVersion != null ? retObjectFormatVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -162,10 +162,12 @@ public class PeerApplicationLaunchInfo extends NetObject  {
     
     public byte[] getData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Data");
+            retObjectData = classInstance.Get("Data");
+            JCObject resultingObjects = (JCObject)retObjectData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -174,6 +176,8 @@ public class PeerApplicationLaunchInfo extends NetObject  {
 				resultingArray[indexData] = (byte)resultingArrayList.get(indexData);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectData != null ? retObjectData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class PeerApplicationLaunchInfo extends NetObject  {
 
     public void setData(byte[] Data) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Data", Data);
         } catch (JCNativeException jcne) {
@@ -191,10 +195,14 @@ public class PeerApplicationLaunchInfo extends NetObject  {
 
     public PeerApplication getPeerApplication() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeerApplication = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PeerApplication");
+            retObjectPeerApplication = classInstance.Get("PeerApplication");
+            JCObject val = (JCObject)retObjectPeerApplication;
             return new PeerApplication(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeerApplication != null ? retObjectPeerApplication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +210,7 @@ public class PeerApplicationLaunchInfo extends NetObject  {
 
     public void setPeerApplication(PeerApplication PeerApplication) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PeerApplication", PeerApplication == null ? null : PeerApplication.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,10 +220,14 @@ public class PeerApplicationLaunchInfo extends NetObject  {
 
     public PeerContact getPeerContact() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeerContact = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PeerContact");
+            retObjectPeerContact = classInstance.Get("PeerContact");
+            JCObject val = (JCObject)retObjectPeerContact;
             return new PeerContact(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeerContact != null ? retObjectPeerContact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +235,7 @@ public class PeerApplicationLaunchInfo extends NetObject  {
 
     public void setPeerContact(PeerContact PeerContact) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PeerContact", PeerContact == null ? null : PeerContact.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -233,10 +245,14 @@ public class PeerApplicationLaunchInfo extends NetObject  {
 
     public PeerEndPoint getPeerEndPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeerEndPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PeerEndPoint");
+            retObjectPeerEndPoint = classInstance.Get("PeerEndPoint");
+            JCObject val = (JCObject)retObjectPeerEndPoint;
             return new PeerEndPoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeerEndPoint != null ? retObjectPeerEndPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +260,7 @@ public class PeerApplicationLaunchInfo extends NetObject  {
 
     public void setPeerEndPoint(PeerEndPoint PeerEndPoint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PeerEndPoint", PeerEndPoint == null ? null : PeerEndPoint.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -254,9 +270,13 @@ public class PeerApplicationLaunchInfo extends NetObject  {
 
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            retObjectMessage = classInstance.Get("Message");
+            return (java.lang.String)retObjectMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessage != null ? retObjectMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,7 +284,7 @@ public class PeerApplicationLaunchInfo extends NetObject  {
 
     public void setMessage(java.lang.String Message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Message", Message);
         } catch (JCNativeException jcne) {

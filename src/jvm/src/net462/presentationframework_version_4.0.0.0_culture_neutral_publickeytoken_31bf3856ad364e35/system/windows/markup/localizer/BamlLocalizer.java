@@ -190,10 +190,14 @@ public class BamlLocalizer extends NetObject  {
     
     public BamlLocalizationDictionary ExtractResources() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtractResources = null;
         try {
-            JCObject objExtractResources = (JCObject)classInstance.Invoke("ExtractResources");
+            retObjectExtractResources = classInstance.Invoke("ExtractResources");
+            JCObject objExtractResources = (JCObject)retObjectExtractResources;
             return new BamlLocalizationDictionary(objExtractResources);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtractResources != null ? retObjectExtractResources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +205,7 @@ public class BamlLocalizer extends NetObject  {
 
     public void UpdateBaml(Stream target, BamlLocalizationDictionary updates) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.xml.schema.XmlSchemaException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateBaml", target == null ? null : target.getJCOInstance(), updates == null ? null : updates.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,7 +224,7 @@ public class BamlLocalizer extends NetObject  {
 
     public void addErrorNotify(BamlLocalizerErrorNotifyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ErrorNotify", handler);
         } catch (JCNativeException jcne) {
@@ -230,7 +234,7 @@ public class BamlLocalizer extends NetObject  {
 
     public void removeErrorNotify(BamlLocalizerErrorNotifyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ErrorNotify", handler);
         } catch (JCNativeException jcne) {

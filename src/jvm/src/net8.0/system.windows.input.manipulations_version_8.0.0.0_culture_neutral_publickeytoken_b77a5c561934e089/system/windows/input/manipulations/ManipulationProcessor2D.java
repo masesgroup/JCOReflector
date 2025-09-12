@@ -179,7 +179,7 @@ public class ManipulationProcessor2D extends NetObject  {
     
     public void CompleteManipulation(long timestamp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CompleteManipulation", timestamp);
         } catch (JCNativeException jcne) {
@@ -189,7 +189,7 @@ public class ManipulationProcessor2D extends NetObject  {
 
     public void SetParameters(ManipulationParameters2D parameters) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetParameters", parameters == null ? null : parameters.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,10 +203,14 @@ public class ManipulationProcessor2D extends NetObject  {
     
     public Single getMinimumScaleRotateRadius() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimumScaleRotateRadius = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MinimumScaleRotateRadius");
+            retObjectMinimumScaleRotateRadius = classInstance.Get("MinimumScaleRotateRadius");
+            JCObject val = (JCObject)retObjectMinimumScaleRotateRadius;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimumScaleRotateRadius != null ? retObjectMinimumScaleRotateRadius.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +218,7 @@ public class ManipulationProcessor2D extends NetObject  {
 
     public void setMinimumScaleRotateRadius(Single MinimumScaleRotateRadius) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinimumScaleRotateRadius", MinimumScaleRotateRadius == null ? null : MinimumScaleRotateRadius.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -224,10 +228,14 @@ public class ManipulationProcessor2D extends NetObject  {
 
     public ManipulationPivot2D getPivot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPivot = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Pivot");
+            retObjectPivot = classInstance.Get("Pivot");
+            JCObject val = (JCObject)retObjectPivot;
             return new ManipulationPivot2D(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPivot != null ? retObjectPivot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +243,7 @@ public class ManipulationProcessor2D extends NetObject  {
 
     public void setPivot(ManipulationPivot2D Pivot) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Pivot", Pivot == null ? null : Pivot.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -245,10 +253,14 @@ public class ManipulationProcessor2D extends NetObject  {
 
     public Manipulations2D getSupportedManipulations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportedManipulations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SupportedManipulations");
+            retObjectSupportedManipulations = classInstance.Get("SupportedManipulations");
+            JCObject val = (JCObject)retObjectSupportedManipulations;
             return new Manipulations2D(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSupportedManipulations != null ? retObjectSupportedManipulations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +268,7 @@ public class ManipulationProcessor2D extends NetObject  {
 
     public void setSupportedManipulations(Manipulations2D SupportedManipulations) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SupportedManipulations", SupportedManipulations == null ? null : SupportedManipulations.getJCOInstance());
         } catch (JCNativeException jcne) {

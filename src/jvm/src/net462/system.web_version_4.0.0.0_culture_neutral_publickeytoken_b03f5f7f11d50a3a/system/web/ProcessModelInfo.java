@@ -162,10 +162,14 @@ public class ProcessModelInfo extends NetObject  {
     
     public static ProcessInfo GetCurrentProcessInfo() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCurrentProcessInfo = null;
         try {
-            JCObject objGetCurrentProcessInfo = (JCObject)classType.Invoke("GetCurrentProcessInfo");
+            retObjectGetCurrentProcessInfo = classType.Invoke("GetCurrentProcessInfo");
+            JCObject objGetCurrentProcessInfo = (JCObject)retObjectGetCurrentProcessInfo;
             return new ProcessInfo(objGetCurrentProcessInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentProcessInfo != null ? retObjectGetCurrentProcessInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,16 +177,20 @@ public class ProcessModelInfo extends NetObject  {
 
     public static ProcessInfo[] GetHistory(int numRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHistory = null;
         try {
             ArrayList<ProcessInfo> resultingArrayList = new ArrayList<ProcessInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetHistory", numRecords);
+            retObjectGetHistory = classType.Invoke("GetHistory", numRecords);
+            JCObject resultingObjects = (JCObject)retObjectGetHistory;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ProcessInfo(resultingObject));
             }
             ProcessInfo[] resultingArray = new ProcessInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHistory != null ? retObjectGetHistory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

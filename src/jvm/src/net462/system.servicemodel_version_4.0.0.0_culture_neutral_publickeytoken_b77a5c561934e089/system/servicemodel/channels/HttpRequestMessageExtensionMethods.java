@@ -156,10 +156,14 @@ public class HttpRequestMessageExtensionMethods extends NetObject  {
     
     public static IPrincipal GetUserPrincipal(HttpRequestMessage httpRequestMessage) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetUserPrincipal = null;
         try {
-            JCObject objGetUserPrincipal = (JCObject)classType.Invoke("GetUserPrincipal", httpRequestMessage == null ? null : httpRequestMessage.getJCOInstance());
+            retObjectGetUserPrincipal = classType.Invoke("GetUserPrincipal", httpRequestMessage == null ? null : httpRequestMessage.getJCOInstance());
+            JCObject objGetUserPrincipal = (JCObject)retObjectGetUserPrincipal;
             return new IPrincipalImplementation(objGetUserPrincipal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUserPrincipal != null ? retObjectGetUserPrincipal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class HttpRequestMessageExtensionMethods extends NetObject  {
 
     public static void SetUserPrincipal(HttpRequestMessage httpRequestMessage, IPrincipal user) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetUserPrincipal", httpRequestMessage == null ? null : httpRequestMessage.getJCOInstance(), user == null ? null : user.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -153,9 +153,13 @@ public class PageTheme extends NetObject  {
     
     public boolean TestDeviceFilter(java.lang.String deviceFilterName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTestDeviceFilter = null;
         try {
-            return (boolean)classInstance.Invoke("TestDeviceFilter", deviceFilterName);
+            retObjectTestDeviceFilter = classInstance.Invoke("TestDeviceFilter", deviceFilterName);
+            return (boolean)retObjectTestDeviceFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTestDeviceFilter != null ? retObjectTestDeviceFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,10 +167,14 @@ public class PageTheme extends NetObject  {
 
     public static NetObject CreateSkinKey(NetType controlType, java.lang.String skinID) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSkinKey = null;
         try {
-            JCObject objCreateSkinKey = (JCObject)classType.Invoke("CreateSkinKey", controlType == null ? null : controlType.getJCOInstance(), skinID);
+            retObjectCreateSkinKey = classType.Invoke("CreateSkinKey", controlType == null ? null : controlType.getJCOInstance(), skinID);
+            JCObject objCreateSkinKey = (JCObject)retObjectCreateSkinKey;
             return new NetObject(objCreateSkinKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSkinKey != null ? retObjectCreateSkinKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

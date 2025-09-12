@@ -162,9 +162,13 @@ public class ExceptionMapper extends NetObject  {
     
     public boolean HandleSecurityTokenProcessingException(NetException ex) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHandleSecurityTokenProcessingException = null;
         try {
-            return (boolean)classInstance.Invoke("HandleSecurityTokenProcessingException", ex == null ? null : ex.getJCOInstance());
+            retObjectHandleSecurityTokenProcessingException = classInstance.Invoke("HandleSecurityTokenProcessingException", ex == null ? null : ex.getJCOInstance());
+            return (boolean)retObjectHandleSecurityTokenProcessingException;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHandleSecurityTokenProcessingException != null ? retObjectHandleSecurityTokenProcessingException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class ExceptionMapper extends NetObject  {
 
     public FaultException FromException(NetException ex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromException = null;
         try {
-            JCObject objFromException = (JCObject)classInstance.Invoke("FromException", ex == null ? null : ex.getJCOInstance());
+            retObjectFromException = classInstance.Invoke("FromException", ex == null ? null : ex.getJCOInstance());
+            JCObject objFromException = (JCObject)retObjectFromException;
             return new FaultException(objFromException);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromException != null ? retObjectFromException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class ExceptionMapper extends NetObject  {
 
     public FaultException FromException(NetException ex, java.lang.String soapNamespace, java.lang.String trustNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromException = null;
         try {
-            JCObject objFromException = (JCObject)classInstance.Invoke("FromException", ex == null ? null : ex.getJCOInstance(), soapNamespace, trustNamespace);
+            retObjectFromException = classInstance.Invoke("FromException", ex == null ? null : ex.getJCOInstance(), soapNamespace, trustNamespace);
+            JCObject objFromException = (JCObject)retObjectFromException;
             return new FaultException(objFromException);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromException != null ? retObjectFromException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

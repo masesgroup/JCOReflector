@@ -142,10 +142,14 @@ public class IConfigurationSystemImplementation extends NetObject implements ICo
     
     public NetObject GetConfig(java.lang.String configKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetConfig = null;
         try {
-            JCObject objGetConfig = (JCObject)classInstance.Invoke("GetConfig", configKey);
+            retObjectGetConfig = classInstance.Invoke("GetConfig", configKey);
+            JCObject objGetConfig = (JCObject)retObjectGetConfig;
             return new NetObject(objGetConfig);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConfig != null ? retObjectGetConfig.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,7 +157,7 @@ public class IConfigurationSystemImplementation extends NetObject implements ICo
 
     public void Init() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Init");
         } catch (JCNativeException jcne) {

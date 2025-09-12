@@ -190,9 +190,13 @@ public class RootDesignerSerializerAttribute extends Attribute  {
     
     public boolean getReloadable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReloadable = null;
         try {
-            return (boolean)classInstance.Get("Reloadable");
+            retObjectReloadable = classInstance.Get("Reloadable");
+            return (boolean)retObjectReloadable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReloadable != null ? retObjectReloadable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +204,13 @@ public class RootDesignerSerializerAttribute extends Attribute  {
 
     public java.lang.String getSerializerBaseTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerializerBaseTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("SerializerBaseTypeName");
+            retObjectSerializerBaseTypeName = classInstance.Get("SerializerBaseTypeName");
+            return (java.lang.String)retObjectSerializerBaseTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSerializerBaseTypeName != null ? retObjectSerializerBaseTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +218,13 @@ public class RootDesignerSerializerAttribute extends Attribute  {
 
     public java.lang.String getSerializerTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerializerTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("SerializerTypeName");
+            retObjectSerializerTypeName = classInstance.Get("SerializerTypeName");
+            return (java.lang.String)retObjectSerializerTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSerializerTypeName != null ? retObjectSerializerTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

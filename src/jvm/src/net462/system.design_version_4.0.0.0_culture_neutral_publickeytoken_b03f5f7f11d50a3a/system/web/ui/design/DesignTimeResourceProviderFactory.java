@@ -159,10 +159,14 @@ public class DesignTimeResourceProviderFactory extends NetObject  {
     
     public IResourceProvider CreateDesignTimeGlobalResourceProvider(IServiceProvider serviceProvider, java.lang.String classKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDesignTimeGlobalResourceProvider = null;
         try {
-            JCObject objCreateDesignTimeGlobalResourceProvider = (JCObject)classInstance.Invoke("CreateDesignTimeGlobalResourceProvider", serviceProvider == null ? null : serviceProvider.getJCOInstance(), classKey);
+            retObjectCreateDesignTimeGlobalResourceProvider = classInstance.Invoke("CreateDesignTimeGlobalResourceProvider", serviceProvider == null ? null : serviceProvider.getJCOInstance(), classKey);
+            JCObject objCreateDesignTimeGlobalResourceProvider = (JCObject)retObjectCreateDesignTimeGlobalResourceProvider;
             return new IResourceProviderImplementation(objCreateDesignTimeGlobalResourceProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDesignTimeGlobalResourceProvider != null ? retObjectCreateDesignTimeGlobalResourceProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class DesignTimeResourceProviderFactory extends NetObject  {
 
     public IResourceProvider CreateDesignTimeLocalResourceProvider(IServiceProvider serviceProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDesignTimeLocalResourceProvider = null;
         try {
-            JCObject objCreateDesignTimeLocalResourceProvider = (JCObject)classInstance.Invoke("CreateDesignTimeLocalResourceProvider", serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            retObjectCreateDesignTimeLocalResourceProvider = classInstance.Invoke("CreateDesignTimeLocalResourceProvider", serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            JCObject objCreateDesignTimeLocalResourceProvider = (JCObject)retObjectCreateDesignTimeLocalResourceProvider;
             return new IResourceProviderImplementation(objCreateDesignTimeLocalResourceProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDesignTimeLocalResourceProvider != null ? retObjectCreateDesignTimeLocalResourceProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class DesignTimeResourceProviderFactory extends NetObject  {
 
     public IDesignTimeResourceWriter CreateDesignTimeLocalResourceWriter(IServiceProvider serviceProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDesignTimeLocalResourceWriter = null;
         try {
-            JCObject objCreateDesignTimeLocalResourceWriter = (JCObject)classInstance.Invoke("CreateDesignTimeLocalResourceWriter", serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            retObjectCreateDesignTimeLocalResourceWriter = classInstance.Invoke("CreateDesignTimeLocalResourceWriter", serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            JCObject objCreateDesignTimeLocalResourceWriter = (JCObject)retObjectCreateDesignTimeLocalResourceWriter;
             return new IDesignTimeResourceWriterImplementation(objCreateDesignTimeLocalResourceWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDesignTimeLocalResourceWriter != null ? retObjectCreateDesignTimeLocalResourceWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

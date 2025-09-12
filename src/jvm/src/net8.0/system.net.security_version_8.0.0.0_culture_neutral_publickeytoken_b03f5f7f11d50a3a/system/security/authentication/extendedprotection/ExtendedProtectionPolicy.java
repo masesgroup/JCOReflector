@@ -209,7 +209,7 @@ public class ExtendedProtectionPolicy extends NetObject implements system.runtim
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 
@@ -218,9 +218,13 @@ public class ExtendedProtectionPolicy extends NetObject implements system.runtim
     
     public static boolean getOSSupportsExtendedProtection() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOSSupportsExtendedProtection = null;
         try {
-            return (boolean)classType.Get("OSSupportsExtendedProtection");
+            retObjectOSSupportsExtendedProtection = classType.Get("OSSupportsExtendedProtection");
+            return (boolean)retObjectOSSupportsExtendedProtection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOSSupportsExtendedProtection != null ? retObjectOSSupportsExtendedProtection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +232,14 @@ public class ExtendedProtectionPolicy extends NetObject implements system.runtim
 
     public ChannelBinding getCustomChannelBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomChannelBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomChannelBinding");
+            retObjectCustomChannelBinding = classInstance.Get("CustomChannelBinding");
+            JCObject val = (JCObject)retObjectCustomChannelBinding;
             return new ChannelBinding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomChannelBinding != null ? retObjectCustomChannelBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +247,14 @@ public class ExtendedProtectionPolicy extends NetObject implements system.runtim
 
     public PolicyEnforcement getPolicyEnforcement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPolicyEnforcement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PolicyEnforcement");
+            retObjectPolicyEnforcement = classInstance.Get("PolicyEnforcement");
+            JCObject val = (JCObject)retObjectPolicyEnforcement;
             return new PolicyEnforcement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPolicyEnforcement != null ? retObjectPolicyEnforcement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +262,14 @@ public class ExtendedProtectionPolicy extends NetObject implements system.runtim
 
     public ProtectionScenario getProtectionScenario() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtectionScenario = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProtectionScenario");
+            retObjectProtectionScenario = classInstance.Get("ProtectionScenario");
+            JCObject val = (JCObject)retObjectProtectionScenario;
             return new ProtectionScenario(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProtectionScenario != null ? retObjectProtectionScenario.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +277,14 @@ public class ExtendedProtectionPolicy extends NetObject implements system.runtim
 
     public ServiceNameCollection getCustomServiceNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomServiceNames = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomServiceNames");
+            retObjectCustomServiceNames = classInstance.Get("CustomServiceNames");
+            JCObject val = (JCObject)retObjectCustomServiceNames;
             return new ServiceNameCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomServiceNames != null ? retObjectCustomServiceNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

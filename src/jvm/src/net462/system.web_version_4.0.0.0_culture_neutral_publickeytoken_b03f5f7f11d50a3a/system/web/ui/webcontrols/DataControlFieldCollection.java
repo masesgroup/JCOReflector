@@ -165,9 +165,13 @@ public class DataControlFieldCollection extends StateManagedCollection  {
     
     public boolean Contains(DataControlField field) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", field == null ? null : field.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", field == null ? null : field.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,19 @@ public class DataControlFieldCollection extends StateManagedCollection  {
 
     public int IndexOf(DataControlField field) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", field == null ? null : field.getJCOInstance());
+            retObjectIndexOf = classInstance.Invoke("IndexOf", field == null ? null : field.getJCOInstance());
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +199,14 @@ public class DataControlFieldCollection extends StateManagedCollection  {
 
     public DataControlFieldCollection CloneFields() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneFields = null;
         try {
-            JCObject objCloneFields = (JCObject)classInstance.Invoke("CloneFields");
+            retObjectCloneFields = classInstance.Invoke("CloneFields");
+            JCObject objCloneFields = (JCObject)retObjectCloneFields;
             return new DataControlFieldCollection(objCloneFields);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneFields != null ? retObjectCloneFields.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +214,7 @@ public class DataControlFieldCollection extends StateManagedCollection  {
 
     public void Add(DataControlField field) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", field == null ? null : field.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -206,7 +224,7 @@ public class DataControlFieldCollection extends StateManagedCollection  {
 
     public void CopyTo(DataControlField[] array, int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
@@ -216,7 +234,7 @@ public class DataControlFieldCollection extends StateManagedCollection  {
 
     public void Insert(int index, DataControlField field) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Insert", index, field == null ? null : field.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -226,7 +244,7 @@ public class DataControlFieldCollection extends StateManagedCollection  {
 
     public void Remove(DataControlField field) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", field == null ? null : field.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -236,7 +254,7 @@ public class DataControlFieldCollection extends StateManagedCollection  {
 
     public void RemoveAt(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", index);
         } catch (JCNativeException jcne) {
@@ -255,7 +273,7 @@ public class DataControlFieldCollection extends StateManagedCollection  {
 
     public void addFieldsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FieldsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -265,7 +283,7 @@ public class DataControlFieldCollection extends StateManagedCollection  {
 
     public void removeFieldsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FieldsChanged", handler);
         } catch (JCNativeException jcne) {

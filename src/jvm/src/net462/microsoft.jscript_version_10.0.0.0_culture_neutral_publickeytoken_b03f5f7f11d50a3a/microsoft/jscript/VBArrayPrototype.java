@@ -159,9 +159,19 @@ public class VBArrayPrototype extends JSObject  {
     
     public static int dimensions(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectdimensions = null;
         try {
-            return (int)classType.Invoke("dimensions", thisob == null ? null : thisob.getJCOInstance());
+            retObjectdimensions = classType.Invoke("dimensions", thisob == null ? null : thisob.getJCOInstance());
+            return (int)retObjectdimensions;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectdimensionsNumber = (java.lang.Number)retObjectdimensions;
+                return retObjectdimensionsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectdimensions != null ? retObjectdimensions.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +179,19 @@ public class VBArrayPrototype extends JSObject  {
 
     public static int lbound(NetObject thisob, NetObject dimension) throws Throwable, system.ArithmeticException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.MissingMethodException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectlbound = null;
         try {
-            return (int)classType.Invoke("lbound", thisob == null ? null : thisob.getJCOInstance(), dimension == null ? null : dimension.getJCOInstance());
+            retObjectlbound = classType.Invoke("lbound", thisob == null ? null : thisob.getJCOInstance(), dimension == null ? null : dimension.getJCOInstance());
+            return (int)retObjectlbound;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectlboundNumber = (java.lang.Number)retObjectlbound;
+                return retObjectlboundNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectlbound != null ? retObjectlbound.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +199,19 @@ public class VBArrayPrototype extends JSObject  {
 
     public static int ubound(NetObject thisob, NetObject dimension) throws Throwable, system.ArithmeticException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.MissingMethodException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectubound = null;
         try {
-            return (int)classType.Invoke("ubound", thisob == null ? null : thisob.getJCOInstance(), dimension == null ? null : dimension.getJCOInstance());
+            retObjectubound = classType.Invoke("ubound", thisob == null ? null : thisob.getJCOInstance(), dimension == null ? null : dimension.getJCOInstance());
+            return (int)retObjectubound;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectuboundNumber = (java.lang.Number)retObjectubound;
+                return retObjectuboundNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectubound != null ? retObjectubound.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +219,14 @@ public class VBArrayPrototype extends JSObject  {
 
     public static ArrayObject toArray(NetObject thisob, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.ArithmeticException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.NotImplementedException, system.MissingMethodException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecttoArray = null;
         try {
-            JCObject objtoArray = (JCObject)classType.Invoke("toArray", thisob == null ? null : thisob.getJCOInstance(), engine == null ? null : engine.getJCOInstance());
+            retObjecttoArray = classType.Invoke("toArray", thisob == null ? null : thisob.getJCOInstance(), engine == null ? null : engine.getJCOInstance());
+            JCObject objtoArray = (JCObject)retObjecttoArray;
             return new ArrayObject(objtoArray);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjecttoArray != null ? retObjecttoArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +234,14 @@ public class VBArrayPrototype extends JSObject  {
 
     public static NetObject getItem(NetObject thisob, NetObject... args) throws Throwable, microsoft.jscript.JScriptException, system.ArithmeticException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.MissingMethodException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetItem = null;
         try {
-            JCObject objgetItem = (JCObject)classType.Invoke("getItem", thisob == null ? null : thisob.getJCOInstance(), toObjectFromArray(args));
+            retObjectgetItem = classType.Invoke("getItem", thisob == null ? null : thisob.getJCOInstance(), toObjectFromArray(args));
+            JCObject objgetItem = (JCObject)retObjectgetItem;
             return new NetObject(objgetItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectgetItem != null ? retObjectgetItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +253,14 @@ public class VBArrayPrototype extends JSObject  {
     
     public static VBArrayConstructor getconstructor() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectconstructor = null;
         try {
-            JCObject val = (JCObject)classType.Get("constructor");
+            retObjectconstructor = classType.Get("constructor");
+            JCObject val = (JCObject)retObjectconstructor;
             return new VBArrayConstructor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectconstructor != null ? retObjectconstructor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

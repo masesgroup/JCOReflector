@@ -145,10 +145,14 @@ public class IContentResolutionServiceImplementation extends NetObject implement
     
     public ContentDesignerState GetContentDesignerState(java.lang.String identifier) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetContentDesignerState = null;
         try {
-            JCObject objGetContentDesignerState = (JCObject)classInstance.Invoke("GetContentDesignerState", identifier);
+            retObjectGetContentDesignerState = classInstance.Invoke("GetContentDesignerState", identifier);
+            JCObject objGetContentDesignerState = (JCObject)retObjectGetContentDesignerState;
             return new ContentDesignerState(objGetContentDesignerState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetContentDesignerState != null ? retObjectGetContentDesignerState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,7 +160,7 @@ public class IContentResolutionServiceImplementation extends NetObject implement
 
     public void SetContentDesignerState(java.lang.String identifier, ContentDesignerState state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetContentDesignerState", identifier, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -170,10 +174,14 @@ public class IContentResolutionServiceImplementation extends NetObject implement
     
     public IDictionary getContentDefinitions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentDefinitions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentDefinitions");
+            retObjectContentDefinitions = classInstance.Get("ContentDefinitions");
+            JCObject val = (JCObject)retObjectContentDefinitions;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentDefinitions != null ? retObjectContentDefinitions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -161,10 +161,14 @@ public class WorkflowApplicationUnhandledExceptionEventArgs extends WorkflowAppl
     
     public Activity getExceptionSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExceptionSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExceptionSource");
+            retObjectExceptionSource = classInstance.Get("ExceptionSource");
+            JCObject val = (JCObject)retObjectExceptionSource;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExceptionSource != null ? retObjectExceptionSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class WorkflowApplicationUnhandledExceptionEventArgs extends WorkflowAppl
 
     public void setExceptionSource(Activity ExceptionSource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExceptionSource", ExceptionSource == null ? null : ExceptionSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -182,10 +186,14 @@ public class WorkflowApplicationUnhandledExceptionEventArgs extends WorkflowAppl
 
     public NetException getUnhandledException() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnhandledException = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnhandledException");
+            retObjectUnhandledException = classInstance.Get("UnhandledException");
+            JCObject val = (JCObject)retObjectUnhandledException;
             return new NetException(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnhandledException != null ? retObjectUnhandledException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +201,7 @@ public class WorkflowApplicationUnhandledExceptionEventArgs extends WorkflowAppl
 
     public void setUnhandledException(NetException UnhandledException) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnhandledException", UnhandledException == null ? null : UnhandledException.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,9 +211,13 @@ public class WorkflowApplicationUnhandledExceptionEventArgs extends WorkflowAppl
 
     public java.lang.String getExceptionSourceInstanceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExceptionSourceInstanceId = null;
         try {
-            return (java.lang.String)classInstance.Get("ExceptionSourceInstanceId");
+            retObjectExceptionSourceInstanceId = classInstance.Get("ExceptionSourceInstanceId");
+            return (java.lang.String)retObjectExceptionSourceInstanceId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExceptionSourceInstanceId != null ? retObjectExceptionSourceInstanceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +225,7 @@ public class WorkflowApplicationUnhandledExceptionEventArgs extends WorkflowAppl
 
     public void setExceptionSourceInstanceId(java.lang.String ExceptionSourceInstanceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExceptionSourceInstanceId", ExceptionSourceInstanceId);
         } catch (JCNativeException jcne) {

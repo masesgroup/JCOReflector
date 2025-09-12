@@ -160,7 +160,7 @@ public class HwndTarget extends CompositionTarget  {
     
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -174,9 +174,13 @@ public class HwndTarget extends CompositionTarget  {
     
     public boolean getUsesPerPixelOpacity() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsesPerPixelOpacity = null;
         try {
-            return (boolean)classInstance.Get("UsesPerPixelOpacity");
+            retObjectUsesPerPixelOpacity = classInstance.Get("UsesPerPixelOpacity");
+            return (boolean)retObjectUsesPerPixelOpacity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUsesPerPixelOpacity != null ? retObjectUsesPerPixelOpacity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,7 +188,7 @@ public class HwndTarget extends CompositionTarget  {
 
     public void setUsesPerPixelOpacity(boolean UsesPerPixelOpacity) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.OverflowException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TimeoutException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UsesPerPixelOpacity", UsesPerPixelOpacity);
         } catch (JCNativeException jcne) {
@@ -194,10 +198,14 @@ public class HwndTarget extends CompositionTarget  {
 
     public RenderMode getRenderMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenderMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RenderMode");
+            retObjectRenderMode = classInstance.Get("RenderMode");
+            JCObject val = (JCObject)retObjectRenderMode;
             return new RenderMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRenderMode != null ? retObjectRenderMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +213,7 @@ public class HwndTarget extends CompositionTarget  {
 
     public void setRenderMode(RenderMode RenderMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.TimeoutException, system.ObjectDisposedException, system.OutOfMemoryException, system.RankException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RenderMode", RenderMode == null ? null : RenderMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -215,10 +223,14 @@ public class HwndTarget extends CompositionTarget  {
 
     public Color getBackgroundColor() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackgroundColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackgroundColor");
+            retObjectBackgroundColor = classInstance.Get("BackgroundColor");
+            JCObject val = (JCObject)retObjectBackgroundColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackgroundColor != null ? retObjectBackgroundColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +238,7 @@ public class HwndTarget extends CompositionTarget  {
 
     public void setBackgroundColor(Color BackgroundColor) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.OverflowException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TimeoutException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackgroundColor", BackgroundColor == null ? null : BackgroundColor.getJCOInstance());
         } catch (JCNativeException jcne) {

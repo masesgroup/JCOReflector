@@ -143,10 +143,14 @@ public class ICurrencyManagerProviderImplementation extends NetObject implements
     
     public CurrencyManager GetRelatedCurrencyManager(java.lang.String dataMember) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRelatedCurrencyManager = null;
         try {
-            JCObject objGetRelatedCurrencyManager = (JCObject)classInstance.Invoke("GetRelatedCurrencyManager", dataMember);
+            retObjectGetRelatedCurrencyManager = classInstance.Invoke("GetRelatedCurrencyManager", dataMember);
+            JCObject objGetRelatedCurrencyManager = (JCObject)retObjectGetRelatedCurrencyManager;
             return new CurrencyManager(objGetRelatedCurrencyManager);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRelatedCurrencyManager != null ? retObjectGetRelatedCurrencyManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,10 +162,14 @@ public class ICurrencyManagerProviderImplementation extends NetObject implements
     
     public CurrencyManager getCurrencyManager() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrencyManager = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrencyManager");
+            retObjectCurrencyManager = classInstance.Get("CurrencyManager");
+            JCObject val = (JCObject)retObjectCurrencyManager;
             return new CurrencyManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrencyManager != null ? retObjectCurrencyManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

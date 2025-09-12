@@ -162,9 +162,13 @@ public class ClipboardProxy extends NetObject  {
     
     public boolean ContainsAudio() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsAudio = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsAudio");
+            retObjectContainsAudio = classInstance.Invoke("ContainsAudio");
+            return (boolean)retObjectContainsAudio;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsAudio != null ? retObjectContainsAudio.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class ClipboardProxy extends NetObject  {
 
     public boolean ContainsData(java.lang.String format) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsData = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsData", format);
+            retObjectContainsData = classInstance.Invoke("ContainsData", format);
+            return (boolean)retObjectContainsData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsData != null ? retObjectContainsData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,13 @@ public class ClipboardProxy extends NetObject  {
 
     public boolean ContainsFileDropList() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsFileDropList = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsFileDropList");
+            retObjectContainsFileDropList = classInstance.Invoke("ContainsFileDropList");
+            return (boolean)retObjectContainsFileDropList;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsFileDropList != null ? retObjectContainsFileDropList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +204,13 @@ public class ClipboardProxy extends NetObject  {
 
     public boolean ContainsImage() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsImage = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsImage");
+            retObjectContainsImage = classInstance.Invoke("ContainsImage");
+            return (boolean)retObjectContainsImage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsImage != null ? retObjectContainsImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +218,13 @@ public class ClipboardProxy extends NetObject  {
 
     public boolean ContainsText() throws Throwable, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsText = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsText");
+            retObjectContainsText = classInstance.Invoke("ContainsText");
+            return (boolean)retObjectContainsText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsText != null ? retObjectContainsText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +232,13 @@ public class ClipboardProxy extends NetObject  {
 
     public boolean ContainsText(TextDataFormat format) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsText = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsText", format == null ? null : format.getJCOInstance());
+            retObjectContainsText = classInstance.Invoke("ContainsText", format == null ? null : format.getJCOInstance());
+            return (boolean)retObjectContainsText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsText != null ? retObjectContainsText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +246,14 @@ public class ClipboardProxy extends NetObject  {
 
     public StringCollection GetFileDropList() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFileDropList = null;
         try {
-            JCObject objGetFileDropList = (JCObject)classInstance.Invoke("GetFileDropList");
+            retObjectGetFileDropList = classInstance.Invoke("GetFileDropList");
+            JCObject objGetFileDropList = (JCObject)retObjectGetFileDropList;
             return new StringCollection(objGetFileDropList);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFileDropList != null ? retObjectGetFileDropList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +261,14 @@ public class ClipboardProxy extends NetObject  {
 
     public Image GetImage() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetImage = null;
         try {
-            JCObject objGetImage = (JCObject)classInstance.Invoke("GetImage");
+            retObjectGetImage = classInstance.Invoke("GetImage");
+            JCObject objGetImage = (JCObject)retObjectGetImage;
             return new Image(objGetImage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetImage != null ? retObjectGetImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +276,14 @@ public class ClipboardProxy extends NetObject  {
 
     public Stream GetAudioStream() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAudioStream = null;
         try {
-            JCObject objGetAudioStream = (JCObject)classInstance.Invoke("GetAudioStream");
+            retObjectGetAudioStream = classInstance.Invoke("GetAudioStream");
+            JCObject objGetAudioStream = (JCObject)retObjectGetAudioStream;
             return new Stream(objGetAudioStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAudioStream != null ? retObjectGetAudioStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +291,14 @@ public class ClipboardProxy extends NetObject  {
 
     public NetObject GetData(java.lang.String format) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetData = null;
         try {
-            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", format);
+            retObjectGetData = classInstance.Invoke("GetData", format);
+            JCObject objGetData = (JCObject)retObjectGetData;
             return new NetObject(objGetData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetData != null ? retObjectGetData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,9 +306,13 @@ public class ClipboardProxy extends NetObject  {
 
     public java.lang.String GetText() throws Throwable, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetText = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetText");
+            retObjectGetText = classInstance.Invoke("GetText");
+            return (java.lang.String)retObjectGetText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetText != null ? retObjectGetText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,9 +320,13 @@ public class ClipboardProxy extends NetObject  {
 
     public java.lang.String GetText(TextDataFormat format) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetText = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetText", format == null ? null : format.getJCOInstance());
+            retObjectGetText = classInstance.Invoke("GetText", format == null ? null : format.getJCOInstance());
+            return (java.lang.String)retObjectGetText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetText != null ? retObjectGetText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,10 +334,14 @@ public class ClipboardProxy extends NetObject  {
 
     public IDataObject GetDataObject() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDataObject = null;
         try {
-            JCObject objGetDataObject = (JCObject)classInstance.Invoke("GetDataObject");
+            retObjectGetDataObject = classInstance.Invoke("GetDataObject");
+            JCObject objGetDataObject = (JCObject)retObjectGetDataObject;
             return new IDataObjectImplementation(objGetDataObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataObject != null ? retObjectGetDataObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +349,7 @@ public class ClipboardProxy extends NetObject  {
 
     public void Clear() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -307,7 +359,7 @@ public class ClipboardProxy extends NetObject  {
 
     public void SetAudio(byte[] audioBytes) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAudio", (java.lang.Object)audioBytes);
         } catch (JCNativeException jcne) {
@@ -317,7 +369,7 @@ public class ClipboardProxy extends NetObject  {
 
     public void SetAudio(JCORefOut dupParam0) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAudio", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -327,7 +379,7 @@ public class ClipboardProxy extends NetObject  {
 
     public void SetAudio(Stream audioStream) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAudio", audioStream == null ? null : audioStream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -337,7 +389,7 @@ public class ClipboardProxy extends NetObject  {
 
     public void SetData(java.lang.String format, NetObject data) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetData", format, data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -347,7 +399,7 @@ public class ClipboardProxy extends NetObject  {
 
     public void SetDataObject(DataObject data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.ThreadStateException, system.ArgumentOutOfRangeException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDataObject", data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -357,7 +409,7 @@ public class ClipboardProxy extends NetObject  {
 
     public void SetFileDropList(StringCollection filePaths) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFileDropList", filePaths == null ? null : filePaths.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -367,7 +419,7 @@ public class ClipboardProxy extends NetObject  {
 
     public void SetImage(Image image) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetImage", image == null ? null : image.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -377,7 +429,7 @@ public class ClipboardProxy extends NetObject  {
 
     public void SetText(java.lang.String text, TextDataFormat format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetText", text, format == null ? null : format.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -387,7 +439,7 @@ public class ClipboardProxy extends NetObject  {
 
     public void SetText(java.lang.String text) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetText", text);
         } catch (JCNativeException jcne) {

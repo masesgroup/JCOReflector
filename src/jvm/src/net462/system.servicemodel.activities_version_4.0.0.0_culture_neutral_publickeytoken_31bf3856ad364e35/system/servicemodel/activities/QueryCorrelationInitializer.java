@@ -167,10 +167,14 @@ public class QueryCorrelationInitializer extends CorrelationInitializer  {
     
     public MessageQuerySet getMessageQuerySet() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageQuerySet = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageQuerySet");
+            retObjectMessageQuerySet = classInstance.Get("MessageQuerySet");
+            JCObject val = (JCObject)retObjectMessageQuerySet;
             return new MessageQuerySet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageQuerySet != null ? retObjectMessageQuerySet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class QueryCorrelationInitializer extends CorrelationInitializer  {
 
     public void setMessageQuerySet(MessageQuerySet MessageQuerySet) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageQuerySet", MessageQuerySet == null ? null : MessageQuerySet.getJCOInstance());
         } catch (JCNativeException jcne) {

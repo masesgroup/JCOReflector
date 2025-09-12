@@ -166,9 +166,13 @@ public class StringListProperty extends BaseProperty  {
     
     public java.lang.String getCommandLineValueSeparator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandLineValueSeparator = null;
         try {
-            return (java.lang.String)classInstance.Get("CommandLineValueSeparator");
+            retObjectCommandLineValueSeparator = classInstance.Get("CommandLineValueSeparator");
+            return (java.lang.String)retObjectCommandLineValueSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCommandLineValueSeparator != null ? retObjectCommandLineValueSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class StringListProperty extends BaseProperty  {
 
     public void setCommandLineValueSeparator(java.lang.String CommandLineValueSeparator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandLineValueSeparator", CommandLineValueSeparator);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class StringListProperty extends BaseProperty  {
 
     public java.lang.String getRendererValueSeparator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRendererValueSeparator = null;
         try {
-            return (java.lang.String)classInstance.Get("RendererValueSeparator");
+            retObjectRendererValueSeparator = classInstance.Get("RendererValueSeparator");
+            return (java.lang.String)retObjectRendererValueSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRendererValueSeparator != null ? retObjectRendererValueSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class StringListProperty extends BaseProperty  {
 
     public void setRendererValueSeparator(java.lang.String RendererValueSeparator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RendererValueSeparator", RendererValueSeparator);
         } catch (JCNativeException jcne) {
@@ -206,9 +214,13 @@ public class StringListProperty extends BaseProperty  {
 
     public java.lang.String getSubtype() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubtype = null;
         try {
-            return (java.lang.String)classInstance.Get("Subtype");
+            retObjectSubtype = classInstance.Get("Subtype");
+            return (java.lang.String)retObjectSubtype;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSubtype != null ? retObjectSubtype.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class StringListProperty extends BaseProperty  {
 
     public void setSubtype(java.lang.String Subtype) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Subtype", Subtype);
         } catch (JCNativeException jcne) {

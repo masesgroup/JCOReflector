@@ -176,9 +176,13 @@ public class QueryAccessibilityHelpEventArgs extends EventArgs  {
     
     public java.lang.String getHelpKeyword() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpKeyword = null;
         try {
-            return (java.lang.String)classInstance.Get("HelpKeyword");
+            retObjectHelpKeyword = classInstance.Get("HelpKeyword");
+            return (java.lang.String)retObjectHelpKeyword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHelpKeyword != null ? retObjectHelpKeyword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class QueryAccessibilityHelpEventArgs extends EventArgs  {
 
     public void setHelpKeyword(java.lang.String HelpKeyword) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpKeyword", HelpKeyword);
         } catch (JCNativeException jcne) {
@@ -196,9 +200,13 @@ public class QueryAccessibilityHelpEventArgs extends EventArgs  {
 
     public java.lang.String getHelpNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("HelpNamespace");
+            retObjectHelpNamespace = classInstance.Get("HelpNamespace");
+            return (java.lang.String)retObjectHelpNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHelpNamespace != null ? retObjectHelpNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +214,7 @@ public class QueryAccessibilityHelpEventArgs extends EventArgs  {
 
     public void setHelpNamespace(java.lang.String HelpNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpNamespace", HelpNamespace);
         } catch (JCNativeException jcne) {
@@ -216,9 +224,13 @@ public class QueryAccessibilityHelpEventArgs extends EventArgs  {
 
     public java.lang.String getHelpString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpString = null;
         try {
-            return (java.lang.String)classInstance.Get("HelpString");
+            retObjectHelpString = classInstance.Get("HelpString");
+            return (java.lang.String)retObjectHelpString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHelpString != null ? retObjectHelpString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +238,7 @@ public class QueryAccessibilityHelpEventArgs extends EventArgs  {
 
     public void setHelpString(java.lang.String HelpString) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpString", HelpString);
         } catch (JCNativeException jcne) {

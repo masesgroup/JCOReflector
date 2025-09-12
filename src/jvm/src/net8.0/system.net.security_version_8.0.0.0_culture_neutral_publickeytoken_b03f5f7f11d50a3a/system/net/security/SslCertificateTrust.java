@@ -158,10 +158,14 @@ public class SslCertificateTrust extends NetObject  {
     
     public static SslCertificateTrust CreateForX509Collection(X509Certificate2Collection trustList, boolean sendTrustInHandshake) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateForX509Collection = null;
         try {
-            JCObject objCreateForX509Collection = (JCObject)classType.Invoke("CreateForX509Collection", trustList == null ? null : trustList.getJCOInstance(), sendTrustInHandshake);
+            retObjectCreateForX509Collection = classType.Invoke("CreateForX509Collection", trustList == null ? null : trustList.getJCOInstance(), sendTrustInHandshake);
+            JCObject objCreateForX509Collection = (JCObject)retObjectCreateForX509Collection;
             return new SslCertificateTrust(objCreateForX509Collection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateForX509Collection != null ? retObjectCreateForX509Collection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class SslCertificateTrust extends NetObject  {
 
     public static SslCertificateTrust CreateForX509Store(X509Store store, boolean sendTrustInHandshake) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateForX509Store = null;
         try {
-            JCObject objCreateForX509Store = (JCObject)classType.Invoke("CreateForX509Store", store == null ? null : store.getJCOInstance(), sendTrustInHandshake);
+            retObjectCreateForX509Store = classType.Invoke("CreateForX509Store", store == null ? null : store.getJCOInstance(), sendTrustInHandshake);
+            JCObject objCreateForX509Store = (JCObject)retObjectCreateForX509Store;
             return new SslCertificateTrust(objCreateForX509Store);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateForX509Store != null ? retObjectCreateForX509Store.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

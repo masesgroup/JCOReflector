@@ -152,7 +152,7 @@ public class ITransformerConfigurationControlImplementation extends NetObject im
 
     public void addCancelled(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Cancelled", handler);
         } catch (JCNativeException jcne) {
@@ -162,7 +162,7 @@ public class ITransformerConfigurationControlImplementation extends NetObject im
 
     public void removeCancelled(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Cancelled", handler);
         } catch (JCNativeException jcne) {
@@ -172,7 +172,7 @@ public class ITransformerConfigurationControlImplementation extends NetObject im
 
     public void addSucceeded(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Succeeded", handler);
         } catch (JCNativeException jcne) {
@@ -182,7 +182,7 @@ public class ITransformerConfigurationControlImplementation extends NetObject im
 
     public void removeSucceeded(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Succeeded", handler);
         } catch (JCNativeException jcne) {

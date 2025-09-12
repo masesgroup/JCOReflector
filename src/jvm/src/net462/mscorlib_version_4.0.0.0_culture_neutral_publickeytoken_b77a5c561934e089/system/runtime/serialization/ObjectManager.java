@@ -170,10 +170,14 @@ public class ObjectManager extends NetObject  {
     
     public NetObject GetObject(long objectID) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetObject = null;
         try {
-            JCObject objGetObject = (JCObject)classInstance.Invoke("GetObject", objectID);
+            retObjectGetObject = classInstance.Invoke("GetObject", objectID);
+            JCObject objGetObject = (JCObject)retObjectGetObject;
             return new NetObject(objGetObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObject != null ? retObjectGetObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class ObjectManager extends NetObject  {
 
     public void DoFixups() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.serialization.SerializationException, system.MissingMemberException, system.reflection.TargetException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DoFixups");
         } catch (JCNativeException jcne) {
@@ -191,7 +195,7 @@ public class ObjectManager extends NetObject  {
 
     public void RaiseDeserializationEvent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RaiseDeserializationEvent");
         } catch (JCNativeException jcne) {
@@ -201,7 +205,7 @@ public class ObjectManager extends NetObject  {
 
     public void RaiseOnDeserializingEvent(NetObject obj) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RaiseOnDeserializingEvent", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,7 +215,7 @@ public class ObjectManager extends NetObject  {
 
     public void RecordArrayElementFixup(long arrayToBeFixed, int index, long objectRequired) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RecordArrayElementFixup", arrayToBeFixed, index, objectRequired);
         } catch (JCNativeException jcne) {
@@ -221,7 +225,7 @@ public class ObjectManager extends NetObject  {
 
     public void RecordArrayElementFixup(long arrayToBeFixed, int[] indices, long objectRequired) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RecordArrayElementFixup", arrayToBeFixed, indices, objectRequired);
         } catch (JCNativeException jcne) {
@@ -231,7 +235,7 @@ public class ObjectManager extends NetObject  {
 
     public void RecordArrayElementFixup(long dupParam0, JCORefOut dupParam1, long dupParam2) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RecordArrayElementFixup", dupParam0, dupParam1.getJCRefOut(), dupParam2);
         } catch (JCNativeException jcne) {
@@ -241,7 +245,7 @@ public class ObjectManager extends NetObject  {
 
     public void RecordDelayedFixup(long objectToBeFixed, java.lang.String memberName, long objectRequired) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RecordDelayedFixup", objectToBeFixed, memberName, objectRequired);
         } catch (JCNativeException jcne) {
@@ -251,7 +255,7 @@ public class ObjectManager extends NetObject  {
 
     public void RecordFixup(long objectToBeFixed, MemberInfo member, long objectRequired) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RecordFixup", objectToBeFixed, member == null ? null : member.getJCOInstance(), objectRequired);
         } catch (JCNativeException jcne) {
@@ -261,7 +265,7 @@ public class ObjectManager extends NetObject  {
 
     public void RegisterObject(NetObject obj, long objectID) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.MulticastNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.InvalidOperationException, system.NotSupportedException, system.MissingMemberException, system.reflection.TargetException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterObject", obj == null ? null : obj.getJCOInstance(), objectID);
         } catch (JCNativeException jcne) {
@@ -271,7 +275,7 @@ public class ObjectManager extends NetObject  {
 
     public void RegisterObject(NetObject obj, long objectID, SerializationInfo info) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.MulticastNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.InvalidOperationException, system.NotSupportedException, system.MissingMemberException, system.reflection.TargetException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterObject", obj == null ? null : obj.getJCOInstance(), objectID, info == null ? null : info.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -281,7 +285,7 @@ public class ObjectManager extends NetObject  {
 
     public void RegisterObject(NetObject obj, long objectID, SerializationInfo info, long idOfContainingObj, MemberInfo member) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.MulticastNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.MissingMemberException, system.reflection.TargetException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterObject", obj == null ? null : obj.getJCOInstance(), objectID, info == null ? null : info.getJCOInstance(), idOfContainingObj, member == null ? null : member.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -291,7 +295,7 @@ public class ObjectManager extends NetObject  {
 
     public void RegisterObject(NetObject obj, long objectID, SerializationInfo info, long idOfContainingObj, MemberInfo member, int[] arrayIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.MulticastNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.MissingMemberException, system.reflection.TargetException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterObject", obj == null ? null : obj.getJCOInstance(), objectID, info == null ? null : info.getJCOInstance(), idOfContainingObj, member == null ? null : member.getJCOInstance(), arrayIndex);
         } catch (JCNativeException jcne) {
@@ -301,7 +305,7 @@ public class ObjectManager extends NetObject  {
 
     public void RegisterObject(NetObject dupParam0, long dupParam1, SerializationInfo dupParam2, long dupParam3, MemberInfo dupParam4, JCORefOut dupParam5) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.MulticastNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.MissingMemberException, system.reflection.TargetException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterObject", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5.getJCRefOut());
         } catch (JCNativeException jcne) {

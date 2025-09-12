@@ -172,9 +172,19 @@ public class FormViewRow extends TableRow  {
     
     public int getItemIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemIndex = null;
         try {
-            return (int)classInstance.Get("ItemIndex");
+            retObjectItemIndex = classInstance.Get("ItemIndex");
+            return (int)retObjectItemIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectItemIndexNumber = (java.lang.Number)retObjectItemIndex;
+                return retObjectItemIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectItemIndex != null ? retObjectItemIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +192,14 @@ public class FormViewRow extends TableRow  {
 
     public DataControlRowState getRowState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowState");
+            retObjectRowState = classInstance.Get("RowState");
+            JCObject val = (JCObject)retObjectRowState;
             return new DataControlRowState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowState != null ? retObjectRowState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +207,14 @@ public class FormViewRow extends TableRow  {
 
     public DataControlRowType getRowType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowType");
+            retObjectRowType = classInstance.Get("RowType");
+            JCObject val = (JCObject)retObjectRowType;
             return new DataControlRowType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowType != null ? retObjectRowType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

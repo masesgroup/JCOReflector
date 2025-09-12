@@ -158,10 +158,14 @@ public class SqlDataSourceEnumerator extends DbDataSourceEnumerator  {
     
     public DataTable GetDataSources() throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.data.DataException, system.collections.generic.KeyNotFoundException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDataSources = null;
         try {
-            JCObject objGetDataSources = (JCObject)classInstance.Invoke("GetDataSources");
+            retObjectGetDataSources = classInstance.Invoke("GetDataSources");
+            JCObject objGetDataSources = (JCObject)retObjectGetDataSources;
             return new DataTable(objGetDataSources);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataSources != null ? retObjectGetDataSources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class SqlDataSourceEnumerator extends DbDataSourceEnumerator  {
     
     public static SqlDataSourceEnumerator getInstance() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInstance = null;
         try {
-            JCObject val = (JCObject)classType.Get("Instance");
+            retObjectInstance = classType.Get("Instance");
+            JCObject val = (JCObject)retObjectInstance;
             return new SqlDataSourceEnumerator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstance != null ? retObjectInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

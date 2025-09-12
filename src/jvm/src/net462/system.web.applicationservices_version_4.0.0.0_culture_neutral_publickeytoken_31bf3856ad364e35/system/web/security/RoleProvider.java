@@ -154,9 +154,13 @@ public class RoleProvider extends ProviderBase  {
     
     public boolean DeleteRole(java.lang.String roleName, boolean throwOnPopulatedRole) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteRole = null;
         try {
-            return (boolean)classInstance.Invoke("DeleteRole", roleName, throwOnPopulatedRole);
+            retObjectDeleteRole = classInstance.Invoke("DeleteRole", roleName, throwOnPopulatedRole);
+            return (boolean)retObjectDeleteRole;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDeleteRole != null ? retObjectDeleteRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,13 @@ public class RoleProvider extends ProviderBase  {
 
     public boolean IsUserInRole(java.lang.String username, java.lang.String roleName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsUserInRole = null;
         try {
-            return (boolean)classInstance.Invoke("IsUserInRole", username, roleName);
+            retObjectIsUserInRole = classInstance.Invoke("IsUserInRole", username, roleName);
+            return (boolean)retObjectIsUserInRole;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsUserInRole != null ? retObjectIsUserInRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +182,13 @@ public class RoleProvider extends ProviderBase  {
 
     public boolean RoleExists(java.lang.String roleName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRoleExists = null;
         try {
-            return (boolean)classInstance.Invoke("RoleExists", roleName);
+            retObjectRoleExists = classInstance.Invoke("RoleExists", roleName);
+            return (boolean)retObjectRoleExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRoleExists != null ? retObjectRoleExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +196,12 @@ public class RoleProvider extends ProviderBase  {
 
     public java.lang.String[] FindUsersInRole(java.lang.String roleName, java.lang.String usernameToMatch) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindUsersInRole = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindUsersInRole", roleName, usernameToMatch);
+            retObjectFindUsersInRole = classInstance.Invoke("FindUsersInRole", roleName, usernameToMatch);
+            JCObject resultingObjects = (JCObject)retObjectFindUsersInRole;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -196,6 +210,8 @@ public class RoleProvider extends ProviderBase  {
 				resultingArray[indexFindUsersInRole] = (java.lang.String)resultingArrayList.get(indexFindUsersInRole);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFindUsersInRole != null ? retObjectFindUsersInRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,12 @@ public class RoleProvider extends ProviderBase  {
 
     public java.lang.String[] GetAllRoles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllRoles = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAllRoles");
+            retObjectGetAllRoles = classInstance.Invoke("GetAllRoles");
+            JCObject resultingObjects = (JCObject)retObjectGetAllRoles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -215,6 +233,8 @@ public class RoleProvider extends ProviderBase  {
 				resultingArray[indexGetAllRoles] = (java.lang.String)resultingArrayList.get(indexGetAllRoles);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetAllRoles != null ? retObjectGetAllRoles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +242,12 @@ public class RoleProvider extends ProviderBase  {
 
     public java.lang.String[] GetRolesForUser(java.lang.String username) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRolesForUser = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRolesForUser", username);
+            retObjectGetRolesForUser = classInstance.Invoke("GetRolesForUser", username);
+            JCObject resultingObjects = (JCObject)retObjectGetRolesForUser;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -234,6 +256,8 @@ public class RoleProvider extends ProviderBase  {
 				resultingArray[indexGetRolesForUser] = (java.lang.String)resultingArrayList.get(indexGetRolesForUser);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetRolesForUser != null ? retObjectGetRolesForUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +265,12 @@ public class RoleProvider extends ProviderBase  {
 
     public java.lang.String[] GetUsersInRole(java.lang.String roleName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUsersInRole = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetUsersInRole", roleName);
+            retObjectGetUsersInRole = classInstance.Invoke("GetUsersInRole", roleName);
+            JCObject resultingObjects = (JCObject)retObjectGetUsersInRole;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -253,6 +279,8 @@ public class RoleProvider extends ProviderBase  {
 				resultingArray[indexGetUsersInRole] = (java.lang.String)resultingArrayList.get(indexGetUsersInRole);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetUsersInRole != null ? retObjectGetUsersInRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +288,7 @@ public class RoleProvider extends ProviderBase  {
 
     public void AddUsersToRoles(java.lang.String[] usernames, java.lang.String[] roleNames) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddUsersToRoles", usernames, roleNames);
         } catch (JCNativeException jcne) {
@@ -270,7 +298,7 @@ public class RoleProvider extends ProviderBase  {
 
     public void AddUsersToRoles(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddUsersToRoles", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -280,7 +308,7 @@ public class RoleProvider extends ProviderBase  {
 
     public void CreateRole(java.lang.String roleName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateRole", roleName);
         } catch (JCNativeException jcne) {
@@ -290,7 +318,7 @@ public class RoleProvider extends ProviderBase  {
 
     public void RemoveUsersFromRoles(java.lang.String[] usernames, java.lang.String[] roleNames) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveUsersFromRoles", usernames, roleNames);
         } catch (JCNativeException jcne) {
@@ -300,7 +328,7 @@ public class RoleProvider extends ProviderBase  {
 
     public void RemoveUsersFromRoles(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveUsersFromRoles", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -314,9 +342,13 @@ public class RoleProvider extends ProviderBase  {
     
     public java.lang.String getApplicationName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationName = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationName");
+            retObjectApplicationName = classInstance.Get("ApplicationName");
+            return (java.lang.String)retObjectApplicationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationName != null ? retObjectApplicationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,7 +356,7 @@ public class RoleProvider extends ProviderBase  {
 
     public void setApplicationName(java.lang.String ApplicationName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationName", ApplicationName);
         } catch (JCNativeException jcne) {

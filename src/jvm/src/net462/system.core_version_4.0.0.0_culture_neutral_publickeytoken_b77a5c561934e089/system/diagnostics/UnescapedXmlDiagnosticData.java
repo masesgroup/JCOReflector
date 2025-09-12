@@ -169,9 +169,13 @@ public class UnescapedXmlDiagnosticData extends NetObject  {
     
     public java.lang.String getUnescapedXml() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnescapedXml = null;
         try {
-            return (java.lang.String)classInstance.Get("UnescapedXml");
+            retObjectUnescapedXml = classInstance.Get("UnescapedXml");
+            return (java.lang.String)retObjectUnescapedXml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUnescapedXml != null ? retObjectUnescapedXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class UnescapedXmlDiagnosticData extends NetObject  {
 
     public void setUnescapedXml(java.lang.String UnescapedXml) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnescapedXml", UnescapedXml);
         } catch (JCNativeException jcne) {

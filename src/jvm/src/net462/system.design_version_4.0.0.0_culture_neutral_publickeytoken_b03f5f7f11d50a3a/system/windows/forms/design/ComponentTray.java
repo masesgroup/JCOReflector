@@ -176,9 +176,13 @@ public class ComponentTray extends ScrollableControl implements system.component
     
     public boolean IsTrayComponent(IComponent comp) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTrayComponent = null;
         try {
-            return (boolean)classInstance.Invoke("IsTrayComponent", comp == null ? null : comp.getJCOInstance());
+            retObjectIsTrayComponent = classInstance.Invoke("IsTrayComponent", comp == null ? null : comp.getJCOInstance());
+            return (boolean)retObjectIsTrayComponent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsTrayComponent != null ? retObjectIsTrayComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +190,14 @@ public class ComponentTray extends ScrollableControl implements system.component
 
     public IComponent GetNextComponent(IComponent component, boolean forward) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextComponent = null;
         try {
-            JCObject objGetNextComponent = (JCObject)classInstance.Invoke("GetNextComponent", component == null ? null : component.getJCOInstance(), forward);
+            retObjectGetNextComponent = classInstance.Invoke("GetNextComponent", component == null ? null : component.getJCOInstance(), forward);
+            JCObject objGetNextComponent = (JCObject)retObjectGetNextComponent;
             return new IComponentImplementation(objGetNextComponent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextComponent != null ? retObjectGetNextComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +205,14 @@ public class ComponentTray extends ScrollableControl implements system.component
 
     public Point GetLocation(IComponent receiver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocation = null;
         try {
-            JCObject objGetLocation = (JCObject)classInstance.Invoke("GetLocation", receiver == null ? null : receiver.getJCOInstance());
+            retObjectGetLocation = classInstance.Invoke("GetLocation", receiver == null ? null : receiver.getJCOInstance());
+            JCObject objGetLocation = (JCObject)retObjectGetLocation;
             return new Point(objGetLocation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocation != null ? retObjectGetLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +220,14 @@ public class ComponentTray extends ScrollableControl implements system.component
 
     public Point GetTrayLocation(IComponent receiver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTrayLocation = null;
         try {
-            JCObject objGetTrayLocation = (JCObject)classInstance.Invoke("GetTrayLocation", receiver == null ? null : receiver.getJCOInstance());
+            retObjectGetTrayLocation = classInstance.Invoke("GetTrayLocation", receiver == null ? null : receiver.getJCOInstance());
+            JCObject objGetTrayLocation = (JCObject)retObjectGetTrayLocation;
             return new Point(objGetTrayLocation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTrayLocation != null ? retObjectGetTrayLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +235,7 @@ public class ComponentTray extends ScrollableControl implements system.component
 
     public void AddComponent(IComponent component) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.security.SecurityException, system.threading.ThreadStateException, system.MemberAccessException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.interopservices.ExternalException, system.RankException, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddComponent", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -229,7 +245,7 @@ public class ComponentTray extends ScrollableControl implements system.component
 
     public void CreateComponentFromTool(ToolboxItem tool) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.NotImplementedException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateComponentFromTool", tool == null ? null : tool.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -239,7 +255,7 @@ public class ComponentTray extends ScrollableControl implements system.component
 
     public void RemoveComponent(IComponent component) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveComponent", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -249,7 +265,7 @@ public class ComponentTray extends ScrollableControl implements system.component
 
     public void SetLocation(IComponent receiver, Point location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetLocation", receiver == null ? null : receiver.getJCOInstance(), location == null ? null : location.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -259,7 +275,7 @@ public class ComponentTray extends ScrollableControl implements system.component
 
     public void SetTrayLocation(IComponent receiver, Point location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetTrayLocation", receiver == null ? null : receiver.getJCOInstance(), location == null ? null : location.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -273,7 +289,7 @@ public class ComponentTray extends ScrollableControl implements system.component
      */
     @Deprecated 
     public boolean CanExtend(NetObject extendee) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExtenderProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExtenderProvider to obtain the full interface.");
     }
 
 
@@ -282,9 +298,13 @@ public class ComponentTray extends ScrollableControl implements system.component
     
     public boolean getAutoArrange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoArrange = null;
         try {
-            return (boolean)classInstance.Get("AutoArrange");
+            retObjectAutoArrange = classInstance.Get("AutoArrange");
+            return (boolean)retObjectAutoArrange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoArrange != null ? retObjectAutoArrange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +312,7 @@ public class ComponentTray extends ScrollableControl implements system.component
 
     public void setAutoArrange(boolean AutoArrange) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.RankException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoArrange", AutoArrange);
         } catch (JCNativeException jcne) {
@@ -302,9 +322,13 @@ public class ComponentTray extends ScrollableControl implements system.component
 
     public boolean getShowLargeIcons() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowLargeIcons = null;
         try {
-            return (boolean)classInstance.Get("ShowLargeIcons");
+            retObjectShowLargeIcons = classInstance.Get("ShowLargeIcons");
+            return (boolean)retObjectShowLargeIcons;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowLargeIcons != null ? retObjectShowLargeIcons.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,7 +336,7 @@ public class ComponentTray extends ScrollableControl implements system.component
 
     public void setShowLargeIcons(boolean ShowLargeIcons) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowLargeIcons", ShowLargeIcons);
         } catch (JCNativeException jcne) {
@@ -322,9 +346,19 @@ public class ComponentTray extends ScrollableControl implements system.component
 
     public int getComponentCount() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComponentCount = null;
         try {
-            return (int)classInstance.Get("ComponentCount");
+            retObjectComponentCount = classInstance.Get("ComponentCount");
+            return (int)retObjectComponentCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectComponentCountNumber = (java.lang.Number)retObjectComponentCount;
+                return retObjectComponentCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectComponentCount != null ? retObjectComponentCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

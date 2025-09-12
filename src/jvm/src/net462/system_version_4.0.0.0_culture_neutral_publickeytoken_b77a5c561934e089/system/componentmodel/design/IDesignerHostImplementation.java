@@ -156,10 +156,14 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
     
     public DesignerTransaction CreateTransaction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateTransaction = null;
         try {
-            JCObject objCreateTransaction = (JCObject)classInstance.Invoke("CreateTransaction");
+            retObjectCreateTransaction = classInstance.Invoke("CreateTransaction");
+            JCObject objCreateTransaction = (JCObject)retObjectCreateTransaction;
             return new DesignerTransaction(objCreateTransaction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTransaction != null ? retObjectCreateTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public DesignerTransaction CreateTransaction(java.lang.String description) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateTransaction = null;
         try {
-            JCObject objCreateTransaction = (JCObject)classInstance.Invoke("CreateTransaction", description);
+            retObjectCreateTransaction = classInstance.Invoke("CreateTransaction", description);
+            JCObject objCreateTransaction = (JCObject)retObjectCreateTransaction;
             return new DesignerTransaction(objCreateTransaction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTransaction != null ? retObjectCreateTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public IDesigner GetDesigner(IComponent component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDesigner = null;
         try {
-            JCObject objGetDesigner = (JCObject)classInstance.Invoke("GetDesigner", component == null ? null : component.getJCOInstance());
+            retObjectGetDesigner = classInstance.Invoke("GetDesigner", component == null ? null : component.getJCOInstance());
+            JCObject objGetDesigner = (JCObject)retObjectGetDesigner;
             return new IDesignerImplementation(objGetDesigner);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDesigner != null ? retObjectGetDesigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +201,14 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public IComponent CreateComponent(NetType componentClass) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateComponent = null;
         try {
-            JCObject objCreateComponent = (JCObject)classInstance.Invoke("CreateComponent", componentClass == null ? null : componentClass.getJCOInstance());
+            retObjectCreateComponent = classInstance.Invoke("CreateComponent", componentClass == null ? null : componentClass.getJCOInstance());
+            JCObject objCreateComponent = (JCObject)retObjectCreateComponent;
             return new IComponentImplementation(objCreateComponent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateComponent != null ? retObjectCreateComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +216,14 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public IComponent CreateComponent(NetType componentClass, java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateComponent = null;
         try {
-            JCObject objCreateComponent = (JCObject)classInstance.Invoke("CreateComponent", componentClass == null ? null : componentClass.getJCOInstance(), name);
+            retObjectCreateComponent = classInstance.Invoke("CreateComponent", componentClass == null ? null : componentClass.getJCOInstance(), name);
+            JCObject objCreateComponent = (JCObject)retObjectCreateComponent;
             return new IComponentImplementation(objCreateComponent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateComponent != null ? retObjectCreateComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +231,14 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public NetObject GetService(NetType serviceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetService = null;
         try {
-            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            retObjectGetService = classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            JCObject objGetService = (JCObject)retObjectGetService;
             return new NetObject(objGetService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetService != null ? retObjectGetService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +246,14 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public NetType GetType(java.lang.String typeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetType = null;
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", typeName);
+            retObjectGetType = classInstance.Invoke("GetType", typeName);
+            JCObject objGetType = (JCObject)retObjectGetType;
             return new NetType(objGetType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetType != null ? retObjectGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +261,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void Activate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Activate");
         } catch (JCNativeException jcne) {
@@ -243,7 +271,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void AddService(NetType serviceType, ServiceCreatorCallback callback) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddService", serviceType == null ? null : serviceType.getJCOInstance(), callback);
         } catch (JCNativeException jcne) {
@@ -253,7 +281,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void AddService(NetType serviceType, ServiceCreatorCallback callback, boolean promote) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddService", serviceType == null ? null : serviceType.getJCOInstance(), callback, promote);
         } catch (JCNativeException jcne) {
@@ -263,7 +291,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void AddService(NetType serviceType, NetObject serviceInstance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddService", serviceType == null ? null : serviceType.getJCOInstance(), serviceInstance == null ? null : serviceInstance.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -273,7 +301,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void AddService(NetType serviceType, NetObject serviceInstance, boolean promote) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddService", serviceType == null ? null : serviceType.getJCOInstance(), serviceInstance == null ? null : serviceInstance.getJCOInstance(), promote);
         } catch (JCNativeException jcne) {
@@ -283,7 +311,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void DestroyComponent(IComponent component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DestroyComponent", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -293,7 +321,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void RemoveService(NetType serviceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveService", serviceType == null ? null : serviceType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -303,7 +331,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void RemoveService(NetType serviceType, boolean promote) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveService", serviceType == null ? null : serviceType.getJCOInstance(), promote);
         } catch (JCNativeException jcne) {
@@ -317,9 +345,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
     
     public boolean getInTransaction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInTransaction = null;
         try {
-            return (boolean)classInstance.Get("InTransaction");
+            retObjectInTransaction = classInstance.Get("InTransaction");
+            return (boolean)retObjectInTransaction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInTransaction != null ? retObjectInTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,9 +359,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public boolean getLoading() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoading = null;
         try {
-            return (boolean)classInstance.Get("Loading");
+            retObjectLoading = classInstance.Get("Loading");
+            return (boolean)retObjectLoading;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLoading != null ? retObjectLoading.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,10 +373,14 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public IComponent getRootComponent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootComponent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootComponent");
+            retObjectRootComponent = classInstance.Get("RootComponent");
+            JCObject val = (JCObject)retObjectRootComponent;
             return new IComponentImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootComponent != null ? retObjectRootComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,10 +388,14 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public IContainer getContainer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Container");
+            retObjectContainer = classInstance.Get("Container");
+            JCObject val = (JCObject)retObjectContainer;
             return new IContainerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContainer != null ? retObjectContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,9 +403,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public java.lang.String getRootComponentClassName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootComponentClassName = null;
         try {
-            return (java.lang.String)classInstance.Get("RootComponentClassName");
+            retObjectRootComponentClassName = classInstance.Get("RootComponentClassName");
+            return (java.lang.String)retObjectRootComponentClassName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRootComponentClassName != null ? retObjectRootComponentClassName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,9 +417,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public java.lang.String getTransactionDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactionDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("TransactionDescription");
+            retObjectTransactionDescription = classInstance.Get("TransactionDescription");
+            return (java.lang.String)retObjectTransactionDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTransactionDescription != null ? retObjectTransactionDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,7 +436,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void addTransactionClosed(DesignerTransactionCloseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TransactionClosed", handler);
         } catch (JCNativeException jcne) {
@@ -394,7 +446,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void removeTransactionClosed(DesignerTransactionCloseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TransactionClosed", handler);
         } catch (JCNativeException jcne) {
@@ -404,7 +456,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void addTransactionClosing(DesignerTransactionCloseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TransactionClosing", handler);
         } catch (JCNativeException jcne) {
@@ -414,7 +466,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void removeTransactionClosing(DesignerTransactionCloseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TransactionClosing", handler);
         } catch (JCNativeException jcne) {
@@ -424,7 +476,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void addActivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Activated", handler);
         } catch (JCNativeException jcne) {
@@ -434,7 +486,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void removeActivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Activated", handler);
         } catch (JCNativeException jcne) {
@@ -444,7 +496,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void addDeactivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Deactivated", handler);
         } catch (JCNativeException jcne) {
@@ -454,7 +506,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void removeDeactivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Deactivated", handler);
         } catch (JCNativeException jcne) {
@@ -464,7 +516,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void addLoadComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LoadComplete", handler);
         } catch (JCNativeException jcne) {
@@ -474,7 +526,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void removeLoadComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LoadComplete", handler);
         } catch (JCNativeException jcne) {
@@ -484,7 +536,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void addTransactionOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TransactionOpened", handler);
         } catch (JCNativeException jcne) {
@@ -494,7 +546,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void removeTransactionOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TransactionOpened", handler);
         } catch (JCNativeException jcne) {
@@ -504,7 +556,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void addTransactionOpening(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TransactionOpening", handler);
         } catch (JCNativeException jcne) {
@@ -514,7 +566,7 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     public void removeTransactionOpening(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TransactionOpening", handler);
         } catch (JCNativeException jcne) {

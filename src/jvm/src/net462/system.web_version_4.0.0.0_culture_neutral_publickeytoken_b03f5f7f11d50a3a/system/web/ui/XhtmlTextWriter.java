@@ -178,9 +178,13 @@ public class XhtmlTextWriter extends HtmlTextWriter  {
     
     public boolean IsValidFormAttribute(java.lang.String attributeName) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValidFormAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("IsValidFormAttribute", attributeName);
+            retObjectIsValidFormAttribute = classInstance.Invoke("IsValidFormAttribute", attributeName);
+            return (boolean)retObjectIsValidFormAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValidFormAttribute != null ? retObjectIsValidFormAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class XhtmlTextWriter extends HtmlTextWriter  {
 
     public void AddRecognizedAttribute(java.lang.String elementName, java.lang.String attributeName) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRecognizedAttribute", elementName, attributeName);
         } catch (JCNativeException jcne) {
@@ -198,7 +202,7 @@ public class XhtmlTextWriter extends HtmlTextWriter  {
 
     public void RemoveRecognizedAttribute(java.lang.String elementName, java.lang.String attributeName) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveRecognizedAttribute", elementName, attributeName);
         } catch (JCNativeException jcne) {
@@ -208,7 +212,7 @@ public class XhtmlTextWriter extends HtmlTextWriter  {
 
     public void SetDocType(XhtmlMobileDocType docType) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDocType", docType == null ? null : docType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -218,7 +222,7 @@ public class XhtmlTextWriter extends HtmlTextWriter  {
 
     public void WriteBreak() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBreak");
         } catch (JCNativeException jcne) {

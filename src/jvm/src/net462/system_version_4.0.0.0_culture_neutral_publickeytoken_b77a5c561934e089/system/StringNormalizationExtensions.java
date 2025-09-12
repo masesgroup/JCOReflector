@@ -154,9 +154,13 @@ public class StringNormalizationExtensions extends NetObject  {
     
     public static boolean IsNormalized(java.lang.String value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsNormalized = null;
         try {
-            return (boolean)classType.Invoke("IsNormalized", value);
+            retObjectIsNormalized = classType.Invoke("IsNormalized", value);
+            return (boolean)retObjectIsNormalized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNormalized != null ? retObjectIsNormalized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,13 @@ public class StringNormalizationExtensions extends NetObject  {
 
     public static boolean IsNormalized(java.lang.String value, NormalizationForm normalizationForm) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsNormalized = null;
         try {
-            return (boolean)classType.Invoke("IsNormalized", value, normalizationForm == null ? null : normalizationForm.getJCOInstance());
+            retObjectIsNormalized = classType.Invoke("IsNormalized", value, normalizationForm == null ? null : normalizationForm.getJCOInstance());
+            return (boolean)retObjectIsNormalized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNormalized != null ? retObjectIsNormalized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +182,13 @@ public class StringNormalizationExtensions extends NetObject  {
 
     public static java.lang.String Normalize(java.lang.String value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNormalize = null;
         try {
-            return (java.lang.String)classType.Invoke("Normalize", value);
+            retObjectNormalize = classType.Invoke("Normalize", value);
+            return (java.lang.String)retObjectNormalize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectNormalize != null ? retObjectNormalize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +196,13 @@ public class StringNormalizationExtensions extends NetObject  {
 
     public static java.lang.String Normalize(java.lang.String value, NormalizationForm normalizationForm) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNormalize = null;
         try {
-            return (java.lang.String)classType.Invoke("Normalize", value, normalizationForm == null ? null : normalizationForm.getJCOInstance());
+            retObjectNormalize = classType.Invoke("Normalize", value, normalizationForm == null ? null : normalizationForm.getJCOInstance());
+            return (java.lang.String)retObjectNormalize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectNormalize != null ? retObjectNormalize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

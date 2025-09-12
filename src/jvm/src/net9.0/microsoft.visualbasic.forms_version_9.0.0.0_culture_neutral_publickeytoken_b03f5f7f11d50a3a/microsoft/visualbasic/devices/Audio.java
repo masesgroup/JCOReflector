@@ -164,7 +164,7 @@ public class Audio extends NetObject  {
     
     public void Play(byte[] data, AudioPlayMode playMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.UriFormatException, system.io.FileNotFoundException, system.threading.AbandonedMutexException, system.TimeoutException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Play", data, playMode == null ? null : playMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -174,7 +174,7 @@ public class Audio extends NetObject  {
 
     public void Play(JCORefOut dupParam0, AudioPlayMode dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.UriFormatException, system.io.FileNotFoundException, system.threading.AbandonedMutexException, system.TimeoutException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Play", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -184,7 +184,7 @@ public class Audio extends NetObject  {
 
     public void Play(Stream stream, AudioPlayMode playMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.threading.WaitHandleCannotBeOpenedException, system.UriFormatException, system.io.FileNotFoundException, system.threading.AbandonedMutexException, system.AggregateException, system.TimeoutException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Play", stream == null ? null : stream.getJCOInstance(), playMode == null ? null : playMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -194,7 +194,7 @@ public class Audio extends NetObject  {
 
     public void Play(java.lang.String location, AudioPlayMode playMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.AggregateException, system.diagnostics.UnreachableException, system.UriFormatException, system.io.FileNotFoundException, system.threading.AbandonedMutexException, system.TimeoutException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Play", location, playMode == null ? null : playMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,7 +204,7 @@ public class Audio extends NetObject  {
 
     public void Play(java.lang.String location) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.ArgumentNullException, system.threading.WaitHandleCannotBeOpenedException, system.ObjectDisposedException, system.AggregateException, system.UriFormatException, system.io.FileNotFoundException, system.threading.AbandonedMutexException, system.TimeoutException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Play", location);
         } catch (JCNativeException jcne) {
@@ -214,7 +214,7 @@ public class Audio extends NetObject  {
 
     public void PlaySystemSound(SystemSound systemSound) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PlaySystemSound", systemSound == null ? null : systemSound.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -224,7 +224,7 @@ public class Audio extends NetObject  {
 
     public void Stop() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Stop");
         } catch (JCNativeException jcne) {

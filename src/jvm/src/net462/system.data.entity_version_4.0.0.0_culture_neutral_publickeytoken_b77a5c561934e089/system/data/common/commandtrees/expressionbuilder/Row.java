@@ -156,10 +156,14 @@ public class Row extends NetObject  {
     
     public DbNewInstanceExpression ToExpression() throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToExpression = null;
         try {
-            JCObject objToExpression = (JCObject)classInstance.Invoke("ToExpression");
+            retObjectToExpression = classInstance.Invoke("ToExpression");
+            JCObject objToExpression = (JCObject)retObjectToExpression;
             return new DbNewInstanceExpression(objToExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToExpression != null ? retObjectToExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

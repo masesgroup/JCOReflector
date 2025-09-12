@@ -162,9 +162,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
     
     public boolean getIsInitiator() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInitiator = null;
         try {
-            return (boolean)classInstance.Get("IsInitiator");
+            retObjectIsInitiator = classInstance.Get("IsInitiator");
+            return (boolean)retObjectIsInitiator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInitiator != null ? retObjectIsInitiator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public SecurityTokenVersion getMessageSecurityVersion() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageSecurityVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageSecurityVersion");
+            retObjectMessageSecurityVersion = classInstance.Get("MessageSecurityVersion");
+            JCObject val = (JCObject)retObjectMessageSecurityVersion;
             return new SecurityTokenVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageSecurityVersion != null ? retObjectMessageSecurityVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +191,7 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public void setMessageSecurityVersion(SecurityTokenVersion MessageSecurityVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageSecurityVersion", MessageSecurityVersion == null ? null : MessageSecurityVersion.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -193,10 +201,14 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public system.servicemodel.channels.Binding getIssuerBinding() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuerBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IssuerBinding");
+            retObjectIssuerBinding = classInstance.Get("IssuerBinding");
+            JCObject val = (JCObject)retObjectIssuerBinding;
             return new system.servicemodel.channels.Binding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuerBinding != null ? retObjectIssuerBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +216,7 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public void setIssuerBinding(system.servicemodel.channels.Binding IssuerBinding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuerBinding", IssuerBinding == null ? null : IssuerBinding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -214,10 +226,14 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public SecurityBindingElement getSecureConversationSecurityBindingElement() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecureConversationSecurityBindingElement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecureConversationSecurityBindingElement");
+            retObjectSecureConversationSecurityBindingElement = classInstance.Get("SecureConversationSecurityBindingElement");
+            JCObject val = (JCObject)retObjectSecureConversationSecurityBindingElement;
             return new SecurityBindingElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecureConversationSecurityBindingElement != null ? retObjectSecureConversationSecurityBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +241,7 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public void setSecureConversationSecurityBindingElement(SecurityBindingElement SecureConversationSecurityBindingElement) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecureConversationSecurityBindingElement", SecureConversationSecurityBindingElement == null ? null : SecureConversationSecurityBindingElement.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -235,10 +251,14 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public SecurityBindingElement getSecurityBindingElement() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityBindingElement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityBindingElement");
+            retObjectSecurityBindingElement = classInstance.Get("SecurityBindingElement");
+            JCObject val = (JCObject)retObjectSecurityBindingElement;
             return new SecurityBindingElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityBindingElement != null ? retObjectSecurityBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +266,7 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public void setSecurityBindingElement(SecurityBindingElement SecurityBindingElement) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecurityBindingElement", SecurityBindingElement == null ? null : SecurityBindingElement.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -256,10 +276,14 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public EndpointAddress getIssuerAddress() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuerAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IssuerAddress");
+            retObjectIssuerAddress = classInstance.Get("IssuerAddress");
+            JCObject val = (JCObject)retObjectIssuerAddress;
             return new EndpointAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuerAddress != null ? retObjectIssuerAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +291,7 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public void setIssuerAddress(EndpointAddress IssuerAddress) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuerAddress", IssuerAddress == null ? null : IssuerAddress.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -277,10 +301,14 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public SecurityAlgorithmSuite getSecurityAlgorithmSuite() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityAlgorithmSuite = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityAlgorithmSuite");
+            retObjectSecurityAlgorithmSuite = classInstance.Get("SecurityAlgorithmSuite");
+            JCObject val = (JCObject)retObjectSecurityAlgorithmSuite;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityAlgorithmSuite != null ? retObjectSecurityAlgorithmSuite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +316,7 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public void setSecurityAlgorithmSuite(SecurityAlgorithmSuite SecurityAlgorithmSuite) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecurityAlgorithmSuite", SecurityAlgorithmSuite == null ? null : SecurityAlgorithmSuite.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -298,9 +326,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getAuditLogLocationProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAuditLogLocationProperty = null;
         try {
-            return (java.lang.String)classType.Get("AuditLogLocationProperty");
+            retObjectAuditLogLocationProperty = classType.Get("AuditLogLocationProperty");
+            return (java.lang.String)retObjectAuditLogLocationProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAuditLogLocationProperty != null ? retObjectAuditLogLocationProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,9 +340,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getChannelParametersCollectionProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectChannelParametersCollectionProperty = null;
         try {
-            return (java.lang.String)classType.Get("ChannelParametersCollectionProperty");
+            retObjectChannelParametersCollectionProperty = classType.Get("ChannelParametersCollectionProperty");
+            return (java.lang.String)retObjectChannelParametersCollectionProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectChannelParametersCollectionProperty != null ? retObjectChannelParametersCollectionProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,9 +354,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getDuplexClientLocalAddressProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDuplexClientLocalAddressProperty = null;
         try {
-            return (java.lang.String)classType.Get("DuplexClientLocalAddressProperty");
+            retObjectDuplexClientLocalAddressProperty = classType.Get("DuplexClientLocalAddressProperty");
+            return (java.lang.String)retObjectDuplexClientLocalAddressProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDuplexClientLocalAddressProperty != null ? retObjectDuplexClientLocalAddressProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,9 +368,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getEndpointFilterTableProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEndpointFilterTableProperty = null;
         try {
-            return (java.lang.String)classType.Get("EndpointFilterTableProperty");
+            retObjectEndpointFilterTableProperty = classType.Get("EndpointFilterTableProperty");
+            return (java.lang.String)retObjectEndpointFilterTableProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEndpointFilterTableProperty != null ? retObjectEndpointFilterTableProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,9 +382,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getExtendedProtectionPolicy() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExtendedProtectionPolicy = null;
         try {
-            return (java.lang.String)classType.Get("ExtendedProtectionPolicy");
+            retObjectExtendedProtectionPolicy = classType.Get("ExtendedProtectionPolicy");
+            return (java.lang.String)retObjectExtendedProtectionPolicy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExtendedProtectionPolicy != null ? retObjectExtendedProtectionPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,9 +396,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getHttpAuthenticationSchemeProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHttpAuthenticationSchemeProperty = null;
         try {
-            return (java.lang.String)classType.Get("HttpAuthenticationSchemeProperty");
+            retObjectHttpAuthenticationSchemeProperty = classType.Get("HttpAuthenticationSchemeProperty");
+            return (java.lang.String)retObjectHttpAuthenticationSchemeProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHttpAuthenticationSchemeProperty != null ? retObjectHttpAuthenticationSchemeProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,9 +410,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getIsInitiatorProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsInitiatorProperty = null;
         try {
-            return (java.lang.String)classType.Get("IsInitiatorProperty");
+            retObjectIsInitiatorProperty = classType.Get("IsInitiatorProperty");
+            return (java.lang.String)retObjectIsInitiatorProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIsInitiatorProperty != null ? retObjectIsInitiatorProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -368,9 +424,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getIsOutOfBandTokenProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsOutOfBandTokenProperty = null;
         try {
-            return (java.lang.String)classType.Get("IsOutOfBandTokenProperty");
+            retObjectIsOutOfBandTokenProperty = classType.Get("IsOutOfBandTokenProperty");
+            return (java.lang.String)retObjectIsOutOfBandTokenProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIsOutOfBandTokenProperty != null ? retObjectIsOutOfBandTokenProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,9 +438,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getIssuedSecurityTokenParametersProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIssuedSecurityTokenParametersProperty = null;
         try {
-            return (java.lang.String)classType.Get("IssuedSecurityTokenParametersProperty");
+            retObjectIssuedSecurityTokenParametersProperty = classType.Get("IssuedSecurityTokenParametersProperty");
+            return (java.lang.String)retObjectIssuedSecurityTokenParametersProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIssuedSecurityTokenParametersProperty != null ? retObjectIssuedSecurityTokenParametersProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -388,9 +452,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getIssuerAddressProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIssuerAddressProperty = null;
         try {
-            return (java.lang.String)classType.Get("IssuerAddressProperty");
+            retObjectIssuerAddressProperty = classType.Get("IssuerAddressProperty");
+            return (java.lang.String)retObjectIssuerAddressProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIssuerAddressProperty != null ? retObjectIssuerAddressProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,9 +466,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getIssuerBindingContextProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIssuerBindingContextProperty = null;
         try {
-            return (java.lang.String)classType.Get("IssuerBindingContextProperty");
+            retObjectIssuerBindingContextProperty = classType.Get("IssuerBindingContextProperty");
+            return (java.lang.String)retObjectIssuerBindingContextProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIssuerBindingContextProperty != null ? retObjectIssuerBindingContextProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,9 +480,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getIssuerBindingProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIssuerBindingProperty = null;
         try {
-            return (java.lang.String)classType.Get("IssuerBindingProperty");
+            retObjectIssuerBindingProperty = classType.Get("IssuerBindingProperty");
+            return (java.lang.String)retObjectIssuerBindingProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIssuerBindingProperty != null ? retObjectIssuerBindingProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,9 +494,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getListenUriProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectListenUriProperty = null;
         try {
-            return (java.lang.String)classType.Get("ListenUriProperty");
+            retObjectListenUriProperty = classType.Get("ListenUriProperty");
+            return (java.lang.String)retObjectListenUriProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectListenUriProperty != null ? retObjectListenUriProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,9 +508,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getMessageAuthenticationAuditLevelProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMessageAuthenticationAuditLevelProperty = null;
         try {
-            return (java.lang.String)classType.Get("MessageAuthenticationAuditLevelProperty");
+            retObjectMessageAuthenticationAuditLevelProperty = classType.Get("MessageAuthenticationAuditLevelProperty");
+            return (java.lang.String)retObjectMessageAuthenticationAuditLevelProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessageAuthenticationAuditLevelProperty != null ? retObjectMessageAuthenticationAuditLevelProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,9 +522,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getMessageDirectionProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMessageDirectionProperty = null;
         try {
-            return (java.lang.String)classType.Get("MessageDirectionProperty");
+            retObjectMessageDirectionProperty = classType.Get("MessageDirectionProperty");
+            return (java.lang.String)retObjectMessageDirectionProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessageDirectionProperty != null ? retObjectMessageDirectionProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -448,9 +536,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getMessageSecurityVersionProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMessageSecurityVersionProperty = null;
         try {
-            return (java.lang.String)classType.Get("MessageSecurityVersionProperty");
+            retObjectMessageSecurityVersionProperty = classType.Get("MessageSecurityVersionProperty");
+            return (java.lang.String)retObjectMessageSecurityVersionProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessageSecurityVersionProperty != null ? retObjectMessageSecurityVersionProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -458,9 +550,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getPreferSslCertificateAuthenticatorProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPreferSslCertificateAuthenticatorProperty = null;
         try {
-            return (java.lang.String)classType.Get("PreferSslCertificateAuthenticatorProperty");
+            retObjectPreferSslCertificateAuthenticatorProperty = classType.Get("PreferSslCertificateAuthenticatorProperty");
+            return (java.lang.String)retObjectPreferSslCertificateAuthenticatorProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPreferSslCertificateAuthenticatorProperty != null ? retObjectPreferSslCertificateAuthenticatorProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -468,9 +564,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getPrivacyNoticeUriProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPrivacyNoticeUriProperty = null;
         try {
-            return (java.lang.String)classType.Get("PrivacyNoticeUriProperty");
+            retObjectPrivacyNoticeUriProperty = classType.Get("PrivacyNoticeUriProperty");
+            return (java.lang.String)retObjectPrivacyNoticeUriProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPrivacyNoticeUriProperty != null ? retObjectPrivacyNoticeUriProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -478,9 +578,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getPrivacyNoticeVersionProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPrivacyNoticeVersionProperty = null;
         try {
-            return (java.lang.String)classType.Get("PrivacyNoticeVersionProperty");
+            retObjectPrivacyNoticeVersionProperty = classType.Get("PrivacyNoticeVersionProperty");
+            return (java.lang.String)retObjectPrivacyNoticeVersionProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPrivacyNoticeVersionProperty != null ? retObjectPrivacyNoticeVersionProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -488,9 +592,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getSecureConversationSecurityBindingElementProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSecureConversationSecurityBindingElementProperty = null;
         try {
-            return (java.lang.String)classType.Get("SecureConversationSecurityBindingElementProperty");
+            retObjectSecureConversationSecurityBindingElementProperty = classType.Get("SecureConversationSecurityBindingElementProperty");
+            return (java.lang.String)retObjectSecureConversationSecurityBindingElementProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSecureConversationSecurityBindingElementProperty != null ? retObjectSecureConversationSecurityBindingElementProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -498,9 +606,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getSecurityAlgorithmSuiteProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSecurityAlgorithmSuiteProperty = null;
         try {
-            return (java.lang.String)classType.Get("SecurityAlgorithmSuiteProperty");
+            retObjectSecurityAlgorithmSuiteProperty = classType.Get("SecurityAlgorithmSuiteProperty");
+            return (java.lang.String)retObjectSecurityAlgorithmSuiteProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSecurityAlgorithmSuiteProperty != null ? retObjectSecurityAlgorithmSuiteProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -508,9 +620,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getSecurityBindingElementProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSecurityBindingElementProperty = null;
         try {
-            return (java.lang.String)classType.Get("SecurityBindingElementProperty");
+            retObjectSecurityBindingElementProperty = classType.Get("SecurityBindingElementProperty");
+            return (java.lang.String)retObjectSecurityBindingElementProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSecurityBindingElementProperty != null ? retObjectSecurityBindingElementProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -518,9 +634,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getSupportingTokenAttachmentModeProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSupportingTokenAttachmentModeProperty = null;
         try {
-            return (java.lang.String)classType.Get("SupportingTokenAttachmentModeProperty");
+            retObjectSupportingTokenAttachmentModeProperty = classType.Get("SupportingTokenAttachmentModeProperty");
+            return (java.lang.String)retObjectSupportingTokenAttachmentModeProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSupportingTokenAttachmentModeProperty != null ? retObjectSupportingTokenAttachmentModeProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -528,9 +648,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getSupportSecurityContextCancellationProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSupportSecurityContextCancellationProperty = null;
         try {
-            return (java.lang.String)classType.Get("SupportSecurityContextCancellationProperty");
+            retObjectSupportSecurityContextCancellationProperty = classType.Get("SupportSecurityContextCancellationProperty");
+            return (java.lang.String)retObjectSupportSecurityContextCancellationProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSupportSecurityContextCancellationProperty != null ? retObjectSupportSecurityContextCancellationProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,9 +662,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getSuppressAuditFailureProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSuppressAuditFailureProperty = null;
         try {
-            return (java.lang.String)classType.Get("SuppressAuditFailureProperty");
+            retObjectSuppressAuditFailureProperty = classType.Get("SuppressAuditFailureProperty");
+            return (java.lang.String)retObjectSuppressAuditFailureProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSuppressAuditFailureProperty != null ? retObjectSuppressAuditFailureProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -548,9 +676,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getTargetAddressProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTargetAddressProperty = null;
         try {
-            return (java.lang.String)classType.Get("TargetAddressProperty");
+            retObjectTargetAddressProperty = classType.Get("TargetAddressProperty");
+            return (java.lang.String)retObjectTargetAddressProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetAddressProperty != null ? retObjectTargetAddressProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -558,9 +690,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public java.lang.String getTransportScheme() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransportScheme = null;
         try {
-            return (java.lang.String)classInstance.Get("TransportScheme");
+            retObjectTransportScheme = classInstance.Get("TransportScheme");
+            return (java.lang.String)retObjectTransportScheme;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTransportScheme != null ? retObjectTransportScheme.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -568,7 +704,7 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public void setTransportScheme(java.lang.String TransportScheme) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransportScheme", TransportScheme);
         } catch (JCNativeException jcne) {
@@ -578,9 +714,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getTransportSchemeProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTransportSchemeProperty = null;
         try {
-            return (java.lang.String)classType.Get("TransportSchemeProperty");
+            retObjectTransportSchemeProperty = classType.Get("TransportSchemeProperty");
+            return (java.lang.String)retObjectTransportSchemeProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTransportSchemeProperty != null ? retObjectTransportSchemeProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -588,9 +728,13 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
 
     public static java.lang.String getViaProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectViaProperty = null;
         try {
-            return (java.lang.String)classType.Get("ViaProperty");
+            retObjectViaProperty = classType.Get("ViaProperty");
+            return (java.lang.String)retObjectViaProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectViaProperty != null ? retObjectViaProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

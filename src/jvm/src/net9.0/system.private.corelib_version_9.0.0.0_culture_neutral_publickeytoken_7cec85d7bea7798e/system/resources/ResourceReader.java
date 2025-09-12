@@ -176,7 +176,7 @@ public class ResourceReader extends NetObjectEnumerable implements AutoCloseable
     
     public void Close() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -186,7 +186,7 @@ public class ResourceReader extends NetObjectEnumerable implements AutoCloseable
 
     public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -196,7 +196,7 @@ public class ResourceReader extends NetObjectEnumerable implements AutoCloseable
 
     public void GetResourceData(java.lang.String resourceName, JCORefOut resourceType, JCORefOut resourceData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.BadImageFormatException, system.io.IOException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetResourceData", resourceName, resourceType.getJCRefOut(), resourceData.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -207,7 +207,7 @@ public class ResourceReader extends NetObjectEnumerable implements AutoCloseable
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }

@@ -145,10 +145,14 @@ public class IContributeEnvoySinkImplementation extends NetObject implements ICo
     
     public IMessageSink GetEnvoySink(MarshalByRefObject obj, IMessageSink nextSink) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEnvoySink = null;
         try {
-            JCObject objGetEnvoySink = (JCObject)classInstance.Invoke("GetEnvoySink", obj == null ? null : obj.getJCOInstance(), nextSink == null ? null : nextSink.getJCOInstance());
+            retObjectGetEnvoySink = classInstance.Invoke("GetEnvoySink", obj == null ? null : obj.getJCOInstance(), nextSink == null ? null : nextSink.getJCOInstance());
+            JCObject objGetEnvoySink = (JCObject)retObjectGetEnvoySink;
             return new IMessageSinkImplementation(objGetEnvoySink);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEnvoySink != null ? retObjectGetEnvoySink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -144,10 +144,14 @@ public class IApplicationResourceStreamResolverImplementation extends NetObject 
     
     public Stream GetApplicationResourceStream(Uri relativeUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetApplicationResourceStream = null;
         try {
-            JCObject objGetApplicationResourceStream = (JCObject)classInstance.Invoke("GetApplicationResourceStream", relativeUri == null ? null : relativeUri.getJCOInstance());
+            retObjectGetApplicationResourceStream = classInstance.Invoke("GetApplicationResourceStream", relativeUri == null ? null : relativeUri.getJCOInstance());
+            JCObject objGetApplicationResourceStream = (JCObject)retObjectGetApplicationResourceStream;
             return new Stream(objGetApplicationResourceStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetApplicationResourceStream != null ? retObjectGetApplicationResourceStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

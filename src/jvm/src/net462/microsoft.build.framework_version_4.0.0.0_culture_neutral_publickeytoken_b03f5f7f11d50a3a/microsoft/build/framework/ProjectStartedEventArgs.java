@@ -202,9 +202,19 @@ public class ProjectStartedEventArgs extends BuildStatusEventArgs  {
     
     public int getProjectId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProjectId = null;
         try {
-            return (int)classInstance.Get("ProjectId");
+            retObjectProjectId = classInstance.Get("ProjectId");
+            return (int)retObjectProjectId;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectProjectIdNumber = (java.lang.Number)retObjectProjectId;
+                return retObjectProjectIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectProjectId != null ? retObjectProjectId.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +222,14 @@ public class ProjectStartedEventArgs extends BuildStatusEventArgs  {
 
     public BuildEventContext getParentProjectBuildEventContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParentProjectBuildEventContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParentProjectBuildEventContext");
+            retObjectParentProjectBuildEventContext = classInstance.Get("ParentProjectBuildEventContext");
+            JCObject val = (JCObject)retObjectParentProjectBuildEventContext;
             return new BuildEventContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParentProjectBuildEventContext != null ? retObjectParentProjectBuildEventContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +237,14 @@ public class ProjectStartedEventArgs extends BuildStatusEventArgs  {
 
     public IEnumerable getItems() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItems = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Items");
+            retObjectItems = classInstance.Get("Items");
+            JCObject val = (JCObject)retObjectItems;
             return new IEnumerableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItems != null ? retObjectItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +252,14 @@ public class ProjectStartedEventArgs extends BuildStatusEventArgs  {
 
     public IEnumerable getProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject val = (JCObject)retObjectProperties;
             return new IEnumerableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,9 +267,13 @@ public class ProjectStartedEventArgs extends BuildStatusEventArgs  {
 
     public java.lang.String getProjectFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProjectFile = null;
         try {
-            return (java.lang.String)classInstance.Get("ProjectFile");
+            retObjectProjectFile = classInstance.Get("ProjectFile");
+            return (java.lang.String)retObjectProjectFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProjectFile != null ? retObjectProjectFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,9 +281,13 @@ public class ProjectStartedEventArgs extends BuildStatusEventArgs  {
 
     public java.lang.String getTargetNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetNames = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetNames");
+            retObjectTargetNames = classInstance.Get("TargetNames");
+            return (java.lang.String)retObjectTargetNames;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetNames != null ? retObjectTargetNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,9 +295,13 @@ public class ProjectStartedEventArgs extends BuildStatusEventArgs  {
 
     public java.lang.String getToolsVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolsVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("ToolsVersion");
+            retObjectToolsVersion = classInstance.Get("ToolsVersion");
+            return (java.lang.String)retObjectToolsVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectToolsVersion != null ? retObjectToolsVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +309,7 @@ public class ProjectStartedEventArgs extends BuildStatusEventArgs  {
 
     public void setToolsVersion(java.lang.String ToolsVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ToolsVersion", ToolsVersion);
         } catch (JCNativeException jcne) {

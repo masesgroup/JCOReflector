@@ -155,7 +155,7 @@ public class ObjectFlowControl extends NetObject  {
     
     public static void CheckForSyncLockOnValueType(NetObject Expression) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CheckForSyncLockOnValueType", Expression == null ? null : Expression.getJCOInstance());
         } catch (JCNativeException jcne) {

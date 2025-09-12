@@ -177,9 +177,13 @@ public class X509ThumbprintKeyIdentifierClause extends BinaryKeyIdentifierClause
     
     public boolean Matches(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", certificate == null ? null : certificate.getJCOInstance());
+            retObjectMatches = classInstance.Invoke("Matches", certificate == null ? null : certificate.getJCOInstance());
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +191,12 @@ public class X509ThumbprintKeyIdentifierClause extends BinaryKeyIdentifierClause
 
     public byte[] GetX509Thumbprint() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetX509Thumbprint = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetX509Thumbprint");
+            retObjectGetX509Thumbprint = classInstance.Invoke("GetX509Thumbprint");
+            JCObject resultingObjects = (JCObject)retObjectGetX509Thumbprint;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -199,6 +205,8 @@ public class X509ThumbprintKeyIdentifierClause extends BinaryKeyIdentifierClause
 				resultingArray[indexGetX509Thumbprint] = (byte)resultingArrayList.get(indexGetX509Thumbprint);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetX509Thumbprint != null ? retObjectGetX509Thumbprint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

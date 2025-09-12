@@ -150,9 +150,13 @@ public class IRuleExpressionImplementation extends NetObject implements IRuleExp
     
     public boolean Match(CodeExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatch = null;
         try {
-            return (boolean)classInstance.Invoke("Match", expression == null ? null : expression.getJCOInstance());
+            retObjectMatch = classInstance.Invoke("Match", expression == null ? null : expression.getJCOInstance());
+            return (boolean)retObjectMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatch != null ? retObjectMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,10 +164,14 @@ public class IRuleExpressionImplementation extends NetObject implements IRuleExp
 
     public CodeExpression Clone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new CodeExpression(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +179,14 @@ public class IRuleExpressionImplementation extends NetObject implements IRuleExp
 
     public RuleExpressionInfo Validate(RuleValidation validation, boolean isWritten) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidate = null;
         try {
-            JCObject objValidate = (JCObject)classInstance.Invoke("Validate", validation == null ? null : validation.getJCOInstance(), isWritten);
+            retObjectValidate = classInstance.Invoke("Validate", validation == null ? null : validation.getJCOInstance(), isWritten);
+            JCObject objValidate = (JCObject)retObjectValidate;
             return new RuleExpressionInfo(objValidate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +194,14 @@ public class IRuleExpressionImplementation extends NetObject implements IRuleExp
 
     public RuleExpressionResult Evaluate(RuleExecution execution) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluate = null;
         try {
-            JCObject objEvaluate = (JCObject)classInstance.Invoke("Evaluate", execution == null ? null : execution.getJCOInstance());
+            retObjectEvaluate = classInstance.Invoke("Evaluate", execution == null ? null : execution.getJCOInstance());
+            JCObject objEvaluate = (JCObject)retObjectEvaluate;
             return new RuleExpressionResult(objEvaluate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvaluate != null ? retObjectEvaluate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +209,7 @@ public class IRuleExpressionImplementation extends NetObject implements IRuleExp
 
     public void AnalyzeUsage(RuleAnalysis analysis, boolean isRead, boolean isWritten, RulePathQualifier qualifier) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AnalyzeUsage", analysis == null ? null : analysis.getJCOInstance(), isRead, isWritten, qualifier == null ? null : qualifier.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,7 +219,7 @@ public class IRuleExpressionImplementation extends NetObject implements IRuleExp
 
     public void Decompile(StringBuilder stringBuilder, CodeExpression parentExpression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Decompile", stringBuilder == null ? null : stringBuilder.getJCOInstance(), parentExpression == null ? null : parentExpression.getJCOInstance());
         } catch (JCNativeException jcne) {

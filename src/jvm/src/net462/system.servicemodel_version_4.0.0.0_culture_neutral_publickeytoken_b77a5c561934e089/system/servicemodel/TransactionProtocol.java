@@ -158,10 +158,14 @@ public class TransactionProtocol extends NetObject  {
     
     public static TransactionProtocol getDefault() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            retObjectDefault = classType.Get("Default");
+            JCObject val = (JCObject)retObjectDefault;
             return new TransactionProtocol(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class TransactionProtocol extends NetObject  {
 
     public static TransactionProtocol getOleTransactions() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOleTransactions = null;
         try {
-            JCObject val = (JCObject)classType.Get("OleTransactions");
+            retObjectOleTransactions = classType.Get("OleTransactions");
+            JCObject val = (JCObject)retObjectOleTransactions;
             return new TransactionProtocol(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOleTransactions != null ? retObjectOleTransactions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class TransactionProtocol extends NetObject  {
 
     public static TransactionProtocol getWSAtomicTransaction11() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWSAtomicTransaction11 = null;
         try {
-            JCObject val = (JCObject)classType.Get("WSAtomicTransaction11");
+            retObjectWSAtomicTransaction11 = classType.Get("WSAtomicTransaction11");
+            JCObject val = (JCObject)retObjectWSAtomicTransaction11;
             return new TransactionProtocol(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSAtomicTransaction11 != null ? retObjectWSAtomicTransaction11.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class TransactionProtocol extends NetObject  {
 
     public static TransactionProtocol getWSAtomicTransactionOctober2004() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWSAtomicTransactionOctober2004 = null;
         try {
-            JCObject val = (JCObject)classType.Get("WSAtomicTransactionOctober2004");
+            retObjectWSAtomicTransactionOctober2004 = classType.Get("WSAtomicTransactionOctober2004");
+            JCObject val = (JCObject)retObjectWSAtomicTransactionOctober2004;
             return new TransactionProtocol(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSAtomicTransactionOctober2004 != null ? retObjectWSAtomicTransactionOctober2004.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

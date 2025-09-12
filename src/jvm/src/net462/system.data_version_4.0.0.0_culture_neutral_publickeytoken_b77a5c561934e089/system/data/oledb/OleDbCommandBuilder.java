@@ -175,10 +175,14 @@ public class OleDbCommandBuilder extends DbCommandBuilder  {
     
     public OleDbCommand GetDeleteCommandNewOleDbCommandBuilder() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDeleteCommand = null;
         try {
-            JCObject objGetDeleteCommand = (JCObject)classInstance.Invoke("GetDeleteCommand");
+            retObjectGetDeleteCommand = classInstance.Invoke("GetDeleteCommand");
+            JCObject objGetDeleteCommand = (JCObject)retObjectGetDeleteCommand;
             return new OleDbCommand(objGetDeleteCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDeleteCommand != null ? retObjectGetDeleteCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +190,14 @@ public class OleDbCommandBuilder extends DbCommandBuilder  {
 
     public OleDbCommand GetDeleteCommandNewOleDbCommandBuilder(boolean useColumnsForParameterNames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDeleteCommand = null;
         try {
-            JCObject objGetDeleteCommand = (JCObject)classInstance.Invoke("GetDeleteCommand", useColumnsForParameterNames);
+            retObjectGetDeleteCommand = classInstance.Invoke("GetDeleteCommand", useColumnsForParameterNames);
+            JCObject objGetDeleteCommand = (JCObject)retObjectGetDeleteCommand;
             return new OleDbCommand(objGetDeleteCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDeleteCommand != null ? retObjectGetDeleteCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +205,14 @@ public class OleDbCommandBuilder extends DbCommandBuilder  {
 
     public OleDbCommand GetInsertCommandNewOleDbCommandBuilder() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInsertCommand = null;
         try {
-            JCObject objGetInsertCommand = (JCObject)classInstance.Invoke("GetInsertCommand");
+            retObjectGetInsertCommand = classInstance.Invoke("GetInsertCommand");
+            JCObject objGetInsertCommand = (JCObject)retObjectGetInsertCommand;
             return new OleDbCommand(objGetInsertCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInsertCommand != null ? retObjectGetInsertCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +220,14 @@ public class OleDbCommandBuilder extends DbCommandBuilder  {
 
     public OleDbCommand GetInsertCommandNewOleDbCommandBuilder(boolean useColumnsForParameterNames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInsertCommand = null;
         try {
-            JCObject objGetInsertCommand = (JCObject)classInstance.Invoke("GetInsertCommand", useColumnsForParameterNames);
+            retObjectGetInsertCommand = classInstance.Invoke("GetInsertCommand", useColumnsForParameterNames);
+            JCObject objGetInsertCommand = (JCObject)retObjectGetInsertCommand;
             return new OleDbCommand(objGetInsertCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInsertCommand != null ? retObjectGetInsertCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +235,14 @@ public class OleDbCommandBuilder extends DbCommandBuilder  {
 
     public OleDbCommand GetUpdateCommandNewOleDbCommandBuilder() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUpdateCommand = null;
         try {
-            JCObject objGetUpdateCommand = (JCObject)classInstance.Invoke("GetUpdateCommand");
+            retObjectGetUpdateCommand = classInstance.Invoke("GetUpdateCommand");
+            JCObject objGetUpdateCommand = (JCObject)retObjectGetUpdateCommand;
             return new OleDbCommand(objGetUpdateCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUpdateCommand != null ? retObjectGetUpdateCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +250,14 @@ public class OleDbCommandBuilder extends DbCommandBuilder  {
 
     public OleDbCommand GetUpdateCommandNewOleDbCommandBuilder(boolean useColumnsForParameterNames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUpdateCommand = null;
         try {
-            JCObject objGetUpdateCommand = (JCObject)classInstance.Invoke("GetUpdateCommand", useColumnsForParameterNames);
+            retObjectGetUpdateCommand = classInstance.Invoke("GetUpdateCommand", useColumnsForParameterNames);
+            JCObject objGetUpdateCommand = (JCObject)retObjectGetUpdateCommand;
             return new OleDbCommand(objGetUpdateCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUpdateCommand != null ? retObjectGetUpdateCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,9 +265,13 @@ public class OleDbCommandBuilder extends DbCommandBuilder  {
 
     public java.lang.String QuoteIdentifier(java.lang.String unquotedIdentifier) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuoteIdentifier = null;
         try {
-            return (java.lang.String)classInstance.Invoke("QuoteIdentifier", unquotedIdentifier);
+            retObjectQuoteIdentifier = classInstance.Invoke("QuoteIdentifier", unquotedIdentifier);
+            return (java.lang.String)retObjectQuoteIdentifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectQuoteIdentifier != null ? retObjectQuoteIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,9 +279,13 @@ public class OleDbCommandBuilder extends DbCommandBuilder  {
 
     public java.lang.String QuoteIdentifier(java.lang.String unquotedIdentifier, OleDbConnection connection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuoteIdentifier = null;
         try {
-            return (java.lang.String)classInstance.Invoke("QuoteIdentifier", unquotedIdentifier, connection == null ? null : connection.getJCOInstance());
+            retObjectQuoteIdentifier = classInstance.Invoke("QuoteIdentifier", unquotedIdentifier, connection == null ? null : connection.getJCOInstance());
+            return (java.lang.String)retObjectQuoteIdentifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectQuoteIdentifier != null ? retObjectQuoteIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,9 +293,13 @@ public class OleDbCommandBuilder extends DbCommandBuilder  {
 
     public java.lang.String UnquoteIdentifier(java.lang.String quotedIdentifier) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnquoteIdentifier = null;
         try {
-            return (java.lang.String)classInstance.Invoke("UnquoteIdentifier", quotedIdentifier);
+            retObjectUnquoteIdentifier = classInstance.Invoke("UnquoteIdentifier", quotedIdentifier);
+            return (java.lang.String)retObjectUnquoteIdentifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUnquoteIdentifier != null ? retObjectUnquoteIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,9 +307,13 @@ public class OleDbCommandBuilder extends DbCommandBuilder  {
 
     public java.lang.String UnquoteIdentifier(java.lang.String quotedIdentifier, OleDbConnection connection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnquoteIdentifier = null;
         try {
-            return (java.lang.String)classInstance.Invoke("UnquoteIdentifier", quotedIdentifier, connection == null ? null : connection.getJCOInstance());
+            retObjectUnquoteIdentifier = classInstance.Invoke("UnquoteIdentifier", quotedIdentifier, connection == null ? null : connection.getJCOInstance());
+            return (java.lang.String)retObjectUnquoteIdentifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUnquoteIdentifier != null ? retObjectUnquoteIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +321,7 @@ public class OleDbCommandBuilder extends DbCommandBuilder  {
 
     public static void DeriveParameters(OleDbCommand command) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.AccessViolationException, system.InvalidCastException, system.FormatException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.data.sqltypes.SqlNullValueException, system.data.DataException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DeriveParameters", command == null ? null : command.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -295,10 +335,14 @@ public class OleDbCommandBuilder extends DbCommandBuilder  {
     
     public OleDbDataAdapter getDataAdapterNewOleDbCommandBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataAdapter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataAdapter");
+            retObjectDataAdapter = classInstance.Get("DataAdapter");
+            JCObject val = (JCObject)retObjectDataAdapter;
             return new OleDbDataAdapter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataAdapter != null ? retObjectDataAdapter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,7 +350,7 @@ public class OleDbCommandBuilder extends DbCommandBuilder  {
 
     public void setDataAdapter(OleDbDataAdapter DataAdapter) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataAdapter", DataAdapter == null ? null : DataAdapter.getJCOInstance());
         } catch (JCNativeException jcne) {

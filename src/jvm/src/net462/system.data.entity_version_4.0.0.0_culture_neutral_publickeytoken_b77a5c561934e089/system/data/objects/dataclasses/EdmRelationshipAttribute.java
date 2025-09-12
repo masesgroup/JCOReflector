@@ -181,9 +181,13 @@ public class EdmRelationshipAttribute extends Attribute  {
     
     public boolean getIsForeignKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsForeignKey = null;
         try {
-            return (boolean)classInstance.Get("IsForeignKey");
+            retObjectIsForeignKey = classInstance.Get("IsForeignKey");
+            return (boolean)retObjectIsForeignKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsForeignKey != null ? retObjectIsForeignKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +195,14 @@ public class EdmRelationshipAttribute extends Attribute  {
 
     public RelationshipMultiplicity getRole1Multiplicity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRole1Multiplicity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Role1Multiplicity");
+            retObjectRole1Multiplicity = classInstance.Get("Role1Multiplicity");
+            JCObject val = (JCObject)retObjectRole1Multiplicity;
             return new RelationshipMultiplicity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRole1Multiplicity != null ? retObjectRole1Multiplicity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +210,14 @@ public class EdmRelationshipAttribute extends Attribute  {
 
     public RelationshipMultiplicity getRole2Multiplicity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRole2Multiplicity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Role2Multiplicity");
+            retObjectRole2Multiplicity = classInstance.Get("Role2Multiplicity");
+            JCObject val = (JCObject)retObjectRole2Multiplicity;
             return new RelationshipMultiplicity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRole2Multiplicity != null ? retObjectRole2Multiplicity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +225,13 @@ public class EdmRelationshipAttribute extends Attribute  {
 
     public java.lang.String getRelationshipName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelationshipName = null;
         try {
-            return (java.lang.String)classInstance.Get("RelationshipName");
+            retObjectRelationshipName = classInstance.Get("RelationshipName");
+            return (java.lang.String)retObjectRelationshipName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRelationshipName != null ? retObjectRelationshipName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +239,13 @@ public class EdmRelationshipAttribute extends Attribute  {
 
     public java.lang.String getRelationshipNamespaceName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelationshipNamespaceName = null;
         try {
-            return (java.lang.String)classInstance.Get("RelationshipNamespaceName");
+            retObjectRelationshipNamespaceName = classInstance.Get("RelationshipNamespaceName");
+            return (java.lang.String)retObjectRelationshipNamespaceName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRelationshipNamespaceName != null ? retObjectRelationshipNamespaceName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +253,13 @@ public class EdmRelationshipAttribute extends Attribute  {
 
     public java.lang.String getRole1Name() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRole1Name = null;
         try {
-            return (java.lang.String)classInstance.Get("Role1Name");
+            retObjectRole1Name = classInstance.Get("Role1Name");
+            return (java.lang.String)retObjectRole1Name;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRole1Name != null ? retObjectRole1Name.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,9 +267,13 @@ public class EdmRelationshipAttribute extends Attribute  {
 
     public java.lang.String getRole2Name() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRole2Name = null;
         try {
-            return (java.lang.String)classInstance.Get("Role2Name");
+            retObjectRole2Name = classInstance.Get("Role2Name");
+            return (java.lang.String)retObjectRole2Name;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRole2Name != null ? retObjectRole2Name.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +281,14 @@ public class EdmRelationshipAttribute extends Attribute  {
 
     public NetType getRole1Type() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRole1Type = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Role1Type");
+            retObjectRole1Type = classInstance.Get("Role1Type");
+            JCObject val = (JCObject)retObjectRole1Type;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRole1Type != null ? retObjectRole1Type.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,10 +296,14 @@ public class EdmRelationshipAttribute extends Attribute  {
 
     public NetType getRole2Type() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRole2Type = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Role2Type");
+            retObjectRole2Type = classInstance.Get("Role2Type");
+            JCObject val = (JCObject)retObjectRole2Type;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRole2Type != null ? retObjectRole2Type.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

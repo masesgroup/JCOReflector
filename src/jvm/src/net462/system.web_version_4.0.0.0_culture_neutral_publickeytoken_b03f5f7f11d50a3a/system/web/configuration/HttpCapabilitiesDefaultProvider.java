@@ -176,10 +176,14 @@ public class HttpCapabilitiesDefaultProvider extends HttpCapabilitiesProvider  {
     
     public HttpBrowserCapabilities GetBrowserCapabilities(HttpRequest request) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NullReferenceException, system.MemberAccessException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException, system.web.HttpRequestValidationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBrowserCapabilities = null;
         try {
-            JCObject objGetBrowserCapabilities = (JCObject)classInstance.Invoke("GetBrowserCapabilities", request == null ? null : request.getJCOInstance());
+            retObjectGetBrowserCapabilities = classInstance.Invoke("GetBrowserCapabilities", request == null ? null : request.getJCOInstance());
+            JCObject objGetBrowserCapabilities = (JCObject)retObjectGetBrowserCapabilities;
             return new HttpBrowserCapabilities(objGetBrowserCapabilities);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBrowserCapabilities != null ? retObjectGetBrowserCapabilities.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class HttpCapabilitiesDefaultProvider extends HttpCapabilitiesProvider  {
 
     public void AddDependency(java.lang.String variable) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddDependency", variable);
         } catch (JCNativeException jcne) {
@@ -197,7 +201,7 @@ public class HttpCapabilitiesDefaultProvider extends HttpCapabilitiesProvider  {
 
     public void AddRuleList(NetArrayList ruleList) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRuleList", ruleList == null ? null : ruleList.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,9 +215,19 @@ public class HttpCapabilitiesDefaultProvider extends HttpCapabilitiesProvider  {
     
     public int getUserAgentCacheKeyLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserAgentCacheKeyLength = null;
         try {
-            return (int)classInstance.Get("UserAgentCacheKeyLength");
+            retObjectUserAgentCacheKeyLength = classInstance.Get("UserAgentCacheKeyLength");
+            return (int)retObjectUserAgentCacheKeyLength;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUserAgentCacheKeyLengthNumber = (java.lang.Number)retObjectUserAgentCacheKeyLength;
+                return retObjectUserAgentCacheKeyLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectUserAgentCacheKeyLength != null ? retObjectUserAgentCacheKeyLength.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +235,7 @@ public class HttpCapabilitiesDefaultProvider extends HttpCapabilitiesProvider  {
 
     public void setUserAgentCacheKeyLength(int UserAgentCacheKeyLength) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserAgentCacheKeyLength", UserAgentCacheKeyLength);
         } catch (JCNativeException jcne) {
@@ -231,10 +245,14 @@ public class HttpCapabilitiesDefaultProvider extends HttpCapabilitiesProvider  {
 
     public TimeSpan getCacheTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCacheTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CacheTime");
+            retObjectCacheTime = classInstance.Get("CacheTime");
+            JCObject val = (JCObject)retObjectCacheTime;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCacheTime != null ? retObjectCacheTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +260,7 @@ public class HttpCapabilitiesDefaultProvider extends HttpCapabilitiesProvider  {
 
     public void setCacheTime(TimeSpan CacheTime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CacheTime", CacheTime == null ? null : CacheTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,10 +270,14 @@ public class HttpCapabilitiesDefaultProvider extends HttpCapabilitiesProvider  {
 
     public NetType getResultType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResultType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResultType");
+            retObjectResultType = classInstance.Get("ResultType");
+            JCObject val = (JCObject)retObjectResultType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResultType != null ? retObjectResultType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +285,7 @@ public class HttpCapabilitiesDefaultProvider extends HttpCapabilitiesProvider  {
 
     public void setResultType(NetType ResultType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResultType", ResultType == null ? null : ResultType.getJCOInstance());
         } catch (JCNativeException jcne) {

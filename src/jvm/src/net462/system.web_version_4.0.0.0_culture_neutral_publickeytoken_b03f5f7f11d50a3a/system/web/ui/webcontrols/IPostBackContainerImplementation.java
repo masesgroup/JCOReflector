@@ -145,10 +145,14 @@ public class IPostBackContainerImplementation extends NetObject implements IPost
     
     public PostBackOptions GetPostBackOptions(IButtonControl buttonControl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPostBackOptions = null;
         try {
-            JCObject objGetPostBackOptions = (JCObject)classInstance.Invoke("GetPostBackOptions", buttonControl == null ? null : buttonControl.getJCOInstance());
+            retObjectGetPostBackOptions = classInstance.Invoke("GetPostBackOptions", buttonControl == null ? null : buttonControl.getJCOInstance());
+            JCObject objGetPostBackOptions = (JCObject)retObjectGetPostBackOptions;
             return new PostBackOptions(objGetPostBackOptions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPostBackOptions != null ? retObjectGetPostBackOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

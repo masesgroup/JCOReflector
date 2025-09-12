@@ -144,9 +144,13 @@ public class IProcessHostIdleAndHealthCheckImplementation extends NetObject impl
     
     public boolean IsIdle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsIdle = null;
         try {
-            return (boolean)classInstance.Invoke("IsIdle");
+            retObjectIsIdle = classInstance.Invoke("IsIdle");
+            return (boolean)retObjectIsIdle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsIdle != null ? retObjectIsIdle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,7 +158,7 @@ public class IProcessHostIdleAndHealthCheckImplementation extends NetObject impl
 
     public void Ping(IProcessPingCallback callback) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Ping", callback == null ? null : callback.getJCOInstance());
         } catch (JCNativeException jcne) {

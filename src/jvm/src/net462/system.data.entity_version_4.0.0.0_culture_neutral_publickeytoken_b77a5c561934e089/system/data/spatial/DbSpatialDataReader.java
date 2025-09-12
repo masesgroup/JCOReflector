@@ -155,10 +155,14 @@ public class DbSpatialDataReader extends NetObject  {
     
     public DbGeography GetGeography(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGeography = null;
         try {
-            JCObject objGetGeography = (JCObject)classInstance.Invoke("GetGeography", ordinal);
+            retObjectGetGeography = classInstance.Invoke("GetGeography", ordinal);
+            JCObject objGetGeography = (JCObject)retObjectGetGeography;
             return new DbGeography(objGetGeography);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGeography != null ? retObjectGetGeography.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class DbSpatialDataReader extends NetObject  {
 
     public DbGeometry GetGeometry(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGeometry = null;
         try {
-            JCObject objGetGeometry = (JCObject)classInstance.Invoke("GetGeometry", ordinal);
+            retObjectGetGeometry = classInstance.Invoke("GetGeometry", ordinal);
+            JCObject objGetGeometry = (JCObject)retObjectGetGeometry;
             return new DbGeometry(objGetGeometry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGeometry != null ? retObjectGetGeometry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

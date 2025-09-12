@@ -170,9 +170,13 @@ public class VisualTransition extends DependencyObject  {
     
     public java.lang.String getFrom() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrom = null;
         try {
-            return (java.lang.String)classInstance.Get("From");
+            retObjectFrom = classInstance.Get("From");
+            return (java.lang.String)retObjectFrom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFrom != null ? retObjectFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class VisualTransition extends DependencyObject  {
 
     public void setFrom(java.lang.String From) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("From", From);
         } catch (JCNativeException jcne) {
@@ -190,9 +194,13 @@ public class VisualTransition extends DependencyObject  {
 
     public java.lang.String getTo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTo = null;
         try {
-            return (java.lang.String)classInstance.Get("To");
+            retObjectTo = classInstance.Get("To");
+            return (java.lang.String)retObjectTo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTo != null ? retObjectTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class VisualTransition extends DependencyObject  {
 
     public void setTo(java.lang.String To) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("To", To);
         } catch (JCNativeException jcne) {
@@ -210,10 +218,14 @@ public class VisualTransition extends DependencyObject  {
 
     public Duration getGeneratedDuration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeneratedDuration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GeneratedDuration");
+            retObjectGeneratedDuration = classInstance.Get("GeneratedDuration");
+            JCObject val = (JCObject)retObjectGeneratedDuration;
             return new Duration(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeneratedDuration != null ? retObjectGeneratedDuration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +233,7 @@ public class VisualTransition extends DependencyObject  {
 
     public void setGeneratedDuration(Duration GeneratedDuration) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GeneratedDuration", GeneratedDuration == null ? null : GeneratedDuration.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,10 +243,14 @@ public class VisualTransition extends DependencyObject  {
 
     public IEasingFunction getGeneratedEasingFunction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeneratedEasingFunction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GeneratedEasingFunction");
+            retObjectGeneratedEasingFunction = classInstance.Get("GeneratedEasingFunction");
+            JCObject val = (JCObject)retObjectGeneratedEasingFunction;
             return new IEasingFunctionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeneratedEasingFunction != null ? retObjectGeneratedEasingFunction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class VisualTransition extends DependencyObject  {
 
     public void setGeneratedEasingFunction(IEasingFunction GeneratedEasingFunction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GeneratedEasingFunction", GeneratedEasingFunction == null ? null : GeneratedEasingFunction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,10 +268,14 @@ public class VisualTransition extends DependencyObject  {
 
     public Storyboard getStoryboard() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStoryboard = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Storyboard");
+            retObjectStoryboard = classInstance.Get("Storyboard");
+            JCObject val = (JCObject)retObjectStoryboard;
             return new Storyboard(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStoryboard != null ? retObjectStoryboard.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +283,7 @@ public class VisualTransition extends DependencyObject  {
 
     public void setStoryboard(Storyboard Storyboard) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Storyboard", Storyboard == null ? null : Storyboard.getJCOInstance());
         } catch (JCNativeException jcne) {

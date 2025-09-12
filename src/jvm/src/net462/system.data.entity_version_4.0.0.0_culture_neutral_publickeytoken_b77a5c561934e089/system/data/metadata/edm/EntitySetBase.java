@@ -161,10 +161,14 @@ public class EntitySetBase extends MetadataItem  {
     
     public EntityContainer getEntityContainer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntityContainer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EntityContainer");
+            retObjectEntityContainer = classInstance.Get("EntityContainer");
+            JCObject val = (JCObject)retObjectEntityContainer;
             return new EntityContainer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntityContainer != null ? retObjectEntityContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class EntitySetBase extends MetadataItem  {
 
     public EntityTypeBase getElementType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElementType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ElementType");
+            retObjectElementType = classInstance.Get("ElementType");
+            JCObject val = (JCObject)retObjectElementType;
             return new EntityTypeBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElementType != null ? retObjectElementType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +191,7 @@ public class EntitySetBase extends MetadataItem  {
 
     public void setElementType(EntityTypeBase ElementType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ElementType", ElementType == null ? null : ElementType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -193,9 +201,13 @@ public class EntitySetBase extends MetadataItem  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

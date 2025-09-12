@@ -243,9 +243,13 @@ public class MessageQueue extends Component  {
     
     public static boolean Exists(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExists = null;
         try {
-            return (boolean)classType.Invoke("Exists", path);
+            retObjectExists = classType.Invoke("Exists", path);
+            return (boolean)retObjectExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExists != null ? retObjectExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +257,14 @@ public class MessageQueue extends Component  {
 
     public static Guid GetMachineId(java.lang.String machineName) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMachineId = null;
         try {
-            JCObject objGetMachineId = (JCObject)classType.Invoke("GetMachineId", machineName);
+            retObjectGetMachineId = classType.Invoke("GetMachineId", machineName);
+            JCObject objGetMachineId = (JCObject)retObjectGetMachineId;
             return new Guid(objGetMachineId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMachineId != null ? retObjectGetMachineId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,10 +272,14 @@ public class MessageQueue extends Component  {
 
     public IAsyncResult BeginPeek() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginPeek = null;
         try {
-            JCObject objBeginPeek = (JCObject)classInstance.Invoke("BeginPeek");
+            retObjectBeginPeek = classInstance.Invoke("BeginPeek");
+            JCObject objBeginPeek = (JCObject)retObjectBeginPeek;
             return new IAsyncResultImplementation(objBeginPeek);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginPeek != null ? retObjectBeginPeek.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,10 +287,14 @@ public class MessageQueue extends Component  {
 
     public IAsyncResult BeginPeek(TimeSpan timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginPeek = null;
         try {
-            JCObject objBeginPeek = (JCObject)classInstance.Invoke("BeginPeek", timeout == null ? null : timeout.getJCOInstance());
+            retObjectBeginPeek = classInstance.Invoke("BeginPeek", timeout == null ? null : timeout.getJCOInstance());
+            JCObject objBeginPeek = (JCObject)retObjectBeginPeek;
             return new IAsyncResultImplementation(objBeginPeek);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginPeek != null ? retObjectBeginPeek.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,10 +302,14 @@ public class MessageQueue extends Component  {
 
     public IAsyncResult BeginPeek(TimeSpan timeout, Cursor cursor, PeekAction action, NetObject state, AsyncCallback callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginPeek = null;
         try {
-            JCObject objBeginPeek = (JCObject)classInstance.Invoke("BeginPeek", timeout == null ? null : timeout.getJCOInstance(), cursor == null ? null : cursor.getJCOInstance(), action == null ? null : action.getJCOInstance(), state == null ? null : state.getJCOInstance(), callback);
+            retObjectBeginPeek = classInstance.Invoke("BeginPeek", timeout == null ? null : timeout.getJCOInstance(), cursor == null ? null : cursor.getJCOInstance(), action == null ? null : action.getJCOInstance(), state == null ? null : state.getJCOInstance(), callback);
+            JCObject objBeginPeek = (JCObject)retObjectBeginPeek;
             return new IAsyncResultImplementation(objBeginPeek);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginPeek != null ? retObjectBeginPeek.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,10 +317,14 @@ public class MessageQueue extends Component  {
 
     public IAsyncResult BeginPeek(TimeSpan timeout, NetObject stateObject) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginPeek = null;
         try {
-            JCObject objBeginPeek = (JCObject)classInstance.Invoke("BeginPeek", timeout == null ? null : timeout.getJCOInstance(), stateObject == null ? null : stateObject.getJCOInstance());
+            retObjectBeginPeek = classInstance.Invoke("BeginPeek", timeout == null ? null : timeout.getJCOInstance(), stateObject == null ? null : stateObject.getJCOInstance());
+            JCObject objBeginPeek = (JCObject)retObjectBeginPeek;
             return new IAsyncResultImplementation(objBeginPeek);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginPeek != null ? retObjectBeginPeek.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,10 +332,14 @@ public class MessageQueue extends Component  {
 
     public IAsyncResult BeginPeek(TimeSpan timeout, NetObject stateObject, AsyncCallback callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginPeek = null;
         try {
-            JCObject objBeginPeek = (JCObject)classInstance.Invoke("BeginPeek", timeout == null ? null : timeout.getJCOInstance(), stateObject == null ? null : stateObject.getJCOInstance(), callback);
+            retObjectBeginPeek = classInstance.Invoke("BeginPeek", timeout == null ? null : timeout.getJCOInstance(), stateObject == null ? null : stateObject.getJCOInstance(), callback);
+            JCObject objBeginPeek = (JCObject)retObjectBeginPeek;
             return new IAsyncResultImplementation(objBeginPeek);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginPeek != null ? retObjectBeginPeek.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,10 +347,14 @@ public class MessageQueue extends Component  {
 
     public IAsyncResult BeginReceive() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginReceive = null;
         try {
-            JCObject objBeginReceive = (JCObject)classInstance.Invoke("BeginReceive");
+            retObjectBeginReceive = classInstance.Invoke("BeginReceive");
+            JCObject objBeginReceive = (JCObject)retObjectBeginReceive;
             return new IAsyncResultImplementation(objBeginReceive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginReceive != null ? retObjectBeginReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,10 +362,14 @@ public class MessageQueue extends Component  {
 
     public IAsyncResult BeginReceive(TimeSpan timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginReceive = null;
         try {
-            JCObject objBeginReceive = (JCObject)classInstance.Invoke("BeginReceive", timeout == null ? null : timeout.getJCOInstance());
+            retObjectBeginReceive = classInstance.Invoke("BeginReceive", timeout == null ? null : timeout.getJCOInstance());
+            JCObject objBeginReceive = (JCObject)retObjectBeginReceive;
             return new IAsyncResultImplementation(objBeginReceive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginReceive != null ? retObjectBeginReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,10 +377,14 @@ public class MessageQueue extends Component  {
 
     public IAsyncResult BeginReceive(TimeSpan timeout, Cursor cursor, NetObject state, AsyncCallback callback) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginReceive = null;
         try {
-            JCObject objBeginReceive = (JCObject)classInstance.Invoke("BeginReceive", timeout == null ? null : timeout.getJCOInstance(), cursor == null ? null : cursor.getJCOInstance(), state == null ? null : state.getJCOInstance(), callback);
+            retObjectBeginReceive = classInstance.Invoke("BeginReceive", timeout == null ? null : timeout.getJCOInstance(), cursor == null ? null : cursor.getJCOInstance(), state == null ? null : state.getJCOInstance(), callback);
+            JCObject objBeginReceive = (JCObject)retObjectBeginReceive;
             return new IAsyncResultImplementation(objBeginReceive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginReceive != null ? retObjectBeginReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,10 +392,14 @@ public class MessageQueue extends Component  {
 
     public IAsyncResult BeginReceive(TimeSpan timeout, NetObject stateObject) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginReceive = null;
         try {
-            JCObject objBeginReceive = (JCObject)classInstance.Invoke("BeginReceive", timeout == null ? null : timeout.getJCOInstance(), stateObject == null ? null : stateObject.getJCOInstance());
+            retObjectBeginReceive = classInstance.Invoke("BeginReceive", timeout == null ? null : timeout.getJCOInstance(), stateObject == null ? null : stateObject.getJCOInstance());
+            JCObject objBeginReceive = (JCObject)retObjectBeginReceive;
             return new IAsyncResultImplementation(objBeginReceive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginReceive != null ? retObjectBeginReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,10 +407,14 @@ public class MessageQueue extends Component  {
 
     public IAsyncResult BeginReceive(TimeSpan timeout, NetObject stateObject, AsyncCallback callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginReceive = null;
         try {
-            JCObject objBeginReceive = (JCObject)classInstance.Invoke("BeginReceive", timeout == null ? null : timeout.getJCOInstance(), stateObject == null ? null : stateObject.getJCOInstance(), callback);
+            retObjectBeginReceive = classInstance.Invoke("BeginReceive", timeout == null ? null : timeout.getJCOInstance(), stateObject == null ? null : stateObject.getJCOInstance(), callback);
+            JCObject objBeginReceive = (JCObject)retObjectBeginReceive;
             return new IAsyncResultImplementation(objBeginReceive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginReceive != null ? retObjectBeginReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,10 +422,14 @@ public class MessageQueue extends Component  {
 
     public Cursor CreateCursor() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCursor = null;
         try {
-            JCObject objCreateCursor = (JCObject)classInstance.Invoke("CreateCursor");
+            retObjectCreateCursor = classInstance.Invoke("CreateCursor");
+            JCObject objCreateCursor = (JCObject)retObjectCreateCursor;
             return new Cursor(objCreateCursor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCursor != null ? retObjectCreateCursor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,10 +437,14 @@ public class MessageQueue extends Component  {
 
     public Message EndPeek(IAsyncResult asyncResult) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.messaging.MessageQueueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndPeek = null;
         try {
-            JCObject objEndPeek = (JCObject)classInstance.Invoke("EndPeek", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndPeek = classInstance.Invoke("EndPeek", asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject objEndPeek = (JCObject)retObjectEndPeek;
             return new Message(objEndPeek);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndPeek != null ? retObjectEndPeek.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,10 +452,14 @@ public class MessageQueue extends Component  {
 
     public Message EndReceive(IAsyncResult asyncResult) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.messaging.MessageQueueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndReceive = null;
         try {
-            JCObject objEndReceive = (JCObject)classInstance.Invoke("EndReceive", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndReceive = classInstance.Invoke("EndReceive", asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject objEndReceive = (JCObject)retObjectEndReceive;
             return new Message(objEndReceive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndReceive != null ? retObjectEndReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,10 +467,14 @@ public class MessageQueue extends Component  {
 
     public Message Peek() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeek = null;
         try {
-            JCObject objPeek = (JCObject)classInstance.Invoke("Peek");
+            retObjectPeek = classInstance.Invoke("Peek");
+            JCObject objPeek = (JCObject)retObjectPeek;
             return new Message(objPeek);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeek != null ? retObjectPeek.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,10 +482,14 @@ public class MessageQueue extends Component  {
 
     public Message Peek(TimeSpan timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeek = null;
         try {
-            JCObject objPeek = (JCObject)classInstance.Invoke("Peek", timeout == null ? null : timeout.getJCOInstance());
+            retObjectPeek = classInstance.Invoke("Peek", timeout == null ? null : timeout.getJCOInstance());
+            JCObject objPeek = (JCObject)retObjectPeek;
             return new Message(objPeek);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeek != null ? retObjectPeek.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -429,10 +497,14 @@ public class MessageQueue extends Component  {
 
     public Message Peek(TimeSpan timeout, Cursor cursor, PeekAction action) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeek = null;
         try {
-            JCObject objPeek = (JCObject)classInstance.Invoke("Peek", timeout == null ? null : timeout.getJCOInstance(), cursor == null ? null : cursor.getJCOInstance(), action == null ? null : action.getJCOInstance());
+            retObjectPeek = classInstance.Invoke("Peek", timeout == null ? null : timeout.getJCOInstance(), cursor == null ? null : cursor.getJCOInstance(), action == null ? null : action.getJCOInstance());
+            JCObject objPeek = (JCObject)retObjectPeek;
             return new Message(objPeek);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeek != null ? retObjectPeek.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -440,10 +512,14 @@ public class MessageQueue extends Component  {
 
     public Message PeekByCorrelationId(java.lang.String correlationId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeekByCorrelationId = null;
         try {
-            JCObject objPeekByCorrelationId = (JCObject)classInstance.Invoke("PeekByCorrelationId", correlationId);
+            retObjectPeekByCorrelationId = classInstance.Invoke("PeekByCorrelationId", correlationId);
+            JCObject objPeekByCorrelationId = (JCObject)retObjectPeekByCorrelationId;
             return new Message(objPeekByCorrelationId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeekByCorrelationId != null ? retObjectPeekByCorrelationId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -451,10 +527,14 @@ public class MessageQueue extends Component  {
 
     public Message PeekByCorrelationId(java.lang.String correlationId, TimeSpan timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeekByCorrelationId = null;
         try {
-            JCObject objPeekByCorrelationId = (JCObject)classInstance.Invoke("PeekByCorrelationId", correlationId, timeout == null ? null : timeout.getJCOInstance());
+            retObjectPeekByCorrelationId = classInstance.Invoke("PeekByCorrelationId", correlationId, timeout == null ? null : timeout.getJCOInstance());
+            JCObject objPeekByCorrelationId = (JCObject)retObjectPeekByCorrelationId;
             return new Message(objPeekByCorrelationId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeekByCorrelationId != null ? retObjectPeekByCorrelationId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -462,10 +542,14 @@ public class MessageQueue extends Component  {
 
     public Message PeekById(java.lang.String id) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeekById = null;
         try {
-            JCObject objPeekById = (JCObject)classInstance.Invoke("PeekById", id);
+            retObjectPeekById = classInstance.Invoke("PeekById", id);
+            JCObject objPeekById = (JCObject)retObjectPeekById;
             return new Message(objPeekById);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeekById != null ? retObjectPeekById.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -473,10 +557,14 @@ public class MessageQueue extends Component  {
 
     public Message PeekById(java.lang.String id, TimeSpan timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeekById = null;
         try {
-            JCObject objPeekById = (JCObject)classInstance.Invoke("PeekById", id, timeout == null ? null : timeout.getJCOInstance());
+            retObjectPeekById = classInstance.Invoke("PeekById", id, timeout == null ? null : timeout.getJCOInstance());
+            JCObject objPeekById = (JCObject)retObjectPeekById;
             return new Message(objPeekById);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeekById != null ? retObjectPeekById.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -484,10 +572,14 @@ public class MessageQueue extends Component  {
 
     public Message PeekByLookupId(long lookupId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeekByLookupId = null;
         try {
-            JCObject objPeekByLookupId = (JCObject)classInstance.Invoke("PeekByLookupId", lookupId);
+            retObjectPeekByLookupId = classInstance.Invoke("PeekByLookupId", lookupId);
+            JCObject objPeekByLookupId = (JCObject)retObjectPeekByLookupId;
             return new Message(objPeekByLookupId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeekByLookupId != null ? retObjectPeekByLookupId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -495,10 +587,14 @@ public class MessageQueue extends Component  {
 
     public Message PeekByLookupId(MessageLookupAction action, long lookupId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeekByLookupId = null;
         try {
-            JCObject objPeekByLookupId = (JCObject)classInstance.Invoke("PeekByLookupId", action == null ? null : action.getJCOInstance(), lookupId);
+            retObjectPeekByLookupId = classInstance.Invoke("PeekByLookupId", action == null ? null : action.getJCOInstance(), lookupId);
+            JCObject objPeekByLookupId = (JCObject)retObjectPeekByLookupId;
             return new Message(objPeekByLookupId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeekByLookupId != null ? retObjectPeekByLookupId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -506,10 +602,14 @@ public class MessageQueue extends Component  {
 
     public Message Receive() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
         try {
-            JCObject objReceive = (JCObject)classInstance.Invoke("Receive");
+            retObjectReceive = classInstance.Invoke("Receive");
+            JCObject objReceive = (JCObject)retObjectReceive;
             return new Message(objReceive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceive != null ? retObjectReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -517,10 +617,14 @@ public class MessageQueue extends Component  {
 
     public Message Receive(MessageQueueTransaction transaction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
         try {
-            JCObject objReceive = (JCObject)classInstance.Invoke("Receive", transaction == null ? null : transaction.getJCOInstance());
+            retObjectReceive = classInstance.Invoke("Receive", transaction == null ? null : transaction.getJCOInstance());
+            JCObject objReceive = (JCObject)retObjectReceive;
             return new Message(objReceive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceive != null ? retObjectReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -528,10 +632,14 @@ public class MessageQueue extends Component  {
 
     public Message Receive(MessageQueueTransactionType transactionType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
         try {
-            JCObject objReceive = (JCObject)classInstance.Invoke("Receive", transactionType == null ? null : transactionType.getJCOInstance());
+            retObjectReceive = classInstance.Invoke("Receive", transactionType == null ? null : transactionType.getJCOInstance());
+            JCObject objReceive = (JCObject)retObjectReceive;
             return new Message(objReceive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceive != null ? retObjectReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -539,10 +647,14 @@ public class MessageQueue extends Component  {
 
     public Message Receive(TimeSpan timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
         try {
-            JCObject objReceive = (JCObject)classInstance.Invoke("Receive", timeout == null ? null : timeout.getJCOInstance());
+            retObjectReceive = classInstance.Invoke("Receive", timeout == null ? null : timeout.getJCOInstance());
+            JCObject objReceive = (JCObject)retObjectReceive;
             return new Message(objReceive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceive != null ? retObjectReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -550,10 +662,14 @@ public class MessageQueue extends Component  {
 
     public Message Receive(TimeSpan timeout, Cursor cursor) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
         try {
-            JCObject objReceive = (JCObject)classInstance.Invoke("Receive", timeout == null ? null : timeout.getJCOInstance(), cursor == null ? null : cursor.getJCOInstance());
+            retObjectReceive = classInstance.Invoke("Receive", timeout == null ? null : timeout.getJCOInstance(), cursor == null ? null : cursor.getJCOInstance());
+            JCObject objReceive = (JCObject)retObjectReceive;
             return new Message(objReceive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceive != null ? retObjectReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -561,10 +677,14 @@ public class MessageQueue extends Component  {
 
     public Message Receive(TimeSpan timeout, Cursor cursor, MessageQueueTransaction transaction) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
         try {
-            JCObject objReceive = (JCObject)classInstance.Invoke("Receive", timeout == null ? null : timeout.getJCOInstance(), cursor == null ? null : cursor.getJCOInstance(), transaction == null ? null : transaction.getJCOInstance());
+            retObjectReceive = classInstance.Invoke("Receive", timeout == null ? null : timeout.getJCOInstance(), cursor == null ? null : cursor.getJCOInstance(), transaction == null ? null : transaction.getJCOInstance());
+            JCObject objReceive = (JCObject)retObjectReceive;
             return new Message(objReceive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceive != null ? retObjectReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -572,10 +692,14 @@ public class MessageQueue extends Component  {
 
     public Message Receive(TimeSpan timeout, Cursor cursor, MessageQueueTransactionType transactionType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
         try {
-            JCObject objReceive = (JCObject)classInstance.Invoke("Receive", timeout == null ? null : timeout.getJCOInstance(), cursor == null ? null : cursor.getJCOInstance(), transactionType == null ? null : transactionType.getJCOInstance());
+            retObjectReceive = classInstance.Invoke("Receive", timeout == null ? null : timeout.getJCOInstance(), cursor == null ? null : cursor.getJCOInstance(), transactionType == null ? null : transactionType.getJCOInstance());
+            JCObject objReceive = (JCObject)retObjectReceive;
             return new Message(objReceive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceive != null ? retObjectReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -583,10 +707,14 @@ public class MessageQueue extends Component  {
 
     public Message Receive(TimeSpan timeout, MessageQueueTransaction transaction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
         try {
-            JCObject objReceive = (JCObject)classInstance.Invoke("Receive", timeout == null ? null : timeout.getJCOInstance(), transaction == null ? null : transaction.getJCOInstance());
+            retObjectReceive = classInstance.Invoke("Receive", timeout == null ? null : timeout.getJCOInstance(), transaction == null ? null : transaction.getJCOInstance());
+            JCObject objReceive = (JCObject)retObjectReceive;
             return new Message(objReceive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceive != null ? retObjectReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -594,10 +722,14 @@ public class MessageQueue extends Component  {
 
     public Message Receive(TimeSpan timeout, MessageQueueTransactionType transactionType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
         try {
-            JCObject objReceive = (JCObject)classInstance.Invoke("Receive", timeout == null ? null : timeout.getJCOInstance(), transactionType == null ? null : transactionType.getJCOInstance());
+            retObjectReceive = classInstance.Invoke("Receive", timeout == null ? null : timeout.getJCOInstance(), transactionType == null ? null : transactionType.getJCOInstance());
+            JCObject objReceive = (JCObject)retObjectReceive;
             return new Message(objReceive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceive != null ? retObjectReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -605,10 +737,14 @@ public class MessageQueue extends Component  {
 
     public Message ReceiveByCorrelationId(java.lang.String correlationId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveByCorrelationId = null;
         try {
-            JCObject objReceiveByCorrelationId = (JCObject)classInstance.Invoke("ReceiveByCorrelationId", correlationId);
+            retObjectReceiveByCorrelationId = classInstance.Invoke("ReceiveByCorrelationId", correlationId);
+            JCObject objReceiveByCorrelationId = (JCObject)retObjectReceiveByCorrelationId;
             return new Message(objReceiveByCorrelationId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveByCorrelationId != null ? retObjectReceiveByCorrelationId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -616,10 +752,14 @@ public class MessageQueue extends Component  {
 
     public Message ReceiveByCorrelationId(java.lang.String correlationId, MessageQueueTransaction transaction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveByCorrelationId = null;
         try {
-            JCObject objReceiveByCorrelationId = (JCObject)classInstance.Invoke("ReceiveByCorrelationId", correlationId, transaction == null ? null : transaction.getJCOInstance());
+            retObjectReceiveByCorrelationId = classInstance.Invoke("ReceiveByCorrelationId", correlationId, transaction == null ? null : transaction.getJCOInstance());
+            JCObject objReceiveByCorrelationId = (JCObject)retObjectReceiveByCorrelationId;
             return new Message(objReceiveByCorrelationId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveByCorrelationId != null ? retObjectReceiveByCorrelationId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -627,10 +767,14 @@ public class MessageQueue extends Component  {
 
     public Message ReceiveByCorrelationId(java.lang.String correlationId, MessageQueueTransactionType transactionType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveByCorrelationId = null;
         try {
-            JCObject objReceiveByCorrelationId = (JCObject)classInstance.Invoke("ReceiveByCorrelationId", correlationId, transactionType == null ? null : transactionType.getJCOInstance());
+            retObjectReceiveByCorrelationId = classInstance.Invoke("ReceiveByCorrelationId", correlationId, transactionType == null ? null : transactionType.getJCOInstance());
+            JCObject objReceiveByCorrelationId = (JCObject)retObjectReceiveByCorrelationId;
             return new Message(objReceiveByCorrelationId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveByCorrelationId != null ? retObjectReceiveByCorrelationId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -638,10 +782,14 @@ public class MessageQueue extends Component  {
 
     public Message ReceiveByCorrelationId(java.lang.String correlationId, TimeSpan timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveByCorrelationId = null;
         try {
-            JCObject objReceiveByCorrelationId = (JCObject)classInstance.Invoke("ReceiveByCorrelationId", correlationId, timeout == null ? null : timeout.getJCOInstance());
+            retObjectReceiveByCorrelationId = classInstance.Invoke("ReceiveByCorrelationId", correlationId, timeout == null ? null : timeout.getJCOInstance());
+            JCObject objReceiveByCorrelationId = (JCObject)retObjectReceiveByCorrelationId;
             return new Message(objReceiveByCorrelationId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveByCorrelationId != null ? retObjectReceiveByCorrelationId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -649,10 +797,14 @@ public class MessageQueue extends Component  {
 
     public Message ReceiveByCorrelationId(java.lang.String correlationId, TimeSpan timeout, MessageQueueTransaction transaction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveByCorrelationId = null;
         try {
-            JCObject objReceiveByCorrelationId = (JCObject)classInstance.Invoke("ReceiveByCorrelationId", correlationId, timeout == null ? null : timeout.getJCOInstance(), transaction == null ? null : transaction.getJCOInstance());
+            retObjectReceiveByCorrelationId = classInstance.Invoke("ReceiveByCorrelationId", correlationId, timeout == null ? null : timeout.getJCOInstance(), transaction == null ? null : transaction.getJCOInstance());
+            JCObject objReceiveByCorrelationId = (JCObject)retObjectReceiveByCorrelationId;
             return new Message(objReceiveByCorrelationId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveByCorrelationId != null ? retObjectReceiveByCorrelationId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -660,10 +812,14 @@ public class MessageQueue extends Component  {
 
     public Message ReceiveByCorrelationId(java.lang.String correlationId, TimeSpan timeout, MessageQueueTransactionType transactionType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveByCorrelationId = null;
         try {
-            JCObject objReceiveByCorrelationId = (JCObject)classInstance.Invoke("ReceiveByCorrelationId", correlationId, timeout == null ? null : timeout.getJCOInstance(), transactionType == null ? null : transactionType.getJCOInstance());
+            retObjectReceiveByCorrelationId = classInstance.Invoke("ReceiveByCorrelationId", correlationId, timeout == null ? null : timeout.getJCOInstance(), transactionType == null ? null : transactionType.getJCOInstance());
+            JCObject objReceiveByCorrelationId = (JCObject)retObjectReceiveByCorrelationId;
             return new Message(objReceiveByCorrelationId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveByCorrelationId != null ? retObjectReceiveByCorrelationId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -671,10 +827,14 @@ public class MessageQueue extends Component  {
 
     public Message ReceiveById(java.lang.String id) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveById = null;
         try {
-            JCObject objReceiveById = (JCObject)classInstance.Invoke("ReceiveById", id);
+            retObjectReceiveById = classInstance.Invoke("ReceiveById", id);
+            JCObject objReceiveById = (JCObject)retObjectReceiveById;
             return new Message(objReceiveById);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveById != null ? retObjectReceiveById.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -682,10 +842,14 @@ public class MessageQueue extends Component  {
 
     public Message ReceiveById(java.lang.String id, MessageQueueTransaction transaction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveById = null;
         try {
-            JCObject objReceiveById = (JCObject)classInstance.Invoke("ReceiveById", id, transaction == null ? null : transaction.getJCOInstance());
+            retObjectReceiveById = classInstance.Invoke("ReceiveById", id, transaction == null ? null : transaction.getJCOInstance());
+            JCObject objReceiveById = (JCObject)retObjectReceiveById;
             return new Message(objReceiveById);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveById != null ? retObjectReceiveById.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -693,10 +857,14 @@ public class MessageQueue extends Component  {
 
     public Message ReceiveById(java.lang.String id, MessageQueueTransactionType transactionType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveById = null;
         try {
-            JCObject objReceiveById = (JCObject)classInstance.Invoke("ReceiveById", id, transactionType == null ? null : transactionType.getJCOInstance());
+            retObjectReceiveById = classInstance.Invoke("ReceiveById", id, transactionType == null ? null : transactionType.getJCOInstance());
+            JCObject objReceiveById = (JCObject)retObjectReceiveById;
             return new Message(objReceiveById);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveById != null ? retObjectReceiveById.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -704,10 +872,14 @@ public class MessageQueue extends Component  {
 
     public Message ReceiveById(java.lang.String id, TimeSpan timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveById = null;
         try {
-            JCObject objReceiveById = (JCObject)classInstance.Invoke("ReceiveById", id, timeout == null ? null : timeout.getJCOInstance());
+            retObjectReceiveById = classInstance.Invoke("ReceiveById", id, timeout == null ? null : timeout.getJCOInstance());
+            JCObject objReceiveById = (JCObject)retObjectReceiveById;
             return new Message(objReceiveById);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveById != null ? retObjectReceiveById.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -715,10 +887,14 @@ public class MessageQueue extends Component  {
 
     public Message ReceiveById(java.lang.String id, TimeSpan timeout, MessageQueueTransaction transaction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveById = null;
         try {
-            JCObject objReceiveById = (JCObject)classInstance.Invoke("ReceiveById", id, timeout == null ? null : timeout.getJCOInstance(), transaction == null ? null : transaction.getJCOInstance());
+            retObjectReceiveById = classInstance.Invoke("ReceiveById", id, timeout == null ? null : timeout.getJCOInstance(), transaction == null ? null : transaction.getJCOInstance());
+            JCObject objReceiveById = (JCObject)retObjectReceiveById;
             return new Message(objReceiveById);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveById != null ? retObjectReceiveById.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -726,10 +902,14 @@ public class MessageQueue extends Component  {
 
     public Message ReceiveById(java.lang.String id, TimeSpan timeout, MessageQueueTransactionType transactionType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveById = null;
         try {
-            JCObject objReceiveById = (JCObject)classInstance.Invoke("ReceiveById", id, timeout == null ? null : timeout.getJCOInstance(), transactionType == null ? null : transactionType.getJCOInstance());
+            retObjectReceiveById = classInstance.Invoke("ReceiveById", id, timeout == null ? null : timeout.getJCOInstance(), transactionType == null ? null : transactionType.getJCOInstance());
+            JCObject objReceiveById = (JCObject)retObjectReceiveById;
             return new Message(objReceiveById);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveById != null ? retObjectReceiveById.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -737,10 +917,14 @@ public class MessageQueue extends Component  {
 
     public Message ReceiveByLookupId(long lookupId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveByLookupId = null;
         try {
-            JCObject objReceiveByLookupId = (JCObject)classInstance.Invoke("ReceiveByLookupId", lookupId);
+            retObjectReceiveByLookupId = classInstance.Invoke("ReceiveByLookupId", lookupId);
+            JCObject objReceiveByLookupId = (JCObject)retObjectReceiveByLookupId;
             return new Message(objReceiveByLookupId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveByLookupId != null ? retObjectReceiveByLookupId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -748,10 +932,14 @@ public class MessageQueue extends Component  {
 
     public Message ReceiveByLookupId(MessageLookupAction action, long lookupId, MessageQueueTransaction transaction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveByLookupId = null;
         try {
-            JCObject objReceiveByLookupId = (JCObject)classInstance.Invoke("ReceiveByLookupId", action == null ? null : action.getJCOInstance(), lookupId, transaction == null ? null : transaction.getJCOInstance());
+            retObjectReceiveByLookupId = classInstance.Invoke("ReceiveByLookupId", action == null ? null : action.getJCOInstance(), lookupId, transaction == null ? null : transaction.getJCOInstance());
+            JCObject objReceiveByLookupId = (JCObject)retObjectReceiveByLookupId;
             return new Message(objReceiveByLookupId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveByLookupId != null ? retObjectReceiveByLookupId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -759,10 +947,14 @@ public class MessageQueue extends Component  {
 
     public Message ReceiveByLookupId(MessageLookupAction action, long lookupId, MessageQueueTransactionType transactionType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveByLookupId = null;
         try {
-            JCObject objReceiveByLookupId = (JCObject)classInstance.Invoke("ReceiveByLookupId", action == null ? null : action.getJCOInstance(), lookupId, transactionType == null ? null : transactionType.getJCOInstance());
+            retObjectReceiveByLookupId = classInstance.Invoke("ReceiveByLookupId", action == null ? null : action.getJCOInstance(), lookupId, transactionType == null ? null : transactionType.getJCOInstance());
+            JCObject objReceiveByLookupId = (JCObject)retObjectReceiveByLookupId;
             return new Message(objReceiveByLookupId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveByLookupId != null ? retObjectReceiveByLookupId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -770,16 +962,20 @@ public class MessageQueue extends Component  {
 
     public Message[] GetAllMessages() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllMessages = null;
         try {
             ArrayList<Message> resultingArrayList = new ArrayList<Message>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAllMessages");
+            retObjectGetAllMessages = classInstance.Invoke("GetAllMessages");
+            JCObject resultingObjects = (JCObject)retObjectGetAllMessages;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Message(resultingObject));
             }
             Message[] resultingArray = new Message[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllMessages != null ? retObjectGetAllMessages.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -787,10 +983,14 @@ public class MessageQueue extends Component  {
 
     public MessageEnumerator GetMessageEnumerator() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMessageEnumerator = null;
         try {
-            JCObject objGetMessageEnumerator = (JCObject)classInstance.Invoke("GetMessageEnumerator");
+            retObjectGetMessageEnumerator = classInstance.Invoke("GetMessageEnumerator");
+            JCObject objGetMessageEnumerator = (JCObject)retObjectGetMessageEnumerator;
             return new MessageEnumerator(objGetMessageEnumerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMessageEnumerator != null ? retObjectGetMessageEnumerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -798,10 +998,14 @@ public class MessageQueue extends Component  {
 
     public MessageEnumerator GetMessageEnumerator2() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMessageEnumerator2 = null;
         try {
-            JCObject objGetMessageEnumerator2 = (JCObject)classInstance.Invoke("GetMessageEnumerator2");
+            retObjectGetMessageEnumerator2 = classInstance.Invoke("GetMessageEnumerator2");
+            JCObject objGetMessageEnumerator2 = (JCObject)retObjectGetMessageEnumerator2;
             return new MessageEnumerator(objGetMessageEnumerator2);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMessageEnumerator2 != null ? retObjectGetMessageEnumerator2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -809,10 +1013,14 @@ public class MessageQueue extends Component  {
 
     public static MessageQueue Create(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", path);
+            retObjectCreate = classType.Invoke("Create", path);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new MessageQueue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -820,10 +1028,14 @@ public class MessageQueue extends Component  {
 
     public static MessageQueue Create(java.lang.String path, boolean transactional) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", path, transactional);
+            retObjectCreate = classType.Invoke("Create", path, transactional);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new MessageQueue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -831,16 +1043,20 @@ public class MessageQueue extends Component  {
 
     public static MessageQueue[] GetPrivateQueuesByMachine(java.lang.String machineName) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.AccessViolationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPrivateQueuesByMachine = null;
         try {
             ArrayList<MessageQueue> resultingArrayList = new ArrayList<MessageQueue>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetPrivateQueuesByMachine", machineName);
+            retObjectGetPrivateQueuesByMachine = classType.Invoke("GetPrivateQueuesByMachine", machineName);
+            JCObject resultingObjects = (JCObject)retObjectGetPrivateQueuesByMachine;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MessageQueue(resultingObject));
             }
             MessageQueue[] resultingArray = new MessageQueue[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrivateQueuesByMachine != null ? retObjectGetPrivateQueuesByMachine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -848,16 +1064,20 @@ public class MessageQueue extends Component  {
 
     public static MessageQueue[] GetPublicQueues() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPublicQueues = null;
         try {
             ArrayList<MessageQueue> resultingArrayList = new ArrayList<MessageQueue>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetPublicQueues");
+            retObjectGetPublicQueues = classType.Invoke("GetPublicQueues");
+            JCObject resultingObjects = (JCObject)retObjectGetPublicQueues;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MessageQueue(resultingObject));
             }
             MessageQueue[] resultingArray = new MessageQueue[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPublicQueues != null ? retObjectGetPublicQueues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -865,16 +1085,20 @@ public class MessageQueue extends Component  {
 
     public static MessageQueue[] GetPublicQueues(MessageQueueCriteria criteria) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPublicQueues = null;
         try {
             ArrayList<MessageQueue> resultingArrayList = new ArrayList<MessageQueue>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetPublicQueues", criteria == null ? null : criteria.getJCOInstance());
+            retObjectGetPublicQueues = classType.Invoke("GetPublicQueues", criteria == null ? null : criteria.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetPublicQueues;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MessageQueue(resultingObject));
             }
             MessageQueue[] resultingArray = new MessageQueue[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPublicQueues != null ? retObjectGetPublicQueues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -882,16 +1106,20 @@ public class MessageQueue extends Component  {
 
     public static MessageQueue[] GetPublicQueuesByCategory(Guid category) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPublicQueuesByCategory = null;
         try {
             ArrayList<MessageQueue> resultingArrayList = new ArrayList<MessageQueue>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetPublicQueuesByCategory", category == null ? null : category.getJCOInstance());
+            retObjectGetPublicQueuesByCategory = classType.Invoke("GetPublicQueuesByCategory", category == null ? null : category.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetPublicQueuesByCategory;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MessageQueue(resultingObject));
             }
             MessageQueue[] resultingArray = new MessageQueue[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPublicQueuesByCategory != null ? retObjectGetPublicQueuesByCategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -899,16 +1127,20 @@ public class MessageQueue extends Component  {
 
     public static MessageQueue[] GetPublicQueuesByLabel(java.lang.String label) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPublicQueuesByLabel = null;
         try {
             ArrayList<MessageQueue> resultingArrayList = new ArrayList<MessageQueue>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetPublicQueuesByLabel", label);
+            retObjectGetPublicQueuesByLabel = classType.Invoke("GetPublicQueuesByLabel", label);
+            JCObject resultingObjects = (JCObject)retObjectGetPublicQueuesByLabel;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MessageQueue(resultingObject));
             }
             MessageQueue[] resultingArray = new MessageQueue[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPublicQueuesByLabel != null ? retObjectGetPublicQueuesByLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -916,16 +1148,20 @@ public class MessageQueue extends Component  {
 
     public static MessageQueue[] GetPublicQueuesByMachine(java.lang.String machineName) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.AccessViolationException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPublicQueuesByMachine = null;
         try {
             ArrayList<MessageQueue> resultingArrayList = new ArrayList<MessageQueue>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetPublicQueuesByMachine", machineName);
+            retObjectGetPublicQueuesByMachine = classType.Invoke("GetPublicQueuesByMachine", machineName);
+            JCObject resultingObjects = (JCObject)retObjectGetPublicQueuesByMachine;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MessageQueue(resultingObject));
             }
             MessageQueue[] resultingArray = new MessageQueue[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPublicQueuesByMachine != null ? retObjectGetPublicQueuesByMachine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -933,10 +1169,14 @@ public class MessageQueue extends Component  {
 
     public static MessageQueueEnumerator GetMessageQueueEnumerator() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMessageQueueEnumerator = null;
         try {
-            JCObject objGetMessageQueueEnumerator = (JCObject)classType.Invoke("GetMessageQueueEnumerator");
+            retObjectGetMessageQueueEnumerator = classType.Invoke("GetMessageQueueEnumerator");
+            JCObject objGetMessageQueueEnumerator = (JCObject)retObjectGetMessageQueueEnumerator;
             return new MessageQueueEnumerator(objGetMessageQueueEnumerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMessageQueueEnumerator != null ? retObjectGetMessageQueueEnumerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -944,10 +1184,14 @@ public class MessageQueue extends Component  {
 
     public static MessageQueueEnumerator GetMessageQueueEnumerator(MessageQueueCriteria criteria) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMessageQueueEnumerator = null;
         try {
-            JCObject objGetMessageQueueEnumerator = (JCObject)classType.Invoke("GetMessageQueueEnumerator", criteria == null ? null : criteria.getJCOInstance());
+            retObjectGetMessageQueueEnumerator = classType.Invoke("GetMessageQueueEnumerator", criteria == null ? null : criteria.getJCOInstance());
+            JCObject objGetMessageQueueEnumerator = (JCObject)retObjectGetMessageQueueEnumerator;
             return new MessageQueueEnumerator(objGetMessageQueueEnumerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMessageQueueEnumerator != null ? retObjectGetMessageQueueEnumerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -955,10 +1199,14 @@ public class MessageQueue extends Component  {
 
     public static SecurityContext GetSecurityContext() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.messaging.MessageQueueException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSecurityContext = null;
         try {
-            JCObject objGetSecurityContext = (JCObject)classType.Invoke("GetSecurityContext");
+            retObjectGetSecurityContext = classType.Invoke("GetSecurityContext");
+            JCObject objGetSecurityContext = (JCObject)retObjectGetSecurityContext;
             return new SecurityContext(objGetSecurityContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSecurityContext != null ? retObjectGetSecurityContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -966,7 +1214,7 @@ public class MessageQueue extends Component  {
 
     public static void ClearConnectionCache() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ClearConnectionCache");
         } catch (JCNativeException jcne) {
@@ -976,7 +1224,7 @@ public class MessageQueue extends Component  {
 
     public void Close() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -986,7 +1234,7 @@ public class MessageQueue extends Component  {
 
     public static void Delete(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Delete", path);
         } catch (JCNativeException jcne) {
@@ -996,7 +1244,7 @@ public class MessageQueue extends Component  {
 
     public void Purge() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Purge");
         } catch (JCNativeException jcne) {
@@ -1006,7 +1254,7 @@ public class MessageQueue extends Component  {
 
     public void Refresh() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Refresh");
         } catch (JCNativeException jcne) {
@@ -1016,7 +1264,7 @@ public class MessageQueue extends Component  {
 
     public void ResetPermissions() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetPermissions");
         } catch (JCNativeException jcne) {
@@ -1026,7 +1274,7 @@ public class MessageQueue extends Component  {
 
     public void Send(NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Send", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1036,7 +1284,7 @@ public class MessageQueue extends Component  {
 
     public void Send(NetObject obj, MessageQueueTransaction transaction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Send", obj == null ? null : obj.getJCOInstance(), transaction == null ? null : transaction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1046,7 +1294,7 @@ public class MessageQueue extends Component  {
 
     public void Send(NetObject obj, MessageQueueTransactionType transactionType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Send", obj == null ? null : obj.getJCOInstance(), transactionType == null ? null : transactionType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1056,7 +1304,7 @@ public class MessageQueue extends Component  {
 
     public void Send(NetObject obj, java.lang.String label) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.NullReferenceException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Send", obj == null ? null : obj.getJCOInstance(), label);
         } catch (JCNativeException jcne) {
@@ -1066,7 +1314,7 @@ public class MessageQueue extends Component  {
 
     public void Send(NetObject obj, java.lang.String label, MessageQueueTransaction transaction) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.NullReferenceException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Send", obj == null ? null : obj.getJCOInstance(), label, transaction == null ? null : transaction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1076,7 +1324,7 @@ public class MessageQueue extends Component  {
 
     public void Send(NetObject obj, java.lang.String label, MessageQueueTransactionType transactionType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.PlatformNotSupportedException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Send", obj == null ? null : obj.getJCOInstance(), label, transactionType == null ? null : transactionType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1086,7 +1334,7 @@ public class MessageQueue extends Component  {
 
     public void SetPermissions(AccessControlList dacl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.NullReferenceException, system.security.SecurityException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetPermissions", dacl == null ? null : dacl.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1096,7 +1344,7 @@ public class MessageQueue extends Component  {
 
     public void SetPermissions(MessageQueueAccessControlEntry ace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetPermissions", ace == null ? null : ace.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1106,7 +1354,7 @@ public class MessageQueue extends Component  {
 
     public void SetPermissions(java.lang.String user, MessageQueueAccessRights rights) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.OutOfMemoryException, system.security.SecurityException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetPermissions", user, rights == null ? null : rights.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1116,7 +1364,7 @@ public class MessageQueue extends Component  {
 
     public void SetPermissions(java.lang.String user, MessageQueueAccessRights rights, AccessControlEntryType entryType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException, system.OutOfMemoryException, system.security.SecurityException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetPermissions", user, rights == null ? null : rights.getJCOInstance(), entryType == null ? null : entryType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1130,9 +1378,13 @@ public class MessageQueue extends Component  {
     
     public boolean getAuthenticate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticate = null;
         try {
-            return (boolean)classInstance.Get("Authenticate");
+            retObjectAuthenticate = classInstance.Get("Authenticate");
+            return (boolean)retObjectAuthenticate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAuthenticate != null ? retObjectAuthenticate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1140,7 +1392,7 @@ public class MessageQueue extends Component  {
 
     public void setAuthenticate(boolean Authenticate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Authenticate", Authenticate);
         } catch (JCNativeException jcne) {
@@ -1150,9 +1402,13 @@ public class MessageQueue extends Component  {
 
     public boolean getCanRead() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRead = null;
         try {
-            return (boolean)classInstance.Get("CanRead");
+            retObjectCanRead = classInstance.Get("CanRead");
+            return (boolean)retObjectCanRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanRead != null ? retObjectCanRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1160,9 +1416,13 @@ public class MessageQueue extends Component  {
 
     public boolean getCanWrite() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanWrite = null;
         try {
-            return (boolean)classInstance.Get("CanWrite");
+            retObjectCanWrite = classInstance.Get("CanWrite");
+            return (boolean)retObjectCanWrite;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanWrite != null ? retObjectCanWrite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1170,9 +1430,13 @@ public class MessageQueue extends Component  {
 
     public boolean getDenySharedReceive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDenySharedReceive = null;
         try {
-            return (boolean)classInstance.Get("DenySharedReceive");
+            retObjectDenySharedReceive = classInstance.Get("DenySharedReceive");
+            return (boolean)retObjectDenySharedReceive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDenySharedReceive != null ? retObjectDenySharedReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1180,7 +1444,7 @@ public class MessageQueue extends Component  {
 
     public void setDenySharedReceive(boolean DenySharedReceive) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DenySharedReceive", DenySharedReceive);
         } catch (JCNativeException jcne) {
@@ -1190,9 +1454,13 @@ public class MessageQueue extends Component  {
 
     public static boolean getEnableConnectionCache() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEnableConnectionCache = null;
         try {
-            return (boolean)classType.Get("EnableConnectionCache");
+            retObjectEnableConnectionCache = classType.Get("EnableConnectionCache");
+            return (boolean)retObjectEnableConnectionCache;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableConnectionCache != null ? retObjectEnableConnectionCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1200,7 +1468,7 @@ public class MessageQueue extends Component  {
 
     public static void setEnableConnectionCache(boolean EnableConnectionCache) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("EnableConnectionCache", EnableConnectionCache);
         } catch (JCNativeException jcne) {
@@ -1210,9 +1478,13 @@ public class MessageQueue extends Component  {
 
     public boolean getTransactional() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactional = null;
         try {
-            return (boolean)classInstance.Get("Transactional");
+            retObjectTransactional = classInstance.Get("Transactional");
+            return (boolean)retObjectTransactional;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTransactional != null ? retObjectTransactional.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1220,9 +1492,13 @@ public class MessageQueue extends Component  {
 
     public boolean getUseJournalQueue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseJournalQueue = null;
         try {
-            return (boolean)classInstance.Get("UseJournalQueue");
+            retObjectUseJournalQueue = classInstance.Get("UseJournalQueue");
+            return (boolean)retObjectUseJournalQueue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseJournalQueue != null ? retObjectUseJournalQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1230,7 +1506,7 @@ public class MessageQueue extends Component  {
 
     public void setUseJournalQueue(boolean UseJournalQueue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseJournalQueue", UseJournalQueue);
         } catch (JCNativeException jcne) {
@@ -1240,9 +1516,19 @@ public class MessageQueue extends Component  {
 
     public short getBasePriority() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBasePriority = null;
         try {
-            return (short)classInstance.Get("BasePriority");
+            retObjectBasePriority = classInstance.Get("BasePriority");
+            return (short)retObjectBasePriority;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBasePriorityNumber = (java.lang.Number)retObjectBasePriority;
+                return retObjectBasePriorityNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectBasePriority != null ? retObjectBasePriority.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1250,7 +1536,7 @@ public class MessageQueue extends Component  {
 
     public void setBasePriority(short BasePriority) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BasePriority", BasePriority);
         } catch (JCNativeException jcne) {
@@ -1260,9 +1546,19 @@ public class MessageQueue extends Component  {
 
     public long getMaximumJournalSize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumJournalSize = null;
         try {
-            return (long)classInstance.Get("MaximumJournalSize");
+            retObjectMaximumJournalSize = classInstance.Get("MaximumJournalSize");
+            return (long)retObjectMaximumJournalSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumJournalSizeNumber = (java.lang.Number)retObjectMaximumJournalSize;
+                return retObjectMaximumJournalSizeNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMaximumJournalSize != null ? retObjectMaximumJournalSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1270,7 +1566,7 @@ public class MessageQueue extends Component  {
 
     public void setMaximumJournalSize(long MaximumJournalSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaximumJournalSize", MaximumJournalSize);
         } catch (JCNativeException jcne) {
@@ -1280,9 +1576,19 @@ public class MessageQueue extends Component  {
 
     public long getMaximumQueueSize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumQueueSize = null;
         try {
-            return (long)classInstance.Get("MaximumQueueSize");
+            retObjectMaximumQueueSize = classInstance.Get("MaximumQueueSize");
+            return (long)retObjectMaximumQueueSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumQueueSizeNumber = (java.lang.Number)retObjectMaximumQueueSize;
+                return retObjectMaximumQueueSizeNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMaximumQueueSize != null ? retObjectMaximumQueueSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1290,7 +1596,7 @@ public class MessageQueue extends Component  {
 
     public void setMaximumQueueSize(long MaximumQueueSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaximumQueueSize", MaximumQueueSize);
         } catch (JCNativeException jcne) {
@@ -1300,10 +1606,14 @@ public class MessageQueue extends Component  {
 
     public ISynchronizeInvoke getSynchronizingObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSynchronizingObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SynchronizingObject");
+            retObjectSynchronizingObject = classInstance.Get("SynchronizingObject");
+            JCObject val = (JCObject)retObjectSynchronizingObject;
             return new ISynchronizeInvokeImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSynchronizingObject != null ? retObjectSynchronizingObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1311,7 +1621,7 @@ public class MessageQueue extends Component  {
 
     public void setSynchronizingObject(ISynchronizeInvoke SynchronizingObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SynchronizingObject", SynchronizingObject == null ? null : SynchronizingObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1321,10 +1631,14 @@ public class MessageQueue extends Component  {
 
     public DateTime getCreateTime() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException, system.InvalidTimeZoneException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CreateTime");
+            retObjectCreateTime = classInstance.Get("CreateTime");
+            JCObject val = (JCObject)retObjectCreateTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTime != null ? retObjectCreateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1332,10 +1646,14 @@ public class MessageQueue extends Component  {
 
     public DateTime getLastModifyTime() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException, system.InvalidTimeZoneException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastModifyTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastModifyTime");
+            retObjectLastModifyTime = classInstance.Get("LastModifyTime");
+            JCObject val = (JCObject)retObjectLastModifyTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastModifyTime != null ? retObjectLastModifyTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1343,10 +1661,14 @@ public class MessageQueue extends Component  {
 
     public Guid getCategory() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Category");
+            retObjectCategory = classInstance.Get("Category");
+            JCObject val = (JCObject)retObjectCategory;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCategory != null ? retObjectCategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1354,7 +1676,7 @@ public class MessageQueue extends Component  {
 
     public void setCategory(Guid Category) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Category", Category == null ? null : Category.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1364,10 +1686,14 @@ public class MessageQueue extends Component  {
 
     public Guid getId() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            JCObject val = (JCObject)retObjectId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1375,10 +1701,14 @@ public class MessageQueue extends Component  {
 
     public DefaultPropertiesToSend getDefaultPropertiesToSend() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultPropertiesToSend = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultPropertiesToSend");
+            retObjectDefaultPropertiesToSend = classInstance.Get("DefaultPropertiesToSend");
+            JCObject val = (JCObject)retObjectDefaultPropertiesToSend;
             return new DefaultPropertiesToSend(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultPropertiesToSend != null ? retObjectDefaultPropertiesToSend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1386,7 +1716,7 @@ public class MessageQueue extends Component  {
 
     public void setDefaultPropertiesToSend(DefaultPropertiesToSend DefaultPropertiesToSend) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultPropertiesToSend", DefaultPropertiesToSend == null ? null : DefaultPropertiesToSend.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1396,10 +1726,14 @@ public class MessageQueue extends Component  {
 
     public EncryptionRequired getEncryptionRequired() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptionRequired = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EncryptionRequired");
+            retObjectEncryptionRequired = classInstance.Get("EncryptionRequired");
+            JCObject val = (JCObject)retObjectEncryptionRequired;
             return new EncryptionRequired(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncryptionRequired != null ? retObjectEncryptionRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1407,7 +1741,7 @@ public class MessageQueue extends Component  {
 
     public void setEncryptionRequired(EncryptionRequired EncryptionRequired) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EncryptionRequired", EncryptionRequired == null ? null : EncryptionRequired.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1417,10 +1751,14 @@ public class MessageQueue extends Component  {
 
     public IMessageFormatter getFormatter() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Formatter");
+            retObjectFormatter = classInstance.Get("Formatter");
+            JCObject val = (JCObject)retObjectFormatter;
             return new IMessageFormatterImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormatter != null ? retObjectFormatter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1428,7 +1766,7 @@ public class MessageQueue extends Component  {
 
     public void setFormatter(IMessageFormatter Formatter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Formatter", Formatter == null ? null : Formatter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1438,10 +1776,14 @@ public class MessageQueue extends Component  {
 
     public MessagePropertyFilter getMessageReadPropertyFilter() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageReadPropertyFilter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageReadPropertyFilter");
+            retObjectMessageReadPropertyFilter = classInstance.Get("MessageReadPropertyFilter");
+            JCObject val = (JCObject)retObjectMessageReadPropertyFilter;
             return new MessagePropertyFilter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageReadPropertyFilter != null ? retObjectMessageReadPropertyFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1449,7 +1791,7 @@ public class MessageQueue extends Component  {
 
     public void setMessageReadPropertyFilter(MessagePropertyFilter MessageReadPropertyFilter) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageReadPropertyFilter", MessageReadPropertyFilter == null ? null : MessageReadPropertyFilter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1459,10 +1801,14 @@ public class MessageQueue extends Component  {
 
     public QueueAccessMode getAccessMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AccessMode");
+            retObjectAccessMode = classInstance.Get("AccessMode");
+            JCObject val = (JCObject)retObjectAccessMode;
             return new QueueAccessMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccessMode != null ? retObjectAccessMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1470,9 +1816,13 @@ public class MessageQueue extends Component  {
 
     public java.lang.String getFormatName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.FormatException, system.NotImplementedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.messaging.MessageQueueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatName = null;
         try {
-            return (java.lang.String)classInstance.Get("FormatName");
+            retObjectFormatName = classInstance.Get("FormatName");
+            return (java.lang.String)retObjectFormatName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFormatName != null ? retObjectFormatName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1480,9 +1830,13 @@ public class MessageQueue extends Component  {
 
     public java.lang.String getLabel() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLabel = null;
         try {
-            return (java.lang.String)classInstance.Get("Label");
+            retObjectLabel = classInstance.Get("Label");
+            return (java.lang.String)retObjectLabel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLabel != null ? retObjectLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1490,7 +1844,7 @@ public class MessageQueue extends Component  {
 
     public void setLabel(java.lang.String Label) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Label", Label);
         } catch (JCNativeException jcne) {
@@ -1500,9 +1854,13 @@ public class MessageQueue extends Component  {
 
     public java.lang.String getMachineName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMachineName = null;
         try {
-            return (java.lang.String)classInstance.Get("MachineName");
+            retObjectMachineName = classInstance.Get("MachineName");
+            return (java.lang.String)retObjectMachineName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMachineName != null ? retObjectMachineName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1510,7 +1868,7 @@ public class MessageQueue extends Component  {
 
     public void setMachineName(java.lang.String MachineName) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MachineName", MachineName);
         } catch (JCNativeException jcne) {
@@ -1520,9 +1878,13 @@ public class MessageQueue extends Component  {
 
     public java.lang.String getMulticastAddress() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMulticastAddress = null;
         try {
-            return (java.lang.String)classInstance.Get("MulticastAddress");
+            retObjectMulticastAddress = classInstance.Get("MulticastAddress");
+            return (java.lang.String)retObjectMulticastAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMulticastAddress != null ? retObjectMulticastAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1530,7 +1892,7 @@ public class MessageQueue extends Component  {
 
     public void setMulticastAddress(java.lang.String MulticastAddress) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MulticastAddress", MulticastAddress);
         } catch (JCNativeException jcne) {
@@ -1540,9 +1902,13 @@ public class MessageQueue extends Component  {
 
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPath = null;
         try {
-            return (java.lang.String)classInstance.Get("Path");
+            retObjectPath = classInstance.Get("Path");
+            return (java.lang.String)retObjectPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPath != null ? retObjectPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1550,7 +1916,7 @@ public class MessageQueue extends Component  {
 
     public void setPath(java.lang.String Path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Path", Path);
         } catch (JCNativeException jcne) {
@@ -1560,9 +1926,13 @@ public class MessageQueue extends Component  {
 
     public java.lang.String getQueueName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQueueName = null;
         try {
-            return (java.lang.String)classInstance.Get("QueueName");
+            retObjectQueueName = classInstance.Get("QueueName");
+            return (java.lang.String)retObjectQueueName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectQueueName != null ? retObjectQueueName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1570,7 +1940,7 @@ public class MessageQueue extends Component  {
 
     public void setQueueName(java.lang.String QueueName) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QueueName", QueueName);
         } catch (JCNativeException jcne) {
@@ -1585,7 +1955,7 @@ public class MessageQueue extends Component  {
 
     public void addPeekCompleted(PeekCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PeekCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1595,7 +1965,7 @@ public class MessageQueue extends Component  {
 
     public void removePeekCompleted(PeekCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PeekCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1605,7 +1975,7 @@ public class MessageQueue extends Component  {
 
     public void addReceiveCompleted(ReceiveCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ReceiveCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1615,7 +1985,7 @@ public class MessageQueue extends Component  {
 
     public void removeReceiveCompleted(ReceiveCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ReceiveCompleted", handler);
         } catch (JCNativeException jcne) {

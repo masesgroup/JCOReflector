@@ -190,9 +190,13 @@ public class DisplayColumnAttribute extends Attribute  {
     
     public boolean getSortDescending() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortDescending = null;
         try {
-            return (boolean)classInstance.Get("SortDescending");
+            retObjectSortDescending = classInstance.Get("SortDescending");
+            return (boolean)retObjectSortDescending;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSortDescending != null ? retObjectSortDescending.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +204,13 @@ public class DisplayColumnAttribute extends Attribute  {
 
     public java.lang.String getDisplayColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayColumn = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayColumn");
+            retObjectDisplayColumn = classInstance.Get("DisplayColumn");
+            return (java.lang.String)retObjectDisplayColumn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayColumn != null ? retObjectDisplayColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +218,13 @@ public class DisplayColumnAttribute extends Attribute  {
 
     public java.lang.String getSortColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortColumn = null;
         try {
-            return (java.lang.String)classInstance.Get("SortColumn");
+            retObjectSortColumn = classInstance.Get("SortColumn");
+            return (java.lang.String)retObjectSortColumn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSortColumn != null ? retObjectSortColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

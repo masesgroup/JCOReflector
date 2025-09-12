@@ -173,7 +173,7 @@ public class HttpPolicyDownloaderProtocol extends NetObject  {
     
     public void Abort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abort");
         } catch (JCNativeException jcne) {
@@ -183,7 +183,7 @@ public class HttpPolicyDownloaderProtocol extends NetObject  {
 
     public void BeginDownload(SecurityCriticalAction callback) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginDownload", callback);
         } catch (JCNativeException jcne) {
@@ -193,7 +193,7 @@ public class HttpPolicyDownloaderProtocol extends NetObject  {
 
     public void DownloadCallback(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadCallback", ar == null ? null : ar.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,7 +203,7 @@ public class HttpPolicyDownloaderProtocol extends NetObject  {
 
     public void ReadCallback(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadCallback", ar == null ? null : ar.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -213,7 +213,7 @@ public class HttpPolicyDownloaderProtocol extends NetObject  {
 
     public static void RegisterUnsafeWebRequestCreator(IUnsafeWebRequestCreate creator) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterUnsafeWebRequestCreator", creator == null ? null : creator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -227,10 +227,14 @@ public class HttpPolicyDownloaderProtocol extends NetObject  {
     
     public SocketPolicy getResult() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResult = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Result");
+            retObjectResult = classInstance.Get("Result");
+            JCObject val = (JCObject)retObjectResult;
             return new SocketPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResult != null ? retObjectResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

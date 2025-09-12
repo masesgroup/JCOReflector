@@ -153,7 +153,7 @@ public class TraceConfiguration extends NetObject  {
     
     public static void Register() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.InvalidCastException, system.OverflowException, system.reflection.AmbiguousMatchException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Register");
         } catch (JCNativeException jcne) {

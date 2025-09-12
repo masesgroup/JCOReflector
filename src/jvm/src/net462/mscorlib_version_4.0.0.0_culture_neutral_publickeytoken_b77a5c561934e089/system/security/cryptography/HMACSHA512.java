@@ -176,9 +176,13 @@ public class HMACSHA512 extends HMAC  {
     
     public boolean getProduceLegacyHmacValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProduceLegacyHmacValues = null;
         try {
-            return (boolean)classInstance.Get("ProduceLegacyHmacValues");
+            retObjectProduceLegacyHmacValues = classInstance.Get("ProduceLegacyHmacValues");
+            return (boolean)retObjectProduceLegacyHmacValues;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectProduceLegacyHmacValues != null ? retObjectProduceLegacyHmacValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class HMACSHA512 extends HMAC  {
 
     public void setProduceLegacyHmacValues(boolean ProduceLegacyHmacValues) throws Throwable, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProduceLegacyHmacValues", ProduceLegacyHmacValues);
         } catch (JCNativeException jcne) {

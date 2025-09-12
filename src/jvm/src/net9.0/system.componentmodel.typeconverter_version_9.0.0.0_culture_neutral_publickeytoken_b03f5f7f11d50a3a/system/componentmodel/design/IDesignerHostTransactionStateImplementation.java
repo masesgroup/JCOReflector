@@ -146,9 +146,13 @@ public class IDesignerHostTransactionStateImplementation extends NetObject imple
     
     public boolean getIsClosingTransaction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsClosingTransaction = null;
         try {
-            return (boolean)classInstance.Get("IsClosingTransaction");
+            retObjectIsClosingTransaction = classInstance.Get("IsClosingTransaction");
+            return (boolean)retObjectIsClosingTransaction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsClosingTransaction != null ? retObjectIsClosingTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

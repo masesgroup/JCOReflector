@@ -164,9 +164,13 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
     
     public static boolean TryParse(java.lang.String input, JCORefOut<CacheControlHeaderValue> parsedValue) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", input, parsedValue.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", input, parsedValue.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
 
     public static CacheControlHeaderValue Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", input);
+            retObjectParse = classType.Invoke("Parse", input);
+            JCObject objParse = (JCObject)retObjectParse;
             return new CacheControlHeaderValue(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
      */
     @Deprecated 
     public NetObject Clone() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
     }
 
 
@@ -198,9 +206,13 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
     
     public boolean getMaxStale() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxStale = null;
         try {
-            return (boolean)classInstance.Get("MaxStale");
+            retObjectMaxStale = classInstance.Get("MaxStale");
+            return (boolean)retObjectMaxStale;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMaxStale != null ? retObjectMaxStale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +220,7 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
 
     public void setMaxStale(boolean MaxStale) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxStale", MaxStale);
         } catch (JCNativeException jcne) {
@@ -218,9 +230,13 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
 
     public boolean getMustRevalidate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMustRevalidate = null;
         try {
-            return (boolean)classInstance.Get("MustRevalidate");
+            retObjectMustRevalidate = classInstance.Get("MustRevalidate");
+            return (boolean)retObjectMustRevalidate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMustRevalidate != null ? retObjectMustRevalidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +244,7 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
 
     public void setMustRevalidate(boolean MustRevalidate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MustRevalidate", MustRevalidate);
         } catch (JCNativeException jcne) {
@@ -238,9 +254,13 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
 
     public boolean getNoCache() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoCache = null;
         try {
-            return (boolean)classInstance.Get("NoCache");
+            retObjectNoCache = classInstance.Get("NoCache");
+            return (boolean)retObjectNoCache;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNoCache != null ? retObjectNoCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +268,7 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
 
     public void setNoCache(boolean NoCache) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoCache", NoCache);
         } catch (JCNativeException jcne) {
@@ -258,9 +278,13 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
 
     public boolean getNoStore() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoStore = null;
         try {
-            return (boolean)classInstance.Get("NoStore");
+            retObjectNoStore = classInstance.Get("NoStore");
+            return (boolean)retObjectNoStore;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNoStore != null ? retObjectNoStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +292,7 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
 
     public void setNoStore(boolean NoStore) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoStore", NoStore);
         } catch (JCNativeException jcne) {
@@ -278,9 +302,13 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
 
     public boolean getNoTransform() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoTransform = null;
         try {
-            return (boolean)classInstance.Get("NoTransform");
+            retObjectNoTransform = classInstance.Get("NoTransform");
+            return (boolean)retObjectNoTransform;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNoTransform != null ? retObjectNoTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +316,7 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
 
     public void setNoTransform(boolean NoTransform) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoTransform", NoTransform);
         } catch (JCNativeException jcne) {
@@ -298,9 +326,13 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
 
     public boolean getOnlyIfCached() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnlyIfCached = null;
         try {
-            return (boolean)classInstance.Get("OnlyIfCached");
+            retObjectOnlyIfCached = classInstance.Get("OnlyIfCached");
+            return (boolean)retObjectOnlyIfCached;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOnlyIfCached != null ? retObjectOnlyIfCached.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,7 +340,7 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
 
     public void setOnlyIfCached(boolean OnlyIfCached) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OnlyIfCached", OnlyIfCached);
         } catch (JCNativeException jcne) {
@@ -318,9 +350,13 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
 
     public boolean getPrivate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrivate = null;
         try {
-            return (boolean)classInstance.Get("Private");
+            retObjectPrivate = classInstance.Get("Private");
+            return (boolean)retObjectPrivate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPrivate != null ? retObjectPrivate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,7 +364,7 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
 
     public void setPrivate(boolean Private) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Private", Private);
         } catch (JCNativeException jcne) {
@@ -338,9 +374,13 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
 
     public boolean getProxyRevalidate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProxyRevalidate = null;
         try {
-            return (boolean)classInstance.Get("ProxyRevalidate");
+            retObjectProxyRevalidate = classInstance.Get("ProxyRevalidate");
+            return (boolean)retObjectProxyRevalidate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectProxyRevalidate != null ? retObjectProxyRevalidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,7 +388,7 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
 
     public void setProxyRevalidate(boolean ProxyRevalidate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProxyRevalidate", ProxyRevalidate);
         } catch (JCNativeException jcne) {
@@ -358,9 +398,13 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
 
     public boolean getPublic() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPublic = null;
         try {
-            return (boolean)classInstance.Get("Public");
+            retObjectPublic = classInstance.Get("Public");
+            return (boolean)retObjectPublic;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPublic != null ? retObjectPublic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -368,7 +412,7 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
 
     public void setPublic(boolean Public) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Public", Public);
         } catch (JCNativeException jcne) {

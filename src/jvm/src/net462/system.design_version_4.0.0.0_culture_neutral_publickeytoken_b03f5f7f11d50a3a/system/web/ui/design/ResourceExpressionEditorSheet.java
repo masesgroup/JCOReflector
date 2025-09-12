@@ -168,9 +168,13 @@ public class ResourceExpressionEditorSheet extends ExpressionEditorSheet  {
     
     public java.lang.String GetExpression() throws Throwable, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExpression = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetExpression");
+            retObjectGetExpression = classInstance.Invoke("GetExpression");
+            return (java.lang.String)retObjectGetExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetExpression != null ? retObjectGetExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class ResourceExpressionEditorSheet extends ExpressionEditorSheet  {
     
     public java.lang.String getClassKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClassKey = null;
         try {
-            return (java.lang.String)classInstance.Get("ClassKey");
+            retObjectClassKey = classInstance.Get("ClassKey");
+            return (java.lang.String)retObjectClassKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClassKey != null ? retObjectClassKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class ResourceExpressionEditorSheet extends ExpressionEditorSheet  {
 
     public void setClassKey(java.lang.String ClassKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClassKey", ClassKey);
         } catch (JCNativeException jcne) {
@@ -202,9 +210,13 @@ public class ResourceExpressionEditorSheet extends ExpressionEditorSheet  {
 
     public java.lang.String getResourceKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourceKey = null;
         try {
-            return (java.lang.String)classInstance.Get("ResourceKey");
+            retObjectResourceKey = classInstance.Get("ResourceKey");
+            return (java.lang.String)retObjectResourceKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectResourceKey != null ? retObjectResourceKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +224,7 @@ public class ResourceExpressionEditorSheet extends ExpressionEditorSheet  {
 
     public void setResourceKey(java.lang.String ResourceKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResourceKey", ResourceKey);
         } catch (JCNativeException jcne) {

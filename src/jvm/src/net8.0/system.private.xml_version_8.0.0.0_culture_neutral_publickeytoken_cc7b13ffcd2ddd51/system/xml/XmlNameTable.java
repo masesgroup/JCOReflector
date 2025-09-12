@@ -153,9 +153,13 @@ public class XmlNameTable extends NetObject  {
     
     public java.lang.String Add(char[] array, int offset, int length) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Add", array, offset, length);
+            retObjectAdd = classInstance.Invoke("Add", array, offset, length);
+            return (java.lang.String)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,9 +167,13 @@ public class XmlNameTable extends NetObject  {
 
     public java.lang.String Add(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Add", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectAdd = classInstance.Invoke("Add", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (java.lang.String)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +181,13 @@ public class XmlNameTable extends NetObject  {
 
     public java.lang.String Add(java.lang.String array) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Add", array);
+            retObjectAdd = classInstance.Invoke("Add", array);
+            return (java.lang.String)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +195,13 @@ public class XmlNameTable extends NetObject  {
 
     public java.lang.String Get(char[] array, int offset, int length) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGet = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Get", array, offset, length);
+            retObjectGet = classInstance.Invoke("Get", array, offset, length);
+            return (java.lang.String)retObjectGet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGet != null ? retObjectGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +209,13 @@ public class XmlNameTable extends NetObject  {
 
     public java.lang.String Get(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGet = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Get", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectGet = classInstance.Invoke("Get", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (java.lang.String)retObjectGet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGet != null ? retObjectGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +223,13 @@ public class XmlNameTable extends NetObject  {
 
     public java.lang.String Get(java.lang.String array) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGet = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Get", array);
+            retObjectGet = classInstance.Invoke("Get", array);
+            return (java.lang.String)retObjectGet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGet != null ? retObjectGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

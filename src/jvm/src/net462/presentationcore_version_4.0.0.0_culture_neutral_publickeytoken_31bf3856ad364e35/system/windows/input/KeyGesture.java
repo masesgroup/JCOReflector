@@ -190,9 +190,13 @@ public class KeyGesture extends InputGesture  {
     
     public boolean Matches(NetObject targetElement, InputEventArgs inputEventArgs) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", targetElement == null ? null : targetElement.getJCOInstance(), inputEventArgs == null ? null : inputEventArgs.getJCOInstance());
+            retObjectMatches = classInstance.Invoke("Matches", targetElement == null ? null : targetElement.getJCOInstance(), inputEventArgs == null ? null : inputEventArgs.getJCOInstance());
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +204,13 @@ public class KeyGesture extends InputGesture  {
 
     public java.lang.String GetDisplayStringForCulture(CultureInfo culture) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDisplayStringForCulture = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetDisplayStringForCulture", culture == null ? null : culture.getJCOInstance());
+            retObjectGetDisplayStringForCulture = classInstance.Invoke("GetDisplayStringForCulture", culture == null ? null : culture.getJCOInstance());
+            return (java.lang.String)retObjectGetDisplayStringForCulture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDisplayStringForCulture != null ? retObjectGetDisplayStringForCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +222,13 @@ public class KeyGesture extends InputGesture  {
     
     public java.lang.String getDisplayString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayString = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayString");
+            retObjectDisplayString = classInstance.Get("DisplayString");
+            return (java.lang.String)retObjectDisplayString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayString != null ? retObjectDisplayString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +236,14 @@ public class KeyGesture extends InputGesture  {
 
     public Key getKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Key");
+            retObjectKey = classInstance.Get("Key");
+            JCObject val = (JCObject)retObjectKey;
             return new Key(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKey != null ? retObjectKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +251,14 @@ public class KeyGesture extends InputGesture  {
 
     public ModifierKeys getModifiers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModifiers = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Modifiers");
+            retObjectModifiers = classInstance.Get("Modifiers");
+            JCObject val = (JCObject)retObjectModifiers;
             return new ModifierKeys(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModifiers != null ? retObjectModifiers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

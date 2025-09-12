@@ -172,9 +172,13 @@ public class FaultPropagationRecord extends TrackingRecord  {
     
     public boolean getIsFaultSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFaultSource = null;
         try {
-            return (boolean)classInstance.Get("IsFaultSource");
+            retObjectIsFaultSource = classInstance.Get("IsFaultSource");
+            return (boolean)retObjectIsFaultSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFaultSource != null ? retObjectIsFaultSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class FaultPropagationRecord extends TrackingRecord  {
 
     public void setIsFaultSource(boolean IsFaultSource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsFaultSource", IsFaultSource);
         } catch (JCNativeException jcne) {
@@ -192,10 +196,14 @@ public class FaultPropagationRecord extends TrackingRecord  {
 
     public ActivityInfo getFaultHandler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFaultHandler = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FaultHandler");
+            retObjectFaultHandler = classInstance.Get("FaultHandler");
+            JCObject val = (JCObject)retObjectFaultHandler;
             return new ActivityInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFaultHandler != null ? retObjectFaultHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +211,7 @@ public class FaultPropagationRecord extends TrackingRecord  {
 
     public void setFaultHandler(ActivityInfo FaultHandler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FaultHandler", FaultHandler == null ? null : FaultHandler.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -213,10 +221,14 @@ public class FaultPropagationRecord extends TrackingRecord  {
 
     public ActivityInfo getFaultSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFaultSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FaultSource");
+            retObjectFaultSource = classInstance.Get("FaultSource");
+            JCObject val = (JCObject)retObjectFaultSource;
             return new ActivityInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFaultSource != null ? retObjectFaultSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +236,7 @@ public class FaultPropagationRecord extends TrackingRecord  {
 
     public void setFaultSource(ActivityInfo FaultSource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FaultSource", FaultSource == null ? null : FaultSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -234,10 +246,14 @@ public class FaultPropagationRecord extends TrackingRecord  {
 
     public NetException getFault() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFault = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Fault");
+            retObjectFault = classInstance.Get("Fault");
+            JCObject val = (JCObject)retObjectFault;
             return new NetException(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFault != null ? retObjectFault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +261,7 @@ public class FaultPropagationRecord extends TrackingRecord  {
 
     public void setFault(NetException Fault) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Fault", Fault == null ? null : Fault.getJCOInstance());
         } catch (JCNativeException jcne) {

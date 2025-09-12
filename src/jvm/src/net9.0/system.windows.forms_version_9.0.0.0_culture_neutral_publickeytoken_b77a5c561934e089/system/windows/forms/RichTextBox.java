@@ -183,9 +183,19 @@ public class RichTextBox extends TextBoxBase  {
     
     public int Find(char[] characterSet, int start, int end) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            return (int)classInstance.Invoke("Find", characterSet, start, end);
+            retObjectFind = classInstance.Invoke("Find", characterSet, start, end);
+            return (int)retObjectFind;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
+                return retObjectFindNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +203,19 @@ public class RichTextBox extends TextBoxBase  {
 
     public int Find(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            return (int)classInstance.Invoke("Find", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectFind = classInstance.Invoke("Find", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectFind;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
+                return retObjectFindNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +223,19 @@ public class RichTextBox extends TextBoxBase  {
 
     public int Find(char[] characterSet, int start) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            return (int)classInstance.Invoke("Find", characterSet, start);
+            retObjectFind = classInstance.Invoke("Find", characterSet, start);
+            return (int)retObjectFind;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
+                return retObjectFindNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +243,19 @@ public class RichTextBox extends TextBoxBase  {
 
     public int Find(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            return (int)classInstance.Invoke("Find", dupParam0.getJCRefOut(), dupParam1);
+            retObjectFind = classInstance.Invoke("Find", dupParam0.getJCRefOut(), dupParam1);
+            return (int)retObjectFind;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
+                return retObjectFindNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +263,19 @@ public class RichTextBox extends TextBoxBase  {
 
     public int Find(char[] characterSet) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            return (int)classInstance.Invoke("Find", (java.lang.Object)characterSet);
+            retObjectFind = classInstance.Invoke("Find", (java.lang.Object)characterSet);
+            return (int)retObjectFind;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
+                return retObjectFindNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +283,19 @@ public class RichTextBox extends TextBoxBase  {
 
     public int Find(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            return (int)classInstance.Invoke("Find", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectFind = classInstance.Invoke("Find", (java.lang.Object)dupParam0.getJCRefOut());
+            return (int)retObjectFind;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
+                return retObjectFindNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,9 +303,19 @@ public class RichTextBox extends TextBoxBase  {
 
     public int Find(java.lang.String str, int start, int end, RichTextBoxFinds options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            return (int)classInstance.Invoke("Find", str, start, end, options == null ? null : options.getJCOInstance());
+            retObjectFind = classInstance.Invoke("Find", str, start, end, options == null ? null : options.getJCOInstance());
+            return (int)retObjectFind;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
+                return retObjectFindNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +323,19 @@ public class RichTextBox extends TextBoxBase  {
 
     public int Find(java.lang.String str, int start, RichTextBoxFinds options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            return (int)classInstance.Invoke("Find", str, start, options == null ? null : options.getJCOInstance());
+            retObjectFind = classInstance.Invoke("Find", str, start, options == null ? null : options.getJCOInstance());
+            return (int)retObjectFind;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
+                return retObjectFindNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,9 +343,19 @@ public class RichTextBox extends TextBoxBase  {
 
     public int Find(java.lang.String str, RichTextBoxFinds options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            return (int)classInstance.Invoke("Find", str, options == null ? null : options.getJCOInstance());
+            retObjectFind = classInstance.Invoke("Find", str, options == null ? null : options.getJCOInstance());
+            return (int)retObjectFind;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
+                return retObjectFindNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,9 +363,19 @@ public class RichTextBox extends TextBoxBase  {
 
     public int Find(java.lang.String str) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            return (int)classInstance.Invoke("Find", str);
+            retObjectFind = classInstance.Invoke("Find", str);
+            return (int)retObjectFind;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
+                return retObjectFindNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,9 +383,19 @@ public class RichTextBox extends TextBoxBase  {
 
     public int GetCharIndexFromPosition(Point pt) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCharIndexFromPosition = null;
         try {
-            return (int)classInstance.Invoke("GetCharIndexFromPosition", pt == null ? null : pt.getJCOInstance());
+            retObjectGetCharIndexFromPosition = classInstance.Invoke("GetCharIndexFromPosition", pt == null ? null : pt.getJCOInstance());
+            return (int)retObjectGetCharIndexFromPosition;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCharIndexFromPositionNumber = (java.lang.Number)retObjectGetCharIndexFromPosition;
+                return retObjectGetCharIndexFromPositionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCharIndexFromPosition != null ? retObjectGetCharIndexFromPosition.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,9 +403,19 @@ public class RichTextBox extends TextBoxBase  {
 
     public int GetLineFromCharIndex(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLineFromCharIndex = null;
         try {
-            return (int)classInstance.Invoke("GetLineFromCharIndex", index);
+            retObjectGetLineFromCharIndex = classInstance.Invoke("GetLineFromCharIndex", index);
+            return (int)retObjectGetLineFromCharIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLineFromCharIndexNumber = (java.lang.Number)retObjectGetLineFromCharIndex;
+                return retObjectGetLineFromCharIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetLineFromCharIndex != null ? retObjectGetLineFromCharIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,10 +423,14 @@ public class RichTextBox extends TextBoxBase  {
 
     public Point GetPositionFromCharIndex(int index) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPositionFromCharIndex = null;
         try {
-            JCObject objGetPositionFromCharIndex = (JCObject)classInstance.Invoke("GetPositionFromCharIndex", index);
+            retObjectGetPositionFromCharIndex = classInstance.Invoke("GetPositionFromCharIndex", index);
+            JCObject objGetPositionFromCharIndex = (JCObject)retObjectGetPositionFromCharIndex;
             return new Point(objGetPositionFromCharIndex);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPositionFromCharIndex != null ? retObjectGetPositionFromCharIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,7 +438,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void DrawToBitmapNewRichTextBox(Bitmap bitmap, Rectangle targetBounds) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawToBitmap", bitmap == null ? null : bitmap.getJCOInstance(), targetBounds == null ? null : targetBounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -324,7 +448,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void LoadFile(Stream data, RichTextBoxStreamType fileType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadFile", data == null ? null : data.getJCOInstance(), fileType == null ? null : fileType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -334,7 +458,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void LoadFile(java.lang.String path, RichTextBoxStreamType fileType) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadFile", path, fileType == null ? null : fileType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -344,7 +468,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void LoadFile(java.lang.String path) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadFile", path);
         } catch (JCNativeException jcne) {
@@ -354,7 +478,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void Redo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Redo");
         } catch (JCNativeException jcne) {
@@ -364,7 +488,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void SaveFile(Stream data, RichTextBoxStreamType fileType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveFile", data == null ? null : data.getJCOInstance(), fileType == null ? null : fileType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -374,7 +498,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void SaveFile(java.lang.String path, RichTextBoxStreamType fileType) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.runtime.serialization.SerializationException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveFile", path, fileType == null ? null : fileType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -384,7 +508,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void SaveFile(java.lang.String path) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveFile", path);
         } catch (JCNativeException jcne) {
@@ -398,9 +522,13 @@ public class RichTextBox extends TextBoxBase  {
     
     public boolean getAutoWordSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoWordSelection = null;
         try {
-            return (boolean)classInstance.Get("AutoWordSelection");
+            retObjectAutoWordSelection = classInstance.Get("AutoWordSelection");
+            return (boolean)retObjectAutoWordSelection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoWordSelection != null ? retObjectAutoWordSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,7 +536,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setAutoWordSelection(boolean AutoWordSelection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoWordSelection", AutoWordSelection);
         } catch (JCNativeException jcne) {
@@ -418,9 +546,13 @@ public class RichTextBox extends TextBoxBase  {
 
     public boolean getCanRedo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRedo = null;
         try {
-            return (boolean)classInstance.Get("CanRedo");
+            retObjectCanRedo = classInstance.Get("CanRedo");
+            return (boolean)retObjectCanRedo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanRedo != null ? retObjectCanRedo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,9 +560,13 @@ public class RichTextBox extends TextBoxBase  {
 
     public boolean getDetectUrls() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDetectUrls = null;
         try {
-            return (boolean)classInstance.Get("DetectUrls");
+            retObjectDetectUrls = classInstance.Get("DetectUrls");
+            return (boolean)retObjectDetectUrls;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDetectUrls != null ? retObjectDetectUrls.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,7 +574,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setDetectUrls(boolean DetectUrls) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DetectUrls", DetectUrls);
         } catch (JCNativeException jcne) {
@@ -448,9 +584,13 @@ public class RichTextBox extends TextBoxBase  {
 
     public boolean getEnableAutoDragDrop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableAutoDragDrop = null;
         try {
-            return (boolean)classInstance.Get("EnableAutoDragDrop");
+            retObjectEnableAutoDragDrop = classInstance.Get("EnableAutoDragDrop");
+            return (boolean)retObjectEnableAutoDragDrop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableAutoDragDrop != null ? retObjectEnableAutoDragDrop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -458,7 +598,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setEnableAutoDragDrop(boolean EnableAutoDragDrop) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableAutoDragDrop", EnableAutoDragDrop);
         } catch (JCNativeException jcne) {
@@ -468,9 +608,13 @@ public class RichTextBox extends TextBoxBase  {
 
     public boolean getRichTextShortcutsEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRichTextShortcutsEnabled = null;
         try {
-            return (boolean)classInstance.Get("RichTextShortcutsEnabled");
+            retObjectRichTextShortcutsEnabled = classInstance.Get("RichTextShortcutsEnabled");
+            return (boolean)retObjectRichTextShortcutsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRichTextShortcutsEnabled != null ? retObjectRichTextShortcutsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -478,7 +622,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setRichTextShortcutsEnabled(boolean RichTextShortcutsEnabled) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RichTextShortcutsEnabled", RichTextShortcutsEnabled);
         } catch (JCNativeException jcne) {
@@ -488,9 +632,13 @@ public class RichTextBox extends TextBoxBase  {
 
     public boolean getSelectionBullet() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionBullet = null;
         try {
-            return (boolean)classInstance.Get("SelectionBullet");
+            retObjectSelectionBullet = classInstance.Get("SelectionBullet");
+            return (boolean)retObjectSelectionBullet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSelectionBullet != null ? retObjectSelectionBullet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -498,7 +646,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setSelectionBullet(boolean SelectionBullet) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionBullet", SelectionBullet);
         } catch (JCNativeException jcne) {
@@ -508,9 +656,13 @@ public class RichTextBox extends TextBoxBase  {
 
     public boolean getSelectionProtected() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionProtected = null;
         try {
-            return (boolean)classInstance.Get("SelectionProtected");
+            retObjectSelectionProtected = classInstance.Get("SelectionProtected");
+            return (boolean)retObjectSelectionProtected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSelectionProtected != null ? retObjectSelectionProtected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -518,7 +670,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setSelectionProtected(boolean SelectionProtected) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionProtected", SelectionProtected);
         } catch (JCNativeException jcne) {
@@ -528,9 +680,13 @@ public class RichTextBox extends TextBoxBase  {
 
     public boolean getShowSelectionMargin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowSelectionMargin = null;
         try {
-            return (boolean)classInstance.Get("ShowSelectionMargin");
+            retObjectShowSelectionMargin = classInstance.Get("ShowSelectionMargin");
+            return (boolean)retObjectShowSelectionMargin;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowSelectionMargin != null ? retObjectShowSelectionMargin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,7 +694,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setShowSelectionMargin(boolean ShowSelectionMargin) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowSelectionMargin", ShowSelectionMargin);
         } catch (JCNativeException jcne) {
@@ -548,9 +704,19 @@ public class RichTextBox extends TextBoxBase  {
 
     public int getBulletIndent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBulletIndent = null;
         try {
-            return (int)classInstance.Get("BulletIndent");
+            retObjectBulletIndent = classInstance.Get("BulletIndent");
+            return (int)retObjectBulletIndent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBulletIndentNumber = (java.lang.Number)retObjectBulletIndent;
+                return retObjectBulletIndentNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBulletIndent != null ? retObjectBulletIndent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -558,7 +724,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setBulletIndent(int BulletIndent) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BulletIndent", BulletIndent);
         } catch (JCNativeException jcne) {
@@ -568,9 +734,19 @@ public class RichTextBox extends TextBoxBase  {
 
     public int getRightMargin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightMargin = null;
         try {
-            return (int)classInstance.Get("RightMargin");
+            retObjectRightMargin = classInstance.Get("RightMargin");
+            return (int)retObjectRightMargin;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRightMarginNumber = (java.lang.Number)retObjectRightMargin;
+                return retObjectRightMarginNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRightMargin != null ? retObjectRightMargin.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -578,7 +754,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setRightMargin(int RightMargin) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RightMargin", RightMargin);
         } catch (JCNativeException jcne) {
@@ -588,9 +764,19 @@ public class RichTextBox extends TextBoxBase  {
 
     public int getSelectionCharOffset() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionCharOffset = null;
         try {
-            return (int)classInstance.Get("SelectionCharOffset");
+            retObjectSelectionCharOffset = classInstance.Get("SelectionCharOffset");
+            return (int)retObjectSelectionCharOffset;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSelectionCharOffsetNumber = (java.lang.Number)retObjectSelectionCharOffset;
+                return retObjectSelectionCharOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSelectionCharOffset != null ? retObjectSelectionCharOffset.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -598,7 +784,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setSelectionCharOffset(int SelectionCharOffset) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionCharOffset", SelectionCharOffset);
         } catch (JCNativeException jcne) {
@@ -608,9 +794,19 @@ public class RichTextBox extends TextBoxBase  {
 
     public int getSelectionHangingIndent() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionHangingIndent = null;
         try {
-            return (int)classInstance.Get("SelectionHangingIndent");
+            retObjectSelectionHangingIndent = classInstance.Get("SelectionHangingIndent");
+            return (int)retObjectSelectionHangingIndent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSelectionHangingIndentNumber = (java.lang.Number)retObjectSelectionHangingIndent;
+                return retObjectSelectionHangingIndentNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSelectionHangingIndent != null ? retObjectSelectionHangingIndent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -618,7 +814,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setSelectionHangingIndent(int SelectionHangingIndent) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionHangingIndent", SelectionHangingIndent);
         } catch (JCNativeException jcne) {
@@ -628,9 +824,19 @@ public class RichTextBox extends TextBoxBase  {
 
     public int getSelectionIndent() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionIndent = null;
         try {
-            return (int)classInstance.Get("SelectionIndent");
+            retObjectSelectionIndent = classInstance.Get("SelectionIndent");
+            return (int)retObjectSelectionIndent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSelectionIndentNumber = (java.lang.Number)retObjectSelectionIndent;
+                return retObjectSelectionIndentNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSelectionIndent != null ? retObjectSelectionIndent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -638,7 +844,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setSelectionIndent(int SelectionIndent) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionIndent", SelectionIndent);
         } catch (JCNativeException jcne) {
@@ -648,9 +854,19 @@ public class RichTextBox extends TextBoxBase  {
 
     public int getSelectionRightIndent() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionRightIndent = null;
         try {
-            return (int)classInstance.Get("SelectionRightIndent");
+            retObjectSelectionRightIndent = classInstance.Get("SelectionRightIndent");
+            return (int)retObjectSelectionRightIndent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSelectionRightIndentNumber = (java.lang.Number)retObjectSelectionRightIndent;
+                return retObjectSelectionRightIndentNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSelectionRightIndent != null ? retObjectSelectionRightIndent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -658,7 +874,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setSelectionRightIndent(int SelectionRightIndent) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionRightIndent", SelectionRightIndent);
         } catch (JCNativeException jcne) {
@@ -668,10 +884,12 @@ public class RichTextBox extends TextBoxBase  {
 
     public int[] getSelectionTabs() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionTabs = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SelectionTabs");
+            retObjectSelectionTabs = classInstance.Get("SelectionTabs");
+            JCObject resultingObjects = (JCObject)retObjectSelectionTabs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -680,6 +898,8 @@ public class RichTextBox extends TextBoxBase  {
 				resultingArray[indexSelectionTabs] = (int)resultingArrayList.get(indexSelectionTabs);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectSelectionTabs != null ? retObjectSelectionTabs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -687,7 +907,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setSelectionTabs(int[] SelectionTabs) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionTabs", SelectionTabs);
         } catch (JCNativeException jcne) {
@@ -697,10 +917,14 @@ public class RichTextBox extends TextBoxBase  {
 
     public Single getZoomFactor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectZoomFactor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ZoomFactor");
+            retObjectZoomFactor = classInstance.Get("ZoomFactor");
+            JCObject val = (JCObject)retObjectZoomFactor;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectZoomFactor != null ? retObjectZoomFactor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -708,7 +932,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setZoomFactor(Single ZoomFactor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ZoomFactor", ZoomFactor == null ? null : ZoomFactor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -718,10 +942,14 @@ public class RichTextBox extends TextBoxBase  {
 
     public Color getSelectionBackColor() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionBackColor");
+            retObjectSelectionBackColor = classInstance.Get("SelectionBackColor");
+            JCObject val = (JCObject)retObjectSelectionBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionBackColor != null ? retObjectSelectionBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -729,7 +957,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setSelectionBackColor(Color SelectionBackColor) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionBackColor", SelectionBackColor == null ? null : SelectionBackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -739,10 +967,14 @@ public class RichTextBox extends TextBoxBase  {
 
     public Color getSelectionColor() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionColor");
+            retObjectSelectionColor = classInstance.Get("SelectionColor");
+            JCObject val = (JCObject)retObjectSelectionColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionColor != null ? retObjectSelectionColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -750,7 +982,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setSelectionColor(Color SelectionColor) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionColor", SelectionColor == null ? null : SelectionColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -760,10 +992,14 @@ public class RichTextBox extends TextBoxBase  {
 
     public Font getSelectionFont() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionFont = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionFont");
+            retObjectSelectionFont = classInstance.Get("SelectionFont");
+            JCObject val = (JCObject)retObjectSelectionFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionFont != null ? retObjectSelectionFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -771,7 +1007,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setSelectionFont(Font SelectionFont) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionFont", SelectionFont == null ? null : SelectionFont.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -781,9 +1017,13 @@ public class RichTextBox extends TextBoxBase  {
 
     public java.lang.String getRedoActionName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRedoActionName = null;
         try {
-            return (java.lang.String)classInstance.Get("RedoActionName");
+            retObjectRedoActionName = classInstance.Get("RedoActionName");
+            return (java.lang.String)retObjectRedoActionName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRedoActionName != null ? retObjectRedoActionName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -791,9 +1031,13 @@ public class RichTextBox extends TextBoxBase  {
 
     public java.lang.String getRtf() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRtf = null;
         try {
-            return (java.lang.String)classInstance.Get("Rtf");
+            retObjectRtf = classInstance.Get("Rtf");
+            return (java.lang.String)retObjectRtf;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRtf != null ? retObjectRtf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -801,7 +1045,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setRtf(java.lang.String Rtf) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.NotSupportedException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Rtf", Rtf);
         } catch (JCNativeException jcne) {
@@ -811,9 +1055,13 @@ public class RichTextBox extends TextBoxBase  {
 
     public java.lang.String getSelectedRtf() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedRtf = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectedRtf");
+            retObjectSelectedRtf = classInstance.Get("SelectedRtf");
+            return (java.lang.String)retObjectSelectedRtf;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectedRtf != null ? retObjectSelectedRtf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -821,7 +1069,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setSelectedRtf(java.lang.String SelectedRtf) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedRtf", SelectedRtf);
         } catch (JCNativeException jcne) {
@@ -831,9 +1079,13 @@ public class RichTextBox extends TextBoxBase  {
 
     public java.lang.String getUndoActionName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUndoActionName = null;
         try {
-            return (java.lang.String)classInstance.Get("UndoActionName");
+            retObjectUndoActionName = classInstance.Get("UndoActionName");
+            return (java.lang.String)retObjectUndoActionName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUndoActionName != null ? retObjectUndoActionName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -841,10 +1093,14 @@ public class RichTextBox extends TextBoxBase  {
 
     public HorizontalAlignment getSelectionAlignment() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionAlignment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionAlignment");
+            retObjectSelectionAlignment = classInstance.Get("SelectionAlignment");
+            JCObject val = (JCObject)retObjectSelectionAlignment;
             return new HorizontalAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionAlignment != null ? retObjectSelectionAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -852,7 +1108,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setSelectionAlignment(HorizontalAlignment SelectionAlignment) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionAlignment", SelectionAlignment == null ? null : SelectionAlignment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -862,10 +1118,14 @@ public class RichTextBox extends TextBoxBase  {
 
     public RichTextBoxLanguageOptions getLanguageOption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLanguageOption = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LanguageOption");
+            retObjectLanguageOption = classInstance.Get("LanguageOption");
+            JCObject val = (JCObject)retObjectLanguageOption;
             return new RichTextBoxLanguageOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLanguageOption != null ? retObjectLanguageOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -873,7 +1133,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setLanguageOption(RichTextBoxLanguageOptions LanguageOption) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LanguageOption", LanguageOption == null ? null : LanguageOption.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -883,10 +1143,14 @@ public class RichTextBox extends TextBoxBase  {
 
     public RichTextBoxScrollBars getScrollBars() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScrollBars = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ScrollBars");
+            retObjectScrollBars = classInstance.Get("ScrollBars");
+            JCObject val = (JCObject)retObjectScrollBars;
             return new RichTextBoxScrollBars(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScrollBars != null ? retObjectScrollBars.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -894,7 +1158,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void setScrollBars(RichTextBoxScrollBars ScrollBars) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScrollBars", ScrollBars == null ? null : ScrollBars.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -904,10 +1168,14 @@ public class RichTextBox extends TextBoxBase  {
 
     public RichTextBoxSelectionTypes getSelectionType() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionType");
+            retObjectSelectionType = classInstance.Get("SelectionType");
+            JCObject val = (JCObject)retObjectSelectionType;
             return new RichTextBoxSelectionTypes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionType != null ? retObjectSelectionType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -920,7 +1188,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void addBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundImageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -930,7 +1198,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void removeBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundImageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -940,7 +1208,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void addBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundImageLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -950,7 +1218,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void removeBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundImageLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -960,7 +1228,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void addDragLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragLeave", handler);
         } catch (JCNativeException jcne) {
@@ -970,7 +1238,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void removeDragLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragLeave", handler);
         } catch (JCNativeException jcne) {
@@ -980,7 +1248,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void addHScroll(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("HScroll", handler);
         } catch (JCNativeException jcne) {
@@ -990,7 +1258,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void removeHScroll(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("HScroll", handler);
         } catch (JCNativeException jcne) {
@@ -1000,7 +1268,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void addImeChange(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ImeChange", handler);
         } catch (JCNativeException jcne) {
@@ -1010,7 +1278,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void removeImeChange(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ImeChange", handler);
         } catch (JCNativeException jcne) {
@@ -1020,7 +1288,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void addProtected(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Protected", handler);
         } catch (JCNativeException jcne) {
@@ -1030,7 +1298,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void removeProtected(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Protected", handler);
         } catch (JCNativeException jcne) {
@@ -1040,7 +1308,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void addSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1050,7 +1318,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void removeSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1060,7 +1328,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void addVScroll(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("VScroll", handler);
         } catch (JCNativeException jcne) {
@@ -1070,7 +1338,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void removeVScroll(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("VScroll", handler);
         } catch (JCNativeException jcne) {
@@ -1080,7 +1348,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void addContentsResized(ContentsResizedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ContentsResized", handler);
         } catch (JCNativeException jcne) {
@@ -1090,7 +1358,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void removeContentsResized(ContentsResizedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ContentsResized", handler);
         } catch (JCNativeException jcne) {
@@ -1100,7 +1368,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void addDragDrop(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragDrop", handler);
         } catch (JCNativeException jcne) {
@@ -1110,7 +1378,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void removeDragDrop(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragDrop", handler);
         } catch (JCNativeException jcne) {
@@ -1120,7 +1388,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void addDragEnter(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragEnter", handler);
         } catch (JCNativeException jcne) {
@@ -1130,7 +1398,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void removeDragEnter(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragEnter", handler);
         } catch (JCNativeException jcne) {
@@ -1140,7 +1408,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void addDragOver(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragOver", handler);
         } catch (JCNativeException jcne) {
@@ -1150,7 +1418,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void removeDragOver(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragOver", handler);
         } catch (JCNativeException jcne) {
@@ -1160,7 +1428,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void addGiveFeedback(GiveFeedbackEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GiveFeedback", handler);
         } catch (JCNativeException jcne) {
@@ -1170,7 +1438,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void removeGiveFeedback(GiveFeedbackEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GiveFeedback", handler);
         } catch (JCNativeException jcne) {
@@ -1180,7 +1448,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void addLinkClicked(LinkClickedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LinkClicked", handler);
         } catch (JCNativeException jcne) {
@@ -1190,7 +1458,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void removeLinkClicked(LinkClickedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LinkClicked", handler);
         } catch (JCNativeException jcne) {
@@ -1200,7 +1468,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void addQueryContinueDrag(QueryContinueDragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("QueryContinueDrag", handler);
         } catch (JCNativeException jcne) {
@@ -1210,7 +1478,7 @@ public class RichTextBox extends TextBoxBase  {
 
     public void removeQueryContinueDrag(QueryContinueDragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("QueryContinueDrag", handler);
         } catch (JCNativeException jcne) {

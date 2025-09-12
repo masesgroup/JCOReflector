@@ -171,9 +171,13 @@ public class RenamedEventArgs extends FileSystemEventArgs  {
     
     public java.lang.String getOldFullPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldFullPath = null;
         try {
-            return (java.lang.String)classInstance.Get("OldFullPath");
+            retObjectOldFullPath = classInstance.Get("OldFullPath");
+            return (java.lang.String)retObjectOldFullPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOldFullPath != null ? retObjectOldFullPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class RenamedEventArgs extends FileSystemEventArgs  {
 
     public java.lang.String getOldName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldName = null;
         try {
-            return (java.lang.String)classInstance.Get("OldName");
+            retObjectOldName = classInstance.Get("OldName");
+            return (java.lang.String)retObjectOldName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOldName != null ? retObjectOldName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

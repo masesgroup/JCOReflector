@@ -181,9 +181,19 @@ public class CompilationRelaxationsAttribute extends Attribute  {
     
     public int getCompilationRelaxations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompilationRelaxations = null;
         try {
-            return (int)classInstance.Get("CompilationRelaxations");
+            retObjectCompilationRelaxations = classInstance.Get("CompilationRelaxations");
+            return (int)retObjectCompilationRelaxations;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompilationRelaxationsNumber = (java.lang.Number)retObjectCompilationRelaxations;
+                return retObjectCompilationRelaxationsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompilationRelaxations != null ? retObjectCompilationRelaxations.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

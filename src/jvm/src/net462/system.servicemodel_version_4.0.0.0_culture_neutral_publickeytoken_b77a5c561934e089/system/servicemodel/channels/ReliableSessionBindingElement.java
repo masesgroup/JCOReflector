@@ -178,10 +178,14 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
     
     public BindingElement Clone() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new BindingElement(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +197,7 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
      */
     @Deprecated 
     public void ExportPolicy(MetadataExporter exporter, PolicyConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
     }
 
 
@@ -202,9 +206,13 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
     
     public boolean getFlowControlEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlowControlEnabled = null;
         try {
-            return (boolean)classInstance.Get("FlowControlEnabled");
+            retObjectFlowControlEnabled = classInstance.Get("FlowControlEnabled");
+            return (boolean)retObjectFlowControlEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFlowControlEnabled != null ? retObjectFlowControlEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +220,7 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
 
     public void setFlowControlEnabled(boolean FlowControlEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FlowControlEnabled", FlowControlEnabled);
         } catch (JCNativeException jcne) {
@@ -222,9 +230,13 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
 
     public boolean getOrdered() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrdered = null;
         try {
-            return (boolean)classInstance.Get("Ordered");
+            retObjectOrdered = classInstance.Get("Ordered");
+            return (boolean)retObjectOrdered;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOrdered != null ? retObjectOrdered.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +244,7 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
 
     public void setOrdered(boolean Ordered) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Ordered", Ordered);
         } catch (JCNativeException jcne) {
@@ -242,9 +254,19 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
 
     public int getMaxPendingChannels() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxPendingChannels = null;
         try {
-            return (int)classInstance.Get("MaxPendingChannels");
+            retObjectMaxPendingChannels = classInstance.Get("MaxPendingChannels");
+            return (int)retObjectMaxPendingChannels;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxPendingChannelsNumber = (java.lang.Number)retObjectMaxPendingChannels;
+                return retObjectMaxPendingChannelsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxPendingChannels != null ? retObjectMaxPendingChannels.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +274,7 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
 
     public void setMaxPendingChannels(int MaxPendingChannels) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxPendingChannels", MaxPendingChannels);
         } catch (JCNativeException jcne) {
@@ -262,9 +284,19 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
 
     public int getMaxRetryCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxRetryCount = null;
         try {
-            return (int)classInstance.Get("MaxRetryCount");
+            retObjectMaxRetryCount = classInstance.Get("MaxRetryCount");
+            return (int)retObjectMaxRetryCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxRetryCountNumber = (java.lang.Number)retObjectMaxRetryCount;
+                return retObjectMaxRetryCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxRetryCount != null ? retObjectMaxRetryCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +304,7 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
 
     public void setMaxRetryCount(int MaxRetryCount) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxRetryCount", MaxRetryCount);
         } catch (JCNativeException jcne) {
@@ -282,9 +314,19 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
 
     public int getMaxTransferWindowSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxTransferWindowSize = null;
         try {
-            return (int)classInstance.Get("MaxTransferWindowSize");
+            retObjectMaxTransferWindowSize = classInstance.Get("MaxTransferWindowSize");
+            return (int)retObjectMaxTransferWindowSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxTransferWindowSizeNumber = (java.lang.Number)retObjectMaxTransferWindowSize;
+                return retObjectMaxTransferWindowSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxTransferWindowSize != null ? retObjectMaxTransferWindowSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +334,7 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
 
     public void setMaxTransferWindowSize(int MaxTransferWindowSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxTransferWindowSize", MaxTransferWindowSize);
         } catch (JCNativeException jcne) {
@@ -302,10 +344,14 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
 
     public ReliableMessagingVersion getReliableMessagingVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReliableMessagingVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReliableMessagingVersion");
+            retObjectReliableMessagingVersion = classInstance.Get("ReliableMessagingVersion");
+            JCObject val = (JCObject)retObjectReliableMessagingVersion;
             return new ReliableMessagingVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReliableMessagingVersion != null ? retObjectReliableMessagingVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,7 +359,7 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
 
     public void setReliableMessagingVersion(ReliableMessagingVersion ReliableMessagingVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReliableMessagingVersion", ReliableMessagingVersion == null ? null : ReliableMessagingVersion.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -323,10 +369,14 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
 
     public TimeSpan getAcknowledgementInterval() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcknowledgementInterval = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AcknowledgementInterval");
+            retObjectAcknowledgementInterval = classInstance.Get("AcknowledgementInterval");
+            JCObject val = (JCObject)retObjectAcknowledgementInterval;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcknowledgementInterval != null ? retObjectAcknowledgementInterval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,7 +384,7 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
 
     public void setAcknowledgementInterval(TimeSpan AcknowledgementInterval) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcknowledgementInterval", AcknowledgementInterval == null ? null : AcknowledgementInterval.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -344,10 +394,14 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
 
     public TimeSpan getInactivityTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInactivityTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InactivityTimeout");
+            retObjectInactivityTimeout = classInstance.Get("InactivityTimeout");
+            JCObject val = (JCObject)retObjectInactivityTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInactivityTimeout != null ? retObjectInactivityTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,7 +409,7 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
 
     public void setInactivityTimeout(TimeSpan InactivityTimeout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InactivityTimeout", InactivityTimeout == null ? null : InactivityTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {

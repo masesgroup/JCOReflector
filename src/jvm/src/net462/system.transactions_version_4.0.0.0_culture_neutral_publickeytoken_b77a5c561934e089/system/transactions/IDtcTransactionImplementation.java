@@ -142,7 +142,7 @@ public class IDtcTransactionImplementation extends NetObject implements IDtcTran
     
     public void Commit(int retaining, int commitType, int reserved) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Commit", retaining, commitType, reserved);
         } catch (JCNativeException jcne) {

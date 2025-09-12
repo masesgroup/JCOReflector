@@ -147,10 +147,14 @@ public class IIUnknownDerivedDetailsImplementation extends NetObject implements 
     
     public Guid getIid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Iid");
+            retObjectIid = classInstance.Get("Iid");
+            JCObject val = (JCObject)retObjectIid;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIid != null ? retObjectIid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,10 +162,14 @@ public class IIUnknownDerivedDetailsImplementation extends NetObject implements 
 
     public NetType getImplementation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImplementation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Implementation");
+            retObjectImplementation = classInstance.Get("Implementation");
+            JCObject val = (JCObject)retObjectImplementation;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImplementation != null ? retObjectImplementation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

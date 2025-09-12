@@ -171,9 +171,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
     
     public static boolean IsName(java.lang.String str) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsName = null;
         try {
-            return (boolean)classType.Invoke("IsName", str);
+            retObjectIsName = classType.Invoke("IsName", str);
+            return (boolean)retObjectIsName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsName != null ? retObjectIsName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public static boolean IsNameToken(java.lang.String str) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsNameToken = null;
         try {
-            return (boolean)classType.Invoke("IsNameToken", str);
+            retObjectIsNameToken = classType.Invoke("IsNameToken", str);
+            return (boolean)retObjectIsNameToken;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNameToken != null ? retObjectIsNameToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +199,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean IsStartElement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStartElement = null;
         try {
-            return (boolean)classInstance.Invoke("IsStartElement");
+            retObjectIsStartElement = classInstance.Invoke("IsStartElement");
+            return (boolean)retObjectIsStartElement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsStartElement != null ? retObjectIsStartElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +213,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean IsStartElement(java.lang.String localname, java.lang.String ns) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStartElement = null;
         try {
-            return (boolean)classInstance.Invoke("IsStartElement", localname, ns);
+            retObjectIsStartElement = classInstance.Invoke("IsStartElement", localname, ns);
+            return (boolean)retObjectIsStartElement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsStartElement != null ? retObjectIsStartElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +227,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean IsStartElement(java.lang.String name) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStartElement = null;
         try {
-            return (boolean)classInstance.Invoke("IsStartElement", name);
+            retObjectIsStartElement = classInstance.Invoke("IsStartElement", name);
+            return (boolean)retObjectIsStartElement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsStartElement != null ? retObjectIsStartElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +241,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean MoveToAttribute(java.lang.String name, java.lang.String ns) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToAttribute", name, ns);
+            retObjectMoveToAttribute = classInstance.Invoke("MoveToAttribute", name, ns);
+            return (boolean)retObjectMoveToAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToAttribute != null ? retObjectMoveToAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +255,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean MoveToAttribute(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToAttribute", name);
+            retObjectMoveToAttribute = classInstance.Invoke("MoveToAttribute", name);
+            return (boolean)retObjectMoveToAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToAttribute != null ? retObjectMoveToAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,9 +269,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean MoveToElement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToElement = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToElement");
+            retObjectMoveToElement = classInstance.Invoke("MoveToElement");
+            return (boolean)retObjectMoveToElement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToElement != null ? retObjectMoveToElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,9 +283,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean MoveToFirstAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToFirstAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToFirstAttribute");
+            retObjectMoveToFirstAttribute = classInstance.Invoke("MoveToFirstAttribute");
+            return (boolean)retObjectMoveToFirstAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToFirstAttribute != null ? retObjectMoveToFirstAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,9 +297,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean MoveToNextAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToNextAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToNextAttribute");
+            retObjectMoveToNextAttribute = classInstance.Invoke("MoveToNextAttribute");
+            return (boolean)retObjectMoveToNextAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToNextAttribute != null ? retObjectMoveToNextAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,9 +311,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean Read() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (boolean)classInstance.Invoke("Read");
+            retObjectRead = classInstance.Invoke("Read");
+            return (boolean)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,9 +325,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean ReadAttributeValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadAttributeValue = null;
         try {
-            return (boolean)classInstance.Invoke("ReadAttributeValue");
+            retObjectReadAttributeValue = classInstance.Invoke("ReadAttributeValue");
+            return (boolean)retObjectReadAttributeValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReadAttributeValue != null ? retObjectReadAttributeValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,9 +339,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean ReadContentAsBoolean() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsBoolean = null;
         try {
-            return (boolean)classInstance.Invoke("ReadContentAsBoolean");
+            retObjectReadContentAsBoolean = classInstance.Invoke("ReadContentAsBoolean");
+            return (boolean)retObjectReadContentAsBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReadContentAsBoolean != null ? retObjectReadContentAsBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,9 +353,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean ReadElementContentAsBoolean() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsBoolean = null;
         try {
-            return (boolean)classInstance.Invoke("ReadElementContentAsBoolean");
+            retObjectReadElementContentAsBoolean = classInstance.Invoke("ReadElementContentAsBoolean");
+            return (boolean)retObjectReadElementContentAsBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReadElementContentAsBoolean != null ? retObjectReadElementContentAsBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,9 +367,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean ReadElementContentAsBoolean(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsBoolean = null;
         try {
-            return (boolean)classInstance.Invoke("ReadElementContentAsBoolean", localName, namespaceURI);
+            retObjectReadElementContentAsBoolean = classInstance.Invoke("ReadElementContentAsBoolean", localName, namespaceURI);
+            return (boolean)retObjectReadElementContentAsBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReadElementContentAsBoolean != null ? retObjectReadElementContentAsBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,9 +381,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean ReadToDescendant(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadToDescendant = null;
         try {
-            return (boolean)classInstance.Invoke("ReadToDescendant", localName, namespaceURI);
+            retObjectReadToDescendant = classInstance.Invoke("ReadToDescendant", localName, namespaceURI);
+            return (boolean)retObjectReadToDescendant;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReadToDescendant != null ? retObjectReadToDescendant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,9 +395,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean ReadToDescendant(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadToDescendant = null;
         try {
-            return (boolean)classInstance.Invoke("ReadToDescendant", name);
+            retObjectReadToDescendant = classInstance.Invoke("ReadToDescendant", name);
+            return (boolean)retObjectReadToDescendant;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReadToDescendant != null ? retObjectReadToDescendant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,9 +409,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean ReadToFollowing(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadToFollowing = null;
         try {
-            return (boolean)classInstance.Invoke("ReadToFollowing", localName, namespaceURI);
+            retObjectReadToFollowing = classInstance.Invoke("ReadToFollowing", localName, namespaceURI);
+            return (boolean)retObjectReadToFollowing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReadToFollowing != null ? retObjectReadToFollowing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,9 +423,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean ReadToFollowing(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadToFollowing = null;
         try {
-            return (boolean)classInstance.Invoke("ReadToFollowing", name);
+            retObjectReadToFollowing = classInstance.Invoke("ReadToFollowing", name);
+            return (boolean)retObjectReadToFollowing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReadToFollowing != null ? retObjectReadToFollowing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,9 +437,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean ReadToNextSibling(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadToNextSibling = null;
         try {
-            return (boolean)classInstance.Invoke("ReadToNextSibling", localName, namespaceURI);
+            retObjectReadToNextSibling = classInstance.Invoke("ReadToNextSibling", localName, namespaceURI);
+            return (boolean)retObjectReadToNextSibling;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReadToNextSibling != null ? retObjectReadToNextSibling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,9 +451,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean ReadToNextSibling(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadToNextSibling = null;
         try {
-            return (boolean)classInstance.Invoke("ReadToNextSibling", name);
+            retObjectReadToNextSibling = classInstance.Invoke("ReadToNextSibling", name);
+            return (boolean)retObjectReadToNextSibling;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReadToNextSibling != null ? retObjectReadToNextSibling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,9 +465,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public double ReadContentAsDouble() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.OverflowException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsDouble = null;
         try {
-            return (double)classInstance.Invoke("ReadContentAsDouble");
+            retObjectReadContentAsDouble = classInstance.Invoke("ReadContentAsDouble");
+            return (double)retObjectReadContentAsDouble;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadContentAsDoubleNumber = (java.lang.Number)retObjectReadContentAsDouble;
+                return retObjectReadContentAsDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectReadContentAsDouble != null ? retObjectReadContentAsDouble.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,9 +485,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public double ReadElementContentAsDouble() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsDouble = null;
         try {
-            return (double)classInstance.Invoke("ReadElementContentAsDouble");
+            retObjectReadElementContentAsDouble = classInstance.Invoke("ReadElementContentAsDouble");
+            return (double)retObjectReadElementContentAsDouble;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadElementContentAsDoubleNumber = (java.lang.Number)retObjectReadElementContentAsDouble;
+                return retObjectReadElementContentAsDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectReadElementContentAsDouble != null ? retObjectReadElementContentAsDouble.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -401,9 +505,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public double ReadElementContentAsDouble(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsDouble = null;
         try {
-            return (double)classInstance.Invoke("ReadElementContentAsDouble", localName, namespaceURI);
+            retObjectReadElementContentAsDouble = classInstance.Invoke("ReadElementContentAsDouble", localName, namespaceURI);
+            return (double)retObjectReadElementContentAsDouble;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadElementContentAsDoubleNumber = (java.lang.Number)retObjectReadElementContentAsDouble;
+                return retObjectReadElementContentAsDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectReadElementContentAsDouble != null ? retObjectReadElementContentAsDouble.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,9 +525,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public int ReadContentAsBase64(byte[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsBase64 = null;
         try {
-            return (int)classInstance.Invoke("ReadContentAsBase64", buffer, index, count);
+            retObjectReadContentAsBase64 = classInstance.Invoke("ReadContentAsBase64", buffer, index, count);
+            return (int)retObjectReadContentAsBase64;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadContentAsBase64Number = (java.lang.Number)retObjectReadContentAsBase64;
+                return retObjectReadContentAsBase64Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadContentAsBase64 != null ? retObjectReadContentAsBase64.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,9 +545,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public int ReadContentAsBase64(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsBase64 = null;
         try {
-            return (int)classInstance.Invoke("ReadContentAsBase64", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectReadContentAsBase64 = classInstance.Invoke("ReadContentAsBase64", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectReadContentAsBase64;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadContentAsBase64Number = (java.lang.Number)retObjectReadContentAsBase64;
+                return retObjectReadContentAsBase64Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadContentAsBase64 != null ? retObjectReadContentAsBase64.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,9 +565,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public int ReadContentAsBinHex(byte[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsBinHex = null;
         try {
-            return (int)classInstance.Invoke("ReadContentAsBinHex", buffer, index, count);
+            retObjectReadContentAsBinHex = classInstance.Invoke("ReadContentAsBinHex", buffer, index, count);
+            return (int)retObjectReadContentAsBinHex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadContentAsBinHexNumber = (java.lang.Number)retObjectReadContentAsBinHex;
+                return retObjectReadContentAsBinHexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadContentAsBinHex != null ? retObjectReadContentAsBinHex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,9 +585,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public int ReadContentAsBinHex(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsBinHex = null;
         try {
-            return (int)classInstance.Invoke("ReadContentAsBinHex", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectReadContentAsBinHex = classInstance.Invoke("ReadContentAsBinHex", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectReadContentAsBinHex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadContentAsBinHexNumber = (java.lang.Number)retObjectReadContentAsBinHex;
+                return retObjectReadContentAsBinHexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadContentAsBinHex != null ? retObjectReadContentAsBinHex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -451,9 +605,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public int ReadContentAsInt() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.OverflowException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsInt = null;
         try {
-            return (int)classInstance.Invoke("ReadContentAsInt");
+            retObjectReadContentAsInt = classInstance.Invoke("ReadContentAsInt");
+            return (int)retObjectReadContentAsInt;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadContentAsIntNumber = (java.lang.Number)retObjectReadContentAsInt;
+                return retObjectReadContentAsIntNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadContentAsInt != null ? retObjectReadContentAsInt.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,9 +625,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public int ReadElementContentAsBase64(byte[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsBase64 = null;
         try {
-            return (int)classInstance.Invoke("ReadElementContentAsBase64", buffer, index, count);
+            retObjectReadElementContentAsBase64 = classInstance.Invoke("ReadElementContentAsBase64", buffer, index, count);
+            return (int)retObjectReadElementContentAsBase64;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadElementContentAsBase64Number = (java.lang.Number)retObjectReadElementContentAsBase64;
+                return retObjectReadElementContentAsBase64Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadElementContentAsBase64 != null ? retObjectReadElementContentAsBase64.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -471,9 +645,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public int ReadElementContentAsBase64(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsBase64 = null;
         try {
-            return (int)classInstance.Invoke("ReadElementContentAsBase64", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectReadElementContentAsBase64 = classInstance.Invoke("ReadElementContentAsBase64", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectReadElementContentAsBase64;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadElementContentAsBase64Number = (java.lang.Number)retObjectReadElementContentAsBase64;
+                return retObjectReadElementContentAsBase64Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadElementContentAsBase64 != null ? retObjectReadElementContentAsBase64.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -481,9 +665,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public int ReadElementContentAsBinHex(byte[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsBinHex = null;
         try {
-            return (int)classInstance.Invoke("ReadElementContentAsBinHex", buffer, index, count);
+            retObjectReadElementContentAsBinHex = classInstance.Invoke("ReadElementContentAsBinHex", buffer, index, count);
+            return (int)retObjectReadElementContentAsBinHex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadElementContentAsBinHexNumber = (java.lang.Number)retObjectReadElementContentAsBinHex;
+                return retObjectReadElementContentAsBinHexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadElementContentAsBinHex != null ? retObjectReadElementContentAsBinHex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -491,9 +685,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public int ReadElementContentAsBinHex(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsBinHex = null;
         try {
-            return (int)classInstance.Invoke("ReadElementContentAsBinHex", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectReadElementContentAsBinHex = classInstance.Invoke("ReadElementContentAsBinHex", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectReadElementContentAsBinHex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadElementContentAsBinHexNumber = (java.lang.Number)retObjectReadElementContentAsBinHex;
+                return retObjectReadElementContentAsBinHexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadElementContentAsBinHex != null ? retObjectReadElementContentAsBinHex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,9 +705,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public int ReadElementContentAsInt() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.ArrayTypeMismatchException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsInt = null;
         try {
-            return (int)classInstance.Invoke("ReadElementContentAsInt");
+            retObjectReadElementContentAsInt = classInstance.Invoke("ReadElementContentAsInt");
+            return (int)retObjectReadElementContentAsInt;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadElementContentAsIntNumber = (java.lang.Number)retObjectReadElementContentAsInt;
+                return retObjectReadElementContentAsIntNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadElementContentAsInt != null ? retObjectReadElementContentAsInt.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -511,9 +725,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public int ReadElementContentAsInt(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsInt = null;
         try {
-            return (int)classInstance.Invoke("ReadElementContentAsInt", localName, namespaceURI);
+            retObjectReadElementContentAsInt = classInstance.Invoke("ReadElementContentAsInt", localName, namespaceURI);
+            return (int)retObjectReadElementContentAsInt;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadElementContentAsIntNumber = (java.lang.Number)retObjectReadElementContentAsInt;
+                return retObjectReadElementContentAsIntNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadElementContentAsInt != null ? retObjectReadElementContentAsInt.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,9 +745,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public int ReadValueChunk(char[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadValueChunk = null;
         try {
-            return (int)classInstance.Invoke("ReadValueChunk", buffer, index, count);
+            retObjectReadValueChunk = classInstance.Invoke("ReadValueChunk", buffer, index, count);
+            return (int)retObjectReadValueChunk;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadValueChunkNumber = (java.lang.Number)retObjectReadValueChunk;
+                return retObjectReadValueChunkNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadValueChunk != null ? retObjectReadValueChunk.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -531,9 +765,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public int ReadValueChunk(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadValueChunk = null;
         try {
-            return (int)classInstance.Invoke("ReadValueChunk", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectReadValueChunk = classInstance.Invoke("ReadValueChunk", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectReadValueChunk;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadValueChunkNumber = (java.lang.Number)retObjectReadValueChunk;
+                return retObjectReadValueChunkNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadValueChunk != null ? retObjectReadValueChunk.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -541,9 +785,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public long ReadContentAsLong() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.OverflowException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsLong = null;
         try {
-            return (long)classInstance.Invoke("ReadContentAsLong");
+            retObjectReadContentAsLong = classInstance.Invoke("ReadContentAsLong");
+            return (long)retObjectReadContentAsLong;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadContentAsLongNumber = (java.lang.Number)retObjectReadContentAsLong;
+                return retObjectReadContentAsLongNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectReadContentAsLong != null ? retObjectReadContentAsLong.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -551,9 +805,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public long ReadElementContentAsLong() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.ArrayTypeMismatchException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsLong = null;
         try {
-            return (long)classInstance.Invoke("ReadElementContentAsLong");
+            retObjectReadElementContentAsLong = classInstance.Invoke("ReadElementContentAsLong");
+            return (long)retObjectReadElementContentAsLong;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadElementContentAsLongNumber = (java.lang.Number)retObjectReadElementContentAsLong;
+                return retObjectReadElementContentAsLongNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectReadElementContentAsLong != null ? retObjectReadElementContentAsLong.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -561,9 +825,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public long ReadElementContentAsLong(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsLong = null;
         try {
-            return (long)classInstance.Invoke("ReadElementContentAsLong", localName, namespaceURI);
+            retObjectReadElementContentAsLong = classInstance.Invoke("ReadElementContentAsLong", localName, namespaceURI);
+            return (long)retObjectReadElementContentAsLong;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadElementContentAsLongNumber = (java.lang.Number)retObjectReadElementContentAsLong;
+                return retObjectReadElementContentAsLongNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectReadElementContentAsLong != null ? retObjectReadElementContentAsLong.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -571,10 +845,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public Single ReadContentAsFloat() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.OverflowException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsFloat = null;
         try {
-            JCObject objReadContentAsFloat = (JCObject)classInstance.Invoke("ReadContentAsFloat");
+            retObjectReadContentAsFloat = classInstance.Invoke("ReadContentAsFloat");
+            JCObject objReadContentAsFloat = (JCObject)retObjectReadContentAsFloat;
             return new Single(objReadContentAsFloat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadContentAsFloat != null ? retObjectReadContentAsFloat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -582,10 +860,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public Single ReadElementContentAsFloat() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsFloat = null;
         try {
-            JCObject objReadElementContentAsFloat = (JCObject)classInstance.Invoke("ReadElementContentAsFloat");
+            retObjectReadElementContentAsFloat = classInstance.Invoke("ReadElementContentAsFloat");
+            JCObject objReadElementContentAsFloat = (JCObject)retObjectReadElementContentAsFloat;
             return new Single(objReadElementContentAsFloat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadElementContentAsFloat != null ? retObjectReadElementContentAsFloat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -593,10 +875,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public Single ReadElementContentAsFloat(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsFloat = null;
         try {
-            JCObject objReadElementContentAsFloat = (JCObject)classInstance.Invoke("ReadElementContentAsFloat", localName, namespaceURI);
+            retObjectReadElementContentAsFloat = classInstance.Invoke("ReadElementContentAsFloat", localName, namespaceURI);
+            JCObject objReadElementContentAsFloat = (JCObject)retObjectReadElementContentAsFloat;
             return new Single(objReadElementContentAsFloat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadElementContentAsFloat != null ? retObjectReadElementContentAsFloat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -604,10 +890,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public DateTime ReadContentAsDateTime() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.OverflowException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsDateTime = null;
         try {
-            JCObject objReadContentAsDateTime = (JCObject)classInstance.Invoke("ReadContentAsDateTime");
+            retObjectReadContentAsDateTime = classInstance.Invoke("ReadContentAsDateTime");
+            JCObject objReadContentAsDateTime = (JCObject)retObjectReadContentAsDateTime;
             return new DateTime(objReadContentAsDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadContentAsDateTime != null ? retObjectReadContentAsDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -615,10 +905,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public DateTime ReadElementContentAsDateTime() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsDateTime = null;
         try {
-            JCObject objReadElementContentAsDateTime = (JCObject)classInstance.Invoke("ReadElementContentAsDateTime");
+            retObjectReadElementContentAsDateTime = classInstance.Invoke("ReadElementContentAsDateTime");
+            JCObject objReadElementContentAsDateTime = (JCObject)retObjectReadElementContentAsDateTime;
             return new DateTime(objReadElementContentAsDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadElementContentAsDateTime != null ? retObjectReadElementContentAsDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -626,10 +920,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public DateTime ReadElementContentAsDateTime(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsDateTime = null;
         try {
-            JCObject objReadElementContentAsDateTime = (JCObject)classInstance.Invoke("ReadElementContentAsDateTime", localName, namespaceURI);
+            retObjectReadElementContentAsDateTime = classInstance.Invoke("ReadElementContentAsDateTime", localName, namespaceURI);
+            JCObject objReadElementContentAsDateTime = (JCObject)retObjectReadElementContentAsDateTime;
             return new DateTime(objReadElementContentAsDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadElementContentAsDateTime != null ? retObjectReadElementContentAsDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -637,10 +935,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public DateTimeOffset ReadContentAsDateTimeOffset() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.OverflowException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsDateTimeOffset = null;
         try {
-            JCObject objReadContentAsDateTimeOffset = (JCObject)classInstance.Invoke("ReadContentAsDateTimeOffset");
+            retObjectReadContentAsDateTimeOffset = classInstance.Invoke("ReadContentAsDateTimeOffset");
+            JCObject objReadContentAsDateTimeOffset = (JCObject)retObjectReadContentAsDateTimeOffset;
             return new DateTimeOffset(objReadContentAsDateTimeOffset);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadContentAsDateTimeOffset != null ? retObjectReadContentAsDateTimeOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -648,10 +950,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public Decimal ReadContentAsDecimal() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.OutOfMemoryException, system.OverflowException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsDecimal = null;
         try {
-            JCObject objReadContentAsDecimal = (JCObject)classInstance.Invoke("ReadContentAsDecimal");
+            retObjectReadContentAsDecimal = classInstance.Invoke("ReadContentAsDecimal");
+            JCObject objReadContentAsDecimal = (JCObject)retObjectReadContentAsDecimal;
             return new Decimal(objReadContentAsDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadContentAsDecimal != null ? retObjectReadContentAsDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -659,10 +965,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public Decimal ReadElementContentAsDecimal() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsDecimal = null;
         try {
-            JCObject objReadElementContentAsDecimal = (JCObject)classInstance.Invoke("ReadElementContentAsDecimal");
+            retObjectReadElementContentAsDecimal = classInstance.Invoke("ReadElementContentAsDecimal");
+            JCObject objReadElementContentAsDecimal = (JCObject)retObjectReadElementContentAsDecimal;
             return new Decimal(objReadElementContentAsDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadElementContentAsDecimal != null ? retObjectReadElementContentAsDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -670,10 +980,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public Decimal ReadElementContentAsDecimal(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsDecimal = null;
         try {
-            JCObject objReadElementContentAsDecimal = (JCObject)classInstance.Invoke("ReadElementContentAsDecimal", localName, namespaceURI);
+            retObjectReadElementContentAsDecimal = classInstance.Invoke("ReadElementContentAsDecimal", localName, namespaceURI);
+            JCObject objReadElementContentAsDecimal = (JCObject)retObjectReadElementContentAsDecimal;
             return new Decimal(objReadElementContentAsDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadElementContentAsDecimal != null ? retObjectReadElementContentAsDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -681,10 +995,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public NetObject ReadContentAs(NetType returnType, IXmlNamespaceResolver namespaceResolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAs = null;
         try {
-            JCObject objReadContentAs = (JCObject)classInstance.Invoke("ReadContentAs", returnType == null ? null : returnType.getJCOInstance(), namespaceResolver == null ? null : namespaceResolver.getJCOInstance());
+            retObjectReadContentAs = classInstance.Invoke("ReadContentAs", returnType == null ? null : returnType.getJCOInstance(), namespaceResolver == null ? null : namespaceResolver.getJCOInstance());
+            JCObject objReadContentAs = (JCObject)retObjectReadContentAs;
             return new NetObject(objReadContentAs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadContentAs != null ? retObjectReadContentAs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -692,10 +1010,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public NetObject ReadContentAsObject() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsObject = null;
         try {
-            JCObject objReadContentAsObject = (JCObject)classInstance.Invoke("ReadContentAsObject");
+            retObjectReadContentAsObject = classInstance.Invoke("ReadContentAsObject");
+            JCObject objReadContentAsObject = (JCObject)retObjectReadContentAsObject;
             return new NetObject(objReadContentAsObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadContentAsObject != null ? retObjectReadContentAsObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -703,10 +1025,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public NetObject ReadElementContentAs(NetType returnType, IXmlNamespaceResolver namespaceResolver, java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAs = null;
         try {
-            JCObject objReadElementContentAs = (JCObject)classInstance.Invoke("ReadElementContentAs", returnType == null ? null : returnType.getJCOInstance(), namespaceResolver == null ? null : namespaceResolver.getJCOInstance(), localName, namespaceURI);
+            retObjectReadElementContentAs = classInstance.Invoke("ReadElementContentAs", returnType == null ? null : returnType.getJCOInstance(), namespaceResolver == null ? null : namespaceResolver.getJCOInstance(), localName, namespaceURI);
+            JCObject objReadElementContentAs = (JCObject)retObjectReadElementContentAs;
             return new NetObject(objReadElementContentAs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadElementContentAs != null ? retObjectReadElementContentAs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -714,10 +1040,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public NetObject ReadElementContentAs(NetType returnType, IXmlNamespaceResolver namespaceResolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAs = null;
         try {
-            JCObject objReadElementContentAs = (JCObject)classInstance.Invoke("ReadElementContentAs", returnType == null ? null : returnType.getJCOInstance(), namespaceResolver == null ? null : namespaceResolver.getJCOInstance());
+            retObjectReadElementContentAs = classInstance.Invoke("ReadElementContentAs", returnType == null ? null : returnType.getJCOInstance(), namespaceResolver == null ? null : namespaceResolver.getJCOInstance());
+            JCObject objReadElementContentAs = (JCObject)retObjectReadElementContentAs;
             return new NetObject(objReadElementContentAs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadElementContentAs != null ? retObjectReadElementContentAs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -725,10 +1055,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public NetObject ReadElementContentAsObject() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsObject = null;
         try {
-            JCObject objReadElementContentAsObject = (JCObject)classInstance.Invoke("ReadElementContentAsObject");
+            retObjectReadElementContentAsObject = classInstance.Invoke("ReadElementContentAsObject");
+            JCObject objReadElementContentAsObject = (JCObject)retObjectReadElementContentAsObject;
             return new NetObject(objReadElementContentAsObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadElementContentAsObject != null ? retObjectReadElementContentAsObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -736,10 +1070,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public NetObject ReadElementContentAsObject(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsObject = null;
         try {
-            JCObject objReadElementContentAsObject = (JCObject)classInstance.Invoke("ReadElementContentAsObject", localName, namespaceURI);
+            retObjectReadElementContentAsObject = classInstance.Invoke("ReadElementContentAsObject", localName, namespaceURI);
+            JCObject objReadElementContentAsObject = (JCObject)retObjectReadElementContentAsObject;
             return new NetObject(objReadElementContentAsObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadElementContentAsObject != null ? retObjectReadElementContentAsObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -747,9 +1085,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public java.lang.String GetAttribute(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttribute = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAttribute", i);
+            retObjectGetAttribute = classInstance.Invoke("GetAttribute", i);
+            return (java.lang.String)retObjectGetAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAttribute != null ? retObjectGetAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -757,9 +1099,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public java.lang.String GetAttribute(java.lang.String name, java.lang.String namespaceURI) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttribute = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAttribute", name, namespaceURI);
+            retObjectGetAttribute = classInstance.Invoke("GetAttribute", name, namespaceURI);
+            return (java.lang.String)retObjectGetAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAttribute != null ? retObjectGetAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -767,9 +1113,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public java.lang.String GetAttribute(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttribute = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAttribute", name);
+            retObjectGetAttribute = classInstance.Invoke("GetAttribute", name);
+            return (java.lang.String)retObjectGetAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAttribute != null ? retObjectGetAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -777,9 +1127,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public java.lang.String LookupNamespace(java.lang.String prefix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLookupNamespace = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LookupNamespace", prefix);
+            retObjectLookupNamespace = classInstance.Invoke("LookupNamespace", prefix);
+            return (java.lang.String)retObjectLookupNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLookupNamespace != null ? retObjectLookupNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -787,9 +1141,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public java.lang.String ReadContentAsString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadContentAsString");
+            retObjectReadContentAsString = classInstance.Invoke("ReadContentAsString");
+            return (java.lang.String)retObjectReadContentAsString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadContentAsString != null ? retObjectReadContentAsString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -797,9 +1155,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public java.lang.String ReadElementContentAsString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadElementContentAsString");
+            retObjectReadElementContentAsString = classInstance.Invoke("ReadElementContentAsString");
+            return (java.lang.String)retObjectReadElementContentAsString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadElementContentAsString != null ? retObjectReadElementContentAsString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -807,9 +1169,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public java.lang.String ReadElementContentAsString(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadElementContentAsString", localName, namespaceURI);
+            retObjectReadElementContentAsString = classInstance.Invoke("ReadElementContentAsString", localName, namespaceURI);
+            return (java.lang.String)retObjectReadElementContentAsString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadElementContentAsString != null ? retObjectReadElementContentAsString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -817,9 +1183,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public java.lang.String ReadElementString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadElementString");
+            retObjectReadElementString = classInstance.Invoke("ReadElementString");
+            return (java.lang.String)retObjectReadElementString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadElementString != null ? retObjectReadElementString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -827,9 +1197,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public java.lang.String ReadElementString(java.lang.String localname, java.lang.String ns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadElementString", localname, ns);
+            retObjectReadElementString = classInstance.Invoke("ReadElementString", localname, ns);
+            return (java.lang.String)retObjectReadElementString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadElementString != null ? retObjectReadElementString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -837,9 +1211,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public java.lang.String ReadElementString(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadElementString", name);
+            retObjectReadElementString = classInstance.Invoke("ReadElementString", name);
+            return (java.lang.String)retObjectReadElementString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadElementString != null ? retObjectReadElementString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -847,9 +1225,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public java.lang.String ReadInnerXml() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadInnerXml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadInnerXml");
+            retObjectReadInnerXml = classInstance.Invoke("ReadInnerXml");
+            return (java.lang.String)retObjectReadInnerXml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadInnerXml != null ? retObjectReadInnerXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -857,9 +1239,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public java.lang.String ReadOuterXml() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadOuterXml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadOuterXml");
+            retObjectReadOuterXml = classInstance.Invoke("ReadOuterXml");
+            return (java.lang.String)retObjectReadOuterXml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadOuterXml != null ? retObjectReadOuterXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -867,9 +1253,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public java.lang.String ReadString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadString");
+            retObjectReadString = classInstance.Invoke("ReadString");
+            return (java.lang.String)retObjectReadString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadString != null ? retObjectReadString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -877,10 +1267,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public Task SkipAsync() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipAsync = null;
         try {
-            JCObject objSkipAsync = (JCObject)classInstance.Invoke("SkipAsync");
+            retObjectSkipAsync = classInstance.Invoke("SkipAsync");
+            JCObject objSkipAsync = (JCObject)retObjectSkipAsync;
             return new Task(objSkipAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSkipAsync != null ? retObjectSkipAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -888,10 +1282,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public XmlNodeType MoveToContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToContent = null;
         try {
-            JCObject objMoveToContent = (JCObject)classInstance.Invoke("MoveToContent");
+            retObjectMoveToContent = classInstance.Invoke("MoveToContent");
+            JCObject objMoveToContent = (JCObject)retObjectMoveToContent;
             return new XmlNodeType(objMoveToContent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveToContent != null ? retObjectMoveToContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -899,10 +1297,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public static XmlReader Create(Stream input, XmlReaderSettings settings, java.lang.String baseUri) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.xml.XmlException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", input == null ? null : input.getJCOInstance(), settings == null ? null : settings.getJCOInstance(), baseUri);
+            retObjectCreate = classType.Invoke("Create", input == null ? null : input.getJCOInstance(), settings == null ? null : settings.getJCOInstance(), baseUri);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlReader(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -910,10 +1312,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public static XmlReader Create(Stream input, XmlReaderSettings settings, XmlParserContext inputContext) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.xml.XmlException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", input == null ? null : input.getJCOInstance(), settings == null ? null : settings.getJCOInstance(), inputContext == null ? null : inputContext.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", input == null ? null : input.getJCOInstance(), settings == null ? null : settings.getJCOInstance(), inputContext == null ? null : inputContext.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlReader(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -921,10 +1327,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public static XmlReader Create(Stream input, XmlReaderSettings settings) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.xml.XmlException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", input == null ? null : input.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", input == null ? null : input.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlReader(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -932,10 +1342,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public static XmlReader Create(Stream input) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", input == null ? null : input.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", input == null ? null : input.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlReader(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -943,10 +1357,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public static XmlReader Create(TextReader input, XmlReaderSettings settings, java.lang.String baseUri) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.xml.XmlException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", input == null ? null : input.getJCOInstance(), settings == null ? null : settings.getJCOInstance(), baseUri);
+            retObjectCreate = classType.Invoke("Create", input == null ? null : input.getJCOInstance(), settings == null ? null : settings.getJCOInstance(), baseUri);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlReader(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -954,10 +1372,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public static XmlReader Create(TextReader input, XmlReaderSettings settings, XmlParserContext inputContext) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.xml.XmlException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", input == null ? null : input.getJCOInstance(), settings == null ? null : settings.getJCOInstance(), inputContext == null ? null : inputContext.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", input == null ? null : input.getJCOInstance(), settings == null ? null : settings.getJCOInstance(), inputContext == null ? null : inputContext.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlReader(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -965,10 +1387,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public static XmlReader Create(TextReader input, XmlReaderSettings settings) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", input == null ? null : input.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", input == null ? null : input.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlReader(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -976,10 +1402,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public static XmlReader Create(TextReader input) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", input == null ? null : input.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", input == null ? null : input.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlReader(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -987,10 +1417,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public static XmlReader Create(java.lang.String inputUri, XmlReaderSettings settings, XmlParserContext inputContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", inputUri, settings == null ? null : settings.getJCOInstance(), inputContext == null ? null : inputContext.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", inputUri, settings == null ? null : settings.getJCOInstance(), inputContext == null ? null : inputContext.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlReader(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -998,10 +1432,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public static XmlReader Create(java.lang.String inputUri, XmlReaderSettings settings) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.xml.XmlException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotImplementedException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", inputUri, settings == null ? null : settings.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", inputUri, settings == null ? null : settings.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlReader(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1009,10 +1447,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public static XmlReader Create(java.lang.String inputUri) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.xml.XmlException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.NotImplementedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", inputUri);
+            retObjectCreate = classType.Invoke("Create", inputUri);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlReader(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1020,10 +1462,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public static XmlReader Create(XmlReader reader, XmlReaderSettings settings) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", reader == null ? null : reader.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", reader == null ? null : reader.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlReader(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1031,10 +1477,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public XmlReader ReadSubtree() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadSubtree = null;
         try {
-            JCObject objReadSubtree = (JCObject)classInstance.Invoke("ReadSubtree");
+            retObjectReadSubtree = classInstance.Invoke("ReadSubtree");
+            JCObject objReadSubtree = (JCObject)retObjectReadSubtree;
             return new XmlReader(objReadSubtree);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadSubtree != null ? retObjectReadSubtree.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1042,7 +1492,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -1052,7 +1502,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -1062,7 +1512,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public void MoveToAttribute(int i) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveToAttribute", i);
         } catch (JCNativeException jcne) {
@@ -1072,7 +1522,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public void ReadEndElement() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadEndElement");
         } catch (JCNativeException jcne) {
@@ -1082,7 +1532,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public void ReadStartElement() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadStartElement");
         } catch (JCNativeException jcne) {
@@ -1092,7 +1542,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public void ReadStartElement(java.lang.String localname, java.lang.String ns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadStartElement", localname, ns);
         } catch (JCNativeException jcne) {
@@ -1102,7 +1552,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public void ReadStartElement(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadStartElement", name);
         } catch (JCNativeException jcne) {
@@ -1112,7 +1562,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public void ResolveEntity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResolveEntity");
         } catch (JCNativeException jcne) {
@@ -1122,7 +1572,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public void Skip() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Skip");
         } catch (JCNativeException jcne) {
@@ -1133,7 +1583,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -1149,9 +1599,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
     
     public boolean getCanReadBinaryContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanReadBinaryContent = null;
         try {
-            return (boolean)classInstance.Get("CanReadBinaryContent");
+            retObjectCanReadBinaryContent = classInstance.Get("CanReadBinaryContent");
+            return (boolean)retObjectCanReadBinaryContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanReadBinaryContent != null ? retObjectCanReadBinaryContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1159,9 +1613,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean getCanReadValueChunk() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanReadValueChunk = null;
         try {
-            return (boolean)classInstance.Get("CanReadValueChunk");
+            retObjectCanReadValueChunk = classInstance.Get("CanReadValueChunk");
+            return (boolean)retObjectCanReadValueChunk;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanReadValueChunk != null ? retObjectCanReadValueChunk.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1169,9 +1627,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean getCanResolveEntity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanResolveEntity = null;
         try {
-            return (boolean)classInstance.Get("CanResolveEntity");
+            retObjectCanResolveEntity = classInstance.Get("CanResolveEntity");
+            return (boolean)retObjectCanResolveEntity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanResolveEntity != null ? retObjectCanResolveEntity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1179,9 +1641,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean getEOF() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEOF = null;
         try {
-            return (boolean)classInstance.Get("EOF");
+            retObjectEOF = classInstance.Get("EOF");
+            return (boolean)retObjectEOF;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEOF != null ? retObjectEOF.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1189,9 +1655,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean getHasAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasAttributes = null;
         try {
-            return (boolean)classInstance.Get("HasAttributes");
+            retObjectHasAttributes = classInstance.Get("HasAttributes");
+            return (boolean)retObjectHasAttributes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasAttributes != null ? retObjectHasAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1199,9 +1669,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean getHasValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasValue = null;
         try {
-            return (boolean)classInstance.Get("HasValue");
+            retObjectHasValue = classInstance.Get("HasValue");
+            return (boolean)retObjectHasValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasValue != null ? retObjectHasValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1209,9 +1683,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean getIsDefault() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefault = null;
         try {
-            return (boolean)classInstance.Get("IsDefault");
+            retObjectIsDefault = classInstance.Get("IsDefault");
+            return (boolean)retObjectIsDefault;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDefault != null ? retObjectIsDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1219,9 +1697,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public boolean getIsEmptyElement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmptyElement = null;
         try {
-            return (boolean)classInstance.Get("IsEmptyElement");
+            retObjectIsEmptyElement = classInstance.Get("IsEmptyElement");
+            return (boolean)retObjectIsEmptyElement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEmptyElement != null ? retObjectIsEmptyElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1229,9 +1711,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public char getQuoteChar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuoteChar = null;
         try {
-            return (char)classInstance.Get("QuoteChar");
+            retObjectQuoteChar = classInstance.Get("QuoteChar");
+            return (char)retObjectQuoteChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectQuoteChar != null ? retObjectQuoteChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1239,9 +1725,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public int getAttributeCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributeCount = null;
         try {
-            return (int)classInstance.Get("AttributeCount");
+            retObjectAttributeCount = classInstance.Get("AttributeCount");
+            return (int)retObjectAttributeCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAttributeCountNumber = (java.lang.Number)retObjectAttributeCount;
+                return retObjectAttributeCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAttributeCount != null ? retObjectAttributeCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1249,9 +1745,19 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public int getDepth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDepth = null;
         try {
-            return (int)classInstance.Get("Depth");
+            retObjectDepth = classInstance.Get("Depth");
+            return (int)retObjectDepth;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDepthNumber = (java.lang.Number)retObjectDepth;
+                return retObjectDepthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDepth != null ? retObjectDepth.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1259,9 +1765,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public java.lang.String getBaseURI() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseURI = null;
         try {
-            return (java.lang.String)classInstance.Get("BaseURI");
+            retObjectBaseURI = classInstance.Get("BaseURI");
+            return (java.lang.String)retObjectBaseURI;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBaseURI != null ? retObjectBaseURI.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1269,9 +1779,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public java.lang.String getLocalName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalName = null;
         try {
-            return (java.lang.String)classInstance.Get("LocalName");
+            retObjectLocalName = classInstance.Get("LocalName");
+            return (java.lang.String)retObjectLocalName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLocalName != null ? retObjectLocalName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1279,9 +1793,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public java.lang.String getName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1289,9 +1807,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public java.lang.String getNamespaceURI() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespaceURI = null;
         try {
-            return (java.lang.String)classInstance.Get("NamespaceURI");
+            retObjectNamespaceURI = classInstance.Get("NamespaceURI");
+            return (java.lang.String)retObjectNamespaceURI;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespaceURI != null ? retObjectNamespaceURI.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1299,9 +1821,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public java.lang.String getPrefix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrefix = null;
         try {
-            return (java.lang.String)classInstance.Get("Prefix");
+            retObjectPrefix = classInstance.Get("Prefix");
+            return (java.lang.String)retObjectPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPrefix != null ? retObjectPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1309,9 +1835,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (java.lang.String)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (java.lang.String)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1319,9 +1849,13 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public java.lang.String getXmlLang() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlLang = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlLang");
+            retObjectXmlLang = classInstance.Get("XmlLang");
+            return (java.lang.String)retObjectXmlLang;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlLang != null ? retObjectXmlLang.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1329,10 +1863,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public NetType getValueType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValueType");
+            retObjectValueType = classInstance.Get("ValueType");
+            JCObject val = (JCObject)retObjectValueType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValueType != null ? retObjectValueType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1340,10 +1878,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public ReadState getReadState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReadState");
+            retObjectReadState = classInstance.Get("ReadState");
+            JCObject val = (JCObject)retObjectReadState;
             return new ReadState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadState != null ? retObjectReadState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1351,10 +1893,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public IXmlSchemaInfo getSchemaInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemaInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SchemaInfo");
+            retObjectSchemaInfo = classInstance.Get("SchemaInfo");
+            JCObject val = (JCObject)retObjectSchemaInfo;
             return new IXmlSchemaInfoImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemaInfo != null ? retObjectSchemaInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1362,10 +1908,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public XmlNameTable getNameTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNameTable = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NameTable");
+            retObjectNameTable = classInstance.Get("NameTable");
+            JCObject val = (JCObject)retObjectNameTable;
             return new XmlNameTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNameTable != null ? retObjectNameTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1373,10 +1923,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public XmlNodeType getNodeType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNodeType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NodeType");
+            retObjectNodeType = classInstance.Get("NodeType");
+            JCObject val = (JCObject)retObjectNodeType;
             return new XmlNodeType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNodeType != null ? retObjectNodeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1384,10 +1938,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public XmlReaderSettings getSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Settings");
+            retObjectSettings = classInstance.Get("Settings");
+            JCObject val = (JCObject)retObjectSettings;
             return new XmlReaderSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSettings != null ? retObjectSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1395,10 +1953,14 @@ public class XmlReader extends NetObject implements AutoCloseable {
 
     public XmlSpace getXmlSpace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlSpace = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlSpace");
+            retObjectXmlSpace = classInstance.Get("XmlSpace");
+            JCObject val = (JCObject)retObjectXmlSpace;
             return new XmlSpace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlSpace != null ? retObjectXmlSpace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -165,7 +165,7 @@ public class PerformanceCounterManager extends NetObject  {
      */
     @Deprecated 
     public void CloseData() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollectData to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollectData to obtain the full interface.");
     }
 
 

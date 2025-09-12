@@ -168,9 +168,13 @@ public class StatusBar extends ItemsControl  {
     
     public boolean getUsesItemContainerTemplate() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsesItemContainerTemplate = null;
         try {
-            return (boolean)classInstance.Get("UsesItemContainerTemplate");
+            retObjectUsesItemContainerTemplate = classInstance.Get("UsesItemContainerTemplate");
+            return (boolean)retObjectUsesItemContainerTemplate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUsesItemContainerTemplate != null ? retObjectUsesItemContainerTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class StatusBar extends ItemsControl  {
 
     public void setUsesItemContainerTemplate(boolean UsesItemContainerTemplate) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UsesItemContainerTemplate", UsesItemContainerTemplate);
         } catch (JCNativeException jcne) {
@@ -188,10 +192,14 @@ public class StatusBar extends ItemsControl  {
 
     public ItemContainerTemplateSelector getItemContainerTemplateSelector() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemContainerTemplateSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemContainerTemplateSelector");
+            retObjectItemContainerTemplateSelector = classInstance.Get("ItemContainerTemplateSelector");
+            JCObject val = (JCObject)retObjectItemContainerTemplateSelector;
             return new ItemContainerTemplateSelector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemContainerTemplateSelector != null ? retObjectItemContainerTemplateSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class StatusBar extends ItemsControl  {
 
     public void setItemContainerTemplateSelector(ItemContainerTemplateSelector ItemContainerTemplateSelector) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemContainerTemplateSelector", ItemContainerTemplateSelector == null ? null : ItemContainerTemplateSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,10 +217,14 @@ public class StatusBar extends ItemsControl  {
 
     public static ResourceKey getSeparatorStyleKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSeparatorStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("SeparatorStyleKey");
+            retObjectSeparatorStyleKey = classType.Get("SeparatorStyleKey");
+            JCObject val = (JCObject)retObjectSeparatorStyleKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSeparatorStyleKey != null ? retObjectSeparatorStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

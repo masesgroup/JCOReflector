@@ -144,10 +144,14 @@ public class IInstanceProviderImplementation extends NetObject implements IInsta
     
     public NetObject GetInstance(InstanceContext instanceContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInstance = null;
         try {
-            JCObject objGetInstance = (JCObject)classInstance.Invoke("GetInstance", instanceContext == null ? null : instanceContext.getJCOInstance());
+            retObjectGetInstance = classInstance.Invoke("GetInstance", instanceContext == null ? null : instanceContext.getJCOInstance());
+            JCObject objGetInstance = (JCObject)retObjectGetInstance;
             return new NetObject(objGetInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInstance != null ? retObjectGetInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,10 +159,14 @@ public class IInstanceProviderImplementation extends NetObject implements IInsta
 
     public NetObject GetInstance(InstanceContext instanceContext, Message message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInstance = null;
         try {
-            JCObject objGetInstance = (JCObject)classInstance.Invoke("GetInstance", instanceContext == null ? null : instanceContext.getJCOInstance(), message == null ? null : message.getJCOInstance());
+            retObjectGetInstance = classInstance.Invoke("GetInstance", instanceContext == null ? null : instanceContext.getJCOInstance(), message == null ? null : message.getJCOInstance());
+            JCObject objGetInstance = (JCObject)retObjectGetInstance;
             return new NetObject(objGetInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInstance != null ? retObjectGetInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,7 +174,7 @@ public class IInstanceProviderImplementation extends NetObject implements IInsta
 
     public void ReleaseInstance(InstanceContext instanceContext, NetObject instance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseInstance", instanceContext == null ? null : instanceContext.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -166,9 +166,13 @@ public class Clock extends DispatcherObject  {
     
     public boolean getHasControllableRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasControllableRoot = null;
         try {
-            return (boolean)classInstance.Get("HasControllableRoot");
+            retObjectHasControllableRoot = classInstance.Get("HasControllableRoot");
+            return (boolean)retObjectHasControllableRoot;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasControllableRoot != null ? retObjectHasControllableRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class Clock extends DispatcherObject  {
 
     public boolean getIsPaused() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPaused = null;
         try {
-            return (boolean)classInstance.Get("IsPaused");
+            retObjectIsPaused = classInstance.Get("IsPaused");
+            return (boolean)retObjectIsPaused;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPaused != null ? retObjectIsPaused.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,14 @@ public class Clock extends DispatcherObject  {
 
     public Duration getNaturalDuration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNaturalDuration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NaturalDuration");
+            retObjectNaturalDuration = classInstance.Get("NaturalDuration");
+            JCObject val = (JCObject)retObjectNaturalDuration;
             return new Duration(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNaturalDuration != null ? retObjectNaturalDuration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +209,14 @@ public class Clock extends DispatcherObject  {
 
     public Clock getParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
+            retObjectParent = classInstance.Get("Parent");
+            JCObject val = (JCObject)retObjectParent;
             return new Clock(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParent != null ? retObjectParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +224,14 @@ public class Clock extends DispatcherObject  {
 
     public ClockController getController() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectController = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Controller");
+            retObjectController = classInstance.Get("Controller");
+            JCObject val = (JCObject)retObjectController;
             return new ClockController(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectController != null ? retObjectController.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +239,14 @@ public class Clock extends DispatcherObject  {
 
     public ClockState getCurrentState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentState");
+            retObjectCurrentState = classInstance.Get("CurrentState");
+            JCObject val = (JCObject)retObjectCurrentState;
             return new ClockState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentState != null ? retObjectCurrentState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +254,14 @@ public class Clock extends DispatcherObject  {
 
     public Timeline getTimeline() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeline = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Timeline");
+            retObjectTimeline = classInstance.Get("Timeline");
+            JCObject val = (JCObject)retObjectTimeline;
             return new Timeline(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeline != null ? retObjectTimeline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +274,7 @@ public class Clock extends DispatcherObject  {
 
     public void addCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Completed", handler);
         } catch (JCNativeException jcne) {
@@ -256,7 +284,7 @@ public class Clock extends DispatcherObject  {
 
     public void removeCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Completed", handler);
         } catch (JCNativeException jcne) {
@@ -266,7 +294,7 @@ public class Clock extends DispatcherObject  {
 
     public void addCurrentGlobalSpeedInvalidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CurrentGlobalSpeedInvalidated", handler);
         } catch (JCNativeException jcne) {
@@ -276,7 +304,7 @@ public class Clock extends DispatcherObject  {
 
     public void removeCurrentGlobalSpeedInvalidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CurrentGlobalSpeedInvalidated", handler);
         } catch (JCNativeException jcne) {
@@ -286,7 +314,7 @@ public class Clock extends DispatcherObject  {
 
     public void addCurrentStateInvalidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CurrentStateInvalidated", handler);
         } catch (JCNativeException jcne) {
@@ -296,7 +324,7 @@ public class Clock extends DispatcherObject  {
 
     public void removeCurrentStateInvalidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CurrentStateInvalidated", handler);
         } catch (JCNativeException jcne) {
@@ -306,7 +334,7 @@ public class Clock extends DispatcherObject  {
 
     public void addCurrentTimeInvalidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CurrentTimeInvalidated", handler);
         } catch (JCNativeException jcne) {
@@ -316,7 +344,7 @@ public class Clock extends DispatcherObject  {
 
     public void removeCurrentTimeInvalidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CurrentTimeInvalidated", handler);
         } catch (JCNativeException jcne) {
@@ -326,7 +354,7 @@ public class Clock extends DispatcherObject  {
 
     public void addRemoveRequested(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RemoveRequested", handler);
         } catch (JCNativeException jcne) {
@@ -336,7 +364,7 @@ public class Clock extends DispatcherObject  {
 
     public void removeRemoveRequested(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RemoveRequested", handler);
         } catch (JCNativeException jcne) {

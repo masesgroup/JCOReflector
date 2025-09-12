@@ -160,7 +160,7 @@ public class BasicDesignerLoader extends DesignerLoader implements system.compon
     
     public void BeginLoad(IDesignerLoaderHost host) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginLoad", host == null ? null : host.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -170,7 +170,7 @@ public class BasicDesignerLoader extends DesignerLoader implements system.compon
 
     public void Dispose() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.MulticastNotSupportedException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -180,7 +180,7 @@ public class BasicDesignerLoader extends DesignerLoader implements system.compon
 
     public void Flush() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -194,7 +194,7 @@ public class BasicDesignerLoader extends DesignerLoader implements system.compon
      */
     @Deprecated 
     public boolean Reload() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerLoaderService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerLoaderService to obtain the full interface.");
     }
 
     /**
@@ -203,7 +203,7 @@ public class BasicDesignerLoader extends DesignerLoader implements system.compon
      */
     @Deprecated 
     public void AddLoadDependency() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerLoaderService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerLoaderService to obtain the full interface.");
     }
 
     /**
@@ -212,7 +212,7 @@ public class BasicDesignerLoader extends DesignerLoader implements system.compon
      */
     @Deprecated 
     public void DependentLoadComplete(boolean successful, ICollection errorCollection) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerLoaderService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerLoaderService to obtain the full interface.");
     }
 
 

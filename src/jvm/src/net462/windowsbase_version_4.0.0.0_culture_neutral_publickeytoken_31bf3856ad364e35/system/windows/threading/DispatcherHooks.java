@@ -166,7 +166,7 @@ public class DispatcherHooks extends NetObject  {
 
     public void addDispatcherInactive(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DispatcherInactive", handler);
         } catch (JCNativeException jcne) {
@@ -176,7 +176,7 @@ public class DispatcherHooks extends NetObject  {
 
     public void removeDispatcherInactive(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DispatcherInactive", handler);
         } catch (JCNativeException jcne) {
@@ -186,7 +186,7 @@ public class DispatcherHooks extends NetObject  {
 
     public void addOperationAborted(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("OperationAborted", handler);
         } catch (JCNativeException jcne) {
@@ -196,7 +196,7 @@ public class DispatcherHooks extends NetObject  {
 
     public void removeOperationAborted(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("OperationAborted", handler);
         } catch (JCNativeException jcne) {
@@ -206,7 +206,7 @@ public class DispatcherHooks extends NetObject  {
 
     public void addOperationCompleted(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("OperationCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -216,7 +216,7 @@ public class DispatcherHooks extends NetObject  {
 
     public void removeOperationCompleted(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("OperationCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -226,7 +226,7 @@ public class DispatcherHooks extends NetObject  {
 
     public void addOperationPosted(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("OperationPosted", handler);
         } catch (JCNativeException jcne) {
@@ -236,7 +236,7 @@ public class DispatcherHooks extends NetObject  {
 
     public void removeOperationPosted(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("OperationPosted", handler);
         } catch (JCNativeException jcne) {
@@ -246,7 +246,7 @@ public class DispatcherHooks extends NetObject  {
 
     public void addOperationPriorityChanged(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("OperationPriorityChanged", handler);
         } catch (JCNativeException jcne) {
@@ -256,7 +256,7 @@ public class DispatcherHooks extends NetObject  {
 
     public void removeOperationPriorityChanged(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("OperationPriorityChanged", handler);
         } catch (JCNativeException jcne) {
@@ -266,7 +266,7 @@ public class DispatcherHooks extends NetObject  {
 
     public void addOperationStarted(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("OperationStarted", handler);
         } catch (JCNativeException jcne) {
@@ -276,7 +276,7 @@ public class DispatcherHooks extends NetObject  {
 
     public void removeOperationStarted(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("OperationStarted", handler);
         } catch (JCNativeException jcne) {

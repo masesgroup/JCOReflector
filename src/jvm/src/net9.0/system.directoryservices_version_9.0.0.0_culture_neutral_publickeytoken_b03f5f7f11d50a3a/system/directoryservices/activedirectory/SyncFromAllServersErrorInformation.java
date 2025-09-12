@@ -160,9 +160,19 @@ public class SyncFromAllServersErrorInformation extends NetObject  {
     
     public int getErrorCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorCode = null;
         try {
-            return (int)classInstance.Get("ErrorCode");
+            retObjectErrorCode = classInstance.Get("ErrorCode");
+            return (int)retObjectErrorCode;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectErrorCodeNumber = (java.lang.Number)retObjectErrorCode;
+                return retObjectErrorCodeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectErrorCode != null ? retObjectErrorCode.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +180,14 @@ public class SyncFromAllServersErrorInformation extends NetObject  {
 
     public SyncFromAllServersErrorCategory getErrorCategory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorCategory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ErrorCategory");
+            retObjectErrorCategory = classInstance.Get("ErrorCategory");
+            JCObject val = (JCObject)retObjectErrorCategory;
             return new SyncFromAllServersErrorCategory(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectErrorCategory != null ? retObjectErrorCategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +195,13 @@ public class SyncFromAllServersErrorInformation extends NetObject  {
 
     public java.lang.String getErrorMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("ErrorMessage");
+            retObjectErrorMessage = classInstance.Get("ErrorMessage");
+            return (java.lang.String)retObjectErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectErrorMessage != null ? retObjectErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +209,13 @@ public class SyncFromAllServersErrorInformation extends NetObject  {
 
     public java.lang.String getSourceServer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceServer = null;
         try {
-            return (java.lang.String)classInstance.Get("SourceServer");
+            retObjectSourceServer = classInstance.Get("SourceServer");
+            return (java.lang.String)retObjectSourceServer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourceServer != null ? retObjectSourceServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +223,13 @@ public class SyncFromAllServersErrorInformation extends NetObject  {
 
     public java.lang.String getTargetServer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetServer = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetServer");
+            retObjectTargetServer = classInstance.Get("TargetServer");
+            return (java.lang.String)retObjectTargetServer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetServer != null ? retObjectTargetServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

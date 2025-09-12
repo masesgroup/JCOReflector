@@ -156,9 +156,13 @@ public class LikeOperator extends NetObject  {
     
     public static boolean LikeString(java.lang.String Source, java.lang.String Pattern, CompareMethod CompareOption) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLikeString = null;
         try {
-            return (boolean)classType.Invoke("LikeString", Source, Pattern, CompareOption == null ? null : CompareOption.getJCOInstance());
+            retObjectLikeString = classType.Invoke("LikeString", Source, Pattern, CompareOption == null ? null : CompareOption.getJCOInstance());
+            return (boolean)retObjectLikeString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectLikeString != null ? retObjectLikeString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class LikeOperator extends NetObject  {
 
     public static NetObject LikeObject(NetObject Source, NetObject Pattern, CompareMethod CompareOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.RankException, system.ArgumentOutOfRangeException, microsoft.visualbasic.compilerservices.InternalErrorException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLikeObject = null;
         try {
-            JCObject objLikeObject = (JCObject)classType.Invoke("LikeObject", Source == null ? null : Source.getJCOInstance(), Pattern == null ? null : Pattern.getJCOInstance(), CompareOption == null ? null : CompareOption.getJCOInstance());
+            retObjectLikeObject = classType.Invoke("LikeObject", Source == null ? null : Source.getJCOInstance(), Pattern == null ? null : Pattern.getJCOInstance(), CompareOption == null ? null : CompareOption.getJCOInstance());
+            JCObject objLikeObject = (JCObject)retObjectLikeObject;
             return new NetObject(objLikeObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLikeObject != null ? retObjectLikeObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

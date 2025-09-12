@@ -167,7 +167,7 @@ public class EventBindingService extends NetObject implements system.componentmo
      */
     @Deprecated 
     public boolean ShowCode() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
     }
 
     /**
@@ -176,7 +176,7 @@ public class EventBindingService extends NetObject implements system.componentmo
      */
     @Deprecated 
     public boolean ShowCode(int lineNumber) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
     }
 
     /**
@@ -185,7 +185,7 @@ public class EventBindingService extends NetObject implements system.componentmo
      */
     @Deprecated 
     public boolean ShowCode(IComponent component, EventDescriptor e) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
     }
 
     /**
@@ -194,7 +194,7 @@ public class EventBindingService extends NetObject implements system.componentmo
      */
     @Deprecated 
     public ICollection GetCompatibleMethods(EventDescriptor e) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
     }
 
     /**
@@ -203,7 +203,7 @@ public class EventBindingService extends NetObject implements system.componentmo
      */
     @Deprecated 
     public EventDescriptor GetEvent(PropertyDescriptor property) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
     }
 
     /**
@@ -212,7 +212,7 @@ public class EventBindingService extends NetObject implements system.componentmo
      */
     @Deprecated 
     public PropertyDescriptor GetEventProperty(EventDescriptor e) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
     }
 
     /**
@@ -221,7 +221,7 @@ public class EventBindingService extends NetObject implements system.componentmo
      */
     @Deprecated 
     public PropertyDescriptorCollection GetEventProperties(EventDescriptorCollection events) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
     }
 
     /**
@@ -230,7 +230,7 @@ public class EventBindingService extends NetObject implements system.componentmo
      */
     @Deprecated 
     public java.lang.String CreateUniqueMethodName(IComponent component, EventDescriptor e) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
     }
 
 

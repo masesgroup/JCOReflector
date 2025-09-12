@@ -166,9 +166,13 @@ public class ShowPropertyInOutlineViewAttribute extends Attribute  {
     
     public boolean getCurrentPropertyVisible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentPropertyVisible = null;
         try {
-            return (boolean)classInstance.Get("CurrentPropertyVisible");
+            retObjectCurrentPropertyVisible = classInstance.Get("CurrentPropertyVisible");
+            return (boolean)retObjectCurrentPropertyVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCurrentPropertyVisible != null ? retObjectCurrentPropertyVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class ShowPropertyInOutlineViewAttribute extends Attribute  {
 
     public void setCurrentPropertyVisible(boolean CurrentPropertyVisible) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentPropertyVisible", CurrentPropertyVisible);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class ShowPropertyInOutlineViewAttribute extends Attribute  {
 
     public boolean getDuplicatedChildNodesVisible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDuplicatedChildNodesVisible = null;
         try {
-            return (boolean)classInstance.Get("DuplicatedChildNodesVisible");
+            retObjectDuplicatedChildNodesVisible = classInstance.Get("DuplicatedChildNodesVisible");
+            return (boolean)retObjectDuplicatedChildNodesVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDuplicatedChildNodesVisible != null ? retObjectDuplicatedChildNodesVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class ShowPropertyInOutlineViewAttribute extends Attribute  {
 
     public void setDuplicatedChildNodesVisible(boolean DuplicatedChildNodesVisible) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DuplicatedChildNodesVisible", DuplicatedChildNodesVisible);
         } catch (JCNativeException jcne) {
@@ -206,9 +214,13 @@ public class ShowPropertyInOutlineViewAttribute extends Attribute  {
 
     public java.lang.String getChildNodePrefix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChildNodePrefix = null;
         try {
-            return (java.lang.String)classInstance.Get("ChildNodePrefix");
+            retObjectChildNodePrefix = classInstance.Get("ChildNodePrefix");
+            return (java.lang.String)retObjectChildNodePrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectChildNodePrefix != null ? retObjectChildNodePrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class ShowPropertyInOutlineViewAttribute extends Attribute  {
 
     public void setChildNodePrefix(java.lang.String ChildNodePrefix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ChildNodePrefix", ChildNodePrefix);
         } catch (JCNativeException jcne) {

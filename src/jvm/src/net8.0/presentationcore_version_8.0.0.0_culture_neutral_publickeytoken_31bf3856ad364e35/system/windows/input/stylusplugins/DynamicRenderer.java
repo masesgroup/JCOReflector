@@ -166,7 +166,7 @@ public class DynamicRenderer extends StylusPlugIn  {
     
     public void Reset(StylusDevice stylusDevice, StylusPointCollection stylusPoints) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset", stylusDevice == null ? null : stylusDevice.getJCOInstance(), stylusPoints == null ? null : stylusPoints.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -180,10 +180,14 @@ public class DynamicRenderer extends StylusPlugIn  {
     
     public DrawingAttributes getDrawingAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDrawingAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DrawingAttributes");
+            retObjectDrawingAttributes = classInstance.Get("DrawingAttributes");
+            JCObject val = (JCObject)retObjectDrawingAttributes;
             return new DrawingAttributes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDrawingAttributes != null ? retObjectDrawingAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +195,7 @@ public class DynamicRenderer extends StylusPlugIn  {
 
     public void setDrawingAttributes(DrawingAttributes DrawingAttributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DrawingAttributes", DrawingAttributes == null ? null : DrawingAttributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,10 +205,14 @@ public class DynamicRenderer extends StylusPlugIn  {
 
     public Visual getRootVisual() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootVisual = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootVisual");
+            retObjectRootVisual = classInstance.Get("RootVisual");
+            JCObject val = (JCObject)retObjectRootVisual;
             return new Visual(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootVisual != null ? retObjectRootVisual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

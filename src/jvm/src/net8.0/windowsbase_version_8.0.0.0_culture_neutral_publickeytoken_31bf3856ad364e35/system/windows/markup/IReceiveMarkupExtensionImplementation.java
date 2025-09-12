@@ -145,7 +145,7 @@ public class IReceiveMarkupExtensionImplementation extends NetObject implements 
     
     public void ReceiveMarkupExtension(java.lang.String property, MarkupExtension markupExtension, IServiceProvider serviceProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReceiveMarkupExtension", property, markupExtension == null ? null : markupExtension.getJCOInstance(), serviceProvider == null ? null : serviceProvider.getJCOInstance());
         } catch (JCNativeException jcne) {

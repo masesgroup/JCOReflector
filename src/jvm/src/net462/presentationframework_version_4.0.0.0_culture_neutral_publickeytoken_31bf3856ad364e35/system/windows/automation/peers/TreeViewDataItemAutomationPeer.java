@@ -171,10 +171,14 @@ public class TreeViewDataItemAutomationPeer extends ItemAutomationPeer implement
     
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPattern = null;
         try {
-            JCObject objGetPattern = (JCObject)classInstance.Invoke("GetPattern", patternInterface == null ? null : patternInterface.getJCOInstance());
+            retObjectGetPattern = classInstance.Invoke("GetPattern", patternInterface == null ? null : patternInterface.getJCOInstance());
+            JCObject objGetPattern = (JCObject)retObjectGetPattern;
             return new NetObject(objGetPattern);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPattern != null ? retObjectGetPattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class TreeViewDataItemAutomationPeer extends ItemAutomationPeer implement
      */
     @Deprecated 
     public void AddToSelection() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionItemProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionItemProvider to obtain the full interface.");
     }
 
     /**
@@ -195,7 +199,7 @@ public class TreeViewDataItemAutomationPeer extends ItemAutomationPeer implement
      */
     @Deprecated 
     public void RemoveFromSelection() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionItemProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionItemProvider to obtain the full interface.");
     }
 
     /**
@@ -204,7 +208,7 @@ public class TreeViewDataItemAutomationPeer extends ItemAutomationPeer implement
      */
     @Deprecated 
     public void Select() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionItemProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionItemProvider to obtain the full interface.");
     }
 
     /**
@@ -213,7 +217,7 @@ public class TreeViewDataItemAutomationPeer extends ItemAutomationPeer implement
      */
     @Deprecated 
     public void ScrollIntoView() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIScrollItemProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIScrollItemProvider to obtain the full interface.");
     }
 
     /**
@@ -222,7 +226,7 @@ public class TreeViewDataItemAutomationPeer extends ItemAutomationPeer implement
      */
     @Deprecated 
     public void Collapse() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExpandCollapseProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExpandCollapseProvider to obtain the full interface.");
     }
 
     /**
@@ -231,7 +235,7 @@ public class TreeViewDataItemAutomationPeer extends ItemAutomationPeer implement
      */
     @Deprecated 
     public void Expand() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExpandCollapseProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExpandCollapseProvider to obtain the full interface.");
     }
 
 
@@ -240,10 +244,14 @@ public class TreeViewDataItemAutomationPeer extends ItemAutomationPeer implement
     
     public TreeViewDataItemAutomationPeer getParentDataItemAutomationPeer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParentDataItemAutomationPeer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParentDataItemAutomationPeer");
+            retObjectParentDataItemAutomationPeer = classInstance.Get("ParentDataItemAutomationPeer");
+            JCObject val = (JCObject)retObjectParentDataItemAutomationPeer;
             return new TreeViewDataItemAutomationPeer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParentDataItemAutomationPeer != null ? retObjectParentDataItemAutomationPeer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

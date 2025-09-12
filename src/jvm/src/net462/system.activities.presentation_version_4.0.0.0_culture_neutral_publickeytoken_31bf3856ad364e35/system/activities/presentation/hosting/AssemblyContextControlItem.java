@@ -166,10 +166,14 @@ public class AssemblyContextControlItem extends ContextItem  {
     
     public static Assembly GetAssembly(AssemblyName assemblyName, IMultiTargetingSupportService multiTargetingService) throws Throwable, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAssembly = null;
         try {
-            JCObject objGetAssembly = (JCObject)classType.Invoke("GetAssembly", assemblyName == null ? null : assemblyName.getJCOInstance(), multiTargetingService == null ? null : multiTargetingService.getJCOInstance());
+            retObjectGetAssembly = classType.Invoke("GetAssembly", assemblyName == null ? null : assemblyName.getJCOInstance(), multiTargetingService == null ? null : multiTargetingService.getJCOInstance());
+            JCObject objGetAssembly = (JCObject)retObjectGetAssembly;
             return new Assembly(objGetAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAssembly != null ? retObjectGetAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class AssemblyContextControlItem extends ContextItem  {
     
     public AssemblyName getLocalAssemblyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalAssemblyName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalAssemblyName");
+            retObjectLocalAssemblyName = classInstance.Get("LocalAssemblyName");
+            JCObject val = (JCObject)retObjectLocalAssemblyName;
             return new AssemblyName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalAssemblyName != null ? retObjectLocalAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class AssemblyContextControlItem extends ContextItem  {
 
     public void setLocalAssemblyName(AssemblyName LocalAssemblyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LocalAssemblyName", LocalAssemblyName == null ? null : LocalAssemblyName.getJCOInstance());
         } catch (JCNativeException jcne) {

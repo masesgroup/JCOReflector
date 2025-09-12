@@ -171,9 +171,13 @@ public class SqlUserDefinedTypeAttribute extends Attribute  {
     
     public boolean getIsByteOrdered() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsByteOrdered = null;
         try {
-            return (boolean)classInstance.Get("IsByteOrdered");
+            retObjectIsByteOrdered = classInstance.Get("IsByteOrdered");
+            return (boolean)retObjectIsByteOrdered;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsByteOrdered != null ? retObjectIsByteOrdered.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class SqlUserDefinedTypeAttribute extends Attribute  {
 
     public void setIsByteOrdered(boolean IsByteOrdered) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsByteOrdered", IsByteOrdered);
         } catch (JCNativeException jcne) {
@@ -191,9 +195,13 @@ public class SqlUserDefinedTypeAttribute extends Attribute  {
 
     public boolean getIsFixedLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFixedLength = null;
         try {
-            return (boolean)classInstance.Get("IsFixedLength");
+            retObjectIsFixedLength = classInstance.Get("IsFixedLength");
+            return (boolean)retObjectIsFixedLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFixedLength != null ? retObjectIsFixedLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class SqlUserDefinedTypeAttribute extends Attribute  {
 
     public void setIsFixedLength(boolean IsFixedLength) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsFixedLength", IsFixedLength);
         } catch (JCNativeException jcne) {
@@ -211,9 +219,19 @@ public class SqlUserDefinedTypeAttribute extends Attribute  {
 
     public int getMaxByteSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxByteSize = null;
         try {
-            return (int)classInstance.Get("MaxByteSize");
+            retObjectMaxByteSize = classInstance.Get("MaxByteSize");
+            return (int)retObjectMaxByteSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxByteSizeNumber = (java.lang.Number)retObjectMaxByteSize;
+                return retObjectMaxByteSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxByteSize != null ? retObjectMaxByteSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +239,7 @@ public class SqlUserDefinedTypeAttribute extends Attribute  {
 
     public void setMaxByteSize(int MaxByteSize) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxByteSize", MaxByteSize);
         } catch (JCNativeException jcne) {
@@ -231,10 +249,14 @@ public class SqlUserDefinedTypeAttribute extends Attribute  {
 
     public Format getFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Format");
+            retObjectFormat = classInstance.Get("Format");
+            JCObject val = (JCObject)retObjectFormat;
             return new Format(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormat != null ? retObjectFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +264,13 @@ public class SqlUserDefinedTypeAttribute extends Attribute  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +278,7 @@ public class SqlUserDefinedTypeAttribute extends Attribute  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -262,9 +288,13 @@ public class SqlUserDefinedTypeAttribute extends Attribute  {
 
     public java.lang.String getValidationMethodName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidationMethodName = null;
         try {
-            return (java.lang.String)classInstance.Get("ValidationMethodName");
+            retObjectValidationMethodName = classInstance.Get("ValidationMethodName");
+            return (java.lang.String)retObjectValidationMethodName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValidationMethodName != null ? retObjectValidationMethodName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +302,7 @@ public class SqlUserDefinedTypeAttribute extends Attribute  {
 
     public void setValidationMethodName(java.lang.String ValidationMethodName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidationMethodName", ValidationMethodName);
         } catch (JCNativeException jcne) {

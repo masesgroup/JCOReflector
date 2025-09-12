@@ -155,7 +155,7 @@ public class FileDialog extends CommonItemDialog  {
     
     public void Reset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -169,9 +169,13 @@ public class FileDialog extends CommonItemDialog  {
     
     public boolean getAddExtension() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddExtension = null;
         try {
-            return (boolean)classInstance.Get("AddExtension");
+            retObjectAddExtension = classInstance.Get("AddExtension");
+            return (boolean)retObjectAddExtension;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAddExtension != null ? retObjectAddExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class FileDialog extends CommonItemDialog  {
 
     public void setAddExtension(boolean AddExtension) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AddExtension", AddExtension);
         } catch (JCNativeException jcne) {
@@ -189,9 +193,13 @@ public class FileDialog extends CommonItemDialog  {
 
     public boolean getCheckFileExists() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckFileExists = null;
         try {
-            return (boolean)classInstance.Get("CheckFileExists");
+            retObjectCheckFileExists = classInstance.Get("CheckFileExists");
+            return (boolean)retObjectCheckFileExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCheckFileExists != null ? retObjectCheckFileExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class FileDialog extends CommonItemDialog  {
 
     public void setCheckFileExists(boolean CheckFileExists) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CheckFileExists", CheckFileExists);
         } catch (JCNativeException jcne) {
@@ -209,9 +217,13 @@ public class FileDialog extends CommonItemDialog  {
 
     public boolean getCheckPathExists() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckPathExists = null;
         try {
-            return (boolean)classInstance.Get("CheckPathExists");
+            retObjectCheckPathExists = classInstance.Get("CheckPathExists");
+            return (boolean)retObjectCheckPathExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCheckPathExists != null ? retObjectCheckPathExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class FileDialog extends CommonItemDialog  {
 
     public void setCheckPathExists(boolean CheckPathExists) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CheckPathExists", CheckPathExists);
         } catch (JCNativeException jcne) {
@@ -229,9 +241,13 @@ public class FileDialog extends CommonItemDialog  {
 
     public boolean getRestoreDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRestoreDirectory = null;
         try {
-            return (boolean)classInstance.Get("RestoreDirectory");
+            retObjectRestoreDirectory = classInstance.Get("RestoreDirectory");
+            return (boolean)retObjectRestoreDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRestoreDirectory != null ? retObjectRestoreDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +255,7 @@ public class FileDialog extends CommonItemDialog  {
 
     public void setRestoreDirectory(boolean RestoreDirectory) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RestoreDirectory", RestoreDirectory);
         } catch (JCNativeException jcne) {
@@ -249,9 +265,19 @@ public class FileDialog extends CommonItemDialog  {
 
     public int getFilterIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilterIndex = null;
         try {
-            return (int)classInstance.Get("FilterIndex");
+            retObjectFilterIndex = classInstance.Get("FilterIndex");
+            return (int)retObjectFilterIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFilterIndexNumber = (java.lang.Number)retObjectFilterIndex;
+                return retObjectFilterIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFilterIndex != null ? retObjectFilterIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +285,7 @@ public class FileDialog extends CommonItemDialog  {
 
     public void setFilterIndex(int FilterIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FilterIndex", FilterIndex);
         } catch (JCNativeException jcne) {
@@ -269,9 +295,13 @@ public class FileDialog extends CommonItemDialog  {
 
     public java.lang.String getDefaultExt() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultExt = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultExt");
+            retObjectDefaultExt = classInstance.Get("DefaultExt");
+            return (java.lang.String)retObjectDefaultExt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultExt != null ? retObjectDefaultExt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +309,7 @@ public class FileDialog extends CommonItemDialog  {
 
     public void setDefaultExt(java.lang.String DefaultExt) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultExt", DefaultExt);
         } catch (JCNativeException jcne) {
@@ -289,9 +319,13 @@ public class FileDialog extends CommonItemDialog  {
 
     public java.lang.String getFileName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileName = null;
         try {
-            return (java.lang.String)classInstance.Get("FileName");
+            retObjectFileName = classInstance.Get("FileName");
+            return (java.lang.String)retObjectFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFileName != null ? retObjectFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +333,7 @@ public class FileDialog extends CommonItemDialog  {
 
     public void setFileName(java.lang.String FileName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FileName", FileName);
         } catch (JCNativeException jcne) {
@@ -309,9 +343,13 @@ public class FileDialog extends CommonItemDialog  {
 
     public java.lang.String getFilter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilter = null;
         try {
-            return (java.lang.String)classInstance.Get("Filter");
+            retObjectFilter = classInstance.Get("Filter");
+            return (java.lang.String)retObjectFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFilter != null ? retObjectFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +357,7 @@ public class FileDialog extends CommonItemDialog  {
 
     public void setFilter(java.lang.String Filter) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Filter", Filter);
         } catch (JCNativeException jcne) {
@@ -329,9 +367,13 @@ public class FileDialog extends CommonItemDialog  {
 
     public java.lang.String getSafeFileName() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSafeFileName = null;
         try {
-            return (java.lang.String)classInstance.Get("SafeFileName");
+            retObjectSafeFileName = classInstance.Get("SafeFileName");
+            return (java.lang.String)retObjectSafeFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSafeFileName != null ? retObjectSafeFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,10 +381,12 @@ public class FileDialog extends CommonItemDialog  {
 
     public java.lang.String[] getFileNames() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("FileNames");
+            retObjectFileNames = classInstance.Get("FileNames");
+            JCObject resultingObjects = (JCObject)retObjectFileNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -351,6 +395,8 @@ public class FileDialog extends CommonItemDialog  {
 				resultingArray[indexFileNames] = (java.lang.String)resultingArrayList.get(indexFileNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectFileNames != null ? retObjectFileNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,10 +404,12 @@ public class FileDialog extends CommonItemDialog  {
 
     public java.lang.String[] getSafeFileNames() throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSafeFileNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SafeFileNames");
+            retObjectSafeFileNames = classInstance.Get("SafeFileNames");
+            JCObject resultingObjects = (JCObject)retObjectSafeFileNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -370,6 +418,8 @@ public class FileDialog extends CommonItemDialog  {
 				resultingArray[indexSafeFileNames] = (java.lang.String)resultingArrayList.get(indexSafeFileNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectSafeFileNames != null ? retObjectSafeFileNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +432,7 @@ public class FileDialog extends CommonItemDialog  {
 
     public void addFileOk(CancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FileOk", handler);
         } catch (JCNativeException jcne) {
@@ -392,7 +442,7 @@ public class FileDialog extends CommonItemDialog  {
 
     public void removeFileOk(CancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FileOk", handler);
         } catch (JCNativeException jcne) {

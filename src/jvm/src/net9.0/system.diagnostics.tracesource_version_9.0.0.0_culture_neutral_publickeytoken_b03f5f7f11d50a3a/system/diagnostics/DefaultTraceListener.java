@@ -162,7 +162,7 @@ public class DefaultTraceListener extends TraceListener  {
     
     public void Fail(java.lang.String message, java.lang.String detailMessage) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.io.FileLoadException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Fail", message, detailMessage);
         } catch (JCNativeException jcne) {
@@ -172,7 +172,7 @@ public class DefaultTraceListener extends TraceListener  {
 
     public void Fail(java.lang.String message) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Fail", message);
         } catch (JCNativeException jcne) {
@@ -182,7 +182,7 @@ public class DefaultTraceListener extends TraceListener  {
 
     public void Write(java.lang.String message) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.runtime.serialization.SerializationException, system.io.IOException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", message);
         } catch (JCNativeException jcne) {
@@ -192,7 +192,7 @@ public class DefaultTraceListener extends TraceListener  {
 
     public void WriteLine(java.lang.String message) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", message);
         } catch (JCNativeException jcne) {
@@ -206,9 +206,13 @@ public class DefaultTraceListener extends TraceListener  {
     
     public boolean getAssertUiEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssertUiEnabled = null;
         try {
-            return (boolean)classInstance.Get("AssertUiEnabled");
+            retObjectAssertUiEnabled = classInstance.Get("AssertUiEnabled");
+            return (boolean)retObjectAssertUiEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAssertUiEnabled != null ? retObjectAssertUiEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +220,7 @@ public class DefaultTraceListener extends TraceListener  {
 
     public void setAssertUiEnabled(boolean AssertUiEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssertUiEnabled", AssertUiEnabled);
         } catch (JCNativeException jcne) {
@@ -226,9 +230,13 @@ public class DefaultTraceListener extends TraceListener  {
 
     public java.lang.String getLogFileName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogFileName = null;
         try {
-            return (java.lang.String)classInstance.Get("LogFileName");
+            retObjectLogFileName = classInstance.Get("LogFileName");
+            return (java.lang.String)retObjectLogFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLogFileName != null ? retObjectLogFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +244,7 @@ public class DefaultTraceListener extends TraceListener  {
 
     public void setLogFileName(java.lang.String LogFileName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LogFileName", LogFileName);
         } catch (JCNativeException jcne) {

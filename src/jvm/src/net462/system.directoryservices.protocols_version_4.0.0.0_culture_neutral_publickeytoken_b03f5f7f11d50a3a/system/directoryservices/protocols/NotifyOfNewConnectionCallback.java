@@ -188,8 +188,8 @@ public class NotifyOfNewConnectionCallback extends JCDelegate implements IJCEven
         } else if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
         } else
-            throw new UnsupportedOperationException(
-                    String.format("Class %s is not supported.", instance.getClass().getTypeName()));
+            throw new java.lang.UnsupportedOperationException(
+                    java.lang.String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
     protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
@@ -202,9 +202,13 @@ public class NotifyOfNewConnectionCallback extends JCDelegate implements IJCEven
 
     public boolean DynamicInvoke(LdapConnection primaryConnection, LdapConnection referralFromConnection, java.lang.String newDistinguishedName, LdapDirectoryIdentifier identifier, LdapConnection newConnection, NetworkCredential credential, long currentUserToken, int errorCodeFromBind) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicInvoke = null;
         try {
-            return (boolean)classInstance.Invoke("DynamicInvoke", primaryConnection == null ? null : primaryConnection.getJCOInstance(), referralFromConnection == null ? null : referralFromConnection.getJCOInstance(), newDistinguishedName, identifier == null ? null : identifier.getJCOInstance(), newConnection == null ? null : newConnection.getJCOInstance(), credential == null ? null : credential.getJCOInstance(), currentUserToken, errorCodeFromBind);
+            retObjectDynamicInvoke = classInstance.Invoke("DynamicInvoke", primaryConnection == null ? null : primaryConnection.getJCOInstance(), referralFromConnection == null ? null : referralFromConnection.getJCOInstance(), newDistinguishedName, identifier == null ? null : identifier.getJCOInstance(), newConnection == null ? null : newConnection.getJCOInstance(), credential == null ? null : credential.getJCOInstance(), currentUserToken, errorCodeFromBind);
+            return (boolean)retObjectDynamicInvoke;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDynamicInvoke != null ? retObjectDynamicInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

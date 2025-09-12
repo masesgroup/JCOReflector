@@ -155,10 +155,14 @@ public class ReflectionContext extends NetObject  {
     
     public Assembly MapAssembly(Assembly assembly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMapAssembly = null;
         try {
-            JCObject objMapAssembly = (JCObject)classInstance.Invoke("MapAssembly", assembly == null ? null : assembly.getJCOInstance());
+            retObjectMapAssembly = classInstance.Invoke("MapAssembly", assembly == null ? null : assembly.getJCOInstance());
+            JCObject objMapAssembly = (JCObject)retObjectMapAssembly;
             return new Assembly(objMapAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMapAssembly != null ? retObjectMapAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class ReflectionContext extends NetObject  {
 
     public TypeInfo GetTypeForObject(NetObject value) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeForObject = null;
         try {
-            JCObject objGetTypeForObject = (JCObject)classInstance.Invoke("GetTypeForObject", value == null ? null : value.getJCOInstance());
+            retObjectGetTypeForObject = classInstance.Invoke("GetTypeForObject", value == null ? null : value.getJCOInstance());
+            JCObject objGetTypeForObject = (JCObject)retObjectGetTypeForObject;
             return new TypeInfo(objGetTypeForObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeForObject != null ? retObjectGetTypeForObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +185,14 @@ public class ReflectionContext extends NetObject  {
 
     public TypeInfo MapType(TypeInfo type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMapType = null;
         try {
-            JCObject objMapType = (JCObject)classInstance.Invoke("MapType", type == null ? null : type.getJCOInstance());
+            retObjectMapType = classInstance.Invoke("MapType", type == null ? null : type.getJCOInstance());
+            JCObject objMapType = (JCObject)retObjectMapType;
             return new TypeInfo(objMapType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMapType != null ? retObjectMapType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

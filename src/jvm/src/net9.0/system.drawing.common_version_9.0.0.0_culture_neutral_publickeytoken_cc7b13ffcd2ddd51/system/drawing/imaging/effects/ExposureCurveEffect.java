@@ -171,9 +171,19 @@ public class ExposureCurveEffect extends ColorCurveEffect  {
     
     public int getExposure() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExposure = null;
         try {
-            return (int)classInstance.Get("Exposure");
+            retObjectExposure = classInstance.Get("Exposure");
+            return (int)retObjectExposure;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExposureNumber = (java.lang.Number)retObjectExposure;
+                return retObjectExposureNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExposure != null ? retObjectExposure.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

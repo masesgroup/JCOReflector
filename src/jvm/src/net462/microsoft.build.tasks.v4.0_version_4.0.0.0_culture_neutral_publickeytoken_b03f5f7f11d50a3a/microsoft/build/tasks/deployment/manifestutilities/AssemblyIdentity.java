@@ -222,10 +222,14 @@ public class AssemblyIdentity extends NetObject  {
     
     public static AssemblyIdentity FromAssemblyName(java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.RankException, system.security.SecurityException, system.NotImplementedException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromAssemblyName = null;
         try {
-            JCObject objFromAssemblyName = (JCObject)classType.Invoke("FromAssemblyName", assemblyName);
+            retObjectFromAssemblyName = classType.Invoke("FromAssemblyName", assemblyName);
+            JCObject objFromAssemblyName = (JCObject)retObjectFromAssemblyName;
             return new AssemblyIdentity(objFromAssemblyName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAssemblyName != null ? retObjectFromAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +237,14 @@ public class AssemblyIdentity extends NetObject  {
 
     public static AssemblyIdentity FromFile(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromFile = null;
         try {
-            JCObject objFromFile = (JCObject)classType.Invoke("FromFile", path);
+            retObjectFromFile = classType.Invoke("FromFile", path);
+            JCObject objFromFile = (JCObject)retObjectFromFile;
             return new AssemblyIdentity(objFromFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromFile != null ? retObjectFromFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +252,14 @@ public class AssemblyIdentity extends NetObject  {
 
     public static AssemblyIdentity FromManagedAssembly(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromManagedAssembly = null;
         try {
-            JCObject objFromManagedAssembly = (JCObject)classType.Invoke("FromManagedAssembly", path);
+            retObjectFromManagedAssembly = classType.Invoke("FromManagedAssembly", path);
+            JCObject objFromManagedAssembly = (JCObject)retObjectFromManagedAssembly;
             return new AssemblyIdentity(objFromManagedAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromManagedAssembly != null ? retObjectFromManagedAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +267,14 @@ public class AssemblyIdentity extends NetObject  {
 
     public static AssemblyIdentity FromManifest(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.xml.xpath.XPathException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromManifest = null;
         try {
-            JCObject objFromManifest = (JCObject)classType.Invoke("FromManifest", path);
+            retObjectFromManifest = classType.Invoke("FromManifest", path);
+            JCObject objFromManifest = (JCObject)retObjectFromManifest;
             return new AssemblyIdentity(objFromManifest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromManifest != null ? retObjectFromManifest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +282,14 @@ public class AssemblyIdentity extends NetObject  {
 
     public static AssemblyIdentity FromNativeAssembly(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.NotImplementedException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromNativeAssembly = null;
         try {
-            JCObject objFromNativeAssembly = (JCObject)classType.Invoke("FromNativeAssembly", path);
+            retObjectFromNativeAssembly = classType.Invoke("FromNativeAssembly", path);
+            JCObject objFromNativeAssembly = (JCObject)retObjectFromNativeAssembly;
             return new AssemblyIdentity(objFromNativeAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromNativeAssembly != null ? retObjectFromNativeAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,9 +301,13 @@ public class AssemblyIdentity extends NetObject  {
     
     public boolean getIsFrameworkAssembly() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotImplementedException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFrameworkAssembly = null;
         try {
-            return (boolean)classInstance.Get("IsFrameworkAssembly");
+            retObjectIsFrameworkAssembly = classInstance.Get("IsFrameworkAssembly");
+            return (boolean)retObjectIsFrameworkAssembly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFrameworkAssembly != null ? retObjectIsFrameworkAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,9 +315,13 @@ public class AssemblyIdentity extends NetObject  {
 
     public boolean getIsNeutralPlatform() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNeutralPlatform = null;
         try {
-            return (boolean)classInstance.Get("IsNeutralPlatform");
+            retObjectIsNeutralPlatform = classInstance.Get("IsNeutralPlatform");
+            return (boolean)retObjectIsNeutralPlatform;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNeutralPlatform != null ? retObjectIsNeutralPlatform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,9 +329,13 @@ public class AssemblyIdentity extends NetObject  {
 
     public boolean getIsStrongName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStrongName = null;
         try {
-            return (boolean)classInstance.Get("IsStrongName");
+            retObjectIsStrongName = classInstance.Get("IsStrongName");
+            return (boolean)retObjectIsStrongName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsStrongName != null ? retObjectIsStrongName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,9 +343,13 @@ public class AssemblyIdentity extends NetObject  {
 
     public java.lang.String getCulture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCulture = null;
         try {
-            return (java.lang.String)classInstance.Get("Culture");
+            retObjectCulture = classInstance.Get("Culture");
+            return (java.lang.String)retObjectCulture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCulture != null ? retObjectCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,7 +357,7 @@ public class AssemblyIdentity extends NetObject  {
 
     public void setCulture(java.lang.String Culture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Culture", Culture);
         } catch (JCNativeException jcne) {
@@ -331,9 +367,13 @@ public class AssemblyIdentity extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +381,7 @@ public class AssemblyIdentity extends NetObject  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -351,9 +391,13 @@ public class AssemblyIdentity extends NetObject  {
 
     public java.lang.String getProcessorArchitecture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessorArchitecture = null;
         try {
-            return (java.lang.String)classInstance.Get("ProcessorArchitecture");
+            retObjectProcessorArchitecture = classInstance.Get("ProcessorArchitecture");
+            return (java.lang.String)retObjectProcessorArchitecture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProcessorArchitecture != null ? retObjectProcessorArchitecture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,7 +405,7 @@ public class AssemblyIdentity extends NetObject  {
 
     public void setProcessorArchitecture(java.lang.String ProcessorArchitecture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProcessorArchitecture", ProcessorArchitecture);
         } catch (JCNativeException jcne) {
@@ -371,9 +415,13 @@ public class AssemblyIdentity extends NetObject  {
 
     public java.lang.String getPublicKeyToken() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPublicKeyToken = null;
         try {
-            return (java.lang.String)classInstance.Get("PublicKeyToken");
+            retObjectPublicKeyToken = classInstance.Get("PublicKeyToken");
+            return (java.lang.String)retObjectPublicKeyToken;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPublicKeyToken != null ? retObjectPublicKeyToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,7 +429,7 @@ public class AssemblyIdentity extends NetObject  {
 
     public void setPublicKeyToken(java.lang.String PublicKeyToken) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PublicKeyToken", PublicKeyToken);
         } catch (JCNativeException jcne) {
@@ -391,9 +439,13 @@ public class AssemblyIdentity extends NetObject  {
 
     public java.lang.String getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            return (java.lang.String)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            return (java.lang.String)retObjectType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -401,7 +453,7 @@ public class AssemblyIdentity extends NetObject  {
 
     public void setType(java.lang.String Type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Type", Type);
         } catch (JCNativeException jcne) {
@@ -411,9 +463,13 @@ public class AssemblyIdentity extends NetObject  {
 
     public java.lang.String getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (java.lang.String)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,7 +477,7 @@ public class AssemblyIdentity extends NetObject  {
 
     public void setVersion(java.lang.String Version) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Version", Version);
         } catch (JCNativeException jcne) {
@@ -431,9 +487,13 @@ public class AssemblyIdentity extends NetObject  {
 
     public java.lang.String getXmlCulture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlCulture = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlCulture");
+            retObjectXmlCulture = classInstance.Get("XmlCulture");
+            return (java.lang.String)retObjectXmlCulture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlCulture != null ? retObjectXmlCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,7 +501,7 @@ public class AssemblyIdentity extends NetObject  {
 
     public void setXmlCulture(java.lang.String XmlCulture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlCulture", XmlCulture);
         } catch (JCNativeException jcne) {
@@ -451,9 +511,13 @@ public class AssemblyIdentity extends NetObject  {
 
     public java.lang.String getXmlName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlName = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlName");
+            retObjectXmlName = classInstance.Get("XmlName");
+            return (java.lang.String)retObjectXmlName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlName != null ? retObjectXmlName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,7 +525,7 @@ public class AssemblyIdentity extends NetObject  {
 
     public void setXmlName(java.lang.String XmlName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlName", XmlName);
         } catch (JCNativeException jcne) {
@@ -471,9 +535,13 @@ public class AssemblyIdentity extends NetObject  {
 
     public java.lang.String getXmlProcessorArchitecture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlProcessorArchitecture = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlProcessorArchitecture");
+            retObjectXmlProcessorArchitecture = classInstance.Get("XmlProcessorArchitecture");
+            return (java.lang.String)retObjectXmlProcessorArchitecture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlProcessorArchitecture != null ? retObjectXmlProcessorArchitecture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -481,7 +549,7 @@ public class AssemblyIdentity extends NetObject  {
 
     public void setXmlProcessorArchitecture(java.lang.String XmlProcessorArchitecture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlProcessorArchitecture", XmlProcessorArchitecture);
         } catch (JCNativeException jcne) {
@@ -491,9 +559,13 @@ public class AssemblyIdentity extends NetObject  {
 
     public java.lang.String getXmlPublicKeyToken() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlPublicKeyToken = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlPublicKeyToken");
+            retObjectXmlPublicKeyToken = classInstance.Get("XmlPublicKeyToken");
+            return (java.lang.String)retObjectXmlPublicKeyToken;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlPublicKeyToken != null ? retObjectXmlPublicKeyToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,7 +573,7 @@ public class AssemblyIdentity extends NetObject  {
 
     public void setXmlPublicKeyToken(java.lang.String XmlPublicKeyToken) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlPublicKeyToken", XmlPublicKeyToken);
         } catch (JCNativeException jcne) {
@@ -511,9 +583,13 @@ public class AssemblyIdentity extends NetObject  {
 
     public java.lang.String getXmlType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlType = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlType");
+            retObjectXmlType = classInstance.Get("XmlType");
+            return (java.lang.String)retObjectXmlType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlType != null ? retObjectXmlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,7 +597,7 @@ public class AssemblyIdentity extends NetObject  {
 
     public void setXmlType(java.lang.String XmlType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlType", XmlType);
         } catch (JCNativeException jcne) {
@@ -531,9 +607,13 @@ public class AssemblyIdentity extends NetObject  {
 
     public java.lang.String getXmlVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlVersion");
+            retObjectXmlVersion = classInstance.Get("XmlVersion");
+            return (java.lang.String)retObjectXmlVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlVersion != null ? retObjectXmlVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -541,7 +621,7 @@ public class AssemblyIdentity extends NetObject  {
 
     public void setXmlVersion(java.lang.String XmlVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlVersion", XmlVersion);
         } catch (JCNativeException jcne) {

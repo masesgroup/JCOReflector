@@ -170,9 +170,13 @@ public class MatchAttribute extends Attribute  {
     
     public boolean getIgnoreCase() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoreCase = null;
         try {
-            return (boolean)classInstance.Get("IgnoreCase");
+            retObjectIgnoreCase = classInstance.Get("IgnoreCase");
+            return (boolean)retObjectIgnoreCase;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreCase != null ? retObjectIgnoreCase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class MatchAttribute extends Attribute  {
 
     public void setIgnoreCase(boolean IgnoreCase) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnoreCase", IgnoreCase);
         } catch (JCNativeException jcne) {
@@ -190,9 +194,19 @@ public class MatchAttribute extends Attribute  {
 
     public int getCapture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapture = null;
         try {
-            return (int)classInstance.Get("Capture");
+            retObjectCapture = classInstance.Get("Capture");
+            return (int)retObjectCapture;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCaptureNumber = (java.lang.Number)retObjectCapture;
+                return retObjectCaptureNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCapture != null ? retObjectCapture.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +214,7 @@ public class MatchAttribute extends Attribute  {
 
     public void setCapture(int Capture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Capture", Capture);
         } catch (JCNativeException jcne) {
@@ -210,9 +224,19 @@ public class MatchAttribute extends Attribute  {
 
     public int getGroup() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroup = null;
         try {
-            return (int)classInstance.Get("Group");
+            retObjectGroup = classInstance.Get("Group");
+            return (int)retObjectGroup;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGroupNumber = (java.lang.Number)retObjectGroup;
+                return retObjectGroupNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGroup != null ? retObjectGroup.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +244,7 @@ public class MatchAttribute extends Attribute  {
 
     public void setGroup(int Group) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Group", Group);
         } catch (JCNativeException jcne) {
@@ -230,9 +254,19 @@ public class MatchAttribute extends Attribute  {
 
     public int getMaxRepeats() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxRepeats = null;
         try {
-            return (int)classInstance.Get("MaxRepeats");
+            retObjectMaxRepeats = classInstance.Get("MaxRepeats");
+            return (int)retObjectMaxRepeats;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxRepeatsNumber = (java.lang.Number)retObjectMaxRepeats;
+                return retObjectMaxRepeatsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxRepeats != null ? retObjectMaxRepeats.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +274,7 @@ public class MatchAttribute extends Attribute  {
 
     public void setMaxRepeats(int MaxRepeats) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxRepeats", MaxRepeats);
         } catch (JCNativeException jcne) {
@@ -250,9 +284,13 @@ public class MatchAttribute extends Attribute  {
 
     public java.lang.String getPattern() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPattern = null;
         try {
-            return (java.lang.String)classInstance.Get("Pattern");
+            retObjectPattern = classInstance.Get("Pattern");
+            return (java.lang.String)retObjectPattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPattern != null ? retObjectPattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +298,7 @@ public class MatchAttribute extends Attribute  {
 
     public void setPattern(java.lang.String Pattern) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Pattern", Pattern);
         } catch (JCNativeException jcne) {

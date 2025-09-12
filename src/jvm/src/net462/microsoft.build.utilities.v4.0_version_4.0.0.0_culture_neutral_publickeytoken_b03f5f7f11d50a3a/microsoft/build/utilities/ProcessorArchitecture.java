@@ -157,9 +157,13 @@ public class ProcessorArchitecture extends NetObject  {
     
     public static java.lang.String getCurrentProcessArchitecture() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.AccessViolationException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentProcessArchitecture = null;
         try {
-            return (java.lang.String)classType.Get("CurrentProcessArchitecture");
+            retObjectCurrentProcessArchitecture = classType.Get("CurrentProcessArchitecture");
+            return (java.lang.String)retObjectCurrentProcessArchitecture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCurrentProcessArchitecture != null ? retObjectCurrentProcessArchitecture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

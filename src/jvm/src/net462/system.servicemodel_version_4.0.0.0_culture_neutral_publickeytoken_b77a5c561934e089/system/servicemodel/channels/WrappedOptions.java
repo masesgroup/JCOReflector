@@ -165,9 +165,13 @@ public class WrappedOptions extends NetObject  {
     
     public boolean getWrappedFlag() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWrappedFlag = null;
         try {
-            return (boolean)classInstance.Get("WrappedFlag");
+            retObjectWrappedFlag = classInstance.Get("WrappedFlag");
+            return (boolean)retObjectWrappedFlag;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWrappedFlag != null ? retObjectWrappedFlag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class WrappedOptions extends NetObject  {
 
     public void setWrappedFlag(boolean WrappedFlag) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WrappedFlag", WrappedFlag);
         } catch (JCNativeException jcne) {

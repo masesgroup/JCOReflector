@@ -155,7 +155,7 @@ public class ParallelLoopState extends NetObject  {
     
     public void Break() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Break");
         } catch (JCNativeException jcne) {
@@ -165,7 +165,7 @@ public class ParallelLoopState extends NetObject  {
 
     public void Stop() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Stop");
         } catch (JCNativeException jcne) {
@@ -179,9 +179,13 @@ public class ParallelLoopState extends NetObject  {
     
     public boolean getIsExceptional() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsExceptional = null;
         try {
-            return (boolean)classInstance.Get("IsExceptional");
+            retObjectIsExceptional = classInstance.Get("IsExceptional");
+            return (boolean)retObjectIsExceptional;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsExceptional != null ? retObjectIsExceptional.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +193,13 @@ public class ParallelLoopState extends NetObject  {
 
     public boolean getIsStopped() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStopped = null;
         try {
-            return (boolean)classInstance.Get("IsStopped");
+            retObjectIsStopped = classInstance.Get("IsStopped");
+            return (boolean)retObjectIsStopped;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsStopped != null ? retObjectIsStopped.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +207,13 @@ public class ParallelLoopState extends NetObject  {
 
     public boolean getShouldExitCurrentIteration() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldExitCurrentIteration = null;
         try {
-            return (boolean)classInstance.Get("ShouldExitCurrentIteration");
+            retObjectShouldExitCurrentIteration = classInstance.Get("ShouldExitCurrentIteration");
+            return (boolean)retObjectShouldExitCurrentIteration;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShouldExitCurrentIteration != null ? retObjectShouldExitCurrentIteration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -177,9 +177,13 @@ public class TransactionFlowBindingElement extends BindingElement implements sys
     
     public boolean ShouldSerializeTransactionProtocol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeTransactionProtocol = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeTransactionProtocol");
+            retObjectShouldSerializeTransactionProtocol = classInstance.Invoke("ShouldSerializeTransactionProtocol");
+            return (boolean)retObjectShouldSerializeTransactionProtocol;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeTransactionProtocol != null ? retObjectShouldSerializeTransactionProtocol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +191,14 @@ public class TransactionFlowBindingElement extends BindingElement implements sys
 
     public BindingElement Clone() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new BindingElement(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +210,7 @@ public class TransactionFlowBindingElement extends BindingElement implements sys
      */
     @Deprecated 
     public void ExportPolicy(MetadataExporter exporter, PolicyConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
     }
 
 
@@ -211,9 +219,13 @@ public class TransactionFlowBindingElement extends BindingElement implements sys
     
     public boolean getAllowWildcardAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowWildcardAction = null;
         try {
-            return (boolean)classInstance.Get("AllowWildcardAction");
+            retObjectAllowWildcardAction = classInstance.Get("AllowWildcardAction");
+            return (boolean)retObjectAllowWildcardAction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowWildcardAction != null ? retObjectAllowWildcardAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +233,7 @@ public class TransactionFlowBindingElement extends BindingElement implements sys
 
     public void setAllowWildcardAction(boolean AllowWildcardAction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowWildcardAction", AllowWildcardAction);
         } catch (JCNativeException jcne) {
@@ -231,10 +243,14 @@ public class TransactionFlowBindingElement extends BindingElement implements sys
 
     public TransactionProtocol getTransactionProtocol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactionProtocol = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransactionProtocol");
+            retObjectTransactionProtocol = classInstance.Get("TransactionProtocol");
+            JCObject val = (JCObject)retObjectTransactionProtocol;
             return new TransactionProtocol(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransactionProtocol != null ? retObjectTransactionProtocol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class TransactionFlowBindingElement extends BindingElement implements sys
 
     public void setTransactionProtocol(TransactionProtocol TransactionProtocol) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransactionProtocol", TransactionProtocol == null ? null : TransactionProtocol.getJCOInstance());
         } catch (JCNativeException jcne) {

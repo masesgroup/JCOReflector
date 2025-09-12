@@ -170,9 +170,13 @@ public class UnhandledExceptionEventArgs extends ThreadExceptionEventArgs  {
     
     public boolean getExitApplication() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExitApplication = null;
         try {
-            return (boolean)classInstance.Get("ExitApplication");
+            retObjectExitApplication = classInstance.Get("ExitApplication");
+            return (boolean)retObjectExitApplication;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExitApplication != null ? retObjectExitApplication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class UnhandledExceptionEventArgs extends ThreadExceptionEventArgs  {
 
     public void setExitApplication(boolean ExitApplication) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExitApplication", ExitApplication);
         } catch (JCNativeException jcne) {

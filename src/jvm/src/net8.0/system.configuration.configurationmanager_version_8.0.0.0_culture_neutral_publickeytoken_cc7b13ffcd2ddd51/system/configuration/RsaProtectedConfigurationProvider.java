@@ -164,10 +164,14 @@ public class RsaProtectedConfigurationProvider extends ProtectedConfigurationPro
     
     public XmlNode Decrypt(XmlNode encryptedNode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecrypt = null;
         try {
-            JCObject objDecrypt = (JCObject)classInstance.Invoke("Decrypt", encryptedNode == null ? null : encryptedNode.getJCOInstance());
+            retObjectDecrypt = classInstance.Invoke("Decrypt", encryptedNode == null ? null : encryptedNode.getJCOInstance());
+            JCObject objDecrypt = (JCObject)retObjectDecrypt;
             return new XmlNode(objDecrypt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecrypt != null ? retObjectDecrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class RsaProtectedConfigurationProvider extends ProtectedConfigurationPro
 
     public XmlNode Encrypt(XmlNode node) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncrypt = null;
         try {
-            JCObject objEncrypt = (JCObject)classInstance.Invoke("Encrypt", node == null ? null : node.getJCOInstance());
+            retObjectEncrypt = classInstance.Invoke("Encrypt", node == null ? null : node.getJCOInstance());
+            JCObject objEncrypt = (JCObject)retObjectEncrypt;
             return new XmlNode(objEncrypt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncrypt != null ? retObjectEncrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +194,7 @@ public class RsaProtectedConfigurationProvider extends ProtectedConfigurationPro
 
     public void AddKey(int keySize, boolean exportable) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddKey", keySize, exportable);
         } catch (JCNativeException jcne) {
@@ -196,7 +204,7 @@ public class RsaProtectedConfigurationProvider extends ProtectedConfigurationPro
 
     public void DeleteKey() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteKey");
         } catch (JCNativeException jcne) {
@@ -206,7 +214,7 @@ public class RsaProtectedConfigurationProvider extends ProtectedConfigurationPro
 
     public void ExportKey(java.lang.String xmlFileName, boolean includePrivateParameters) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExportKey", xmlFileName, includePrivateParameters);
         } catch (JCNativeException jcne) {
@@ -216,7 +224,7 @@ public class RsaProtectedConfigurationProvider extends ProtectedConfigurationPro
 
     public void ImportKey(java.lang.String xmlFileName, boolean exportable) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ImportKey", xmlFileName, exportable);
         } catch (JCNativeException jcne) {
@@ -230,9 +238,13 @@ public class RsaProtectedConfigurationProvider extends ProtectedConfigurationPro
     
     public boolean getUseFIPS() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseFIPS = null;
         try {
-            return (boolean)classInstance.Get("UseFIPS");
+            retObjectUseFIPS = classInstance.Get("UseFIPS");
+            return (boolean)retObjectUseFIPS;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseFIPS != null ? retObjectUseFIPS.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +252,13 @@ public class RsaProtectedConfigurationProvider extends ProtectedConfigurationPro
 
     public boolean getUseMachineContainer() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseMachineContainer = null;
         try {
-            return (boolean)classInstance.Get("UseMachineContainer");
+            retObjectUseMachineContainer = classInstance.Get("UseMachineContainer");
+            return (boolean)retObjectUseMachineContainer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseMachineContainer != null ? retObjectUseMachineContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,9 +266,13 @@ public class RsaProtectedConfigurationProvider extends ProtectedConfigurationPro
 
     public boolean getUseOAEP() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseOAEP = null;
         try {
-            return (boolean)classInstance.Get("UseOAEP");
+            retObjectUseOAEP = classInstance.Get("UseOAEP");
+            return (boolean)retObjectUseOAEP;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseOAEP != null ? retObjectUseOAEP.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +280,14 @@ public class RsaProtectedConfigurationProvider extends ProtectedConfigurationPro
 
     public RSAParameters getRsaPublicKey() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRsaPublicKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RsaPublicKey");
+            retObjectRsaPublicKey = classInstance.Get("RsaPublicKey");
+            JCObject val = (JCObject)retObjectRsaPublicKey;
             return new RSAParameters(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRsaPublicKey != null ? retObjectRsaPublicKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,9 +295,13 @@ public class RsaProtectedConfigurationProvider extends ProtectedConfigurationPro
 
     public java.lang.String getCspProviderName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCspProviderName = null;
         try {
-            return (java.lang.String)classInstance.Get("CspProviderName");
+            retObjectCspProviderName = classInstance.Get("CspProviderName");
+            return (java.lang.String)retObjectCspProviderName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCspProviderName != null ? retObjectCspProviderName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,9 +309,13 @@ public class RsaProtectedConfigurationProvider extends ProtectedConfigurationPro
 
     public java.lang.String getKeyContainerName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyContainerName = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyContainerName");
+            retObjectKeyContainerName = classInstance.Get("KeyContainerName");
+            return (java.lang.String)retObjectKeyContainerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyContainerName != null ? retObjectKeyContainerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

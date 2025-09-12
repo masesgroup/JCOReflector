@@ -258,9 +258,19 @@ public class CodeArrayCreateExpression extends CodeExpression  {
     
     public int getSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            return (int)classInstance.Get("Size");
+            retObjectSize = classInstance.Get("Size");
+            return (int)retObjectSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSizeNumber = (java.lang.Number)retObjectSize;
+                return retObjectSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSize != null ? retObjectSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +278,7 @@ public class CodeArrayCreateExpression extends CodeExpression  {
 
     public void setSize(int Size) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Size", Size);
         } catch (JCNativeException jcne) {
@@ -278,10 +288,14 @@ public class CodeArrayCreateExpression extends CodeExpression  {
 
     public CodeExpression getSizeExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeExpression = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SizeExpression");
+            retObjectSizeExpression = classInstance.Get("SizeExpression");
+            JCObject val = (JCObject)retObjectSizeExpression;
             return new CodeExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSizeExpression != null ? retObjectSizeExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +303,7 @@ public class CodeArrayCreateExpression extends CodeExpression  {
 
     public void setSizeExpression(CodeExpression SizeExpression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SizeExpression", SizeExpression == null ? null : SizeExpression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -299,10 +313,14 @@ public class CodeArrayCreateExpression extends CodeExpression  {
 
     public CodeExpressionCollection getInitializers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitializers = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Initializers");
+            retObjectInitializers = classInstance.Get("Initializers");
+            JCObject val = (JCObject)retObjectInitializers;
             return new CodeExpressionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitializers != null ? retObjectInitializers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,10 +328,14 @@ public class CodeArrayCreateExpression extends CodeExpression  {
 
     public CodeTypeReference getCreateType() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CreateType");
+            retObjectCreateType = classInstance.Get("CreateType");
+            JCObject val = (JCObject)retObjectCreateType;
             return new CodeTypeReference(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateType != null ? retObjectCreateType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,7 +343,7 @@ public class CodeArrayCreateExpression extends CodeExpression  {
 
     public void setCreateType(CodeTypeReference CreateType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CreateType", CreateType == null ? null : CreateType.getJCOInstance());
         } catch (JCNativeException jcne) {

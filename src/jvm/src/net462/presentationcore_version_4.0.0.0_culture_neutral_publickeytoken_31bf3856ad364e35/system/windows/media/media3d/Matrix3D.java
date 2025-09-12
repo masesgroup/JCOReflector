@@ -175,9 +175,13 @@ public class Matrix3D extends ValueType implements system.IFormattable {
     
     public boolean Equals(Matrix3D value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +189,13 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public static boolean Equals(Matrix3D matrix1, Matrix3D matrix2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classType.Invoke("Equals", matrix1 == null ? null : matrix1.getJCOInstance(), matrix2 == null ? null : matrix2.getJCOInstance());
+            retObjectEquals = classType.Invoke("Equals", matrix1 == null ? null : matrix1.getJCOInstance(), matrix2 == null ? null : matrix2.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +203,13 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +217,14 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public static Matrix3D Multiply(Matrix3D matrix1, Matrix3D matrix2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", matrix1 == null ? null : matrix1.getJCOInstance(), matrix2 == null ? null : matrix2.getJCOInstance());
+            retObjectMultiply = classType.Invoke("Multiply", matrix1 == null ? null : matrix1.getJCOInstance(), matrix2 == null ? null : matrix2.getJCOInstance());
+            JCObject objMultiply = (JCObject)retObjectMultiply;
             return new Matrix3D(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +232,14 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public static Matrix3D Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", source);
+            retObjectParse = classType.Invoke("Parse", source);
+            JCObject objParse = (JCObject)retObjectParse;
             return new Matrix3D(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +247,14 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public Point3D Transform(Point3D point) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransform = null;
         try {
-            JCObject objTransform = (JCObject)classInstance.Invoke("Transform", point == null ? null : point.getJCOInstance());
+            retObjectTransform = classInstance.Invoke("Transform", point == null ? null : point.getJCOInstance());
+            JCObject objTransform = (JCObject)retObjectTransform;
             return new Point3D(objTransform);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransform != null ? retObjectTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +262,14 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public Point4D Transform(Point4D point) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransform = null;
         try {
-            JCObject objTransform = (JCObject)classInstance.Invoke("Transform", point == null ? null : point.getJCOInstance());
+            retObjectTransform = classInstance.Invoke("Transform", point == null ? null : point.getJCOInstance());
+            JCObject objTransform = (JCObject)retObjectTransform;
             return new Point4D(objTransform);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransform != null ? retObjectTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +277,14 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public Vector3D Transform(Vector3D vector) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransform = null;
         try {
-            JCObject objTransform = (JCObject)classInstance.Invoke("Transform", vector == null ? null : vector.getJCOInstance());
+            retObjectTransform = classInstance.Invoke("Transform", vector == null ? null : vector.getJCOInstance());
+            JCObject objTransform = (JCObject)retObjectTransform;
             return new Vector3D(objTransform);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransform != null ? retObjectTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +292,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void Append(Matrix3D matrix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Append", matrix == null ? null : matrix.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -270,7 +302,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void Invert() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invert");
         } catch (JCNativeException jcne) {
@@ -280,7 +312,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void Prepend(Matrix3D matrix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Prepend", matrix == null ? null : matrix.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -290,7 +322,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void Rotate(Quaternion quaternion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Rotate", quaternion == null ? null : quaternion.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -300,7 +332,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void RotateAt(Quaternion quaternion, Point3D center) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RotateAt", quaternion == null ? null : quaternion.getJCOInstance(), center == null ? null : center.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -310,7 +342,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void RotateAtPrepend(Quaternion quaternion, Point3D center) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RotateAtPrepend", quaternion == null ? null : quaternion.getJCOInstance(), center == null ? null : center.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -320,7 +352,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void RotatePrepend(Quaternion quaternion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RotatePrepend", quaternion == null ? null : quaternion.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -330,7 +362,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void Scale(Vector3D scale) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Scale", scale == null ? null : scale.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -340,7 +372,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void ScaleAt(Vector3D scale, Point3D center) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScaleAt", scale == null ? null : scale.getJCOInstance(), center == null ? null : center.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -350,7 +382,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void ScaleAtPrepend(Vector3D scale, Point3D center) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScaleAtPrepend", scale == null ? null : scale.getJCOInstance(), center == null ? null : center.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -360,7 +392,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void ScalePrepend(Vector3D scale) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScalePrepend", scale == null ? null : scale.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -370,7 +402,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void SetIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetIdentity");
         } catch (JCNativeException jcne) {
@@ -380,7 +412,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void Transform(Point3D[] points) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -390,7 +422,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void Transform(Point4D[] points) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -400,7 +432,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void Transform(Vector3D[] vectors) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", (java.lang.Object)toObjectFromArray(vectors));
         } catch (JCNativeException jcne) {
@@ -410,7 +442,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void Translate(Vector3D offset) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Translate", offset == null ? null : offset.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -420,7 +452,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void TranslatePrepend(Vector3D offset) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TranslatePrepend", offset == null ? null : offset.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -434,7 +466,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
      */
     @Deprecated 
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
 
 
@@ -443,9 +475,13 @@ public class Matrix3D extends ValueType implements system.IFormattable {
     
     public boolean getHasInverse() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasInverse = null;
         try {
-            return (boolean)classInstance.Get("HasInverse");
+            retObjectHasInverse = classInstance.Get("HasInverse");
+            return (boolean)retObjectHasInverse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasInverse != null ? retObjectHasInverse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,9 +489,13 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public boolean getIsAffine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAffine = null;
         try {
-            return (boolean)classInstance.Get("IsAffine");
+            retObjectIsAffine = classInstance.Get("IsAffine");
+            return (boolean)retObjectIsAffine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAffine != null ? retObjectIsAffine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -463,9 +503,13 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public boolean getIsIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsIdentity = null;
         try {
-            return (boolean)classInstance.Get("IsIdentity");
+            retObjectIsIdentity = classInstance.Get("IsIdentity");
+            return (boolean)retObjectIsIdentity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsIdentity != null ? retObjectIsIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -473,9 +517,19 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public double getDeterminant() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeterminant = null;
         try {
-            return (double)classInstance.Get("Determinant");
+            retObjectDeterminant = classInstance.Get("Determinant");
+            return (double)retObjectDeterminant;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDeterminantNumber = (java.lang.Number)retObjectDeterminant;
+                return retObjectDeterminantNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectDeterminant != null ? retObjectDeterminant.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -483,9 +537,19 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public double getM11() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectM11 = null;
         try {
-            return (double)classInstance.Get("M11");
+            retObjectM11 = classInstance.Get("M11");
+            return (double)retObjectM11;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectM11Number = (java.lang.Number)retObjectM11;
+                return retObjectM11Number.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectM11 != null ? retObjectM11.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -493,7 +557,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void setM11(double M11) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("M11", M11);
         } catch (JCNativeException jcne) {
@@ -503,9 +567,19 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public double getM12() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectM12 = null;
         try {
-            return (double)classInstance.Get("M12");
+            retObjectM12 = classInstance.Get("M12");
+            return (double)retObjectM12;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectM12Number = (java.lang.Number)retObjectM12;
+                return retObjectM12Number.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectM12 != null ? retObjectM12.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -513,7 +587,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void setM12(double M12) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("M12", M12);
         } catch (JCNativeException jcne) {
@@ -523,9 +597,19 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public double getM13() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectM13 = null;
         try {
-            return (double)classInstance.Get("M13");
+            retObjectM13 = classInstance.Get("M13");
+            return (double)retObjectM13;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectM13Number = (java.lang.Number)retObjectM13;
+                return retObjectM13Number.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectM13 != null ? retObjectM13.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -533,7 +617,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void setM13(double M13) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("M13", M13);
         } catch (JCNativeException jcne) {
@@ -543,9 +627,19 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public double getM14() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectM14 = null;
         try {
-            return (double)classInstance.Get("M14");
+            retObjectM14 = classInstance.Get("M14");
+            return (double)retObjectM14;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectM14Number = (java.lang.Number)retObjectM14;
+                return retObjectM14Number.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectM14 != null ? retObjectM14.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -553,7 +647,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void setM14(double M14) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("M14", M14);
         } catch (JCNativeException jcne) {
@@ -563,9 +657,19 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public double getM21() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectM21 = null;
         try {
-            return (double)classInstance.Get("M21");
+            retObjectM21 = classInstance.Get("M21");
+            return (double)retObjectM21;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectM21Number = (java.lang.Number)retObjectM21;
+                return retObjectM21Number.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectM21 != null ? retObjectM21.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -573,7 +677,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void setM21(double M21) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("M21", M21);
         } catch (JCNativeException jcne) {
@@ -583,9 +687,19 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public double getM22() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectM22 = null;
         try {
-            return (double)classInstance.Get("M22");
+            retObjectM22 = classInstance.Get("M22");
+            return (double)retObjectM22;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectM22Number = (java.lang.Number)retObjectM22;
+                return retObjectM22Number.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectM22 != null ? retObjectM22.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -593,7 +707,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void setM22(double M22) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("M22", M22);
         } catch (JCNativeException jcne) {
@@ -603,9 +717,19 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public double getM23() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectM23 = null;
         try {
-            return (double)classInstance.Get("M23");
+            retObjectM23 = classInstance.Get("M23");
+            return (double)retObjectM23;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectM23Number = (java.lang.Number)retObjectM23;
+                return retObjectM23Number.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectM23 != null ? retObjectM23.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -613,7 +737,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void setM23(double M23) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("M23", M23);
         } catch (JCNativeException jcne) {
@@ -623,9 +747,19 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public double getM24() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectM24 = null;
         try {
-            return (double)classInstance.Get("M24");
+            retObjectM24 = classInstance.Get("M24");
+            return (double)retObjectM24;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectM24Number = (java.lang.Number)retObjectM24;
+                return retObjectM24Number.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectM24 != null ? retObjectM24.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -633,7 +767,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void setM24(double M24) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("M24", M24);
         } catch (JCNativeException jcne) {
@@ -643,9 +777,19 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public double getM31() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectM31 = null;
         try {
-            return (double)classInstance.Get("M31");
+            retObjectM31 = classInstance.Get("M31");
+            return (double)retObjectM31;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectM31Number = (java.lang.Number)retObjectM31;
+                return retObjectM31Number.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectM31 != null ? retObjectM31.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -653,7 +797,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void setM31(double M31) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("M31", M31);
         } catch (JCNativeException jcne) {
@@ -663,9 +807,19 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public double getM32() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectM32 = null;
         try {
-            return (double)classInstance.Get("M32");
+            retObjectM32 = classInstance.Get("M32");
+            return (double)retObjectM32;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectM32Number = (java.lang.Number)retObjectM32;
+                return retObjectM32Number.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectM32 != null ? retObjectM32.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -673,7 +827,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void setM32(double M32) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("M32", M32);
         } catch (JCNativeException jcne) {
@@ -683,9 +837,19 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public double getM33() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectM33 = null;
         try {
-            return (double)classInstance.Get("M33");
+            retObjectM33 = classInstance.Get("M33");
+            return (double)retObjectM33;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectM33Number = (java.lang.Number)retObjectM33;
+                return retObjectM33Number.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectM33 != null ? retObjectM33.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -693,7 +857,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void setM33(double M33) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("M33", M33);
         } catch (JCNativeException jcne) {
@@ -703,9 +867,19 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public double getM34() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectM34 = null;
         try {
-            return (double)classInstance.Get("M34");
+            retObjectM34 = classInstance.Get("M34");
+            return (double)retObjectM34;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectM34Number = (java.lang.Number)retObjectM34;
+                return retObjectM34Number.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectM34 != null ? retObjectM34.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -713,7 +887,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void setM34(double M34) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("M34", M34);
         } catch (JCNativeException jcne) {
@@ -723,9 +897,19 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public double getM44() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectM44 = null;
         try {
-            return (double)classInstance.Get("M44");
+            retObjectM44 = classInstance.Get("M44");
+            return (double)retObjectM44;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectM44Number = (java.lang.Number)retObjectM44;
+                return retObjectM44Number.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectM44 != null ? retObjectM44.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -733,7 +917,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void setM44(double M44) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("M44", M44);
         } catch (JCNativeException jcne) {
@@ -743,9 +927,19 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public double getOffsetX() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffsetX = null;
         try {
-            return (double)classInstance.Get("OffsetX");
+            retObjectOffsetX = classInstance.Get("OffsetX");
+            return (double)retObjectOffsetX;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOffsetXNumber = (java.lang.Number)retObjectOffsetX;
+                return retObjectOffsetXNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOffsetX != null ? retObjectOffsetX.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -753,7 +947,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void setOffsetX(double OffsetX) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OffsetX", OffsetX);
         } catch (JCNativeException jcne) {
@@ -763,9 +957,19 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public double getOffsetY() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffsetY = null;
         try {
-            return (double)classInstance.Get("OffsetY");
+            retObjectOffsetY = classInstance.Get("OffsetY");
+            return (double)retObjectOffsetY;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOffsetYNumber = (java.lang.Number)retObjectOffsetY;
+                return retObjectOffsetYNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOffsetY != null ? retObjectOffsetY.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -773,7 +977,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void setOffsetY(double OffsetY) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OffsetY", OffsetY);
         } catch (JCNativeException jcne) {
@@ -783,9 +987,19 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public double getOffsetZ() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffsetZ = null;
         try {
-            return (double)classInstance.Get("OffsetZ");
+            retObjectOffsetZ = classInstance.Get("OffsetZ");
+            return (double)retObjectOffsetZ;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOffsetZNumber = (java.lang.Number)retObjectOffsetZ;
+                return retObjectOffsetZNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOffsetZ != null ? retObjectOffsetZ.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -793,7 +1007,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public void setOffsetZ(double OffsetZ) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OffsetZ", OffsetZ);
         } catch (JCNativeException jcne) {
@@ -803,10 +1017,14 @@ public class Matrix3D extends ValueType implements system.IFormattable {
 
     public static Matrix3D getIdentity() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIdentity = null;
         try {
-            JCObject val = (JCObject)classType.Get("Identity");
+            retObjectIdentity = classType.Get("Identity");
+            JCObject val = (JCObject)retObjectIdentity;
             return new Matrix3D(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdentity != null ? retObjectIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -163,7 +163,7 @@ public class AuthorizationRuleCollection extends ReadOnlyCollectionBase  {
     
     public void AddRule(AuthorizationRule rule) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRule", rule == null ? null : rule.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class AuthorizationRuleCollection extends ReadOnlyCollectionBase  {
 
     public void CopyTo(AuthorizationRule[] rules, int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(rules), index);
         } catch (JCNativeException jcne) {

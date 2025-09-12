@@ -177,10 +177,14 @@ public class DataColumnMapping extends MarshalByRefObject implements system.IClo
     
     public DataColumn GetDataColumnBySchemaAction(DataTable dataTable, NetType dataType, MissingSchemaAction schemaAction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDataColumnBySchemaAction = null;
         try {
-            JCObject objGetDataColumnBySchemaAction = (JCObject)classInstance.Invoke("GetDataColumnBySchemaAction", dataTable == null ? null : dataTable.getJCOInstance(), dataType == null ? null : dataType.getJCOInstance(), schemaAction == null ? null : schemaAction.getJCOInstance());
+            retObjectGetDataColumnBySchemaAction = classInstance.Invoke("GetDataColumnBySchemaAction", dataTable == null ? null : dataTable.getJCOInstance(), dataType == null ? null : dataType.getJCOInstance(), schemaAction == null ? null : schemaAction.getJCOInstance());
+            JCObject objGetDataColumnBySchemaAction = (JCObject)retObjectGetDataColumnBySchemaAction;
             return new DataColumn(objGetDataColumnBySchemaAction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataColumnBySchemaAction != null ? retObjectGetDataColumnBySchemaAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +192,14 @@ public class DataColumnMapping extends MarshalByRefObject implements system.IClo
 
     public static DataColumn GetDataColumnBySchemaAction(java.lang.String sourceColumn, java.lang.String dataSetColumn, DataTable dataTable, NetType dataType, MissingSchemaAction schemaAction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OverflowException, system.InvalidCastException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDataColumnBySchemaAction = null;
         try {
-            JCObject objGetDataColumnBySchemaAction = (JCObject)classType.Invoke("GetDataColumnBySchemaAction", sourceColumn, dataSetColumn, dataTable == null ? null : dataTable.getJCOInstance(), dataType == null ? null : dataType.getJCOInstance(), schemaAction == null ? null : schemaAction.getJCOInstance());
+            retObjectGetDataColumnBySchemaAction = classType.Invoke("GetDataColumnBySchemaAction", sourceColumn, dataSetColumn, dataTable == null ? null : dataTable.getJCOInstance(), dataType == null ? null : dataType.getJCOInstance(), schemaAction == null ? null : schemaAction.getJCOInstance());
+            JCObject objGetDataColumnBySchemaAction = (JCObject)retObjectGetDataColumnBySchemaAction;
             return new DataColumn(objGetDataColumnBySchemaAction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataColumnBySchemaAction != null ? retObjectGetDataColumnBySchemaAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +211,7 @@ public class DataColumnMapping extends MarshalByRefObject implements system.IClo
      */
     @Deprecated 
     public NetObject Clone() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
     }
 
 
@@ -212,9 +220,13 @@ public class DataColumnMapping extends MarshalByRefObject implements system.IClo
     
     public java.lang.String getDataSetColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSetColumn = null;
         try {
-            return (java.lang.String)classInstance.Get("DataSetColumn");
+            retObjectDataSetColumn = classInstance.Get("DataSetColumn");
+            return (java.lang.String)retObjectDataSetColumn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataSetColumn != null ? retObjectDataSetColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +234,7 @@ public class DataColumnMapping extends MarshalByRefObject implements system.IClo
 
     public void setDataSetColumn(java.lang.String DataSetColumn) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSetColumn", DataSetColumn);
         } catch (JCNativeException jcne) {
@@ -232,9 +244,13 @@ public class DataColumnMapping extends MarshalByRefObject implements system.IClo
 
     public java.lang.String getSourceColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceColumn = null;
         try {
-            return (java.lang.String)classInstance.Get("SourceColumn");
+            retObjectSourceColumn = classInstance.Get("SourceColumn");
+            return (java.lang.String)retObjectSourceColumn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourceColumn != null ? retObjectSourceColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class DataColumnMapping extends MarshalByRefObject implements system.IClo
 
     public void setSourceColumn(java.lang.String SourceColumn) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceColumn", SourceColumn);
         } catch (JCNativeException jcne) {

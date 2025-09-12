@@ -196,9 +196,13 @@ public class DataView extends MarshalByValueComponent implements system.componen
     
     public boolean Equals(DataView view) throws Throwable, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", view == null ? null : view.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", view == null ? null : view.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +210,19 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public int Find(NetObject key) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            return (int)classInstance.Invoke("Find", key == null ? null : key.getJCOInstance());
+            retObjectFind = classInstance.Invoke("Find", key == null ? null : key.getJCOInstance());
+            return (int)retObjectFind;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
+                return retObjectFindNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +230,19 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public int Find(NetObject[] key) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            return (int)classInstance.Invoke("Find", (java.lang.Object)toObjectFromArray(key));
+            retObjectFind = classInstance.Invoke("Find", (java.lang.Object)toObjectFromArray(key));
+            return (int)retObjectFind;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
+                return retObjectFindNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +250,14 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public DataRowView AddNew() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddNew = null;
         try {
-            JCObject objAddNew = (JCObject)classInstance.Invoke("AddNew");
+            retObjectAddNew = classInstance.Invoke("AddNew");
+            JCObject objAddNew = (JCObject)retObjectAddNew;
             return new DataRowView(objAddNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddNew != null ? retObjectAddNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,16 +265,20 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public DataRowView[] FindRows(NetObject key) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindRows = null;
         try {
             ArrayList<DataRowView> resultingArrayList = new ArrayList<DataRowView>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindRows", key == null ? null : key.getJCOInstance());
+            retObjectFindRows = classInstance.Invoke("FindRows", key == null ? null : key.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectFindRows;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRowView(resultingObject));
             }
             DataRowView[] resultingArray = new DataRowView[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindRows != null ? retObjectFindRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,16 +286,20 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public DataRowView[] FindRows(NetObject[] key) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindRows = null;
         try {
             ArrayList<DataRowView> resultingArrayList = new ArrayList<DataRowView>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindRows", (java.lang.Object)toObjectFromArray(key));
+            retObjectFindRows = classInstance.Invoke("FindRows", (java.lang.Object)toObjectFromArray(key));
+            JCObject resultingObjects = (JCObject)retObjectFindRows;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRowView(resultingObject));
             }
             DataRowView[] resultingArray = new DataRowView[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindRows != null ? retObjectFindRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,10 +307,14 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public DataTable ToTable() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToTable = null;
         try {
-            JCObject objToTable = (JCObject)classInstance.Invoke("ToTable");
+            retObjectToTable = classInstance.Invoke("ToTable");
+            JCObject objToTable = (JCObject)retObjectToTable;
             return new DataTable(objToTable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToTable != null ? retObjectToTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,10 +322,14 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public DataTable ToTable(boolean distinct, java.lang.String... columnNames) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToTable = null;
         try {
-            JCObject objToTable = (JCObject)classInstance.Invoke("ToTable", distinct, columnNames);
+            retObjectToTable = classInstance.Invoke("ToTable", distinct, columnNames);
+            JCObject objToTable = (JCObject)retObjectToTable;
             return new DataTable(objToTable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToTable != null ? retObjectToTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,10 +337,14 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public DataTable ToTable(boolean dupParam0, JCORefOut dupParam1) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToTable = null;
         try {
-            JCObject objToTable = (JCObject)classInstance.Invoke("ToTable", dupParam0, dupParam1.getJCRefOut());
+            retObjectToTable = classInstance.Invoke("ToTable", dupParam0, dupParam1.getJCRefOut());
+            JCObject objToTable = (JCObject)retObjectToTable;
             return new DataTable(objToTable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToTable != null ? retObjectToTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,10 +352,14 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public DataTable ToTable(java.lang.String tableName, boolean distinct, java.lang.String... columnNames) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.RankException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToTable = null;
         try {
-            JCObject objToTable = (JCObject)classInstance.Invoke("ToTable", tableName, distinct, columnNames);
+            retObjectToTable = classInstance.Invoke("ToTable", tableName, distinct, columnNames);
+            JCObject objToTable = (JCObject)retObjectToTable;
             return new DataTable(objToTable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToTable != null ? retObjectToTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +367,14 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public DataTable ToTable(java.lang.String dupParam0, boolean dupParam1, JCORefOut dupParam2) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.RankException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToTable = null;
         try {
-            JCObject objToTable = (JCObject)classInstance.Invoke("ToTable", dupParam0, dupParam1, dupParam2.getJCRefOut());
+            retObjectToTable = classInstance.Invoke("ToTable", dupParam0, dupParam1, dupParam2.getJCRefOut());
+            JCObject objToTable = (JCObject)retObjectToTable;
             return new DataTable(objToTable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToTable != null ? retObjectToTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,10 +382,14 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public DataTable ToTable(java.lang.String tableName) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToTable = null;
         try {
-            JCObject objToTable = (JCObject)classInstance.Invoke("ToTable", tableName);
+            retObjectToTable = classInstance.Invoke("ToTable", tableName);
+            JCObject objToTable = (JCObject)retObjectToTable;
             return new DataTable(objToTable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToTable != null ? retObjectToTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,7 +397,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public void BeginInit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginInit");
         } catch (JCNativeException jcne) {
@@ -347,7 +407,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public void CopyTo(Array array, int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", array == null ? null : array.getJCOInstance(), index);
         } catch (JCNativeException jcne) {
@@ -357,7 +417,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public void Delete(int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Delete", index);
         } catch (JCNativeException jcne) {
@@ -367,7 +427,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public void EndInit() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndInit");
         } catch (JCNativeException jcne) {
@@ -381,7 +441,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
      */
     @Deprecated 
     public void ApplySort(ListSortDescriptionCollection sorts) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingListView to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingListView to obtain the full interface.");
     }
 
     /**
@@ -390,7 +450,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
      */
     @Deprecated 
     public void RemoveFilter() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingListView to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingListView to obtain the full interface.");
     }
 
     /**
@@ -399,7 +459,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
      */
     @Deprecated 
     public int Find(PropertyDescriptor property, NetObject key) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
 
     /**
@@ -408,7 +468,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
      */
     @Deprecated 
     public void AddIndex(PropertyDescriptor property) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
 
     /**
@@ -417,7 +477,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
      */
     @Deprecated 
     public void ApplySort(PropertyDescriptor property, ListSortDirection direction) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
 
     /**
@@ -426,7 +486,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
      */
     @Deprecated 
     public void RemoveIndex(PropertyDescriptor property) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
 
     /**
@@ -435,7 +495,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
      */
     @Deprecated 
     public void RemoveSort() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
 
     /**
@@ -444,7 +504,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
      */
     @Deprecated 
     public boolean Contains(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -453,7 +513,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
      */
     @Deprecated 
     public int Add(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -462,7 +522,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
      */
     @Deprecated 
     public int IndexOf(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -471,7 +531,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
      */
     @Deprecated 
     public void Clear() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -480,7 +540,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
      */
     @Deprecated 
     public void Insert(int index, NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -489,7 +549,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
      */
     @Deprecated 
     public void Remove(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -498,7 +558,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
      */
     @Deprecated 
     public void RemoveAt(int index) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -507,7 +567,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
      */
     @Deprecated 
     public PropertyDescriptorCollection GetItemProperties(PropertyDescriptor[] listAccessors) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypedList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypedList to obtain the full interface.");
     }
 
     /**
@@ -516,7 +576,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
      */
     @Deprecated 
     public java.lang.String GetListName(PropertyDescriptor[] listAccessors) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypedList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypedList to obtain the full interface.");
     }
 
 
@@ -525,9 +585,13 @@ public class DataView extends MarshalByValueComponent implements system.componen
     
     public boolean getAllowDelete() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowDelete = null;
         try {
-            return (boolean)classInstance.Get("AllowDelete");
+            retObjectAllowDelete = classInstance.Get("AllowDelete");
+            return (boolean)retObjectAllowDelete;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowDelete != null ? retObjectAllowDelete.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -535,7 +599,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public void setAllowDelete(boolean AllowDelete) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowDelete", AllowDelete);
         } catch (JCNativeException jcne) {
@@ -545,9 +609,13 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public boolean getAllowEdit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowEdit = null;
         try {
-            return (boolean)classInstance.Get("AllowEdit");
+            retObjectAllowEdit = classInstance.Get("AllowEdit");
+            return (boolean)retObjectAllowEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowEdit != null ? retObjectAllowEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -555,7 +623,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public void setAllowEdit(boolean AllowEdit) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowEdit", AllowEdit);
         } catch (JCNativeException jcne) {
@@ -565,9 +633,13 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public boolean getAllowNew() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowNew = null;
         try {
-            return (boolean)classInstance.Get("AllowNew");
+            retObjectAllowNew = classInstance.Get("AllowNew");
+            return (boolean)retObjectAllowNew;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowNew != null ? retObjectAllowNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -575,7 +647,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public void setAllowNew(boolean AllowNew) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowNew", AllowNew);
         } catch (JCNativeException jcne) {
@@ -585,9 +657,13 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public boolean getApplyDefaultSort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplyDefaultSort = null;
         try {
-            return (boolean)classInstance.Get("ApplyDefaultSort");
+            retObjectApplyDefaultSort = classInstance.Get("ApplyDefaultSort");
+            return (boolean)retObjectApplyDefaultSort;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectApplyDefaultSort != null ? retObjectApplyDefaultSort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -595,7 +671,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public void setApplyDefaultSort(boolean ApplyDefaultSort) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplyDefaultSort", ApplyDefaultSort);
         } catch (JCNativeException jcne) {
@@ -605,9 +681,13 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public boolean getIsInitialized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInitialized = null;
         try {
-            return (boolean)classInstance.Get("IsInitialized");
+            retObjectIsInitialized = classInstance.Get("IsInitialized");
+            return (boolean)retObjectIsInitialized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInitialized != null ? retObjectIsInitialized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -615,9 +695,19 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public int getCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
+                return retObjectCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -625,10 +715,14 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public DataTable getTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTable = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Table");
+            retObjectTable = classInstance.Get("Table");
+            JCObject val = (JCObject)retObjectTable;
             return new DataTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTable != null ? retObjectTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -636,7 +730,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public void setTable(DataTable Table) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException, system.threading.LockRecursionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Table", Table == null ? null : Table.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -646,10 +740,14 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public DataViewManager getDataViewManager() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataViewManager = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataViewManager");
+            retObjectDataViewManager = classInstance.Get("DataViewManager");
+            JCObject val = (JCObject)retObjectDataViewManager;
             return new DataViewManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataViewManager != null ? retObjectDataViewManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -657,10 +755,14 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public DataViewRowState getRowStateFilter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowStateFilter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowStateFilter");
+            retObjectRowStateFilter = classInstance.Get("RowStateFilter");
+            JCObject val = (JCObject)retObjectRowStateFilter;
             return new DataViewRowState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowStateFilter != null ? retObjectRowStateFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -668,7 +770,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public void setRowStateFilter(DataViewRowState RowStateFilter) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowStateFilter", RowStateFilter == null ? null : RowStateFilter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -678,9 +780,13 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public java.lang.String getRowFilter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowFilter = null;
         try {
-            return (java.lang.String)classInstance.Get("RowFilter");
+            retObjectRowFilter = classInstance.Get("RowFilter");
+            return (java.lang.String)retObjectRowFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRowFilter != null ? retObjectRowFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -688,7 +794,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public void setRowFilter(java.lang.String RowFilter) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowFilter", RowFilter);
         } catch (JCNativeException jcne) {
@@ -698,9 +804,13 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public java.lang.String getSort() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSort = null;
         try {
-            return (java.lang.String)classInstance.Get("Sort");
+            retObjectSort = classInstance.Get("Sort");
+            return (java.lang.String)retObjectSort;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSort != null ? retObjectSort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -708,7 +818,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public void setSort(java.lang.String Sort) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Sort", Sort);
         } catch (JCNativeException jcne) {
@@ -723,7 +833,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public void addListChanged(ListChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ListChanged", handler);
         } catch (JCNativeException jcne) {
@@ -733,7 +843,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public void removeListChanged(ListChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ListChanged", handler);
         } catch (JCNativeException jcne) {
@@ -743,7 +853,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public void addInitialized(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Initialized", handler);
         } catch (JCNativeException jcne) {
@@ -753,7 +863,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
 
     public void removeInitialized(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Initialized", handler);
         } catch (JCNativeException jcne) {

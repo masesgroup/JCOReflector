@@ -158,10 +158,14 @@ public class StreamUpgradeProvider extends CommunicationObject  {
     
     public StreamUpgradeAcceptor CreateUpgradeAcceptor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateUpgradeAcceptor = null;
         try {
-            JCObject objCreateUpgradeAcceptor = (JCObject)classInstance.Invoke("CreateUpgradeAcceptor");
+            retObjectCreateUpgradeAcceptor = classInstance.Invoke("CreateUpgradeAcceptor");
+            JCObject objCreateUpgradeAcceptor = (JCObject)retObjectCreateUpgradeAcceptor;
             return new StreamUpgradeAcceptor(objCreateUpgradeAcceptor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUpgradeAcceptor != null ? retObjectCreateUpgradeAcceptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class StreamUpgradeProvider extends CommunicationObject  {
 
     public StreamUpgradeInitiator CreateUpgradeInitiator(EndpointAddress remoteAddress, Uri via) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateUpgradeInitiator = null;
         try {
-            JCObject objCreateUpgradeInitiator = (JCObject)classInstance.Invoke("CreateUpgradeInitiator", remoteAddress == null ? null : remoteAddress.getJCOInstance(), via == null ? null : via.getJCOInstance());
+            retObjectCreateUpgradeInitiator = classInstance.Invoke("CreateUpgradeInitiator", remoteAddress == null ? null : remoteAddress.getJCOInstance(), via == null ? null : via.getJCOInstance());
+            JCObject objCreateUpgradeInitiator = (JCObject)retObjectCreateUpgradeInitiator;
             return new StreamUpgradeInitiator(objCreateUpgradeInitiator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUpgradeInitiator != null ? retObjectCreateUpgradeInitiator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

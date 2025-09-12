@@ -142,7 +142,7 @@ public class IRegisteredObjectImplementation extends NetObject implements IRegis
     
     public void Stop(boolean immediate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Stop", immediate);
         } catch (JCNativeException jcne) {

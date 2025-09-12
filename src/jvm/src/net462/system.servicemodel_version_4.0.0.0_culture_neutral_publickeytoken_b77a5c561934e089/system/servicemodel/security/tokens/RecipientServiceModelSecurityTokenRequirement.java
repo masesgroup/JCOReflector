@@ -169,9 +169,13 @@ public class RecipientServiceModelSecurityTokenRequirement extends ServiceModelS
     
     public boolean getSuppressAuditFailure() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuppressAuditFailure = null;
         try {
-            return (boolean)classInstance.Get("SuppressAuditFailure");
+            retObjectSuppressAuditFailure = classInstance.Get("SuppressAuditFailure");
+            return (boolean)retObjectSuppressAuditFailure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSuppressAuditFailure != null ? retObjectSuppressAuditFailure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class RecipientServiceModelSecurityTokenRequirement extends ServiceModelS
 
     public void setSuppressAuditFailure(boolean SuppressAuditFailure) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SuppressAuditFailure", SuppressAuditFailure);
         } catch (JCNativeException jcne) {
@@ -189,10 +193,14 @@ public class RecipientServiceModelSecurityTokenRequirement extends ServiceModelS
 
     public AuditLevel getMessageAuthenticationAuditLevel() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageAuthenticationAuditLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageAuthenticationAuditLevel");
+            retObjectMessageAuthenticationAuditLevel = classInstance.Get("MessageAuthenticationAuditLevel");
+            JCObject val = (JCObject)retObjectMessageAuthenticationAuditLevel;
             return new AuditLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageAuthenticationAuditLevel != null ? retObjectMessageAuthenticationAuditLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class RecipientServiceModelSecurityTokenRequirement extends ServiceModelS
 
     public void setMessageAuthenticationAuditLevel(AuditLevel MessageAuthenticationAuditLevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageAuthenticationAuditLevel", MessageAuthenticationAuditLevel == null ? null : MessageAuthenticationAuditLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,10 +218,14 @@ public class RecipientServiceModelSecurityTokenRequirement extends ServiceModelS
 
     public AuditLogLocation getAuditLogLocation() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuditLogLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AuditLogLocation");
+            retObjectAuditLogLocation = classInstance.Get("AuditLogLocation");
+            JCObject val = (JCObject)retObjectAuditLogLocation;
             return new AuditLogLocation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuditLogLocation != null ? retObjectAuditLogLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +233,7 @@ public class RecipientServiceModelSecurityTokenRequirement extends ServiceModelS
 
     public void setAuditLogLocation(AuditLogLocation AuditLogLocation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AuditLogLocation", AuditLogLocation == null ? null : AuditLogLocation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,10 +243,14 @@ public class RecipientServiceModelSecurityTokenRequirement extends ServiceModelS
 
     public Uri getListenUri() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectListenUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ListenUri");
+            retObjectListenUri = classInstance.Get("ListenUri");
+            JCObject val = (JCObject)retObjectListenUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListenUri != null ? retObjectListenUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class RecipientServiceModelSecurityTokenRequirement extends ServiceModelS
 
     public void setListenUri(Uri ListenUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ListenUri", ListenUri == null ? null : ListenUri.getJCOInstance());
         } catch (JCNativeException jcne) {

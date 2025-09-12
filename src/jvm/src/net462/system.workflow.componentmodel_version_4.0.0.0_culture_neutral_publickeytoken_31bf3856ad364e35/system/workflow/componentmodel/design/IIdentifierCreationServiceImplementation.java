@@ -146,7 +146,7 @@ public class IIdentifierCreationServiceImplementation extends NetObject implemen
     
     public void EnsureUniqueIdentifiers(CompositeActivity parentActivity, ICollection childActivities) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnsureUniqueIdentifiers", parentActivity == null ? null : parentActivity.getJCOInstance(), childActivities == null ? null : childActivities.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -156,7 +156,7 @@ public class IIdentifierCreationServiceImplementation extends NetObject implemen
 
     public void ValidateIdentifier(Activity activity, java.lang.String identifier) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ValidateIdentifier", activity == null ? null : activity.getJCOInstance(), identifier);
         } catch (JCNativeException jcne) {

@@ -159,10 +159,14 @@ public class RuntimeReflectionExtensions extends NetObject  {
     
     public static EventInfo GetRuntimeEvent(NetType type, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRuntimeEvent = null;
         try {
-            JCObject objGetRuntimeEvent = (JCObject)classType.Invoke("GetRuntimeEvent", type == null ? null : type.getJCOInstance(), name);
+            retObjectGetRuntimeEvent = classType.Invoke("GetRuntimeEvent", type == null ? null : type.getJCOInstance(), name);
+            JCObject objGetRuntimeEvent = (JCObject)retObjectGetRuntimeEvent;
             return new EventInfo(objGetRuntimeEvent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRuntimeEvent != null ? retObjectGetRuntimeEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class RuntimeReflectionExtensions extends NetObject  {
 
     public static FieldInfo GetRuntimeField(NetType type, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRuntimeField = null;
         try {
-            JCObject objGetRuntimeField = (JCObject)classType.Invoke("GetRuntimeField", type == null ? null : type.getJCOInstance(), name);
+            retObjectGetRuntimeField = classType.Invoke("GetRuntimeField", type == null ? null : type.getJCOInstance(), name);
+            JCObject objGetRuntimeField = (JCObject)retObjectGetRuntimeField;
             return new FieldInfo(objGetRuntimeField);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRuntimeField != null ? retObjectGetRuntimeField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class RuntimeReflectionExtensions extends NetObject  {
 
     public static InterfaceMapping GetRuntimeInterfaceMap(TypeInfo typeInfo, NetType interfaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRuntimeInterfaceMap = null;
         try {
-            JCObject objGetRuntimeInterfaceMap = (JCObject)classType.Invoke("GetRuntimeInterfaceMap", typeInfo == null ? null : typeInfo.getJCOInstance(), interfaceType == null ? null : interfaceType.getJCOInstance());
+            retObjectGetRuntimeInterfaceMap = classType.Invoke("GetRuntimeInterfaceMap", typeInfo == null ? null : typeInfo.getJCOInstance(), interfaceType == null ? null : interfaceType.getJCOInstance());
+            JCObject objGetRuntimeInterfaceMap = (JCObject)retObjectGetRuntimeInterfaceMap;
             return new InterfaceMapping(objGetRuntimeInterfaceMap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRuntimeInterfaceMap != null ? retObjectGetRuntimeInterfaceMap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class RuntimeReflectionExtensions extends NetObject  {
 
     public static MethodInfo GetRuntimeBaseDefinition(MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRuntimeBaseDefinition = null;
         try {
-            JCObject objGetRuntimeBaseDefinition = (JCObject)classType.Invoke("GetRuntimeBaseDefinition", method == null ? null : method.getJCOInstance());
+            retObjectGetRuntimeBaseDefinition = classType.Invoke("GetRuntimeBaseDefinition", method == null ? null : method.getJCOInstance());
+            JCObject objGetRuntimeBaseDefinition = (JCObject)retObjectGetRuntimeBaseDefinition;
             return new MethodInfo(objGetRuntimeBaseDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRuntimeBaseDefinition != null ? retObjectGetRuntimeBaseDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class RuntimeReflectionExtensions extends NetObject  {
 
     public static MethodInfo GetRuntimeMethod(NetType type, java.lang.String name, NetType[] parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRuntimeMethod = null;
         try {
-            JCObject objGetRuntimeMethod = (JCObject)classType.Invoke("GetRuntimeMethod", type == null ? null : type.getJCOInstance(), name, toObjectFromArray(parameters));
+            retObjectGetRuntimeMethod = classType.Invoke("GetRuntimeMethod", type == null ? null : type.getJCOInstance(), name, toObjectFromArray(parameters));
+            JCObject objGetRuntimeMethod = (JCObject)retObjectGetRuntimeMethod;
             return new MethodInfo(objGetRuntimeMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRuntimeMethod != null ? retObjectGetRuntimeMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +234,14 @@ public class RuntimeReflectionExtensions extends NetObject  {
 
     public static PropertyInfo GetRuntimeProperty(NetType type, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRuntimeProperty = null;
         try {
-            JCObject objGetRuntimeProperty = (JCObject)classType.Invoke("GetRuntimeProperty", type == null ? null : type.getJCOInstance(), name);
+            retObjectGetRuntimeProperty = classType.Invoke("GetRuntimeProperty", type == null ? null : type.getJCOInstance(), name);
+            JCObject objGetRuntimeProperty = (JCObject)retObjectGetRuntimeProperty;
             return new PropertyInfo(objGetRuntimeProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRuntimeProperty != null ? retObjectGetRuntimeProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

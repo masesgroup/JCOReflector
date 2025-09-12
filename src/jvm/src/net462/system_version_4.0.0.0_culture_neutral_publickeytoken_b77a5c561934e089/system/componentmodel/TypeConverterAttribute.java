@@ -186,9 +186,13 @@ public class TypeConverterAttribute extends Attribute  {
     
     public java.lang.String getConverterTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConverterTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("ConverterTypeName");
+            retObjectConverterTypeName = classInstance.Get("ConverterTypeName");
+            return (java.lang.String)retObjectConverterTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConverterTypeName != null ? retObjectConverterTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

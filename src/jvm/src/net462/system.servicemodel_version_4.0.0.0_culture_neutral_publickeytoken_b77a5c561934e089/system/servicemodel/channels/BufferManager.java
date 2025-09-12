@@ -154,10 +154,12 @@ public class BufferManager extends NetObject  {
     
     public byte[] TakeBuffer(int bufferSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTakeBuffer = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("TakeBuffer", bufferSize);
+            retObjectTakeBuffer = classInstance.Invoke("TakeBuffer", bufferSize);
+            JCObject resultingObjects = (JCObject)retObjectTakeBuffer;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -166,6 +168,8 @@ public class BufferManager extends NetObject  {
 				resultingArray[indexTakeBuffer] = (byte)resultingArrayList.get(indexTakeBuffer);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectTakeBuffer != null ? retObjectTakeBuffer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class BufferManager extends NetObject  {
 
     public static BufferManager CreateBufferManager(long maxBufferPoolSize, int maxBufferSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBufferManager = null;
         try {
-            JCObject objCreateBufferManager = (JCObject)classType.Invoke("CreateBufferManager", maxBufferPoolSize, maxBufferSize);
+            retObjectCreateBufferManager = classType.Invoke("CreateBufferManager", maxBufferPoolSize, maxBufferSize);
+            JCObject objCreateBufferManager = (JCObject)retObjectCreateBufferManager;
             return new BufferManager(objCreateBufferManager);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBufferManager != null ? retObjectCreateBufferManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,7 +192,7 @@ public class BufferManager extends NetObject  {
 
     public void Clear() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -194,7 +202,7 @@ public class BufferManager extends NetObject  {
 
     public void ReturnBuffer(byte[] buffer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReturnBuffer", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
@@ -204,7 +212,7 @@ public class BufferManager extends NetObject  {
 
     public void ReturnBuffer(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReturnBuffer", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {

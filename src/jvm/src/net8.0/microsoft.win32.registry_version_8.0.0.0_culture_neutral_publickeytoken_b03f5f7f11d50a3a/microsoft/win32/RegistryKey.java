@@ -167,10 +167,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
     
     public RegistryKey CreateSubKey(java.lang.String subkey, boolean writable, RegistryOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSubKey = null;
         try {
-            JCObject objCreateSubKey = (JCObject)classInstance.Invoke("CreateSubKey", subkey, writable, options == null ? null : options.getJCOInstance());
+            retObjectCreateSubKey = classInstance.Invoke("CreateSubKey", subkey, writable, options == null ? null : options.getJCOInstance());
+            JCObject objCreateSubKey = (JCObject)retObjectCreateSubKey;
             return new RegistryKey(objCreateSubKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSubKey != null ? retObjectCreateSubKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public RegistryKey CreateSubKey(java.lang.String subkey, boolean writable) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSubKey = null;
         try {
-            JCObject objCreateSubKey = (JCObject)classInstance.Invoke("CreateSubKey", subkey, writable);
+            retObjectCreateSubKey = classInstance.Invoke("CreateSubKey", subkey, writable);
+            JCObject objCreateSubKey = (JCObject)retObjectCreateSubKey;
             return new RegistryKey(objCreateSubKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSubKey != null ? retObjectCreateSubKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +197,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public RegistryKey CreateSubKey(java.lang.String subkey, RegistryKeyPermissionCheck permissionCheck, RegistryOptions registryOptions, RegistrySecurity registrySecurity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSubKey = null;
         try {
-            JCObject objCreateSubKey = (JCObject)classInstance.Invoke("CreateSubKey", subkey, permissionCheck == null ? null : permissionCheck.getJCOInstance(), registryOptions == null ? null : registryOptions.getJCOInstance(), registrySecurity == null ? null : registrySecurity.getJCOInstance());
+            retObjectCreateSubKey = classInstance.Invoke("CreateSubKey", subkey, permissionCheck == null ? null : permissionCheck.getJCOInstance(), registryOptions == null ? null : registryOptions.getJCOInstance(), registrySecurity == null ? null : registrySecurity.getJCOInstance());
+            JCObject objCreateSubKey = (JCObject)retObjectCreateSubKey;
             return new RegistryKey(objCreateSubKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSubKey != null ? retObjectCreateSubKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +212,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public RegistryKey CreateSubKey(java.lang.String subkey, RegistryKeyPermissionCheck permissionCheck, RegistryOptions registryOptions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.RankException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSubKey = null;
         try {
-            JCObject objCreateSubKey = (JCObject)classInstance.Invoke("CreateSubKey", subkey, permissionCheck == null ? null : permissionCheck.getJCOInstance(), registryOptions == null ? null : registryOptions.getJCOInstance());
+            retObjectCreateSubKey = classInstance.Invoke("CreateSubKey", subkey, permissionCheck == null ? null : permissionCheck.getJCOInstance(), registryOptions == null ? null : registryOptions.getJCOInstance());
+            JCObject objCreateSubKey = (JCObject)retObjectCreateSubKey;
             return new RegistryKey(objCreateSubKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSubKey != null ? retObjectCreateSubKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +227,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public RegistryKey CreateSubKey(java.lang.String subkey, RegistryKeyPermissionCheck permissionCheck, RegistrySecurity registrySecurity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSubKey = null;
         try {
-            JCObject objCreateSubKey = (JCObject)classInstance.Invoke("CreateSubKey", subkey, permissionCheck == null ? null : permissionCheck.getJCOInstance(), registrySecurity == null ? null : registrySecurity.getJCOInstance());
+            retObjectCreateSubKey = classInstance.Invoke("CreateSubKey", subkey, permissionCheck == null ? null : permissionCheck.getJCOInstance(), registrySecurity == null ? null : registrySecurity.getJCOInstance());
+            JCObject objCreateSubKey = (JCObject)retObjectCreateSubKey;
             return new RegistryKey(objCreateSubKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSubKey != null ? retObjectCreateSubKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +242,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public RegistryKey CreateSubKey(java.lang.String subkey, RegistryKeyPermissionCheck permissionCheck) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSubKey = null;
         try {
-            JCObject objCreateSubKey = (JCObject)classInstance.Invoke("CreateSubKey", subkey, permissionCheck == null ? null : permissionCheck.getJCOInstance());
+            retObjectCreateSubKey = classInstance.Invoke("CreateSubKey", subkey, permissionCheck == null ? null : permissionCheck.getJCOInstance());
+            JCObject objCreateSubKey = (JCObject)retObjectCreateSubKey;
             return new RegistryKey(objCreateSubKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSubKey != null ? retObjectCreateSubKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +257,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public RegistryKey CreateSubKey(java.lang.String subkey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UnauthorizedAccessException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.FormatException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSubKey = null;
         try {
-            JCObject objCreateSubKey = (JCObject)classInstance.Invoke("CreateSubKey", subkey);
+            retObjectCreateSubKey = classInstance.Invoke("CreateSubKey", subkey);
+            JCObject objCreateSubKey = (JCObject)retObjectCreateSubKey;
             return new RegistryKey(objCreateSubKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSubKey != null ? retObjectCreateSubKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +272,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public static RegistryKey FromHandle(SafeRegistryHandle handle, RegistryView view) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromHandle = null;
         try {
-            JCObject objFromHandle = (JCObject)classType.Invoke("FromHandle", handle == null ? null : handle.getJCOInstance(), view == null ? null : view.getJCOInstance());
+            retObjectFromHandle = classType.Invoke("FromHandle", handle == null ? null : handle.getJCOInstance(), view == null ? null : view.getJCOInstance());
+            JCObject objFromHandle = (JCObject)retObjectFromHandle;
             return new RegistryKey(objFromHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromHandle != null ? retObjectFromHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +287,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public static RegistryKey FromHandle(SafeRegistryHandle handle) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromHandle = null;
         try {
-            JCObject objFromHandle = (JCObject)classType.Invoke("FromHandle", handle == null ? null : handle.getJCOInstance());
+            retObjectFromHandle = classType.Invoke("FromHandle", handle == null ? null : handle.getJCOInstance());
+            JCObject objFromHandle = (JCObject)retObjectFromHandle;
             return new RegistryKey(objFromHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromHandle != null ? retObjectFromHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +302,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public static RegistryKey OpenBaseKey(RegistryHive hKey, RegistryView view) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenBaseKey = null;
         try {
-            JCObject objOpenBaseKey = (JCObject)classType.Invoke("OpenBaseKey", hKey == null ? null : hKey.getJCOInstance(), view == null ? null : view.getJCOInstance());
+            retObjectOpenBaseKey = classType.Invoke("OpenBaseKey", hKey == null ? null : hKey.getJCOInstance(), view == null ? null : view.getJCOInstance());
+            JCObject objOpenBaseKey = (JCObject)retObjectOpenBaseKey;
             return new RegistryKey(objOpenBaseKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenBaseKey != null ? retObjectOpenBaseKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,10 +317,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public static RegistryKey OpenRemoteBaseKey(RegistryHive hKey, java.lang.String machineName, RegistryView view) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenRemoteBaseKey = null;
         try {
-            JCObject objOpenRemoteBaseKey = (JCObject)classType.Invoke("OpenRemoteBaseKey", hKey == null ? null : hKey.getJCOInstance(), machineName, view == null ? null : view.getJCOInstance());
+            retObjectOpenRemoteBaseKey = classType.Invoke("OpenRemoteBaseKey", hKey == null ? null : hKey.getJCOInstance(), machineName, view == null ? null : view.getJCOInstance());
+            JCObject objOpenRemoteBaseKey = (JCObject)retObjectOpenRemoteBaseKey;
             return new RegistryKey(objOpenRemoteBaseKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenRemoteBaseKey != null ? retObjectOpenRemoteBaseKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,10 +332,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public static RegistryKey OpenRemoteBaseKey(RegistryHive hKey, java.lang.String machineName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenRemoteBaseKey = null;
         try {
-            JCObject objOpenRemoteBaseKey = (JCObject)classType.Invoke("OpenRemoteBaseKey", hKey == null ? null : hKey.getJCOInstance(), machineName);
+            retObjectOpenRemoteBaseKey = classType.Invoke("OpenRemoteBaseKey", hKey == null ? null : hKey.getJCOInstance(), machineName);
+            JCObject objOpenRemoteBaseKey = (JCObject)retObjectOpenRemoteBaseKey;
             return new RegistryKey(objOpenRemoteBaseKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenRemoteBaseKey != null ? retObjectOpenRemoteBaseKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,10 +347,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public RegistryKey OpenSubKey(java.lang.String name, boolean writable) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenSubKey = null;
         try {
-            JCObject objOpenSubKey = (JCObject)classInstance.Invoke("OpenSubKey", name, writable);
+            retObjectOpenSubKey = classInstance.Invoke("OpenSubKey", name, writable);
+            JCObject objOpenSubKey = (JCObject)retObjectOpenSubKey;
             return new RegistryKey(objOpenSubKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenSubKey != null ? retObjectOpenSubKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,10 +362,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public RegistryKey OpenSubKey(java.lang.String name, RegistryKeyPermissionCheck permissionCheck, RegistryRights rights) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenSubKey = null;
         try {
-            JCObject objOpenSubKey = (JCObject)classInstance.Invoke("OpenSubKey", name, permissionCheck == null ? null : permissionCheck.getJCOInstance(), rights == null ? null : rights.getJCOInstance());
+            retObjectOpenSubKey = classInstance.Invoke("OpenSubKey", name, permissionCheck == null ? null : permissionCheck.getJCOInstance(), rights == null ? null : rights.getJCOInstance());
+            JCObject objOpenSubKey = (JCObject)retObjectOpenSubKey;
             return new RegistryKey(objOpenSubKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenSubKey != null ? retObjectOpenSubKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,10 +377,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public RegistryKey OpenSubKey(java.lang.String name, RegistryKeyPermissionCheck permissionCheck) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.RankException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenSubKey = null;
         try {
-            JCObject objOpenSubKey = (JCObject)classInstance.Invoke("OpenSubKey", name, permissionCheck == null ? null : permissionCheck.getJCOInstance());
+            retObjectOpenSubKey = classInstance.Invoke("OpenSubKey", name, permissionCheck == null ? null : permissionCheck.getJCOInstance());
+            JCObject objOpenSubKey = (JCObject)retObjectOpenSubKey;
             return new RegistryKey(objOpenSubKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenSubKey != null ? retObjectOpenSubKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,10 +392,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public RegistryKey OpenSubKey(java.lang.String name, RegistryRights rights) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.RankException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenSubKey = null;
         try {
-            JCObject objOpenSubKey = (JCObject)classInstance.Invoke("OpenSubKey", name, rights == null ? null : rights.getJCOInstance());
+            retObjectOpenSubKey = classInstance.Invoke("OpenSubKey", name, rights == null ? null : rights.getJCOInstance());
+            JCObject objOpenSubKey = (JCObject)retObjectOpenSubKey;
             return new RegistryKey(objOpenSubKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenSubKey != null ? retObjectOpenSubKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,10 +407,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public RegistryKey OpenSubKey(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.RankException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenSubKey = null;
         try {
-            JCObject objOpenSubKey = (JCObject)classInstance.Invoke("OpenSubKey", name);
+            retObjectOpenSubKey = classInstance.Invoke("OpenSubKey", name);
+            JCObject objOpenSubKey = (JCObject)retObjectOpenSubKey;
             return new RegistryKey(objOpenSubKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenSubKey != null ? retObjectOpenSubKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,10 +422,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public RegistryValueKind GetValueKind(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValueKind = null;
         try {
-            JCObject objGetValueKind = (JCObject)classInstance.Invoke("GetValueKind", name);
+            retObjectGetValueKind = classInstance.Invoke("GetValueKind", name);
+            JCObject objGetValueKind = (JCObject)retObjectGetValueKind;
             return new RegistryValueKind(objGetValueKind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValueKind != null ? retObjectGetValueKind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,10 +437,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public NetObject GetValue(java.lang.String name, NetObject defaultValue, RegistryValueOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", name, defaultValue == null ? null : defaultValue.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            retObjectGetValue = classInstance.Invoke("GetValue", name, defaultValue == null ? null : defaultValue.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,10 +452,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public NetObject GetValue(java.lang.String name, NetObject defaultValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", name, defaultValue == null ? null : defaultValue.getJCOInstance());
+            retObjectGetValue = classInstance.Invoke("GetValue", name, defaultValue == null ? null : defaultValue.getJCOInstance());
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,10 +467,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public NetObject GetValue(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", name);
+            retObjectGetValue = classInstance.Invoke("GetValue", name);
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,10 +482,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public RegistrySecurity GetAccessControl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.security.accesscontrol.PrivilegeNotHeldException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAccessControl = null;
         try {
-            JCObject objGetAccessControl = (JCObject)classInstance.Invoke("GetAccessControl");
+            retObjectGetAccessControl = classInstance.Invoke("GetAccessControl");
+            JCObject objGetAccessControl = (JCObject)retObjectGetAccessControl;
             return new RegistrySecurity(objGetAccessControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAccessControl != null ? retObjectGetAccessControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -409,10 +497,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public RegistrySecurity GetAccessControl(AccessControlSections includeSections) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.security.accesscontrol.PrivilegeNotHeldException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAccessControl = null;
         try {
-            JCObject objGetAccessControl = (JCObject)classInstance.Invoke("GetAccessControl", includeSections == null ? null : includeSections.getJCOInstance());
+            retObjectGetAccessControl = classInstance.Invoke("GetAccessControl", includeSections == null ? null : includeSections.getJCOInstance());
+            JCObject objGetAccessControl = (JCObject)retObjectGetAccessControl;
             return new RegistrySecurity(objGetAccessControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAccessControl != null ? retObjectGetAccessControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,10 +512,12 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public java.lang.String[] GetSubKeyNames() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSubKeyNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSubKeyNames");
+            retObjectGetSubKeyNames = classInstance.Invoke("GetSubKeyNames");
+            JCObject resultingObjects = (JCObject)retObjectGetSubKeyNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -432,6 +526,8 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 				resultingArray[indexGetSubKeyNames] = (java.lang.String)resultingArrayList.get(indexGetSubKeyNames);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetSubKeyNames != null ? retObjectGetSubKeyNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,10 +535,12 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public java.lang.String[] GetValueNames() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValueNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetValueNames");
+            retObjectGetValueNames = classInstance.Invoke("GetValueNames");
+            JCObject resultingObjects = (JCObject)retObjectGetValueNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -451,6 +549,8 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 				resultingArray[indexGetValueNames] = (java.lang.String)resultingArrayList.get(indexGetValueNames);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetValueNames != null ? retObjectGetValueNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -458,7 +558,7 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public void Close() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -468,7 +568,7 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public void DeleteSubKey(java.lang.String subkey, boolean throwOnMissingSubKey) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteSubKey", subkey, throwOnMissingSubKey);
         } catch (JCNativeException jcne) {
@@ -478,7 +578,7 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public void DeleteSubKey(java.lang.String subkey) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.RankException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteSubKey", subkey);
         } catch (JCNativeException jcne) {
@@ -488,7 +588,7 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public void DeleteSubKeyTree(java.lang.String subkey, boolean throwOnMissingSubKey) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteSubKeyTree", subkey, throwOnMissingSubKey);
         } catch (JCNativeException jcne) {
@@ -498,7 +598,7 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public void DeleteSubKeyTree(java.lang.String subkey) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.RankException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteSubKeyTree", subkey);
         } catch (JCNativeException jcne) {
@@ -508,7 +608,7 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public void DeleteValue(java.lang.String name, boolean throwOnMissingValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteValue", name, throwOnMissingValue);
         } catch (JCNativeException jcne) {
@@ -518,7 +618,7 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public void DeleteValue(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteValue", name);
         } catch (JCNativeException jcne) {
@@ -528,7 +628,7 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -538,7 +638,7 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public void Flush() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -548,7 +648,7 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public void SetAccessControl(RegistrySecurity registrySecurity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.NotSupportedException, system.io.IOException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAccessControl", registrySecurity == null ? null : registrySecurity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -558,7 +658,7 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public void SetValue(java.lang.String name, NetObject value, RegistryValueKind valueKind) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", name, value == null ? null : value.getJCOInstance(), valueKind == null ? null : valueKind.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -568,7 +668,7 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public void SetValue(java.lang.String name, NetObject value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", name, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -579,7 +679,7 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -595,9 +695,19 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
     
     public int getSubKeyCount() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubKeyCount = null;
         try {
-            return (int)classInstance.Get("SubKeyCount");
+            retObjectSubKeyCount = classInstance.Get("SubKeyCount");
+            return (int)retObjectSubKeyCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSubKeyCountNumber = (java.lang.Number)retObjectSubKeyCount;
+                return retObjectSubKeyCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSubKeyCount != null ? retObjectSubKeyCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -605,9 +715,19 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public int getValueCount() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueCount = null;
         try {
-            return (int)classInstance.Get("ValueCount");
+            retObjectValueCount = classInstance.Get("ValueCount");
+            return (int)retObjectValueCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectValueCountNumber = (java.lang.Number)retObjectValueCount;
+                return retObjectValueCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectValueCount != null ? retObjectValueCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -615,10 +735,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public RegistryView getView() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectView = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("View");
+            retObjectView = classInstance.Get("View");
+            JCObject val = (JCObject)retObjectView;
             return new RegistryView(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectView != null ? retObjectView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -626,10 +750,14 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public SafeRegistryHandle getHandle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHandle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Handle");
+            retObjectHandle = classInstance.Get("Handle");
+            JCObject val = (JCObject)retObjectHandle;
             return new SafeRegistryHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHandle != null ? retObjectHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -637,9 +765,13 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
 
     public java.lang.String getName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

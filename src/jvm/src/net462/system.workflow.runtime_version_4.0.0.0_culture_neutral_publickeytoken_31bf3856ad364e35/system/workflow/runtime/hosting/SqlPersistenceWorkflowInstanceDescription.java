@@ -162,9 +162,13 @@ public class SqlPersistenceWorkflowInstanceDescription extends NetObject  {
     
     public boolean getIsBlocked() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBlocked = null;
         try {
-            return (boolean)classInstance.Get("IsBlocked");
+            retObjectIsBlocked = classInstance.Get("IsBlocked");
+            return (boolean)retObjectIsBlocked;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBlocked != null ? retObjectIsBlocked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class SqlPersistenceWorkflowInstanceDescription extends NetObject  {
 
     public SqlDateTime getNextTimerExpiration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextTimerExpiration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NextTimerExpiration");
+            retObjectNextTimerExpiration = classInstance.Get("NextTimerExpiration");
+            JCObject val = (JCObject)retObjectNextTimerExpiration;
             return new SqlDateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNextTimerExpiration != null ? retObjectNextTimerExpiration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class SqlPersistenceWorkflowInstanceDescription extends NetObject  {
 
     public Guid getWorkflowInstanceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowInstanceId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowInstanceId");
+            retObjectWorkflowInstanceId = classInstance.Get("WorkflowInstanceId");
+            JCObject val = (JCObject)retObjectWorkflowInstanceId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowInstanceId != null ? retObjectWorkflowInstanceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +206,13 @@ public class SqlPersistenceWorkflowInstanceDescription extends NetObject  {
 
     public java.lang.String getSuspendOrTerminateDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuspendOrTerminateDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("SuspendOrTerminateDescription");
+            retObjectSuspendOrTerminateDescription = classInstance.Get("SuspendOrTerminateDescription");
+            return (java.lang.String)retObjectSuspendOrTerminateDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSuspendOrTerminateDescription != null ? retObjectSuspendOrTerminateDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +220,14 @@ public class SqlPersistenceWorkflowInstanceDescription extends NetObject  {
 
     public WorkflowStatus getStatus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatus = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Status");
+            retObjectStatus = classInstance.Get("Status");
+            JCObject val = (JCObject)retObjectStatus;
             return new WorkflowStatus(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatus != null ? retObjectStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

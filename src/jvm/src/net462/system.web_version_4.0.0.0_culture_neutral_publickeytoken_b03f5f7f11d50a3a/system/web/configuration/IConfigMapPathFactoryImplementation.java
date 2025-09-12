@@ -144,10 +144,14 @@ public class IConfigMapPathFactoryImplementation extends NetObject implements IC
     
     public IConfigMapPath Create(java.lang.String virtualPath, java.lang.String physicalPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classInstance.Invoke("Create", virtualPath, physicalPath);
+            retObjectCreate = classInstance.Invoke("Create", virtualPath, physicalPath);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new IConfigMapPathImplementation(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

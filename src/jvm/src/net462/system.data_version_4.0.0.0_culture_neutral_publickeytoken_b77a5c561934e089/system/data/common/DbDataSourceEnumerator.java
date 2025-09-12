@@ -154,10 +154,14 @@ public class DbDataSourceEnumerator extends NetObject  {
     
     public DataTable GetDataSources() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDataSources = null;
         try {
-            JCObject objGetDataSources = (JCObject)classInstance.Invoke("GetDataSources");
+            retObjectGetDataSources = classInstance.Invoke("GetDataSources");
+            JCObject objGetDataSources = (JCObject)retObjectGetDataSources;
             return new DataTable(objGetDataSources);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataSources != null ? retObjectGetDataSources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

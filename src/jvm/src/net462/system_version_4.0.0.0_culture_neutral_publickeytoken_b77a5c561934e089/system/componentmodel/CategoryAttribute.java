@@ -173,9 +173,13 @@ public class CategoryAttribute extends Attribute  {
     
     public boolean IsDefaultAttribute() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefaultAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
+            retObjectIsDefaultAttribute = classInstance.Invoke("IsDefaultAttribute");
+            return (boolean)retObjectIsDefaultAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefaultAttribute != null ? retObjectIsDefaultAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +191,14 @@ public class CategoryAttribute extends Attribute  {
     
     public static CategoryAttribute getAction() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAction = null;
         try {
-            JCObject val = (JCObject)classType.Get("Action");
+            retObjectAction = classType.Get("Action");
+            JCObject val = (JCObject)retObjectAction;
             return new CategoryAttribute(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +206,14 @@ public class CategoryAttribute extends Attribute  {
 
     public static CategoryAttribute getAppearance() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppearance = null;
         try {
-            JCObject val = (JCObject)classType.Get("Appearance");
+            retObjectAppearance = classType.Get("Appearance");
+            JCObject val = (JCObject)retObjectAppearance;
             return new CategoryAttribute(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppearance != null ? retObjectAppearance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +221,14 @@ public class CategoryAttribute extends Attribute  {
 
     public static CategoryAttribute getAsynchronous() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsynchronous = null;
         try {
-            JCObject val = (JCObject)classType.Get("Asynchronous");
+            retObjectAsynchronous = classType.Get("Asynchronous");
+            JCObject val = (JCObject)retObjectAsynchronous;
             return new CategoryAttribute(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsynchronous != null ? retObjectAsynchronous.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +236,14 @@ public class CategoryAttribute extends Attribute  {
 
     public static CategoryAttribute getBehavior() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBehavior = null;
         try {
-            JCObject val = (JCObject)classType.Get("Behavior");
+            retObjectBehavior = classType.Get("Behavior");
+            JCObject val = (JCObject)retObjectBehavior;
             return new CategoryAttribute(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBehavior != null ? retObjectBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +251,14 @@ public class CategoryAttribute extends Attribute  {
 
     public static CategoryAttribute getData() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectData = null;
         try {
-            JCObject val = (JCObject)classType.Get("Data");
+            retObjectData = classType.Get("Data");
+            JCObject val = (JCObject)retObjectData;
             return new CategoryAttribute(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectData != null ? retObjectData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +266,14 @@ public class CategoryAttribute extends Attribute  {
 
     public static CategoryAttribute getDefault() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            retObjectDefault = classType.Get("Default");
+            JCObject val = (JCObject)retObjectDefault;
             return new CategoryAttribute(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +281,14 @@ public class CategoryAttribute extends Attribute  {
 
     public static CategoryAttribute getDesign() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDesign = null;
         try {
-            JCObject val = (JCObject)classType.Get("Design");
+            retObjectDesign = classType.Get("Design");
+            JCObject val = (JCObject)retObjectDesign;
             return new CategoryAttribute(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesign != null ? retObjectDesign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,10 +296,14 @@ public class CategoryAttribute extends Attribute  {
 
     public static CategoryAttribute getDragDrop() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDragDrop = null;
         try {
-            JCObject val = (JCObject)classType.Get("DragDrop");
+            retObjectDragDrop = classType.Get("DragDrop");
+            JCObject val = (JCObject)retObjectDragDrop;
             return new CategoryAttribute(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDragDrop != null ? retObjectDragDrop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,10 +311,14 @@ public class CategoryAttribute extends Attribute  {
 
     public static CategoryAttribute getFocus() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFocus = null;
         try {
-            JCObject val = (JCObject)classType.Get("Focus");
+            retObjectFocus = classType.Get("Focus");
+            JCObject val = (JCObject)retObjectFocus;
             return new CategoryAttribute(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFocus != null ? retObjectFocus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,10 +326,14 @@ public class CategoryAttribute extends Attribute  {
 
     public static CategoryAttribute getFormat() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFormat = null;
         try {
-            JCObject val = (JCObject)classType.Get("Format");
+            retObjectFormat = classType.Get("Format");
+            JCObject val = (JCObject)retObjectFormat;
             return new CategoryAttribute(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormat != null ? retObjectFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,10 +341,14 @@ public class CategoryAttribute extends Attribute  {
 
     public static CategoryAttribute getKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("Key");
+            retObjectKey = classType.Get("Key");
+            JCObject val = (JCObject)retObjectKey;
             return new CategoryAttribute(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKey != null ? retObjectKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,10 +356,14 @@ public class CategoryAttribute extends Attribute  {
 
     public static CategoryAttribute getLayout() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLayout = null;
         try {
-            JCObject val = (JCObject)classType.Get("Layout");
+            retObjectLayout = classType.Get("Layout");
+            JCObject val = (JCObject)retObjectLayout;
             return new CategoryAttribute(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLayout != null ? retObjectLayout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,10 +371,14 @@ public class CategoryAttribute extends Attribute  {
 
     public static CategoryAttribute getMouse() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMouse = null;
         try {
-            JCObject val = (JCObject)classType.Get("Mouse");
+            retObjectMouse = classType.Get("Mouse");
+            JCObject val = (JCObject)retObjectMouse;
             return new CategoryAttribute(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMouse != null ? retObjectMouse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,10 +386,14 @@ public class CategoryAttribute extends Attribute  {
 
     public static CategoryAttribute getWindowStyle() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowStyle = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowStyle");
+            retObjectWindowStyle = classType.Get("WindowStyle");
+            JCObject val = (JCObject)retObjectWindowStyle;
             return new CategoryAttribute(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowStyle != null ? retObjectWindowStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,9 +401,13 @@ public class CategoryAttribute extends Attribute  {
 
     public java.lang.String getCategory() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategory = null;
         try {
-            return (java.lang.String)classInstance.Get("Category");
+            retObjectCategory = classInstance.Get("Category");
+            return (java.lang.String)retObjectCategory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCategory != null ? retObjectCategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

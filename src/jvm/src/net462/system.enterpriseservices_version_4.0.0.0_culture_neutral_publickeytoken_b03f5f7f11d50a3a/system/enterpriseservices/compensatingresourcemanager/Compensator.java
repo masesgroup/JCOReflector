@@ -164,9 +164,13 @@ public class Compensator extends ServicedComponent  {
     
     public boolean AbortRecord(LogRecord rec) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAbortRecord = null;
         try {
-            return (boolean)classInstance.Invoke("AbortRecord", rec == null ? null : rec.getJCOInstance());
+            retObjectAbortRecord = classInstance.Invoke("AbortRecord", rec == null ? null : rec.getJCOInstance());
+            return (boolean)retObjectAbortRecord;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAbortRecord != null ? retObjectAbortRecord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class Compensator extends ServicedComponent  {
 
     public boolean CommitRecord(LogRecord rec) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommitRecord = null;
         try {
-            return (boolean)classInstance.Invoke("CommitRecord", rec == null ? null : rec.getJCOInstance());
+            retObjectCommitRecord = classInstance.Invoke("CommitRecord", rec == null ? null : rec.getJCOInstance());
+            return (boolean)retObjectCommitRecord;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCommitRecord != null ? retObjectCommitRecord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class Compensator extends ServicedComponent  {
 
     public boolean EndPrepare() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndPrepare = null;
         try {
-            return (boolean)classInstance.Invoke("EndPrepare");
+            retObjectEndPrepare = classInstance.Invoke("EndPrepare");
+            return (boolean)retObjectEndPrepare;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEndPrepare != null ? retObjectEndPrepare.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +206,13 @@ public class Compensator extends ServicedComponent  {
 
     public boolean PrepareRecord(LogRecord rec) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrepareRecord = null;
         try {
-            return (boolean)classInstance.Invoke("PrepareRecord", rec == null ? null : rec.getJCOInstance());
+            retObjectPrepareRecord = classInstance.Invoke("PrepareRecord", rec == null ? null : rec.getJCOInstance());
+            return (boolean)retObjectPrepareRecord;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPrepareRecord != null ? retObjectPrepareRecord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +220,7 @@ public class Compensator extends ServicedComponent  {
 
     public void BeginAbort(boolean fRecovery) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginAbort", fRecovery);
         } catch (JCNativeException jcne) {
@@ -214,7 +230,7 @@ public class Compensator extends ServicedComponent  {
 
     public void BeginCommit(boolean fRecovery) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginCommit", fRecovery);
         } catch (JCNativeException jcne) {
@@ -224,7 +240,7 @@ public class Compensator extends ServicedComponent  {
 
     public void BeginPrepare() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginPrepare");
         } catch (JCNativeException jcne) {
@@ -234,7 +250,7 @@ public class Compensator extends ServicedComponent  {
 
     public void EndAbort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndAbort");
         } catch (JCNativeException jcne) {
@@ -244,7 +260,7 @@ public class Compensator extends ServicedComponent  {
 
     public void EndCommit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndCommit");
         } catch (JCNativeException jcne) {
@@ -258,10 +274,14 @@ public class Compensator extends ServicedComponent  {
     
     public Clerk getClerk() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClerk = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Clerk");
+            retObjectClerk = classInstance.Get("Clerk");
+            JCObject val = (JCObject)retObjectClerk;
             return new Clerk(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClerk != null ? retObjectClerk.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

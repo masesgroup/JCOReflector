@@ -147,10 +147,14 @@ public class IPersistedSelectorImplementation extends NetObject implements IPers
     
     public DataKey getDataKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataKey");
+            retObjectDataKey = classInstance.Get("DataKey");
+            JCObject val = (JCObject)retObjectDataKey;
             return new DataKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataKey != null ? retObjectDataKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,7 +162,7 @@ public class IPersistedSelectorImplementation extends NetObject implements IPers
 
     public void setDataKey(DataKey DataKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataKey", DataKey == null ? null : DataKey.getJCOInstance());
         } catch (JCNativeException jcne) {

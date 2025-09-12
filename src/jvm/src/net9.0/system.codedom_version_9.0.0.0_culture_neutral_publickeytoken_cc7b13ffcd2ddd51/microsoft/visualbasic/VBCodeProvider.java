@@ -171,10 +171,14 @@ public class VBCodeProvider extends CodeDomProvider  {
     
     public ICodeCompiler CreateCompiler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCompiler = null;
         try {
-            JCObject objCreateCompiler = (JCObject)classInstance.Invoke("CreateCompiler");
+            retObjectCreateCompiler = classInstance.Invoke("CreateCompiler");
+            JCObject objCreateCompiler = (JCObject)retObjectCreateCompiler;
             return new ICodeCompilerImplementation(objCreateCompiler);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCompiler != null ? retObjectCreateCompiler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class VBCodeProvider extends CodeDomProvider  {
 
     public ICodeGenerator CreateGenerator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateGenerator = null;
         try {
-            JCObject objCreateGenerator = (JCObject)classInstance.Invoke("CreateGenerator");
+            retObjectCreateGenerator = classInstance.Invoke("CreateGenerator");
+            JCObject objCreateGenerator = (JCObject)retObjectCreateGenerator;
             return new ICodeGeneratorImplementation(objCreateGenerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateGenerator != null ? retObjectCreateGenerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class VBCodeProvider extends CodeDomProvider  {
 
     public TypeConverter GetConverter(NetType type) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetConverter = null;
         try {
-            JCObject objGetConverter = (JCObject)classInstance.Invoke("GetConverter", type == null ? null : type.getJCOInstance());
+            retObjectGetConverter = classInstance.Invoke("GetConverter", type == null ? null : type.getJCOInstance());
+            JCObject objGetConverter = (JCObject)retObjectGetConverter;
             return new TypeConverter(objGetConverter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConverter != null ? retObjectGetConverter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +216,7 @@ public class VBCodeProvider extends CodeDomProvider  {
 
     public void GenerateCodeFromMember(CodeTypeMember member, TextWriter writer, CodeGeneratorOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenerateCodeFromMember", member == null ? null : member.getJCOInstance(), writer == null ? null : writer.getJCOInstance(), options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {

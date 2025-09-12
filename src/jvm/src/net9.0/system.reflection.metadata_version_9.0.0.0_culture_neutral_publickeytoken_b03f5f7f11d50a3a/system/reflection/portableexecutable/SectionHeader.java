@@ -162,9 +162,19 @@ public class SectionHeader extends ValueType  {
     
     public int getPointerToLineNumbers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPointerToLineNumbers = null;
         try {
-            return (int)classInstance.Get("PointerToLineNumbers");
+            retObjectPointerToLineNumbers = classInstance.Get("PointerToLineNumbers");
+            return (int)retObjectPointerToLineNumbers;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPointerToLineNumbersNumber = (java.lang.Number)retObjectPointerToLineNumbers;
+                return retObjectPointerToLineNumbersNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPointerToLineNumbers != null ? retObjectPointerToLineNumbers.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +182,19 @@ public class SectionHeader extends ValueType  {
 
     public int getPointerToRawData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPointerToRawData = null;
         try {
-            return (int)classInstance.Get("PointerToRawData");
+            retObjectPointerToRawData = classInstance.Get("PointerToRawData");
+            return (int)retObjectPointerToRawData;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPointerToRawDataNumber = (java.lang.Number)retObjectPointerToRawData;
+                return retObjectPointerToRawDataNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPointerToRawData != null ? retObjectPointerToRawData.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +202,19 @@ public class SectionHeader extends ValueType  {
 
     public int getPointerToRelocations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPointerToRelocations = null;
         try {
-            return (int)classInstance.Get("PointerToRelocations");
+            retObjectPointerToRelocations = classInstance.Get("PointerToRelocations");
+            return (int)retObjectPointerToRelocations;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPointerToRelocationsNumber = (java.lang.Number)retObjectPointerToRelocations;
+                return retObjectPointerToRelocationsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPointerToRelocations != null ? retObjectPointerToRelocations.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +222,19 @@ public class SectionHeader extends ValueType  {
 
     public int getSizeOfRawData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeOfRawData = null;
         try {
-            return (int)classInstance.Get("SizeOfRawData");
+            retObjectSizeOfRawData = classInstance.Get("SizeOfRawData");
+            return (int)retObjectSizeOfRawData;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSizeOfRawDataNumber = (java.lang.Number)retObjectSizeOfRawData;
+                return retObjectSizeOfRawDataNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSizeOfRawData != null ? retObjectSizeOfRawData.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +242,19 @@ public class SectionHeader extends ValueType  {
 
     public int getVirtualAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVirtualAddress = null;
         try {
-            return (int)classInstance.Get("VirtualAddress");
+            retObjectVirtualAddress = classInstance.Get("VirtualAddress");
+            return (int)retObjectVirtualAddress;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVirtualAddressNumber = (java.lang.Number)retObjectVirtualAddress;
+                return retObjectVirtualAddressNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVirtualAddress != null ? retObjectVirtualAddress.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +262,19 @@ public class SectionHeader extends ValueType  {
 
     public int getVirtualSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVirtualSize = null;
         try {
-            return (int)classInstance.Get("VirtualSize");
+            retObjectVirtualSize = classInstance.Get("VirtualSize");
+            return (int)retObjectVirtualSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVirtualSizeNumber = (java.lang.Number)retObjectVirtualSize;
+                return retObjectVirtualSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVirtualSize != null ? retObjectVirtualSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +282,14 @@ public class SectionHeader extends ValueType  {
 
     public SectionCharacteristics getSectionCharacteristics() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSectionCharacteristics = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SectionCharacteristics");
+            retObjectSectionCharacteristics = classInstance.Get("SectionCharacteristics");
+            JCObject val = (JCObject)retObjectSectionCharacteristics;
             return new SectionCharacteristics(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSectionCharacteristics != null ? retObjectSectionCharacteristics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +297,13 @@ public class SectionHeader extends ValueType  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +311,14 @@ public class SectionHeader extends ValueType  {
 
     public UInt16 getNumberOfLineNumbers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberOfLineNumbers = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NumberOfLineNumbers");
+            retObjectNumberOfLineNumbers = classInstance.Get("NumberOfLineNumbers");
+            JCObject val = (JCObject)retObjectNumberOfLineNumbers;
             return new UInt16(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNumberOfLineNumbers != null ? retObjectNumberOfLineNumbers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +326,14 @@ public class SectionHeader extends ValueType  {
 
     public UInt16 getNumberOfRelocations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberOfRelocations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NumberOfRelocations");
+            retObjectNumberOfRelocations = classInstance.Get("NumberOfRelocations");
+            JCObject val = (JCObject)retObjectNumberOfRelocations;
             return new UInt16(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNumberOfRelocations != null ? retObjectNumberOfRelocations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

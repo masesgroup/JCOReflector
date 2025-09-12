@@ -147,16 +147,20 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
     
     public final NetObject[] getParamValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParamValues = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ParamValues");
+            retObjectParamValues = classInstance.Get("ParamValues");
+            JCObject resultingObjects = (JCObject)retObjectParamValues;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParamValues != null ? retObjectParamValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,7 +168,7 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
 
     public void setParamValues(NetObject[] ParamValues) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParamValues", toObjectFromArray(ParamValues));
         } catch (JCNativeException jcne) {
@@ -174,16 +178,20 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
 
     public final Header[] getHeaders() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaders = null;
         try {
             ArrayList<Header> resultingArrayList = new ArrayList<Header>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Headers");
+            retObjectHeaders = classInstance.Get("Headers");
+            JCObject resultingObjects = (JCObject)retObjectHeaders;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Header(resultingObject));
             }
             Header[] resultingArray = new Header[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaders != null ? retObjectHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +199,7 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
 
     public void setHeaders(Header[] Headers) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Headers", toObjectFromArray(Headers));
         } catch (JCNativeException jcne) {
@@ -201,9 +209,13 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
 
     public java.lang.String getMethodName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodName = null;
         try {
-            return (java.lang.String)classInstance.Get("MethodName");
+            retObjectMethodName = classInstance.Get("MethodName");
+            return (java.lang.String)retObjectMethodName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMethodName != null ? retObjectMethodName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +223,7 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
 
     public void setMethodName(java.lang.String MethodName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MethodName", MethodName);
         } catch (JCNativeException jcne) {
@@ -221,9 +233,13 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
 
     public java.lang.String getXmlNameSpace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlNameSpace = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlNameSpace");
+            retObjectXmlNameSpace = classInstance.Get("XmlNameSpace");
+            return (java.lang.String)retObjectXmlNameSpace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlNameSpace != null ? retObjectXmlNameSpace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +247,7 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
 
     public void setXmlNameSpace(java.lang.String XmlNameSpace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlNameSpace", XmlNameSpace);
         } catch (JCNativeException jcne) {
@@ -241,10 +257,12 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
 
     public java.lang.String[] getParamNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParamNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ParamNames");
+            retObjectParamNames = classInstance.Get("ParamNames");
+            JCObject resultingObjects = (JCObject)retObjectParamNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -253,6 +271,8 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
 				resultingArray[indexParamNames] = (java.lang.String)resultingArrayList.get(indexParamNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectParamNames != null ? retObjectParamNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +280,7 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
 
     public void setParamNames(java.lang.String[] ParamNames) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParamNames", ParamNames);
         } catch (JCNativeException jcne) {
@@ -270,16 +290,20 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
 
     public final NetType[] getParamTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParamTypes = null;
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ParamTypes");
+            retObjectParamTypes = classInstance.Get("ParamTypes");
+            JCObject resultingObjects = (JCObject)retObjectParamTypes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParamTypes != null ? retObjectParamTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,7 +311,7 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
 
     public void setParamTypes(NetType[] ParamTypes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParamTypes", toObjectFromArray(ParamTypes));
         } catch (JCNativeException jcne) {

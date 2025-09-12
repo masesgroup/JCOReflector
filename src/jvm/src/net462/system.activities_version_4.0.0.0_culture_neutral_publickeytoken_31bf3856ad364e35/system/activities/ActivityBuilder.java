@@ -166,9 +166,13 @@ public class ActivityBuilder extends NetObject implements system.activities.debu
     
     public static boolean ShouldSerializePropertyReference(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShouldSerializePropertyReference = null;
         try {
-            return (boolean)classType.Invoke("ShouldSerializePropertyReference", target == null ? null : target.getJCOInstance());
+            retObjectShouldSerializePropertyReference = classType.Invoke("ShouldSerializePropertyReference", target == null ? null : target.getJCOInstance());
+            return (boolean)retObjectShouldSerializePropertyReference;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializePropertyReference != null ? retObjectShouldSerializePropertyReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class ActivityBuilder extends NetObject implements system.activities.debu
 
     public static boolean ShouldSerializePropertyReferences(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShouldSerializePropertyReferences = null;
         try {
-            return (boolean)classType.Invoke("ShouldSerializePropertyReferences", target == null ? null : target.getJCOInstance());
+            retObjectShouldSerializePropertyReferences = classType.Invoke("ShouldSerializePropertyReferences", target == null ? null : target.getJCOInstance());
+            return (boolean)retObjectShouldSerializePropertyReferences;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializePropertyReferences != null ? retObjectShouldSerializePropertyReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,14 @@ public class ActivityBuilder extends NetObject implements system.activities.debu
 
     public static ActivityPropertyReference GetPropertyReference(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPropertyReference = null;
         try {
-            JCObject objGetPropertyReference = (JCObject)classType.Invoke("GetPropertyReference", target == null ? null : target.getJCOInstance());
+            retObjectGetPropertyReference = classType.Invoke("GetPropertyReference", target == null ? null : target.getJCOInstance());
+            JCObject objGetPropertyReference = (JCObject)retObjectGetPropertyReference;
             return new ActivityPropertyReference(objGetPropertyReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyReference != null ? retObjectGetPropertyReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +209,7 @@ public class ActivityBuilder extends NetObject implements system.activities.debu
 
     public static void SetPropertyReference(NetObject target, ActivityPropertyReference value) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetPropertyReference", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,7 +223,7 @@ public class ActivityBuilder extends NetObject implements system.activities.debu
      */
     @Deprecated 
     public Activity GetWorkflowRoot() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDebuggableWorkflowTree to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDebuggableWorkflowTree to obtain the full interface.");
     }
 
 
@@ -220,10 +232,14 @@ public class ActivityBuilder extends NetObject implements system.activities.debu
     
     public Activity getImplementation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImplementation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Implementation");
+            retObjectImplementation = classInstance.Get("Implementation");
+            JCObject val = (JCObject)retObjectImplementation;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImplementation != null ? retObjectImplementation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +247,7 @@ public class ActivityBuilder extends NetObject implements system.activities.debu
 
     public void setImplementation(Activity Implementation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Implementation", Implementation == null ? null : Implementation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -241,9 +257,13 @@ public class ActivityBuilder extends NetObject implements system.activities.debu
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +271,7 @@ public class ActivityBuilder extends NetObject implements system.activities.debu
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -261,10 +281,14 @@ public class ActivityBuilder extends NetObject implements system.activities.debu
 
     public Version getImplementationVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImplementationVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImplementationVersion");
+            retObjectImplementationVersion = classInstance.Get("ImplementationVersion");
+            JCObject val = (JCObject)retObjectImplementationVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImplementationVersion != null ? retObjectImplementationVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +296,7 @@ public class ActivityBuilder extends NetObject implements system.activities.debu
 
     public void setImplementationVersion(Version ImplementationVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImplementationVersion", ImplementationVersion == null ? null : ImplementationVersion.getJCOInstance());
         } catch (JCNativeException jcne) {

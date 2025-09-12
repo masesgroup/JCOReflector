@@ -160,9 +160,13 @@ public class DirSyncResponseControl extends DirectoryControl  {
     
     public boolean getMoreData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoreData = null;
         try {
-            return (boolean)classInstance.Get("MoreData");
+            retObjectMoreData = classInstance.Get("MoreData");
+            return (boolean)retObjectMoreData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMoreData != null ? retObjectMoreData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,12 @@ public class DirSyncResponseControl extends DirectoryControl  {
 
     public byte[] getCookie() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCookie = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Cookie");
+            retObjectCookie = classInstance.Get("Cookie");
+            JCObject resultingObjects = (JCObject)retObjectCookie;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -182,6 +188,8 @@ public class DirSyncResponseControl extends DirectoryControl  {
 				resultingArray[indexCookie] = (byte)resultingArrayList.get(indexCookie);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectCookie != null ? retObjectCookie.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +197,19 @@ public class DirSyncResponseControl extends DirectoryControl  {
 
     public int getResultSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResultSize = null;
         try {
-            return (int)classInstance.Get("ResultSize");
+            retObjectResultSize = classInstance.Get("ResultSize");
+            return (int)retObjectResultSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResultSizeNumber = (java.lang.Number)retObjectResultSize;
+                return retObjectResultSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectResultSize != null ? retObjectResultSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

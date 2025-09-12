@@ -246,10 +246,14 @@ public class FaultException extends CommunicationException {
     
     public MessageFault CreateMessageFault() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateMessageFault = null;
         try {
-            JCObject objCreateMessageFault = (JCObject)classInstance.Invoke("CreateMessageFault");
+            retObjectCreateMessageFault = classInstance.Invoke("CreateMessageFault");
+            JCObject objCreateMessageFault = (JCObject)retObjectCreateMessageFault;
             return new MessageFault(objCreateMessageFault);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMessageFault != null ? retObjectCreateMessageFault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +261,14 @@ public class FaultException extends CommunicationException {
 
     public static FaultException CreateFault(MessageFault messageFault, java.lang.String action, NetType... faultDetailTypes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFault = null;
         try {
-            JCObject objCreateFault = (JCObject)classType.Invoke("CreateFault", messageFault == null ? null : messageFault.getJCOInstance(), action, toObjectFromArray(faultDetailTypes));
+            retObjectCreateFault = classType.Invoke("CreateFault", messageFault == null ? null : messageFault.getJCOInstance(), action, toObjectFromArray(faultDetailTypes));
+            JCObject objCreateFault = (JCObject)retObjectCreateFault;
             return new FaultException(objCreateFault);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFault != null ? retObjectCreateFault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +276,14 @@ public class FaultException extends CommunicationException {
 
     public static FaultException CreateFault(MessageFault messageFault, NetType... faultDetailTypes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFault = null;
         try {
-            JCObject objCreateFault = (JCObject)classType.Invoke("CreateFault", messageFault == null ? null : messageFault.getJCOInstance(), toObjectFromArray(faultDetailTypes));
+            retObjectCreateFault = classType.Invoke("CreateFault", messageFault == null ? null : messageFault.getJCOInstance(), toObjectFromArray(faultDetailTypes));
+            JCObject objCreateFault = (JCObject)retObjectCreateFault;
             return new FaultException(objCreateFault);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFault != null ? retObjectCreateFault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +291,7 @@ public class FaultException extends CommunicationException {
 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -293,10 +305,14 @@ public class FaultException extends CommunicationException {
     
     public FaultCode getCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Code");
+            retObjectCode = classInstance.Get("Code");
+            JCObject val = (JCObject)retObjectCode;
             return new FaultCode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCode != null ? retObjectCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,10 +320,14 @@ public class FaultException extends CommunicationException {
 
     public FaultReason getReason() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReason = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Reason");
+            retObjectReason = classInstance.Get("Reason");
+            JCObject val = (JCObject)retObjectReason;
             return new FaultReason(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReason != null ? retObjectReason.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,9 +335,13 @@ public class FaultException extends CommunicationException {
 
     public java.lang.String getAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAction = null;
         try {
-            return (java.lang.String)classInstance.Get("Action");
+            retObjectAction = classInstance.Get("Action");
+            return (java.lang.String)retObjectAction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

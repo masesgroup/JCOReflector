@@ -161,9 +161,13 @@ public class UrlBuilder extends NetObject  {
     
     public static java.lang.String BuildUrl(IComponent component, Control owner, java.lang.String initialUrl, java.lang.String caption, java.lang.String filter) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBuildUrl = null;
         try {
-            return (java.lang.String)classType.Invoke("BuildUrl", component == null ? null : component.getJCOInstance(), owner == null ? null : owner.getJCOInstance(), initialUrl, caption, filter);
+            retObjectBuildUrl = classType.Invoke("BuildUrl", component == null ? null : component.getJCOInstance(), owner == null ? null : owner.getJCOInstance(), initialUrl, caption, filter);
+            return (java.lang.String)retObjectBuildUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectBuildUrl != null ? retObjectBuildUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class UrlBuilder extends NetObject  {
 
     public static java.lang.String BuildUrl(IComponent component, Control owner, java.lang.String initialUrl, java.lang.String caption, java.lang.String filter, UrlBuilderOptions options) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBuildUrl = null;
         try {
-            return (java.lang.String)classType.Invoke("BuildUrl", component == null ? null : component.getJCOInstance(), owner == null ? null : owner.getJCOInstance(), initialUrl, caption, filter, options == null ? null : options.getJCOInstance());
+            retObjectBuildUrl = classType.Invoke("BuildUrl", component == null ? null : component.getJCOInstance(), owner == null ? null : owner.getJCOInstance(), initialUrl, caption, filter, options == null ? null : options.getJCOInstance());
+            return (java.lang.String)retObjectBuildUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectBuildUrl != null ? retObjectBuildUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class UrlBuilder extends NetObject  {
 
     public static java.lang.String BuildUrl(IServiceProvider serviceProvider, Control owner, java.lang.String initialUrl, java.lang.String caption, java.lang.String filter, UrlBuilderOptions options) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBuildUrl = null;
         try {
-            return (java.lang.String)classType.Invoke("BuildUrl", serviceProvider == null ? null : serviceProvider.getJCOInstance(), owner == null ? null : owner.getJCOInstance(), initialUrl, caption, filter, options == null ? null : options.getJCOInstance());
+            retObjectBuildUrl = classType.Invoke("BuildUrl", serviceProvider == null ? null : serviceProvider.getJCOInstance(), owner == null ? null : owner.getJCOInstance(), initialUrl, caption, filter, options == null ? null : options.getJCOInstance());
+            return (java.lang.String)retObjectBuildUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectBuildUrl != null ? retObjectBuildUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

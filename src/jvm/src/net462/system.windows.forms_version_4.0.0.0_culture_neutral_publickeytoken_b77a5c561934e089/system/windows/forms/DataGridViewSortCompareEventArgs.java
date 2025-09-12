@@ -171,9 +171,19 @@ public class DataGridViewSortCompareEventArgs extends HandledEventArgs  {
     
     public int getRowIndex1() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowIndex1 = null;
         try {
-            return (int)classInstance.Get("RowIndex1");
+            retObjectRowIndex1 = classInstance.Get("RowIndex1");
+            return (int)retObjectRowIndex1;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRowIndex1Number = (java.lang.Number)retObjectRowIndex1;
+                return retObjectRowIndex1Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRowIndex1 != null ? retObjectRowIndex1.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +191,19 @@ public class DataGridViewSortCompareEventArgs extends HandledEventArgs  {
 
     public int getRowIndex2() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowIndex2 = null;
         try {
-            return (int)classInstance.Get("RowIndex2");
+            retObjectRowIndex2 = classInstance.Get("RowIndex2");
+            return (int)retObjectRowIndex2;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRowIndex2Number = (java.lang.Number)retObjectRowIndex2;
+                return retObjectRowIndex2Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRowIndex2 != null ? retObjectRowIndex2.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +211,19 @@ public class DataGridViewSortCompareEventArgs extends HandledEventArgs  {
 
     public int getSortResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortResult = null;
         try {
-            return (int)classInstance.Get("SortResult");
+            retObjectSortResult = classInstance.Get("SortResult");
+            return (int)retObjectSortResult;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSortResultNumber = (java.lang.Number)retObjectSortResult;
+                return retObjectSortResultNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSortResult != null ? retObjectSortResult.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +231,7 @@ public class DataGridViewSortCompareEventArgs extends HandledEventArgs  {
 
     public void setSortResult(int SortResult) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SortResult", SortResult);
         } catch (JCNativeException jcne) {
@@ -211,10 +241,14 @@ public class DataGridViewSortCompareEventArgs extends HandledEventArgs  {
 
     public NetObject getCellValue1() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellValue1 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CellValue1");
+            retObjectCellValue1 = classInstance.Get("CellValue1");
+            JCObject val = (JCObject)retObjectCellValue1;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCellValue1 != null ? retObjectCellValue1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +256,14 @@ public class DataGridViewSortCompareEventArgs extends HandledEventArgs  {
 
     public NetObject getCellValue2() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellValue2 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CellValue2");
+            retObjectCellValue2 = classInstance.Get("CellValue2");
+            JCObject val = (JCObject)retObjectCellValue2;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCellValue2 != null ? retObjectCellValue2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +271,14 @@ public class DataGridViewSortCompareEventArgs extends HandledEventArgs  {
 
     public DataGridViewColumn getColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumn = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Column");
+            retObjectColumn = classInstance.Get("Column");
+            JCObject val = (JCObject)retObjectColumn;
             return new DataGridViewColumn(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumn != null ? retObjectColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

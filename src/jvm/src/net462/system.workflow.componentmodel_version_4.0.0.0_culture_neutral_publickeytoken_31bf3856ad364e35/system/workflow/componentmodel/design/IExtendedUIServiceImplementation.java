@@ -148,9 +148,13 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
     
     public boolean NavigateToProperty(java.lang.String propName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigateToProperty = null;
         try {
-            return (boolean)classInstance.Invoke("NavigateToProperty", propName);
+            retObjectNavigateToProperty = classInstance.Invoke("NavigateToProperty", propName);
+            return (boolean)retObjectNavigateToProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectNavigateToProperty != null ? retObjectNavigateToProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,10 +162,14 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
 
     public ITypeDescriptorContext GetSelectedPropertyContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSelectedPropertyContext = null;
         try {
-            JCObject objGetSelectedPropertyContext = (JCObject)classInstance.Invoke("GetSelectedPropertyContext");
+            retObjectGetSelectedPropertyContext = classInstance.Invoke("GetSelectedPropertyContext");
+            JCObject objGetSelectedPropertyContext = (JCObject)retObjectGetSelectedPropertyContext;
             return new ITypeDescriptorContextImplementation(objGetSelectedPropertyContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSelectedPropertyContext != null ? retObjectGetSelectedPropertyContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +177,14 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
 
     public NetType GetProxyClassForUrl(Uri url) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProxyClassForUrl = null;
         try {
-            JCObject objGetProxyClassForUrl = (JCObject)classInstance.Invoke("GetProxyClassForUrl", url == null ? null : url.getJCOInstance());
+            retObjectGetProxyClassForUrl = classInstance.Invoke("GetProxyClassForUrl", url == null ? null : url.getJCOInstance());
+            JCObject objGetProxyClassForUrl = (JCObject)retObjectGetProxyClassForUrl;
             return new NetType(objGetProxyClassForUrl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProxyClassForUrl != null ? retObjectGetProxyClassForUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +192,14 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
 
     public Uri GetUrlForProxyClass(NetType proxyClass) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUrlForProxyClass = null;
         try {
-            JCObject objGetUrlForProxyClass = (JCObject)classInstance.Invoke("GetUrlForProxyClass", proxyClass == null ? null : proxyClass.getJCOInstance());
+            retObjectGetUrlForProxyClass = classInstance.Invoke("GetUrlForProxyClass", proxyClass == null ? null : proxyClass.getJCOInstance());
+            JCObject objGetUrlForProxyClass = (JCObject)retObjectGetUrlForProxyClass;
             return new Uri(objGetUrlForProxyClass);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUrlForProxyClass != null ? retObjectGetUrlForProxyClass.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +207,14 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
 
     public DialogResult AddWebReference(JCORefOut<Uri> url, JCORefOut<NetType> proxyClass) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddWebReference = null;
         try {
-            JCObject objAddWebReference = (JCObject)classInstance.Invoke("AddWebReference", url.getJCRefOut(), proxyClass.getJCRefOut());
+            retObjectAddWebReference = classInstance.Invoke("AddWebReference", url.getJCRefOut(), proxyClass.getJCRefOut());
+            JCObject objAddWebReference = (JCObject)retObjectAddWebReference;
             return new DialogResult(objAddWebReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddWebReference != null ? retObjectAddWebReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +222,7 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
 
     public void AddAssemblyReference(AssemblyName assemblyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddAssemblyReference", assemblyName == null ? null : assemblyName.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,7 +232,7 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
 
     public void AddDesignerActions(DesignerAction[] actions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddDesignerActions", (java.lang.Object)toObjectFromArray(actions));
         } catch (JCNativeException jcne) {
@@ -222,7 +242,7 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
 
     public void RemoveDesignerActions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveDesignerActions");
         } catch (JCNativeException jcne) {
@@ -232,7 +252,7 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
 
     public void ShowToolsOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowToolsOptions");
         } catch (JCNativeException jcne) {

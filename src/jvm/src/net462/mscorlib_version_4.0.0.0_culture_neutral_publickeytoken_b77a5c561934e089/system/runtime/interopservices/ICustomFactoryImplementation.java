@@ -143,10 +143,14 @@ public class ICustomFactoryImplementation extends NetObject implements ICustomFa
     
     public MarshalByRefObject CreateInstance(NetType serverType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", serverType == null ? null : serverType.getJCOInstance());
+            retObjectCreateInstance = classInstance.Invoke("CreateInstance", serverType == null ? null : serverType.getJCOInstance());
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new MarshalByRefObject(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

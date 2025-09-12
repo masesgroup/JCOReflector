@@ -159,9 +159,13 @@ public class TextExpressionCompilerResults extends NetObject  {
     
     public boolean getHasErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasErrors = null;
         try {
-            return (boolean)classInstance.Get("HasErrors");
+            retObjectHasErrors = classInstance.Get("HasErrors");
+            return (boolean)retObjectHasErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasErrors != null ? retObjectHasErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +173,7 @@ public class TextExpressionCompilerResults extends NetObject  {
 
     public void setHasErrors(boolean HasErrors) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HasErrors", HasErrors);
         } catch (JCNativeException jcne) {
@@ -179,9 +183,13 @@ public class TextExpressionCompilerResults extends NetObject  {
 
     public boolean getHasSourceInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasSourceInfo = null;
         try {
-            return (boolean)classInstance.Get("HasSourceInfo");
+            retObjectHasSourceInfo = classInstance.Get("HasSourceInfo");
+            return (boolean)retObjectHasSourceInfo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasSourceInfo != null ? retObjectHasSourceInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class TextExpressionCompilerResults extends NetObject  {
 
     public void setHasSourceInfo(boolean HasSourceInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HasSourceInfo", HasSourceInfo);
         } catch (JCNativeException jcne) {
@@ -199,10 +207,14 @@ public class TextExpressionCompilerResults extends NetObject  {
 
     public NetType getResultType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResultType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResultType");
+            retObjectResultType = classInstance.Get("ResultType");
+            JCObject val = (JCObject)retObjectResultType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResultType != null ? retObjectResultType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +222,7 @@ public class TextExpressionCompilerResults extends NetObject  {
 
     public void setResultType(NetType ResultType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResultType", ResultType == null ? null : ResultType.getJCOInstance());
         } catch (JCNativeException jcne) {

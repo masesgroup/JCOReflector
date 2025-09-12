@@ -162,9 +162,13 @@ public class SessionIDManager extends NetObject  {
     
     public boolean InitializeRequest(HttpContext context, boolean suppressAutoDetectRedirect, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> supportSessionIDReissue) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.ApplicationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitializeRequest = null;
         try {
-            return (boolean)classInstance.Invoke("InitializeRequest", context == null ? null : context.getJCOInstance(), suppressAutoDetectRedirect, supportSessionIDReissue.getJCRefOut());
+            retObjectInitializeRequest = classInstance.Invoke("InitializeRequest", context == null ? null : context.getJCOInstance(), suppressAutoDetectRedirect, supportSessionIDReissue.getJCRefOut());
+            return (boolean)retObjectInitializeRequest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectInitializeRequest != null ? retObjectInitializeRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class SessionIDManager extends NetObject  {
 
     public boolean Validate(java.lang.String id) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidate = null;
         try {
-            return (boolean)classInstance.Invoke("Validate", id);
+            retObjectValidate = classInstance.Invoke("Validate", id);
+            return (boolean)retObjectValidate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,13 @@ public class SessionIDManager extends NetObject  {
 
     public java.lang.String CreateSessionID(HttpContext context) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSessionID = null;
         try {
-            return (java.lang.String)classInstance.Invoke("CreateSessionID", context == null ? null : context.getJCOInstance());
+            retObjectCreateSessionID = classInstance.Invoke("CreateSessionID", context == null ? null : context.getJCOInstance());
+            return (java.lang.String)retObjectCreateSessionID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCreateSessionID != null ? retObjectCreateSessionID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +204,13 @@ public class SessionIDManager extends NetObject  {
 
     public java.lang.String Decode(java.lang.String id) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecode = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Decode", id);
+            retObjectDecode = classInstance.Invoke("Decode", id);
+            return (java.lang.String)retObjectDecode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectDecode != null ? retObjectDecode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +218,13 @@ public class SessionIDManager extends NetObject  {
 
     public java.lang.String Encode(java.lang.String id) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncode = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Encode", id);
+            retObjectEncode = classInstance.Invoke("Encode", id);
+            return (java.lang.String)retObjectEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectEncode != null ? retObjectEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +232,13 @@ public class SessionIDManager extends NetObject  {
 
     public java.lang.String GetSessionID(HttpContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.NotSupportedException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.web.HttpRequestValidationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSessionID = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetSessionID", context == null ? null : context.getJCOInstance());
+            retObjectGetSessionID = classInstance.Invoke("GetSessionID", context == null ? null : context.getJCOInstance());
+            return (java.lang.String)retObjectGetSessionID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetSessionID != null ? retObjectGetSessionID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +246,7 @@ public class SessionIDManager extends NetObject  {
 
     public void Initialize() throws Throwable, system.OverflowException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize");
         } catch (JCNativeException jcne) {
@@ -232,7 +256,7 @@ public class SessionIDManager extends NetObject  {
 
     public void RemoveSessionID(HttpContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.NotSupportedException, system.IndexOutOfRangeException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveSessionID", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -242,7 +266,7 @@ public class SessionIDManager extends NetObject  {
 
     public void SaveSessionID(HttpContext context, java.lang.String id, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> redirected, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> cookieAdded) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.IndexOutOfRangeException, system.threading.ThreadAbortException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.web.HttpRequestValidationException, system.OutOfMemoryException, system.ApplicationException, system.UriFormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveSessionID", context == null ? null : context.getJCOInstance(), id, redirected.getJCRefOut(), cookieAdded.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -256,9 +280,19 @@ public class SessionIDManager extends NetObject  {
     
     public static int getSessionIDMaxLength() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSessionIDMaxLength = null;
         try {
-            return (int)classType.Get("SessionIDMaxLength");
+            retObjectSessionIDMaxLength = classType.Get("SessionIDMaxLength");
+            return (int)retObjectSessionIDMaxLength;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSessionIDMaxLengthNumber = (java.lang.Number)retObjectSessionIDMaxLength;
+                return retObjectSessionIDMaxLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSessionIDMaxLength != null ? retObjectSessionIDMaxLength.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

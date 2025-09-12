@@ -176,10 +176,14 @@ public class CounterCreationData extends NetObject  {
     
     public PerformanceCounterType getCounterType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCounterType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CounterType");
+            retObjectCounterType = classInstance.Get("CounterType");
+            JCObject val = (JCObject)retObjectCounterType;
             return new PerformanceCounterType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCounterType != null ? retObjectCounterType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class CounterCreationData extends NetObject  {
 
     public void setCounterType(PerformanceCounterType CounterType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CounterType", CounterType == null ? null : CounterType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,9 +201,13 @@ public class CounterCreationData extends NetObject  {
 
     public java.lang.String getCounterHelp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCounterHelp = null;
         try {
-            return (java.lang.String)classInstance.Get("CounterHelp");
+            retObjectCounterHelp = classInstance.Get("CounterHelp");
+            return (java.lang.String)retObjectCounterHelp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCounterHelp != null ? retObjectCounterHelp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +215,7 @@ public class CounterCreationData extends NetObject  {
 
     public void setCounterHelp(java.lang.String CounterHelp) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CounterHelp", CounterHelp);
         } catch (JCNativeException jcne) {
@@ -217,9 +225,13 @@ public class CounterCreationData extends NetObject  {
 
     public java.lang.String getCounterName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCounterName = null;
         try {
-            return (java.lang.String)classInstance.Get("CounterName");
+            retObjectCounterName = classInstance.Get("CounterName");
+            return (java.lang.String)retObjectCounterName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCounterName != null ? retObjectCounterName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +239,7 @@ public class CounterCreationData extends NetObject  {
 
     public void setCounterName(java.lang.String CounterName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CounterName", CounterName);
         } catch (JCNativeException jcne) {

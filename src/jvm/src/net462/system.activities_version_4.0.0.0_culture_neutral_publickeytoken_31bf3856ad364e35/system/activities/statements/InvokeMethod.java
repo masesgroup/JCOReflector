@@ -168,9 +168,13 @@ public class InvokeMethod extends AsyncCodeActivity  {
     
     public boolean getRunAsynchronously() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRunAsynchronously = null;
         try {
-            return (boolean)classInstance.Get("RunAsynchronously");
+            retObjectRunAsynchronously = classInstance.Get("RunAsynchronously");
+            return (boolean)retObjectRunAsynchronously;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRunAsynchronously != null ? retObjectRunAsynchronously.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class InvokeMethod extends AsyncCodeActivity  {
 
     public void setRunAsynchronously(boolean RunAsynchronously) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RunAsynchronously", RunAsynchronously);
         } catch (JCNativeException jcne) {
@@ -188,10 +192,14 @@ public class InvokeMethod extends AsyncCodeActivity  {
 
     public InArgument getTargetObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetObject");
+            retObjectTargetObject = classInstance.Get("TargetObject");
+            JCObject val = (JCObject)retObjectTargetObject;
             return new InArgument(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetObject != null ? retObjectTargetObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class InvokeMethod extends AsyncCodeActivity  {
 
     public void setTargetObject(InArgument TargetObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetObject", TargetObject == null ? null : TargetObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,10 +217,14 @@ public class InvokeMethod extends AsyncCodeActivity  {
 
     public OutArgument getResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResult = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Result");
+            retObjectResult = classInstance.Get("Result");
+            JCObject val = (JCObject)retObjectResult;
             return new OutArgument(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResult != null ? retObjectResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +232,7 @@ public class InvokeMethod extends AsyncCodeActivity  {
 
     public void setResult(OutArgument Result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Result", Result == null ? null : Result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -230,9 +242,13 @@ public class InvokeMethod extends AsyncCodeActivity  {
 
     public java.lang.String getMethodName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodName = null;
         try {
-            return (java.lang.String)classInstance.Get("MethodName");
+            retObjectMethodName = classInstance.Get("MethodName");
+            return (java.lang.String)retObjectMethodName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMethodName != null ? retObjectMethodName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +256,7 @@ public class InvokeMethod extends AsyncCodeActivity  {
 
     public void setMethodName(java.lang.String MethodName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MethodName", MethodName);
         } catch (JCNativeException jcne) {
@@ -250,10 +266,14 @@ public class InvokeMethod extends AsyncCodeActivity  {
 
     public NetType getTargetType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetType");
+            retObjectTargetType = classInstance.Get("TargetType");
+            JCObject val = (JCObject)retObjectTargetType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetType != null ? retObjectTargetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +281,7 @@ public class InvokeMethod extends AsyncCodeActivity  {
 
     public void setTargetType(NetType TargetType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetType", TargetType == null ? null : TargetType.getJCOInstance());
         } catch (JCNativeException jcne) {

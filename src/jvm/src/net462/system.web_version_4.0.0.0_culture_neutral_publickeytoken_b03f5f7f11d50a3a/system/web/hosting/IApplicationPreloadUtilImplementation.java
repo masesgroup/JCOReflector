@@ -142,7 +142,7 @@ public class IApplicationPreloadUtilImplementation extends NetObject implements 
     
     public void GetApplicationPreloadInfo(java.lang.String context, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> enabled, JCORefOut startupObjType, JCORefOut parametersForStartupObj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetApplicationPreloadInfo", context, enabled.getJCRefOut(), startupObjType.getJCRefOut(), parametersForStartupObj.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -152,7 +152,7 @@ public class IApplicationPreloadUtilImplementation extends NetObject implements 
 
     public void ReportApplicationPreloadFailure(java.lang.String context, int errorCode, java.lang.String errorMessage) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReportApplicationPreloadFailure", context, errorCode, errorMessage);
         } catch (JCNativeException jcne) {

@@ -160,9 +160,13 @@ public class RegExpObject extends JSObject  {
     
     public boolean getglobal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectglobal = null;
         try {
-            return (boolean)classInstance.Get("global");
+            retObjectglobal = classInstance.Get("global");
+            return (boolean)retObjectglobal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectglobal != null ? retObjectglobal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class RegExpObject extends JSObject  {
 
     public boolean getignoreCase() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectignoreCase = null;
         try {
-            return (boolean)classInstance.Get("ignoreCase");
+            retObjectignoreCase = classInstance.Get("ignoreCase");
+            return (boolean)retObjectignoreCase;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectignoreCase != null ? retObjectignoreCase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +188,13 @@ public class RegExpObject extends JSObject  {
 
     public boolean getmultiline() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectmultiline = null;
         try {
-            return (boolean)classInstance.Get("multiline");
+            retObjectmultiline = classInstance.Get("multiline");
+            return (boolean)retObjectmultiline;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectmultiline != null ? retObjectmultiline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class RegExpObject extends JSObject  {
 
     public NetObject getlastIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectlastIndex = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("lastIndex");
+            retObjectlastIndex = classInstance.Get("lastIndex");
+            JCObject val = (JCObject)retObjectlastIndex;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectlastIndex != null ? retObjectlastIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +217,7 @@ public class RegExpObject extends JSObject  {
 
     public void setlastIndex(NetObject lastIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("lastIndex", lastIndex == null ? null : lastIndex.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,9 +227,13 @@ public class RegExpObject extends JSObject  {
 
     public java.lang.String getsource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectsource = null;
         try {
-            return (java.lang.String)classInstance.Get("source");
+            retObjectsource = classInstance.Get("source");
+            return (java.lang.String)retObjectsource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectsource != null ? retObjectsource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

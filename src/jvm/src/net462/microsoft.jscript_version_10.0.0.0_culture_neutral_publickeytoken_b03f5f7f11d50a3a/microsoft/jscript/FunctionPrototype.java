@@ -157,10 +157,14 @@ public class FunctionPrototype extends ScriptFunction  {
     
     public static NetObject apply(NetObject thisob, NetObject thisarg, NetObject argArray) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.MissingMethodException, microsoft.jscript.vsa.JSVsaException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectapply = null;
         try {
-            JCObject objapply = (JCObject)classType.Invoke("apply", thisob == null ? null : thisob.getJCOInstance(), thisarg == null ? null : thisarg.getJCOInstance(), argArray == null ? null : argArray.getJCOInstance());
+            retObjectapply = classType.Invoke("apply", thisob == null ? null : thisob.getJCOInstance(), thisarg == null ? null : thisarg.getJCOInstance(), argArray == null ? null : argArray.getJCOInstance());
+            JCObject objapply = (JCObject)retObjectapply;
             return new NetObject(objapply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectapply != null ? retObjectapply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class FunctionPrototype extends ScriptFunction  {
 
     public static NetObject call(NetObject thisob, NetObject thisarg, NetObject... args) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectcall = null;
         try {
-            JCObject objcall = (JCObject)classType.Invoke("call", thisob == null ? null : thisob.getJCOInstance(), thisarg == null ? null : thisarg.getJCOInstance(), toObjectFromArray(args));
+            retObjectcall = classType.Invoke("call", thisob == null ? null : thisob.getJCOInstance(), thisarg == null ? null : thisarg.getJCOInstance(), toObjectFromArray(args));
+            JCObject objcall = (JCObject)retObjectcall;
             return new NetObject(objcall);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectcall != null ? retObjectcall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +187,13 @@ public class FunctionPrototype extends ScriptFunction  {
 
     public static java.lang.String toString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecttoString = null;
         try {
-            return (java.lang.String)classType.Invoke("toString", thisob == null ? null : thisob.getJCOInstance());
+            retObjecttoString = classType.Invoke("toString", thisob == null ? null : thisob.getJCOInstance());
+            return (java.lang.String)retObjecttoString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjecttoString != null ? retObjecttoString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,14 @@ public class FunctionPrototype extends ScriptFunction  {
     
     public static FunctionConstructor getconstructor() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectconstructor = null;
         try {
-            JCObject val = (JCObject)classType.Get("constructor");
+            retObjectconstructor = classType.Get("constructor");
+            JCObject val = (JCObject)retObjectconstructor;
             return new FunctionConstructor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectconstructor != null ? retObjectconstructor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

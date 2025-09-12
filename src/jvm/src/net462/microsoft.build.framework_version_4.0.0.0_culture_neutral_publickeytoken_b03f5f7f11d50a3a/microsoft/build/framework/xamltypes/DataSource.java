@@ -162,7 +162,7 @@ public class DataSource extends NetObject  {
     
     public void BeginInit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginInit");
         } catch (JCNativeException jcne) {
@@ -172,7 +172,7 @@ public class DataSource extends NetObject  {
 
     public void EndInit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndInit");
         } catch (JCNativeException jcne) {
@@ -186,9 +186,13 @@ public class DataSource extends NetObject  {
     
     public boolean getHasConfigurationCondition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasConfigurationCondition = null;
         try {
-            return (boolean)classInstance.Get("HasConfigurationCondition");
+            retObjectHasConfigurationCondition = classInstance.Get("HasConfigurationCondition");
+            return (boolean)retObjectHasConfigurationCondition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasConfigurationCondition != null ? retObjectHasConfigurationCondition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +200,7 @@ public class DataSource extends NetObject  {
 
     public void setHasConfigurationCondition(boolean HasConfigurationCondition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HasConfigurationCondition", HasConfigurationCondition);
         } catch (JCNativeException jcne) {
@@ -206,10 +210,14 @@ public class DataSource extends NetObject  {
 
     public DefaultValueSourceLocation getSourceOfDefaultValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceOfDefaultValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceOfDefaultValue");
+            retObjectSourceOfDefaultValue = classInstance.Get("SourceOfDefaultValue");
+            JCObject val = (JCObject)retObjectSourceOfDefaultValue;
             return new DefaultValueSourceLocation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceOfDefaultValue != null ? retObjectSourceOfDefaultValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +225,7 @@ public class DataSource extends NetObject  {
 
     public void setSourceOfDefaultValue(DefaultValueSourceLocation SourceOfDefaultValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceOfDefaultValue", SourceOfDefaultValue == null ? null : SourceOfDefaultValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -227,9 +235,13 @@ public class DataSource extends NetObject  {
 
     public java.lang.String getItemType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemType = null;
         try {
-            return (java.lang.String)classInstance.Get("ItemType");
+            retObjectItemType = classInstance.Get("ItemType");
+            return (java.lang.String)retObjectItemType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectItemType != null ? retObjectItemType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +249,7 @@ public class DataSource extends NetObject  {
 
     public void setItemType(java.lang.String ItemType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemType", ItemType);
         } catch (JCNativeException jcne) {
@@ -247,9 +259,13 @@ public class DataSource extends NetObject  {
 
     public java.lang.String getLabel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLabel = null;
         try {
-            return (java.lang.String)classInstance.Get("Label");
+            retObjectLabel = classInstance.Get("Label");
+            return (java.lang.String)retObjectLabel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLabel != null ? retObjectLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +273,7 @@ public class DataSource extends NetObject  {
 
     public void setLabel(java.lang.String Label) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Label", Label);
         } catch (JCNativeException jcne) {
@@ -267,9 +283,13 @@ public class DataSource extends NetObject  {
 
     public java.lang.String getMSBuildTarget() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMSBuildTarget = null;
         try {
-            return (java.lang.String)classInstance.Get("MSBuildTarget");
+            retObjectMSBuildTarget = classInstance.Get("MSBuildTarget");
+            return (java.lang.String)retObjectMSBuildTarget;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMSBuildTarget != null ? retObjectMSBuildTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +297,7 @@ public class DataSource extends NetObject  {
 
     public void setMSBuildTarget(java.lang.String MSBuildTarget) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MSBuildTarget", MSBuildTarget);
         } catch (JCNativeException jcne) {
@@ -287,9 +307,13 @@ public class DataSource extends NetObject  {
 
     public java.lang.String getPersistedName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPersistedName = null;
         try {
-            return (java.lang.String)classInstance.Get("PersistedName");
+            retObjectPersistedName = classInstance.Get("PersistedName");
+            return (java.lang.String)retObjectPersistedName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPersistedName != null ? retObjectPersistedName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +321,7 @@ public class DataSource extends NetObject  {
 
     public void setPersistedName(java.lang.String PersistedName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PersistedName", PersistedName);
         } catch (JCNativeException jcne) {
@@ -307,9 +331,13 @@ public class DataSource extends NetObject  {
 
     public java.lang.String getPersistence() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPersistence = null;
         try {
-            return (java.lang.String)classInstance.Get("Persistence");
+            retObjectPersistence = classInstance.Get("Persistence");
+            return (java.lang.String)retObjectPersistence;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPersistence != null ? retObjectPersistence.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,7 +345,7 @@ public class DataSource extends NetObject  {
 
     public void setPersistence(java.lang.String Persistence) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Persistence", Persistence);
         } catch (JCNativeException jcne) {
@@ -327,9 +355,13 @@ public class DataSource extends NetObject  {
 
     public java.lang.String getSourceType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceType = null;
         try {
-            return (java.lang.String)classInstance.Get("SourceType");
+            retObjectSourceType = classInstance.Get("SourceType");
+            return (java.lang.String)retObjectSourceType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourceType != null ? retObjectSourceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,7 +369,7 @@ public class DataSource extends NetObject  {
 
     public void setSourceType(java.lang.String SourceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceType", SourceType);
         } catch (JCNativeException jcne) {

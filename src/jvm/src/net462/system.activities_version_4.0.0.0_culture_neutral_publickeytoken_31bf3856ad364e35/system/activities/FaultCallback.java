@@ -170,8 +170,8 @@ public class FaultCallback extends JCVoidDelegate implements IJCVoidEventEmit, I
         } else if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
         } else
-            throw new UnsupportedOperationException(
-                    String.format("Class %s is not supported.", instance.getClass().getTypeName()));
+            throw new java.lang.UnsupportedOperationException(
+                    java.lang.String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
     protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
@@ -184,7 +184,7 @@ public class FaultCallback extends JCVoidDelegate implements IJCVoidEventEmit, I
 
     public void DynamicInvoke(NativeActivityFaultContext faultContext, NetException propagatedException, ActivityInstance propagatedFrom) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DynamicInvoke", faultContext == null ? null : faultContext.getJCOInstance(), propagatedException == null ? null : propagatedException.getJCOInstance(), propagatedFrom == null ? null : propagatedFrom.getJCOInstance());
         } catch (JCNativeException jcne) {

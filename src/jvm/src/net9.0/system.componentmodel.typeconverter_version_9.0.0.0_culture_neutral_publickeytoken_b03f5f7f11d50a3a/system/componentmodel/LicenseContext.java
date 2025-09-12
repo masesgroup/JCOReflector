@@ -163,10 +163,14 @@ public class LicenseContext extends NetObject  {
     
     public NetObject GetService(NetType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetService = null;
         try {
-            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", type == null ? null : type.getJCOInstance());
+            retObjectGetService = classInstance.Invoke("GetService", type == null ? null : type.getJCOInstance());
+            JCObject objGetService = (JCObject)retObjectGetService;
             return new NetObject(objGetService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetService != null ? retObjectGetService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class LicenseContext extends NetObject  {
 
     public java.lang.String GetSavedLicenseKey(NetType type, Assembly resourceAssembly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSavedLicenseKey = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetSavedLicenseKey", type == null ? null : type.getJCOInstance(), resourceAssembly == null ? null : resourceAssembly.getJCOInstance());
+            retObjectGetSavedLicenseKey = classInstance.Invoke("GetSavedLicenseKey", type == null ? null : type.getJCOInstance(), resourceAssembly == null ? null : resourceAssembly.getJCOInstance());
+            return (java.lang.String)retObjectGetSavedLicenseKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetSavedLicenseKey != null ? retObjectGetSavedLicenseKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,7 +192,7 @@ public class LicenseContext extends NetObject  {
 
     public void SetSavedLicenseKey(NetType type, java.lang.String key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSavedLicenseKey", type == null ? null : type.getJCOInstance(), key);
         } catch (JCNativeException jcne) {
@@ -198,10 +206,14 @@ public class LicenseContext extends NetObject  {
     
     public LicenseUsageMode getUsageMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsageMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UsageMode");
+            retObjectUsageMode = classInstance.Get("UsageMode");
+            JCObject val = (JCObject)retObjectUsageMode;
             return new LicenseUsageMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUsageMode != null ? retObjectUsageMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

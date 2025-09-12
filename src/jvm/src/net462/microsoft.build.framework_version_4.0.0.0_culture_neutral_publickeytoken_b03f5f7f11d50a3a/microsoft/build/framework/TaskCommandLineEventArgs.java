@@ -182,9 +182,13 @@ public class TaskCommandLineEventArgs extends BuildMessageEventArgs  {
     
     public java.lang.String getCommandLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandLine = null;
         try {
-            return (java.lang.String)classInstance.Get("CommandLine");
+            retObjectCommandLine = classInstance.Get("CommandLine");
+            return (java.lang.String)retObjectCommandLine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCommandLine != null ? retObjectCommandLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +196,13 @@ public class TaskCommandLineEventArgs extends BuildMessageEventArgs  {
 
     public java.lang.String getTaskName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTaskName = null;
         try {
-            return (java.lang.String)classInstance.Get("TaskName");
+            retObjectTaskName = classInstance.Get("TaskName");
+            return (java.lang.String)retObjectTaskName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTaskName != null ? retObjectTaskName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

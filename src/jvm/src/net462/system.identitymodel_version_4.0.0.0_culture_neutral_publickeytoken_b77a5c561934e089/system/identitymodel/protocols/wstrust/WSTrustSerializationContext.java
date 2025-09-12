@@ -188,10 +188,14 @@ public class WSTrustSerializationContext extends NetObject  {
     
     public SecurityTokenResolver getTokenResolver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenResolver = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TokenResolver");
+            retObjectTokenResolver = classInstance.Get("TokenResolver");
+            JCObject val = (JCObject)retObjectTokenResolver;
             return new SecurityTokenResolver(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTokenResolver != null ? retObjectTokenResolver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +203,7 @@ public class WSTrustSerializationContext extends NetObject  {
 
     public void setTokenResolver(SecurityTokenResolver TokenResolver) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TokenResolver", TokenResolver == null ? null : TokenResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,10 +213,14 @@ public class WSTrustSerializationContext extends NetObject  {
 
     public SecurityTokenResolver getUseKeyTokenResolver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseKeyTokenResolver = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UseKeyTokenResolver");
+            retObjectUseKeyTokenResolver = classInstance.Get("UseKeyTokenResolver");
+            JCObject val = (JCObject)retObjectUseKeyTokenResolver;
             return new SecurityTokenResolver(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUseKeyTokenResolver != null ? retObjectUseKeyTokenResolver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +228,7 @@ public class WSTrustSerializationContext extends NetObject  {
 
     public void setUseKeyTokenResolver(SecurityTokenResolver UseKeyTokenResolver) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseKeyTokenResolver", UseKeyTokenResolver == null ? null : UseKeyTokenResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -230,10 +238,14 @@ public class WSTrustSerializationContext extends NetObject  {
 
     public SecurityTokenHandlerCollection getSecurityTokenHandlers() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityTokenHandlers = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityTokenHandlers");
+            retObjectSecurityTokenHandlers = classInstance.Get("SecurityTokenHandlers");
+            JCObject val = (JCObject)retObjectSecurityTokenHandlers;
             return new SecurityTokenHandlerCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityTokenHandlers != null ? retObjectSecurityTokenHandlers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +253,14 @@ public class WSTrustSerializationContext extends NetObject  {
 
     public SecurityTokenHandlerCollectionManager getSecurityTokenHandlerCollectionManager() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityTokenHandlerCollectionManager = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityTokenHandlerCollectionManager");
+            retObjectSecurityTokenHandlerCollectionManager = classInstance.Get("SecurityTokenHandlerCollectionManager");
+            JCObject val = (JCObject)retObjectSecurityTokenHandlerCollectionManager;
             return new SecurityTokenHandlerCollectionManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityTokenHandlerCollectionManager != null ? retObjectSecurityTokenHandlerCollectionManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +268,7 @@ public class WSTrustSerializationContext extends NetObject  {
 
     public void setSecurityTokenHandlerCollectionManager(SecurityTokenHandlerCollectionManager SecurityTokenHandlerCollectionManager) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecurityTokenHandlerCollectionManager", SecurityTokenHandlerCollectionManager == null ? null : SecurityTokenHandlerCollectionManager.getJCOInstance());
         } catch (JCNativeException jcne) {

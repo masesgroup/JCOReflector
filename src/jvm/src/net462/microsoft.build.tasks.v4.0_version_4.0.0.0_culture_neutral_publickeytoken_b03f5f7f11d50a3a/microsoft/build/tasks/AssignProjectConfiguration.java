@@ -164,9 +164,13 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
     
     public boolean Execute() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.io.PathTooLongException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
     
     public boolean getAddSyntheticProjectReferencesForSolutionDependencies() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddSyntheticProjectReferencesForSolutionDependencies = null;
         try {
-            return (boolean)classInstance.Get("AddSyntheticProjectReferencesForSolutionDependencies");
+            retObjectAddSyntheticProjectReferencesForSolutionDependencies = classInstance.Get("AddSyntheticProjectReferencesForSolutionDependencies");
+            return (boolean)retObjectAddSyntheticProjectReferencesForSolutionDependencies;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAddSyntheticProjectReferencesForSolutionDependencies != null ? retObjectAddSyntheticProjectReferencesForSolutionDependencies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public void setAddSyntheticProjectReferencesForSolutionDependencies(boolean AddSyntheticProjectReferencesForSolutionDependencies) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AddSyntheticProjectReferencesForSolutionDependencies", AddSyntheticProjectReferencesForSolutionDependencies);
         } catch (JCNativeException jcne) {
@@ -198,9 +206,13 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public boolean getOnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration = null;
         try {
-            return (boolean)classInstance.Get("OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration");
+            retObjectOnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration = classInstance.Get("OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration");
+            return (boolean)retObjectOnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration != null ? retObjectOnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +220,7 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public void setOnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration(boolean OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration", OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration);
         } catch (JCNativeException jcne) {
@@ -218,9 +230,13 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public boolean getResolveConfigurationPlatformUsingMappings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveConfigurationPlatformUsingMappings = null;
         try {
-            return (boolean)classInstance.Get("ResolveConfigurationPlatformUsingMappings");
+            retObjectResolveConfigurationPlatformUsingMappings = classInstance.Get("ResolveConfigurationPlatformUsingMappings");
+            return (boolean)retObjectResolveConfigurationPlatformUsingMappings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectResolveConfigurationPlatformUsingMappings != null ? retObjectResolveConfigurationPlatformUsingMappings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +244,7 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public void setResolveConfigurationPlatformUsingMappings(boolean ResolveConfigurationPlatformUsingMappings) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResolveConfigurationPlatformUsingMappings", ResolveConfigurationPlatformUsingMappings);
         } catch (JCNativeException jcne) {
@@ -238,9 +254,13 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public boolean getShouldUnsetParentConfigurationAndPlatform() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldUnsetParentConfigurationAndPlatform = null;
         try {
-            return (boolean)classInstance.Get("ShouldUnsetParentConfigurationAndPlatform");
+            retObjectShouldUnsetParentConfigurationAndPlatform = classInstance.Get("ShouldUnsetParentConfigurationAndPlatform");
+            return (boolean)retObjectShouldUnsetParentConfigurationAndPlatform;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShouldUnsetParentConfigurationAndPlatform != null ? retObjectShouldUnsetParentConfigurationAndPlatform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +268,7 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public void setShouldUnsetParentConfigurationAndPlatform(boolean ShouldUnsetParentConfigurationAndPlatform) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShouldUnsetParentConfigurationAndPlatform", ShouldUnsetParentConfigurationAndPlatform);
         } catch (JCNativeException jcne) {
@@ -258,16 +278,20 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public final ITaskItem[] getAssignedProjects() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssignedProjects = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("AssignedProjects");
+            retObjectAssignedProjects = classInstance.Get("AssignedProjects");
+            JCObject resultingObjects = (JCObject)retObjectAssignedProjects;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssignedProjects != null ? retObjectAssignedProjects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +299,7 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public void setAssignedProjects(ITaskItem[] AssignedProjects) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssignedProjects", toObjectFromArray(AssignedProjects));
         } catch (JCNativeException jcne) {
@@ -285,16 +309,20 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public final ITaskItem[] getUnassignedProjects() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnassignedProjects = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("UnassignedProjects");
+            retObjectUnassignedProjects = classInstance.Get("UnassignedProjects");
+            JCObject resultingObjects = (JCObject)retObjectUnassignedProjects;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnassignedProjects != null ? retObjectUnassignedProjects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +330,7 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public void setUnassignedProjects(ITaskItem[] UnassignedProjects) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnassignedProjects", toObjectFromArray(UnassignedProjects));
         } catch (JCNativeException jcne) {
@@ -312,9 +340,13 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public java.lang.String getCurrentProject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentProject = null;
         try {
-            return (java.lang.String)classInstance.Get("CurrentProject");
+            retObjectCurrentProject = classInstance.Get("CurrentProject");
+            return (java.lang.String)retObjectCurrentProject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCurrentProject != null ? retObjectCurrentProject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +354,7 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public void setCurrentProject(java.lang.String CurrentProject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentProject", CurrentProject);
         } catch (JCNativeException jcne) {
@@ -332,9 +364,13 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public java.lang.String getCurrentProjectConfiguration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentProjectConfiguration = null;
         try {
-            return (java.lang.String)classInstance.Get("CurrentProjectConfiguration");
+            retObjectCurrentProjectConfiguration = classInstance.Get("CurrentProjectConfiguration");
+            return (java.lang.String)retObjectCurrentProjectConfiguration;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCurrentProjectConfiguration != null ? retObjectCurrentProjectConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +378,7 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public void setCurrentProjectConfiguration(java.lang.String CurrentProjectConfiguration) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentProjectConfiguration", CurrentProjectConfiguration);
         } catch (JCNativeException jcne) {
@@ -352,9 +388,13 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public java.lang.String getCurrentProjectPlatform() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentProjectPlatform = null;
         try {
-            return (java.lang.String)classInstance.Get("CurrentProjectPlatform");
+            retObjectCurrentProjectPlatform = classInstance.Get("CurrentProjectPlatform");
+            return (java.lang.String)retObjectCurrentProjectPlatform;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCurrentProjectPlatform != null ? retObjectCurrentProjectPlatform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +402,7 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public void setCurrentProjectPlatform(java.lang.String CurrentProjectPlatform) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentProjectPlatform", CurrentProjectPlatform);
         } catch (JCNativeException jcne) {
@@ -372,9 +412,13 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public java.lang.String getDefaultToVcxPlatformMapping() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultToVcxPlatformMapping = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultToVcxPlatformMapping");
+            retObjectDefaultToVcxPlatformMapping = classInstance.Get("DefaultToVcxPlatformMapping");
+            return (java.lang.String)retObjectDefaultToVcxPlatformMapping;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultToVcxPlatformMapping != null ? retObjectDefaultToVcxPlatformMapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +426,7 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public void setDefaultToVcxPlatformMapping(java.lang.String DefaultToVcxPlatformMapping) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultToVcxPlatformMapping", DefaultToVcxPlatformMapping);
         } catch (JCNativeException jcne) {
@@ -392,9 +436,13 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public java.lang.String getOutputType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputType = null;
         try {
-            return (java.lang.String)classInstance.Get("OutputType");
+            retObjectOutputType = classInstance.Get("OutputType");
+            return (java.lang.String)retObjectOutputType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOutputType != null ? retObjectOutputType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,7 +450,7 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public void setOutputType(java.lang.String OutputType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OutputType", OutputType);
         } catch (JCNativeException jcne) {
@@ -412,9 +460,13 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public java.lang.String getSolutionConfigurationContents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSolutionConfigurationContents = null;
         try {
-            return (java.lang.String)classInstance.Get("SolutionConfigurationContents");
+            retObjectSolutionConfigurationContents = classInstance.Get("SolutionConfigurationContents");
+            return (java.lang.String)retObjectSolutionConfigurationContents;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSolutionConfigurationContents != null ? retObjectSolutionConfigurationContents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,7 +474,7 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public void setSolutionConfigurationContents(java.lang.String SolutionConfigurationContents) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SolutionConfigurationContents", SolutionConfigurationContents);
         } catch (JCNativeException jcne) {
@@ -432,9 +484,13 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public java.lang.String getVcxToDefaultPlatformMapping() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVcxToDefaultPlatformMapping = null;
         try {
-            return (java.lang.String)classInstance.Get("VcxToDefaultPlatformMapping");
+            retObjectVcxToDefaultPlatformMapping = classInstance.Get("VcxToDefaultPlatformMapping");
+            return (java.lang.String)retObjectVcxToDefaultPlatformMapping;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVcxToDefaultPlatformMapping != null ? retObjectVcxToDefaultPlatformMapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,7 +498,7 @@ public class AssignProjectConfiguration extends ResolveProjectBase  {
 
     public void setVcxToDefaultPlatformMapping(java.lang.String VcxToDefaultPlatformMapping) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VcxToDefaultPlatformMapping", VcxToDefaultPlatformMapping);
         } catch (JCNativeException jcne) {

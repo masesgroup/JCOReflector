@@ -142,10 +142,14 @@ public class IDictionaryServiceImplementation extends NetObject implements IDict
     
     public NetObject GetKey(NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetKey = null;
         try {
-            JCObject objGetKey = (JCObject)classInstance.Invoke("GetKey", value == null ? null : value.getJCOInstance());
+            retObjectGetKey = classInstance.Invoke("GetKey", value == null ? null : value.getJCOInstance());
+            JCObject objGetKey = (JCObject)retObjectGetKey;
             return new NetObject(objGetKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetKey != null ? retObjectGetKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,10 +157,14 @@ public class IDictionaryServiceImplementation extends NetObject implements IDict
 
     public NetObject GetValue(NetObject key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", key == null ? null : key.getJCOInstance());
+            retObjectGetValue = classInstance.Invoke("GetValue", key == null ? null : key.getJCOInstance());
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,7 +172,7 @@ public class IDictionaryServiceImplementation extends NetObject implements IDict
 
     public void SetValue(NetObject key, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", key == null ? null : key.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

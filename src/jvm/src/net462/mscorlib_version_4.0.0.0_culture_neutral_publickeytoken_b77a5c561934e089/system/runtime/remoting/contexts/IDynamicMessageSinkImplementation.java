@@ -144,7 +144,7 @@ public class IDynamicMessageSinkImplementation extends NetObject implements IDyn
     
     public void ProcessMessageFinish(IMessage replyMsg, boolean bCliSide, boolean bAsync) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ProcessMessageFinish", replyMsg == null ? null : replyMsg.getJCOInstance(), bCliSide, bAsync);
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class IDynamicMessageSinkImplementation extends NetObject implements IDyn
 
     public void ProcessMessageStart(IMessage reqMsg, boolean bCliSide, boolean bAsync) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ProcessMessageStart", reqMsg == null ? null : reqMsg.getJCOInstance(), bCliSide, bAsync);
         } catch (JCNativeException jcne) {

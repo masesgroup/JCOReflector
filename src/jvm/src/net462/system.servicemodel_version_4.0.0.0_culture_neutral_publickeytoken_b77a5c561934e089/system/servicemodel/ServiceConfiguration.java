@@ -164,10 +164,14 @@ public class ServiceConfiguration extends NetObject  {
     
     public ServiceEndpoint AddServiceEndpoint(NetType contractType, system.servicemodel.channels.Binding binding, java.lang.String address) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddServiceEndpoint = null;
         try {
-            JCObject objAddServiceEndpoint = (JCObject)classInstance.Invoke("AddServiceEndpoint", contractType == null ? null : contractType.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), address);
+            retObjectAddServiceEndpoint = classInstance.Invoke("AddServiceEndpoint", contractType == null ? null : contractType.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), address);
+            JCObject objAddServiceEndpoint = (JCObject)retObjectAddServiceEndpoint;
             return new ServiceEndpoint(objAddServiceEndpoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddServiceEndpoint != null ? retObjectAddServiceEndpoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class ServiceConfiguration extends NetObject  {
 
     public ServiceEndpoint AddServiceEndpoint(NetType contractType, system.servicemodel.channels.Binding binding, java.lang.String address, Uri listenUri) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddServiceEndpoint = null;
         try {
-            JCObject objAddServiceEndpoint = (JCObject)classInstance.Invoke("AddServiceEndpoint", contractType == null ? null : contractType.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), address, listenUri == null ? null : listenUri.getJCOInstance());
+            retObjectAddServiceEndpoint = classInstance.Invoke("AddServiceEndpoint", contractType == null ? null : contractType.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), address, listenUri == null ? null : listenUri.getJCOInstance());
+            JCObject objAddServiceEndpoint = (JCObject)retObjectAddServiceEndpoint;
             return new ServiceEndpoint(objAddServiceEndpoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddServiceEndpoint != null ? retObjectAddServiceEndpoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,14 @@ public class ServiceConfiguration extends NetObject  {
 
     public ServiceEndpoint AddServiceEndpoint(NetType contractType, system.servicemodel.channels.Binding binding, Uri address) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException, system.UriFormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddServiceEndpoint = null;
         try {
-            JCObject objAddServiceEndpoint = (JCObject)classInstance.Invoke("AddServiceEndpoint", contractType == null ? null : contractType.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), address == null ? null : address.getJCOInstance());
+            retObjectAddServiceEndpoint = classInstance.Invoke("AddServiceEndpoint", contractType == null ? null : contractType.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), address == null ? null : address.getJCOInstance());
+            JCObject objAddServiceEndpoint = (JCObject)retObjectAddServiceEndpoint;
             return new ServiceEndpoint(objAddServiceEndpoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddServiceEndpoint != null ? retObjectAddServiceEndpoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +209,14 @@ public class ServiceConfiguration extends NetObject  {
 
     public ServiceEndpoint AddServiceEndpoint(NetType contractType, system.servicemodel.channels.Binding binding, Uri address, Uri listenUri) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddServiceEndpoint = null;
         try {
-            JCObject objAddServiceEndpoint = (JCObject)classInstance.Invoke("AddServiceEndpoint", contractType == null ? null : contractType.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), address == null ? null : address.getJCOInstance(), listenUri == null ? null : listenUri.getJCOInstance());
+            retObjectAddServiceEndpoint = classInstance.Invoke("AddServiceEndpoint", contractType == null ? null : contractType.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), address == null ? null : address.getJCOInstance(), listenUri == null ? null : listenUri.getJCOInstance());
+            JCObject objAddServiceEndpoint = (JCObject)retObjectAddServiceEndpoint;
             return new ServiceEndpoint(objAddServiceEndpoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddServiceEndpoint != null ? retObjectAddServiceEndpoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +224,7 @@ public class ServiceConfiguration extends NetObject  {
 
     public void AddServiceEndpoint(ServiceEndpoint endpoint) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddServiceEndpoint", endpoint == null ? null : endpoint.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -218,7 +234,7 @@ public class ServiceConfiguration extends NetObject  {
 
     public void LoadFromConfiguration() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.net.sockets.SocketException, system.FormatException, system.security.cryptography.CryptographicException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadFromConfiguration");
         } catch (JCNativeException jcne) {
@@ -228,7 +244,7 @@ public class ServiceConfiguration extends NetObject  {
 
     public void LoadFromConfiguration(Configuration configuration) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.NotImplementedException, system.security.SecurityException, system.reflection.AmbiguousMatchException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException, system.net.sockets.SocketException, system.UriFormatException, system.security.cryptography.CryptographicException, system.io.IOException, system.componentmodel.InvalidEnumArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadFromConfiguration", configuration == null ? null : configuration.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -238,7 +254,7 @@ public class ServiceConfiguration extends NetObject  {
 
     public void SetEndpointAddress(ServiceEndpoint endpoint, java.lang.String relativeAddress) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetEndpointAddress", endpoint == null ? null : endpoint.getJCOInstance(), relativeAddress);
         } catch (JCNativeException jcne) {
@@ -252,9 +268,13 @@ public class ServiceConfiguration extends NetObject  {
     
     public boolean getUseIdentityConfiguration() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseIdentityConfiguration = null;
         try {
-            return (boolean)classInstance.Get("UseIdentityConfiguration");
+            retObjectUseIdentityConfiguration = classInstance.Get("UseIdentityConfiguration");
+            return (boolean)retObjectUseIdentityConfiguration;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseIdentityConfiguration != null ? retObjectUseIdentityConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +282,7 @@ public class ServiceConfiguration extends NetObject  {
 
     public void setUseIdentityConfiguration(boolean UseIdentityConfiguration) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseIdentityConfiguration", UseIdentityConfiguration);
         } catch (JCNativeException jcne) {
@@ -272,10 +292,14 @@ public class ServiceConfiguration extends NetObject  {
 
     public IdentityConfiguration getIdentityConfiguration() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdentityConfiguration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IdentityConfiguration");
+            retObjectIdentityConfiguration = classInstance.Get("IdentityConfiguration");
+            JCObject val = (JCObject)retObjectIdentityConfiguration;
             return new IdentityConfiguration(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdentityConfiguration != null ? retObjectIdentityConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,7 +307,7 @@ public class ServiceConfiguration extends NetObject  {
 
     public void setIdentityConfiguration(IdentityConfiguration IdentityConfiguration) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IdentityConfiguration", IdentityConfiguration == null ? null : IdentityConfiguration.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -293,10 +317,14 @@ public class ServiceConfiguration extends NetObject  {
 
     public ServiceAuthenticationBehavior getAuthentication() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthentication = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Authentication");
+            retObjectAuthentication = classInstance.Get("Authentication");
+            JCObject val = (JCObject)retObjectAuthentication;
             return new ServiceAuthenticationBehavior(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthentication != null ? retObjectAuthentication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,10 +332,14 @@ public class ServiceConfiguration extends NetObject  {
 
     public ServiceAuthorizationBehavior getAuthorization() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthorization = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Authorization");
+            retObjectAuthorization = classInstance.Get("Authorization");
+            JCObject val = (JCObject)retObjectAuthorization;
             return new ServiceAuthorizationBehavior(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthorization != null ? retObjectAuthorization.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +347,14 @@ public class ServiceConfiguration extends NetObject  {
 
     public ServiceCredentials getCredentials() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCredentials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Credentials");
+            retObjectCredentials = classInstance.Get("Credentials");
+            JCObject val = (JCObject)retObjectCredentials;
             return new ServiceCredentials(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCredentials != null ? retObjectCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,10 +362,14 @@ public class ServiceConfiguration extends NetObject  {
 
     public ServiceDescription getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            JCObject val = (JCObject)retObjectDescription;
             return new ServiceDescription(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,10 +377,14 @@ public class ServiceConfiguration extends NetObject  {
 
     public TimeSpan getCloseTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloseTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CloseTimeout");
+            retObjectCloseTimeout = classInstance.Get("CloseTimeout");
+            JCObject val = (JCObject)retObjectCloseTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloseTimeout != null ? retObjectCloseTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,7 +392,7 @@ public class ServiceConfiguration extends NetObject  {
 
     public void setCloseTimeout(TimeSpan CloseTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CloseTimeout", CloseTimeout == null ? null : CloseTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -358,10 +402,14 @@ public class ServiceConfiguration extends NetObject  {
 
     public TimeSpan getOpenTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OpenTimeout");
+            retObjectOpenTimeout = classInstance.Get("OpenTimeout");
+            JCObject val = (JCObject)retObjectOpenTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenTimeout != null ? retObjectOpenTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,7 +417,7 @@ public class ServiceConfiguration extends NetObject  {
 
     public void setOpenTimeout(TimeSpan OpenTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OpenTimeout", OpenTimeout == null ? null : OpenTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {

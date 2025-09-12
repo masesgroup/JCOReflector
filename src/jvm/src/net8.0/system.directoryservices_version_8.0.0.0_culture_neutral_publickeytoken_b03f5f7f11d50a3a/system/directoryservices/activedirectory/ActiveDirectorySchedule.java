@@ -175,7 +175,7 @@ public class ActiveDirectorySchedule extends NetObject  {
     
     public void ResetSchedule() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetSchedule");
         } catch (JCNativeException jcne) {
@@ -185,7 +185,7 @@ public class ActiveDirectorySchedule extends NetObject  {
 
     public void SetDailySchedule(HourOfDay fromHour, MinuteOfHour fromMinute, HourOfDay toHour, MinuteOfHour toMinute) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDailySchedule", fromHour == null ? null : fromHour.getJCOInstance(), fromMinute == null ? null : fromMinute.getJCOInstance(), toHour == null ? null : toHour.getJCOInstance(), toMinute == null ? null : toMinute.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -195,7 +195,7 @@ public class ActiveDirectorySchedule extends NetObject  {
 
     public void SetSchedule(DayOfWeek day, HourOfDay fromHour, MinuteOfHour fromMinute, HourOfDay toHour, MinuteOfHour toMinute) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSchedule", day == null ? null : day.getJCOInstance(), fromHour == null ? null : fromHour.getJCOInstance(), fromMinute == null ? null : fromMinute.getJCOInstance(), toHour == null ? null : toHour.getJCOInstance(), toMinute == null ? null : toMinute.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,7 +205,7 @@ public class ActiveDirectorySchedule extends NetObject  {
 
     public void SetSchedule(DayOfWeek[] days, HourOfDay fromHour, MinuteOfHour fromMinute, HourOfDay toHour, MinuteOfHour toMinute) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSchedule", toObjectFromArray(days), fromHour == null ? null : fromHour.getJCOInstance(), fromMinute == null ? null : fromMinute.getJCOInstance(), toHour == null ? null : toHour.getJCOInstance(), toMinute == null ? null : toMinute.getJCOInstance());
         } catch (JCNativeException jcne) {

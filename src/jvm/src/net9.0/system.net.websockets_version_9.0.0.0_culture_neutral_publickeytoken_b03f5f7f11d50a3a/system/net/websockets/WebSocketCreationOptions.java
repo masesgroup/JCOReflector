@@ -167,9 +167,13 @@ public class WebSocketCreationOptions extends NetObject  {
     
     public boolean getIsServer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsServer = null;
         try {
-            return (boolean)classInstance.Get("IsServer");
+            retObjectIsServer = classInstance.Get("IsServer");
+            return (boolean)retObjectIsServer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsServer != null ? retObjectIsServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class WebSocketCreationOptions extends NetObject  {
 
     public void setIsServer(boolean IsServer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsServer", IsServer);
         } catch (JCNativeException jcne) {
@@ -187,10 +191,14 @@ public class WebSocketCreationOptions extends NetObject  {
 
     public WebSocketDeflateOptions getDangerousDeflateOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDangerousDeflateOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DangerousDeflateOptions");
+            retObjectDangerousDeflateOptions = classInstance.Get("DangerousDeflateOptions");
+            JCObject val = (JCObject)retObjectDangerousDeflateOptions;
             return new WebSocketDeflateOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDangerousDeflateOptions != null ? retObjectDangerousDeflateOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class WebSocketCreationOptions extends NetObject  {
 
     public void setDangerousDeflateOptions(WebSocketDeflateOptions DangerousDeflateOptions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DangerousDeflateOptions", DangerousDeflateOptions == null ? null : DangerousDeflateOptions.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,9 +216,13 @@ public class WebSocketCreationOptions extends NetObject  {
 
     public java.lang.String getSubProtocol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubProtocol = null;
         try {
-            return (java.lang.String)classInstance.Get("SubProtocol");
+            retObjectSubProtocol = classInstance.Get("SubProtocol");
+            return (java.lang.String)retObjectSubProtocol;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSubProtocol != null ? retObjectSubProtocol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class WebSocketCreationOptions extends NetObject  {
 
     public void setSubProtocol(java.lang.String SubProtocol) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.NotSupportedException, system.OverflowException, system.InvalidOperationException, system.FormatException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SubProtocol", SubProtocol);
         } catch (JCNativeException jcne) {
@@ -228,10 +240,14 @@ public class WebSocketCreationOptions extends NetObject  {
 
     public TimeSpan getKeepAliveInterval() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeepAliveInterval = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeepAliveInterval");
+            retObjectKeepAliveInterval = classInstance.Get("KeepAliveInterval");
+            JCObject val = (JCObject)retObjectKeepAliveInterval;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeepAliveInterval != null ? retObjectKeepAliveInterval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +255,7 @@ public class WebSocketCreationOptions extends NetObject  {
 
     public void setKeepAliveInterval(TimeSpan KeepAliveInterval) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeepAliveInterval", KeepAliveInterval == null ? null : KeepAliveInterval.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -249,10 +265,14 @@ public class WebSocketCreationOptions extends NetObject  {
 
     public TimeSpan getKeepAliveTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeepAliveTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeepAliveTimeout");
+            retObjectKeepAliveTimeout = classInstance.Get("KeepAliveTimeout");
+            JCObject val = (JCObject)retObjectKeepAliveTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeepAliveTimeout != null ? retObjectKeepAliveTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +280,7 @@ public class WebSocketCreationOptions extends NetObject  {
 
     public void setKeepAliveTimeout(TimeSpan KeepAliveTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeepAliveTimeout", KeepAliveTimeout == null ? null : KeepAliveTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -143,10 +143,14 @@ public class ITransportTokenAssertionProviderImplementation extends NetObject im
     
     public XmlElement GetTransportTokenAssertion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTransportTokenAssertion = null;
         try {
-            JCObject objGetTransportTokenAssertion = (JCObject)classInstance.Invoke("GetTransportTokenAssertion");
+            retObjectGetTransportTokenAssertion = classInstance.Invoke("GetTransportTokenAssertion");
+            JCObject objGetTransportTokenAssertion = (JCObject)retObjectGetTransportTokenAssertion;
             return new XmlElement(objGetTransportTokenAssertion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTransportTokenAssertion != null ? retObjectGetTransportTokenAssertion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

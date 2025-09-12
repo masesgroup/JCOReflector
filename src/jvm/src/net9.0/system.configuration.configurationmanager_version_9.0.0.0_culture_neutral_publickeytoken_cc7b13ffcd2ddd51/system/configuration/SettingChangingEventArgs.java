@@ -170,10 +170,14 @@ public class SettingChangingEventArgs extends CancelEventArgs  {
     
     public NetObject getNewValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewValue");
+            retObjectNewValue = classInstance.Get("NewValue");
+            JCObject val = (JCObject)retObjectNewValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewValue != null ? retObjectNewValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class SettingChangingEventArgs extends CancelEventArgs  {
 
     public java.lang.String getSettingClass() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSettingClass = null;
         try {
-            return (java.lang.String)classInstance.Get("SettingClass");
+            retObjectSettingClass = classInstance.Get("SettingClass");
+            return (java.lang.String)retObjectSettingClass;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSettingClass != null ? retObjectSettingClass.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +199,13 @@ public class SettingChangingEventArgs extends CancelEventArgs  {
 
     public java.lang.String getSettingKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSettingKey = null;
         try {
-            return (java.lang.String)classInstance.Get("SettingKey");
+            retObjectSettingKey = classInstance.Get("SettingKey");
+            return (java.lang.String)retObjectSettingKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSettingKey != null ? retObjectSettingKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +213,13 @@ public class SettingChangingEventArgs extends CancelEventArgs  {
 
     public java.lang.String getSettingName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSettingName = null;
         try {
-            return (java.lang.String)classInstance.Get("SettingName");
+            retObjectSettingName = classInstance.Get("SettingName");
+            return (java.lang.String)retObjectSettingName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSettingName != null ? retObjectSettingName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

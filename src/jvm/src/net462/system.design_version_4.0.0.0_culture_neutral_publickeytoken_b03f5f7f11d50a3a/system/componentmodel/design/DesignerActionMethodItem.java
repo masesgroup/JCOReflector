@@ -219,7 +219,7 @@ public class DesignerActionMethodItem extends DesignerActionItem  {
     
     public void Invoke() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invoke");
         } catch (JCNativeException jcne) {
@@ -233,9 +233,13 @@ public class DesignerActionMethodItem extends DesignerActionItem  {
     
     public boolean getIncludeAsDesignerVerb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludeAsDesignerVerb = null;
         try {
-            return (boolean)classInstance.Get("IncludeAsDesignerVerb");
+            retObjectIncludeAsDesignerVerb = classInstance.Get("IncludeAsDesignerVerb");
+            return (boolean)retObjectIncludeAsDesignerVerb;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIncludeAsDesignerVerb != null ? retObjectIncludeAsDesignerVerb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +247,14 @@ public class DesignerActionMethodItem extends DesignerActionItem  {
 
     public IComponent getRelatedComponent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelatedComponent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RelatedComponent");
+            retObjectRelatedComponent = classInstance.Get("RelatedComponent");
+            JCObject val = (JCObject)retObjectRelatedComponent;
             return new IComponentImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRelatedComponent != null ? retObjectRelatedComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,7 +262,7 @@ public class DesignerActionMethodItem extends DesignerActionItem  {
 
     public void setRelatedComponent(IComponent RelatedComponent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RelatedComponent", RelatedComponent == null ? null : RelatedComponent.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -264,9 +272,13 @@ public class DesignerActionMethodItem extends DesignerActionItem  {
 
     public java.lang.String getMemberName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMemberName = null;
         try {
-            return (java.lang.String)classInstance.Get("MemberName");
+            retObjectMemberName = classInstance.Get("MemberName");
+            return (java.lang.String)retObjectMemberName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMemberName != null ? retObjectMemberName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

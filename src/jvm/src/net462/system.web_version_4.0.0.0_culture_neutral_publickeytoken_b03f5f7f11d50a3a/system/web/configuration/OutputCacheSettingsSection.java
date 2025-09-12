@@ -167,10 +167,14 @@ public class OutputCacheSettingsSection extends ConfigurationSection  {
     
     public OutputCacheProfileCollection getOutputCacheProfiles() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputCacheProfiles = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutputCacheProfiles");
+            retObjectOutputCacheProfiles = classInstance.Get("OutputCacheProfiles");
+            JCObject val = (JCObject)retObjectOutputCacheProfiles;
             return new OutputCacheProfileCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputCacheProfiles != null ? retObjectOutputCacheProfiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

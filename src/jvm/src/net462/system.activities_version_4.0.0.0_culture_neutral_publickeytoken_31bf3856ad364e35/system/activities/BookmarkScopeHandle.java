@@ -166,7 +166,7 @@ public class BookmarkScopeHandle extends Handle  {
     
     public void CreateBookmarkScope(NativeActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateBookmarkScope", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -176,7 +176,7 @@ public class BookmarkScopeHandle extends Handle  {
 
     public void CreateBookmarkScope(NativeActivityContext context, Guid scopeId) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateBookmarkScope", context == null ? null : context.getJCOInstance(), scopeId == null ? null : scopeId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -186,7 +186,7 @@ public class BookmarkScopeHandle extends Handle  {
 
     public void Initialize(NativeActivityContext context, Guid scope) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", context == null ? null : context.getJCOInstance(), scope == null ? null : scope.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -200,10 +200,14 @@ public class BookmarkScopeHandle extends Handle  {
     
     public BookmarkScope getBookmarkScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBookmarkScope = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BookmarkScope");
+            retObjectBookmarkScope = classInstance.Get("BookmarkScope");
+            JCObject val = (JCObject)retObjectBookmarkScope;
             return new BookmarkScope(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBookmarkScope != null ? retObjectBookmarkScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +215,14 @@ public class BookmarkScopeHandle extends Handle  {
 
     public static BookmarkScopeHandle getDefault() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            retObjectDefault = classType.Get("Default");
+            JCObject val = (JCObject)retObjectDefault;
             return new BookmarkScopeHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

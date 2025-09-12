@@ -154,16 +154,20 @@ public class HostedTransportConfiguration extends NetObject  {
     
     public Uri[] GetBaseAddresses(java.lang.String virtualPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBaseAddresses = null;
         try {
             ArrayList<Uri> resultingArrayList = new ArrayList<Uri>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetBaseAddresses", virtualPath);
+            retObjectGetBaseAddresses = classInstance.Invoke("GetBaseAddresses", virtualPath);
+            JCObject resultingObjects = (JCObject)retObjectGetBaseAddresses;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Uri(resultingObject));
             }
             Uri[] resultingArray = new Uri[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBaseAddresses != null ? retObjectGetBaseAddresses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

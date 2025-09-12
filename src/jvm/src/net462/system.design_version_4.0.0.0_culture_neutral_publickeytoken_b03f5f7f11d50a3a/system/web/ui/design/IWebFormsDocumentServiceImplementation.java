@@ -143,10 +143,14 @@ public class IWebFormsDocumentServiceImplementation extends NetObject implements
     
     public NetObject CreateDiscardableUndoUnit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDiscardableUndoUnit = null;
         try {
-            JCObject objCreateDiscardableUndoUnit = (JCObject)classInstance.Invoke("CreateDiscardableUndoUnit");
+            retObjectCreateDiscardableUndoUnit = classInstance.Invoke("CreateDiscardableUndoUnit");
+            JCObject objCreateDiscardableUndoUnit = (JCObject)retObjectCreateDiscardableUndoUnit;
             return new NetObject(objCreateDiscardableUndoUnit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDiscardableUndoUnit != null ? retObjectCreateDiscardableUndoUnit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,7 +158,7 @@ public class IWebFormsDocumentServiceImplementation extends NetObject implements
 
     public void DiscardUndoUnit(NetObject discardableUndoUnit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DiscardUndoUnit", discardableUndoUnit == null ? null : discardableUndoUnit.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -164,7 +168,7 @@ public class IWebFormsDocumentServiceImplementation extends NetObject implements
 
     public void EnableUndo(boolean enable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnableUndo", enable);
         } catch (JCNativeException jcne) {
@@ -174,7 +178,7 @@ public class IWebFormsDocumentServiceImplementation extends NetObject implements
 
     public void UpdateSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateSelection");
         } catch (JCNativeException jcne) {
@@ -188,9 +192,13 @@ public class IWebFormsDocumentServiceImplementation extends NetObject implements
     
     public boolean getIsLoading() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLoading = null;
         try {
-            return (boolean)classInstance.Get("IsLoading");
+            retObjectIsLoading = classInstance.Get("IsLoading");
+            return (boolean)retObjectIsLoading;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLoading != null ? retObjectIsLoading.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +206,13 @@ public class IWebFormsDocumentServiceImplementation extends NetObject implements
 
     public java.lang.String getDocumentUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("DocumentUrl");
+            retObjectDocumentUrl = classInstance.Get("DocumentUrl");
+            return (java.lang.String)retObjectDocumentUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDocumentUrl != null ? retObjectDocumentUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +225,7 @@ public class IWebFormsDocumentServiceImplementation extends NetObject implements
 
     public void addLoadComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LoadComplete", handler);
         } catch (JCNativeException jcne) {
@@ -223,7 +235,7 @@ public class IWebFormsDocumentServiceImplementation extends NetObject implements
 
     public void removeLoadComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LoadComplete", handler);
         } catch (JCNativeException jcne) {

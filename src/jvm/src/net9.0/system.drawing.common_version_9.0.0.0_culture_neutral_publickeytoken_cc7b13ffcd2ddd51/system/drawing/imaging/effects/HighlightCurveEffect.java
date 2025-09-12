@@ -171,9 +171,19 @@ public class HighlightCurveEffect extends ColorCurveEffect  {
     
     public int getHighlight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHighlight = null;
         try {
-            return (int)classInstance.Get("Highlight");
+            retObjectHighlight = classInstance.Get("Highlight");
+            return (int)retObjectHighlight;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHighlightNumber = (java.lang.Number)retObjectHighlight;
+                return retObjectHighlightNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHighlight != null ? retObjectHighlight.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

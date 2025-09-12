@@ -162,7 +162,7 @@ public class NetworkChange extends NetObject  {
     
     public static void RegisterNetworkChange(NetworkChange nc) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterNetworkChange", nc == null ? null : nc.getJCOInstance());
         } catch (JCNativeException jcne) {

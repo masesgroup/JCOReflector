@@ -182,10 +182,14 @@ public class DateTimeFormat extends NetObject  {
     
     public DateTimeStyles getDateTimeStyles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDateTimeStyles = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DateTimeStyles");
+            retObjectDateTimeStyles = classInstance.Get("DateTimeStyles");
+            JCObject val = (JCObject)retObjectDateTimeStyles;
             return new DateTimeStyles(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDateTimeStyles != null ? retObjectDateTimeStyles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +197,7 @@ public class DateTimeFormat extends NetObject  {
 
     public void setDateTimeStyles(DateTimeStyles DateTimeStyles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DateTimeStyles", DateTimeStyles == null ? null : DateTimeStyles.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,10 +207,14 @@ public class DateTimeFormat extends NetObject  {
 
     public IFormatProvider getFormatProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FormatProvider");
+            retObjectFormatProvider = classInstance.Get("FormatProvider");
+            JCObject val = (JCObject)retObjectFormatProvider;
             return new IFormatProviderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormatProvider != null ? retObjectFormatProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +222,13 @@ public class DateTimeFormat extends NetObject  {
 
     public java.lang.String getFormatString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatString = null;
         try {
-            return (java.lang.String)classInstance.Get("FormatString");
+            retObjectFormatString = classInstance.Get("FormatString");
+            return (java.lang.String)retObjectFormatString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFormatString != null ? retObjectFormatString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

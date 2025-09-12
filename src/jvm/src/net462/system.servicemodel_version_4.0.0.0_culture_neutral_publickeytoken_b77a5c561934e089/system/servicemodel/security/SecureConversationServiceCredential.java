@@ -160,10 +160,14 @@ public class SecureConversationServiceCredential extends NetObject  {
     
     public SecurityStateEncoder getSecurityStateEncoder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityStateEncoder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityStateEncoder");
+            retObjectSecurityStateEncoder = classInstance.Get("SecurityStateEncoder");
+            JCObject val = (JCObject)retObjectSecurityStateEncoder;
             return new SecurityStateEncoder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityStateEncoder != null ? retObjectSecurityStateEncoder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class SecureConversationServiceCredential extends NetObject  {
 
     public void setSecurityStateEncoder(SecurityStateEncoder SecurityStateEncoder) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecurityStateEncoder", SecurityStateEncoder == null ? null : SecurityStateEncoder.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -143,10 +143,14 @@ public class INeedEngineImplementation extends NetObject implements INeedEngine 
     
     public VsaEngine GetEngine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEngine = null;
         try {
-            JCObject objGetEngine = (JCObject)classInstance.Invoke("GetEngine");
+            retObjectGetEngine = classInstance.Invoke("GetEngine");
+            JCObject objGetEngine = (JCObject)retObjectGetEngine;
             return new VsaEngine(objGetEngine);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEngine != null ? retObjectGetEngine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,7 +158,7 @@ public class INeedEngineImplementation extends NetObject implements INeedEngine 
 
     public void SetEngine(VsaEngine engine) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetEngine", engine == null ? null : engine.getJCOInstance());
         } catch (JCNativeException jcne) {

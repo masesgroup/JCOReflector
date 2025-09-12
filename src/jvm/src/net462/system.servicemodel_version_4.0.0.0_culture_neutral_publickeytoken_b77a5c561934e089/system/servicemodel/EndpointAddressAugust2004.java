@@ -164,10 +164,14 @@ public class EndpointAddressAugust2004 extends NetObject implements system.xml.s
     
     public EndpointAddress ToEndpointAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToEndpointAddress = null;
         try {
-            JCObject objToEndpointAddress = (JCObject)classInstance.Invoke("ToEndpointAddress");
+            retObjectToEndpointAddress = classInstance.Invoke("ToEndpointAddress");
+            JCObject objToEndpointAddress = (JCObject)retObjectToEndpointAddress;
             return new EndpointAddress(objToEndpointAddress);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToEndpointAddress != null ? retObjectToEndpointAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class EndpointAddressAugust2004 extends NetObject implements system.xml.s
 
     public static EndpointAddressAugust2004 FromEndpointAddress(EndpointAddress address) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromEndpointAddress = null;
         try {
-            JCObject objFromEndpointAddress = (JCObject)classType.Invoke("FromEndpointAddress", address == null ? null : address.getJCOInstance());
+            retObjectFromEndpointAddress = classType.Invoke("FromEndpointAddress", address == null ? null : address.getJCOInstance());
+            JCObject objFromEndpointAddress = (JCObject)retObjectFromEndpointAddress;
             return new EndpointAddressAugust2004(objFromEndpointAddress);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromEndpointAddress != null ? retObjectFromEndpointAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,14 @@ public class EndpointAddressAugust2004 extends NetObject implements system.xml.s
 
     public static XmlQualifiedName GetSchema(XmlSchemaSet xmlSchemaSet) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.RankException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSchema = null;
         try {
-            JCObject objGetSchema = (JCObject)classType.Invoke("GetSchema", xmlSchemaSet == null ? null : xmlSchemaSet.getJCOInstance());
+            retObjectGetSchema = classType.Invoke("GetSchema", xmlSchemaSet == null ? null : xmlSchemaSet.getJCOInstance());
+            JCObject objGetSchema = (JCObject)retObjectGetSchema;
             return new XmlQualifiedName(objGetSchema);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSchema != null ? retObjectGetSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +213,7 @@ public class EndpointAddressAugust2004 extends NetObject implements system.xml.s
      */
     @Deprecated 
     public XmlSchema GetSchema() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
     /**
@@ -210,7 +222,7 @@ public class EndpointAddressAugust2004 extends NetObject implements system.xml.s
      */
     @Deprecated 
     public void ReadXml(XmlReader reader) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
     /**
@@ -219,7 +231,7 @@ public class EndpointAddressAugust2004 extends NetObject implements system.xml.s
      */
     @Deprecated 
     public void WriteXml(XmlWriter writer) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
 

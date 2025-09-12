@@ -170,10 +170,14 @@ public class ServerComputer extends NetObject  {
     
     public Clock getClock() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClock = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Clock");
+            retObjectClock = classInstance.Get("Clock");
+            JCObject val = (JCObject)retObjectClock;
             return new Clock(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClock != null ? retObjectClock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class ServerComputer extends NetObject  {
 
     public ComputerInfo getInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Info");
+            retObjectInfo = classInstance.Get("Info");
+            JCObject val = (JCObject)retObjectInfo;
             return new ComputerInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInfo != null ? retObjectInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class ServerComputer extends NetObject  {
 
     public Network getNetwork() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNetwork = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Network");
+            retObjectNetwork = classInstance.Get("Network");
+            JCObject val = (JCObject)retObjectNetwork;
             return new Network(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNetwork != null ? retObjectNetwork.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +215,14 @@ public class ServerComputer extends NetObject  {
 
     public FileSystemProxy getFileSystem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileSystem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FileSystem");
+            retObjectFileSystem = classInstance.Get("FileSystem");
+            JCObject val = (JCObject)retObjectFileSystem;
             return new FileSystemProxy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFileSystem != null ? retObjectFileSystem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +230,14 @@ public class ServerComputer extends NetObject  {
 
     public RegistryProxy getRegistry() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegistry = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Registry");
+            retObjectRegistry = classInstance.Get("Registry");
+            JCObject val = (JCObject)retObjectRegistry;
             return new RegistryProxy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegistry != null ? retObjectRegistry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +245,13 @@ public class ServerComputer extends NetObject  {
 
     public java.lang.String getName() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

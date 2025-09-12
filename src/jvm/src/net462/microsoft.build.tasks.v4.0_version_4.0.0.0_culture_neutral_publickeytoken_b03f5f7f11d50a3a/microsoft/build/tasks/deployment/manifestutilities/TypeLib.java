@@ -165,9 +165,13 @@ public class TypeLib extends NetObject  {
     
     public java.lang.String getFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlags = null;
         try {
-            return (java.lang.String)classInstance.Get("Flags");
+            retObjectFlags = classInstance.Get("Flags");
+            return (java.lang.String)retObjectFlags;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFlags != null ? retObjectFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,13 @@ public class TypeLib extends NetObject  {
 
     public java.lang.String getHelpDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpDirectory = null;
         try {
-            return (java.lang.String)classInstance.Get("HelpDirectory");
+            retObjectHelpDirectory = classInstance.Get("HelpDirectory");
+            return (java.lang.String)retObjectHelpDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHelpDirectory != null ? retObjectHelpDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +193,13 @@ public class TypeLib extends NetObject  {
 
     public java.lang.String getResourceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourceId = null;
         try {
-            return (java.lang.String)classInstance.Get("ResourceId");
+            retObjectResourceId = classInstance.Get("ResourceId");
+            return (java.lang.String)retObjectResourceId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectResourceId != null ? retObjectResourceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +207,13 @@ public class TypeLib extends NetObject  {
 
     public java.lang.String getTlbId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTlbId = null;
         try {
-            return (java.lang.String)classInstance.Get("TlbId");
+            retObjectTlbId = classInstance.Get("TlbId");
+            return (java.lang.String)retObjectTlbId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTlbId != null ? retObjectTlbId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +221,13 @@ public class TypeLib extends NetObject  {
 
     public java.lang.String getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (java.lang.String)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +235,13 @@ public class TypeLib extends NetObject  {
 
     public java.lang.String getXmlFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlFlags = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlFlags");
+            retObjectXmlFlags = classInstance.Get("XmlFlags");
+            return (java.lang.String)retObjectXmlFlags;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlFlags != null ? retObjectXmlFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +249,7 @@ public class TypeLib extends NetObject  {
 
     public void setXmlFlags(java.lang.String XmlFlags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlFlags", XmlFlags);
         } catch (JCNativeException jcne) {
@@ -235,9 +259,13 @@ public class TypeLib extends NetObject  {
 
     public java.lang.String getXmlHelpDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlHelpDirectory = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlHelpDirectory");
+            retObjectXmlHelpDirectory = classInstance.Get("XmlHelpDirectory");
+            return (java.lang.String)retObjectXmlHelpDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlHelpDirectory != null ? retObjectXmlHelpDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +273,7 @@ public class TypeLib extends NetObject  {
 
     public void setXmlHelpDirectory(java.lang.String XmlHelpDirectory) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlHelpDirectory", XmlHelpDirectory);
         } catch (JCNativeException jcne) {
@@ -255,9 +283,13 @@ public class TypeLib extends NetObject  {
 
     public java.lang.String getXmlResourceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlResourceId = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlResourceId");
+            retObjectXmlResourceId = classInstance.Get("XmlResourceId");
+            return (java.lang.String)retObjectXmlResourceId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlResourceId != null ? retObjectXmlResourceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +297,7 @@ public class TypeLib extends NetObject  {
 
     public void setXmlResourceId(java.lang.String XmlResourceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlResourceId", XmlResourceId);
         } catch (JCNativeException jcne) {
@@ -275,9 +307,13 @@ public class TypeLib extends NetObject  {
 
     public java.lang.String getXmlTlbId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlTlbId = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlTlbId");
+            retObjectXmlTlbId = classInstance.Get("XmlTlbId");
+            return (java.lang.String)retObjectXmlTlbId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlTlbId != null ? retObjectXmlTlbId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +321,7 @@ public class TypeLib extends NetObject  {
 
     public void setXmlTlbId(java.lang.String XmlTlbId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlTlbId", XmlTlbId);
         } catch (JCNativeException jcne) {
@@ -295,9 +331,13 @@ public class TypeLib extends NetObject  {
 
     public java.lang.String getXmlVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlVersion");
+            retObjectXmlVersion = classInstance.Get("XmlVersion");
+            return (java.lang.String)retObjectXmlVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlVersion != null ? retObjectXmlVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,7 +345,7 @@ public class TypeLib extends NetObject  {
 
     public void setXmlVersion(java.lang.String XmlVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlVersion", XmlVersion);
         } catch (JCNativeException jcne) {

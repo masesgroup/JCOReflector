@@ -164,10 +164,14 @@ public class MatrixAnimationUsingPath extends MatrixAnimationBase  {
     
     public MatrixAnimationUsingPath CloneNewMatrixAnimationUsingPath() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new MatrixAnimationUsingPath(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +183,13 @@ public class MatrixAnimationUsingPath extends MatrixAnimationBase  {
     
     public boolean getDoesRotateWithTangent() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDoesRotateWithTangent = null;
         try {
-            return (boolean)classInstance.Get("DoesRotateWithTangent");
+            retObjectDoesRotateWithTangent = classInstance.Get("DoesRotateWithTangent");
+            return (boolean)retObjectDoesRotateWithTangent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDoesRotateWithTangent != null ? retObjectDoesRotateWithTangent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class MatrixAnimationUsingPath extends MatrixAnimationBase  {
 
     public void setDoesRotateWithTangent(boolean DoesRotateWithTangent) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DoesRotateWithTangent", DoesRotateWithTangent);
         } catch (JCNativeException jcne) {
@@ -199,9 +207,13 @@ public class MatrixAnimationUsingPath extends MatrixAnimationBase  {
 
     public boolean getIsAdditive() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAdditive = null;
         try {
-            return (boolean)classInstance.Get("IsAdditive");
+            retObjectIsAdditive = classInstance.Get("IsAdditive");
+            return (boolean)retObjectIsAdditive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAdditive != null ? retObjectIsAdditive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +221,7 @@ public class MatrixAnimationUsingPath extends MatrixAnimationBase  {
 
     public void setIsAdditive(boolean IsAdditive) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsAdditive", IsAdditive);
         } catch (JCNativeException jcne) {
@@ -219,9 +231,13 @@ public class MatrixAnimationUsingPath extends MatrixAnimationBase  {
 
     public boolean getIsAngleCumulative() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAngleCumulative = null;
         try {
-            return (boolean)classInstance.Get("IsAngleCumulative");
+            retObjectIsAngleCumulative = classInstance.Get("IsAngleCumulative");
+            return (boolean)retObjectIsAngleCumulative;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAngleCumulative != null ? retObjectIsAngleCumulative.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +245,7 @@ public class MatrixAnimationUsingPath extends MatrixAnimationBase  {
 
     public void setIsAngleCumulative(boolean IsAngleCumulative) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsAngleCumulative", IsAngleCumulative);
         } catch (JCNativeException jcne) {
@@ -239,9 +255,13 @@ public class MatrixAnimationUsingPath extends MatrixAnimationBase  {
 
     public boolean getIsOffsetCumulative() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOffsetCumulative = null;
         try {
-            return (boolean)classInstance.Get("IsOffsetCumulative");
+            retObjectIsOffsetCumulative = classInstance.Get("IsOffsetCumulative");
+            return (boolean)retObjectIsOffsetCumulative;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOffsetCumulative != null ? retObjectIsOffsetCumulative.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +269,7 @@ public class MatrixAnimationUsingPath extends MatrixAnimationBase  {
 
     public void setIsOffsetCumulative(boolean IsOffsetCumulative) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsOffsetCumulative", IsOffsetCumulative);
         } catch (JCNativeException jcne) {
@@ -259,10 +279,14 @@ public class MatrixAnimationUsingPath extends MatrixAnimationBase  {
 
     public PathGeometry getPathGeometry() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathGeometry = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PathGeometry");
+            retObjectPathGeometry = classInstance.Get("PathGeometry");
+            JCObject val = (JCObject)retObjectPathGeometry;
             return new PathGeometry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPathGeometry != null ? retObjectPathGeometry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +294,7 @@ public class MatrixAnimationUsingPath extends MatrixAnimationBase  {
 
     public void setPathGeometry(PathGeometry PathGeometry) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PathGeometry", PathGeometry == null ? null : PathGeometry.getJCOInstance());
         } catch (JCNativeException jcne) {

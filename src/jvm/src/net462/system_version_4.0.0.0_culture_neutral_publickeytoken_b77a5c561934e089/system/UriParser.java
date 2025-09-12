@@ -154,9 +154,13 @@ public class UriParser extends NetObject  {
     
     public static boolean IsKnownScheme(java.lang.String schemeName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsKnownScheme = null;
         try {
-            return (boolean)classType.Invoke("IsKnownScheme", schemeName);
+            retObjectIsKnownScheme = classType.Invoke("IsKnownScheme", schemeName);
+            return (boolean)retObjectIsKnownScheme;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsKnownScheme != null ? retObjectIsKnownScheme.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,7 +168,7 @@ public class UriParser extends NetObject  {
 
     public static void Register(UriParser uriParser, java.lang.String schemeName, int defaultPort) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Register", uriParser == null ? null : uriParser.getJCOInstance(), schemeName, defaultPort);
         } catch (JCNativeException jcne) {

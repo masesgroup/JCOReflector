@@ -156,9 +156,13 @@ public class WorkflowInspectionServices extends NetObject  {
     
     public static boolean CanInduceIdle(Activity activity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCanInduceIdle = null;
         try {
-            return (boolean)classType.Invoke("CanInduceIdle", activity == null ? null : activity.getJCOInstance());
+            retObjectCanInduceIdle = classType.Invoke("CanInduceIdle", activity == null ? null : activity.getJCOInstance());
+            return (boolean)retObjectCanInduceIdle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanInduceIdle != null ? retObjectCanInduceIdle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class WorkflowInspectionServices extends NetObject  {
 
     public static Activity Resolve(Activity root, java.lang.String id) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResolve = null;
         try {
-            JCObject objResolve = (JCObject)classType.Invoke("Resolve", root == null ? null : root.getJCOInstance(), id);
+            retObjectResolve = classType.Invoke("Resolve", root == null ? null : root.getJCOInstance(), id);
+            JCObject objResolve = (JCObject)retObjectResolve;
             return new Activity(objResolve);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolve != null ? retObjectResolve.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +185,14 @@ public class WorkflowInspectionServices extends NetObject  {
 
     public static Version GetImplementationVersion(Activity activity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetImplementationVersion = null;
         try {
-            JCObject objGetImplementationVersion = (JCObject)classType.Invoke("GetImplementationVersion", activity == null ? null : activity.getJCOInstance());
+            retObjectGetImplementationVersion = classType.Invoke("GetImplementationVersion", activity == null ? null : activity.getJCOInstance());
+            JCObject objGetImplementationVersion = (JCObject)retObjectGetImplementationVersion;
             return new Version(objGetImplementationVersion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetImplementationVersion != null ? retObjectGetImplementationVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +200,7 @@ public class WorkflowInspectionServices extends NetObject  {
 
     public static void CacheMetadata(Activity rootActivity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CacheMetadata", rootActivity == null ? null : rootActivity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,7 +210,7 @@ public class WorkflowInspectionServices extends NetObject  {
 
     public static void CacheMetadata(Activity rootActivity, LocationReferenceEnvironment hostEnvironment) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CacheMetadata", rootActivity == null ? null : rootActivity.getJCOInstance(), hostEnvironment == null ? null : hostEnvironment.getJCOInstance());
         } catch (JCNativeException jcne) {

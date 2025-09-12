@@ -189,9 +189,13 @@ public class ObjectContext extends NetObject implements AutoCloseable {
     
     public boolean DatabaseExists() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MetadataException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDatabaseExists = null;
         try {
-            return (boolean)classInstance.Invoke("DatabaseExists");
+            retObjectDatabaseExists = classInstance.Invoke("DatabaseExists");
+            return (boolean)retObjectDatabaseExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDatabaseExists != null ? retObjectDatabaseExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +203,13 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public boolean TryGetObjectByKey(EntityKey key, JCORefOut<NetObject> value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.ObjectDisposedException, system.threading.LockRecursionException, system.NotImplementedException, system.NotSupportedException, system.FormatException, system.data.ProviderIncompatibleException, system.data.EntityCommandExecutionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetObjectByKey = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetObjectByKey", key == null ? null : key.getJCOInstance(), value.getJCRefOut());
+            retObjectTryGetObjectByKey = classInstance.Invoke("TryGetObjectByKey", key == null ? null : key.getJCOInstance(), value.getJCRefOut());
+            return (boolean)retObjectTryGetObjectByKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetObjectByKey != null ? retObjectTryGetObjectByKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +217,19 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public int ExecuteFunction(java.lang.String functionName, ObjectParameter... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.NotSupportedException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.data.EntityCommandExecutionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteFunction = null;
         try {
-            return (int)classInstance.Invoke("ExecuteFunction", functionName, toObjectFromArray(parameters));
+            retObjectExecuteFunction = classInstance.Invoke("ExecuteFunction", functionName, toObjectFromArray(parameters));
+            return (int)retObjectExecuteFunction;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExecuteFunctionNumber = (java.lang.Number)retObjectExecuteFunction;
+                return retObjectExecuteFunctionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteFunction != null ? retObjectExecuteFunction.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +237,19 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public int ExecuteStoreCommand(java.lang.String commandText, NetObject... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.io.FileNotFoundException, system.NotSupportedException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteStoreCommand = null;
         try {
-            return (int)classInstance.Invoke("ExecuteStoreCommand", commandText, toObjectFromArray(parameters));
+            retObjectExecuteStoreCommand = classInstance.Invoke("ExecuteStoreCommand", commandText, toObjectFromArray(parameters));
+            return (int)retObjectExecuteStoreCommand;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExecuteStoreCommandNumber = (java.lang.Number)retObjectExecuteStoreCommand;
+                return retObjectExecuteStoreCommandNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteStoreCommand != null ? retObjectExecuteStoreCommand.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,9 +257,19 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public int SaveChanges() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.resources.MissingManifestResourceException, system.data.MetadataException, system.data.EntityException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSaveChanges = null;
         try {
-            return (int)classInstance.Invoke("SaveChanges");
+            retObjectSaveChanges = classInstance.Invoke("SaveChanges");
+            return (int)retObjectSaveChanges;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSaveChangesNumber = (java.lang.Number)retObjectSaveChanges;
+                return retObjectSaveChangesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSaveChanges != null ? retObjectSaveChanges.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +277,19 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public int SaveChanges(boolean acceptChangesDuringSave) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.resources.MissingManifestResourceException, system.data.MetadataException, system.data.EntityException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSaveChanges = null;
         try {
-            return (int)classInstance.Invoke("SaveChanges", acceptChangesDuringSave);
+            retObjectSaveChanges = classInstance.Invoke("SaveChanges", acceptChangesDuringSave);
+            return (int)retObjectSaveChanges;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSaveChangesNumber = (java.lang.Number)retObjectSaveChanges;
+                return retObjectSaveChangesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSaveChanges != null ? retObjectSaveChanges.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,9 +297,19 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public int SaveChanges(SaveOptions options) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.data.MetadataException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.data.EntityException, system.NotImplementedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSaveChanges = null;
         try {
-            return (int)classInstance.Invoke("SaveChanges", options == null ? null : options.getJCOInstance());
+            retObjectSaveChanges = classInstance.Invoke("SaveChanges", options == null ? null : options.getJCOInstance());
+            return (int)retObjectSaveChanges;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSaveChangesNumber = (java.lang.Number)retObjectSaveChanges;
+                return retObjectSaveChangesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSaveChanges != null ? retObjectSaveChanges.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,10 +317,14 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public EntityKey CreateEntityKey(java.lang.String entitySetName, NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateEntityKey = null;
         try {
-            JCObject objCreateEntityKey = (JCObject)classInstance.Invoke("CreateEntityKey", entitySetName, entity == null ? null : entity.getJCOInstance());
+            retObjectCreateEntityKey = classInstance.Invoke("CreateEntityKey", entitySetName, entity == null ? null : entity.getJCOInstance());
+            JCObject objCreateEntityKey = (JCObject)retObjectCreateEntityKey;
             return new EntityKey(objCreateEntityKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEntityKey != null ? retObjectCreateEntityKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,10 +332,14 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public NetObject GetObjectByKey(EntityKey key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.FormatException, system.OutOfMemoryException, system.data.ProviderIncompatibleException, system.data.EntityCommandExecutionException, system.data.ObjectNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetObjectByKey = null;
         try {
-            JCObject objGetObjectByKey = (JCObject)classInstance.Invoke("GetObjectByKey", key == null ? null : key.getJCOInstance());
+            retObjectGetObjectByKey = classInstance.Invoke("GetObjectByKey", key == null ? null : key.getJCOInstance());
+            JCObject objGetObjectByKey = (JCObject)retObjectGetObjectByKey;
             return new NetObject(objGetObjectByKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObjectByKey != null ? retObjectGetObjectByKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,9 +347,13 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public java.lang.String CreateDatabaseScript() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MetadataException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDatabaseScript = null;
         try {
-            return (java.lang.String)classInstance.Invoke("CreateDatabaseScript");
+            retObjectCreateDatabaseScript = classInstance.Invoke("CreateDatabaseScript");
+            return (java.lang.String)retObjectCreateDatabaseScript;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCreateDatabaseScript != null ? retObjectCreateDatabaseScript.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,10 +361,14 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public static NetType GetObjectType(NetType type) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetObjectType = null;
         try {
-            JCObject objGetObjectType = (JCObject)classType.Invoke("GetObjectType", type == null ? null : type.getJCOInstance());
+            retObjectGetObjectType = classType.Invoke("GetObjectType", type == null ? null : type.getJCOInstance());
+            JCObject objGetObjectType = (JCObject)retObjectGetObjectType;
             return new NetType(objGetObjectType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObjectType != null ? retObjectGetObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +376,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public void AcceptAllChanges() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AcceptAllChanges");
         } catch (JCNativeException jcne) {
@@ -312,7 +386,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public void AddObject(java.lang.String entitySetName, NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException, system.OutOfMemoryException, system.TypeLoadException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddObject", entitySetName, entity == null ? null : entity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -322,7 +396,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public void ApplyPropertyChanges(java.lang.String entitySetName, NetObject changed) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyPropertyChanges", entitySetName, changed == null ? null : changed.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -332,7 +406,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public void Attach(IEntityWithKey entity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException, system.NullReferenceException, system.threading.LockRecursionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Attach", entity == null ? null : entity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -342,7 +416,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public void AttachTo(java.lang.String entitySetName, NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AttachTo", entitySetName, entity == null ? null : entity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -352,7 +426,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public void CreateDatabase() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MetadataException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateDatabase");
         } catch (JCNativeException jcne) {
@@ -362,7 +436,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public void DeleteDatabase() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MetadataException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteDatabase");
         } catch (JCNativeException jcne) {
@@ -372,7 +446,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public void DeleteObject(NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteObject", entity == null ? null : entity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -382,7 +456,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public void Detach(NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.data.MetadataException, system.threading.SynchronizationLockException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Detach", entity == null ? null : entity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -392,7 +466,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public void DetectChanges() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.data.MetadataException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.data.EntityException, system.NotImplementedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DetectChanges");
         } catch (JCNativeException jcne) {
@@ -402,7 +476,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -412,7 +486,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public void LoadProperty(NetObject entity, java.lang.String navigationProperty) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadProperty", entity == null ? null : entity.getJCOInstance(), navigationProperty);
         } catch (JCNativeException jcne) {
@@ -422,7 +496,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public void LoadProperty(NetObject entity, java.lang.String navigationProperty, MergeOption mergeOption) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadProperty", entity == null ? null : entity.getJCOInstance(), navigationProperty, mergeOption == null ? null : mergeOption.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -432,7 +506,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public void Refresh(RefreshMode refreshMode, IEnumerable collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NullReferenceException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.data.ProviderIncompatibleException, system.data.EntityCommandCompilationException, system.data.EntityCommandExecutionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Refresh", refreshMode == null ? null : refreshMode.getJCOInstance(), collection == null ? null : collection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -442,7 +516,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public void Refresh(RefreshMode refreshMode, NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NullReferenceException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.data.ProviderIncompatibleException, system.data.EntityCommandCompilationException, system.data.EntityCommandExecutionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Refresh", refreshMode == null ? null : refreshMode.getJCOInstance(), entity == null ? null : entity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -453,7 +527,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -469,10 +543,14 @@ public class ObjectContext extends NetObject implements AutoCloseable {
     
     public DbConnection getConnection() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Connection");
+            retObjectConnection = classInstance.Get("Connection");
+            JCObject val = (JCObject)retObjectConnection;
             return new DbConnection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnection != null ? retObjectConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -480,10 +558,14 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public MetadataWorkspace getMetadataWorkspace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadataWorkspace = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MetadataWorkspace");
+            retObjectMetadataWorkspace = classInstance.Get("MetadataWorkspace");
+            JCObject val = (JCObject)retObjectMetadataWorkspace;
             return new MetadataWorkspace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMetadataWorkspace != null ? retObjectMetadataWorkspace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -491,10 +573,14 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public ObjectContextOptions getContextOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContextOptions");
+            retObjectContextOptions = classInstance.Get("ContextOptions");
+            JCObject val = (JCObject)retObjectContextOptions;
             return new ObjectContextOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextOptions != null ? retObjectContextOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -502,10 +588,14 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public ObjectStateManager getObjectStateManager() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObjectStateManager = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectStateManager");
+            retObjectObjectStateManager = classInstance.Get("ObjectStateManager");
+            JCObject val = (JCObject)retObjectObjectStateManager;
             return new ObjectStateManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObjectStateManager != null ? retObjectObjectStateManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -513,9 +603,13 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public java.lang.String getDefaultContainerName() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultContainerName = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultContainerName");
+            retObjectDefaultContainerName = classInstance.Get("DefaultContainerName");
+            return (java.lang.String)retObjectDefaultContainerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultContainerName != null ? retObjectDefaultContainerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -523,7 +617,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public void setDefaultContainerName(java.lang.String DefaultContainerName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.data.MappingException, system.InvalidOperationException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultContainerName", DefaultContainerName);
         } catch (JCNativeException jcne) {
@@ -538,7 +632,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public void addObjectMaterialized(ObjectMaterializedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ObjectMaterialized", handler);
         } catch (JCNativeException jcne) {
@@ -548,7 +642,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public void removeObjectMaterialized(ObjectMaterializedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ObjectMaterialized", handler);
         } catch (JCNativeException jcne) {
@@ -558,7 +652,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public void addSavingChanges(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SavingChanges", handler);
         } catch (JCNativeException jcne) {
@@ -568,7 +662,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
 
     public void removeSavingChanges(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SavingChanges", handler);
         } catch (JCNativeException jcne) {

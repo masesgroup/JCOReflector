@@ -155,9 +155,19 @@ public class ISOWeek extends NetObject  {
     
     public static int GetWeekOfYear(DateTime date) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetWeekOfYear = null;
         try {
-            return (int)classType.Invoke("GetWeekOfYear", date == null ? null : date.getJCOInstance());
+            retObjectGetWeekOfYear = classType.Invoke("GetWeekOfYear", date == null ? null : date.getJCOInstance());
+            return (int)retObjectGetWeekOfYear;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetWeekOfYearNumber = (java.lang.Number)retObjectGetWeekOfYear;
+                return retObjectGetWeekOfYearNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetWeekOfYear != null ? retObjectGetWeekOfYear.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,9 +175,19 @@ public class ISOWeek extends NetObject  {
 
     public static int GetWeeksInYear(int year) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetWeeksInYear = null;
         try {
-            return (int)classType.Invoke("GetWeeksInYear", year);
+            retObjectGetWeeksInYear = classType.Invoke("GetWeeksInYear", year);
+            return (int)retObjectGetWeeksInYear;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetWeeksInYearNumber = (java.lang.Number)retObjectGetWeeksInYear;
+                return retObjectGetWeeksInYearNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetWeeksInYear != null ? retObjectGetWeeksInYear.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +195,19 @@ public class ISOWeek extends NetObject  {
 
     public static int GetYear(DateTime date) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetYear = null;
         try {
-            return (int)classType.Invoke("GetYear", date == null ? null : date.getJCOInstance());
+            retObjectGetYear = classType.Invoke("GetYear", date == null ? null : date.getJCOInstance());
+            return (int)retObjectGetYear;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetYearNumber = (java.lang.Number)retObjectGetYear;
+                return retObjectGetYearNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetYear != null ? retObjectGetYear.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +215,14 @@ public class ISOWeek extends NetObject  {
 
     public static DateTime GetYearEnd(int year) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetYearEnd = null;
         try {
-            JCObject objGetYearEnd = (JCObject)classType.Invoke("GetYearEnd", year);
+            retObjectGetYearEnd = classType.Invoke("GetYearEnd", year);
+            JCObject objGetYearEnd = (JCObject)retObjectGetYearEnd;
             return new DateTime(objGetYearEnd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetYearEnd != null ? retObjectGetYearEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +230,14 @@ public class ISOWeek extends NetObject  {
 
     public static DateTime GetYearStart(int year) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetYearStart = null;
         try {
-            JCObject objGetYearStart = (JCObject)classType.Invoke("GetYearStart", year);
+            retObjectGetYearStart = classType.Invoke("GetYearStart", year);
+            JCObject objGetYearStart = (JCObject)retObjectGetYearStart;
             return new DateTime(objGetYearStart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetYearStart != null ? retObjectGetYearStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +245,14 @@ public class ISOWeek extends NetObject  {
 
     public static DateTime ToDateTime(int year, int week, DayOfWeek dayOfWeek) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToDateTime = null;
         try {
-            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", year, week, dayOfWeek == null ? null : dayOfWeek.getJCOInstance());
+            retObjectToDateTime = classType.Invoke("ToDateTime", year, week, dayOfWeek == null ? null : dayOfWeek.getJCOInstance());
+            JCObject objToDateTime = (JCObject)retObjectToDateTime;
             return new DateTime(objToDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToDateTime != null ? retObjectToDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

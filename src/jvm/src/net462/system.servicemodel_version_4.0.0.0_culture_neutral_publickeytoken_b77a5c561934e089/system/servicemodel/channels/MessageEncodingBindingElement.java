@@ -156,10 +156,14 @@ public class MessageEncodingBindingElement extends BindingElement  {
     
     public MessageEncoderFactory CreateMessageEncoderFactory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateMessageEncoderFactory = null;
         try {
-            JCObject objCreateMessageEncoderFactory = (JCObject)classInstance.Invoke("CreateMessageEncoderFactory");
+            retObjectCreateMessageEncoderFactory = classInstance.Invoke("CreateMessageEncoderFactory");
+            JCObject objCreateMessageEncoderFactory = (JCObject)retObjectCreateMessageEncoderFactory;
             return new MessageEncoderFactory(objCreateMessageEncoderFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMessageEncoderFactory != null ? retObjectCreateMessageEncoderFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class MessageEncodingBindingElement extends BindingElement  {
     
     public MessageVersion getMessageVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageVersion");
+            retObjectMessageVersion = classInstance.Get("MessageVersion");
+            JCObject val = (JCObject)retObjectMessageVersion;
             return new MessageVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageVersion != null ? retObjectMessageVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +190,7 @@ public class MessageEncodingBindingElement extends BindingElement  {
 
     public void setMessageVersion(MessageVersion MessageVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageVersion", MessageVersion == null ? null : MessageVersion.getJCOInstance());
         } catch (JCNativeException jcne) {

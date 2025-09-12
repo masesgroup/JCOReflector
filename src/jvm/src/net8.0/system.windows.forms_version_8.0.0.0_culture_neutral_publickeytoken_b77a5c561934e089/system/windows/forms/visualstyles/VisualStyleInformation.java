@@ -158,9 +158,13 @@ public class VisualStyleInformation extends NetObject  {
     
     public static boolean getIsEnabledByUser() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsEnabledByUser = null;
         try {
-            return (boolean)classType.Get("IsEnabledByUser");
+            retObjectIsEnabledByUser = classType.Get("IsEnabledByUser");
+            return (boolean)retObjectIsEnabledByUser;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEnabledByUser != null ? retObjectIsEnabledByUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class VisualStyleInformation extends NetObject  {
 
     public static boolean getIsSupportedByOS() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSupportedByOS = null;
         try {
-            return (boolean)classType.Get("IsSupportedByOS");
+            retObjectIsSupportedByOS = classType.Get("IsSupportedByOS");
+            return (boolean)retObjectIsSupportedByOS;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSupportedByOS != null ? retObjectIsSupportedByOS.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +186,13 @@ public class VisualStyleInformation extends NetObject  {
 
     public static boolean getSupportsFlatMenus() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSupportsFlatMenus = null;
         try {
-            return (boolean)classType.Get("SupportsFlatMenus");
+            retObjectSupportsFlatMenus = classType.Get("SupportsFlatMenus");
+            return (boolean)retObjectSupportsFlatMenus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsFlatMenus != null ? retObjectSupportsFlatMenus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +200,19 @@ public class VisualStyleInformation extends NetObject  {
 
     public static int getMinimumColorDepth() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimumColorDepth = null;
         try {
-            return (int)classType.Get("MinimumColorDepth");
+            retObjectMinimumColorDepth = classType.Get("MinimumColorDepth");
+            return (int)retObjectMinimumColorDepth;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumColorDepthNumber = (java.lang.Number)retObjectMinimumColorDepth;
+                return retObjectMinimumColorDepthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinimumColorDepth != null ? retObjectMinimumColorDepth.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +220,14 @@ public class VisualStyleInformation extends NetObject  {
 
     public static Color getControlHighlightHot() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlHighlightHot = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlHighlightHot");
+            retObjectControlHighlightHot = classType.Get("ControlHighlightHot");
+            JCObject val = (JCObject)retObjectControlHighlightHot;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlHighlightHot != null ? retObjectControlHighlightHot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +235,14 @@ public class VisualStyleInformation extends NetObject  {
 
     public static Color getTextControlBorder() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTextControlBorder = null;
         try {
-            JCObject val = (JCObject)classType.Get("TextControlBorder");
+            retObjectTextControlBorder = classType.Get("TextControlBorder");
+            JCObject val = (JCObject)retObjectTextControlBorder;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextControlBorder != null ? retObjectTextControlBorder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +250,13 @@ public class VisualStyleInformation extends NetObject  {
 
     public static java.lang.String getAuthor() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAuthor = null;
         try {
-            return (java.lang.String)classType.Get("Author");
+            retObjectAuthor = classType.Get("Author");
+            return (java.lang.String)retObjectAuthor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAuthor != null ? retObjectAuthor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +264,13 @@ public class VisualStyleInformation extends NetObject  {
 
     public static java.lang.String getColorScheme() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectColorScheme = null;
         try {
-            return (java.lang.String)classType.Get("ColorScheme");
+            retObjectColorScheme = classType.Get("ColorScheme");
+            return (java.lang.String)retObjectColorScheme;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectColorScheme != null ? retObjectColorScheme.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +278,13 @@ public class VisualStyleInformation extends NetObject  {
 
     public static java.lang.String getCompany() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompany = null;
         try {
-            return (java.lang.String)classType.Get("Company");
+            retObjectCompany = classType.Get("Company");
+            return (java.lang.String)retObjectCompany;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCompany != null ? retObjectCompany.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,9 +292,13 @@ public class VisualStyleInformation extends NetObject  {
 
     public static java.lang.String getCopyright() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCopyright = null;
         try {
-            return (java.lang.String)classType.Get("Copyright");
+            retObjectCopyright = classType.Get("Copyright");
+            return (java.lang.String)retObjectCopyright;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCopyright != null ? retObjectCopyright.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,9 +306,13 @@ public class VisualStyleInformation extends NetObject  {
 
     public static java.lang.String getDescription() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classType.Get("Description");
+            retObjectDescription = classType.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,9 +320,13 @@ public class VisualStyleInformation extends NetObject  {
 
     public static java.lang.String getDisplayName() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDisplayName = null;
         try {
-            return (java.lang.String)classType.Get("DisplayName");
+            retObjectDisplayName = classType.Get("DisplayName");
+            return (java.lang.String)retObjectDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayName != null ? retObjectDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,9 +334,13 @@ public class VisualStyleInformation extends NetObject  {
 
     public static java.lang.String getSize() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            return (java.lang.String)classType.Get("Size");
+            retObjectSize = classType.Get("Size");
+            return (java.lang.String)retObjectSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSize != null ? retObjectSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,9 +348,13 @@ public class VisualStyleInformation extends NetObject  {
 
     public static java.lang.String getUrl() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUrl = null;
         try {
-            return (java.lang.String)classType.Get("Url");
+            retObjectUrl = classType.Get("Url");
+            return (java.lang.String)retObjectUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUrl != null ? retObjectUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,9 +362,13 @@ public class VisualStyleInformation extends NetObject  {
 
     public static java.lang.String getVersion() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (java.lang.String)classType.Get("Version");
+            retObjectVersion = classType.Get("Version");
+            return (java.lang.String)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

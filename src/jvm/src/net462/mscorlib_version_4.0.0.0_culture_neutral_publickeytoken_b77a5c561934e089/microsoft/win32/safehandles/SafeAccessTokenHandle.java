@@ -161,10 +161,14 @@ public class SafeAccessTokenHandle extends SafeHandle  {
     
     public static SafeAccessTokenHandle getInvalidHandle() throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInvalidHandle = null;
         try {
-            JCObject val = (JCObject)classType.Get("InvalidHandle");
+            retObjectInvalidHandle = classType.Get("InvalidHandle");
+            JCObject val = (JCObject)retObjectInvalidHandle;
             return new SafeAccessTokenHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvalidHandle != null ? retObjectInvalidHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

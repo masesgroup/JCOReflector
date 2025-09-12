@@ -160,9 +160,13 @@ public class SessionStateUtility extends NetObject  {
     
     public static boolean IsSessionStateReadOnly(HttpContext context) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSessionStateReadOnly = null;
         try {
-            return (boolean)classType.Invoke("IsSessionStateReadOnly", context == null ? null : context.getJCOInstance());
+            retObjectIsSessionStateReadOnly = classType.Invoke("IsSessionStateReadOnly", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectIsSessionStateReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSessionStateReadOnly != null ? retObjectIsSessionStateReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class SessionStateUtility extends NetObject  {
 
     public static boolean IsSessionStateRequired(HttpContext context) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSessionStateRequired = null;
         try {
-            return (boolean)classType.Invoke("IsSessionStateRequired", context == null ? null : context.getJCOInstance());
+            retObjectIsSessionStateRequired = classType.Invoke("IsSessionStateRequired", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectIsSessionStateRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSessionStateRequired != null ? retObjectIsSessionStateRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class SessionStateUtility extends NetObject  {
 
     public static HttpStaticObjectsCollection GetSessionStaticObjects(HttpContext context) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSessionStaticObjects = null;
         try {
-            JCObject objGetSessionStaticObjects = (JCObject)classType.Invoke("GetSessionStaticObjects", context == null ? null : context.getJCOInstance());
+            retObjectGetSessionStaticObjects = classType.Invoke("GetSessionStaticObjects", context == null ? null : context.getJCOInstance());
+            JCObject objGetSessionStaticObjects = (JCObject)retObjectGetSessionStaticObjects;
             return new HttpStaticObjectsCollection(objGetSessionStaticObjects);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSessionStaticObjects != null ? retObjectGetSessionStaticObjects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class SessionStateUtility extends NetObject  {
 
     public static IHttpSessionState GetHttpSessionStateFromContext(HttpContext context) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHttpSessionStateFromContext = null;
         try {
-            JCObject objGetHttpSessionStateFromContext = (JCObject)classType.Invoke("GetHttpSessionStateFromContext", context == null ? null : context.getJCOInstance());
+            retObjectGetHttpSessionStateFromContext = classType.Invoke("GetHttpSessionStateFromContext", context == null ? null : context.getJCOInstance());
+            JCObject objGetHttpSessionStateFromContext = (JCObject)retObjectGetHttpSessionStateFromContext;
             return new IHttpSessionStateImplementation(objGetHttpSessionStateFromContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHttpSessionStateFromContext != null ? retObjectGetHttpSessionStateFromContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +218,7 @@ public class SessionStateUtility extends NetObject  {
 
     public static void AddHttpSessionStateToContext(HttpContext context, IHttpSessionState container) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddHttpSessionStateToContext", context == null ? null : context.getJCOInstance(), container == null ? null : container.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,7 +228,7 @@ public class SessionStateUtility extends NetObject  {
 
     public static void RaiseSessionEnd(IHttpSessionState session, NetObject eventSource, EventArgs eventArgs) throws Throwable, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.resources.MissingManifestResourceException, system.web.HttpException, system.ArgumentOutOfRangeException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.threading.ThreadStateException, system.OutOfMemoryException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RaiseSessionEnd", session == null ? null : session.getJCOInstance(), eventSource == null ? null : eventSource.getJCOInstance(), eventArgs == null ? null : eventArgs.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -222,7 +238,7 @@ public class SessionStateUtility extends NetObject  {
 
     public static void RemoveHttpSessionStateFromContext(HttpContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveHttpSessionStateFromContext", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -236,10 +252,14 @@ public class SessionStateUtility extends NetObject  {
     
     public static ISurrogateSelector getSerializationSurrogateSelector() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSerializationSurrogateSelector = null;
         try {
-            JCObject val = (JCObject)classType.Get("SerializationSurrogateSelector");
+            retObjectSerializationSurrogateSelector = classType.Get("SerializationSurrogateSelector");
+            JCObject val = (JCObject)retObjectSerializationSurrogateSelector;
             return new ISurrogateSelectorImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializationSurrogateSelector != null ? retObjectSerializationSurrogateSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +267,7 @@ public class SessionStateUtility extends NetObject  {
 
     public static void setSerializationSurrogateSelector(ISurrogateSelector SerializationSurrogateSelector) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("SerializationSurrogateSelector", SerializationSurrogateSelector == null ? null : SerializationSurrogateSelector.getJCOInstance());
         } catch (JCNativeException jcne) {

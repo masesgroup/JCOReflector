@@ -145,10 +145,14 @@ public class IHttpHandlerFactoryImplementation extends NetObject implements IHtt
     
     public IHttpHandler GetHandler(HttpContext context, java.lang.String requestType, java.lang.String url, java.lang.String pathTranslated) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHandler = null;
         try {
-            JCObject objGetHandler = (JCObject)classInstance.Invoke("GetHandler", context == null ? null : context.getJCOInstance(), requestType, url, pathTranslated);
+            retObjectGetHandler = classInstance.Invoke("GetHandler", context == null ? null : context.getJCOInstance(), requestType, url, pathTranslated);
+            JCObject objGetHandler = (JCObject)retObjectGetHandler;
             return new IHttpHandlerImplementation(objGetHandler);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHandler != null ? retObjectGetHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,7 +160,7 @@ public class IHttpHandlerFactoryImplementation extends NetObject implements IHtt
 
     public void ReleaseHandler(IHttpHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseHandler", handler == null ? null : handler.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -170,10 +170,14 @@ public class PermissionSetAttribute extends CodeAccessSecurityAttribute  {
     
     public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePermission = null;
         try {
-            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
+            retObjectCreatePermission = classInstance.Invoke("CreatePermission");
+            JCObject objCreatePermission = (JCObject)retObjectCreatePermission;
             return new IPermissionImplementation(objCreatePermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePermission != null ? retObjectCreatePermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class PermissionSetAttribute extends CodeAccessSecurityAttribute  {
 
     public PermissionSet CreatePermissionSet() throws Throwable, system.ArgumentException, system.NullReferenceException, system.ArgumentNullException, system.security.XmlSyntaxException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePermissionSet = null;
         try {
-            JCObject objCreatePermissionSet = (JCObject)classInstance.Invoke("CreatePermissionSet");
+            retObjectCreatePermissionSet = classInstance.Invoke("CreatePermissionSet");
+            JCObject objCreatePermissionSet = (JCObject)retObjectCreatePermissionSet;
             return new PermissionSet(objCreatePermissionSet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePermissionSet != null ? retObjectCreatePermissionSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +204,13 @@ public class PermissionSetAttribute extends CodeAccessSecurityAttribute  {
     
     public boolean getUnicodeEncoded() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnicodeEncoded = null;
         try {
-            return (boolean)classInstance.Get("UnicodeEncoded");
+            retObjectUnicodeEncoded = classInstance.Get("UnicodeEncoded");
+            return (boolean)retObjectUnicodeEncoded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUnicodeEncoded != null ? retObjectUnicodeEncoded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +218,7 @@ public class PermissionSetAttribute extends CodeAccessSecurityAttribute  {
 
     public void setUnicodeEncoded(boolean UnicodeEncoded) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnicodeEncoded", UnicodeEncoded);
         } catch (JCNativeException jcne) {
@@ -216,9 +228,13 @@ public class PermissionSetAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFile = null;
         try {
-            return (java.lang.String)classInstance.Get("File");
+            retObjectFile = classInstance.Get("File");
+            return (java.lang.String)retObjectFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFile != null ? retObjectFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +242,7 @@ public class PermissionSetAttribute extends CodeAccessSecurityAttribute  {
 
     public void setFile(java.lang.String File) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("File", File);
         } catch (JCNativeException jcne) {
@@ -236,9 +252,13 @@ public class PermissionSetAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getHex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHex = null;
         try {
-            return (java.lang.String)classInstance.Get("Hex");
+            retObjectHex = classInstance.Get("Hex");
+            return (java.lang.String)retObjectHex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHex != null ? retObjectHex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +266,7 @@ public class PermissionSetAttribute extends CodeAccessSecurityAttribute  {
 
     public void setHex(java.lang.String Hex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Hex", Hex);
         } catch (JCNativeException jcne) {
@@ -256,9 +276,13 @@ public class PermissionSetAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +290,7 @@ public class PermissionSetAttribute extends CodeAccessSecurityAttribute  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -276,9 +300,13 @@ public class PermissionSetAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getXML() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXML = null;
         try {
-            return (java.lang.String)classInstance.Get("XML");
+            retObjectXML = classInstance.Get("XML");
+            return (java.lang.String)retObjectXML;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXML != null ? retObjectXML.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +314,7 @@ public class PermissionSetAttribute extends CodeAccessSecurityAttribute  {
 
     public void setXML(java.lang.String XML) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XML", XML);
         } catch (JCNativeException jcne) {

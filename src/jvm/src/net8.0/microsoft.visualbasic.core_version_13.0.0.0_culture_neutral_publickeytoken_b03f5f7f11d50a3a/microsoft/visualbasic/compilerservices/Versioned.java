@@ -156,9 +156,13 @@ public class Versioned extends NetObject  {
     
     public static boolean IsNumeric(NetObject Expression) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsNumeric = null;
         try {
-            return (boolean)classType.Invoke("IsNumeric", Expression == null ? null : Expression.getJCOInstance());
+            retObjectIsNumeric = classType.Invoke("IsNumeric", Expression == null ? null : Expression.getJCOInstance());
+            return (boolean)retObjectIsNumeric;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNumeric != null ? retObjectIsNumeric.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class Versioned extends NetObject  {
 
     public static NetObject CallByName(NetObject Instance, java.lang.String MethodName, CallType UseCallType, NetObject... Arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.ArrayTypeMismatchException, system.MissingMemberException, system.InvalidCastException, system.OverflowException, system.MissingMethodException, system.RankException, system.NullReferenceException, system.reflection.AmbiguousMatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCallByName = null;
         try {
-            JCObject objCallByName = (JCObject)classType.Invoke("CallByName", Instance == null ? null : Instance.getJCOInstance(), MethodName, UseCallType == null ? null : UseCallType.getJCOInstance(), toObjectFromArray(Arguments));
+            retObjectCallByName = classType.Invoke("CallByName", Instance == null ? null : Instance.getJCOInstance(), MethodName, UseCallType == null ? null : UseCallType.getJCOInstance(), toObjectFromArray(Arguments));
+            JCObject objCallByName = (JCObject)retObjectCallByName;
             return new NetObject(objCallByName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCallByName != null ? retObjectCallByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +185,13 @@ public class Versioned extends NetObject  {
 
     public static java.lang.String SystemTypeName(java.lang.String VbName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSystemTypeName = null;
         try {
-            return (java.lang.String)classType.Invoke("SystemTypeName", VbName);
+            retObjectSystemTypeName = classType.Invoke("SystemTypeName", VbName);
+            return (java.lang.String)retObjectSystemTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectSystemTypeName != null ? retObjectSystemTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +199,13 @@ public class Versioned extends NetObject  {
 
     public static java.lang.String TypeName(NetObject Expression) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTypeName = null;
         try {
-            return (java.lang.String)classType.Invoke("TypeName", Expression == null ? null : Expression.getJCOInstance());
+            retObjectTypeName = classType.Invoke("TypeName", Expression == null ? null : Expression.getJCOInstance());
+            return (java.lang.String)retObjectTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectTypeName != null ? retObjectTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +213,13 @@ public class Versioned extends NetObject  {
 
     public static java.lang.String VbTypeName(java.lang.String SystemName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVbTypeName = null;
         try {
-            return (java.lang.String)classType.Invoke("VbTypeName", SystemName);
+            retObjectVbTypeName = classType.Invoke("VbTypeName", SystemName);
+            return (java.lang.String)retObjectVbTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectVbTypeName != null ? retObjectVbTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

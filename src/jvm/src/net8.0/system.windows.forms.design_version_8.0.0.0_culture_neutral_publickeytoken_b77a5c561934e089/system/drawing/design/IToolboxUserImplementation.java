@@ -143,9 +143,13 @@ public class IToolboxUserImplementation extends NetObject implements IToolboxUse
     
     public boolean GetToolSupported(ToolboxItem tool) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetToolSupported = null;
         try {
-            return (boolean)classInstance.Invoke("GetToolSupported", tool == null ? null : tool.getJCOInstance());
+            retObjectGetToolSupported = classInstance.Invoke("GetToolSupported", tool == null ? null : tool.getJCOInstance());
+            return (boolean)retObjectGetToolSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetToolSupported != null ? retObjectGetToolSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,7 +157,7 @@ public class IToolboxUserImplementation extends NetObject implements IToolboxUse
 
     public void ToolPicked(ToolboxItem tool) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ToolPicked", tool == null ? null : tool.getJCOInstance());
         } catch (JCNativeException jcne) {

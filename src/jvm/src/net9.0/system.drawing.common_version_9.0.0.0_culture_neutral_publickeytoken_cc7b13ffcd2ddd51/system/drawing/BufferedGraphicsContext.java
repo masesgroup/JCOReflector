@@ -165,10 +165,14 @@ public class BufferedGraphicsContext extends NetObject implements AutoCloseable 
     
     public BufferedGraphics Allocate(Graphics targetGraphics, Rectangle targetRectangle) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllocate = null;
         try {
-            JCObject objAllocate = (JCObject)classInstance.Invoke("Allocate", targetGraphics == null ? null : targetGraphics.getJCOInstance(), targetRectangle == null ? null : targetRectangle.getJCOInstance());
+            retObjectAllocate = classInstance.Invoke("Allocate", targetGraphics == null ? null : targetGraphics.getJCOInstance(), targetRectangle == null ? null : targetRectangle.getJCOInstance());
+            JCObject objAllocate = (JCObject)retObjectAllocate;
             return new BufferedGraphics(objAllocate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllocate != null ? retObjectAllocate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class BufferedGraphicsContext extends NetObject implements AutoCloseable 
 
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -186,7 +190,7 @@ public class BufferedGraphicsContext extends NetObject implements AutoCloseable 
 
     public void Invalidate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invalidate");
         } catch (JCNativeException jcne) {
@@ -197,7 +201,7 @@ public class BufferedGraphicsContext extends NetObject implements AutoCloseable 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -213,10 +217,14 @@ public class BufferedGraphicsContext extends NetObject implements AutoCloseable 
     
     public Size getMaximumBuffer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumBuffer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MaximumBuffer");
+            retObjectMaximumBuffer = classInstance.Get("MaximumBuffer");
+            JCObject val = (JCObject)retObjectMaximumBuffer;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaximumBuffer != null ? retObjectMaximumBuffer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +232,7 @@ public class BufferedGraphicsContext extends NetObject implements AutoCloseable 
 
     public void setMaximumBuffer(Size MaximumBuffer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaximumBuffer", MaximumBuffer == null ? null : MaximumBuffer.getJCOInstance());
         } catch (JCNativeException jcne) {

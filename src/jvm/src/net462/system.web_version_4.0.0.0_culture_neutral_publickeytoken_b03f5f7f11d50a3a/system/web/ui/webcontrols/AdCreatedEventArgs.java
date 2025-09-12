@@ -172,10 +172,14 @@ public class AdCreatedEventArgs extends EventArgs  {
     
     public IDictionary getAdProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AdProperties");
+            retObjectAdProperties = classInstance.Get("AdProperties");
+            JCObject val = (JCObject)retObjectAdProperties;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdProperties != null ? retObjectAdProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +187,13 @@ public class AdCreatedEventArgs extends EventArgs  {
 
     public java.lang.String getAlternateText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlternateText = null;
         try {
-            return (java.lang.String)classInstance.Get("AlternateText");
+            retObjectAlternateText = classInstance.Get("AlternateText");
+            return (java.lang.String)retObjectAlternateText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAlternateText != null ? retObjectAlternateText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +201,7 @@ public class AdCreatedEventArgs extends EventArgs  {
 
     public void setAlternateText(java.lang.String AlternateText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlternateText", AlternateText);
         } catch (JCNativeException jcne) {
@@ -203,9 +211,13 @@ public class AdCreatedEventArgs extends EventArgs  {
 
     public java.lang.String getImageUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("ImageUrl");
+            retObjectImageUrl = classInstance.Get("ImageUrl");
+            return (java.lang.String)retObjectImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectImageUrl != null ? retObjectImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +225,7 @@ public class AdCreatedEventArgs extends EventArgs  {
 
     public void setImageUrl(java.lang.String ImageUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageUrl", ImageUrl);
         } catch (JCNativeException jcne) {
@@ -223,9 +235,13 @@ public class AdCreatedEventArgs extends EventArgs  {
 
     public java.lang.String getNavigateUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigateUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("NavigateUrl");
+            retObjectNavigateUrl = classInstance.Get("NavigateUrl");
+            return (java.lang.String)retObjectNavigateUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNavigateUrl != null ? retObjectNavigateUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +249,7 @@ public class AdCreatedEventArgs extends EventArgs  {
 
     public void setNavigateUrl(java.lang.String NavigateUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NavigateUrl", NavigateUrl);
         } catch (JCNativeException jcne) {

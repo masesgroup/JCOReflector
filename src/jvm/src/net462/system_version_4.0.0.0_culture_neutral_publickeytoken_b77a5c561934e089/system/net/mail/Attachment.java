@@ -221,10 +221,14 @@ public class Attachment extends AttachmentBase  {
     
     public static Attachment CreateAttachmentFromString(java.lang.String content, ContentType contentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateAttachmentFromString = null;
         try {
-            JCObject objCreateAttachmentFromString = (JCObject)classType.Invoke("CreateAttachmentFromString", content, contentType == null ? null : contentType.getJCOInstance());
+            retObjectCreateAttachmentFromString = classType.Invoke("CreateAttachmentFromString", content, contentType == null ? null : contentType.getJCOInstance());
+            JCObject objCreateAttachmentFromString = (JCObject)retObjectCreateAttachmentFromString;
             return new Attachment(objCreateAttachmentFromString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateAttachmentFromString != null ? retObjectCreateAttachmentFromString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +236,14 @@ public class Attachment extends AttachmentBase  {
 
     public static Attachment CreateAttachmentFromString(java.lang.String content, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateAttachmentFromString = null;
         try {
-            JCObject objCreateAttachmentFromString = (JCObject)classType.Invoke("CreateAttachmentFromString", content, name);
+            retObjectCreateAttachmentFromString = classType.Invoke("CreateAttachmentFromString", content, name);
+            JCObject objCreateAttachmentFromString = (JCObject)retObjectCreateAttachmentFromString;
             return new Attachment(objCreateAttachmentFromString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateAttachmentFromString != null ? retObjectCreateAttachmentFromString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +251,14 @@ public class Attachment extends AttachmentBase  {
 
     public static Attachment CreateAttachmentFromString(java.lang.String content, java.lang.String name, Encoding contentEncoding, java.lang.String mediaType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateAttachmentFromString = null;
         try {
-            JCObject objCreateAttachmentFromString = (JCObject)classType.Invoke("CreateAttachmentFromString", content, name, contentEncoding == null ? null : contentEncoding.getJCOInstance(), mediaType);
+            retObjectCreateAttachmentFromString = classType.Invoke("CreateAttachmentFromString", content, name, contentEncoding == null ? null : contentEncoding.getJCOInstance(), mediaType);
+            JCObject objCreateAttachmentFromString = (JCObject)retObjectCreateAttachmentFromString;
             return new Attachment(objCreateAttachmentFromString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateAttachmentFromString != null ? retObjectCreateAttachmentFromString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +270,14 @@ public class Attachment extends AttachmentBase  {
     
     public ContentDisposition getContentDisposition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentDisposition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentDisposition");
+            retObjectContentDisposition = classInstance.Get("ContentDisposition");
+            JCObject val = (JCObject)retObjectContentDisposition;
             return new ContentDisposition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentDisposition != null ? retObjectContentDisposition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,9 +285,13 @@ public class Attachment extends AttachmentBase  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +299,7 @@ public class Attachment extends AttachmentBase  {
 
     public void setName(java.lang.String Name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -289,10 +309,14 @@ public class Attachment extends AttachmentBase  {
 
     public Encoding getNameEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNameEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NameEncoding");
+            retObjectNameEncoding = classInstance.Get("NameEncoding");
+            JCObject val = (JCObject)retObjectNameEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNameEncoding != null ? retObjectNameEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +324,7 @@ public class Attachment extends AttachmentBase  {
 
     public void setNameEncoding(Encoding NameEncoding) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NameEncoding", NameEncoding == null ? null : NameEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {

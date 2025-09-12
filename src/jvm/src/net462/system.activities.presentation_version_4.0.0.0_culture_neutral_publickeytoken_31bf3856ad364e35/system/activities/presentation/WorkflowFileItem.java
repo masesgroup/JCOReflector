@@ -166,9 +166,13 @@ public class WorkflowFileItem extends ContextItem  {
     
     public java.lang.String getLoadedFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadedFile = null;
         try {
-            return (java.lang.String)classInstance.Get("LoadedFile");
+            retObjectLoadedFile = classInstance.Get("LoadedFile");
+            return (java.lang.String)retObjectLoadedFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLoadedFile != null ? retObjectLoadedFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class WorkflowFileItem extends ContextItem  {
 
     public void setLoadedFile(java.lang.String LoadedFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LoadedFile", LoadedFile);
         } catch (JCNativeException jcne) {

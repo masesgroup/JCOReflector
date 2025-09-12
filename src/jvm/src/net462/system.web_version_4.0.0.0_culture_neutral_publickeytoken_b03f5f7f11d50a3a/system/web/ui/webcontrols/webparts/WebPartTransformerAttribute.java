@@ -166,10 +166,14 @@ public class WebPartTransformerAttribute extends Attribute  {
     
     public static NetType GetConsumerType(NetType transformerType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetConsumerType = null;
         try {
-            JCObject objGetConsumerType = (JCObject)classType.Invoke("GetConsumerType", transformerType == null ? null : transformerType.getJCOInstance());
+            retObjectGetConsumerType = classType.Invoke("GetConsumerType", transformerType == null ? null : transformerType.getJCOInstance());
+            JCObject objGetConsumerType = (JCObject)retObjectGetConsumerType;
             return new NetType(objGetConsumerType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConsumerType != null ? retObjectGetConsumerType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class WebPartTransformerAttribute extends Attribute  {
 
     public static NetType GetProviderType(NetType transformerType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetProviderType = null;
         try {
-            JCObject objGetProviderType = (JCObject)classType.Invoke("GetProviderType", transformerType == null ? null : transformerType.getJCOInstance());
+            retObjectGetProviderType = classType.Invoke("GetProviderType", transformerType == null ? null : transformerType.getJCOInstance());
+            JCObject objGetProviderType = (JCObject)retObjectGetProviderType;
             return new NetType(objGetProviderType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProviderType != null ? retObjectGetProviderType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class WebPartTransformerAttribute extends Attribute  {
     
     public NetType getConsumerType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConsumerType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConsumerType");
+            retObjectConsumerType = classInstance.Get("ConsumerType");
+            JCObject val = (JCObject)retObjectConsumerType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConsumerType != null ? retObjectConsumerType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +215,14 @@ public class WebPartTransformerAttribute extends Attribute  {
 
     public NetType getProviderType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProviderType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProviderType");
+            retObjectProviderType = classInstance.Get("ProviderType");
+            JCObject val = (JCObject)retObjectProviderType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProviderType != null ? retObjectProviderType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

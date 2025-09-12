@@ -170,9 +170,19 @@ public class StoreItemCollection extends ItemCollection  {
     
     public double getStoreSchemaVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStoreSchemaVersion = null;
         try {
-            return (double)classInstance.Get("StoreSchemaVersion");
+            retObjectStoreSchemaVersion = classInstance.Get("StoreSchemaVersion");
+            return (double)retObjectStoreSchemaVersion;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStoreSchemaVersionNumber = (java.lang.Number)retObjectStoreSchemaVersion;
+                return retObjectStoreSchemaVersionNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectStoreSchemaVersion != null ? retObjectStoreSchemaVersion.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +190,7 @@ public class StoreItemCollection extends ItemCollection  {
 
     public void setStoreSchemaVersion(double StoreSchemaVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StoreSchemaVersion", StoreSchemaVersion);
         } catch (JCNativeException jcne) {

@@ -145,9 +145,13 @@ public class ISuspendibleRegisteredObjectImplementation extends NetObject implem
     
     public Action Suspend() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuspend = null;
         try {
-            return (Action)classInstance.Invoke("Suspend");
+            retObjectSuspend = classInstance.Invoke("Suspend");
+            return (Action)retObjectSuspend;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into Action", retObjectSuspend != null ? retObjectSuspend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,7 +159,7 @@ public class ISuspendibleRegisteredObjectImplementation extends NetObject implem
 
     public void Stop(boolean immediate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Stop", immediate);
         } catch (JCNativeException jcne) {

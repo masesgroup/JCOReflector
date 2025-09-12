@@ -172,10 +172,14 @@ public class FormViewUpdateEventArgs extends CancelEventArgs  {
     
     public IOrderedDictionary getKeys() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeys = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Keys");
+            retObjectKeys = classInstance.Get("Keys");
+            JCObject val = (JCObject)retObjectKeys;
             return new IOrderedDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeys != null ? retObjectKeys.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class FormViewUpdateEventArgs extends CancelEventArgs  {
 
     public IOrderedDictionary getNewValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewValues = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewValues");
+            retObjectNewValues = classInstance.Get("NewValues");
+            JCObject val = (JCObject)retObjectNewValues;
             return new IOrderedDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewValues != null ? retObjectNewValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +202,14 @@ public class FormViewUpdateEventArgs extends CancelEventArgs  {
 
     public IOrderedDictionary getOldValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldValues = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OldValues");
+            retObjectOldValues = classInstance.Get("OldValues");
+            JCObject val = (JCObject)retObjectOldValues;
             return new IOrderedDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOldValues != null ? retObjectOldValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +217,14 @@ public class FormViewUpdateEventArgs extends CancelEventArgs  {
 
     public NetObject getCommandArgument() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandArgument = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandArgument");
+            retObjectCommandArgument = classInstance.Get("CommandArgument");
+            JCObject val = (JCObject)retObjectCommandArgument;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandArgument != null ? retObjectCommandArgument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

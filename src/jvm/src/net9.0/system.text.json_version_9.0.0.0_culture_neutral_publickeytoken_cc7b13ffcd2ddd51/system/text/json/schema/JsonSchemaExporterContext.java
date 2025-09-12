@@ -162,10 +162,14 @@ public class JsonSchemaExporterContext extends ValueType  {
     
     public JsonPropertyInfo getPropertyInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyInfo");
+            retObjectPropertyInfo = classInstance.Get("PropertyInfo");
+            JCObject val = (JCObject)retObjectPropertyInfo;
             return new JsonPropertyInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyInfo != null ? retObjectPropertyInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class JsonSchemaExporterContext extends ValueType  {
 
     public JsonTypeInfo getBaseTypeInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseTypeInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseTypeInfo");
+            retObjectBaseTypeInfo = classInstance.Get("BaseTypeInfo");
+            JCObject val = (JCObject)retObjectBaseTypeInfo;
             return new JsonTypeInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseTypeInfo != null ? retObjectBaseTypeInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class JsonSchemaExporterContext extends ValueType  {
 
     public JsonTypeInfo getTypeInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeInfo");
+            retObjectTypeInfo = classInstance.Get("TypeInfo");
+            JCObject val = (JCObject)retObjectTypeInfo;
             return new JsonTypeInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeInfo != null ? retObjectTypeInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

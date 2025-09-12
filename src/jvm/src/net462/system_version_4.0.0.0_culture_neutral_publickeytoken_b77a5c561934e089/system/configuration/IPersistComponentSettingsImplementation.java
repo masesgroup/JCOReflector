@@ -142,7 +142,7 @@ public class IPersistComponentSettingsImplementation extends NetObject implement
     
     public void LoadComponentSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadComponentSettings");
         } catch (JCNativeException jcne) {
@@ -152,7 +152,7 @@ public class IPersistComponentSettingsImplementation extends NetObject implement
 
     public void ResetComponentSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetComponentSettings");
         } catch (JCNativeException jcne) {
@@ -162,7 +162,7 @@ public class IPersistComponentSettingsImplementation extends NetObject implement
 
     public void SaveComponentSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveComponentSettings");
         } catch (JCNativeException jcne) {
@@ -176,9 +176,13 @@ public class IPersistComponentSettingsImplementation extends NetObject implement
     
     public boolean getSaveSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSaveSettings = null;
         try {
-            return (boolean)classInstance.Get("SaveSettings");
+            retObjectSaveSettings = classInstance.Get("SaveSettings");
+            return (boolean)retObjectSaveSettings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSaveSettings != null ? retObjectSaveSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class IPersistComponentSettingsImplementation extends NetObject implement
 
     public void setSaveSettings(boolean SaveSettings) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SaveSettings", SaveSettings);
         } catch (JCNativeException jcne) {
@@ -196,9 +200,13 @@ public class IPersistComponentSettingsImplementation extends NetObject implement
 
     public java.lang.String getSettingsKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSettingsKey = null;
         try {
-            return (java.lang.String)classInstance.Get("SettingsKey");
+            retObjectSettingsKey = classInstance.Get("SettingsKey");
+            return (java.lang.String)retObjectSettingsKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSettingsKey != null ? retObjectSettingsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +214,7 @@ public class IPersistComponentSettingsImplementation extends NetObject implement
 
     public void setSettingsKey(java.lang.String SettingsKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SettingsKey", SettingsKey);
         } catch (JCNativeException jcne) {

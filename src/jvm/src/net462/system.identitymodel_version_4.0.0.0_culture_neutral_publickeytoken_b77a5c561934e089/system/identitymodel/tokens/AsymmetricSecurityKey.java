@@ -158,9 +158,13 @@ public class AsymmetricSecurityKey extends SecurityKey  {
     
     public boolean HasPrivateKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasPrivateKey = null;
         try {
-            return (boolean)classInstance.Invoke("HasPrivateKey");
+            retObjectHasPrivateKey = classInstance.Invoke("HasPrivateKey");
+            return (boolean)retObjectHasPrivateKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasPrivateKey != null ? retObjectHasPrivateKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class AsymmetricSecurityKey extends SecurityKey  {
 
     public AsymmetricAlgorithm GetAsymmetricAlgorithm(java.lang.String algorithm, boolean privateKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAsymmetricAlgorithm = null;
         try {
-            JCObject objGetAsymmetricAlgorithm = (JCObject)classInstance.Invoke("GetAsymmetricAlgorithm", algorithm, privateKey);
+            retObjectGetAsymmetricAlgorithm = classInstance.Invoke("GetAsymmetricAlgorithm", algorithm, privateKey);
+            JCObject objGetAsymmetricAlgorithm = (JCObject)retObjectGetAsymmetricAlgorithm;
             return new AsymmetricAlgorithm(objGetAsymmetricAlgorithm);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAsymmetricAlgorithm != null ? retObjectGetAsymmetricAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class AsymmetricSecurityKey extends SecurityKey  {
 
     public AsymmetricSignatureDeformatter GetSignatureDeformatter(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSignatureDeformatter = null;
         try {
-            JCObject objGetSignatureDeformatter = (JCObject)classInstance.Invoke("GetSignatureDeformatter", algorithm);
+            retObjectGetSignatureDeformatter = classInstance.Invoke("GetSignatureDeformatter", algorithm);
+            JCObject objGetSignatureDeformatter = (JCObject)retObjectGetSignatureDeformatter;
             return new AsymmetricSignatureDeformatter(objGetSignatureDeformatter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSignatureDeformatter != null ? retObjectGetSignatureDeformatter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class AsymmetricSecurityKey extends SecurityKey  {
 
     public AsymmetricSignatureFormatter GetSignatureFormatter(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSignatureFormatter = null;
         try {
-            JCObject objGetSignatureFormatter = (JCObject)classInstance.Invoke("GetSignatureFormatter", algorithm);
+            retObjectGetSignatureFormatter = classInstance.Invoke("GetSignatureFormatter", algorithm);
+            JCObject objGetSignatureFormatter = (JCObject)retObjectGetSignatureFormatter;
             return new AsymmetricSignatureFormatter(objGetSignatureFormatter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSignatureFormatter != null ? retObjectGetSignatureFormatter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +217,14 @@ public class AsymmetricSecurityKey extends SecurityKey  {
 
     public HashAlgorithm GetHashAlgorithmForSignature(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHashAlgorithmForSignature = null;
         try {
-            JCObject objGetHashAlgorithmForSignature = (JCObject)classInstance.Invoke("GetHashAlgorithmForSignature", algorithm);
+            retObjectGetHashAlgorithmForSignature = classInstance.Invoke("GetHashAlgorithmForSignature", algorithm);
+            JCObject objGetHashAlgorithmForSignature = (JCObject)retObjectGetHashAlgorithmForSignature;
             return new HashAlgorithm(objGetHashAlgorithmForSignature);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHashAlgorithmForSignature != null ? retObjectGetHashAlgorithmForSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

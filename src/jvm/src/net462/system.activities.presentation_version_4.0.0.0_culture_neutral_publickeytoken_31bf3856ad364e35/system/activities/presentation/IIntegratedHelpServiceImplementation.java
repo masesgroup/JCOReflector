@@ -143,7 +143,7 @@ public class IIntegratedHelpServiceImplementation extends NetObject implements I
     
     public void AddContextAttribute(java.lang.String name, java.lang.String value, HelpKeywordType keywordType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddContextAttribute", name, value, keywordType == null ? null : keywordType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -153,7 +153,7 @@ public class IIntegratedHelpServiceImplementation extends NetObject implements I
 
     public void RemoveContextAttribute(java.lang.String name, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveContextAttribute", name, value);
         } catch (JCNativeException jcne) {
@@ -163,7 +163,7 @@ public class IIntegratedHelpServiceImplementation extends NetObject implements I
 
     public void ShowHelpFromKeyword(java.lang.String helpKeyword) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowHelpFromKeyword", helpKeyword);
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class IIntegratedHelpServiceImplementation extends NetObject implements I
 
     public void ShowHelpFromUrl(java.lang.String helpUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowHelpFromUrl", helpUrl);
         } catch (JCNativeException jcne) {

@@ -158,10 +158,14 @@ public class StrokeHitEventArgs extends EventArgs  {
     
     public StrokeCollection GetPointEraseResults() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPointEraseResults = null;
         try {
-            JCObject objGetPointEraseResults = (JCObject)classInstance.Invoke("GetPointEraseResults");
+            retObjectGetPointEraseResults = classInstance.Invoke("GetPointEraseResults");
+            JCObject objGetPointEraseResults = (JCObject)retObjectGetPointEraseResults;
             return new StrokeCollection(objGetPointEraseResults);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPointEraseResults != null ? retObjectGetPointEraseResults.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class StrokeHitEventArgs extends EventArgs  {
     
     public Stroke getHitStroke() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitStroke = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HitStroke");
+            retObjectHitStroke = classInstance.Get("HitStroke");
+            JCObject val = (JCObject)retObjectHitStroke;
             return new Stroke(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHitStroke != null ? retObjectHitStroke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

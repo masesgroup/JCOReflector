@@ -171,10 +171,14 @@ public class DatabaseGeneratedAttribute extends Attribute  {
     
     public DatabaseGeneratedOption getDatabaseGeneratedOption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDatabaseGeneratedOption = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DatabaseGeneratedOption");
+            retObjectDatabaseGeneratedOption = classInstance.Get("DatabaseGeneratedOption");
+            JCObject val = (JCObject)retObjectDatabaseGeneratedOption;
             return new DatabaseGeneratedOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDatabaseGeneratedOption != null ? retObjectDatabaseGeneratedOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

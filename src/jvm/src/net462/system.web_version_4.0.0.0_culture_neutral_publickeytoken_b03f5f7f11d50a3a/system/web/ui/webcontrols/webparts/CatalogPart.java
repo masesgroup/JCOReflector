@@ -157,10 +157,14 @@ public class CatalogPart extends Part  {
     
     public WebPart GetWebPart(WebPartDescription description) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetWebPart = null;
         try {
-            JCObject objGetWebPart = (JCObject)classInstance.Invoke("GetWebPart", description == null ? null : description.getJCOInstance());
+            retObjectGetWebPart = classInstance.Invoke("GetWebPart", description == null ? null : description.getJCOInstance());
+            JCObject objGetWebPart = (JCObject)retObjectGetWebPart;
             return new WebPart(objGetWebPart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetWebPart != null ? retObjectGetWebPart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class CatalogPart extends Part  {
 
     public WebPartDescriptionCollection GetAvailableWebPartDescriptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAvailableWebPartDescriptions = null;
         try {
-            JCObject objGetAvailableWebPartDescriptions = (JCObject)classInstance.Invoke("GetAvailableWebPartDescriptions");
+            retObjectGetAvailableWebPartDescriptions = classInstance.Invoke("GetAvailableWebPartDescriptions");
+            JCObject objGetAvailableWebPartDescriptions = (JCObject)retObjectGetAvailableWebPartDescriptions;
             return new WebPartDescriptionCollection(objGetAvailableWebPartDescriptions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAvailableWebPartDescriptions != null ? retObjectGetAvailableWebPartDescriptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +191,13 @@ public class CatalogPart extends Part  {
     
     public java.lang.String getDisplayTitle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayTitle");
+            retObjectDisplayTitle = classInstance.Get("DisplayTitle");
+            return (java.lang.String)retObjectDisplayTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayTitle != null ? retObjectDisplayTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

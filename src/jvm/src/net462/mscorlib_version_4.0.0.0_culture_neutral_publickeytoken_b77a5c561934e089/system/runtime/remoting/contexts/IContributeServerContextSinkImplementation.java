@@ -144,10 +144,14 @@ public class IContributeServerContextSinkImplementation extends NetObject implem
     
     public IMessageSink GetServerContextSink(IMessageSink nextSink) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetServerContextSink = null;
         try {
-            JCObject objGetServerContextSink = (JCObject)classInstance.Invoke("GetServerContextSink", nextSink == null ? null : nextSink.getJCOInstance());
+            retObjectGetServerContextSink = classInstance.Invoke("GetServerContextSink", nextSink == null ? null : nextSink.getJCOInstance());
+            JCObject objGetServerContextSink = (JCObject)retObjectGetServerContextSink;
             return new IMessageSinkImplementation(objGetServerContextSink);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetServerContextSink != null ? retObjectGetServerContextSink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

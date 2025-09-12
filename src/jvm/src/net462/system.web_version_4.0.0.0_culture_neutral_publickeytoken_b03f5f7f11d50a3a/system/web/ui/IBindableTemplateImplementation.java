@@ -147,10 +147,14 @@ public class IBindableTemplateImplementation extends NetObject implements IBinda
     
     public IOrderedDictionary ExtractValues(Control container) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtractValues = null;
         try {
-            JCObject objExtractValues = (JCObject)classInstance.Invoke("ExtractValues", container == null ? null : container.getJCOInstance());
+            retObjectExtractValues = classInstance.Invoke("ExtractValues", container == null ? null : container.getJCOInstance());
+            JCObject objExtractValues = (JCObject)retObjectExtractValues;
             return new IOrderedDictionaryImplementation(objExtractValues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtractValues != null ? retObjectExtractValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,7 +162,7 @@ public class IBindableTemplateImplementation extends NetObject implements IBinda
 
     public void InstantiateIn(Control container) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InstantiateIn", container == null ? null : container.getJCOInstance());
         } catch (JCNativeException jcne) {

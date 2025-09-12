@@ -161,10 +161,14 @@ public class TextRenderer extends NetObject  {
     
     public static Size MeasureText(IDeviceContext dc, java.lang.String text, Font font, Size proposedSize, TextFormatFlags flags) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMeasureText = null;
         try {
-            JCObject objMeasureText = (JCObject)classType.Invoke("MeasureText", dc == null ? null : dc.getJCOInstance(), text, font == null ? null : font.getJCOInstance(), proposedSize == null ? null : proposedSize.getJCOInstance(), flags == null ? null : flags.getJCOInstance());
+            retObjectMeasureText = classType.Invoke("MeasureText", dc == null ? null : dc.getJCOInstance(), text, font == null ? null : font.getJCOInstance(), proposedSize == null ? null : proposedSize.getJCOInstance(), flags == null ? null : flags.getJCOInstance());
+            JCObject objMeasureText = (JCObject)retObjectMeasureText;
             return new Size(objMeasureText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMeasureText != null ? retObjectMeasureText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class TextRenderer extends NetObject  {
 
     public static Size MeasureText(IDeviceContext dc, java.lang.String text, Font font, Size proposedSize) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMeasureText = null;
         try {
-            JCObject objMeasureText = (JCObject)classType.Invoke("MeasureText", dc == null ? null : dc.getJCOInstance(), text, font == null ? null : font.getJCOInstance(), proposedSize == null ? null : proposedSize.getJCOInstance());
+            retObjectMeasureText = classType.Invoke("MeasureText", dc == null ? null : dc.getJCOInstance(), text, font == null ? null : font.getJCOInstance(), proposedSize == null ? null : proposedSize.getJCOInstance());
+            JCObject objMeasureText = (JCObject)retObjectMeasureText;
             return new Size(objMeasureText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMeasureText != null ? retObjectMeasureText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class TextRenderer extends NetObject  {
 
     public static Size MeasureText(IDeviceContext dc, java.lang.String text, Font font) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMeasureText = null;
         try {
-            JCObject objMeasureText = (JCObject)classType.Invoke("MeasureText", dc == null ? null : dc.getJCOInstance(), text, font == null ? null : font.getJCOInstance());
+            retObjectMeasureText = classType.Invoke("MeasureText", dc == null ? null : dc.getJCOInstance(), text, font == null ? null : font.getJCOInstance());
+            JCObject objMeasureText = (JCObject)retObjectMeasureText;
             return new Size(objMeasureText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMeasureText != null ? retObjectMeasureText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +206,14 @@ public class TextRenderer extends NetObject  {
 
     public static Size MeasureText(java.lang.String text, Font font, Size proposedSize, TextFormatFlags flags) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMeasureText = null;
         try {
-            JCObject objMeasureText = (JCObject)classType.Invoke("MeasureText", text, font == null ? null : font.getJCOInstance(), proposedSize == null ? null : proposedSize.getJCOInstance(), flags == null ? null : flags.getJCOInstance());
+            retObjectMeasureText = classType.Invoke("MeasureText", text, font == null ? null : font.getJCOInstance(), proposedSize == null ? null : proposedSize.getJCOInstance(), flags == null ? null : flags.getJCOInstance());
+            JCObject objMeasureText = (JCObject)retObjectMeasureText;
             return new Size(objMeasureText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMeasureText != null ? retObjectMeasureText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +221,14 @@ public class TextRenderer extends NetObject  {
 
     public static Size MeasureText(java.lang.String text, Font font, Size proposedSize) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMeasureText = null;
         try {
-            JCObject objMeasureText = (JCObject)classType.Invoke("MeasureText", text, font == null ? null : font.getJCOInstance(), proposedSize == null ? null : proposedSize.getJCOInstance());
+            retObjectMeasureText = classType.Invoke("MeasureText", text, font == null ? null : font.getJCOInstance(), proposedSize == null ? null : proposedSize.getJCOInstance());
+            JCObject objMeasureText = (JCObject)retObjectMeasureText;
             return new Size(objMeasureText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMeasureText != null ? retObjectMeasureText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +236,14 @@ public class TextRenderer extends NetObject  {
 
     public static Size MeasureText(java.lang.String text, Font font) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMeasureText = null;
         try {
-            JCObject objMeasureText = (JCObject)classType.Invoke("MeasureText", text, font == null ? null : font.getJCOInstance());
+            retObjectMeasureText = classType.Invoke("MeasureText", text, font == null ? null : font.getJCOInstance());
+            JCObject objMeasureText = (JCObject)retObjectMeasureText;
             return new Size(objMeasureText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMeasureText != null ? retObjectMeasureText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +251,7 @@ public class TextRenderer extends NetObject  {
 
     public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Point pt, Color foreColor, Color backColor, TextFormatFlags flags) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawText", dc == null ? null : dc.getJCOInstance(), text, font == null ? null : font.getJCOInstance(), pt == null ? null : pt.getJCOInstance(), foreColor == null ? null : foreColor.getJCOInstance(), backColor == null ? null : backColor.getJCOInstance(), flags == null ? null : flags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -237,7 +261,7 @@ public class TextRenderer extends NetObject  {
 
     public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Point pt, Color foreColor, Color backColor) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawText", dc == null ? null : dc.getJCOInstance(), text, font == null ? null : font.getJCOInstance(), pt == null ? null : pt.getJCOInstance(), foreColor == null ? null : foreColor.getJCOInstance(), backColor == null ? null : backColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -247,7 +271,7 @@ public class TextRenderer extends NetObject  {
 
     public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Point pt, Color foreColor, TextFormatFlags flags) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawText", dc == null ? null : dc.getJCOInstance(), text, font == null ? null : font.getJCOInstance(), pt == null ? null : pt.getJCOInstance(), foreColor == null ? null : foreColor.getJCOInstance(), flags == null ? null : flags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -257,7 +281,7 @@ public class TextRenderer extends NetObject  {
 
     public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Point pt, Color foreColor) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawText", dc == null ? null : dc.getJCOInstance(), text, font == null ? null : font.getJCOInstance(), pt == null ? null : pt.getJCOInstance(), foreColor == null ? null : foreColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -267,7 +291,7 @@ public class TextRenderer extends NetObject  {
 
     public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Rectangle bounds, Color foreColor, Color backColor, TextFormatFlags flags) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawText", dc == null ? null : dc.getJCOInstance(), text, font == null ? null : font.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), foreColor == null ? null : foreColor.getJCOInstance(), backColor == null ? null : backColor.getJCOInstance(), flags == null ? null : flags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -277,7 +301,7 @@ public class TextRenderer extends NetObject  {
 
     public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Rectangle bounds, Color foreColor, Color backColor) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawText", dc == null ? null : dc.getJCOInstance(), text, font == null ? null : font.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), foreColor == null ? null : foreColor.getJCOInstance(), backColor == null ? null : backColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -287,7 +311,7 @@ public class TextRenderer extends NetObject  {
 
     public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Rectangle bounds, Color foreColor, TextFormatFlags flags) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawText", dc == null ? null : dc.getJCOInstance(), text, font == null ? null : font.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), foreColor == null ? null : foreColor.getJCOInstance(), flags == null ? null : flags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -297,7 +321,7 @@ public class TextRenderer extends NetObject  {
 
     public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Rectangle bounds, Color foreColor) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawText", dc == null ? null : dc.getJCOInstance(), text, font == null ? null : font.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), foreColor == null ? null : foreColor.getJCOInstance());
         } catch (JCNativeException jcne) {

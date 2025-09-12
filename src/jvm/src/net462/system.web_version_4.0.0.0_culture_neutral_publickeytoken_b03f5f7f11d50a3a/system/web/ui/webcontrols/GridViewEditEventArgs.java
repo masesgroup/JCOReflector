@@ -170,9 +170,19 @@ public class GridViewEditEventArgs extends CancelEventArgs  {
     
     public int getNewEditIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewEditIndex = null;
         try {
-            return (int)classInstance.Get("NewEditIndex");
+            retObjectNewEditIndex = classInstance.Get("NewEditIndex");
+            return (int)retObjectNewEditIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNewEditIndexNumber = (java.lang.Number)retObjectNewEditIndex;
+                return retObjectNewEditIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNewEditIndex != null ? retObjectNewEditIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +190,7 @@ public class GridViewEditEventArgs extends CancelEventArgs  {
 
     public void setNewEditIndex(int NewEditIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewEditIndex", NewEditIndex);
         } catch (JCNativeException jcne) {

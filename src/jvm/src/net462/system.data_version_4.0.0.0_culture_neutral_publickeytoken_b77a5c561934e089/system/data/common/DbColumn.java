@@ -157,9 +157,13 @@ public class DbColumn extends NetObject  {
     
     public java.lang.String getBaseCatalogName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseCatalogName = null;
         try {
-            return (java.lang.String)classInstance.Get("BaseCatalogName");
+            retObjectBaseCatalogName = classInstance.Get("BaseCatalogName");
+            return (java.lang.String)retObjectBaseCatalogName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBaseCatalogName != null ? retObjectBaseCatalogName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class DbColumn extends NetObject  {
 
     public void setBaseCatalogName(java.lang.String BaseCatalogName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseCatalogName", BaseCatalogName);
         } catch (JCNativeException jcne) {
@@ -177,9 +181,13 @@ public class DbColumn extends NetObject  {
 
     public java.lang.String getBaseColumnName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseColumnName = null;
         try {
-            return (java.lang.String)classInstance.Get("BaseColumnName");
+            retObjectBaseColumnName = classInstance.Get("BaseColumnName");
+            return (java.lang.String)retObjectBaseColumnName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBaseColumnName != null ? retObjectBaseColumnName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +195,7 @@ public class DbColumn extends NetObject  {
 
     public void setBaseColumnName(java.lang.String BaseColumnName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseColumnName", BaseColumnName);
         } catch (JCNativeException jcne) {
@@ -197,9 +205,13 @@ public class DbColumn extends NetObject  {
 
     public java.lang.String getBaseSchemaName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseSchemaName = null;
         try {
-            return (java.lang.String)classInstance.Get("BaseSchemaName");
+            retObjectBaseSchemaName = classInstance.Get("BaseSchemaName");
+            return (java.lang.String)retObjectBaseSchemaName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBaseSchemaName != null ? retObjectBaseSchemaName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +219,7 @@ public class DbColumn extends NetObject  {
 
     public void setBaseSchemaName(java.lang.String BaseSchemaName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseSchemaName", BaseSchemaName);
         } catch (JCNativeException jcne) {
@@ -217,9 +229,13 @@ public class DbColumn extends NetObject  {
 
     public java.lang.String getBaseServerName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseServerName = null;
         try {
-            return (java.lang.String)classInstance.Get("BaseServerName");
+            retObjectBaseServerName = classInstance.Get("BaseServerName");
+            return (java.lang.String)retObjectBaseServerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBaseServerName != null ? retObjectBaseServerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +243,7 @@ public class DbColumn extends NetObject  {
 
     public void setBaseServerName(java.lang.String BaseServerName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseServerName", BaseServerName);
         } catch (JCNativeException jcne) {
@@ -237,9 +253,13 @@ public class DbColumn extends NetObject  {
 
     public java.lang.String getBaseTableName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseTableName = null;
         try {
-            return (java.lang.String)classInstance.Get("BaseTableName");
+            retObjectBaseTableName = classInstance.Get("BaseTableName");
+            return (java.lang.String)retObjectBaseTableName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBaseTableName != null ? retObjectBaseTableName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +267,7 @@ public class DbColumn extends NetObject  {
 
     public void setBaseTableName(java.lang.String BaseTableName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseTableName", BaseTableName);
         } catch (JCNativeException jcne) {
@@ -257,9 +277,13 @@ public class DbColumn extends NetObject  {
 
     public java.lang.String getColumnName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnName = null;
         try {
-            return (java.lang.String)classInstance.Get("ColumnName");
+            retObjectColumnName = classInstance.Get("ColumnName");
+            return (java.lang.String)retObjectColumnName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectColumnName != null ? retObjectColumnName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +291,7 @@ public class DbColumn extends NetObject  {
 
     public void setColumnName(java.lang.String ColumnName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnName", ColumnName);
         } catch (JCNativeException jcne) {
@@ -277,9 +301,13 @@ public class DbColumn extends NetObject  {
 
     public java.lang.String getDataTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("DataTypeName");
+            retObjectDataTypeName = classInstance.Get("DataTypeName");
+            return (java.lang.String)retObjectDataTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataTypeName != null ? retObjectDataTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,7 +315,7 @@ public class DbColumn extends NetObject  {
 
     public void setDataTypeName(java.lang.String DataTypeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataTypeName", DataTypeName);
         } catch (JCNativeException jcne) {
@@ -297,9 +325,13 @@ public class DbColumn extends NetObject  {
 
     public java.lang.String getUdtAssemblyQualifiedName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUdtAssemblyQualifiedName = null;
         try {
-            return (java.lang.String)classInstance.Get("UdtAssemblyQualifiedName");
+            retObjectUdtAssemblyQualifiedName = classInstance.Get("UdtAssemblyQualifiedName");
+            return (java.lang.String)retObjectUdtAssemblyQualifiedName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUdtAssemblyQualifiedName != null ? retObjectUdtAssemblyQualifiedName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,7 +339,7 @@ public class DbColumn extends NetObject  {
 
     public void setUdtAssemblyQualifiedName(java.lang.String UdtAssemblyQualifiedName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UdtAssemblyQualifiedName", UdtAssemblyQualifiedName);
         } catch (JCNativeException jcne) {
@@ -317,10 +349,14 @@ public class DbColumn extends NetObject  {
 
     public NetType getDataType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataType");
+            retObjectDataType = classInstance.Get("DataType");
+            JCObject val = (JCObject)retObjectDataType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataType != null ? retObjectDataType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,7 +364,7 @@ public class DbColumn extends NetObject  {
 
     public void setDataType(NetType DataType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataType", DataType == null ? null : DataType.getJCOInstance());
         } catch (JCNativeException jcne) {

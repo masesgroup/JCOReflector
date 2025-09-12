@@ -166,9 +166,13 @@ public class RegistrationServices extends NetObject  {
     
     public boolean RegisterAssembly(Assembly assembly, AssemblyRegistrationFlags flags) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.FormatException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegisterAssembly = null;
         try {
-            return (boolean)classInstance.Invoke("RegisterAssembly", assembly == null ? null : assembly.getJCOInstance(), flags == null ? null : flags.getJCOInstance());
+            retObjectRegisterAssembly = classInstance.Invoke("RegisterAssembly", assembly == null ? null : assembly.getJCOInstance(), flags == null ? null : flags.getJCOInstance());
+            return (boolean)retObjectRegisterAssembly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRegisterAssembly != null ? retObjectRegisterAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class RegistrationServices extends NetObject  {
 
     public boolean TypeRepresentsComType(NetType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeRepresentsComType = null;
         try {
-            return (boolean)classInstance.Invoke("TypeRepresentsComType", type == null ? null : type.getJCOInstance());
+            retObjectTypeRepresentsComType = classInstance.Invoke("TypeRepresentsComType", type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectTypeRepresentsComType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTypeRepresentsComType != null ? retObjectTypeRepresentsComType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,13 @@ public class RegistrationServices extends NetObject  {
 
     public boolean TypeRequiresRegistration(NetType type) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeRequiresRegistration = null;
         try {
-            return (boolean)classInstance.Invoke("TypeRequiresRegistration", type == null ? null : type.getJCOInstance());
+            retObjectTypeRequiresRegistration = classInstance.Invoke("TypeRequiresRegistration", type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectTypeRequiresRegistration;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTypeRequiresRegistration != null ? retObjectTypeRequiresRegistration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +208,13 @@ public class RegistrationServices extends NetObject  {
 
     public boolean UnregisterAssembly(Assembly assembly) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnregisterAssembly = null;
         try {
-            return (boolean)classInstance.Invoke("UnregisterAssembly", assembly == null ? null : assembly.getJCOInstance());
+            retObjectUnregisterAssembly = classInstance.Invoke("UnregisterAssembly", assembly == null ? null : assembly.getJCOInstance());
+            return (boolean)retObjectUnregisterAssembly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectUnregisterAssembly != null ? retObjectUnregisterAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +222,19 @@ public class RegistrationServices extends NetObject  {
 
     public int RegisterTypeForComClients(NetType type, RegistrationClassContext classContext, RegistrationConnectionType flags) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegisterTypeForComClients = null;
         try {
-            return (int)classInstance.Invoke("RegisterTypeForComClients", type == null ? null : type.getJCOInstance(), classContext == null ? null : classContext.getJCOInstance(), flags == null ? null : flags.getJCOInstance());
+            retObjectRegisterTypeForComClients = classInstance.Invoke("RegisterTypeForComClients", type == null ? null : type.getJCOInstance(), classContext == null ? null : classContext.getJCOInstance(), flags == null ? null : flags.getJCOInstance());
+            return (int)retObjectRegisterTypeForComClients;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRegisterTypeForComClientsNumber = (java.lang.Number)retObjectRegisterTypeForComClients;
+                return retObjectRegisterTypeForComClientsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRegisterTypeForComClients != null ? retObjectRegisterTypeForComClients.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +242,14 @@ public class RegistrationServices extends NetObject  {
 
     public Guid GetManagedCategoryGuid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetManagedCategoryGuid = null;
         try {
-            JCObject objGetManagedCategoryGuid = (JCObject)classInstance.Invoke("GetManagedCategoryGuid");
+            retObjectGetManagedCategoryGuid = classInstance.Invoke("GetManagedCategoryGuid");
+            JCObject objGetManagedCategoryGuid = (JCObject)retObjectGetManagedCategoryGuid;
             return new Guid(objGetManagedCategoryGuid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetManagedCategoryGuid != null ? retObjectGetManagedCategoryGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +257,13 @@ public class RegistrationServices extends NetObject  {
 
     public java.lang.String GetProgIdForType(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProgIdForType = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetProgIdForType", type == null ? null : type.getJCOInstance());
+            retObjectGetProgIdForType = classInstance.Invoke("GetProgIdForType", type == null ? null : type.getJCOInstance());
+            return (java.lang.String)retObjectGetProgIdForType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetProgIdForType != null ? retObjectGetProgIdForType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,16 +271,20 @@ public class RegistrationServices extends NetObject  {
 
     public NetType[] GetRegistrableTypesInAssembly(Assembly assembly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRegistrableTypesInAssembly = null;
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRegistrableTypesInAssembly", assembly == null ? null : assembly.getJCOInstance());
+            retObjectGetRegistrableTypesInAssembly = classInstance.Invoke("GetRegistrableTypesInAssembly", assembly == null ? null : assembly.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetRegistrableTypesInAssembly;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRegistrableTypesInAssembly != null ? retObjectGetRegistrableTypesInAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,7 +292,7 @@ public class RegistrationServices extends NetObject  {
 
     public void RegisterTypeForComClients(NetType type, JCORefOut<Guid> g) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterTypeForComClients", type == null ? null : type.getJCOInstance(), g.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -264,7 +302,7 @@ public class RegistrationServices extends NetObject  {
 
     public void UnregisterTypeForComClients(int cookie) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnregisterTypeForComClients", cookie);
         } catch (JCNativeException jcne) {

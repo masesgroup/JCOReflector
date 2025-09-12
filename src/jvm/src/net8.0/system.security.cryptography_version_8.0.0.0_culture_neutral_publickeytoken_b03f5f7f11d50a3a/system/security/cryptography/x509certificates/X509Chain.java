@@ -177,9 +177,13 @@ public class X509Chain extends NetObject implements AutoCloseable {
     
     public boolean Build(X509Certificate2 certificate) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.OverflowException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuild = null;
         try {
-            return (boolean)classInstance.Invoke("Build", certificate == null ? null : certificate.getJCOInstance());
+            retObjectBuild = classInstance.Invoke("Build", certificate == null ? null : certificate.getJCOInstance());
+            return (boolean)retObjectBuild;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectBuild != null ? retObjectBuild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +191,14 @@ public class X509Chain extends NetObject implements AutoCloseable {
 
     public static X509Chain Create() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create");
+            retObjectCreate = classType.Invoke("Create");
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new X509Chain(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class X509Chain extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -208,7 +216,7 @@ public class X509Chain extends NetObject implements AutoCloseable {
 
     public void Reset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -219,7 +227,7 @@ public class X509Chain extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -235,10 +243,14 @@ public class X509Chain extends NetObject implements AutoCloseable {
     
     public SafeX509ChainHandle getSafeHandle() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSafeHandle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SafeHandle");
+            retObjectSafeHandle = classInstance.Get("SafeHandle");
+            JCObject val = (JCObject)retObjectSafeHandle;
             return new SafeX509ChainHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSafeHandle != null ? retObjectSafeHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +258,14 @@ public class X509Chain extends NetObject implements AutoCloseable {
 
     public X509ChainElementCollection getChainElements() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChainElements = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ChainElements");
+            retObjectChainElements = classInstance.Get("ChainElements");
+            JCObject val = (JCObject)retObjectChainElements;
             return new X509ChainElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChainElements != null ? retObjectChainElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +273,14 @@ public class X509Chain extends NetObject implements AutoCloseable {
 
     public X509ChainPolicy getChainPolicy() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChainPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ChainPolicy");
+            retObjectChainPolicy = classInstance.Get("ChainPolicy");
+            JCObject val = (JCObject)retObjectChainPolicy;
             return new X509ChainPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChainPolicy != null ? retObjectChainPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +288,7 @@ public class X509Chain extends NetObject implements AutoCloseable {
 
     public void setChainPolicy(X509ChainPolicy ChainPolicy) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ChainPolicy", ChainPolicy == null ? null : ChainPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -278,16 +298,20 @@ public class X509Chain extends NetObject implements AutoCloseable {
 
     public final X509ChainStatus[] getChainStatus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChainStatus = null;
         try {
             ArrayList<X509ChainStatus> resultingArrayList = new ArrayList<X509ChainStatus>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ChainStatus");
+            retObjectChainStatus = classInstance.Get("ChainStatus");
+            JCObject resultingObjects = (JCObject)retObjectChainStatus;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new X509ChainStatus(resultingObject));
             }
             X509ChainStatus[] resultingArray = new X509ChainStatus[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChainStatus != null ? retObjectChainStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -173,10 +173,14 @@ public class WebServicesSection extends ConfigurationSection  {
     
     public static WebServicesSection GetSection(Configuration config) throws Throwable, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSection = null;
         try {
-            JCObject objGetSection = (JCObject)classType.Invoke("GetSection", config == null ? null : config.getJCOInstance());
+            retObjectGetSection = classType.Invoke("GetSection", config == null ? null : config.getJCOInstance());
+            JCObject objGetSection = (JCObject)retObjectGetSection;
             return new WebServicesSection(objGetSection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSection != null ? retObjectGetSection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +192,14 @@ public class WebServicesSection extends ConfigurationSection  {
     
     public DiagnosticsElement getDiagnostics() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDiagnostics = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Diagnostics");
+            retObjectDiagnostics = classInstance.Get("Diagnostics");
+            JCObject val = (JCObject)retObjectDiagnostics;
             return new DiagnosticsElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiagnostics != null ? retObjectDiagnostics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class WebServicesSection extends ConfigurationSection  {
 
     public void setDiagnostics(DiagnosticsElement Diagnostics) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Diagnostics", Diagnostics == null ? null : Diagnostics.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,10 +217,14 @@ public class WebServicesSection extends ConfigurationSection  {
 
     public ProtocolElementCollection getProtocols() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtocols = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Protocols");
+            retObjectProtocols = classInstance.Get("Protocols");
+            JCObject val = (JCObject)retObjectProtocols;
             return new ProtocolElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProtocols != null ? retObjectProtocols.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +232,14 @@ public class WebServicesSection extends ConfigurationSection  {
 
     public SoapEnvelopeProcessingElement getSoapEnvelopeProcessing() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSoapEnvelopeProcessing = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SoapEnvelopeProcessing");
+            retObjectSoapEnvelopeProcessing = classInstance.Get("SoapEnvelopeProcessing");
+            JCObject val = (JCObject)retObjectSoapEnvelopeProcessing;
             return new SoapEnvelopeProcessingElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoapEnvelopeProcessing != null ? retObjectSoapEnvelopeProcessing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +247,7 @@ public class WebServicesSection extends ConfigurationSection  {
 
     public void setSoapEnvelopeProcessing(SoapEnvelopeProcessingElement SoapEnvelopeProcessing) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SoapEnvelopeProcessing", SoapEnvelopeProcessing == null ? null : SoapEnvelopeProcessing.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -241,10 +257,14 @@ public class WebServicesSection extends ConfigurationSection  {
 
     public SoapExtensionTypeElementCollection getSoapExtensionTypes() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSoapExtensionTypes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SoapExtensionTypes");
+            retObjectSoapExtensionTypes = classInstance.Get("SoapExtensionTypes");
+            JCObject val = (JCObject)retObjectSoapExtensionTypes;
             return new SoapExtensionTypeElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoapExtensionTypes != null ? retObjectSoapExtensionTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +272,14 @@ public class WebServicesSection extends ConfigurationSection  {
 
     public TypeElement getSoapServerProtocolFactoryType() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSoapServerProtocolFactoryType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SoapServerProtocolFactoryType");
+            retObjectSoapServerProtocolFactoryType = classInstance.Get("SoapServerProtocolFactoryType");
+            JCObject val = (JCObject)retObjectSoapServerProtocolFactoryType;
             return new TypeElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoapServerProtocolFactoryType != null ? retObjectSoapServerProtocolFactoryType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +287,14 @@ public class WebServicesSection extends ConfigurationSection  {
 
     public TypeElementCollection getServiceDescriptionFormatExtensionTypes() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceDescriptionFormatExtensionTypes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceDescriptionFormatExtensionTypes");
+            retObjectServiceDescriptionFormatExtensionTypes = classInstance.Get("ServiceDescriptionFormatExtensionTypes");
+            JCObject val = (JCObject)retObjectServiceDescriptionFormatExtensionTypes;
             return new TypeElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceDescriptionFormatExtensionTypes != null ? retObjectServiceDescriptionFormatExtensionTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,10 +302,14 @@ public class WebServicesSection extends ConfigurationSection  {
 
     public TypeElementCollection getSoapExtensionImporterTypes() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSoapExtensionImporterTypes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SoapExtensionImporterTypes");
+            retObjectSoapExtensionImporterTypes = classInstance.Get("SoapExtensionImporterTypes");
+            JCObject val = (JCObject)retObjectSoapExtensionImporterTypes;
             return new TypeElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoapExtensionImporterTypes != null ? retObjectSoapExtensionImporterTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,10 +317,14 @@ public class WebServicesSection extends ConfigurationSection  {
 
     public TypeElementCollection getSoapExtensionReflectorTypes() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSoapExtensionReflectorTypes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SoapExtensionReflectorTypes");
+            retObjectSoapExtensionReflectorTypes = classInstance.Get("SoapExtensionReflectorTypes");
+            JCObject val = (JCObject)retObjectSoapExtensionReflectorTypes;
             return new TypeElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoapExtensionReflectorTypes != null ? retObjectSoapExtensionReflectorTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,10 +332,14 @@ public class WebServicesSection extends ConfigurationSection  {
 
     public TypeElementCollection getSoapTransportImporterTypes() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSoapTransportImporterTypes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SoapTransportImporterTypes");
+            retObjectSoapTransportImporterTypes = classInstance.Get("SoapTransportImporterTypes");
+            JCObject val = (JCObject)retObjectSoapTransportImporterTypes;
             return new TypeElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoapTransportImporterTypes != null ? retObjectSoapTransportImporterTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,10 +347,14 @@ public class WebServicesSection extends ConfigurationSection  {
 
     public WebServiceProtocols getEnabledProtocols() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.FormatException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnabledProtocols = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EnabledProtocols");
+            retObjectEnabledProtocols = classInstance.Get("EnabledProtocols");
+            JCObject val = (JCObject)retObjectEnabledProtocols;
             return new WebServiceProtocols(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnabledProtocols != null ? retObjectEnabledProtocols.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,10 +362,14 @@ public class WebServicesSection extends ConfigurationSection  {
 
     public static WebServicesSection getCurrent() throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.web.HttpException, system.web.HttpRequestValidationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Current");
+            retObjectCurrent = classType.Get("Current");
+            JCObject val = (JCObject)retObjectCurrent;
             return new WebServicesSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrent != null ? retObjectCurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,10 +377,14 @@ public class WebServicesSection extends ConfigurationSection  {
 
     public WsdlHelpGeneratorElement getWsdlHelpGenerator() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWsdlHelpGenerator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WsdlHelpGenerator");
+            retObjectWsdlHelpGenerator = classInstance.Get("WsdlHelpGenerator");
+            JCObject val = (JCObject)retObjectWsdlHelpGenerator;
             return new WsdlHelpGeneratorElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWsdlHelpGenerator != null ? retObjectWsdlHelpGenerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,10 +392,14 @@ public class WebServicesSection extends ConfigurationSection  {
 
     public WsiProfilesElementCollection getConformanceWarnings() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConformanceWarnings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConformanceWarnings");
+            retObjectConformanceWarnings = classInstance.Get("ConformanceWarnings");
+            JCObject val = (JCObject)retObjectConformanceWarnings;
             return new WsiProfilesElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConformanceWarnings != null ? retObjectConformanceWarnings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

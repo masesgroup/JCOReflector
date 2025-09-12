@@ -180,9 +180,13 @@ public class ValueSerializerAttribute extends Attribute  {
     
     public java.lang.String getValueSerializerTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueSerializerTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("ValueSerializerTypeName");
+            retObjectValueSerializerTypeName = classInstance.Get("ValueSerializerTypeName");
+            return (java.lang.String)retObjectValueSerializerTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValueSerializerTypeName != null ? retObjectValueSerializerTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +194,14 @@ public class ValueSerializerAttribute extends Attribute  {
 
     public NetType getValueSerializerType() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueSerializerType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValueSerializerType");
+            retObjectValueSerializerType = classInstance.Get("ValueSerializerType");
+            JCObject val = (JCObject)retObjectValueSerializerType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValueSerializerType != null ? retObjectValueSerializerType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -206,9 +206,13 @@ public class AnonymousPipeServerStream extends PipeStream  {
     
     public java.lang.String GetClientHandleAsString() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClientHandleAsString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetClientHandleAsString");
+            retObjectGetClientHandleAsString = classInstance.Invoke("GetClientHandleAsString");
+            return (java.lang.String)retObjectGetClientHandleAsString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetClientHandleAsString != null ? retObjectGetClientHandleAsString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +220,7 @@ public class AnonymousPipeServerStream extends PipeStream  {
 
     public void DisposeLocalCopyOfClientHandle() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DisposeLocalCopyOfClientHandle");
         } catch (JCNativeException jcne) {
@@ -230,10 +234,14 @@ public class AnonymousPipeServerStream extends PipeStream  {
     
     public SafePipeHandle getClientSafePipeHandle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientSafePipeHandle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientSafePipeHandle");
+            retObjectClientSafePipeHandle = classInstance.Get("ClientSafePipeHandle");
+            JCObject val = (JCObject)retObjectClientSafePipeHandle;
             return new SafePipeHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientSafePipeHandle != null ? retObjectClientSafePipeHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

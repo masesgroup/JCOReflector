@@ -155,10 +155,14 @@ public class BindingRestrictions extends NetObject  {
     
     public static BindingRestrictions GetExpressionRestriction(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetExpressionRestriction = null;
         try {
-            JCObject objGetExpressionRestriction = (JCObject)classType.Invoke("GetExpressionRestriction", expression == null ? null : expression.getJCOInstance());
+            retObjectGetExpressionRestriction = classType.Invoke("GetExpressionRestriction", expression == null ? null : expression.getJCOInstance());
+            JCObject objGetExpressionRestriction = (JCObject)retObjectGetExpressionRestriction;
             return new BindingRestrictions(objGetExpressionRestriction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExpressionRestriction != null ? retObjectGetExpressionRestriction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class BindingRestrictions extends NetObject  {
 
     public static BindingRestrictions GetInstanceRestriction(Expression expression, NetObject instance) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetInstanceRestriction = null;
         try {
-            JCObject objGetInstanceRestriction = (JCObject)classType.Invoke("GetInstanceRestriction", expression == null ? null : expression.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
+            retObjectGetInstanceRestriction = classType.Invoke("GetInstanceRestriction", expression == null ? null : expression.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
+            JCObject objGetInstanceRestriction = (JCObject)retObjectGetInstanceRestriction;
             return new BindingRestrictions(objGetInstanceRestriction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInstanceRestriction != null ? retObjectGetInstanceRestriction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +185,14 @@ public class BindingRestrictions extends NetObject  {
 
     public static BindingRestrictions GetTypeRestriction(Expression expression, NetType type) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTypeRestriction = null;
         try {
-            JCObject objGetTypeRestriction = (JCObject)classType.Invoke("GetTypeRestriction", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectGetTypeRestriction = classType.Invoke("GetTypeRestriction", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objGetTypeRestriction = (JCObject)retObjectGetTypeRestriction;
             return new BindingRestrictions(objGetTypeRestriction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeRestriction != null ? retObjectGetTypeRestriction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +200,14 @@ public class BindingRestrictions extends NetObject  {
 
     public BindingRestrictions Merge(BindingRestrictions restrictions) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMerge = null;
         try {
-            JCObject objMerge = (JCObject)classInstance.Invoke("Merge", restrictions == null ? null : restrictions.getJCOInstance());
+            retObjectMerge = classInstance.Invoke("Merge", restrictions == null ? null : restrictions.getJCOInstance());
+            JCObject objMerge = (JCObject)retObjectMerge;
             return new BindingRestrictions(objMerge);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMerge != null ? retObjectMerge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +215,14 @@ public class BindingRestrictions extends NetObject  {
 
     public Expression ToExpression() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToExpression = null;
         try {
-            JCObject objToExpression = (JCObject)classInstance.Invoke("ToExpression");
+            retObjectToExpression = classInstance.Invoke("ToExpression");
+            JCObject objToExpression = (JCObject)retObjectToExpression;
             return new Expression(objToExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToExpression != null ? retObjectToExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

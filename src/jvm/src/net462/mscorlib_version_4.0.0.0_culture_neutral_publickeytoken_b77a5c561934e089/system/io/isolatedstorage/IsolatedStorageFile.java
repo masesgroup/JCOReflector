@@ -165,9 +165,13 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
     
     public boolean DirectoryExists(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirectoryExists = null;
         try {
-            return (boolean)classInstance.Invoke("DirectoryExists", path);
+            retObjectDirectoryExists = classInstance.Invoke("DirectoryExists", path);
+            return (boolean)retObjectDirectoryExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDirectoryExists != null ? retObjectDirectoryExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,13 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public boolean FileExists(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileExists = null;
         try {
-            return (boolean)classInstance.Invoke("FileExists", path);
+            retObjectFileExists = classInstance.Invoke("FileExists", path);
+            return (boolean)retObjectFileExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFileExists != null ? retObjectFileExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +193,13 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public boolean IncreaseQuotaTo(long newQuotaSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncreaseQuotaTo = null;
         try {
-            return (boolean)classInstance.Invoke("IncreaseQuotaTo", newQuotaSize);
+            retObjectIncreaseQuotaTo = classInstance.Invoke("IncreaseQuotaTo", newQuotaSize);
+            return (boolean)retObjectIncreaseQuotaTo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIncreaseQuotaTo != null ? retObjectIncreaseQuotaTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +207,14 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public static IEnumerator GetEnumerator(IsolatedStorageScope scope) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEnumerator = null;
         try {
-            JCObject objGetEnumerator = (JCObject)classType.Invoke("GetEnumerator", scope == null ? null : scope.getJCOInstance());
+            retObjectGetEnumerator = classType.Invoke("GetEnumerator", scope == null ? null : scope.getJCOInstance());
+            JCObject objGetEnumerator = (JCObject)retObjectGetEnumerator;
             return new IEnumeratorImplementation(objGetEnumerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEnumerator != null ? retObjectGetEnumerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +222,14 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public DateTimeOffset GetCreationTime(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCreationTime = null;
         try {
-            JCObject objGetCreationTime = (JCObject)classInstance.Invoke("GetCreationTime", path);
+            retObjectGetCreationTime = classInstance.Invoke("GetCreationTime", path);
+            JCObject objGetCreationTime = (JCObject)retObjectGetCreationTime;
             return new DateTimeOffset(objGetCreationTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCreationTime != null ? retObjectGetCreationTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +237,14 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public DateTimeOffset GetLastAccessTime(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLastAccessTime = null;
         try {
-            JCObject objGetLastAccessTime = (JCObject)classInstance.Invoke("GetLastAccessTime", path);
+            retObjectGetLastAccessTime = classInstance.Invoke("GetLastAccessTime", path);
+            JCObject objGetLastAccessTime = (JCObject)retObjectGetLastAccessTime;
             return new DateTimeOffset(objGetLastAccessTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLastAccessTime != null ? retObjectGetLastAccessTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +252,14 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public DateTimeOffset GetLastWriteTime(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLastWriteTime = null;
         try {
-            JCObject objGetLastWriteTime = (JCObject)classInstance.Invoke("GetLastWriteTime", path);
+            retObjectGetLastWriteTime = classInstance.Invoke("GetLastWriteTime", path);
+            JCObject objGetLastWriteTime = (JCObject)retObjectGetLastWriteTime;
             return new DateTimeOffset(objGetLastWriteTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLastWriteTime != null ? retObjectGetLastWriteTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +267,14 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public static IsolatedStorageFile GetMachineStoreForApplication() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMachineStoreForApplication = null;
         try {
-            JCObject objGetMachineStoreForApplication = (JCObject)classType.Invoke("GetMachineStoreForApplication");
+            retObjectGetMachineStoreForApplication = classType.Invoke("GetMachineStoreForApplication");
+            JCObject objGetMachineStoreForApplication = (JCObject)retObjectGetMachineStoreForApplication;
             return new IsolatedStorageFile(objGetMachineStoreForApplication);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMachineStoreForApplication != null ? retObjectGetMachineStoreForApplication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +282,14 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public static IsolatedStorageFile GetMachineStoreForAssembly() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMachineStoreForAssembly = null;
         try {
-            JCObject objGetMachineStoreForAssembly = (JCObject)classType.Invoke("GetMachineStoreForAssembly");
+            retObjectGetMachineStoreForAssembly = classType.Invoke("GetMachineStoreForAssembly");
+            JCObject objGetMachineStoreForAssembly = (JCObject)retObjectGetMachineStoreForAssembly;
             return new IsolatedStorageFile(objGetMachineStoreForAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMachineStoreForAssembly != null ? retObjectGetMachineStoreForAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +297,14 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public static IsolatedStorageFile GetMachineStoreForDomain() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMachineStoreForDomain = null;
         try {
-            JCObject objGetMachineStoreForDomain = (JCObject)classType.Invoke("GetMachineStoreForDomain");
+            retObjectGetMachineStoreForDomain = classType.Invoke("GetMachineStoreForDomain");
+            JCObject objGetMachineStoreForDomain = (JCObject)retObjectGetMachineStoreForDomain;
             return new IsolatedStorageFile(objGetMachineStoreForDomain);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMachineStoreForDomain != null ? retObjectGetMachineStoreForDomain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,10 +312,14 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetObject applicationIdentity) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.io.isolatedstorage.IsolatedStorageException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStore = null;
         try {
-            JCObject objGetStore = (JCObject)classType.Invoke("GetStore", scope == null ? null : scope.getJCOInstance(), applicationIdentity == null ? null : applicationIdentity.getJCOInstance());
+            retObjectGetStore = classType.Invoke("GetStore", scope == null ? null : scope.getJCOInstance(), applicationIdentity == null ? null : applicationIdentity.getJCOInstance());
+            JCObject objGetStore = (JCObject)retObjectGetStore;
             return new IsolatedStorageFile(objGetStore);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStore != null ? retObjectGetStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,10 +327,14 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetObject domainIdentity, NetObject assemblyIdentity) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.io.isolatedstorage.IsolatedStorageException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStore = null;
         try {
-            JCObject objGetStore = (JCObject)classType.Invoke("GetStore", scope == null ? null : scope.getJCOInstance(), domainIdentity == null ? null : domainIdentity.getJCOInstance(), assemblyIdentity == null ? null : assemblyIdentity.getJCOInstance());
+            retObjectGetStore = classType.Invoke("GetStore", scope == null ? null : scope.getJCOInstance(), domainIdentity == null ? null : domainIdentity.getJCOInstance(), assemblyIdentity == null ? null : assemblyIdentity.getJCOInstance());
+            JCObject objGetStore = (JCObject)retObjectGetStore;
             return new IsolatedStorageFile(objGetStore);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStore != null ? retObjectGetStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,10 +342,14 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, Evidence domainEvidence, NetType domainEvidenceType, Evidence assemblyEvidence, NetType assemblyEvidenceType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.XmlSyntaxException, system.NullReferenceException, system.io.isolatedstorage.IsolatedStorageException, system.security.cryptography.CryptographicException, system.FormatException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStore = null;
         try {
-            JCObject objGetStore = (JCObject)classType.Invoke("GetStore", scope == null ? null : scope.getJCOInstance(), domainEvidence == null ? null : domainEvidence.getJCOInstance(), domainEvidenceType == null ? null : domainEvidenceType.getJCOInstance(), assemblyEvidence == null ? null : assemblyEvidence.getJCOInstance(), assemblyEvidenceType == null ? null : assemblyEvidenceType.getJCOInstance());
+            retObjectGetStore = classType.Invoke("GetStore", scope == null ? null : scope.getJCOInstance(), domainEvidence == null ? null : domainEvidence.getJCOInstance(), domainEvidenceType == null ? null : domainEvidenceType.getJCOInstance(), assemblyEvidence == null ? null : assemblyEvidence.getJCOInstance(), assemblyEvidenceType == null ? null : assemblyEvidenceType.getJCOInstance());
+            JCObject objGetStore = (JCObject)retObjectGetStore;
             return new IsolatedStorageFile(objGetStore);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStore != null ? retObjectGetStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,10 +357,14 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetType applicationEvidenceType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStore = null;
         try {
-            JCObject objGetStore = (JCObject)classType.Invoke("GetStore", scope == null ? null : scope.getJCOInstance(), applicationEvidenceType == null ? null : applicationEvidenceType.getJCOInstance());
+            retObjectGetStore = classType.Invoke("GetStore", scope == null ? null : scope.getJCOInstance(), applicationEvidenceType == null ? null : applicationEvidenceType.getJCOInstance());
+            JCObject objGetStore = (JCObject)retObjectGetStore;
             return new IsolatedStorageFile(objGetStore);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStore != null ? retObjectGetStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,10 +372,14 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetType domainEvidenceType, NetType assemblyEvidenceType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStore = null;
         try {
-            JCObject objGetStore = (JCObject)classType.Invoke("GetStore", scope == null ? null : scope.getJCOInstance(), domainEvidenceType == null ? null : domainEvidenceType.getJCOInstance(), assemblyEvidenceType == null ? null : assemblyEvidenceType.getJCOInstance());
+            retObjectGetStore = classType.Invoke("GetStore", scope == null ? null : scope.getJCOInstance(), domainEvidenceType == null ? null : domainEvidenceType.getJCOInstance(), assemblyEvidenceType == null ? null : assemblyEvidenceType.getJCOInstance());
+            JCObject objGetStore = (JCObject)retObjectGetStore;
             return new IsolatedStorageFile(objGetStore);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStore != null ? retObjectGetStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,10 +387,14 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public static IsolatedStorageFile GetUserStoreForApplication() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetUserStoreForApplication = null;
         try {
-            JCObject objGetUserStoreForApplication = (JCObject)classType.Invoke("GetUserStoreForApplication");
+            retObjectGetUserStoreForApplication = classType.Invoke("GetUserStoreForApplication");
+            JCObject objGetUserStoreForApplication = (JCObject)retObjectGetUserStoreForApplication;
             return new IsolatedStorageFile(objGetUserStoreForApplication);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUserStoreForApplication != null ? retObjectGetUserStoreForApplication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,10 +402,14 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public static IsolatedStorageFile GetUserStoreForAssembly() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetUserStoreForAssembly = null;
         try {
-            JCObject objGetUserStoreForAssembly = (JCObject)classType.Invoke("GetUserStoreForAssembly");
+            retObjectGetUserStoreForAssembly = classType.Invoke("GetUserStoreForAssembly");
+            JCObject objGetUserStoreForAssembly = (JCObject)retObjectGetUserStoreForAssembly;
             return new IsolatedStorageFile(objGetUserStoreForAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUserStoreForAssembly != null ? retObjectGetUserStoreForAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,10 +417,14 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public static IsolatedStorageFile GetUserStoreForDomain() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetUserStoreForDomain = null;
         try {
-            JCObject objGetUserStoreForDomain = (JCObject)classType.Invoke("GetUserStoreForDomain");
+            retObjectGetUserStoreForDomain = classType.Invoke("GetUserStoreForDomain");
+            JCObject objGetUserStoreForDomain = (JCObject)retObjectGetUserStoreForDomain;
             return new IsolatedStorageFile(objGetUserStoreForDomain);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUserStoreForDomain != null ? retObjectGetUserStoreForDomain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,10 +432,14 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public static IsolatedStorageFile GetUserStoreForSite() throws Throwable, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetUserStoreForSite = null;
         try {
-            JCObject objGetUserStoreForSite = (JCObject)classType.Invoke("GetUserStoreForSite");
+            retObjectGetUserStoreForSite = classType.Invoke("GetUserStoreForSite");
+            JCObject objGetUserStoreForSite = (JCObject)retObjectGetUserStoreForSite;
             return new IsolatedStorageFile(objGetUserStoreForSite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUserStoreForSite != null ? retObjectGetUserStoreForSite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,10 +447,14 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public IsolatedStorageFileStream CreateFile(java.lang.String path) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ApplicationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateFile = null;
         try {
-            JCObject objCreateFile = (JCObject)classInstance.Invoke("CreateFile", path);
+            retObjectCreateFile = classInstance.Invoke("CreateFile", path);
+            JCObject objCreateFile = (JCObject)retObjectCreateFile;
             return new IsolatedStorageFileStream(objCreateFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFile != null ? retObjectCreateFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,10 +462,14 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public IsolatedStorageFileStream OpenFile(java.lang.String path, FileMode mode) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenFile = null;
         try {
-            JCObject objOpenFile = (JCObject)classInstance.Invoke("OpenFile", path, mode == null ? null : mode.getJCOInstance());
+            retObjectOpenFile = classInstance.Invoke("OpenFile", path, mode == null ? null : mode.getJCOInstance());
+            JCObject objOpenFile = (JCObject)retObjectOpenFile;
             return new IsolatedStorageFileStream(objOpenFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenFile != null ? retObjectOpenFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,10 +477,14 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public IsolatedStorageFileStream OpenFile(java.lang.String path, FileMode mode, FileAccess access) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ApplicationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenFile = null;
         try {
-            JCObject objOpenFile = (JCObject)classInstance.Invoke("OpenFile", path, mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance());
+            retObjectOpenFile = classInstance.Invoke("OpenFile", path, mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance());
+            JCObject objOpenFile = (JCObject)retObjectOpenFile;
             return new IsolatedStorageFileStream(objOpenFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenFile != null ? retObjectOpenFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -404,10 +492,14 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public IsolatedStorageFileStream OpenFile(java.lang.String path, FileMode mode, FileAccess access, FileShare share) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ApplicationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenFile = null;
         try {
-            JCObject objOpenFile = (JCObject)classInstance.Invoke("OpenFile", path, mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance(), share == null ? null : share.getJCOInstance());
+            retObjectOpenFile = classInstance.Invoke("OpenFile", path, mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance(), share == null ? null : share.getJCOInstance());
+            JCObject objOpenFile = (JCObject)retObjectOpenFile;
             return new IsolatedStorageFileStream(objOpenFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenFile != null ? retObjectOpenFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -415,10 +507,12 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public java.lang.String[] GetDirectoryNames() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDirectoryNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDirectoryNames");
+            retObjectGetDirectoryNames = classInstance.Invoke("GetDirectoryNames");
+            JCObject resultingObjects = (JCObject)retObjectGetDirectoryNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -427,6 +521,8 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 				resultingArray[indexGetDirectoryNames] = (java.lang.String)resultingArrayList.get(indexGetDirectoryNames);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetDirectoryNames != null ? retObjectGetDirectoryNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -434,10 +530,12 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public java.lang.String[] GetDirectoryNames(java.lang.String searchPattern) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDirectoryNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDirectoryNames", searchPattern);
+            retObjectGetDirectoryNames = classInstance.Invoke("GetDirectoryNames", searchPattern);
+            JCObject resultingObjects = (JCObject)retObjectGetDirectoryNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -446,6 +544,8 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 				resultingArray[indexGetDirectoryNames] = (java.lang.String)resultingArrayList.get(indexGetDirectoryNames);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetDirectoryNames != null ? retObjectGetDirectoryNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,10 +553,12 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public java.lang.String[] GetFileNames() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFileNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileNames");
+            retObjectGetFileNames = classInstance.Invoke("GetFileNames");
+            JCObject resultingObjects = (JCObject)retObjectGetFileNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -465,6 +567,8 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 				resultingArray[indexGetFileNames] = (java.lang.String)resultingArrayList.get(indexGetFileNames);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetFileNames != null ? retObjectGetFileNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -472,10 +576,12 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public java.lang.String[] GetFileNames(java.lang.String searchPattern) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFileNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileNames", searchPattern);
+            retObjectGetFileNames = classInstance.Invoke("GetFileNames", searchPattern);
+            JCObject resultingObjects = (JCObject)retObjectGetFileNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -484,6 +590,8 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 				resultingArray[indexGetFileNames] = (java.lang.String)resultingArrayList.get(indexGetFileNames);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetFileNames != null ? retObjectGetFileNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -491,7 +599,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public void Close() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -501,7 +609,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public void CopyFile(java.lang.String sourceFileName, java.lang.String destinationFileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFile", sourceFileName, destinationFileName);
         } catch (JCNativeException jcne) {
@@ -511,7 +619,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public void CopyFile(java.lang.String sourceFileName, java.lang.String destinationFileName, boolean overwrite) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFile", sourceFileName, destinationFileName, overwrite);
         } catch (JCNativeException jcne) {
@@ -521,7 +629,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public void CreateDirectory(java.lang.String dir) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.io.isolatedstorage.IsolatedStorageException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateDirectory", dir);
         } catch (JCNativeException jcne) {
@@ -531,7 +639,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public void DeleteDirectory(java.lang.String dir) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteDirectory", dir);
         } catch (JCNativeException jcne) {
@@ -541,7 +649,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public void DeleteFile(java.lang.String file) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteFile", file);
         } catch (JCNativeException jcne) {
@@ -551,7 +659,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -561,7 +669,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public void MoveDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveDirectory", sourceDirectoryName, destinationDirectoryName);
         } catch (JCNativeException jcne) {
@@ -571,7 +679,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public void MoveFile(java.lang.String sourceFileName, java.lang.String destinationFileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveFile", sourceFileName, destinationFileName);
         } catch (JCNativeException jcne) {
@@ -581,7 +689,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public void Remove() throws Throwable, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.io.IOException, system.io.isolatedstorage.IsolatedStorageException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.ApplicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove");
         } catch (JCNativeException jcne) {
@@ -591,7 +699,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
 
     public static void Remove(IsolatedStorageScope scope) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Remove", scope == null ? null : scope.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -602,7 +710,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -618,9 +726,13 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
     
     public static boolean getIsEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsEnabled = null;
         try {
-            return (boolean)classType.Get("IsEnabled");
+            retObjectIsEnabled = classType.Get("IsEnabled");
+            return (boolean)retObjectIsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEnabled != null ? retObjectIsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

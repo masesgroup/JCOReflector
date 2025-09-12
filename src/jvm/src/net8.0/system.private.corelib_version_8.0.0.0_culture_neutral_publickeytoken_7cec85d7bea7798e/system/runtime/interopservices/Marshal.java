@@ -159,9 +159,13 @@ public class Marshal extends NetObject  {
     
     public static boolean AreComObjectsAvailableForCleanup() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAreComObjectsAvailableForCleanup = null;
         try {
-            return (boolean)classType.Invoke("AreComObjectsAvailableForCleanup");
+            retObjectAreComObjectsAvailableForCleanup = classType.Invoke("AreComObjectsAvailableForCleanup");
+            return (boolean)retObjectAreComObjectsAvailableForCleanup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAreComObjectsAvailableForCleanup != null ? retObjectAreComObjectsAvailableForCleanup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class Marshal extends NetObject  {
 
     public static boolean IsComObject(NetObject o) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsComObject = null;
         try {
-            return (boolean)classType.Invoke("IsComObject", o == null ? null : o.getJCOInstance());
+            retObjectIsComObject = classType.Invoke("IsComObject", o == null ? null : o.getJCOInstance());
+            return (boolean)retObjectIsComObject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsComObject != null ? retObjectIsComObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +187,13 @@ public class Marshal extends NetObject  {
 
     public static boolean IsTypeVisibleFromCom(NetType t) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsTypeVisibleFromCom = null;
         try {
-            return (boolean)classType.Invoke("IsTypeVisibleFromCom", t == null ? null : t.getJCOInstance());
+            retObjectIsTypeVisibleFromCom = classType.Invoke("IsTypeVisibleFromCom", t == null ? null : t.getJCOInstance());
+            return (boolean)retObjectIsTypeVisibleFromCom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsTypeVisibleFromCom != null ? retObjectIsTypeVisibleFromCom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +201,13 @@ public class Marshal extends NetObject  {
 
     public static boolean SetComObjectData(NetObject obj, NetObject key, NetObject data) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSetComObjectData = null;
         try {
-            return (boolean)classType.Invoke("SetComObjectData", obj == null ? null : obj.getJCOInstance(), key == null ? null : key.getJCOInstance(), data == null ? null : data.getJCOInstance());
+            retObjectSetComObjectData = classType.Invoke("SetComObjectData", obj == null ? null : obj.getJCOInstance(), key == null ? null : key.getJCOInstance(), data == null ? null : data.getJCOInstance());
+            return (boolean)retObjectSetComObjectData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetComObjectData != null ? retObjectSetComObjectData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +215,19 @@ public class Marshal extends NetObject  {
 
     public static byte ReadByte(NetObject ptr, int ofs) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.AccessViolationException, system.OutOfMemoryException, system.runtime.interopservices.MarshalDirectiveException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadByte = null;
         try {
-            return (byte)classType.Invoke("ReadByte", ptr == null ? null : ptr.getJCOInstance(), ofs);
+            retObjectReadByte = classType.Invoke("ReadByte", ptr == null ? null : ptr.getJCOInstance(), ofs);
+            return (byte)retObjectReadByte;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadByteNumber = (java.lang.Number)retObjectReadByte;
+                return retObjectReadByteNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectReadByte != null ? retObjectReadByte.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +235,19 @@ public class Marshal extends NetObject  {
 
     public static short ReadInt16(NetObject ptr, int ofs) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.AccessViolationException, system.OutOfMemoryException, system.runtime.interopservices.MarshalDirectiveException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadInt16 = null;
         try {
-            return (short)classType.Invoke("ReadInt16", ptr == null ? null : ptr.getJCOInstance(), ofs);
+            retObjectReadInt16 = classType.Invoke("ReadInt16", ptr == null ? null : ptr.getJCOInstance(), ofs);
+            return (short)retObjectReadInt16;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadInt16Number = (java.lang.Number)retObjectReadInt16;
+                return retObjectReadInt16Number.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectReadInt16 != null ? retObjectReadInt16.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +255,19 @@ public class Marshal extends NetObject  {
 
     public static int FinalReleaseComObject(NetObject o) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFinalReleaseComObject = null;
         try {
-            return (int)classType.Invoke("FinalReleaseComObject", o == null ? null : o.getJCOInstance());
+            retObjectFinalReleaseComObject = classType.Invoke("FinalReleaseComObject", o == null ? null : o.getJCOInstance());
+            return (int)retObjectFinalReleaseComObject;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFinalReleaseComObjectNumber = (java.lang.Number)retObjectFinalReleaseComObject;
+                return retObjectFinalReleaseComObjectNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFinalReleaseComObject != null ? retObjectFinalReleaseComObject.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,9 +275,19 @@ public class Marshal extends NetObject  {
 
     public static int GetEndComSlot(NetType t) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEndComSlot = null;
         try {
-            return (int)classType.Invoke("GetEndComSlot", t == null ? null : t.getJCOInstance());
+            retObjectGetEndComSlot = classType.Invoke("GetEndComSlot", t == null ? null : t.getJCOInstance());
+            return (int)retObjectGetEndComSlot;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetEndComSlotNumber = (java.lang.Number)retObjectGetEndComSlot;
+                return retObjectGetEndComSlotNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetEndComSlot != null ? retObjectGetEndComSlot.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +295,19 @@ public class Marshal extends NetObject  {
 
     public static int GetExceptionCode() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetExceptionCode = null;
         try {
-            return (int)classType.Invoke("GetExceptionCode");
+            retObjectGetExceptionCode = classType.Invoke("GetExceptionCode");
+            return (int)retObjectGetExceptionCode;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetExceptionCodeNumber = (java.lang.Number)retObjectGetExceptionCode;
+                return retObjectGetExceptionCodeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetExceptionCode != null ? retObjectGetExceptionCode.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,9 +315,19 @@ public class Marshal extends NetObject  {
 
     public static int GetHRForException(NetException e) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHRForException = null;
         try {
-            return (int)classType.Invoke("GetHRForException", e == null ? null : e.getJCOInstance());
+            retObjectGetHRForException = classType.Invoke("GetHRForException", e == null ? null : e.getJCOInstance());
+            return (int)retObjectGetHRForException;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHRForExceptionNumber = (java.lang.Number)retObjectGetHRForException;
+                return retObjectGetHRForExceptionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetHRForException != null ? retObjectGetHRForException.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,9 +335,19 @@ public class Marshal extends NetObject  {
 
     public static int GetHRForLastWin32Error() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHRForLastWin32Error = null;
         try {
-            return (int)classType.Invoke("GetHRForLastWin32Error");
+            retObjectGetHRForLastWin32Error = classType.Invoke("GetHRForLastWin32Error");
+            return (int)retObjectGetHRForLastWin32Error;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHRForLastWin32ErrorNumber = (java.lang.Number)retObjectGetHRForLastWin32Error;
+                return retObjectGetHRForLastWin32ErrorNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetHRForLastWin32Error != null ? retObjectGetHRForLastWin32Error.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,9 +355,19 @@ public class Marshal extends NetObject  {
 
     public static int GetLastPInvokeError() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLastPInvokeError = null;
         try {
-            return (int)classType.Invoke("GetLastPInvokeError");
+            retObjectGetLastPInvokeError = classType.Invoke("GetLastPInvokeError");
+            return (int)retObjectGetLastPInvokeError;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLastPInvokeErrorNumber = (java.lang.Number)retObjectGetLastPInvokeError;
+                return retObjectGetLastPInvokeErrorNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetLastPInvokeError != null ? retObjectGetLastPInvokeError.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,9 +375,19 @@ public class Marshal extends NetObject  {
 
     public static int GetLastSystemError() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLastSystemError = null;
         try {
-            return (int)classType.Invoke("GetLastSystemError");
+            retObjectGetLastSystemError = classType.Invoke("GetLastSystemError");
+            return (int)retObjectGetLastSystemError;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLastSystemErrorNumber = (java.lang.Number)retObjectGetLastSystemError;
+                return retObjectGetLastSystemErrorNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetLastSystemError != null ? retObjectGetLastSystemError.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,9 +395,19 @@ public class Marshal extends NetObject  {
 
     public static int GetLastWin32Error() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLastWin32Error = null;
         try {
-            return (int)classType.Invoke("GetLastWin32Error");
+            retObjectGetLastWin32Error = classType.Invoke("GetLastWin32Error");
+            return (int)retObjectGetLastWin32Error;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLastWin32ErrorNumber = (java.lang.Number)retObjectGetLastWin32Error;
+                return retObjectGetLastWin32ErrorNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetLastWin32Error != null ? retObjectGetLastWin32Error.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,9 +415,19 @@ public class Marshal extends NetObject  {
 
     public static int GetStartComSlot(NetType t) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStartComSlot = null;
         try {
-            return (int)classType.Invoke("GetStartComSlot", t == null ? null : t.getJCOInstance());
+            retObjectGetStartComSlot = classType.Invoke("GetStartComSlot", t == null ? null : t.getJCOInstance());
+            return (int)retObjectGetStartComSlot;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetStartComSlotNumber = (java.lang.Number)retObjectGetStartComSlot;
+                return retObjectGetStartComSlotNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetStartComSlot != null ? retObjectGetStartComSlot.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,9 +435,19 @@ public class Marshal extends NetObject  {
 
     public static int ReadInt32(NetObject ptr, int ofs) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.AccessViolationException, system.OutOfMemoryException, system.runtime.interopservices.MarshalDirectiveException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadInt32 = null;
         try {
-            return (int)classType.Invoke("ReadInt32", ptr == null ? null : ptr.getJCOInstance(), ofs);
+            retObjectReadInt32 = classType.Invoke("ReadInt32", ptr == null ? null : ptr.getJCOInstance(), ofs);
+            return (int)retObjectReadInt32;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadInt32Number = (java.lang.Number)retObjectReadInt32;
+                return retObjectReadInt32Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadInt32 != null ? retObjectReadInt32.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,9 +455,19 @@ public class Marshal extends NetObject  {
 
     public static int ReleaseComObject(NetObject o) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReleaseComObject = null;
         try {
-            return (int)classType.Invoke("ReleaseComObject", o == null ? null : o.getJCOInstance());
+            retObjectReleaseComObject = classType.Invoke("ReleaseComObject", o == null ? null : o.getJCOInstance());
+            return (int)retObjectReleaseComObject;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReleaseComObjectNumber = (java.lang.Number)retObjectReleaseComObject;
+                return retObjectReleaseComObjectNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReleaseComObject != null ? retObjectReleaseComObject.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,9 +475,19 @@ public class Marshal extends NetObject  {
 
     public static int SizeOf(NetObject structure) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSizeOf = null;
         try {
-            return (int)classType.Invoke("SizeOf", structure == null ? null : structure.getJCOInstance());
+            retObjectSizeOf = classType.Invoke("SizeOf", structure == null ? null : structure.getJCOInstance());
+            return (int)retObjectSizeOf;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSizeOfNumber = (java.lang.Number)retObjectSizeOf;
+                return retObjectSizeOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSizeOf != null ? retObjectSizeOf.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,9 +495,19 @@ public class Marshal extends NetObject  {
 
     public static int SizeOf(NetType t) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSizeOf = null;
         try {
-            return (int)classType.Invoke("SizeOf", t == null ? null : t.getJCOInstance());
+            retObjectSizeOf = classType.Invoke("SizeOf", t == null ? null : t.getJCOInstance());
+            return (int)retObjectSizeOf;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSizeOfNumber = (java.lang.Number)retObjectSizeOf;
+                return retObjectSizeOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSizeOf != null ? retObjectSizeOf.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,9 +515,19 @@ public class Marshal extends NetObject  {
 
     public static long ReadInt64(NetObject ptr, int ofs) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.AccessViolationException, system.OutOfMemoryException, system.runtime.interopservices.MarshalDirectiveException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadInt64 = null;
         try {
-            return (long)classType.Invoke("ReadInt64", ptr == null ? null : ptr.getJCOInstance(), ofs);
+            retObjectReadInt64 = classType.Invoke("ReadInt64", ptr == null ? null : ptr.getJCOInstance(), ofs);
+            return (long)retObjectReadInt64;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadInt64Number = (java.lang.Number)retObjectReadInt64;
+                return retObjectReadInt64Number.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectReadInt64 != null ? retObjectReadInt64.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,10 +535,14 @@ public class Marshal extends NetObject  {
 
     public static NetException GetExceptionForHR(int errorCode) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetExceptionForHR = null;
         try {
-            JCObject objGetExceptionForHR = (JCObject)classType.Invoke("GetExceptionForHR", errorCode);
+            retObjectGetExceptionForHR = classType.Invoke("GetExceptionForHR", errorCode);
+            JCObject objGetExceptionForHR = (JCObject)retObjectGetExceptionForHR;
             return new NetException(objGetExceptionForHR);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExceptionForHR != null ? retObjectGetExceptionForHR.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,10 +550,14 @@ public class Marshal extends NetObject  {
 
     public static Guid GenerateGuidForType(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenerateGuidForType = null;
         try {
-            JCObject objGenerateGuidForType = (JCObject)classType.Invoke("GenerateGuidForType", type == null ? null : type.getJCOInstance());
+            retObjectGenerateGuidForType = classType.Invoke("GenerateGuidForType", type == null ? null : type.getJCOInstance());
+            JCObject objGenerateGuidForType = (JCObject)retObjectGenerateGuidForType;
             return new Guid(objGenerateGuidForType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenerateGuidForType != null ? retObjectGenerateGuidForType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,10 +565,14 @@ public class Marshal extends NetObject  {
 
     public static NetObject BindToMoniker(java.lang.String monikerName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBindToMoniker = null;
         try {
-            JCObject objBindToMoniker = (JCObject)classType.Invoke("BindToMoniker", monikerName);
+            retObjectBindToMoniker = classType.Invoke("BindToMoniker", monikerName);
+            JCObject objBindToMoniker = (JCObject)retObjectBindToMoniker;
             return new NetObject(objBindToMoniker);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindToMoniker != null ? retObjectBindToMoniker.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -392,10 +580,14 @@ public class Marshal extends NetObject  {
 
     public static NetObject CreateWrapperOfType(NetObject o, NetType t) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateWrapperOfType = null;
         try {
-            JCObject objCreateWrapperOfType = (JCObject)classType.Invoke("CreateWrapperOfType", o == null ? null : o.getJCOInstance(), t == null ? null : t.getJCOInstance());
+            retObjectCreateWrapperOfType = classType.Invoke("CreateWrapperOfType", o == null ? null : o.getJCOInstance(), t == null ? null : t.getJCOInstance());
+            JCObject objCreateWrapperOfType = (JCObject)retObjectCreateWrapperOfType;
             return new NetObject(objCreateWrapperOfType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateWrapperOfType != null ? retObjectCreateWrapperOfType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,10 +595,14 @@ public class Marshal extends NetObject  {
 
     public static NetObject GetComObjectData(NetObject obj, NetObject key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetComObjectData = null;
         try {
-            JCObject objGetComObjectData = (JCObject)classType.Invoke("GetComObjectData", obj == null ? null : obj.getJCOInstance(), key == null ? null : key.getJCOInstance());
+            retObjectGetComObjectData = classType.Invoke("GetComObjectData", obj == null ? null : obj.getJCOInstance(), key == null ? null : key.getJCOInstance());
+            JCObject objGetComObjectData = (JCObject)retObjectGetComObjectData;
             return new NetObject(objGetComObjectData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetComObjectData != null ? retObjectGetComObjectData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -414,9 +610,13 @@ public class Marshal extends NetObject  {
 
     public static java.lang.String GenerateProgIdForType(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.reflection.AmbiguousMatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenerateProgIdForType = null;
         try {
-            return (java.lang.String)classType.Invoke("GenerateProgIdForType", type == null ? null : type.getJCOInstance());
+            retObjectGenerateProgIdForType = classType.Invoke("GenerateProgIdForType", type == null ? null : type.getJCOInstance());
+            return (java.lang.String)retObjectGenerateProgIdForType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGenerateProgIdForType != null ? retObjectGenerateProgIdForType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,9 +624,13 @@ public class Marshal extends NetObject  {
 
     public static java.lang.String GetLastPInvokeErrorMessage() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLastPInvokeErrorMessage = null;
         try {
-            return (java.lang.String)classType.Invoke("GetLastPInvokeErrorMessage");
+            retObjectGetLastPInvokeErrorMessage = classType.Invoke("GetLastPInvokeErrorMessage");
+            return (java.lang.String)retObjectGetLastPInvokeErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetLastPInvokeErrorMessage != null ? retObjectGetLastPInvokeErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -434,9 +638,13 @@ public class Marshal extends NetObject  {
 
     public static java.lang.String GetPInvokeErrorMessage(int error) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPInvokeErrorMessage = null;
         try {
-            return (java.lang.String)classType.Invoke("GetPInvokeErrorMessage", error);
+            retObjectGetPInvokeErrorMessage = classType.Invoke("GetPInvokeErrorMessage", error);
+            return (java.lang.String)retObjectGetPInvokeErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPInvokeErrorMessage != null ? retObjectGetPInvokeErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,9 +652,13 @@ public class Marshal extends NetObject  {
 
     public static java.lang.String GetTypeInfoName(ITypeInfo typeInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTypeInfoName = null;
         try {
-            return (java.lang.String)classType.Invoke("GetTypeInfoName", typeInfo == null ? null : typeInfo.getJCOInstance());
+            retObjectGetTypeInfoName = classType.Invoke("GetTypeInfoName", typeInfo == null ? null : typeInfo.getJCOInstance());
+            return (java.lang.String)retObjectGetTypeInfoName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetTypeInfoName != null ? retObjectGetTypeInfoName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -454,10 +666,14 @@ public class Marshal extends NetObject  {
 
     public static NetType GetTypeFromCLSID(Guid clsid) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTypeFromCLSID = null;
         try {
-            JCObject objGetTypeFromCLSID = (JCObject)classType.Invoke("GetTypeFromCLSID", clsid == null ? null : clsid.getJCOInstance());
+            retObjectGetTypeFromCLSID = classType.Invoke("GetTypeFromCLSID", clsid == null ? null : clsid.getJCOInstance());
+            JCObject objGetTypeFromCLSID = (JCObject)retObjectGetTypeFromCLSID;
             return new NetType(objGetTypeFromCLSID);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeFromCLSID != null ? retObjectGetTypeFromCLSID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -465,7 +681,7 @@ public class Marshal extends NetObject  {
 
     public static void ChangeWrapperHandleStrength(NetObject otp, boolean fIsWeak) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ChangeWrapperHandleStrength", otp == null ? null : otp.getJCOInstance(), fIsWeak);
         } catch (JCNativeException jcne) {
@@ -475,7 +691,7 @@ public class Marshal extends NetObject  {
 
     public static void CleanupUnusedObjectsInCurrentContext() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CleanupUnusedObjectsInCurrentContext");
         } catch (JCNativeException jcne) {
@@ -485,7 +701,7 @@ public class Marshal extends NetObject  {
 
     public static void Prelink(MethodInfo m) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Prelink", m == null ? null : m.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -495,7 +711,7 @@ public class Marshal extends NetObject  {
 
     public static void PrelinkAll(NetType c) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PrelinkAll", c == null ? null : c.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -505,7 +721,7 @@ public class Marshal extends NetObject  {
 
     public static void SetLastPInvokeError(int error) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLastPInvokeError", error);
         } catch (JCNativeException jcne) {
@@ -515,7 +731,7 @@ public class Marshal extends NetObject  {
 
     public static void SetLastSystemError(int error) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLastSystemError", error);
         } catch (JCNativeException jcne) {
@@ -525,7 +741,7 @@ public class Marshal extends NetObject  {
 
     public static void ThrowExceptionForHR(int errorCode) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ThrowExceptionForHR", errorCode);
         } catch (JCNativeException jcne) {
@@ -535,7 +751,7 @@ public class Marshal extends NetObject  {
 
     public static void WriteByte(NetObject ptr, int ofs, byte val) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.AccessViolationException, system.OutOfMemoryException, system.runtime.interopservices.MarshalDirectiveException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteByte", ptr == null ? null : ptr.getJCOInstance(), ofs, val);
         } catch (JCNativeException jcne) {
@@ -545,7 +761,7 @@ public class Marshal extends NetObject  {
 
     public static void WriteInt16(JCORefOut<NetObject> ptr, int ofs, char val) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.AccessViolationException, system.OutOfMemoryException, system.runtime.interopservices.MarshalDirectiveException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteInt16", ptr.getJCRefOut(), ofs, val);
         } catch (JCNativeException jcne) {
@@ -555,7 +771,7 @@ public class Marshal extends NetObject  {
 
     public static void WriteInt16(NetObject ptr, int ofs, short val) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.AccessViolationException, system.OutOfMemoryException, system.runtime.interopservices.MarshalDirectiveException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteInt16", ptr == null ? null : ptr.getJCOInstance(), ofs, val);
         } catch (JCNativeException jcne) {
@@ -565,7 +781,7 @@ public class Marshal extends NetObject  {
 
     public static void WriteInt32(NetObject ptr, int ofs, int val) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.AccessViolationException, system.OutOfMemoryException, system.runtime.interopservices.MarshalDirectiveException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteInt32", ptr == null ? null : ptr.getJCOInstance(), ofs, val);
         } catch (JCNativeException jcne) {
@@ -575,7 +791,7 @@ public class Marshal extends NetObject  {
 
     public static void WriteInt64(NetObject ptr, int ofs, long val) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.AccessViolationException, system.OutOfMemoryException, system.runtime.interopservices.MarshalDirectiveException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteInt64", ptr == null ? null : ptr.getJCOInstance(), ofs, val);
         } catch (JCNativeException jcne) {

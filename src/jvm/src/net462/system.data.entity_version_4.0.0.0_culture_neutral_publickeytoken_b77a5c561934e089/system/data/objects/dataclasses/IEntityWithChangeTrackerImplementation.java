@@ -144,7 +144,7 @@ public class IEntityWithChangeTrackerImplementation extends NetObject implements
     
     public void SetChangeTracker(IEntityChangeTracker changeTracker) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetChangeTracker", changeTracker == null ? null : changeTracker.getJCOInstance());
         } catch (JCNativeException jcne) {

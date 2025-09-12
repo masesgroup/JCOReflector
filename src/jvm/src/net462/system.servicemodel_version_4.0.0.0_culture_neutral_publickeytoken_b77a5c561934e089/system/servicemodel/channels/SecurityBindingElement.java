@@ -167,10 +167,14 @@ public class SecurityBindingElement extends BindingElement  {
     
     public static AsymmetricSecurityBindingElement CreateCertificateSignatureBindingElement() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateCertificateSignatureBindingElement = null;
         try {
-            JCObject objCreateCertificateSignatureBindingElement = (JCObject)classType.Invoke("CreateCertificateSignatureBindingElement");
+            retObjectCreateCertificateSignatureBindingElement = classType.Invoke("CreateCertificateSignatureBindingElement");
+            JCObject objCreateCertificateSignatureBindingElement = (JCObject)retObjectCreateCertificateSignatureBindingElement;
             return new AsymmetricSecurityBindingElement(objCreateCertificateSignatureBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCertificateSignatureBindingElement != null ? retObjectCreateCertificateSignatureBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static AsymmetricSecurityBindingElement CreateMutualCertificateDuplexBindingElement() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMutualCertificateDuplexBindingElement = null;
         try {
-            JCObject objCreateMutualCertificateDuplexBindingElement = (JCObject)classType.Invoke("CreateMutualCertificateDuplexBindingElement");
+            retObjectCreateMutualCertificateDuplexBindingElement = classType.Invoke("CreateMutualCertificateDuplexBindingElement");
+            JCObject objCreateMutualCertificateDuplexBindingElement = (JCObject)retObjectCreateMutualCertificateDuplexBindingElement;
             return new AsymmetricSecurityBindingElement(objCreateMutualCertificateDuplexBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMutualCertificateDuplexBindingElement != null ? retObjectCreateMutualCertificateDuplexBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +197,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static AsymmetricSecurityBindingElement CreateMutualCertificateDuplexBindingElement(MessageSecurityVersion version) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMutualCertificateDuplexBindingElement = null;
         try {
-            JCObject objCreateMutualCertificateDuplexBindingElement = (JCObject)classType.Invoke("CreateMutualCertificateDuplexBindingElement", version == null ? null : version.getJCOInstance());
+            retObjectCreateMutualCertificateDuplexBindingElement = classType.Invoke("CreateMutualCertificateDuplexBindingElement", version == null ? null : version.getJCOInstance());
+            JCObject objCreateMutualCertificateDuplexBindingElement = (JCObject)retObjectCreateMutualCertificateDuplexBindingElement;
             return new AsymmetricSecurityBindingElement(objCreateMutualCertificateDuplexBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMutualCertificateDuplexBindingElement != null ? retObjectCreateMutualCertificateDuplexBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +212,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static SecurityBindingElement CreateMutualCertificateBindingElement() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMutualCertificateBindingElement = null;
         try {
-            JCObject objCreateMutualCertificateBindingElement = (JCObject)classType.Invoke("CreateMutualCertificateBindingElement");
+            retObjectCreateMutualCertificateBindingElement = classType.Invoke("CreateMutualCertificateBindingElement");
+            JCObject objCreateMutualCertificateBindingElement = (JCObject)retObjectCreateMutualCertificateBindingElement;
             return new SecurityBindingElement(objCreateMutualCertificateBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMutualCertificateBindingElement != null ? retObjectCreateMutualCertificateBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +227,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static SecurityBindingElement CreateMutualCertificateBindingElement(MessageSecurityVersion version) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMutualCertificateBindingElement = null;
         try {
-            JCObject objCreateMutualCertificateBindingElement = (JCObject)classType.Invoke("CreateMutualCertificateBindingElement", version == null ? null : version.getJCOInstance());
+            retObjectCreateMutualCertificateBindingElement = classType.Invoke("CreateMutualCertificateBindingElement", version == null ? null : version.getJCOInstance());
+            JCObject objCreateMutualCertificateBindingElement = (JCObject)retObjectCreateMutualCertificateBindingElement;
             return new SecurityBindingElement(objCreateMutualCertificateBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMutualCertificateBindingElement != null ? retObjectCreateMutualCertificateBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +242,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static SecurityBindingElement CreateMutualCertificateBindingElement(MessageSecurityVersion version, boolean allowSerializedSigningTokenOnReply) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMutualCertificateBindingElement = null;
         try {
-            JCObject objCreateMutualCertificateBindingElement = (JCObject)classType.Invoke("CreateMutualCertificateBindingElement", version == null ? null : version.getJCOInstance(), allowSerializedSigningTokenOnReply);
+            retObjectCreateMutualCertificateBindingElement = classType.Invoke("CreateMutualCertificateBindingElement", version == null ? null : version.getJCOInstance(), allowSerializedSigningTokenOnReply);
+            JCObject objCreateMutualCertificateBindingElement = (JCObject)retObjectCreateMutualCertificateBindingElement;
             return new SecurityBindingElement(objCreateMutualCertificateBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMutualCertificateBindingElement != null ? retObjectCreateMutualCertificateBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +257,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static SecurityBindingElement CreateSecureConversationBindingElement(SecurityBindingElement bootstrapSecurity) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSecureConversationBindingElement = null;
         try {
-            JCObject objCreateSecureConversationBindingElement = (JCObject)classType.Invoke("CreateSecureConversationBindingElement", bootstrapSecurity == null ? null : bootstrapSecurity.getJCOInstance());
+            retObjectCreateSecureConversationBindingElement = classType.Invoke("CreateSecureConversationBindingElement", bootstrapSecurity == null ? null : bootstrapSecurity.getJCOInstance());
+            JCObject objCreateSecureConversationBindingElement = (JCObject)retObjectCreateSecureConversationBindingElement;
             return new SecurityBindingElement(objCreateSecureConversationBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSecureConversationBindingElement != null ? retObjectCreateSecureConversationBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +272,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static SecurityBindingElement CreateSecureConversationBindingElement(SecurityBindingElement bootstrapSecurity, boolean requireCancellation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSecureConversationBindingElement = null;
         try {
-            JCObject objCreateSecureConversationBindingElement = (JCObject)classType.Invoke("CreateSecureConversationBindingElement", bootstrapSecurity == null ? null : bootstrapSecurity.getJCOInstance(), requireCancellation);
+            retObjectCreateSecureConversationBindingElement = classType.Invoke("CreateSecureConversationBindingElement", bootstrapSecurity == null ? null : bootstrapSecurity.getJCOInstance(), requireCancellation);
+            JCObject objCreateSecureConversationBindingElement = (JCObject)retObjectCreateSecureConversationBindingElement;
             return new SecurityBindingElement(objCreateSecureConversationBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSecureConversationBindingElement != null ? retObjectCreateSecureConversationBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +287,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static SecurityBindingElement CreateSecureConversationBindingElement(SecurityBindingElement bootstrapSecurity, boolean requireCancellation, ChannelProtectionRequirements bootstrapProtectionRequirements) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSecureConversationBindingElement = null;
         try {
-            JCObject objCreateSecureConversationBindingElement = (JCObject)classType.Invoke("CreateSecureConversationBindingElement", bootstrapSecurity == null ? null : bootstrapSecurity.getJCOInstance(), requireCancellation, bootstrapProtectionRequirements == null ? null : bootstrapProtectionRequirements.getJCOInstance());
+            retObjectCreateSecureConversationBindingElement = classType.Invoke("CreateSecureConversationBindingElement", bootstrapSecurity == null ? null : bootstrapSecurity.getJCOInstance(), requireCancellation, bootstrapProtectionRequirements == null ? null : bootstrapProtectionRequirements.getJCOInstance());
+            JCObject objCreateSecureConversationBindingElement = (JCObject)retObjectCreateSecureConversationBindingElement;
             return new SecurityBindingElement(objCreateSecureConversationBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSecureConversationBindingElement != null ? retObjectCreateSecureConversationBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +302,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static SymmetricSecurityBindingElement CreateAnonymousForCertificateBindingElement() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateAnonymousForCertificateBindingElement = null;
         try {
-            JCObject objCreateAnonymousForCertificateBindingElement = (JCObject)classType.Invoke("CreateAnonymousForCertificateBindingElement");
+            retObjectCreateAnonymousForCertificateBindingElement = classType.Invoke("CreateAnonymousForCertificateBindingElement");
+            JCObject objCreateAnonymousForCertificateBindingElement = (JCObject)retObjectCreateAnonymousForCertificateBindingElement;
             return new SymmetricSecurityBindingElement(objCreateAnonymousForCertificateBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateAnonymousForCertificateBindingElement != null ? retObjectCreateAnonymousForCertificateBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,10 +317,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static SymmetricSecurityBindingElement CreateIssuedTokenBindingElement(IssuedSecurityTokenParameters issuedTokenParameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateIssuedTokenBindingElement = null;
         try {
-            JCObject objCreateIssuedTokenBindingElement = (JCObject)classType.Invoke("CreateIssuedTokenBindingElement", issuedTokenParameters == null ? null : issuedTokenParameters.getJCOInstance());
+            retObjectCreateIssuedTokenBindingElement = classType.Invoke("CreateIssuedTokenBindingElement", issuedTokenParameters == null ? null : issuedTokenParameters.getJCOInstance());
+            JCObject objCreateIssuedTokenBindingElement = (JCObject)retObjectCreateIssuedTokenBindingElement;
             return new SymmetricSecurityBindingElement(objCreateIssuedTokenBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateIssuedTokenBindingElement != null ? retObjectCreateIssuedTokenBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,10 +332,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static SymmetricSecurityBindingElement CreateIssuedTokenForCertificateBindingElement(IssuedSecurityTokenParameters issuedTokenParameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateIssuedTokenForCertificateBindingElement = null;
         try {
-            JCObject objCreateIssuedTokenForCertificateBindingElement = (JCObject)classType.Invoke("CreateIssuedTokenForCertificateBindingElement", issuedTokenParameters == null ? null : issuedTokenParameters.getJCOInstance());
+            retObjectCreateIssuedTokenForCertificateBindingElement = classType.Invoke("CreateIssuedTokenForCertificateBindingElement", issuedTokenParameters == null ? null : issuedTokenParameters.getJCOInstance());
+            JCObject objCreateIssuedTokenForCertificateBindingElement = (JCObject)retObjectCreateIssuedTokenForCertificateBindingElement;
             return new SymmetricSecurityBindingElement(objCreateIssuedTokenForCertificateBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateIssuedTokenForCertificateBindingElement != null ? retObjectCreateIssuedTokenForCertificateBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,10 +347,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static SymmetricSecurityBindingElement CreateIssuedTokenForSslBindingElement(IssuedSecurityTokenParameters issuedTokenParameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateIssuedTokenForSslBindingElement = null;
         try {
-            JCObject objCreateIssuedTokenForSslBindingElement = (JCObject)classType.Invoke("CreateIssuedTokenForSslBindingElement", issuedTokenParameters == null ? null : issuedTokenParameters.getJCOInstance());
+            retObjectCreateIssuedTokenForSslBindingElement = classType.Invoke("CreateIssuedTokenForSslBindingElement", issuedTokenParameters == null ? null : issuedTokenParameters.getJCOInstance());
+            JCObject objCreateIssuedTokenForSslBindingElement = (JCObject)retObjectCreateIssuedTokenForSslBindingElement;
             return new SymmetricSecurityBindingElement(objCreateIssuedTokenForSslBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateIssuedTokenForSslBindingElement != null ? retObjectCreateIssuedTokenForSslBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,10 +362,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static SymmetricSecurityBindingElement CreateIssuedTokenForSslBindingElement(IssuedSecurityTokenParameters issuedTokenParameters, boolean requireCancellation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateIssuedTokenForSslBindingElement = null;
         try {
-            JCObject objCreateIssuedTokenForSslBindingElement = (JCObject)classType.Invoke("CreateIssuedTokenForSslBindingElement", issuedTokenParameters == null ? null : issuedTokenParameters.getJCOInstance(), requireCancellation);
+            retObjectCreateIssuedTokenForSslBindingElement = classType.Invoke("CreateIssuedTokenForSslBindingElement", issuedTokenParameters == null ? null : issuedTokenParameters.getJCOInstance(), requireCancellation);
+            JCObject objCreateIssuedTokenForSslBindingElement = (JCObject)retObjectCreateIssuedTokenForSslBindingElement;
             return new SymmetricSecurityBindingElement(objCreateIssuedTokenForSslBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateIssuedTokenForSslBindingElement != null ? retObjectCreateIssuedTokenForSslBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,10 +377,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static SymmetricSecurityBindingElement CreateKerberosBindingElement() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateKerberosBindingElement = null;
         try {
-            JCObject objCreateKerberosBindingElement = (JCObject)classType.Invoke("CreateKerberosBindingElement");
+            retObjectCreateKerberosBindingElement = classType.Invoke("CreateKerberosBindingElement");
+            JCObject objCreateKerberosBindingElement = (JCObject)retObjectCreateKerberosBindingElement;
             return new SymmetricSecurityBindingElement(objCreateKerberosBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateKerberosBindingElement != null ? retObjectCreateKerberosBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,10 +392,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static SymmetricSecurityBindingElement CreateSslNegotiationBindingElement(boolean requireClientCertificate) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSslNegotiationBindingElement = null;
         try {
-            JCObject objCreateSslNegotiationBindingElement = (JCObject)classType.Invoke("CreateSslNegotiationBindingElement", requireClientCertificate);
+            retObjectCreateSslNegotiationBindingElement = classType.Invoke("CreateSslNegotiationBindingElement", requireClientCertificate);
+            JCObject objCreateSslNegotiationBindingElement = (JCObject)retObjectCreateSslNegotiationBindingElement;
             return new SymmetricSecurityBindingElement(objCreateSslNegotiationBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSslNegotiationBindingElement != null ? retObjectCreateSslNegotiationBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,10 +407,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static SymmetricSecurityBindingElement CreateSslNegotiationBindingElement(boolean requireClientCertificate, boolean requireCancellation) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSslNegotiationBindingElement = null;
         try {
-            JCObject objCreateSslNegotiationBindingElement = (JCObject)classType.Invoke("CreateSslNegotiationBindingElement", requireClientCertificate, requireCancellation);
+            retObjectCreateSslNegotiationBindingElement = classType.Invoke("CreateSslNegotiationBindingElement", requireClientCertificate, requireCancellation);
+            JCObject objCreateSslNegotiationBindingElement = (JCObject)retObjectCreateSslNegotiationBindingElement;
             return new SymmetricSecurityBindingElement(objCreateSslNegotiationBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSslNegotiationBindingElement != null ? retObjectCreateSslNegotiationBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,10 +422,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static SymmetricSecurityBindingElement CreateSspiNegotiationBindingElement() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSspiNegotiationBindingElement = null;
         try {
-            JCObject objCreateSspiNegotiationBindingElement = (JCObject)classType.Invoke("CreateSspiNegotiationBindingElement");
+            retObjectCreateSspiNegotiationBindingElement = classType.Invoke("CreateSspiNegotiationBindingElement");
+            JCObject objCreateSspiNegotiationBindingElement = (JCObject)retObjectCreateSspiNegotiationBindingElement;
             return new SymmetricSecurityBindingElement(objCreateSspiNegotiationBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSspiNegotiationBindingElement != null ? retObjectCreateSspiNegotiationBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,10 +437,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static SymmetricSecurityBindingElement CreateSspiNegotiationBindingElement(boolean requireCancellation) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSspiNegotiationBindingElement = null;
         try {
-            JCObject objCreateSspiNegotiationBindingElement = (JCObject)classType.Invoke("CreateSspiNegotiationBindingElement", requireCancellation);
+            retObjectCreateSspiNegotiationBindingElement = classType.Invoke("CreateSspiNegotiationBindingElement", requireCancellation);
+            JCObject objCreateSspiNegotiationBindingElement = (JCObject)retObjectCreateSspiNegotiationBindingElement;
             return new SymmetricSecurityBindingElement(objCreateSspiNegotiationBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSspiNegotiationBindingElement != null ? retObjectCreateSspiNegotiationBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,10 +452,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static SymmetricSecurityBindingElement CreateUserNameForCertificateBindingElement() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateUserNameForCertificateBindingElement = null;
         try {
-            JCObject objCreateUserNameForCertificateBindingElement = (JCObject)classType.Invoke("CreateUserNameForCertificateBindingElement");
+            retObjectCreateUserNameForCertificateBindingElement = classType.Invoke("CreateUserNameForCertificateBindingElement");
+            JCObject objCreateUserNameForCertificateBindingElement = (JCObject)retObjectCreateUserNameForCertificateBindingElement;
             return new SymmetricSecurityBindingElement(objCreateUserNameForCertificateBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUserNameForCertificateBindingElement != null ? retObjectCreateUserNameForCertificateBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,10 +467,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static SymmetricSecurityBindingElement CreateUserNameForSslBindingElement() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateUserNameForSslBindingElement = null;
         try {
-            JCObject objCreateUserNameForSslBindingElement = (JCObject)classType.Invoke("CreateUserNameForSslBindingElement");
+            retObjectCreateUserNameForSslBindingElement = classType.Invoke("CreateUserNameForSslBindingElement");
+            JCObject objCreateUserNameForSslBindingElement = (JCObject)retObjectCreateUserNameForSslBindingElement;
             return new SymmetricSecurityBindingElement(objCreateUserNameForSslBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUserNameForSslBindingElement != null ? retObjectCreateUserNameForSslBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,10 +482,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static SymmetricSecurityBindingElement CreateUserNameForSslBindingElement(boolean requireCancellation) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateUserNameForSslBindingElement = null;
         try {
-            JCObject objCreateUserNameForSslBindingElement = (JCObject)classType.Invoke("CreateUserNameForSslBindingElement", requireCancellation);
+            retObjectCreateUserNameForSslBindingElement = classType.Invoke("CreateUserNameForSslBindingElement", requireCancellation);
+            JCObject objCreateUserNameForSslBindingElement = (JCObject)retObjectCreateUserNameForSslBindingElement;
             return new SymmetricSecurityBindingElement(objCreateUserNameForSslBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUserNameForSslBindingElement != null ? retObjectCreateUserNameForSslBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -409,10 +497,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static TransportSecurityBindingElement CreateCertificateOverTransportBindingElement() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateCertificateOverTransportBindingElement = null;
         try {
-            JCObject objCreateCertificateOverTransportBindingElement = (JCObject)classType.Invoke("CreateCertificateOverTransportBindingElement");
+            retObjectCreateCertificateOverTransportBindingElement = classType.Invoke("CreateCertificateOverTransportBindingElement");
+            JCObject objCreateCertificateOverTransportBindingElement = (JCObject)retObjectCreateCertificateOverTransportBindingElement;
             return new TransportSecurityBindingElement(objCreateCertificateOverTransportBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCertificateOverTransportBindingElement != null ? retObjectCreateCertificateOverTransportBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,10 +512,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static TransportSecurityBindingElement CreateCertificateOverTransportBindingElement(MessageSecurityVersion version) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateCertificateOverTransportBindingElement = null;
         try {
-            JCObject objCreateCertificateOverTransportBindingElement = (JCObject)classType.Invoke("CreateCertificateOverTransportBindingElement", version == null ? null : version.getJCOInstance());
+            retObjectCreateCertificateOverTransportBindingElement = classType.Invoke("CreateCertificateOverTransportBindingElement", version == null ? null : version.getJCOInstance());
+            JCObject objCreateCertificateOverTransportBindingElement = (JCObject)retObjectCreateCertificateOverTransportBindingElement;
             return new TransportSecurityBindingElement(objCreateCertificateOverTransportBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCertificateOverTransportBindingElement != null ? retObjectCreateCertificateOverTransportBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,10 +527,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static TransportSecurityBindingElement CreateIssuedTokenOverTransportBindingElement(IssuedSecurityTokenParameters issuedTokenParameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateIssuedTokenOverTransportBindingElement = null;
         try {
-            JCObject objCreateIssuedTokenOverTransportBindingElement = (JCObject)classType.Invoke("CreateIssuedTokenOverTransportBindingElement", issuedTokenParameters == null ? null : issuedTokenParameters.getJCOInstance());
+            retObjectCreateIssuedTokenOverTransportBindingElement = classType.Invoke("CreateIssuedTokenOverTransportBindingElement", issuedTokenParameters == null ? null : issuedTokenParameters.getJCOInstance());
+            JCObject objCreateIssuedTokenOverTransportBindingElement = (JCObject)retObjectCreateIssuedTokenOverTransportBindingElement;
             return new TransportSecurityBindingElement(objCreateIssuedTokenOverTransportBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateIssuedTokenOverTransportBindingElement != null ? retObjectCreateIssuedTokenOverTransportBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,10 +542,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static TransportSecurityBindingElement CreateKerberosOverTransportBindingElement() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateKerberosOverTransportBindingElement = null;
         try {
-            JCObject objCreateKerberosOverTransportBindingElement = (JCObject)classType.Invoke("CreateKerberosOverTransportBindingElement");
+            retObjectCreateKerberosOverTransportBindingElement = classType.Invoke("CreateKerberosOverTransportBindingElement");
+            JCObject objCreateKerberosOverTransportBindingElement = (JCObject)retObjectCreateKerberosOverTransportBindingElement;
             return new TransportSecurityBindingElement(objCreateKerberosOverTransportBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateKerberosOverTransportBindingElement != null ? retObjectCreateKerberosOverTransportBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,10 +557,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static TransportSecurityBindingElement CreateSspiNegotiationOverTransportBindingElement() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSspiNegotiationOverTransportBindingElement = null;
         try {
-            JCObject objCreateSspiNegotiationOverTransportBindingElement = (JCObject)classType.Invoke("CreateSspiNegotiationOverTransportBindingElement");
+            retObjectCreateSspiNegotiationOverTransportBindingElement = classType.Invoke("CreateSspiNegotiationOverTransportBindingElement");
+            JCObject objCreateSspiNegotiationOverTransportBindingElement = (JCObject)retObjectCreateSspiNegotiationOverTransportBindingElement;
             return new TransportSecurityBindingElement(objCreateSspiNegotiationOverTransportBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSspiNegotiationOverTransportBindingElement != null ? retObjectCreateSspiNegotiationOverTransportBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,10 +572,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static TransportSecurityBindingElement CreateSspiNegotiationOverTransportBindingElement(boolean requireCancellation) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSspiNegotiationOverTransportBindingElement = null;
         try {
-            JCObject objCreateSspiNegotiationOverTransportBindingElement = (JCObject)classType.Invoke("CreateSspiNegotiationOverTransportBindingElement", requireCancellation);
+            retObjectCreateSspiNegotiationOverTransportBindingElement = classType.Invoke("CreateSspiNegotiationOverTransportBindingElement", requireCancellation);
+            JCObject objCreateSspiNegotiationOverTransportBindingElement = (JCObject)retObjectCreateSspiNegotiationOverTransportBindingElement;
             return new TransportSecurityBindingElement(objCreateSspiNegotiationOverTransportBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSspiNegotiationOverTransportBindingElement != null ? retObjectCreateSspiNegotiationOverTransportBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -475,10 +587,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public static TransportSecurityBindingElement CreateUserNameOverTransportBindingElement() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateUserNameOverTransportBindingElement = null;
         try {
-            JCObject objCreateUserNameOverTransportBindingElement = (JCObject)classType.Invoke("CreateUserNameOverTransportBindingElement");
+            retObjectCreateUserNameOverTransportBindingElement = classType.Invoke("CreateUserNameOverTransportBindingElement");
+            JCObject objCreateUserNameOverTransportBindingElement = (JCObject)retObjectCreateUserNameOverTransportBindingElement;
             return new TransportSecurityBindingElement(objCreateUserNameOverTransportBindingElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUserNameOverTransportBindingElement != null ? retObjectCreateUserNameOverTransportBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -486,7 +602,7 @@ public class SecurityBindingElement extends BindingElement  {
 
     public void SetKeyDerivation(boolean requireDerivedKeys) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetKeyDerivation", requireDerivedKeys);
         } catch (JCNativeException jcne) {
@@ -500,9 +616,13 @@ public class SecurityBindingElement extends BindingElement  {
     
     public boolean getAllowInsecureTransport() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowInsecureTransport = null;
         try {
-            return (boolean)classInstance.Get("AllowInsecureTransport");
+            retObjectAllowInsecureTransport = classInstance.Get("AllowInsecureTransport");
+            return (boolean)retObjectAllowInsecureTransport;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowInsecureTransport != null ? retObjectAllowInsecureTransport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -510,7 +630,7 @@ public class SecurityBindingElement extends BindingElement  {
 
     public void setAllowInsecureTransport(boolean AllowInsecureTransport) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowInsecureTransport", AllowInsecureTransport);
         } catch (JCNativeException jcne) {
@@ -520,9 +640,13 @@ public class SecurityBindingElement extends BindingElement  {
 
     public boolean getEnableUnsecuredResponse() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableUnsecuredResponse = null;
         try {
-            return (boolean)classInstance.Get("EnableUnsecuredResponse");
+            retObjectEnableUnsecuredResponse = classInstance.Get("EnableUnsecuredResponse");
+            return (boolean)retObjectEnableUnsecuredResponse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableUnsecuredResponse != null ? retObjectEnableUnsecuredResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -530,7 +654,7 @@ public class SecurityBindingElement extends BindingElement  {
 
     public void setEnableUnsecuredResponse(boolean EnableUnsecuredResponse) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableUnsecuredResponse", EnableUnsecuredResponse);
         } catch (JCNativeException jcne) {
@@ -540,9 +664,13 @@ public class SecurityBindingElement extends BindingElement  {
 
     public boolean getIncludeTimestamp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludeTimestamp = null;
         try {
-            return (boolean)classInstance.Get("IncludeTimestamp");
+            retObjectIncludeTimestamp = classInstance.Get("IncludeTimestamp");
+            return (boolean)retObjectIncludeTimestamp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIncludeTimestamp != null ? retObjectIncludeTimestamp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -550,7 +678,7 @@ public class SecurityBindingElement extends BindingElement  {
 
     public void setIncludeTimestamp(boolean IncludeTimestamp) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncludeTimestamp", IncludeTimestamp);
         } catch (JCNativeException jcne) {
@@ -560,9 +688,13 @@ public class SecurityBindingElement extends BindingElement  {
 
     public boolean getProtectTokens() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtectTokens = null;
         try {
-            return (boolean)classInstance.Get("ProtectTokens");
+            retObjectProtectTokens = classInstance.Get("ProtectTokens");
+            return (boolean)retObjectProtectTokens;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectProtectTokens != null ? retObjectProtectTokens.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -570,7 +702,7 @@ public class SecurityBindingElement extends BindingElement  {
 
     public void setProtectTokens(boolean ProtectTokens) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProtectTokens", ProtectTokens);
         } catch (JCNativeException jcne) {
@@ -580,10 +712,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public LocalClientSecuritySettings getLocalClientSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalClientSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalClientSettings");
+            retObjectLocalClientSettings = classInstance.Get("LocalClientSettings");
+            JCObject val = (JCObject)retObjectLocalClientSettings;
             return new LocalClientSecuritySettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalClientSettings != null ? retObjectLocalClientSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -591,10 +727,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public LocalServiceSecuritySettings getLocalServiceSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalServiceSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalServiceSettings");
+            retObjectLocalServiceSettings = classInstance.Get("LocalServiceSettings");
+            JCObject val = (JCObject)retObjectLocalServiceSettings;
             return new LocalServiceSecuritySettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalServiceSettings != null ? retObjectLocalServiceSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -602,10 +742,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public SecurityHeaderLayout getSecurityHeaderLayout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityHeaderLayout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityHeaderLayout");
+            retObjectSecurityHeaderLayout = classInstance.Get("SecurityHeaderLayout");
+            JCObject val = (JCObject)retObjectSecurityHeaderLayout;
             return new SecurityHeaderLayout(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityHeaderLayout != null ? retObjectSecurityHeaderLayout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -613,7 +757,7 @@ public class SecurityBindingElement extends BindingElement  {
 
     public void setSecurityHeaderLayout(SecurityHeaderLayout SecurityHeaderLayout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecurityHeaderLayout", SecurityHeaderLayout == null ? null : SecurityHeaderLayout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -623,10 +767,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public MessageSecurityVersion getMessageSecurityVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageSecurityVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageSecurityVersion");
+            retObjectMessageSecurityVersion = classInstance.Get("MessageSecurityVersion");
+            JCObject val = (JCObject)retObjectMessageSecurityVersion;
             return new MessageSecurityVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageSecurityVersion != null ? retObjectMessageSecurityVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -634,7 +782,7 @@ public class SecurityBindingElement extends BindingElement  {
 
     public void setMessageSecurityVersion(MessageSecurityVersion MessageSecurityVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageSecurityVersion", MessageSecurityVersion == null ? null : MessageSecurityVersion.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -644,10 +792,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public SecurityAlgorithmSuite getDefaultAlgorithmSuite() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultAlgorithmSuite = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultAlgorithmSuite");
+            retObjectDefaultAlgorithmSuite = classInstance.Get("DefaultAlgorithmSuite");
+            JCObject val = (JCObject)retObjectDefaultAlgorithmSuite;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultAlgorithmSuite != null ? retObjectDefaultAlgorithmSuite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -655,7 +807,7 @@ public class SecurityBindingElement extends BindingElement  {
 
     public void setDefaultAlgorithmSuite(SecurityAlgorithmSuite DefaultAlgorithmSuite) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultAlgorithmSuite", DefaultAlgorithmSuite == null ? null : DefaultAlgorithmSuite.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -665,10 +817,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public SecurityKeyEntropyMode getKeyEntropyMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyEntropyMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyEntropyMode");
+            retObjectKeyEntropyMode = classInstance.Get("KeyEntropyMode");
+            JCObject val = (JCObject)retObjectKeyEntropyMode;
             return new SecurityKeyEntropyMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyEntropyMode != null ? retObjectKeyEntropyMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -676,7 +832,7 @@ public class SecurityBindingElement extends BindingElement  {
 
     public void setKeyEntropyMode(SecurityKeyEntropyMode KeyEntropyMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyEntropyMode", KeyEntropyMode == null ? null : KeyEntropyMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -686,10 +842,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public SupportingTokenParameters getEndpointSupportingTokenParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndpointSupportingTokenParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EndpointSupportingTokenParameters");
+            retObjectEndpointSupportingTokenParameters = classInstance.Get("EndpointSupportingTokenParameters");
+            JCObject val = (JCObject)retObjectEndpointSupportingTokenParameters;
             return new SupportingTokenParameters(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndpointSupportingTokenParameters != null ? retObjectEndpointSupportingTokenParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -697,10 +857,14 @@ public class SecurityBindingElement extends BindingElement  {
 
     public SupportingTokenParameters getOptionalEndpointSupportingTokenParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptionalEndpointSupportingTokenParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OptionalEndpointSupportingTokenParameters");
+            retObjectOptionalEndpointSupportingTokenParameters = classInstance.Get("OptionalEndpointSupportingTokenParameters");
+            JCObject val = (JCObject)retObjectOptionalEndpointSupportingTokenParameters;
             return new SupportingTokenParameters(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptionalEndpointSupportingTokenParameters != null ? retObjectOptionalEndpointSupportingTokenParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

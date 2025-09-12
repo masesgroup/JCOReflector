@@ -171,9 +171,19 @@ public class ColumnReorderedEventArgs extends CancelEventArgs  {
     
     public int getNewDisplayIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewDisplayIndex = null;
         try {
-            return (int)classInstance.Get("NewDisplayIndex");
+            retObjectNewDisplayIndex = classInstance.Get("NewDisplayIndex");
+            return (int)retObjectNewDisplayIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNewDisplayIndexNumber = (java.lang.Number)retObjectNewDisplayIndex;
+                return retObjectNewDisplayIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNewDisplayIndex != null ? retObjectNewDisplayIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +191,19 @@ public class ColumnReorderedEventArgs extends CancelEventArgs  {
 
     public int getOldDisplayIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldDisplayIndex = null;
         try {
-            return (int)classInstance.Get("OldDisplayIndex");
+            retObjectOldDisplayIndex = classInstance.Get("OldDisplayIndex");
+            return (int)retObjectOldDisplayIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOldDisplayIndexNumber = (java.lang.Number)retObjectOldDisplayIndex;
+                return retObjectOldDisplayIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOldDisplayIndex != null ? retObjectOldDisplayIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +211,14 @@ public class ColumnReorderedEventArgs extends CancelEventArgs  {
 
     public ColumnHeader getHeader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeader = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Header");
+            retObjectHeader = classInstance.Get("Header");
+            JCObject val = (JCObject)retObjectHeader;
             return new ColumnHeader(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeader != null ? retObjectHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

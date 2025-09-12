@@ -190,9 +190,13 @@ public class DataGridTableStyle extends Component  {
     
     public boolean BeginEdit(DataGridColumnStyle gridColumn, int rowNumber) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginEdit = null;
         try {
-            return (boolean)classInstance.Invoke("BeginEdit", gridColumn == null ? null : gridColumn.getJCOInstance(), rowNumber);
+            retObjectBeginEdit = classInstance.Invoke("BeginEdit", gridColumn == null ? null : gridColumn.getJCOInstance(), rowNumber);
+            return (boolean)retObjectBeginEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectBeginEdit != null ? retObjectBeginEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +204,13 @@ public class DataGridTableStyle extends Component  {
 
     public boolean EndEdit(DataGridColumnStyle gridColumn, int rowNumber, boolean shouldAbort) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndEdit = null;
         try {
-            return (boolean)classInstance.Invoke("EndEdit", gridColumn == null ? null : gridColumn.getJCOInstance(), rowNumber, shouldAbort);
+            retObjectEndEdit = classInstance.Invoke("EndEdit", gridColumn == null ? null : gridColumn.getJCOInstance(), rowNumber, shouldAbort);
+            return (boolean)retObjectEndEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEndEdit != null ? retObjectEndEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +218,7 @@ public class DataGridTableStyle extends Component  {
 
     public void ResetAlternatingBackColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetAlternatingBackColor");
         } catch (JCNativeException jcne) {
@@ -220,7 +228,7 @@ public class DataGridTableStyle extends Component  {
 
     public void ResetBackColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.runtime.interopservices.ExternalException, system.NullReferenceException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetBackColor");
         } catch (JCNativeException jcne) {
@@ -230,7 +238,7 @@ public class DataGridTableStyle extends Component  {
 
     public void ResetForeColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.runtime.interopservices.ExternalException, system.NullReferenceException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetForeColor");
         } catch (JCNativeException jcne) {
@@ -240,7 +248,7 @@ public class DataGridTableStyle extends Component  {
 
     public void ResetGridLineColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetGridLineColor");
         } catch (JCNativeException jcne) {
@@ -250,7 +258,7 @@ public class DataGridTableStyle extends Component  {
 
     public void ResetHeaderBackColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetHeaderBackColor");
         } catch (JCNativeException jcne) {
@@ -260,7 +268,7 @@ public class DataGridTableStyle extends Component  {
 
     public void ResetHeaderFont() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetHeaderFont");
         } catch (JCNativeException jcne) {
@@ -270,7 +278,7 @@ public class DataGridTableStyle extends Component  {
 
     public void ResetHeaderForeColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetHeaderForeColor");
         } catch (JCNativeException jcne) {
@@ -280,7 +288,7 @@ public class DataGridTableStyle extends Component  {
 
     public void ResetLinkColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetLinkColor");
         } catch (JCNativeException jcne) {
@@ -290,7 +298,7 @@ public class DataGridTableStyle extends Component  {
 
     public void ResetLinkHoverColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetLinkHoverColor");
         } catch (JCNativeException jcne) {
@@ -300,7 +308,7 @@ public class DataGridTableStyle extends Component  {
 
     public void ResetSelectionBackColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetSelectionBackColor");
         } catch (JCNativeException jcne) {
@@ -310,7 +318,7 @@ public class DataGridTableStyle extends Component  {
 
     public void ResetSelectionForeColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetSelectionForeColor");
         } catch (JCNativeException jcne) {
@@ -324,9 +332,13 @@ public class DataGridTableStyle extends Component  {
     
     public boolean getAllowSorting() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowSorting = null;
         try {
-            return (boolean)classInstance.Get("AllowSorting");
+            retObjectAllowSorting = classInstance.Get("AllowSorting");
+            return (boolean)retObjectAllowSorting;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowSorting != null ? retObjectAllowSorting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,7 +346,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setAllowSorting(boolean AllowSorting) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowSorting", AllowSorting);
         } catch (JCNativeException jcne) {
@@ -344,9 +356,13 @@ public class DataGridTableStyle extends Component  {
 
     public boolean getColumnHeadersVisible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnHeadersVisible = null;
         try {
-            return (boolean)classInstance.Get("ColumnHeadersVisible");
+            retObjectColumnHeadersVisible = classInstance.Get("ColumnHeadersVisible");
+            return (boolean)retObjectColumnHeadersVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectColumnHeadersVisible != null ? retObjectColumnHeadersVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,7 +370,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setColumnHeadersVisible(boolean ColumnHeadersVisible) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnHeadersVisible", ColumnHeadersVisible);
         } catch (JCNativeException jcne) {
@@ -364,9 +380,13 @@ public class DataGridTableStyle extends Component  {
 
     public boolean getReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadOnly = null;
         try {
-            return (boolean)classInstance.Get("ReadOnly");
+            retObjectReadOnly = classInstance.Get("ReadOnly");
+            return (boolean)retObjectReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReadOnly != null ? retObjectReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,7 +394,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setReadOnly(boolean ReadOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadOnly", ReadOnly);
         } catch (JCNativeException jcne) {
@@ -384,9 +404,13 @@ public class DataGridTableStyle extends Component  {
 
     public boolean getRowHeadersVisible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowHeadersVisible = null;
         try {
-            return (boolean)classInstance.Get("RowHeadersVisible");
+            retObjectRowHeadersVisible = classInstance.Get("RowHeadersVisible");
+            return (boolean)retObjectRowHeadersVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRowHeadersVisible != null ? retObjectRowHeadersVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,7 +418,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setRowHeadersVisible(boolean RowHeadersVisible) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowHeadersVisible", RowHeadersVisible);
         } catch (JCNativeException jcne) {
@@ -404,9 +428,19 @@ public class DataGridTableStyle extends Component  {
 
     public int getPreferredColumnWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreferredColumnWidth = null;
         try {
-            return (int)classInstance.Get("PreferredColumnWidth");
+            retObjectPreferredColumnWidth = classInstance.Get("PreferredColumnWidth");
+            return (int)retObjectPreferredColumnWidth;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPreferredColumnWidthNumber = (java.lang.Number)retObjectPreferredColumnWidth;
+                return retObjectPreferredColumnWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPreferredColumnWidth != null ? retObjectPreferredColumnWidth.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -414,7 +448,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setPreferredColumnWidth(int PreferredColumnWidth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreferredColumnWidth", PreferredColumnWidth);
         } catch (JCNativeException jcne) {
@@ -424,9 +458,19 @@ public class DataGridTableStyle extends Component  {
 
     public int getPreferredRowHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreferredRowHeight = null;
         try {
-            return (int)classInstance.Get("PreferredRowHeight");
+            retObjectPreferredRowHeight = classInstance.Get("PreferredRowHeight");
+            return (int)retObjectPreferredRowHeight;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPreferredRowHeightNumber = (java.lang.Number)retObjectPreferredRowHeight;
+                return retObjectPreferredRowHeightNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPreferredRowHeight != null ? retObjectPreferredRowHeight.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -434,7 +478,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setPreferredRowHeight(int PreferredRowHeight) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreferredRowHeight", PreferredRowHeight);
         } catch (JCNativeException jcne) {
@@ -444,9 +488,19 @@ public class DataGridTableStyle extends Component  {
 
     public int getRowHeaderWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowHeaderWidth = null;
         try {
-            return (int)classInstance.Get("RowHeaderWidth");
+            retObjectRowHeaderWidth = classInstance.Get("RowHeaderWidth");
+            return (int)retObjectRowHeaderWidth;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRowHeaderWidthNumber = (java.lang.Number)retObjectRowHeaderWidth;
+                return retObjectRowHeaderWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRowHeaderWidth != null ? retObjectRowHeaderWidth.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -454,7 +508,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setRowHeaderWidth(int RowHeaderWidth) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowHeaderWidth", RowHeaderWidth);
         } catch (JCNativeException jcne) {
@@ -464,10 +518,14 @@ public class DataGridTableStyle extends Component  {
 
     public Color getAlternatingBackColor() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlternatingBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AlternatingBackColor");
+            retObjectAlternatingBackColor = classInstance.Get("AlternatingBackColor");
+            JCObject val = (JCObject)retObjectAlternatingBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlternatingBackColor != null ? retObjectAlternatingBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -475,7 +533,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setAlternatingBackColor(Color AlternatingBackColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.runtime.interopservices.ExternalException, system.NullReferenceException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlternatingBackColor", AlternatingBackColor == null ? null : AlternatingBackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -485,10 +543,14 @@ public class DataGridTableStyle extends Component  {
 
     public Color getBackColor() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackColor");
+            retObjectBackColor = classInstance.Get("BackColor");
+            JCObject val = (JCObject)retObjectBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackColor != null ? retObjectBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -496,7 +558,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setBackColor(Color BackColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.runtime.interopservices.ExternalException, system.NullReferenceException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackColor", BackColor == null ? null : BackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -506,10 +568,14 @@ public class DataGridTableStyle extends Component  {
 
     public Color getForeColor() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ForeColor");
+            retObjectForeColor = classInstance.Get("ForeColor");
+            JCObject val = (JCObject)retObjectForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForeColor != null ? retObjectForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -517,7 +583,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setForeColor(Color ForeColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ForeColor", ForeColor == null ? null : ForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -527,10 +593,14 @@ public class DataGridTableStyle extends Component  {
 
     public Color getGridLineColor() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGridLineColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GridLineColor");
+            retObjectGridLineColor = classInstance.Get("GridLineColor");
+            JCObject val = (JCObject)retObjectGridLineColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGridLineColor != null ? retObjectGridLineColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,7 +608,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setGridLineColor(Color GridLineColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GridLineColor", GridLineColor == null ? null : GridLineColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -548,10 +618,14 @@ public class DataGridTableStyle extends Component  {
 
     public Color getHeaderBackColor() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderBackColor");
+            retObjectHeaderBackColor = classInstance.Get("HeaderBackColor");
+            JCObject val = (JCObject)retObjectHeaderBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderBackColor != null ? retObjectHeaderBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -559,7 +633,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setHeaderBackColor(Color HeaderBackColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.runtime.interopservices.ExternalException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderBackColor", HeaderBackColor == null ? null : HeaderBackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -569,10 +643,14 @@ public class DataGridTableStyle extends Component  {
 
     public Color getHeaderForeColor() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderForeColor");
+            retObjectHeaderForeColor = classInstance.Get("HeaderForeColor");
+            JCObject val = (JCObject)retObjectHeaderForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderForeColor != null ? retObjectHeaderForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -580,7 +658,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setHeaderForeColor(Color HeaderForeColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderForeColor", HeaderForeColor == null ? null : HeaderForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -590,10 +668,14 @@ public class DataGridTableStyle extends Component  {
 
     public Color getLinkColor() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinkColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LinkColor");
+            retObjectLinkColor = classInstance.Get("LinkColor");
+            JCObject val = (JCObject)retObjectLinkColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLinkColor != null ? retObjectLinkColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -601,7 +683,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setLinkColor(Color LinkColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LinkColor", LinkColor == null ? null : LinkColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -611,10 +693,14 @@ public class DataGridTableStyle extends Component  {
 
     public Color getLinkHoverColor() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinkHoverColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LinkHoverColor");
+            retObjectLinkHoverColor = classInstance.Get("LinkHoverColor");
+            JCObject val = (JCObject)retObjectLinkHoverColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLinkHoverColor != null ? retObjectLinkHoverColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -622,7 +708,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setLinkHoverColor(Color LinkHoverColor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LinkHoverColor", LinkHoverColor == null ? null : LinkHoverColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -632,10 +718,14 @@ public class DataGridTableStyle extends Component  {
 
     public Color getSelectionBackColor() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionBackColor");
+            retObjectSelectionBackColor = classInstance.Get("SelectionBackColor");
+            JCObject val = (JCObject)retObjectSelectionBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionBackColor != null ? retObjectSelectionBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -643,7 +733,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setSelectionBackColor(Color SelectionBackColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.runtime.interopservices.ExternalException, system.NullReferenceException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionBackColor", SelectionBackColor == null ? null : SelectionBackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -653,10 +743,14 @@ public class DataGridTableStyle extends Component  {
 
     public Color getSelectionForeColor() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionForeColor");
+            retObjectSelectionForeColor = classInstance.Get("SelectionForeColor");
+            JCObject val = (JCObject)retObjectSelectionForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionForeColor != null ? retObjectSelectionForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -664,7 +758,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setSelectionForeColor(Color SelectionForeColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionForeColor", SelectionForeColor == null ? null : SelectionForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -674,10 +768,14 @@ public class DataGridTableStyle extends Component  {
 
     public Font getHeaderFont() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderFont = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderFont");
+            retObjectHeaderFont = classInstance.Get("HeaderFont");
+            JCObject val = (JCObject)retObjectHeaderFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderFont != null ? retObjectHeaderFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -685,7 +783,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setHeaderFont(Font HeaderFont) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderFont", HeaderFont == null ? null : HeaderFont.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -695,9 +793,13 @@ public class DataGridTableStyle extends Component  {
 
     public java.lang.String getMappingName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMappingName = null;
         try {
-            return (java.lang.String)classInstance.Get("MappingName");
+            retObjectMappingName = classInstance.Get("MappingName");
+            return (java.lang.String)retObjectMappingName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMappingName != null ? retObjectMappingName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -705,7 +807,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setMappingName(java.lang.String MappingName) throws Throwable, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MappingName", MappingName);
         } catch (JCNativeException jcne) {
@@ -715,10 +817,14 @@ public class DataGridTableStyle extends Component  {
 
     public DataGrid getDataGrid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataGrid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataGrid");
+            retObjectDataGrid = classInstance.Get("DataGrid");
+            JCObject val = (JCObject)retObjectDataGrid;
             return new DataGrid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataGrid != null ? retObjectDataGrid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -726,7 +832,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setDataGrid(DataGrid DataGrid) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataGrid", DataGrid == null ? null : DataGrid.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -736,10 +842,14 @@ public class DataGridTableStyle extends Component  {
 
     public DataGridLineStyle getGridLineStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGridLineStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GridLineStyle");
+            retObjectGridLineStyle = classInstance.Get("GridLineStyle");
+            JCObject val = (JCObject)retObjectGridLineStyle;
             return new DataGridLineStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGridLineStyle != null ? retObjectGridLineStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -747,7 +857,7 @@ public class DataGridTableStyle extends Component  {
 
     public void setGridLineStyle(DataGridLineStyle GridLineStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GridLineStyle", GridLineStyle == null ? null : GridLineStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -757,10 +867,14 @@ public class DataGridTableStyle extends Component  {
 
     public GridColumnStylesCollection getGridColumnStyles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGridColumnStyles = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GridColumnStyles");
+            retObjectGridColumnStyles = classInstance.Get("GridColumnStyles");
+            JCObject val = (JCObject)retObjectGridColumnStyles;
             return new GridColumnStylesCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGridColumnStyles != null ? retObjectGridColumnStyles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -773,7 +887,7 @@ public class DataGridTableStyle extends Component  {
 
     public void addAllowSortingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AllowSortingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -783,7 +897,7 @@ public class DataGridTableStyle extends Component  {
 
     public void removeAllowSortingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AllowSortingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -793,7 +907,7 @@ public class DataGridTableStyle extends Component  {
 
     public void addAlternatingBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AlternatingBackColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -803,7 +917,7 @@ public class DataGridTableStyle extends Component  {
 
     public void removeAlternatingBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AlternatingBackColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -813,7 +927,7 @@ public class DataGridTableStyle extends Component  {
 
     public void addBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -823,7 +937,7 @@ public class DataGridTableStyle extends Component  {
 
     public void removeBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -833,7 +947,7 @@ public class DataGridTableStyle extends Component  {
 
     public void addColumnHeadersVisibleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnHeadersVisibleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -843,7 +957,7 @@ public class DataGridTableStyle extends Component  {
 
     public void removeColumnHeadersVisibleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnHeadersVisibleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -853,7 +967,7 @@ public class DataGridTableStyle extends Component  {
 
     public void addForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -863,7 +977,7 @@ public class DataGridTableStyle extends Component  {
 
     public void removeForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -873,7 +987,7 @@ public class DataGridTableStyle extends Component  {
 
     public void addGridLineColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GridLineColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -883,7 +997,7 @@ public class DataGridTableStyle extends Component  {
 
     public void removeGridLineColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GridLineColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -893,7 +1007,7 @@ public class DataGridTableStyle extends Component  {
 
     public void addGridLineStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GridLineStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -903,7 +1017,7 @@ public class DataGridTableStyle extends Component  {
 
     public void removeGridLineStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GridLineStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -913,7 +1027,7 @@ public class DataGridTableStyle extends Component  {
 
     public void addHeaderBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("HeaderBackColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -923,7 +1037,7 @@ public class DataGridTableStyle extends Component  {
 
     public void removeHeaderBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("HeaderBackColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -933,7 +1047,7 @@ public class DataGridTableStyle extends Component  {
 
     public void addHeaderFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("HeaderFontChanged", handler);
         } catch (JCNativeException jcne) {
@@ -943,7 +1057,7 @@ public class DataGridTableStyle extends Component  {
 
     public void removeHeaderFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("HeaderFontChanged", handler);
         } catch (JCNativeException jcne) {
@@ -953,7 +1067,7 @@ public class DataGridTableStyle extends Component  {
 
     public void addHeaderForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("HeaderForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -963,7 +1077,7 @@ public class DataGridTableStyle extends Component  {
 
     public void removeHeaderForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("HeaderForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -973,7 +1087,7 @@ public class DataGridTableStyle extends Component  {
 
     public void addLinkColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LinkColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -983,7 +1097,7 @@ public class DataGridTableStyle extends Component  {
 
     public void removeLinkColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LinkColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -993,7 +1107,7 @@ public class DataGridTableStyle extends Component  {
 
     public void addLinkHoverColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LinkHoverColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1003,7 +1117,7 @@ public class DataGridTableStyle extends Component  {
 
     public void removeLinkHoverColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LinkHoverColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1013,7 +1127,7 @@ public class DataGridTableStyle extends Component  {
 
     public void addMappingNameChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MappingNameChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1023,7 +1137,7 @@ public class DataGridTableStyle extends Component  {
 
     public void removeMappingNameChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MappingNameChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1033,7 +1147,7 @@ public class DataGridTableStyle extends Component  {
 
     public void addPreferredColumnWidthChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreferredColumnWidthChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1043,7 +1157,7 @@ public class DataGridTableStyle extends Component  {
 
     public void removePreferredColumnWidthChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreferredColumnWidthChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1053,7 +1167,7 @@ public class DataGridTableStyle extends Component  {
 
     public void addPreferredRowHeightChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreferredRowHeightChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1063,7 +1177,7 @@ public class DataGridTableStyle extends Component  {
 
     public void removePreferredRowHeightChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreferredRowHeightChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1073,7 +1187,7 @@ public class DataGridTableStyle extends Component  {
 
     public void addReadOnlyChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ReadOnlyChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1083,7 +1197,7 @@ public class DataGridTableStyle extends Component  {
 
     public void removeReadOnlyChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ReadOnlyChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1093,7 +1207,7 @@ public class DataGridTableStyle extends Component  {
 
     public void addRowHeadersVisibleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowHeadersVisibleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1103,7 +1217,7 @@ public class DataGridTableStyle extends Component  {
 
     public void removeRowHeadersVisibleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowHeadersVisibleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1113,7 +1227,7 @@ public class DataGridTableStyle extends Component  {
 
     public void addRowHeaderWidthChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowHeaderWidthChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1123,7 +1237,7 @@ public class DataGridTableStyle extends Component  {
 
     public void removeRowHeaderWidthChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowHeaderWidthChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1133,7 +1247,7 @@ public class DataGridTableStyle extends Component  {
 
     public void addSelectionBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectionBackColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1143,7 +1257,7 @@ public class DataGridTableStyle extends Component  {
 
     public void removeSelectionBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectionBackColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1153,7 +1267,7 @@ public class DataGridTableStyle extends Component  {
 
     public void addSelectionForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectionForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1163,7 +1277,7 @@ public class DataGridTableStyle extends Component  {
 
     public void removeSelectionForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectionForeColorChanged", handler);
         } catch (JCNativeException jcne) {

@@ -154,7 +154,7 @@ public class SoapExtensionReflector extends NetObject  {
     
     public void ReflectDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReflectDescription");
         } catch (JCNativeException jcne) {
@@ -164,7 +164,7 @@ public class SoapExtensionReflector extends NetObject  {
 
     public void ReflectMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReflectMethod");
         } catch (JCNativeException jcne) {
@@ -178,10 +178,14 @@ public class SoapExtensionReflector extends NetObject  {
     
     public ProtocolReflector getReflectionContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReflectionContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReflectionContext");
+            retObjectReflectionContext = classInstance.Get("ReflectionContext");
+            JCObject val = (JCObject)retObjectReflectionContext;
             return new ProtocolReflector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReflectionContext != null ? retObjectReflectionContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +193,7 @@ public class SoapExtensionReflector extends NetObject  {
 
     public void setReflectionContext(ProtocolReflector ReflectionContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReflectionContext", ReflectionContext == null ? null : ReflectionContext.getJCOInstance());
         } catch (JCNativeException jcne) {

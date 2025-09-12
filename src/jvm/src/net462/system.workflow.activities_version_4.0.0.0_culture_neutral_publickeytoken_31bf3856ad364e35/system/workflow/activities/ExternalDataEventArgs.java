@@ -199,9 +199,13 @@ public class ExternalDataEventArgs extends EventArgs  {
     
     public boolean getWaitForIdle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitForIdle = null;
         try {
-            return (boolean)classInstance.Get("WaitForIdle");
+            retObjectWaitForIdle = classInstance.Get("WaitForIdle");
+            return (boolean)retObjectWaitForIdle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWaitForIdle != null ? retObjectWaitForIdle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +213,7 @@ public class ExternalDataEventArgs extends EventArgs  {
 
     public void setWaitForIdle(boolean WaitForIdle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WaitForIdle", WaitForIdle);
         } catch (JCNativeException jcne) {
@@ -219,10 +223,14 @@ public class ExternalDataEventArgs extends EventArgs  {
 
     public Guid getInstanceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstanceId");
+            retObjectInstanceId = classInstance.Get("InstanceId");
+            JCObject val = (JCObject)retObjectInstanceId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceId != null ? retObjectInstanceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +238,7 @@ public class ExternalDataEventArgs extends EventArgs  {
 
     public void setInstanceId(Guid InstanceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstanceId", InstanceId == null ? null : InstanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -240,10 +248,14 @@ public class ExternalDataEventArgs extends EventArgs  {
 
     public NetObject getWorkItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkItem");
+            retObjectWorkItem = classInstance.Get("WorkItem");
+            JCObject val = (JCObject)retObjectWorkItem;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkItem != null ? retObjectWorkItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +263,7 @@ public class ExternalDataEventArgs extends EventArgs  {
 
     public void setWorkItem(NetObject WorkItem) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WorkItem", WorkItem == null ? null : WorkItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -261,9 +273,13 @@ public class ExternalDataEventArgs extends EventArgs  {
 
     public java.lang.String getIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdentity = null;
         try {
-            return (java.lang.String)classInstance.Get("Identity");
+            retObjectIdentity = classInstance.Get("Identity");
+            return (java.lang.String)retObjectIdentity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIdentity != null ? retObjectIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +287,7 @@ public class ExternalDataEventArgs extends EventArgs  {
 
     public void setIdentity(java.lang.String Identity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Identity", Identity);
         } catch (JCNativeException jcne) {
@@ -281,10 +297,14 @@ public class ExternalDataEventArgs extends EventArgs  {
 
     public IPendingWork getWorkHandler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkHandler = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkHandler");
+            retObjectWorkHandler = classInstance.Get("WorkHandler");
+            JCObject val = (JCObject)retObjectWorkHandler;
             return new IPendingWorkImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkHandler != null ? retObjectWorkHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +312,7 @@ public class ExternalDataEventArgs extends EventArgs  {
 
     public void setWorkHandler(IPendingWork WorkHandler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WorkHandler", WorkHandler == null ? null : WorkHandler.getJCOInstance());
         } catch (JCNativeException jcne) {

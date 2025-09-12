@@ -162,9 +162,13 @@ public class NameTable extends XmlNameTable  {
     
     public java.lang.String Add(char[] key, int start, int len) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Add", key, start, len);
+            retObjectAdd = classInstance.Invoke("Add", key, start, len);
+            return (java.lang.String)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class NameTable extends XmlNameTable  {
 
     public java.lang.String Add(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Add", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectAdd = classInstance.Invoke("Add", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (java.lang.String)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,13 @@ public class NameTable extends XmlNameTable  {
 
     public java.lang.String Add(java.lang.String key) throws Throwable, system.ArgumentNullException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Add", key);
+            retObjectAdd = classInstance.Invoke("Add", key);
+            return (java.lang.String)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +204,13 @@ public class NameTable extends XmlNameTable  {
 
     public java.lang.String Get(char[] key, int start, int len) throws Throwable, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGet = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Get", key, start, len);
+            retObjectGet = classInstance.Invoke("Get", key, start, len);
+            return (java.lang.String)retObjectGet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGet != null ? retObjectGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +218,13 @@ public class NameTable extends XmlNameTable  {
 
     public java.lang.String Get(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGet = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Get", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectGet = classInstance.Invoke("Get", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (java.lang.String)retObjectGet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGet != null ? retObjectGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +232,13 @@ public class NameTable extends XmlNameTable  {
 
     public java.lang.String Get(java.lang.String value) throws Throwable, system.ArgumentNullException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGet = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Get", value);
+            retObjectGet = classInstance.Invoke("Get", value);
+            return (java.lang.String)retObjectGet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGet != null ? retObjectGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

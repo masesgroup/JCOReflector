@@ -162,9 +162,19 @@ public class WebEventBufferFlushInfo extends NetObject  {
     
     public int getEventsDiscardedSinceLastNotification() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventsDiscardedSinceLastNotification = null;
         try {
-            return (int)classInstance.Get("EventsDiscardedSinceLastNotification");
+            retObjectEventsDiscardedSinceLastNotification = classInstance.Get("EventsDiscardedSinceLastNotification");
+            return (int)retObjectEventsDiscardedSinceLastNotification;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEventsDiscardedSinceLastNotificationNumber = (java.lang.Number)retObjectEventsDiscardedSinceLastNotification;
+                return retObjectEventsDiscardedSinceLastNotificationNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEventsDiscardedSinceLastNotification != null ? retObjectEventsDiscardedSinceLastNotification.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +182,19 @@ public class WebEventBufferFlushInfo extends NetObject  {
 
     public int getEventsInBuffer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventsInBuffer = null;
         try {
-            return (int)classInstance.Get("EventsInBuffer");
+            retObjectEventsInBuffer = classInstance.Get("EventsInBuffer");
+            return (int)retObjectEventsInBuffer;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEventsInBufferNumber = (java.lang.Number)retObjectEventsInBuffer;
+                return retObjectEventsInBufferNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEventsInBuffer != null ? retObjectEventsInBuffer.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +202,19 @@ public class WebEventBufferFlushInfo extends NetObject  {
 
     public int getNotificationSequence() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNotificationSequence = null;
         try {
-            return (int)classInstance.Get("NotificationSequence");
+            retObjectNotificationSequence = classInstance.Get("NotificationSequence");
+            return (int)retObjectNotificationSequence;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNotificationSequenceNumber = (java.lang.Number)retObjectNotificationSequence;
+                return retObjectNotificationSequenceNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNotificationSequence != null ? retObjectNotificationSequence.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +222,14 @@ public class WebEventBufferFlushInfo extends NetObject  {
 
     public DateTime getLastNotificationUtc() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastNotificationUtc = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastNotificationUtc");
+            retObjectLastNotificationUtc = classInstance.Get("LastNotificationUtc");
+            JCObject val = (JCObject)retObjectLastNotificationUtc;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastNotificationUtc != null ? retObjectLastNotificationUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +237,14 @@ public class WebEventBufferFlushInfo extends NetObject  {
 
     public EventNotificationType getNotificationType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNotificationType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NotificationType");
+            retObjectNotificationType = classInstance.Get("NotificationType");
+            JCObject val = (JCObject)retObjectNotificationType;
             return new EventNotificationType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNotificationType != null ? retObjectNotificationType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +252,14 @@ public class WebEventBufferFlushInfo extends NetObject  {
 
     public WebBaseEventCollection getEvents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvents = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Events");
+            retObjectEvents = classInstance.Get("Events");
+            JCObject val = (JCObject)retObjectEvents;
             return new WebBaseEventCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvents != null ? retObjectEvents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

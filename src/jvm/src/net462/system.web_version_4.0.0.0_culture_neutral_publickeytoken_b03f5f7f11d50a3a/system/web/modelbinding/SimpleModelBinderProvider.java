@@ -170,10 +170,14 @@ public class SimpleModelBinderProvider extends ModelBinderProvider  {
     
     public IModelBinder GetBinder(ModelBindingExecutionContext modelBindingExecutionContext, ModelBindingContext bindingContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBinder = null;
         try {
-            JCObject objGetBinder = (JCObject)classInstance.Invoke("GetBinder", modelBindingExecutionContext == null ? null : modelBindingExecutionContext.getJCOInstance(), bindingContext == null ? null : bindingContext.getJCOInstance());
+            retObjectGetBinder = classInstance.Invoke("GetBinder", modelBindingExecutionContext == null ? null : modelBindingExecutionContext.getJCOInstance(), bindingContext == null ? null : bindingContext.getJCOInstance());
+            JCObject objGetBinder = (JCObject)retObjectGetBinder;
             return new IModelBinderImplementation(objGetBinder);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBinder != null ? retObjectGetBinder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +189,13 @@ public class SimpleModelBinderProvider extends ModelBinderProvider  {
     
     public boolean getSuppressPrefixCheck() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuppressPrefixCheck = null;
         try {
-            return (boolean)classInstance.Get("SuppressPrefixCheck");
+            retObjectSuppressPrefixCheck = classInstance.Get("SuppressPrefixCheck");
+            return (boolean)retObjectSuppressPrefixCheck;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSuppressPrefixCheck != null ? retObjectSuppressPrefixCheck.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class SimpleModelBinderProvider extends ModelBinderProvider  {
 
     public void setSuppressPrefixCheck(boolean SuppressPrefixCheck) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SuppressPrefixCheck", SuppressPrefixCheck);
         } catch (JCNativeException jcne) {
@@ -205,10 +213,14 @@ public class SimpleModelBinderProvider extends ModelBinderProvider  {
 
     public NetType getModelType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModelType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ModelType");
+            retObjectModelType = classInstance.Get("ModelType");
+            JCObject val = (JCObject)retObjectModelType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModelType != null ? retObjectModelType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

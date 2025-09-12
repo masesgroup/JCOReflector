@@ -170,10 +170,14 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
     
     public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePermission = null;
         try {
-            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
+            retObjectCreatePermission = classInstance.Invoke("CreatePermission");
+            JCObject objCreatePermission = (JCObject)retObjectCreatePermission;
             return new IPermissionImplementation(objCreatePermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePermission != null ? retObjectCreatePermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +189,14 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
     
     public FileIOPermissionAccess getAllFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllFiles = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AllFiles");
+            retObjectAllFiles = classInstance.Get("AllFiles");
+            JCObject val = (JCObject)retObjectAllFiles;
             return new FileIOPermissionAccess(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllFiles != null ? retObjectAllFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setAllFiles(FileIOPermissionAccess AllFiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllFiles", AllFiles == null ? null : AllFiles.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -206,10 +214,14 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public FileIOPermissionAccess getAllLocalFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllLocalFiles = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AllLocalFiles");
+            retObjectAllLocalFiles = classInstance.Get("AllLocalFiles");
+            JCObject val = (JCObject)retObjectAllLocalFiles;
             return new FileIOPermissionAccess(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllLocalFiles != null ? retObjectAllLocalFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setAllLocalFiles(FileIOPermissionAccess AllLocalFiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllLocalFiles", AllLocalFiles == null ? null : AllLocalFiles.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -227,9 +239,13 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getAll() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAll = null;
         try {
-            return (java.lang.String)classInstance.Get("All");
+            retObjectAll = classInstance.Get("All");
+            return (java.lang.String)retObjectAll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAll != null ? retObjectAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setAll(java.lang.String All) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("All", All);
         } catch (JCNativeException jcne) {
@@ -247,9 +263,13 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getAppend() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            return (java.lang.String)classInstance.Get("Append");
+            retObjectAppend = classInstance.Get("Append");
+            return (java.lang.String)retObjectAppend;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +277,7 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setAppend(java.lang.String Append) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Append", Append);
         } catch (JCNativeException jcne) {
@@ -267,9 +287,13 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getChangeAccessControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangeAccessControl = null;
         try {
-            return (java.lang.String)classInstance.Get("ChangeAccessControl");
+            retObjectChangeAccessControl = classInstance.Get("ChangeAccessControl");
+            return (java.lang.String)retObjectChangeAccessControl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectChangeAccessControl != null ? retObjectChangeAccessControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +301,7 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setChangeAccessControl(java.lang.String ChangeAccessControl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ChangeAccessControl", ChangeAccessControl);
         } catch (JCNativeException jcne) {
@@ -287,9 +311,13 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getPathDiscovery() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathDiscovery = null;
         try {
-            return (java.lang.String)classInstance.Get("PathDiscovery");
+            retObjectPathDiscovery = classInstance.Get("PathDiscovery");
+            return (java.lang.String)retObjectPathDiscovery;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPathDiscovery != null ? retObjectPathDiscovery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +325,7 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setPathDiscovery(java.lang.String PathDiscovery) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PathDiscovery", PathDiscovery);
         } catch (JCNativeException jcne) {
@@ -307,9 +335,13 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getRead() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (java.lang.String)classInstance.Get("Read");
+            retObjectRead = classInstance.Get("Read");
+            return (java.lang.String)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,7 +349,7 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setRead(java.lang.String Read) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Read", Read);
         } catch (JCNativeException jcne) {
@@ -327,9 +359,13 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getViewAccessControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewAccessControl = null;
         try {
-            return (java.lang.String)classInstance.Get("ViewAccessControl");
+            retObjectViewAccessControl = classInstance.Get("ViewAccessControl");
+            return (java.lang.String)retObjectViewAccessControl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectViewAccessControl != null ? retObjectViewAccessControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,7 +373,7 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setViewAccessControl(java.lang.String ViewAccessControl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ViewAccessControl", ViewAccessControl);
         } catch (JCNativeException jcne) {
@@ -347,9 +383,13 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getViewAndModify() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewAndModify = null;
         try {
-            return (java.lang.String)classInstance.Get("ViewAndModify");
+            retObjectViewAndModify = classInstance.Get("ViewAndModify");
+            return (java.lang.String)retObjectViewAndModify;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectViewAndModify != null ? retObjectViewAndModify.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,7 +397,7 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setViewAndModify(java.lang.String ViewAndModify) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ViewAndModify", ViewAndModify);
         } catch (JCNativeException jcne) {
@@ -367,9 +407,13 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getWrite() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWrite = null;
         try {
-            return (java.lang.String)classInstance.Get("Write");
+            retObjectWrite = classInstance.Get("Write");
+            return (java.lang.String)retObjectWrite;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWrite != null ? retObjectWrite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,7 +421,7 @@ public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setWrite(java.lang.String Write) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Write", Write);
         } catch (JCNativeException jcne) {

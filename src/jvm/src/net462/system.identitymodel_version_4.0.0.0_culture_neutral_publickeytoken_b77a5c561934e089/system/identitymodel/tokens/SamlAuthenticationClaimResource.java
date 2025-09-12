@@ -170,10 +170,14 @@ public class SamlAuthenticationClaimResource extends NetObject  {
     
     public DateTime getAuthenticationInstant() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticationInstant = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AuthenticationInstant");
+            retObjectAuthenticationInstant = classInstance.Get("AuthenticationInstant");
+            JCObject val = (JCObject)retObjectAuthenticationInstant;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticationInstant != null ? retObjectAuthenticationInstant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class SamlAuthenticationClaimResource extends NetObject  {
 
     public java.lang.String getAuthenticationMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticationMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("AuthenticationMethod");
+            retObjectAuthenticationMethod = classInstance.Get("AuthenticationMethod");
+            return (java.lang.String)retObjectAuthenticationMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAuthenticationMethod != null ? retObjectAuthenticationMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +199,13 @@ public class SamlAuthenticationClaimResource extends NetObject  {
 
     public java.lang.String getDnsAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDnsAddress = null;
         try {
-            return (java.lang.String)classInstance.Get("DnsAddress");
+            retObjectDnsAddress = classInstance.Get("DnsAddress");
+            return (java.lang.String)retObjectDnsAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDnsAddress != null ? retObjectDnsAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +213,13 @@ public class SamlAuthenticationClaimResource extends NetObject  {
 
     public java.lang.String getIPAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIPAddress = null;
         try {
-            return (java.lang.String)classInstance.Get("IPAddress");
+            retObjectIPAddress = classInstance.Get("IPAddress");
+            return (java.lang.String)retObjectIPAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIPAddress != null ? retObjectIPAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

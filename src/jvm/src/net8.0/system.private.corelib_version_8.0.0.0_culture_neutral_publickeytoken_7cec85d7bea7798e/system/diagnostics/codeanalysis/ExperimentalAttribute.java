@@ -170,9 +170,13 @@ public class ExperimentalAttribute extends Attribute  {
     
     public java.lang.String getDiagnosticId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDiagnosticId = null;
         try {
-            return (java.lang.String)classInstance.Get("DiagnosticId");
+            retObjectDiagnosticId = classInstance.Get("DiagnosticId");
+            return (java.lang.String)retObjectDiagnosticId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDiagnosticId != null ? retObjectDiagnosticId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class ExperimentalAttribute extends Attribute  {
 
     public java.lang.String getUrlFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUrlFormat = null;
         try {
-            return (java.lang.String)classInstance.Get("UrlFormat");
+            retObjectUrlFormat = classInstance.Get("UrlFormat");
+            return (java.lang.String)retObjectUrlFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUrlFormat != null ? retObjectUrlFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class ExperimentalAttribute extends Attribute  {
 
     public void setUrlFormat(java.lang.String UrlFormat) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UrlFormat", UrlFormat);
         } catch (JCNativeException jcne) {

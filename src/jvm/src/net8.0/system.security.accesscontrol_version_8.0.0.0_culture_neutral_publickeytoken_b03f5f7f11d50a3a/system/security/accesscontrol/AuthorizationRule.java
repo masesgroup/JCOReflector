@@ -160,9 +160,13 @@ public class AuthorizationRule extends NetObject  {
     
     public boolean getIsInherited() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInherited = null;
         try {
-            return (boolean)classInstance.Get("IsInherited");
+            retObjectIsInherited = classInstance.Get("IsInherited");
+            return (boolean)retObjectIsInherited;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInherited != null ? retObjectIsInherited.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class AuthorizationRule extends NetObject  {
 
     public InheritanceFlags getInheritanceFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInheritanceFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InheritanceFlags");
+            retObjectInheritanceFlags = classInstance.Get("InheritanceFlags");
+            JCObject val = (JCObject)retObjectInheritanceFlags;
             return new InheritanceFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInheritanceFlags != null ? retObjectInheritanceFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class AuthorizationRule extends NetObject  {
 
     public PropagationFlags getPropagationFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropagationFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropagationFlags");
+            retObjectPropagationFlags = classInstance.Get("PropagationFlags");
+            JCObject val = (JCObject)retObjectPropagationFlags;
             return new PropagationFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropagationFlags != null ? retObjectPropagationFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class AuthorizationRule extends NetObject  {
 
     public IdentityReference getIdentityReference() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdentityReference = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IdentityReference");
+            retObjectIdentityReference = classInstance.Get("IdentityReference");
+            JCObject val = (JCObject)retObjectIdentityReference;
             return new IdentityReference(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdentityReference != null ? retObjectIdentityReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -154,9 +154,13 @@ public class NonceCache extends NetObject  {
     
     public boolean CheckNonce(byte[] nonce) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckNonce = null;
         try {
-            return (boolean)classInstance.Invoke("CheckNonce", (java.lang.Object)nonce);
+            retObjectCheckNonce = classInstance.Invoke("CheckNonce", (java.lang.Object)nonce);
+            return (boolean)retObjectCheckNonce;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheckNonce != null ? retObjectCheckNonce.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,13 @@ public class NonceCache extends NetObject  {
 
     public boolean CheckNonce(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckNonce = null;
         try {
-            return (boolean)classInstance.Invoke("CheckNonce", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectCheckNonce = classInstance.Invoke("CheckNonce", (java.lang.Object)dupParam0.getJCRefOut());
+            return (boolean)retObjectCheckNonce;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheckNonce != null ? retObjectCheckNonce.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +182,13 @@ public class NonceCache extends NetObject  {
 
     public boolean TryAddNonce(byte[] nonce) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryAddNonce = null;
         try {
-            return (boolean)classInstance.Invoke("TryAddNonce", (java.lang.Object)nonce);
+            retObjectTryAddNonce = classInstance.Invoke("TryAddNonce", (java.lang.Object)nonce);
+            return (boolean)retObjectTryAddNonce;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryAddNonce != null ? retObjectTryAddNonce.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +196,13 @@ public class NonceCache extends NetObject  {
 
     public boolean TryAddNonce(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryAddNonce = null;
         try {
-            return (boolean)classInstance.Invoke("TryAddNonce", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectTryAddNonce = classInstance.Invoke("TryAddNonce", (java.lang.Object)dupParam0.getJCRefOut());
+            return (boolean)retObjectTryAddNonce;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryAddNonce != null ? retObjectTryAddNonce.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +214,19 @@ public class NonceCache extends NetObject  {
     
     public int getCacheSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCacheSize = null;
         try {
-            return (int)classInstance.Get("CacheSize");
+            retObjectCacheSize = classInstance.Get("CacheSize");
+            return (int)retObjectCacheSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCacheSizeNumber = (java.lang.Number)retObjectCacheSize;
+                return retObjectCacheSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCacheSize != null ? retObjectCacheSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +234,7 @@ public class NonceCache extends NetObject  {
 
     public void setCacheSize(int CacheSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CacheSize", CacheSize);
         } catch (JCNativeException jcne) {
@@ -218,10 +244,14 @@ public class NonceCache extends NetObject  {
 
     public TimeSpan getCachingTimeSpan() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCachingTimeSpan = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CachingTimeSpan");
+            retObjectCachingTimeSpan = classInstance.Get("CachingTimeSpan");
+            JCObject val = (JCObject)retObjectCachingTimeSpan;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCachingTimeSpan != null ? retObjectCachingTimeSpan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +259,7 @@ public class NonceCache extends NetObject  {
 
     public void setCachingTimeSpan(TimeSpan CachingTimeSpan) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CachingTimeSpan", CachingTimeSpan == null ? null : CachingTimeSpan.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -158,10 +158,14 @@ public class XamlAccessLevel extends NetObject  {
     
     public static XamlAccessLevel AssemblyAccessTo(Assembly assembly) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAssemblyAccessTo = null;
         try {
-            JCObject objAssemblyAccessTo = (JCObject)classType.Invoke("AssemblyAccessTo", assembly == null ? null : assembly.getJCOInstance());
+            retObjectAssemblyAccessTo = classType.Invoke("AssemblyAccessTo", assembly == null ? null : assembly.getJCOInstance());
+            JCObject objAssemblyAccessTo = (JCObject)retObjectAssemblyAccessTo;
             return new XamlAccessLevel(objAssemblyAccessTo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblyAccessTo != null ? retObjectAssemblyAccessTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class XamlAccessLevel extends NetObject  {
 
     public static XamlAccessLevel AssemblyAccessTo(AssemblyName assemblyName) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.security.SecurityException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAssemblyAccessTo = null;
         try {
-            JCObject objAssemblyAccessTo = (JCObject)classType.Invoke("AssemblyAccessTo", assemblyName == null ? null : assemblyName.getJCOInstance());
+            retObjectAssemblyAccessTo = classType.Invoke("AssemblyAccessTo", assemblyName == null ? null : assemblyName.getJCOInstance());
+            JCObject objAssemblyAccessTo = (JCObject)retObjectAssemblyAccessTo;
             return new XamlAccessLevel(objAssemblyAccessTo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblyAccessTo != null ? retObjectAssemblyAccessTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class XamlAccessLevel extends NetObject  {
 
     public static XamlAccessLevel PrivateAccessTo(java.lang.String assemblyQualifiedTypeName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.io.FileLoadException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPrivateAccessTo = null;
         try {
-            JCObject objPrivateAccessTo = (JCObject)classType.Invoke("PrivateAccessTo", assemblyQualifiedTypeName);
+            retObjectPrivateAccessTo = classType.Invoke("PrivateAccessTo", assemblyQualifiedTypeName);
+            JCObject objPrivateAccessTo = (JCObject)retObjectPrivateAccessTo;
             return new XamlAccessLevel(objPrivateAccessTo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrivateAccessTo != null ? retObjectPrivateAccessTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class XamlAccessLevel extends NetObject  {
 
     public static XamlAccessLevel PrivateAccessTo(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPrivateAccessTo = null;
         try {
-            JCObject objPrivateAccessTo = (JCObject)classType.Invoke("PrivateAccessTo", type == null ? null : type.getJCOInstance());
+            retObjectPrivateAccessTo = classType.Invoke("PrivateAccessTo", type == null ? null : type.getJCOInstance());
+            JCObject objPrivateAccessTo = (JCObject)retObjectPrivateAccessTo;
             return new XamlAccessLevel(objPrivateAccessTo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrivateAccessTo != null ? retObjectPrivateAccessTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +222,14 @@ public class XamlAccessLevel extends NetObject  {
     
     public AssemblyName getAssemblyAccessToAssemblyName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.io.FileLoadException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyAccessToAssemblyName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssemblyAccessToAssemblyName");
+            retObjectAssemblyAccessToAssemblyName = classInstance.Get("AssemblyAccessToAssemblyName");
+            JCObject val = (JCObject)retObjectAssemblyAccessToAssemblyName;
             return new AssemblyName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblyAccessToAssemblyName != null ? retObjectAssemblyAccessToAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +237,13 @@ public class XamlAccessLevel extends NetObject  {
 
     public java.lang.String getPrivateAccessToTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrivateAccessToTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("PrivateAccessToTypeName");
+            retObjectPrivateAccessToTypeName = classInstance.Get("PrivateAccessToTypeName");
+            return (java.lang.String)retObjectPrivateAccessToTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPrivateAccessToTypeName != null ? retObjectPrivateAccessToTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +251,7 @@ public class XamlAccessLevel extends NetObject  {
 
     public void setPrivateAccessToTypeName(java.lang.String PrivateAccessToTypeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrivateAccessToTypeName", PrivateAccessToTypeName);
         } catch (JCNativeException jcne) {

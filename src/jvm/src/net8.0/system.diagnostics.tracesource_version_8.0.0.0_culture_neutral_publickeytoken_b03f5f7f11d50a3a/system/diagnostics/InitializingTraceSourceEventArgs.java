@@ -171,9 +171,13 @@ public class InitializingTraceSourceEventArgs extends EventArgs  {
     
     public boolean getWasInitialized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWasInitialized = null;
         try {
-            return (boolean)classInstance.Get("WasInitialized");
+            retObjectWasInitialized = classInstance.Get("WasInitialized");
+            return (boolean)retObjectWasInitialized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWasInitialized != null ? retObjectWasInitialized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class InitializingTraceSourceEventArgs extends EventArgs  {
 
     public void setWasInitialized(boolean WasInitialized) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WasInitialized", WasInitialized);
         } catch (JCNativeException jcne) {
@@ -191,10 +195,14 @@ public class InitializingTraceSourceEventArgs extends EventArgs  {
 
     public TraceSource getTraceSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTraceSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TraceSource");
+            retObjectTraceSource = classInstance.Get("TraceSource");
+            JCObject val = (JCObject)retObjectTraceSource;
             return new TraceSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTraceSource != null ? retObjectTraceSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

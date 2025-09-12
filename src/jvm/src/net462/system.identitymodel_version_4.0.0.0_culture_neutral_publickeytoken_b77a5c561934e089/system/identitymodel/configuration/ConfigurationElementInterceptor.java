@@ -168,10 +168,14 @@ public class ConfigurationElementInterceptor extends ConfigurationElement  {
     
     public XmlElement getElementAsXml() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElementAsXml = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ElementAsXml");
+            retObjectElementAsXml = classInstance.Get("ElementAsXml");
+            JCObject val = (JCObject)retObjectElementAsXml;
             return new XmlElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElementAsXml != null ? retObjectElementAsXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class ConfigurationElementInterceptor extends ConfigurationElement  {
 
     public XmlNodeList getChildNodes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChildNodes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ChildNodes");
+            retObjectChildNodes = classInstance.Get("ChildNodes");
+            JCObject val = (JCObject)retObjectChildNodes;
             return new XmlNodeList(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChildNodes != null ? retObjectChildNodes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -156,10 +156,14 @@ public class SelectionGlyph extends DesignerGlyph  {
     
     public Rectangle GetBounds(ActivityDesigner designer, boolean activated) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBounds = null;
         try {
-            JCObject objGetBounds = (JCObject)classInstance.Invoke("GetBounds", designer == null ? null : designer.getJCOInstance(), activated);
+            retObjectGetBounds = classInstance.Invoke("GetBounds", designer == null ? null : designer.getJCOInstance(), activated);
+            JCObject objGetBounds = (JCObject)retObjectGetBounds;
             return new Rectangle(objGetBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBounds != null ? retObjectGetBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,16 +171,20 @@ public class SelectionGlyph extends DesignerGlyph  {
 
     public Rectangle[] GetGrabHandles(ActivityDesigner designer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGrabHandles = null;
         try {
             ArrayList<Rectangle> resultingArrayList = new ArrayList<Rectangle>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetGrabHandles", designer == null ? null : designer.getJCOInstance());
+            retObjectGetGrabHandles = classInstance.Invoke("GetGrabHandles", designer == null ? null : designer.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetGrabHandles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Rectangle(resultingObject));
             }
             Rectangle[] resultingArray = new Rectangle[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGrabHandles != null ? retObjectGetGrabHandles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +196,13 @@ public class SelectionGlyph extends DesignerGlyph  {
     
     public boolean getIsPrimarySelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPrimarySelection = null;
         try {
-            return (boolean)classInstance.Get("IsPrimarySelection");
+            retObjectIsPrimarySelection = classInstance.Get("IsPrimarySelection");
+            return (boolean)retObjectIsPrimarySelection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPrimarySelection != null ? retObjectIsPrimarySelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -171,9 +171,13 @@ public class UICuesEventArgs extends EventArgs  {
     
     public boolean getChangeFocus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangeFocus = null;
         try {
-            return (boolean)classInstance.Get("ChangeFocus");
+            retObjectChangeFocus = classInstance.Get("ChangeFocus");
+            return (boolean)retObjectChangeFocus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectChangeFocus != null ? retObjectChangeFocus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class UICuesEventArgs extends EventArgs  {
 
     public boolean getChangeKeyboard() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangeKeyboard = null;
         try {
-            return (boolean)classInstance.Get("ChangeKeyboard");
+            retObjectChangeKeyboard = classInstance.Get("ChangeKeyboard");
+            return (boolean)retObjectChangeKeyboard;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectChangeKeyboard != null ? retObjectChangeKeyboard.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +199,13 @@ public class UICuesEventArgs extends EventArgs  {
 
     public boolean getShowFocus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowFocus = null;
         try {
-            return (boolean)classInstance.Get("ShowFocus");
+            retObjectShowFocus = classInstance.Get("ShowFocus");
+            return (boolean)retObjectShowFocus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowFocus != null ? retObjectShowFocus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +213,13 @@ public class UICuesEventArgs extends EventArgs  {
 
     public boolean getShowKeyboard() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowKeyboard = null;
         try {
-            return (boolean)classInstance.Get("ShowKeyboard");
+            retObjectShowKeyboard = classInstance.Get("ShowKeyboard");
+            return (boolean)retObjectShowKeyboard;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowKeyboard != null ? retObjectShowKeyboard.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +227,14 @@ public class UICuesEventArgs extends EventArgs  {
 
     public UICues getChanged() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChanged = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Changed");
+            retObjectChanged = classInstance.Get("Changed");
+            JCObject val = (JCObject)retObjectChanged;
             return new UICues(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChanged != null ? retObjectChanged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

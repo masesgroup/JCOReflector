@@ -160,9 +160,19 @@ public class TimeProvider extends NetObject  {
     
     public long GetTimestamp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTimestamp = null;
         try {
-            return (long)classInstance.Invoke("GetTimestamp");
+            retObjectGetTimestamp = classInstance.Invoke("GetTimestamp");
+            return (long)retObjectGetTimestamp;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTimestampNumber = (java.lang.Number)retObjectGetTimestamp;
+                return retObjectGetTimestampNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetTimestamp != null ? retObjectGetTimestamp.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +180,14 @@ public class TimeProvider extends NetObject  {
 
     public DateTimeOffset GetLocalNow() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidTimeZoneException, system.InvalidOperationException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocalNow = null;
         try {
-            JCObject objGetLocalNow = (JCObject)classInstance.Invoke("GetLocalNow");
+            retObjectGetLocalNow = classInstance.Invoke("GetLocalNow");
+            JCObject objGetLocalNow = (JCObject)retObjectGetLocalNow;
             return new DateTimeOffset(objGetLocalNow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocalNow != null ? retObjectGetLocalNow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +195,14 @@ public class TimeProvider extends NetObject  {
 
     public DateTimeOffset GetUtcNow() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUtcNow = null;
         try {
-            JCObject objGetUtcNow = (JCObject)classInstance.Invoke("GetUtcNow");
+            retObjectGetUtcNow = classInstance.Invoke("GetUtcNow");
+            JCObject objGetUtcNow = (JCObject)retObjectGetUtcNow;
             return new DateTimeOffset(objGetUtcNow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUtcNow != null ? retObjectGetUtcNow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +210,14 @@ public class TimeProvider extends NetObject  {
 
     public ITimer CreateTimer(TimerCallback callback, NetObject state, TimeSpan dueTime, TimeSpan period) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateTimer = null;
         try {
-            JCObject objCreateTimer = (JCObject)classInstance.Invoke("CreateTimer", callback, state == null ? null : state.getJCOInstance(), dueTime == null ? null : dueTime.getJCOInstance(), period == null ? null : period.getJCOInstance());
+            retObjectCreateTimer = classInstance.Invoke("CreateTimer", callback, state == null ? null : state.getJCOInstance(), dueTime == null ? null : dueTime.getJCOInstance(), period == null ? null : period.getJCOInstance());
+            JCObject objCreateTimer = (JCObject)retObjectCreateTimer;
             return new ITimerImplementation(objCreateTimer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTimer != null ? retObjectCreateTimer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +225,14 @@ public class TimeProvider extends NetObject  {
 
     public TimeSpan GetElapsedTime(long startingTimestamp, long endingTimestamp) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetElapsedTime = null;
         try {
-            JCObject objGetElapsedTime = (JCObject)classInstance.Invoke("GetElapsedTime", startingTimestamp, endingTimestamp);
+            retObjectGetElapsedTime = classInstance.Invoke("GetElapsedTime", startingTimestamp, endingTimestamp);
+            JCObject objGetElapsedTime = (JCObject)retObjectGetElapsedTime;
             return new TimeSpan(objGetElapsedTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetElapsedTime != null ? retObjectGetElapsedTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +240,14 @@ public class TimeProvider extends NetObject  {
 
     public TimeSpan GetElapsedTime(long startingTimestamp) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetElapsedTime = null;
         try {
-            JCObject objGetElapsedTime = (JCObject)classInstance.Invoke("GetElapsedTime", startingTimestamp);
+            retObjectGetElapsedTime = classInstance.Invoke("GetElapsedTime", startingTimestamp);
+            JCObject objGetElapsedTime = (JCObject)retObjectGetElapsedTime;
             return new TimeSpan(objGetElapsedTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetElapsedTime != null ? retObjectGetElapsedTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,9 +259,19 @@ public class TimeProvider extends NetObject  {
     
     public long getTimestampFrequency() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimestampFrequency = null;
         try {
-            return (long)classInstance.Get("TimestampFrequency");
+            retObjectTimestampFrequency = classInstance.Get("TimestampFrequency");
+            return (long)retObjectTimestampFrequency;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTimestampFrequencyNumber = (java.lang.Number)retObjectTimestampFrequency;
+                return retObjectTimestampFrequencyNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTimestampFrequency != null ? retObjectTimestampFrequency.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +279,14 @@ public class TimeProvider extends NetObject  {
 
     public static TimeProvider getSystem() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSystem = null;
         try {
-            JCObject val = (JCObject)classType.Get("System");
+            retObjectSystem = classType.Get("System");
+            JCObject val = (JCObject)retObjectSystem;
             return new TimeProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSystem != null ? retObjectSystem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +294,14 @@ public class TimeProvider extends NetObject  {
 
     public TimeZoneInfo getLocalTimeZone() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalTimeZone = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalTimeZone");
+            retObjectLocalTimeZone = classInstance.Get("LocalTimeZone");
+            JCObject val = (JCObject)retObjectLocalTimeZone;
             return new TimeZoneInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalTimeZone != null ? retObjectLocalTimeZone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

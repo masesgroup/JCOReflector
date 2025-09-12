@@ -171,10 +171,14 @@ public class InteropTrackingRecord extends CustomTrackingRecord  {
     
     public TrackingRecord getTrackingRecord() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrackingRecord = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TrackingRecord");
+            retObjectTrackingRecord = classInstance.Get("TrackingRecord");
+            JCObject val = (JCObject)retObjectTrackingRecord;
             return new TrackingRecord(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrackingRecord != null ? retObjectTrackingRecord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class InteropTrackingRecord extends CustomTrackingRecord  {
 
     public void setTrackingRecord(TrackingRecord TrackingRecord) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TrackingRecord", TrackingRecord == null ? null : TrackingRecord.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -156,7 +156,7 @@ public class DataBindingHandler extends NetObject  {
     
     public void DataBindControl(IDesignerHost designerHost, Control control) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DataBindControl", designerHost == null ? null : designerHost.getJCOInstance(), control == null ? null : control.getJCOInstance());
         } catch (JCNativeException jcne) {

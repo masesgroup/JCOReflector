@@ -169,9 +169,19 @@ public class SelectResult extends NetObject  {
     
     public int getTotalRowCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTotalRowCount = null;
         try {
-            return (int)classInstance.Get("TotalRowCount");
+            retObjectTotalRowCount = classInstance.Get("TotalRowCount");
+            return (int)retObjectTotalRowCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTotalRowCountNumber = (java.lang.Number)retObjectTotalRowCount;
+                return retObjectTotalRowCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTotalRowCount != null ? retObjectTotalRowCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +189,7 @@ public class SelectResult extends NetObject  {
 
     public void setTotalRowCount(int TotalRowCount) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TotalRowCount", TotalRowCount);
         } catch (JCNativeException jcne) {
@@ -189,10 +199,14 @@ public class SelectResult extends NetObject  {
 
     public IEnumerable getResults() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResults = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Results");
+            retObjectResults = classInstance.Get("Results");
+            JCObject val = (JCObject)retObjectResults;
             return new IEnumerableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResults != null ? retObjectResults.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +214,7 @@ public class SelectResult extends NetObject  {
 
     public void setResults(IEnumerable Results) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Results", Results == null ? null : Results.getJCOInstance());
         } catch (JCNativeException jcne) {

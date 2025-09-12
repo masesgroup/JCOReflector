@@ -167,10 +167,14 @@ public class WebSocketMessageProperty extends NetObject  {
     
     public WebSocketContext getWebSocketContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebSocketContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WebSocketContext");
+            retObjectWebSocketContext = classInstance.Get("WebSocketContext");
+            JCObject val = (JCObject)retObjectWebSocketContext;
             return new WebSocketContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebSocketContext != null ? retObjectWebSocketContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class WebSocketMessageProperty extends NetObject  {
 
     public WebSocketMessageType getMessageType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageType");
+            retObjectMessageType = classInstance.Get("MessageType");
+            JCObject val = (JCObject)retObjectMessageType;
             return new WebSocketMessageType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageType != null ? retObjectMessageType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class WebSocketMessageProperty extends NetObject  {
 
     public void setMessageType(WebSocketMessageType MessageType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageType", MessageType == null ? null : MessageType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,9 +207,13 @@ public class WebSocketMessageProperty extends NetObject  {
 
     public java.lang.String getSubProtocol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubProtocol = null;
         try {
-            return (java.lang.String)classInstance.Get("SubProtocol");
+            retObjectSubProtocol = classInstance.Get("SubProtocol");
+            return (java.lang.String)retObjectSubProtocol;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSubProtocol != null ? retObjectSubProtocol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

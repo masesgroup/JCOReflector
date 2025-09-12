@@ -174,9 +174,19 @@ public class SiteMapNodeItem extends WebControl implements system.web.ui.INaming
     
     public int getItemIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemIndex = null;
         try {
-            return (int)classInstance.Get("ItemIndex");
+            retObjectItemIndex = classInstance.Get("ItemIndex");
+            return (int)retObjectItemIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectItemIndexNumber = (java.lang.Number)retObjectItemIndex;
+                return retObjectItemIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectItemIndex != null ? retObjectItemIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +194,14 @@ public class SiteMapNodeItem extends WebControl implements system.web.ui.INaming
 
     public SiteMapNode getSiteMapNode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSiteMapNode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SiteMapNode");
+            retObjectSiteMapNode = classInstance.Get("SiteMapNode");
+            JCObject val = (JCObject)retObjectSiteMapNode;
             return new SiteMapNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSiteMapNode != null ? retObjectSiteMapNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +209,7 @@ public class SiteMapNodeItem extends WebControl implements system.web.ui.INaming
 
     public void setSiteMapNode(SiteMapNode SiteMapNode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SiteMapNode", SiteMapNode == null ? null : SiteMapNode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,10 +219,14 @@ public class SiteMapNodeItem extends WebControl implements system.web.ui.INaming
 
     public SiteMapNodeItemType getItemType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemType");
+            retObjectItemType = classInstance.Get("ItemType");
+            JCObject val = (JCObject)retObjectItemType;
             return new SiteMapNodeItemType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemType != null ? retObjectItemType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

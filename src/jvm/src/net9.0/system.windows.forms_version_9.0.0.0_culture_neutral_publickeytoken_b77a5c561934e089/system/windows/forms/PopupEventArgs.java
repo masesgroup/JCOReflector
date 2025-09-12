@@ -174,9 +174,13 @@ public class PopupEventArgs extends CancelEventArgs  {
     
     public boolean getIsBalloon() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBalloon = null;
         try {
-            return (boolean)classInstance.Get("IsBalloon");
+            retObjectIsBalloon = classInstance.Get("IsBalloon");
+            return (boolean)retObjectIsBalloon;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBalloon != null ? retObjectIsBalloon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +188,14 @@ public class PopupEventArgs extends CancelEventArgs  {
 
     public Size getToolTipSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolTipSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolTipSize");
+            retObjectToolTipSize = classInstance.Get("ToolTipSize");
+            JCObject val = (JCObject)retObjectToolTipSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolTipSize != null ? retObjectToolTipSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class PopupEventArgs extends CancelEventArgs  {
 
     public void setToolTipSize(Size ToolTipSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ToolTipSize", ToolTipSize == null ? null : ToolTipSize.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,10 +213,14 @@ public class PopupEventArgs extends CancelEventArgs  {
 
     public Control getAssociatedControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssociatedControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssociatedControl");
+            retObjectAssociatedControl = classInstance.Get("AssociatedControl");
+            JCObject val = (JCObject)retObjectAssociatedControl;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssociatedControl != null ? retObjectAssociatedControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +228,14 @@ public class PopupEventArgs extends CancelEventArgs  {
 
     public IWin32Window getAssociatedWindow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssociatedWindow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssociatedWindow");
+            retObjectAssociatedWindow = classInstance.Get("AssociatedWindow");
+            JCObject val = (JCObject)retObjectAssociatedWindow;
             return new IWin32WindowImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssociatedWindow != null ? retObjectAssociatedWindow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -176,9 +176,13 @@ public class AuthenticateEventArgs extends EventArgs  {
     
     public boolean getAuthenticated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticated = null;
         try {
-            return (boolean)classInstance.Get("Authenticated");
+            retObjectAuthenticated = classInstance.Get("Authenticated");
+            return (boolean)retObjectAuthenticated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAuthenticated != null ? retObjectAuthenticated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class AuthenticateEventArgs extends EventArgs  {
 
     public void setAuthenticated(boolean Authenticated) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Authenticated", Authenticated);
         } catch (JCNativeException jcne) {

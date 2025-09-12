@@ -176,9 +176,13 @@ public class LookupBindingPropertiesAttribute extends Attribute  {
     
     public java.lang.String getDataSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSource = null;
         try {
-            return (java.lang.String)classInstance.Get("DataSource");
+            retObjectDataSource = classInstance.Get("DataSource");
+            return (java.lang.String)retObjectDataSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataSource != null ? retObjectDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +190,13 @@ public class LookupBindingPropertiesAttribute extends Attribute  {
 
     public java.lang.String getDisplayMember() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayMember = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayMember");
+            retObjectDisplayMember = classInstance.Get("DisplayMember");
+            return (java.lang.String)retObjectDisplayMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayMember != null ? retObjectDisplayMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +204,13 @@ public class LookupBindingPropertiesAttribute extends Attribute  {
 
     public java.lang.String getLookupMember() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLookupMember = null;
         try {
-            return (java.lang.String)classInstance.Get("LookupMember");
+            retObjectLookupMember = classInstance.Get("LookupMember");
+            return (java.lang.String)retObjectLookupMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLookupMember != null ? retObjectLookupMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +218,13 @@ public class LookupBindingPropertiesAttribute extends Attribute  {
 
     public java.lang.String getValueMember() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueMember = null;
         try {
-            return (java.lang.String)classInstance.Get("ValueMember");
+            retObjectValueMember = classInstance.Get("ValueMember");
+            return (java.lang.String)retObjectValueMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValueMember != null ? retObjectValueMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

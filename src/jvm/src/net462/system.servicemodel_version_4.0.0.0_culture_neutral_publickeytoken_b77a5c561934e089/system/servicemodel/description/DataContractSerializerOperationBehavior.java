@@ -196,7 +196,7 @@ public class DataContractSerializerOperationBehavior extends NetObject implement
      */
     @Deprecated 
     public void AddBindingParameters(OperationDescription operationDescription, BindingParameterCollection bindingParameters) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
 
     /**
@@ -205,7 +205,7 @@ public class DataContractSerializerOperationBehavior extends NetObject implement
      */
     @Deprecated 
     public void ApplyClientBehavior(OperationDescription operationDescription, ClientOperation clientOperation) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
 
     /**
@@ -214,7 +214,7 @@ public class DataContractSerializerOperationBehavior extends NetObject implement
      */
     @Deprecated 
     public void ApplyDispatchBehavior(OperationDescription operationDescription, DispatchOperation dispatchOperation) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
 
     /**
@@ -223,7 +223,7 @@ public class DataContractSerializerOperationBehavior extends NetObject implement
      */
     @Deprecated 
     public void Validate(OperationDescription operationDescription) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
 
     /**
@@ -232,7 +232,7 @@ public class DataContractSerializerOperationBehavior extends NetObject implement
      */
     @Deprecated 
     public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
     }
 
     /**
@@ -241,7 +241,7 @@ public class DataContractSerializerOperationBehavior extends NetObject implement
      */
     @Deprecated 
     public void ExportEndpoint(WsdlExporter exporter, WsdlEndpointConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
     }
 
 
@@ -250,9 +250,13 @@ public class DataContractSerializerOperationBehavior extends NetObject implement
     
     public boolean getIgnoreExtensionDataObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoreExtensionDataObject = null;
         try {
-            return (boolean)classInstance.Get("IgnoreExtensionDataObject");
+            retObjectIgnoreExtensionDataObject = classInstance.Get("IgnoreExtensionDataObject");
+            return (boolean)retObjectIgnoreExtensionDataObject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreExtensionDataObject != null ? retObjectIgnoreExtensionDataObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +264,7 @@ public class DataContractSerializerOperationBehavior extends NetObject implement
 
     public void setIgnoreExtensionDataObject(boolean IgnoreExtensionDataObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnoreExtensionDataObject", IgnoreExtensionDataObject);
         } catch (JCNativeException jcne) {
@@ -270,9 +274,19 @@ public class DataContractSerializerOperationBehavior extends NetObject implement
 
     public int getMaxItemsInObjectGraph() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxItemsInObjectGraph = null;
         try {
-            return (int)classInstance.Get("MaxItemsInObjectGraph");
+            retObjectMaxItemsInObjectGraph = classInstance.Get("MaxItemsInObjectGraph");
+            return (int)retObjectMaxItemsInObjectGraph;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxItemsInObjectGraphNumber = (java.lang.Number)retObjectMaxItemsInObjectGraph;
+                return retObjectMaxItemsInObjectGraphNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxItemsInObjectGraph != null ? retObjectMaxItemsInObjectGraph.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +294,7 @@ public class DataContractSerializerOperationBehavior extends NetObject implement
 
     public void setMaxItemsInObjectGraph(int MaxItemsInObjectGraph) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxItemsInObjectGraph", MaxItemsInObjectGraph);
         } catch (JCNativeException jcne) {
@@ -290,10 +304,14 @@ public class DataContractSerializerOperationBehavior extends NetObject implement
 
     public DataContractResolver getDataContractResolver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataContractResolver = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataContractResolver");
+            retObjectDataContractResolver = classInstance.Get("DataContractResolver");
+            JCObject val = (JCObject)retObjectDataContractResolver;
             return new DataContractResolver(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataContractResolver != null ? retObjectDataContractResolver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,7 +319,7 @@ public class DataContractSerializerOperationBehavior extends NetObject implement
 
     public void setDataContractResolver(DataContractResolver DataContractResolver) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataContractResolver", DataContractResolver == null ? null : DataContractResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -311,10 +329,14 @@ public class DataContractSerializerOperationBehavior extends NetObject implement
 
     public IDataContractSurrogate getDataContractSurrogate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataContractSurrogate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataContractSurrogate");
+            retObjectDataContractSurrogate = classInstance.Get("DataContractSurrogate");
+            JCObject val = (JCObject)retObjectDataContractSurrogate;
             return new IDataContractSurrogateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataContractSurrogate != null ? retObjectDataContractSurrogate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +344,7 @@ public class DataContractSerializerOperationBehavior extends NetObject implement
 
     public void setDataContractSurrogate(IDataContractSurrogate DataContractSurrogate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataContractSurrogate", DataContractSurrogate == null ? null : DataContractSurrogate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -332,10 +354,14 @@ public class DataContractSerializerOperationBehavior extends NetObject implement
 
     public DataContractFormatAttribute getDataContractFormatAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataContractFormatAttribute = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataContractFormatAttribute");
+            retObjectDataContractFormatAttribute = classInstance.Get("DataContractFormatAttribute");
+            JCObject val = (JCObject)retObjectDataContractFormatAttribute;
             return new DataContractFormatAttribute(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataContractFormatAttribute != null ? retObjectDataContractFormatAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

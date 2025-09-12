@@ -156,7 +156,7 @@ public class CompositionTarget extends DispatcherObject implements AutoCloseable
     
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -167,7 +167,7 @@ public class CompositionTarget extends DispatcherObject implements AutoCloseable
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -183,10 +183,14 @@ public class CompositionTarget extends DispatcherObject implements AutoCloseable
     
     public Matrix getTransformFromDevice() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransformFromDevice = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransformFromDevice");
+            retObjectTransformFromDevice = classInstance.Get("TransformFromDevice");
+            JCObject val = (JCObject)retObjectTransformFromDevice;
             return new Matrix(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransformFromDevice != null ? retObjectTransformFromDevice.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +198,14 @@ public class CompositionTarget extends DispatcherObject implements AutoCloseable
 
     public Matrix getTransformToDevice() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransformToDevice = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransformToDevice");
+            retObjectTransformToDevice = classInstance.Get("TransformToDevice");
+            JCObject val = (JCObject)retObjectTransformToDevice;
             return new Matrix(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransformToDevice != null ? retObjectTransformToDevice.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +213,14 @@ public class CompositionTarget extends DispatcherObject implements AutoCloseable
 
     public Visual getRootVisual() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootVisual = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootVisual");
+            retObjectRootVisual = classInstance.Get("RootVisual");
+            JCObject val = (JCObject)retObjectRootVisual;
             return new Visual(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootVisual != null ? retObjectRootVisual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class CompositionTarget extends DispatcherObject implements AutoCloseable
 
     public void setRootVisual(Visual RootVisual) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.TimeoutException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RootVisual", RootVisual == null ? null : RootVisual.getJCOInstance());
         } catch (JCNativeException jcne) {

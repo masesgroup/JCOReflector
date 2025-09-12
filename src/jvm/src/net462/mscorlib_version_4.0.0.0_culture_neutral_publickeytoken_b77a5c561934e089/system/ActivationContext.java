@@ -161,10 +161,14 @@ public class ActivationContext extends NetObject implements system.runtime.seria
     
     public static ActivationContext CreatePartialActivationContext(ApplicationIdentity identity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePartialActivationContext = null;
         try {
-            JCObject objCreatePartialActivationContext = (JCObject)classType.Invoke("CreatePartialActivationContext", identity == null ? null : identity.getJCOInstance());
+            retObjectCreatePartialActivationContext = classType.Invoke("CreatePartialActivationContext", identity == null ? null : identity.getJCOInstance());
+            JCObject objCreatePartialActivationContext = (JCObject)retObjectCreatePartialActivationContext;
             return new ActivationContext(objCreatePartialActivationContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePartialActivationContext != null ? retObjectCreatePartialActivationContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class ActivationContext extends NetObject implements system.runtime.seria
 
     public static ActivationContext CreatePartialActivationContext(ApplicationIdentity identity, java.lang.String[] manifestPaths) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePartialActivationContext = null;
         try {
-            JCObject objCreatePartialActivationContext = (JCObject)classType.Invoke("CreatePartialActivationContext", identity == null ? null : identity.getJCOInstance(), manifestPaths);
+            retObjectCreatePartialActivationContext = classType.Invoke("CreatePartialActivationContext", identity == null ? null : identity.getJCOInstance(), manifestPaths);
+            JCObject objCreatePartialActivationContext = (JCObject)retObjectCreatePartialActivationContext;
             return new ActivationContext(objCreatePartialActivationContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePartialActivationContext != null ? retObjectCreatePartialActivationContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class ActivationContext extends NetObject implements system.runtime.seria
 
     public static ActivationContext CreatePartialActivationContext(ApplicationIdentity dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePartialActivationContext = null;
         try {
-            JCObject objCreatePartialActivationContext = (JCObject)classType.Invoke("CreatePartialActivationContext", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            retObjectCreatePartialActivationContext = classType.Invoke("CreatePartialActivationContext", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            JCObject objCreatePartialActivationContext = (JCObject)retObjectCreatePartialActivationContext;
             return new ActivationContext(objCreatePartialActivationContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePartialActivationContext != null ? retObjectCreatePartialActivationContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +206,7 @@ public class ActivationContext extends NetObject implements system.runtime.seria
 
     public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -208,13 +220,13 @@ public class ActivationContext extends NetObject implements system.runtime.seria
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -230,10 +242,12 @@ public class ActivationContext extends NetObject implements system.runtime.seria
     
     public byte[] getApplicationManifestBytes() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationManifestBytes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ApplicationManifestBytes");
+            retObjectApplicationManifestBytes = classInstance.Get("ApplicationManifestBytes");
+            JCObject resultingObjects = (JCObject)retObjectApplicationManifestBytes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -242,6 +256,8 @@ public class ActivationContext extends NetObject implements system.runtime.seria
 				resultingArray[indexApplicationManifestBytes] = (byte)resultingArrayList.get(indexApplicationManifestBytes);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectApplicationManifestBytes != null ? retObjectApplicationManifestBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +265,12 @@ public class ActivationContext extends NetObject implements system.runtime.seria
 
     public byte[] getDeploymentManifestBytes() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeploymentManifestBytes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("DeploymentManifestBytes");
+            retObjectDeploymentManifestBytes = classInstance.Get("DeploymentManifestBytes");
+            JCObject resultingObjects = (JCObject)retObjectDeploymentManifestBytes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -261,6 +279,8 @@ public class ActivationContext extends NetObject implements system.runtime.seria
 				resultingArray[indexDeploymentManifestBytes] = (byte)resultingArrayList.get(indexDeploymentManifestBytes);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectDeploymentManifestBytes != null ? retObjectDeploymentManifestBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +288,14 @@ public class ActivationContext extends NetObject implements system.runtime.seria
 
     public ApplicationIdentity getIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Identity");
+            retObjectIdentity = classInstance.Get("Identity");
+            JCObject val = (JCObject)retObjectIdentity;
             return new ApplicationIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdentity != null ? retObjectIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

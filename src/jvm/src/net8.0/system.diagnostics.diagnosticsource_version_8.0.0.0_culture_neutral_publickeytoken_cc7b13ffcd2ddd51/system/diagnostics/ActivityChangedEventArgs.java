@@ -161,10 +161,14 @@ public class ActivityChangedEventArgs extends ValueType  {
     
     public Activity getCurrent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Current");
+            retObjectCurrent = classInstance.Get("Current");
+            JCObject val = (JCObject)retObjectCurrent;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrent != null ? retObjectCurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class ActivityChangedEventArgs extends ValueType  {
 
     public void setCurrent(Activity Current) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Current", Current == null ? null : Current.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -182,10 +186,14 @@ public class ActivityChangedEventArgs extends ValueType  {
 
     public Activity getPrevious() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrevious = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Previous");
+            retObjectPrevious = classInstance.Get("Previous");
+            JCObject val = (JCObject)retObjectPrevious;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrevious != null ? retObjectPrevious.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +201,7 @@ public class ActivityChangedEventArgs extends ValueType  {
 
     public void setPrevious(Activity Previous) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Previous", Previous == null ? null : Previous.getJCOInstance());
         } catch (JCNativeException jcne) {

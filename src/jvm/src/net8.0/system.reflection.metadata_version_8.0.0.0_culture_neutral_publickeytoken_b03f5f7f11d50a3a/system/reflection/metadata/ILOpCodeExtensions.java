@@ -154,9 +154,13 @@ public class ILOpCodeExtensions extends NetObject  {
     
     public static boolean IsBranch(ILOpCode opCode) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsBranch = null;
         try {
-            return (boolean)classType.Invoke("IsBranch", opCode == null ? null : opCode.getJCOInstance());
+            retObjectIsBranch = classType.Invoke("IsBranch", opCode == null ? null : opCode.getJCOInstance());
+            return (boolean)retObjectIsBranch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBranch != null ? retObjectIsBranch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,19 @@ public class ILOpCodeExtensions extends NetObject  {
 
     public static int GetBranchOperandSize(ILOpCode opCode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBranchOperandSize = null;
         try {
-            return (int)classType.Invoke("GetBranchOperandSize", opCode == null ? null : opCode.getJCOInstance());
+            retObjectGetBranchOperandSize = classType.Invoke("GetBranchOperandSize", opCode == null ? null : opCode.getJCOInstance());
+            return (int)retObjectGetBranchOperandSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetBranchOperandSizeNumber = (java.lang.Number)retObjectGetBranchOperandSize;
+                return retObjectGetBranchOperandSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetBranchOperandSize != null ? retObjectGetBranchOperandSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +188,14 @@ public class ILOpCodeExtensions extends NetObject  {
 
     public static ILOpCode GetLongBranch(ILOpCode opCode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLongBranch = null;
         try {
-            JCObject objGetLongBranch = (JCObject)classType.Invoke("GetLongBranch", opCode == null ? null : opCode.getJCOInstance());
+            retObjectGetLongBranch = classType.Invoke("GetLongBranch", opCode == null ? null : opCode.getJCOInstance());
+            JCObject objGetLongBranch = (JCObject)retObjectGetLongBranch;
             return new ILOpCode(objGetLongBranch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLongBranch != null ? retObjectGetLongBranch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +203,14 @@ public class ILOpCodeExtensions extends NetObject  {
 
     public static ILOpCode GetShortBranch(ILOpCode opCode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetShortBranch = null;
         try {
-            JCObject objGetShortBranch = (JCObject)classType.Invoke("GetShortBranch", opCode == null ? null : opCode.getJCOInstance());
+            retObjectGetShortBranch = classType.Invoke("GetShortBranch", opCode == null ? null : opCode.getJCOInstance());
+            JCObject objGetShortBranch = (JCObject)retObjectGetShortBranch;
             return new ILOpCode(objGetShortBranch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetShortBranch != null ? retObjectGetShortBranch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

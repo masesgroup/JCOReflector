@@ -162,9 +162,13 @@ public class GetReferenceAssemblyPaths extends TaskExtension  {
     
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OverflowException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class GetReferenceAssemblyPaths extends TaskExtension  {
     
     public boolean getBypassFrameworkInstallChecks() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBypassFrameworkInstallChecks = null;
         try {
-            return (boolean)classInstance.Get("BypassFrameworkInstallChecks");
+            retObjectBypassFrameworkInstallChecks = classInstance.Get("BypassFrameworkInstallChecks");
+            return (boolean)retObjectBypassFrameworkInstallChecks;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBypassFrameworkInstallChecks != null ? retObjectBypassFrameworkInstallChecks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +194,7 @@ public class GetReferenceAssemblyPaths extends TaskExtension  {
 
     public void setBypassFrameworkInstallChecks(boolean BypassFrameworkInstallChecks) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BypassFrameworkInstallChecks", BypassFrameworkInstallChecks);
         } catch (JCNativeException jcne) {
@@ -196,9 +204,13 @@ public class GetReferenceAssemblyPaths extends TaskExtension  {
 
     public java.lang.String getRootPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootPath = null;
         try {
-            return (java.lang.String)classInstance.Get("RootPath");
+            retObjectRootPath = classInstance.Get("RootPath");
+            return (java.lang.String)retObjectRootPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRootPath != null ? retObjectRootPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +218,7 @@ public class GetReferenceAssemblyPaths extends TaskExtension  {
 
     public void setRootPath(java.lang.String RootPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RootPath", RootPath);
         } catch (JCNativeException jcne) {
@@ -216,9 +228,13 @@ public class GetReferenceAssemblyPaths extends TaskExtension  {
 
     public java.lang.String getTargetFrameworkMoniker() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetFrameworkMoniker = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetFrameworkMoniker");
+            retObjectTargetFrameworkMoniker = classInstance.Get("TargetFrameworkMoniker");
+            return (java.lang.String)retObjectTargetFrameworkMoniker;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetFrameworkMoniker != null ? retObjectTargetFrameworkMoniker.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +242,7 @@ public class GetReferenceAssemblyPaths extends TaskExtension  {
 
     public void setTargetFrameworkMoniker(java.lang.String TargetFrameworkMoniker) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetFrameworkMoniker", TargetFrameworkMoniker);
         } catch (JCNativeException jcne) {
@@ -236,9 +252,13 @@ public class GetReferenceAssemblyPaths extends TaskExtension  {
 
     public java.lang.String getTargetFrameworkMonikerDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetFrameworkMonikerDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetFrameworkMonikerDisplayName");
+            retObjectTargetFrameworkMonikerDisplayName = classInstance.Get("TargetFrameworkMonikerDisplayName");
+            return (java.lang.String)retObjectTargetFrameworkMonikerDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetFrameworkMonikerDisplayName != null ? retObjectTargetFrameworkMonikerDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +266,7 @@ public class GetReferenceAssemblyPaths extends TaskExtension  {
 
     public void setTargetFrameworkMonikerDisplayName(java.lang.String TargetFrameworkMonikerDisplayName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetFrameworkMonikerDisplayName", TargetFrameworkMonikerDisplayName);
         } catch (JCNativeException jcne) {
@@ -256,10 +276,12 @@ public class GetReferenceAssemblyPaths extends TaskExtension  {
 
     public java.lang.String[] getFullFrameworkReferenceAssemblyPaths() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFullFrameworkReferenceAssemblyPaths = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("FullFrameworkReferenceAssemblyPaths");
+            retObjectFullFrameworkReferenceAssemblyPaths = classInstance.Get("FullFrameworkReferenceAssemblyPaths");
+            JCObject resultingObjects = (JCObject)retObjectFullFrameworkReferenceAssemblyPaths;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -268,6 +290,8 @@ public class GetReferenceAssemblyPaths extends TaskExtension  {
 				resultingArray[indexFullFrameworkReferenceAssemblyPaths] = (java.lang.String)resultingArrayList.get(indexFullFrameworkReferenceAssemblyPaths);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectFullFrameworkReferenceAssemblyPaths != null ? retObjectFullFrameworkReferenceAssemblyPaths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,10 +299,12 @@ public class GetReferenceAssemblyPaths extends TaskExtension  {
 
     public java.lang.String[] getReferenceAssemblyPaths() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferenceAssemblyPaths = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ReferenceAssemblyPaths");
+            retObjectReferenceAssemblyPaths = classInstance.Get("ReferenceAssemblyPaths");
+            JCObject resultingObjects = (JCObject)retObjectReferenceAssemblyPaths;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -287,6 +313,8 @@ public class GetReferenceAssemblyPaths extends TaskExtension  {
 				resultingArray[indexReferenceAssemblyPaths] = (java.lang.String)resultingArrayList.get(indexReferenceAssemblyPaths);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectReferenceAssemblyPaths != null ? retObjectReferenceAssemblyPaths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

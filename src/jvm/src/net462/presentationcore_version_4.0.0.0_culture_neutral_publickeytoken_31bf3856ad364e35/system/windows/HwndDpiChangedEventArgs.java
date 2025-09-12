@@ -162,10 +162,14 @@ public class HwndDpiChangedEventArgs extends HandledEventArgs  {
     
     public DpiScale getNewDpi() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewDpi = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewDpi");
+            retObjectNewDpi = classInstance.Get("NewDpi");
+            JCObject val = (JCObject)retObjectNewDpi;
             return new DpiScale(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewDpi != null ? retObjectNewDpi.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,7 +177,7 @@ public class HwndDpiChangedEventArgs extends HandledEventArgs  {
 
     public void setNewDpi(DpiScale NewDpi) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewDpi", NewDpi == null ? null : NewDpi.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -183,10 +187,14 @@ public class HwndDpiChangedEventArgs extends HandledEventArgs  {
 
     public DpiScale getOldDpi() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldDpi = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OldDpi");
+            retObjectOldDpi = classInstance.Get("OldDpi");
+            JCObject val = (JCObject)retObjectOldDpi;
             return new DpiScale(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOldDpi != null ? retObjectOldDpi.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +202,7 @@ public class HwndDpiChangedEventArgs extends HandledEventArgs  {
 
     public void setOldDpi(DpiScale OldDpi) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OldDpi", OldDpi == null ? null : OldDpi.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,10 +212,14 @@ public class HwndDpiChangedEventArgs extends HandledEventArgs  {
 
     public Rect getSuggestedRect() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuggestedRect = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SuggestedRect");
+            retObjectSuggestedRect = classInstance.Get("SuggestedRect");
+            JCObject val = (JCObject)retObjectSuggestedRect;
             return new Rect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSuggestedRect != null ? retObjectSuggestedRect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class HwndDpiChangedEventArgs extends HandledEventArgs  {
 
     public void setSuggestedRect(Rect SuggestedRect) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SuggestedRect", SuggestedRect == null ? null : SuggestedRect.getJCOInstance());
         } catch (JCNativeException jcne) {

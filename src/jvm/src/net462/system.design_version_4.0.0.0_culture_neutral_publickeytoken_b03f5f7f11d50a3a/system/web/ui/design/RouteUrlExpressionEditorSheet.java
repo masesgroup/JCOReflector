@@ -168,9 +168,13 @@ public class RouteUrlExpressionEditorSheet extends ExpressionEditorSheet  {
     
     public java.lang.String GetExpression() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExpression = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetExpression");
+            retObjectGetExpression = classInstance.Invoke("GetExpression");
+            return (java.lang.String)retObjectGetExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetExpression != null ? retObjectGetExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class RouteUrlExpressionEditorSheet extends ExpressionEditorSheet  {
     
     public java.lang.String getRouteName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRouteName = null;
         try {
-            return (java.lang.String)classInstance.Get("RouteName");
+            retObjectRouteName = classInstance.Get("RouteName");
+            return (java.lang.String)retObjectRouteName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRouteName != null ? retObjectRouteName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class RouteUrlExpressionEditorSheet extends ExpressionEditorSheet  {
 
     public void setRouteName(java.lang.String RouteName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RouteName", RouteName);
         } catch (JCNativeException jcne) {
@@ -202,9 +210,13 @@ public class RouteUrlExpressionEditorSheet extends ExpressionEditorSheet  {
 
     public java.lang.String getRouteValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRouteValues = null;
         try {
-            return (java.lang.String)classInstance.Get("RouteValues");
+            retObjectRouteValues = classInstance.Get("RouteValues");
+            return (java.lang.String)retObjectRouteValues;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRouteValues != null ? retObjectRouteValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +224,7 @@ public class RouteUrlExpressionEditorSheet extends ExpressionEditorSheet  {
 
     public void setRouteValues(java.lang.String RouteValues) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RouteValues", RouteValues);
         } catch (JCNativeException jcne) {

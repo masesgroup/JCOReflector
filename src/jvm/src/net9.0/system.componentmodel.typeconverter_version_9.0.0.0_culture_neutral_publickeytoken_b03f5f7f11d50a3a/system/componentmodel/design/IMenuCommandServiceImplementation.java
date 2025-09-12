@@ -146,9 +146,13 @@ public class IMenuCommandServiceImplementation extends NetObject implements IMen
     
     public boolean GlobalInvoke(CommandID commandID) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGlobalInvoke = null;
         try {
-            return (boolean)classInstance.Invoke("GlobalInvoke", commandID == null ? null : commandID.getJCOInstance());
+            retObjectGlobalInvoke = classInstance.Invoke("GlobalInvoke", commandID == null ? null : commandID.getJCOInstance());
+            return (boolean)retObjectGlobalInvoke;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGlobalInvoke != null ? retObjectGlobalInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,10 +160,14 @@ public class IMenuCommandServiceImplementation extends NetObject implements IMen
 
     public MenuCommand FindCommand(CommandID commandID) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindCommand = null;
         try {
-            JCObject objFindCommand = (JCObject)classInstance.Invoke("FindCommand", commandID == null ? null : commandID.getJCOInstance());
+            retObjectFindCommand = classInstance.Invoke("FindCommand", commandID == null ? null : commandID.getJCOInstance());
+            JCObject objFindCommand = (JCObject)retObjectFindCommand;
             return new MenuCommand(objFindCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindCommand != null ? retObjectFindCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +175,7 @@ public class IMenuCommandServiceImplementation extends NetObject implements IMen
 
     public void AddCommand(MenuCommand command) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCommand", command == null ? null : command.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -177,7 +185,7 @@ public class IMenuCommandServiceImplementation extends NetObject implements IMen
 
     public void AddVerb(DesignerVerb verb) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddVerb", verb == null ? null : verb.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,7 +195,7 @@ public class IMenuCommandServiceImplementation extends NetObject implements IMen
 
     public void RemoveCommand(MenuCommand command) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveCommand", command == null ? null : command.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,7 +205,7 @@ public class IMenuCommandServiceImplementation extends NetObject implements IMen
 
     public void RemoveVerb(DesignerVerb verb) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveVerb", verb == null ? null : verb.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,7 +215,7 @@ public class IMenuCommandServiceImplementation extends NetObject implements IMen
 
     public void ShowContextMenu(CommandID menuID, int x, int y) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowContextMenu", menuID == null ? null : menuID.getJCOInstance(), x, y);
         } catch (JCNativeException jcne) {
@@ -221,10 +229,14 @@ public class IMenuCommandServiceImplementation extends NetObject implements IMen
     
     public DesignerVerbCollection getVerbs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerbs = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Verbs");
+            retObjectVerbs = classInstance.Get("Verbs");
+            JCObject val = (JCObject)retObjectVerbs;
             return new DesignerVerbCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerbs != null ? retObjectVerbs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

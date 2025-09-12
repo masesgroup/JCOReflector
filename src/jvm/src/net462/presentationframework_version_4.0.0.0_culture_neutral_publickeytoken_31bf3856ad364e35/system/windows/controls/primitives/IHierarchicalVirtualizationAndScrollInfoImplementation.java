@@ -150,9 +150,13 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
     
     public boolean getInBackgroundLayout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInBackgroundLayout = null;
         try {
-            return (boolean)classInstance.Get("InBackgroundLayout");
+            retObjectInBackgroundLayout = classInstance.Get("InBackgroundLayout");
+            return (boolean)retObjectInBackgroundLayout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInBackgroundLayout != null ? retObjectInBackgroundLayout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,7 +164,7 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
 
     public void setInBackgroundLayout(boolean InBackgroundLayout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InBackgroundLayout", InBackgroundLayout);
         } catch (JCNativeException jcne) {
@@ -170,9 +174,13 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
 
     public boolean getMustDisableVirtualization() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMustDisableVirtualization = null;
         try {
-            return (boolean)classInstance.Get("MustDisableVirtualization");
+            retObjectMustDisableVirtualization = classInstance.Get("MustDisableVirtualization");
+            return (boolean)retObjectMustDisableVirtualization;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMustDisableVirtualization != null ? retObjectMustDisableVirtualization.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +188,7 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
 
     public void setMustDisableVirtualization(boolean MustDisableVirtualization) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MustDisableVirtualization", MustDisableVirtualization);
         } catch (JCNativeException jcne) {
@@ -190,10 +198,14 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
 
     public HierarchicalVirtualizationConstraints getConstraints() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConstraints = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Constraints");
+            retObjectConstraints = classInstance.Get("Constraints");
+            JCObject val = (JCObject)retObjectConstraints;
             return new HierarchicalVirtualizationConstraints(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConstraints != null ? retObjectConstraints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +213,7 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
 
     public void setConstraints(HierarchicalVirtualizationConstraints Constraints) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Constraints", Constraints == null ? null : Constraints.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,10 +223,14 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
 
     public HierarchicalVirtualizationHeaderDesiredSizes getHeaderDesiredSizes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderDesiredSizes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderDesiredSizes");
+            retObjectHeaderDesiredSizes = classInstance.Get("HeaderDesiredSizes");
+            JCObject val = (JCObject)retObjectHeaderDesiredSizes;
             return new HierarchicalVirtualizationHeaderDesiredSizes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderDesiredSizes != null ? retObjectHeaderDesiredSizes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +238,14 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
 
     public HierarchicalVirtualizationItemDesiredSizes getItemDesiredSizes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemDesiredSizes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemDesiredSizes");
+            retObjectItemDesiredSizes = classInstance.Get("ItemDesiredSizes");
+            JCObject val = (JCObject)retObjectItemDesiredSizes;
             return new HierarchicalVirtualizationItemDesiredSizes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemDesiredSizes != null ? retObjectItemDesiredSizes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +253,7 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
 
     public void setItemDesiredSizes(HierarchicalVirtualizationItemDesiredSizes ItemDesiredSizes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemDesiredSizes", ItemDesiredSizes == null ? null : ItemDesiredSizes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,10 +263,14 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
 
     public Panel getItemsHost() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemsHost = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemsHost");
+            retObjectItemsHost = classInstance.Get("ItemsHost");
+            JCObject val = (JCObject)retObjectItemsHost;
             return new Panel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemsHost != null ? retObjectItemsHost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

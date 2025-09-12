@@ -160,9 +160,19 @@ public class ColorPalette extends NetObject  {
     
     public int getFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlags = null;
         try {
-            return (int)classInstance.Get("Flags");
+            retObjectFlags = classInstance.Get("Flags");
+            return (int)retObjectFlags;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFlagsNumber = (java.lang.Number)retObjectFlags;
+                return retObjectFlagsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFlags != null ? retObjectFlags.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,16 +180,20 @@ public class ColorPalette extends NetObject  {
 
     public final Color[] getEntries() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntries = null;
         try {
             ArrayList<Color> resultingArrayList = new ArrayList<Color>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Entries");
+            retObjectEntries = classInstance.Get("Entries");
+            JCObject resultingObjects = (JCObject)retObjectEntries;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Color(resultingObject));
             }
             Color[] resultingArray = new Color[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntries != null ? retObjectEntries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

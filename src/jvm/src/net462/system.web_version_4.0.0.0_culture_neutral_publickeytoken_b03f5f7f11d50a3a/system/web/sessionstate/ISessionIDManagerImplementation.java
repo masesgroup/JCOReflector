@@ -143,9 +143,13 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
     
     public boolean InitializeRequest(HttpContext context, boolean suppressAutoDetectRedirect, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> supportSessionIDReissue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitializeRequest = null;
         try {
-            return (boolean)classInstance.Invoke("InitializeRequest", context == null ? null : context.getJCOInstance(), suppressAutoDetectRedirect, supportSessionIDReissue.getJCRefOut());
+            retObjectInitializeRequest = classInstance.Invoke("InitializeRequest", context == null ? null : context.getJCOInstance(), suppressAutoDetectRedirect, supportSessionIDReissue.getJCRefOut());
+            return (boolean)retObjectInitializeRequest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectInitializeRequest != null ? retObjectInitializeRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,9 +157,13 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
 
     public boolean Validate(java.lang.String id) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidate = null;
         try {
-            return (boolean)classInstance.Invoke("Validate", id);
+            retObjectValidate = classInstance.Invoke("Validate", id);
+            return (boolean)retObjectValidate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,9 +171,13 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
 
     public java.lang.String CreateSessionID(HttpContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSessionID = null;
         try {
-            return (java.lang.String)classInstance.Invoke("CreateSessionID", context == null ? null : context.getJCOInstance());
+            retObjectCreateSessionID = classInstance.Invoke("CreateSessionID", context == null ? null : context.getJCOInstance());
+            return (java.lang.String)retObjectCreateSessionID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCreateSessionID != null ? retObjectCreateSessionID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +185,13 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
 
     public java.lang.String GetSessionID(HttpContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSessionID = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetSessionID", context == null ? null : context.getJCOInstance());
+            retObjectGetSessionID = classInstance.Invoke("GetSessionID", context == null ? null : context.getJCOInstance());
+            return (java.lang.String)retObjectGetSessionID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetSessionID != null ? retObjectGetSessionID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +199,7 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
 
     public void Initialize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize");
         } catch (JCNativeException jcne) {
@@ -193,7 +209,7 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
 
     public void RemoveSessionID(HttpContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveSessionID", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,7 +219,7 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
 
     public void SaveSessionID(HttpContext context, java.lang.String id, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> redirected, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> cookieAdded) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveSessionID", context == null ? null : context.getJCOInstance(), id, redirected.getJCRefOut(), cookieAdded.getJCRefOut());
         } catch (JCNativeException jcne) {

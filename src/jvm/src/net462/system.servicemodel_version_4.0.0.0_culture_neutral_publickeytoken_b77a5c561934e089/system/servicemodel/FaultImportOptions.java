@@ -165,9 +165,13 @@ public class FaultImportOptions extends NetObject  {
     
     public boolean getUseMessageFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseMessageFormat = null;
         try {
-            return (boolean)classInstance.Get("UseMessageFormat");
+            retObjectUseMessageFormat = classInstance.Get("UseMessageFormat");
+            return (boolean)retObjectUseMessageFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseMessageFormat != null ? retObjectUseMessageFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class FaultImportOptions extends NetObject  {
 
     public void setUseMessageFormat(boolean UseMessageFormat) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseMessageFormat", UseMessageFormat);
         } catch (JCNativeException jcne) {

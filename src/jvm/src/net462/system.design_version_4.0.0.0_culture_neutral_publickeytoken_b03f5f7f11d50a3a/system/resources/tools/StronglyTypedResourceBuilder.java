@@ -157,10 +157,14 @@ public class StronglyTypedResourceBuilder extends NetObject  {
     
     public static CodeCompileUnit Create(IDictionary resourceList, java.lang.String baseName, java.lang.String generatedCodeNamespace, CodeDomProvider codeProvider, boolean internalClass, JCORefOut unmatchable) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.FormatException, system.NotSupportedException, system.RankException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", resourceList == null ? null : resourceList.getJCOInstance(), baseName, generatedCodeNamespace, codeProvider == null ? null : codeProvider.getJCOInstance(), internalClass, unmatchable.getJCRefOut());
+            retObjectCreate = classType.Invoke("Create", resourceList == null ? null : resourceList.getJCOInstance(), baseName, generatedCodeNamespace, codeProvider == null ? null : codeProvider.getJCOInstance(), internalClass, unmatchable.getJCRefOut());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new CodeCompileUnit(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class StronglyTypedResourceBuilder extends NetObject  {
 
     public static CodeCompileUnit Create(IDictionary resourceList, java.lang.String baseName, java.lang.String generatedCodeNamespace, java.lang.String resourcesNamespace, CodeDomProvider codeProvider, boolean internalClass, JCORefOut unmatchable) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.RankException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", resourceList == null ? null : resourceList.getJCOInstance(), baseName, generatedCodeNamespace, resourcesNamespace, codeProvider == null ? null : codeProvider.getJCOInstance(), internalClass, unmatchable.getJCRefOut());
+            retObjectCreate = classType.Invoke("Create", resourceList == null ? null : resourceList.getJCOInstance(), baseName, generatedCodeNamespace, resourcesNamespace, codeProvider == null ? null : codeProvider.getJCOInstance(), internalClass, unmatchable.getJCRefOut());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new CodeCompileUnit(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class StronglyTypedResourceBuilder extends NetObject  {
 
     public static CodeCompileUnit Create(java.lang.String resxFile, java.lang.String baseName, java.lang.String generatedCodeNamespace, CodeDomProvider codeProvider, boolean internalClass, JCORefOut unmatchable) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.io.PathTooLongException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.xml.XmlException, system.RankException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", resxFile, baseName, generatedCodeNamespace, codeProvider == null ? null : codeProvider.getJCOInstance(), internalClass, unmatchable.getJCRefOut());
+            retObjectCreate = classType.Invoke("Create", resxFile, baseName, generatedCodeNamespace, codeProvider == null ? null : codeProvider.getJCOInstance(), internalClass, unmatchable.getJCRefOut());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new CodeCompileUnit(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class StronglyTypedResourceBuilder extends NetObject  {
 
     public static CodeCompileUnit Create(java.lang.String resxFile, java.lang.String baseName, java.lang.String generatedCodeNamespace, java.lang.String resourcesNamespace, CodeDomProvider codeProvider, boolean internalClass, JCORefOut unmatchable) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.security.SecurityException, system.xml.XmlException, system.RankException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", resxFile, baseName, generatedCodeNamespace, resourcesNamespace, codeProvider == null ? null : codeProvider.getJCOInstance(), internalClass, unmatchable.getJCRefOut());
+            retObjectCreate = classType.Invoke("Create", resxFile, baseName, generatedCodeNamespace, resourcesNamespace, codeProvider == null ? null : codeProvider.getJCOInstance(), internalClass, unmatchable.getJCRefOut());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new CodeCompileUnit(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +217,13 @@ public class StronglyTypedResourceBuilder extends NetObject  {
 
     public static java.lang.String VerifyResourceName(java.lang.String key, CodeDomProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVerifyResourceName = null;
         try {
-            return (java.lang.String)classType.Invoke("VerifyResourceName", key, provider == null ? null : provider.getJCOInstance());
+            retObjectVerifyResourceName = classType.Invoke("VerifyResourceName", key, provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectVerifyResourceName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectVerifyResourceName != null ? retObjectVerifyResourceName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

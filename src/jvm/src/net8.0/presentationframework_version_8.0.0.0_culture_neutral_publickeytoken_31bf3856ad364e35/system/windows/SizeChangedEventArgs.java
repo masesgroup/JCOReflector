@@ -161,9 +161,13 @@ public class SizeChangedEventArgs extends RoutedEventArgs  {
     
     public boolean getHeightChanged() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeightChanged = null;
         try {
-            return (boolean)classInstance.Get("HeightChanged");
+            retObjectHeightChanged = classInstance.Get("HeightChanged");
+            return (boolean)retObjectHeightChanged;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHeightChanged != null ? retObjectHeightChanged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class SizeChangedEventArgs extends RoutedEventArgs  {
 
     public boolean getWidthChanged() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWidthChanged = null;
         try {
-            return (boolean)classInstance.Get("WidthChanged");
+            retObjectWidthChanged = classInstance.Get("WidthChanged");
+            return (boolean)retObjectWidthChanged;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWidthChanged != null ? retObjectWidthChanged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class SizeChangedEventArgs extends RoutedEventArgs  {
 
     public Size getNewSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewSize");
+            retObjectNewSize = classInstance.Get("NewSize");
+            JCObject val = (JCObject)retObjectNewSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewSize != null ? retObjectNewSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class SizeChangedEventArgs extends RoutedEventArgs  {
 
     public Size getPreviousSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreviousSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreviousSize");
+            retObjectPreviousSize = classInstance.Get("PreviousSize");
+            JCObject val = (JCObject)retObjectPreviousSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreviousSize != null ? retObjectPreviousSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

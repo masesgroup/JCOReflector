@@ -157,9 +157,13 @@ public class GroupDescription extends NetObject  {
     
     public boolean NamesMatch(NetObject groupName, NetObject itemName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamesMatch = null;
         try {
-            return (boolean)classInstance.Invoke("NamesMatch", groupName == null ? null : groupName.getJCOInstance(), itemName == null ? null : itemName.getJCOInstance());
+            retObjectNamesMatch = classInstance.Invoke("NamesMatch", groupName == null ? null : groupName.getJCOInstance(), itemName == null ? null : itemName.getJCOInstance());
+            return (boolean)retObjectNamesMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectNamesMatch != null ? retObjectNamesMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class GroupDescription extends NetObject  {
 
     public boolean ShouldSerializeGroupNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeGroupNames = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeGroupNames");
+            retObjectShouldSerializeGroupNames = classInstance.Invoke("ShouldSerializeGroupNames");
+            return (boolean)retObjectShouldSerializeGroupNames;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeGroupNames != null ? retObjectShouldSerializeGroupNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +185,13 @@ public class GroupDescription extends NetObject  {
 
     public boolean ShouldSerializeSortDescriptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeSortDescriptions = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeSortDescriptions");
+            retObjectShouldSerializeSortDescriptions = classInstance.Invoke("ShouldSerializeSortDescriptions");
+            return (boolean)retObjectShouldSerializeSortDescriptions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeSortDescriptions != null ? retObjectShouldSerializeSortDescriptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +199,14 @@ public class GroupDescription extends NetObject  {
 
     public NetObject GroupNameFromItem(NetObject item, int level, CultureInfo culture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroupNameFromItem = null;
         try {
-            JCObject objGroupNameFromItem = (JCObject)classInstance.Invoke("GroupNameFromItem", item == null ? null : item.getJCOInstance(), level, culture == null ? null : culture.getJCOInstance());
+            retObjectGroupNameFromItem = classInstance.Invoke("GroupNameFromItem", item == null ? null : item.getJCOInstance(), level, culture == null ? null : culture.getJCOInstance());
+            JCObject objGroupNameFromItem = (JCObject)retObjectGroupNameFromItem;
             return new NetObject(objGroupNameFromItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupNameFromItem != null ? retObjectGroupNameFromItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class GroupDescription extends NetObject  {
     
     public IComparer getCustomSort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomSort = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomSort");
+            retObjectCustomSort = classInstance.Get("CustomSort");
+            JCObject val = (JCObject)retObjectCustomSort;
             return new IComparerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomSort != null ? retObjectCustomSort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +233,7 @@ public class GroupDescription extends NetObject  {
 
     public void setCustomSort(IComparer CustomSort) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CustomSort", CustomSort == null ? null : CustomSort.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -223,10 +243,14 @@ public class GroupDescription extends NetObject  {
 
     public SortDescriptionCollection getSortDescriptions() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortDescriptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SortDescriptions");
+            retObjectSortDescriptions = classInstance.Get("SortDescriptions");
+            JCObject val = (JCObject)retObjectSortDescriptions;
             return new SortDescriptionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortDescriptions != null ? retObjectSortDescriptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

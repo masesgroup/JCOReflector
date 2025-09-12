@@ -173,9 +173,13 @@ public class DesignerActionService extends NetObject implements AutoCloseable {
     
     public boolean Contains(IComponent comp) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", comp == null ? null : comp.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", comp == null ? null : comp.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class DesignerActionService extends NetObject implements AutoCloseable {
 
     public DesignerActionListCollection GetComponentActions(IComponent component, ComponentActionsType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetComponentActions = null;
         try {
-            JCObject objGetComponentActions = (JCObject)classInstance.Invoke("GetComponentActions", component == null ? null : component.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectGetComponentActions = classInstance.Invoke("GetComponentActions", component == null ? null : component.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objGetComponentActions = (JCObject)retObjectGetComponentActions;
             return new DesignerActionListCollection(objGetComponentActions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetComponentActions != null ? retObjectGetComponentActions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +202,14 @@ public class DesignerActionService extends NetObject implements AutoCloseable {
 
     public DesignerActionListCollection GetComponentActions(IComponent component) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetComponentActions = null;
         try {
-            JCObject objGetComponentActions = (JCObject)classInstance.Invoke("GetComponentActions", component == null ? null : component.getJCOInstance());
+            retObjectGetComponentActions = classInstance.Invoke("GetComponentActions", component == null ? null : component.getJCOInstance());
+            JCObject objGetComponentActions = (JCObject)retObjectGetComponentActions;
             return new DesignerActionListCollection(objGetComponentActions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetComponentActions != null ? retObjectGetComponentActions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +217,7 @@ public class DesignerActionService extends NetObject implements AutoCloseable {
 
     public void Add(IComponent comp, DesignerActionList actionList) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", comp == null ? null : comp.getJCOInstance(), actionList == null ? null : actionList.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -215,7 +227,7 @@ public class DesignerActionService extends NetObject implements AutoCloseable {
 
     public void Add(IComponent comp, DesignerActionListCollection designerActionListCollection) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", comp == null ? null : comp.getJCOInstance(), designerActionListCollection == null ? null : designerActionListCollection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,7 +237,7 @@ public class DesignerActionService extends NetObject implements AutoCloseable {
 
     public void Clear() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -235,7 +247,7 @@ public class DesignerActionService extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.MulticastNotSupportedException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -245,7 +257,7 @@ public class DesignerActionService extends NetObject implements AutoCloseable {
 
     public void Remove(DesignerActionList actionList) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", actionList == null ? null : actionList.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -255,7 +267,7 @@ public class DesignerActionService extends NetObject implements AutoCloseable {
 
     public void Remove(IComponent comp, DesignerActionList actionList) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", comp == null ? null : comp.getJCOInstance(), actionList == null ? null : actionList.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -265,7 +277,7 @@ public class DesignerActionService extends NetObject implements AutoCloseable {
 
     public void Remove(IComponent comp) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", comp == null ? null : comp.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -276,7 +288,7 @@ public class DesignerActionService extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -297,7 +309,7 @@ public class DesignerActionService extends NetObject implements AutoCloseable {
 
     public void addDesignerActionListsChanged(DesignerActionListsChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DesignerActionListsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -307,7 +319,7 @@ public class DesignerActionService extends NetObject implements AutoCloseable {
 
     public void removeDesignerActionListsChanged(DesignerActionListsChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DesignerActionListsChanged", handler);
         } catch (JCNativeException jcne) {

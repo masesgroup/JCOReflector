@@ -172,7 +172,7 @@ public class DataBoundControlDesigner extends BaseDataBoundControlDesigner imple
      */
     @Deprecated 
     public void RefreshSchema(boolean preferSilent) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataBindingSchemaProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataBindingSchemaProvider to obtain the full interface.");
     }
 
     /**
@@ -181,7 +181,7 @@ public class DataBoundControlDesigner extends BaseDataBoundControlDesigner imple
      */
     @Deprecated 
     public IEnumerable GetResolvedSelectedDataSource() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSourceProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSourceProvider to obtain the full interface.");
     }
 
     /**
@@ -190,7 +190,7 @@ public class DataBoundControlDesigner extends BaseDataBoundControlDesigner imple
      */
     @Deprecated 
     public NetObject GetSelectedDataSource() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSourceProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSourceProvider to obtain the full interface.");
     }
 
 
@@ -199,9 +199,13 @@ public class DataBoundControlDesigner extends BaseDataBoundControlDesigner imple
     
     public java.lang.String getDataMember() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataMember = null;
         try {
-            return (java.lang.String)classInstance.Get("DataMember");
+            retObjectDataMember = classInstance.Get("DataMember");
+            return (java.lang.String)retObjectDataMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataMember != null ? retObjectDataMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +213,7 @@ public class DataBoundControlDesigner extends BaseDataBoundControlDesigner imple
 
     public void setDataMember(java.lang.String DataMember) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OverflowException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataMember", DataMember);
         } catch (JCNativeException jcne) {
@@ -219,10 +223,14 @@ public class DataBoundControlDesigner extends BaseDataBoundControlDesigner imple
 
     public DesignerDataSourceView getDesignerView() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesignerView = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DesignerView");
+            retObjectDesignerView = classInstance.Get("DesignerView");
+            JCObject val = (JCObject)retObjectDesignerView;
             return new DesignerDataSourceView(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerView != null ? retObjectDesignerView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +238,14 @@ public class DataBoundControlDesigner extends BaseDataBoundControlDesigner imple
 
     public IDataSourceDesigner getDataSourceDesigner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSourceDesigner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSourceDesigner");
+            retObjectDataSourceDesigner = classInstance.Get("DataSourceDesigner");
+            JCObject val = (JCObject)retObjectDataSourceDesigner;
             return new IDataSourceDesignerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataSourceDesigner != null ? retObjectDataSourceDesigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

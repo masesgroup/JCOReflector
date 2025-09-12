@@ -180,10 +180,14 @@ public class BindingsSection extends ConfigurationSection  {
     
     public static BindingsSection GetSection(Configuration config) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSection = null;
         try {
-            JCObject objGetSection = (JCObject)classType.Invoke("GetSection", config == null ? null : config.getJCOInstance());
+            retObjectGetSection = classType.Invoke("GetSection", config == null ? null : config.getJCOInstance());
+            JCObject objGetSection = (JCObject)retObjectGetSection;
             return new BindingsSection(objGetSection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSection != null ? retObjectGetSection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +199,14 @@ public class BindingsSection extends ConfigurationSection  {
     
     public BasicHttpBindingCollectionElement getBasicHttpBinding() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBasicHttpBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BasicHttpBinding");
+            retObjectBasicHttpBinding = classInstance.Get("BasicHttpBinding");
+            JCObject val = (JCObject)retObjectBasicHttpBinding;
             return new BasicHttpBindingCollectionElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBasicHttpBinding != null ? retObjectBasicHttpBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +214,14 @@ public class BindingsSection extends ConfigurationSection  {
 
     public BasicHttpsBindingCollectionElement getBasicHttpsBinding() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBasicHttpsBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BasicHttpsBinding");
+            retObjectBasicHttpsBinding = classInstance.Get("BasicHttpsBinding");
+            JCObject val = (JCObject)retObjectBasicHttpsBinding;
             return new BasicHttpsBindingCollectionElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBasicHttpsBinding != null ? retObjectBasicHttpsBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +229,14 @@ public class BindingsSection extends ConfigurationSection  {
 
     public CustomBindingCollectionElement getCustomBinding() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomBinding");
+            retObjectCustomBinding = classInstance.Get("CustomBinding");
+            JCObject val = (JCObject)retObjectCustomBinding;
             return new CustomBindingCollectionElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomBinding != null ? retObjectCustomBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +244,14 @@ public class BindingsSection extends ConfigurationSection  {
 
     public MsmqIntegrationBindingCollectionElement getMsmqIntegrationBinding() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMsmqIntegrationBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MsmqIntegrationBinding");
+            retObjectMsmqIntegrationBinding = classInstance.Get("MsmqIntegrationBinding");
+            JCObject val = (JCObject)retObjectMsmqIntegrationBinding;
             return new MsmqIntegrationBindingCollectionElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMsmqIntegrationBinding != null ? retObjectMsmqIntegrationBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +259,14 @@ public class BindingsSection extends ConfigurationSection  {
 
     public NetHttpBindingCollectionElement getNetHttpBinding() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNetHttpBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NetHttpBinding");
+            retObjectNetHttpBinding = classInstance.Get("NetHttpBinding");
+            JCObject val = (JCObject)retObjectNetHttpBinding;
             return new NetHttpBindingCollectionElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNetHttpBinding != null ? retObjectNetHttpBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +274,14 @@ public class BindingsSection extends ConfigurationSection  {
 
     public NetHttpsBindingCollectionElement getNetHttpsBinding() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNetHttpsBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NetHttpsBinding");
+            retObjectNetHttpsBinding = classInstance.Get("NetHttpsBinding");
+            JCObject val = (JCObject)retObjectNetHttpsBinding;
             return new NetHttpsBindingCollectionElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNetHttpsBinding != null ? retObjectNetHttpsBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +289,14 @@ public class BindingsSection extends ConfigurationSection  {
 
     public NetMsmqBindingCollectionElement getNetMsmqBinding() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNetMsmqBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NetMsmqBinding");
+            retObjectNetMsmqBinding = classInstance.Get("NetMsmqBinding");
+            JCObject val = (JCObject)retObjectNetMsmqBinding;
             return new NetMsmqBindingCollectionElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNetMsmqBinding != null ? retObjectNetMsmqBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,10 +304,14 @@ public class BindingsSection extends ConfigurationSection  {
 
     public NetNamedPipeBindingCollectionElement getNetNamedPipeBinding() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNetNamedPipeBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NetNamedPipeBinding");
+            retObjectNetNamedPipeBinding = classInstance.Get("NetNamedPipeBinding");
+            JCObject val = (JCObject)retObjectNetNamedPipeBinding;
             return new NetNamedPipeBindingCollectionElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNetNamedPipeBinding != null ? retObjectNetNamedPipeBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,10 +319,14 @@ public class BindingsSection extends ConfigurationSection  {
 
     public NetPeerTcpBindingCollectionElement getNetPeerTcpBinding() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNetPeerTcpBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NetPeerTcpBinding");
+            retObjectNetPeerTcpBinding = classInstance.Get("NetPeerTcpBinding");
+            JCObject val = (JCObject)retObjectNetPeerTcpBinding;
             return new NetPeerTcpBindingCollectionElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNetPeerTcpBinding != null ? retObjectNetPeerTcpBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,10 +334,14 @@ public class BindingsSection extends ConfigurationSection  {
 
     public NetTcpBindingCollectionElement getNetTcpBinding() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNetTcpBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NetTcpBinding");
+            retObjectNetTcpBinding = classInstance.Get("NetTcpBinding");
+            JCObject val = (JCObject)retObjectNetTcpBinding;
             return new NetTcpBindingCollectionElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNetTcpBinding != null ? retObjectNetTcpBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,10 +349,14 @@ public class BindingsSection extends ConfigurationSection  {
 
     public WS2007FederationHttpBindingCollectionElement getWS2007FederationHttpBinding() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWS2007FederationHttpBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WS2007FederationHttpBinding");
+            retObjectWS2007FederationHttpBinding = classInstance.Get("WS2007FederationHttpBinding");
+            JCObject val = (JCObject)retObjectWS2007FederationHttpBinding;
             return new WS2007FederationHttpBindingCollectionElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWS2007FederationHttpBinding != null ? retObjectWS2007FederationHttpBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,10 +364,14 @@ public class BindingsSection extends ConfigurationSection  {
 
     public WS2007HttpBindingCollectionElement getWS2007HttpBinding() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWS2007HttpBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WS2007HttpBinding");
+            retObjectWS2007HttpBinding = classInstance.Get("WS2007HttpBinding");
+            JCObject val = (JCObject)retObjectWS2007HttpBinding;
             return new WS2007HttpBindingCollectionElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWS2007HttpBinding != null ? retObjectWS2007HttpBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,10 +379,14 @@ public class BindingsSection extends ConfigurationSection  {
 
     public WSDualHttpBindingCollectionElement getWSDualHttpBinding() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWSDualHttpBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WSDualHttpBinding");
+            retObjectWSDualHttpBinding = classInstance.Get("WSDualHttpBinding");
+            JCObject val = (JCObject)retObjectWSDualHttpBinding;
             return new WSDualHttpBindingCollectionElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSDualHttpBinding != null ? retObjectWSDualHttpBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,10 +394,14 @@ public class BindingsSection extends ConfigurationSection  {
 
     public WSFederationHttpBindingCollectionElement getWSFederationHttpBinding() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWSFederationHttpBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WSFederationHttpBinding");
+            retObjectWSFederationHttpBinding = classInstance.Get("WSFederationHttpBinding");
+            JCObject val = (JCObject)retObjectWSFederationHttpBinding;
             return new WSFederationHttpBindingCollectionElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSFederationHttpBinding != null ? retObjectWSFederationHttpBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,10 +409,14 @@ public class BindingsSection extends ConfigurationSection  {
 
     public WSHttpBindingCollectionElement getWSHttpBinding() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWSHttpBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WSHttpBinding");
+            retObjectWSHttpBinding = classInstance.Get("WSHttpBinding");
+            JCObject val = (JCObject)retObjectWSHttpBinding;
             return new WSHttpBindingCollectionElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSHttpBinding != null ? retObjectWSHttpBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

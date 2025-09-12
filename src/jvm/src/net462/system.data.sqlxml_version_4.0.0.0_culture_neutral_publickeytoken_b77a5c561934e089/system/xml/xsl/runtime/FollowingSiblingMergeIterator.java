@@ -159,10 +159,14 @@ public class FollowingSiblingMergeIterator extends ValueType  {
     
     public IteratorResult MoveNext(XPathNavigator navigator) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveNext = null;
         try {
-            JCObject objMoveNext = (JCObject)classInstance.Invoke("MoveNext", navigator == null ? null : navigator.getJCOInstance());
+            retObjectMoveNext = classInstance.Invoke("MoveNext", navigator == null ? null : navigator.getJCOInstance());
+            JCObject objMoveNext = (JCObject)retObjectMoveNext;
             return new IteratorResult(objMoveNext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveNext != null ? retObjectMoveNext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class FollowingSiblingMergeIterator extends ValueType  {
 
     public void Create(XmlNavigatorFilter filter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Create", filter == null ? null : filter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -184,10 +188,14 @@ public class FollowingSiblingMergeIterator extends ValueType  {
     
     public XPathNavigator getCurrent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Current");
+            retObjectCurrent = classInstance.Get("Current");
+            JCObject val = (JCObject)retObjectCurrent;
             return new XPathNavigator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrent != null ? retObjectCurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

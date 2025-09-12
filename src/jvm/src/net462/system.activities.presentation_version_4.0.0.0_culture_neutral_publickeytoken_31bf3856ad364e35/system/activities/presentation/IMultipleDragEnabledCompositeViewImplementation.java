@@ -146,7 +146,7 @@ public class IMultipleDragEnabledCompositeViewImplementation extends NetObject i
     
     public void OnItemMoved(ModelItem modelItem) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnItemMoved", modelItem == null ? null : modelItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -160,9 +160,13 @@ public class IMultipleDragEnabledCompositeViewImplementation extends NetObject i
     
     public boolean getIsDefaultContainer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefaultContainer = null;
         try {
-            return (boolean)classInstance.Get("IsDefaultContainer");
+            retObjectIsDefaultContainer = classInstance.Get("IsDefaultContainer");
+            return (boolean)retObjectIsDefaultContainer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDefaultContainer != null ? retObjectIsDefaultContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class IMultipleDragEnabledCompositeViewImplementation extends NetObject i
 
     public TypeResolvingOptions getDroppingTypeResolvingOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDroppingTypeResolvingOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DroppingTypeResolvingOptions");
+            retObjectDroppingTypeResolvingOptions = classInstance.Get("DroppingTypeResolvingOptions");
+            JCObject val = (JCObject)retObjectDroppingTypeResolvingOptions;
             return new TypeResolvingOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDroppingTypeResolvingOptions != null ? retObjectDroppingTypeResolvingOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

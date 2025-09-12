@@ -170,9 +170,13 @@ public class BlobReader extends ValueType  {
     
     public boolean ReadBoolean() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadBoolean = null;
         try {
-            return (boolean)classInstance.Invoke("ReadBoolean");
+            retObjectReadBoolean = classInstance.Invoke("ReadBoolean");
+            return (boolean)retObjectReadBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReadBoolean != null ? retObjectReadBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class BlobReader extends ValueType  {
 
     public boolean TryReadCompressedInteger(JCORefOut<java.util.concurrent.atomic.AtomicInteger> value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryReadCompressedInteger = null;
         try {
-            return (boolean)classInstance.Invoke("TryReadCompressedInteger", value.getJCRefOut());
+            retObjectTryReadCompressedInteger = classInstance.Invoke("TryReadCompressedInteger", value.getJCRefOut());
+            return (boolean)retObjectTryReadCompressedInteger;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryReadCompressedInteger != null ? retObjectTryReadCompressedInteger.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class BlobReader extends ValueType  {
 
     public boolean TryReadCompressedSignedInteger(JCORefOut<java.util.concurrent.atomic.AtomicInteger> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryReadCompressedSignedInteger = null;
         try {
-            return (boolean)classInstance.Invoke("TryReadCompressedSignedInteger", value.getJCRefOut());
+            retObjectTryReadCompressedSignedInteger = classInstance.Invoke("TryReadCompressedSignedInteger", value.getJCRefOut());
+            return (boolean)retObjectTryReadCompressedSignedInteger;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryReadCompressedSignedInteger != null ? retObjectTryReadCompressedSignedInteger.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +212,19 @@ public class BlobReader extends ValueType  {
 
     public byte ReadByte() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadByte = null;
         try {
-            return (byte)classInstance.Invoke("ReadByte");
+            retObjectReadByte = classInstance.Invoke("ReadByte");
+            return (byte)retObjectReadByte;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadByteNumber = (java.lang.Number)retObjectReadByte;
+                return retObjectReadByteNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectReadByte != null ? retObjectReadByte.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +232,12 @@ public class BlobReader extends ValueType  {
 
     public byte[] ReadBytes(int byteCount) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadBytes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadBytes", byteCount);
+            retObjectReadBytes = classInstance.Invoke("ReadBytes", byteCount);
+            JCObject resultingObjects = (JCObject)retObjectReadBytes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -222,6 +246,8 @@ public class BlobReader extends ValueType  {
 				resultingArray[indexReadBytes] = (byte)resultingArrayList.get(indexReadBytes);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectReadBytes != null ? retObjectReadBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,9 +255,13 @@ public class BlobReader extends ValueType  {
 
     public char ReadChar() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadChar = null;
         try {
-            return (char)classInstance.Invoke("ReadChar");
+            retObjectReadChar = classInstance.Invoke("ReadChar");
+            return (char)retObjectReadChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectReadChar != null ? retObjectReadChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +269,19 @@ public class BlobReader extends ValueType  {
 
     public double ReadDouble() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadDouble = null;
         try {
-            return (double)classInstance.Invoke("ReadDouble");
+            retObjectReadDouble = classInstance.Invoke("ReadDouble");
+            return (double)retObjectReadDouble;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadDoubleNumber = (java.lang.Number)retObjectReadDouble;
+                return retObjectReadDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectReadDouble != null ? retObjectReadDouble.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,9 +289,19 @@ public class BlobReader extends ValueType  {
 
     public short ReadInt16() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadInt16 = null;
         try {
-            return (short)classInstance.Invoke("ReadInt16");
+            retObjectReadInt16 = classInstance.Invoke("ReadInt16");
+            return (short)retObjectReadInt16;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadInt16Number = (java.lang.Number)retObjectReadInt16;
+                return retObjectReadInt16Number.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectReadInt16 != null ? retObjectReadInt16.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,9 +309,19 @@ public class BlobReader extends ValueType  {
 
     public int IndexOf(byte value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", value);
+            retObjectIndexOf = classInstance.Invoke("IndexOf", value);
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,9 +329,19 @@ public class BlobReader extends ValueType  {
 
     public int ReadCompressedInteger() throws Throwable, system.ArgumentException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadCompressedInteger = null;
         try {
-            return (int)classInstance.Invoke("ReadCompressedInteger");
+            retObjectReadCompressedInteger = classInstance.Invoke("ReadCompressedInteger");
+            return (int)retObjectReadCompressedInteger;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadCompressedIntegerNumber = (java.lang.Number)retObjectReadCompressedInteger;
+                return retObjectReadCompressedIntegerNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadCompressedInteger != null ? retObjectReadCompressedInteger.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,9 +349,19 @@ public class BlobReader extends ValueType  {
 
     public int ReadCompressedSignedInteger() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadCompressedSignedInteger = null;
         try {
-            return (int)classInstance.Invoke("ReadCompressedSignedInteger");
+            retObjectReadCompressedSignedInteger = classInstance.Invoke("ReadCompressedSignedInteger");
+            return (int)retObjectReadCompressedSignedInteger;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadCompressedSignedIntegerNumber = (java.lang.Number)retObjectReadCompressedSignedInteger;
+                return retObjectReadCompressedSignedIntegerNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadCompressedSignedInteger != null ? retObjectReadCompressedSignedInteger.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,9 +369,19 @@ public class BlobReader extends ValueType  {
 
     public int ReadInt32() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadInt32 = null;
         try {
-            return (int)classInstance.Invoke("ReadInt32");
+            retObjectReadInt32 = classInstance.Invoke("ReadInt32");
+            return (int)retObjectReadInt32;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadInt32Number = (java.lang.Number)retObjectReadInt32;
+                return retObjectReadInt32Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadInt32 != null ? retObjectReadInt32.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,9 +389,19 @@ public class BlobReader extends ValueType  {
 
     public long ReadInt64() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadInt64 = null;
         try {
-            return (long)classInstance.Invoke("ReadInt64");
+            retObjectReadInt64 = classInstance.Invoke("ReadInt64");
+            return (long)retObjectReadInt64;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadInt64Number = (java.lang.Number)retObjectReadInt64;
+                return retObjectReadInt64Number.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectReadInt64 != null ? retObjectReadInt64.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,10 +409,14 @@ public class BlobReader extends ValueType  {
 
     public SByte ReadSByte() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadSByte = null;
         try {
-            JCObject objReadSByte = (JCObject)classInstance.Invoke("ReadSByte");
+            retObjectReadSByte = classInstance.Invoke("ReadSByte");
+            JCObject objReadSByte = (JCObject)retObjectReadSByte;
             return new SByte(objReadSByte);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadSByte != null ? retObjectReadSByte.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,10 +424,14 @@ public class BlobReader extends ValueType  {
 
     public Single ReadSingle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadSingle = null;
         try {
-            JCObject objReadSingle = (JCObject)classInstance.Invoke("ReadSingle");
+            retObjectReadSingle = classInstance.Invoke("ReadSingle");
+            JCObject objReadSingle = (JCObject)retObjectReadSingle;
             return new Single(objReadSingle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadSingle != null ? retObjectReadSingle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,10 +439,14 @@ public class BlobReader extends ValueType  {
 
     public DateTime ReadDateTime() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadDateTime = null;
         try {
-            JCObject objReadDateTime = (JCObject)classInstance.Invoke("ReadDateTime");
+            retObjectReadDateTime = classInstance.Invoke("ReadDateTime");
+            JCObject objReadDateTime = (JCObject)retObjectReadDateTime;
             return new DateTime(objReadDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadDateTime != null ? retObjectReadDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,10 +454,14 @@ public class BlobReader extends ValueType  {
 
     public Decimal ReadDecimal() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadDecimal = null;
         try {
-            JCObject objReadDecimal = (JCObject)classInstance.Invoke("ReadDecimal");
+            retObjectReadDecimal = classInstance.Invoke("ReadDecimal");
+            JCObject objReadDecimal = (JCObject)retObjectReadDecimal;
             return new Decimal(objReadDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadDecimal != null ? retObjectReadDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,10 +469,14 @@ public class BlobReader extends ValueType  {
 
     public Guid ReadGuid() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadGuid = null;
         try {
-            JCObject objReadGuid = (JCObject)classInstance.Invoke("ReadGuid");
+            retObjectReadGuid = classInstance.Invoke("ReadGuid");
+            JCObject objReadGuid = (JCObject)retObjectReadGuid;
             return new Guid(objReadGuid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadGuid != null ? retObjectReadGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,10 +484,14 @@ public class BlobReader extends ValueType  {
 
     public NetObject ReadConstant(ConstantTypeCode typeCode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadConstant = null;
         try {
-            JCObject objReadConstant = (JCObject)classInstance.Invoke("ReadConstant", typeCode == null ? null : typeCode.getJCOInstance());
+            retObjectReadConstant = classInstance.Invoke("ReadConstant", typeCode == null ? null : typeCode.getJCOInstance());
+            JCObject objReadConstant = (JCObject)retObjectReadConstant;
             return new NetObject(objReadConstant);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadConstant != null ? retObjectReadConstant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,10 +499,14 @@ public class BlobReader extends ValueType  {
 
     public BlobHandle ReadBlobHandle() throws Throwable, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadBlobHandle = null;
         try {
-            JCObject objReadBlobHandle = (JCObject)classInstance.Invoke("ReadBlobHandle");
+            retObjectReadBlobHandle = classInstance.Invoke("ReadBlobHandle");
+            JCObject objReadBlobHandle = (JCObject)retObjectReadBlobHandle;
             return new BlobHandle(objReadBlobHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadBlobHandle != null ? retObjectReadBlobHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,10 +514,14 @@ public class BlobReader extends ValueType  {
 
     public EntityHandle ReadTypeHandle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadTypeHandle = null;
         try {
-            JCObject objReadTypeHandle = (JCObject)classInstance.Invoke("ReadTypeHandle");
+            retObjectReadTypeHandle = classInstance.Invoke("ReadTypeHandle");
+            JCObject objReadTypeHandle = (JCObject)retObjectReadTypeHandle;
             return new EntityHandle(objReadTypeHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadTypeHandle != null ? retObjectReadTypeHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,10 +529,14 @@ public class BlobReader extends ValueType  {
 
     public SerializationTypeCode ReadSerializationTypeCode() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadSerializationTypeCode = null;
         try {
-            JCObject objReadSerializationTypeCode = (JCObject)classInstance.Invoke("ReadSerializationTypeCode");
+            retObjectReadSerializationTypeCode = classInstance.Invoke("ReadSerializationTypeCode");
+            JCObject objReadSerializationTypeCode = (JCObject)retObjectReadSerializationTypeCode;
             return new SerializationTypeCode(objReadSerializationTypeCode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadSerializationTypeCode != null ? retObjectReadSerializationTypeCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,10 +544,14 @@ public class BlobReader extends ValueType  {
 
     public SignatureHeader ReadSignatureHeader() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadSignatureHeader = null;
         try {
-            JCObject objReadSignatureHeader = (JCObject)classInstance.Invoke("ReadSignatureHeader");
+            retObjectReadSignatureHeader = classInstance.Invoke("ReadSignatureHeader");
+            JCObject objReadSignatureHeader = (JCObject)retObjectReadSignatureHeader;
             return new SignatureHeader(objReadSignatureHeader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadSignatureHeader != null ? retObjectReadSignatureHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,10 +559,14 @@ public class BlobReader extends ValueType  {
 
     public SignatureTypeCode ReadSignatureTypeCode() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadSignatureTypeCode = null;
         try {
-            JCObject objReadSignatureTypeCode = (JCObject)classInstance.Invoke("ReadSignatureTypeCode");
+            retObjectReadSignatureTypeCode = classInstance.Invoke("ReadSignatureTypeCode");
+            JCObject objReadSignatureTypeCode = (JCObject)retObjectReadSignatureTypeCode;
             return new SignatureTypeCode(objReadSignatureTypeCode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadSignatureTypeCode != null ? retObjectReadSignatureTypeCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -430,9 +574,13 @@ public class BlobReader extends ValueType  {
 
     public java.lang.String ReadSerializedString() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadSerializedString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadSerializedString");
+            retObjectReadSerializedString = classInstance.Invoke("ReadSerializedString");
+            return (java.lang.String)retObjectReadSerializedString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadSerializedString != null ? retObjectReadSerializedString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -440,9 +588,13 @@ public class BlobReader extends ValueType  {
 
     public java.lang.String ReadUTF16(int byteCount) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadUTF16 = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadUTF16", byteCount);
+            retObjectReadUTF16 = classInstance.Invoke("ReadUTF16", byteCount);
+            return (java.lang.String)retObjectReadUTF16;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadUTF16 != null ? retObjectReadUTF16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,9 +602,13 @@ public class BlobReader extends ValueType  {
 
     public java.lang.String ReadUTF8(int byteCount) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadUTF8 = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadUTF8", byteCount);
+            retObjectReadUTF8 = classInstance.Invoke("ReadUTF8", byteCount);
+            return (java.lang.String)retObjectReadUTF8;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadUTF8 != null ? retObjectReadUTF8.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,10 +616,14 @@ public class BlobReader extends ValueType  {
 
     public UInt16 ReadUInt16() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadUInt16 = null;
         try {
-            JCObject objReadUInt16 = (JCObject)classInstance.Invoke("ReadUInt16");
+            retObjectReadUInt16 = classInstance.Invoke("ReadUInt16");
+            JCObject objReadUInt16 = (JCObject)retObjectReadUInt16;
             return new UInt16(objReadUInt16);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadUInt16 != null ? retObjectReadUInt16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -471,10 +631,14 @@ public class BlobReader extends ValueType  {
 
     public UInt32 ReadUInt32() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadUInt32 = null;
         try {
-            JCObject objReadUInt32 = (JCObject)classInstance.Invoke("ReadUInt32");
+            retObjectReadUInt32 = classInstance.Invoke("ReadUInt32");
+            JCObject objReadUInt32 = (JCObject)retObjectReadUInt32;
             return new UInt32(objReadUInt32);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadUInt32 != null ? retObjectReadUInt32.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,10 +646,14 @@ public class BlobReader extends ValueType  {
 
     public UInt64 ReadUInt64() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadUInt64 = null;
         try {
-            JCObject objReadUInt64 = (JCObject)classInstance.Invoke("ReadUInt64");
+            retObjectReadUInt64 = classInstance.Invoke("ReadUInt64");
+            JCObject objReadUInt64 = (JCObject)retObjectReadUInt64;
             return new UInt64(objReadUInt64);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadUInt64 != null ? retObjectReadUInt64.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -493,7 +661,7 @@ public class BlobReader extends ValueType  {
 
     public void Align(byte alignment) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Align", alignment);
         } catch (JCNativeException jcne) {
@@ -503,7 +671,7 @@ public class BlobReader extends ValueType  {
 
     public void ReadBytes(int byteCount, byte[] buffer, int bufferOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadBytes", byteCount, buffer, bufferOffset);
         } catch (JCNativeException jcne) {
@@ -513,7 +681,7 @@ public class BlobReader extends ValueType  {
 
     public void ReadBytes(int dupParam0, JCORefOut dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadBytes", dupParam0, dupParam1.getJCRefOut(), dupParam2);
         } catch (JCNativeException jcne) {
@@ -523,7 +691,7 @@ public class BlobReader extends ValueType  {
 
     public void Reset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -537,9 +705,19 @@ public class BlobReader extends ValueType  {
     
     public int getLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLength = null;
         try {
-            return (int)classInstance.Get("Length");
+            retObjectLength = classInstance.Get("Length");
+            return (int)retObjectLength;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLengthNumber = (java.lang.Number)retObjectLength;
+                return retObjectLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -547,9 +725,19 @@ public class BlobReader extends ValueType  {
 
     public int getOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffset = null;
         try {
-            return (int)classInstance.Get("Offset");
+            retObjectOffset = classInstance.Get("Offset");
+            return (int)retObjectOffset;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOffsetNumber = (java.lang.Number)retObjectOffset;
+                return retObjectOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -557,7 +745,7 @@ public class BlobReader extends ValueType  {
 
     public void setOffset(int Offset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Offset", Offset);
         } catch (JCNativeException jcne) {
@@ -567,9 +755,19 @@ public class BlobReader extends ValueType  {
 
     public int getRemainingBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemainingBytes = null;
         try {
-            return (int)classInstance.Get("RemainingBytes");
+            retObjectRemainingBytes = classInstance.Get("RemainingBytes");
+            return (int)retObjectRemainingBytes;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRemainingBytesNumber = (java.lang.Number)retObjectRemainingBytes;
+                return retObjectRemainingBytesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRemainingBytes != null ? retObjectRemainingBytes.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

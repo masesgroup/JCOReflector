@@ -174,10 +174,14 @@ public class ProfileWorkflowElement extends TrackingConfigurationElement  {
     
     public ActivityScheduledQueryElementCollection getActivityScheduledQueries() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityScheduledQueries = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActivityScheduledQueries");
+            retObjectActivityScheduledQueries = classInstance.Get("ActivityScheduledQueries");
+            JCObject val = (JCObject)retObjectActivityScheduledQueries;
             return new ActivityScheduledQueryElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivityScheduledQueries != null ? retObjectActivityScheduledQueries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +189,14 @@ public class ProfileWorkflowElement extends TrackingConfigurationElement  {
 
     public ActivityStateQueryElementCollection getActivityStateQueries() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityStateQueries = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActivityStateQueries");
+            retObjectActivityStateQueries = classInstance.Get("ActivityStateQueries");
+            JCObject val = (JCObject)retObjectActivityStateQueries;
             return new ActivityStateQueryElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivityStateQueries != null ? retObjectActivityStateQueries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +204,14 @@ public class ProfileWorkflowElement extends TrackingConfigurationElement  {
 
     public BookmarkResumptionQueryElementCollection getBookmarkResumptionQueries() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBookmarkResumptionQueries = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BookmarkResumptionQueries");
+            retObjectBookmarkResumptionQueries = classInstance.Get("BookmarkResumptionQueries");
+            JCObject val = (JCObject)retObjectBookmarkResumptionQueries;
             return new BookmarkResumptionQueryElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBookmarkResumptionQueries != null ? retObjectBookmarkResumptionQueries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +219,14 @@ public class ProfileWorkflowElement extends TrackingConfigurationElement  {
 
     public CancelRequestedQueryElementCollection getCancelRequestedQueries() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancelRequestedQueries = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CancelRequestedQueries");
+            retObjectCancelRequestedQueries = classInstance.Get("CancelRequestedQueries");
+            JCObject val = (JCObject)retObjectCancelRequestedQueries;
             return new CancelRequestedQueryElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCancelRequestedQueries != null ? retObjectCancelRequestedQueries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +234,14 @@ public class ProfileWorkflowElement extends TrackingConfigurationElement  {
 
     public CustomTrackingQueryElementCollection getCustomTrackingQueries() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomTrackingQueries = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomTrackingQueries");
+            retObjectCustomTrackingQueries = classInstance.Get("CustomTrackingQueries");
+            JCObject val = (JCObject)retObjectCustomTrackingQueries;
             return new CustomTrackingQueryElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomTrackingQueries != null ? retObjectCustomTrackingQueries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +249,14 @@ public class ProfileWorkflowElement extends TrackingConfigurationElement  {
 
     public FaultPropagationQueryElementCollection getFaultPropagationQueries() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFaultPropagationQueries = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FaultPropagationQueries");
+            retObjectFaultPropagationQueries = classInstance.Get("FaultPropagationQueries");
+            JCObject val = (JCObject)retObjectFaultPropagationQueries;
             return new FaultPropagationQueryElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFaultPropagationQueries != null ? retObjectFaultPropagationQueries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +264,14 @@ public class ProfileWorkflowElement extends TrackingConfigurationElement  {
 
     public StateMachineStateQueryElementCollection getStateMachineStateQueries() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStateMachineStateQueries = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StateMachineStateQueries");
+            retObjectStateMachineStateQueries = classInstance.Get("StateMachineStateQueries");
+            JCObject val = (JCObject)retObjectStateMachineStateQueries;
             return new StateMachineStateQueryElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStateMachineStateQueries != null ? retObjectStateMachineStateQueries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,10 +279,14 @@ public class ProfileWorkflowElement extends TrackingConfigurationElement  {
 
     public WorkflowInstanceQueryElementCollection getWorkflowInstanceQueries() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowInstanceQueries = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowInstanceQueries");
+            retObjectWorkflowInstanceQueries = classInstance.Get("WorkflowInstanceQueries");
+            JCObject val = (JCObject)retObjectWorkflowInstanceQueries;
             return new WorkflowInstanceQueryElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowInstanceQueries != null ? retObjectWorkflowInstanceQueries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,9 +294,13 @@ public class ProfileWorkflowElement extends TrackingConfigurationElement  {
 
     public java.lang.String getActivityDefinitionId() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityDefinitionId = null;
         try {
-            return (java.lang.String)classInstance.Get("ActivityDefinitionId");
+            retObjectActivityDefinitionId = classInstance.Get("ActivityDefinitionId");
+            return (java.lang.String)retObjectActivityDefinitionId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectActivityDefinitionId != null ? retObjectActivityDefinitionId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +308,7 @@ public class ProfileWorkflowElement extends TrackingConfigurationElement  {
 
     public void setActivityDefinitionId(java.lang.String ActivityDefinitionId) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActivityDefinitionId", ActivityDefinitionId);
         } catch (JCNativeException jcne) {

@@ -159,9 +159,13 @@ public class SecurityTokenResolver extends NetObject  {
     
     public boolean TryResolveSecurityKey(SecurityKeyIdentifierClause keyIdentifierClause, JCORefOut<SecurityKey> key) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryResolveSecurityKey = null;
         try {
-            return (boolean)classInstance.Invoke("TryResolveSecurityKey", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance(), key.getJCRefOut());
+            retObjectTryResolveSecurityKey = classInstance.Invoke("TryResolveSecurityKey", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance(), key.getJCRefOut());
+            return (boolean)retObjectTryResolveSecurityKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryResolveSecurityKey != null ? retObjectTryResolveSecurityKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class SecurityTokenResolver extends NetObject  {
 
     public boolean TryResolveToken(SecurityKeyIdentifier keyIdentifier, JCORefOut<SecurityToken> token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryResolveToken = null;
         try {
-            return (boolean)classInstance.Invoke("TryResolveToken", keyIdentifier == null ? null : keyIdentifier.getJCOInstance(), token.getJCRefOut());
+            retObjectTryResolveToken = classInstance.Invoke("TryResolveToken", keyIdentifier == null ? null : keyIdentifier.getJCOInstance(), token.getJCRefOut());
+            return (boolean)retObjectTryResolveToken;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryResolveToken != null ? retObjectTryResolveToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +187,13 @@ public class SecurityTokenResolver extends NetObject  {
 
     public boolean TryResolveToken(SecurityKeyIdentifierClause keyIdentifierClause, JCORefOut<SecurityToken> token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryResolveToken = null;
         try {
-            return (boolean)classInstance.Invoke("TryResolveToken", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance(), token.getJCRefOut());
+            retObjectTryResolveToken = classInstance.Invoke("TryResolveToken", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance(), token.getJCRefOut());
+            return (boolean)retObjectTryResolveToken;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryResolveToken != null ? retObjectTryResolveToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +201,14 @@ public class SecurityTokenResolver extends NetObject  {
 
     public SecurityKey ResolveSecurityKey(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveSecurityKey = null;
         try {
-            JCObject objResolveSecurityKey = (JCObject)classInstance.Invoke("ResolveSecurityKey", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            retObjectResolveSecurityKey = classInstance.Invoke("ResolveSecurityKey", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            JCObject objResolveSecurityKey = (JCObject)retObjectResolveSecurityKey;
             return new SecurityKey(objResolveSecurityKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveSecurityKey != null ? retObjectResolveSecurityKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +216,14 @@ public class SecurityTokenResolver extends NetObject  {
 
     public SecurityToken ResolveToken(SecurityKeyIdentifier keyIdentifier) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveToken = null;
         try {
-            JCObject objResolveToken = (JCObject)classInstance.Invoke("ResolveToken", keyIdentifier == null ? null : keyIdentifier.getJCOInstance());
+            retObjectResolveToken = classInstance.Invoke("ResolveToken", keyIdentifier == null ? null : keyIdentifier.getJCOInstance());
+            JCObject objResolveToken = (JCObject)retObjectResolveToken;
             return new SecurityToken(objResolveToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveToken != null ? retObjectResolveToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +231,14 @@ public class SecurityTokenResolver extends NetObject  {
 
     public SecurityToken ResolveToken(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveToken = null;
         try {
-            JCObject objResolveToken = (JCObject)classInstance.Invoke("ResolveToken", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            retObjectResolveToken = classInstance.Invoke("ResolveToken", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            JCObject objResolveToken = (JCObject)retObjectResolveToken;
             return new SecurityToken(objResolveToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveToken != null ? retObjectResolveToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +246,7 @@ public class SecurityTokenResolver extends NetObject  {
 
     public void LoadCustomConfiguration(XmlNodeList nodelist) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadCustomConfiguration", nodelist == null ? null : nodelist.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -188,10 +188,14 @@ public class CodeConditionStatement extends CodeStatement  {
     
     public CodeExpression getCondition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCondition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Condition");
+            retObjectCondition = classInstance.Get("Condition");
+            JCObject val = (JCObject)retObjectCondition;
             return new CodeExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCondition != null ? retObjectCondition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +203,7 @@ public class CodeConditionStatement extends CodeStatement  {
 
     public void setCondition(CodeExpression Condition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Condition", Condition == null ? null : Condition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,10 +213,14 @@ public class CodeConditionStatement extends CodeStatement  {
 
     public CodeStatementCollection getFalseStatements() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFalseStatements = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FalseStatements");
+            retObjectFalseStatements = classInstance.Get("FalseStatements");
+            JCObject val = (JCObject)retObjectFalseStatements;
             return new CodeStatementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFalseStatements != null ? retObjectFalseStatements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +228,14 @@ public class CodeConditionStatement extends CodeStatement  {
 
     public CodeStatementCollection getTrueStatements() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrueStatements = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TrueStatements");
+            retObjectTrueStatements = classInstance.Get("TrueStatements");
+            JCObject val = (JCObject)retObjectTrueStatements;
             return new CodeStatementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrueStatements != null ? retObjectTrueStatements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

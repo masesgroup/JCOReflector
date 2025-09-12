@@ -160,9 +160,13 @@ public class UriCreationOptions extends ValueType  {
     
     public boolean getDangerousDisablePathAndQueryCanonicalization() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDangerousDisablePathAndQueryCanonicalization = null;
         try {
-            return (boolean)classInstance.Get("DangerousDisablePathAndQueryCanonicalization");
+            retObjectDangerousDisablePathAndQueryCanonicalization = classInstance.Get("DangerousDisablePathAndQueryCanonicalization");
+            return (boolean)retObjectDangerousDisablePathAndQueryCanonicalization;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDangerousDisablePathAndQueryCanonicalization != null ? retObjectDangerousDisablePathAndQueryCanonicalization.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class UriCreationOptions extends ValueType  {
 
     public void setDangerousDisablePathAndQueryCanonicalization(boolean DangerousDisablePathAndQueryCanonicalization) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DangerousDisablePathAndQueryCanonicalization", DangerousDisablePathAndQueryCanonicalization);
         } catch (JCNativeException jcne) {

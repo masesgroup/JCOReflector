@@ -161,10 +161,14 @@ public class IClientFormatterSinkImplementation extends NetObject implements ICl
     
     public Stream GetRequestStream(IMessage msg, ITransportHeaders headers) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRequestStream = null;
         try {
-            JCObject objGetRequestStream = (JCObject)classInstance.Invoke("GetRequestStream", msg == null ? null : msg.getJCOInstance(), headers == null ? null : headers.getJCOInstance());
+            retObjectGetRequestStream = classInstance.Invoke("GetRequestStream", msg == null ? null : msg.getJCOInstance(), headers == null ? null : headers.getJCOInstance());
+            JCObject objGetRequestStream = (JCObject)retObjectGetRequestStream;
             return new Stream(objGetRequestStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRequestStream != null ? retObjectGetRequestStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class IClientFormatterSinkImplementation extends NetObject implements ICl
 
     public IMessage SyncProcessMessage(IMessage msg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSyncProcessMessage = null;
         try {
-            JCObject objSyncProcessMessage = (JCObject)classInstance.Invoke("SyncProcessMessage", msg == null ? null : msg.getJCOInstance());
+            retObjectSyncProcessMessage = classInstance.Invoke("SyncProcessMessage", msg == null ? null : msg.getJCOInstance());
+            JCObject objSyncProcessMessage = (JCObject)retObjectSyncProcessMessage;
             return new IMessageImplementation(objSyncProcessMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSyncProcessMessage != null ? retObjectSyncProcessMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class IClientFormatterSinkImplementation extends NetObject implements ICl
 
     public IMessageCtrl AsyncProcessMessage(IMessage msg, IMessageSink replySink) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsyncProcessMessage = null;
         try {
-            JCObject objAsyncProcessMessage = (JCObject)classInstance.Invoke("AsyncProcessMessage", msg == null ? null : msg.getJCOInstance(), replySink == null ? null : replySink.getJCOInstance());
+            retObjectAsyncProcessMessage = classInstance.Invoke("AsyncProcessMessage", msg == null ? null : msg.getJCOInstance(), replySink == null ? null : replySink.getJCOInstance());
+            JCObject objAsyncProcessMessage = (JCObject)retObjectAsyncProcessMessage;
             return new IMessageCtrlImplementation(objAsyncProcessMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsyncProcessMessage != null ? retObjectAsyncProcessMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +206,7 @@ public class IClientFormatterSinkImplementation extends NetObject implements ICl
 
     public void AsyncProcessRequest(IClientChannelSinkStack sinkStack, IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AsyncProcessRequest", sinkStack == null ? null : sinkStack.getJCOInstance(), msg == null ? null : msg.getJCOInstance(), headers == null ? null : headers.getJCOInstance(), stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,7 +216,7 @@ public class IClientFormatterSinkImplementation extends NetObject implements ICl
 
     public void AsyncProcessResponse(IClientResponseChannelSinkStack sinkStack, NetObject state, ITransportHeaders headers, Stream stream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AsyncProcessResponse", sinkStack == null ? null : sinkStack.getJCOInstance(), state == null ? null : state.getJCOInstance(), headers == null ? null : headers.getJCOInstance(), stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -214,7 +226,7 @@ public class IClientFormatterSinkImplementation extends NetObject implements ICl
 
     public void ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, JCORefOut<ITransportHeaders> responseHeaders, JCORefOut<Stream> responseStream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ProcessMessage", msg == null ? null : msg.getJCOInstance(), requestHeaders == null ? null : requestHeaders.getJCOInstance(), requestStream == null ? null : requestStream.getJCOInstance(), responseHeaders.getJCRefOut(), responseStream.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -228,10 +240,14 @@ public class IClientFormatterSinkImplementation extends NetObject implements ICl
     
     public IDictionary getProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject val = (JCObject)retObjectProperties;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +255,14 @@ public class IClientFormatterSinkImplementation extends NetObject implements ICl
 
     public IClientChannelSink getNextChannelSink() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextChannelSink = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NextChannelSink");
+            retObjectNextChannelSink = classInstance.Get("NextChannelSink");
+            JCObject val = (JCObject)retObjectNextChannelSink;
             return new IClientChannelSinkImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNextChannelSink != null ? retObjectNextChannelSink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +270,14 @@ public class IClientFormatterSinkImplementation extends NetObject implements ICl
 
     public IMessageSink getNextSink() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextSink = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NextSink");
+            retObjectNextSink = classInstance.Get("NextSink");
+            JCObject val = (JCObject)retObjectNextSink;
             return new IMessageSinkImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNextSink != null ? retObjectNextSink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -170,9 +170,19 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
     
     public int IndexFromContainer(DependencyObject container, boolean returnLocalIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexFromContainer = null;
         try {
-            return (int)classInstance.Invoke("IndexFromContainer", container == null ? null : container.getJCOInstance(), returnLocalIndex);
+            retObjectIndexFromContainer = classInstance.Invoke("IndexFromContainer", container == null ? null : container.getJCOInstance(), returnLocalIndex);
+            return (int)retObjectIndexFromContainer;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexFromContainerNumber = (java.lang.Number)retObjectIndexFromContainer;
+                return retObjectIndexFromContainerNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexFromContainer != null ? retObjectIndexFromContainer.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +190,19 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
 
     public int IndexFromContainer(DependencyObject container) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexFromContainer = null;
         try {
-            return (int)classInstance.Invoke("IndexFromContainer", container == null ? null : container.getJCOInstance());
+            retObjectIndexFromContainer = classInstance.Invoke("IndexFromContainer", container == null ? null : container.getJCOInstance());
+            return (int)retObjectIndexFromContainer;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexFromContainerNumber = (java.lang.Number)retObjectIndexFromContainer;
+                return retObjectIndexFromContainerNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexFromContainer != null ? retObjectIndexFromContainer.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +210,14 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
 
     public IDisposable GenerateBatches() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateBatches = null;
         try {
-            JCObject objGenerateBatches = (JCObject)classInstance.Invoke("GenerateBatches");
+            retObjectGenerateBatches = classInstance.Invoke("GenerateBatches");
+            JCObject objGenerateBatches = (JCObject)retObjectGenerateBatches;
             return new IDisposableImplementation(objGenerateBatches);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenerateBatches != null ? retObjectGenerateBatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +225,14 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
 
     public NetObject ItemFromContainer(DependencyObject container) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemFromContainer = null;
         try {
-            JCObject objItemFromContainer = (JCObject)classInstance.Invoke("ItemFromContainer", container == null ? null : container.getJCOInstance());
+            retObjectItemFromContainer = classInstance.Invoke("ItemFromContainer", container == null ? null : container.getJCOInstance());
+            JCObject objItemFromContainer = (JCObject)retObjectItemFromContainer;
             return new NetObject(objItemFromContainer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemFromContainer != null ? retObjectItemFromContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +240,14 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
 
     public DependencyObject ContainerFromIndex(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainerFromIndex = null;
         try {
-            JCObject objContainerFromIndex = (JCObject)classInstance.Invoke("ContainerFromIndex", index);
+            retObjectContainerFromIndex = classInstance.Invoke("ContainerFromIndex", index);
+            JCObject objContainerFromIndex = (JCObject)retObjectContainerFromIndex;
             return new DependencyObject(objContainerFromIndex);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContainerFromIndex != null ? retObjectContainerFromIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +255,14 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
 
     public DependencyObject ContainerFromItem(NetObject item) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainerFromItem = null;
         try {
-            JCObject objContainerFromItem = (JCObject)classInstance.Invoke("ContainerFromItem", item == null ? null : item.getJCOInstance());
+            retObjectContainerFromItem = classInstance.Invoke("ContainerFromItem", item == null ? null : item.getJCOInstance());
+            JCObject objContainerFromItem = (JCObject)retObjectContainerFromItem;
             return new DependencyObject(objContainerFromItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContainerFromItem != null ? retObjectContainerFromItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +274,7 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
      */
     @Deprecated 
     public void Recycle(GeneratorPosition position, int count) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRecyclingItemContainerGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRecyclingItemContainerGenerator to obtain the full interface.");
     }
 
     /**
@@ -247,7 +283,7 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
      */
     @Deprecated 
     public int IndexFromGeneratorPosition(GeneratorPosition position) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
 
     /**
@@ -256,7 +292,7 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
      */
     @Deprecated 
     public IDisposable StartAt(GeneratorPosition position, GeneratorDirection direction, boolean allowStartAtRealizedItem) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
 
     /**
@@ -265,7 +301,7 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
      */
     @Deprecated 
     public IDisposable StartAt(GeneratorPosition position, GeneratorDirection direction) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
 
     /**
@@ -274,7 +310,7 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
      */
     @Deprecated 
     public ItemContainerGenerator GetItemContainerGeneratorForPanel(Panel panel) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
 
     /**
@@ -283,7 +319,7 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
      */
     @Deprecated 
     public GeneratorPosition GeneratorPositionFromIndex(int itemIndex) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
 
     /**
@@ -292,7 +328,7 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
      */
     @Deprecated 
     public DependencyObject GenerateNext() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
 
     /**
@@ -301,7 +337,7 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
      */
     @Deprecated 
     public DependencyObject GenerateNext(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isNewlyRealized) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
 
     /**
@@ -310,7 +346,7 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
      */
     @Deprecated 
     public void PrepareItemContainer(DependencyObject container) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
 
     /**
@@ -319,7 +355,7 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
      */
     @Deprecated 
     public void Remove(GeneratorPosition position, int count) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
 
     /**
@@ -328,7 +364,7 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
      */
     @Deprecated 
     public void RemoveAll() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
 
     /**
@@ -337,7 +373,7 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
      */
     @Deprecated 
     public boolean ReceiveWeakEvent(NetType managerType, NetObject sender, EventArgs e) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWeakEventListener to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWeakEventListener to obtain the full interface.");
     }
 
 
@@ -346,10 +382,14 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
     
     public GeneratorStatus getStatus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatus = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Status");
+            retObjectStatus = classInstance.Get("Status");
+            JCObject val = (JCObject)retObjectStatus;
             return new GeneratorStatus(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatus != null ? retObjectStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +402,7 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
 
     public void addStatusChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StatusChanged", handler);
         } catch (JCNativeException jcne) {
@@ -372,7 +412,7 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
 
     public void removeStatusChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StatusChanged", handler);
         } catch (JCNativeException jcne) {
@@ -382,7 +422,7 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
 
     public void addItemsChanged(ItemsChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -392,7 +432,7 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
 
     public void removeItemsChanged(ItemsChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemsChanged", handler);
         } catch (JCNativeException jcne) {

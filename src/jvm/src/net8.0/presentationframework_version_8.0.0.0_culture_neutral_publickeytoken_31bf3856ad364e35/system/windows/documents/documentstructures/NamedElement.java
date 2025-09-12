@@ -166,9 +166,13 @@ public class NamedElement extends BlockElement  {
     
     public java.lang.String getNameReference() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNameReference = null;
         try {
-            return (java.lang.String)classInstance.Get("NameReference");
+            retObjectNameReference = classInstance.Get("NameReference");
+            return (java.lang.String)retObjectNameReference;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNameReference != null ? retObjectNameReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class NamedElement extends BlockElement  {
 
     public void setNameReference(java.lang.String NameReference) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NameReference", NameReference);
         } catch (JCNativeException jcne) {

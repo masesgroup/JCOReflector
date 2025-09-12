@@ -158,9 +158,13 @@ public class Logger extends NetObject  {
     
     public boolean IsVerbosityAtLeast(LoggerVerbosity checkVerbosity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVerbosityAtLeast = null;
         try {
-            return (boolean)classInstance.Invoke("IsVerbosityAtLeast", checkVerbosity == null ? null : checkVerbosity.getJCOInstance());
+            retObjectIsVerbosityAtLeast = classInstance.Invoke("IsVerbosityAtLeast", checkVerbosity == null ? null : checkVerbosity.getJCOInstance());
+            return (boolean)retObjectIsVerbosityAtLeast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVerbosityAtLeast != null ? retObjectIsVerbosityAtLeast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class Logger extends NetObject  {
 
     public java.lang.String FormatErrorEvent(BuildErrorEventArgs args) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatErrorEvent = null;
         try {
-            return (java.lang.String)classInstance.Invoke("FormatErrorEvent", args == null ? null : args.getJCOInstance());
+            retObjectFormatErrorEvent = classInstance.Invoke("FormatErrorEvent", args == null ? null : args.getJCOInstance());
+            return (java.lang.String)retObjectFormatErrorEvent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFormatErrorEvent != null ? retObjectFormatErrorEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +186,13 @@ public class Logger extends NetObject  {
 
     public java.lang.String FormatWarningEvent(BuildWarningEventArgs args) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatWarningEvent = null;
         try {
-            return (java.lang.String)classInstance.Invoke("FormatWarningEvent", args == null ? null : args.getJCOInstance());
+            retObjectFormatWarningEvent = classInstance.Invoke("FormatWarningEvent", args == null ? null : args.getJCOInstance());
+            return (java.lang.String)retObjectFormatWarningEvent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFormatWarningEvent != null ? retObjectFormatWarningEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +200,7 @@ public class Logger extends NetObject  {
 
     public void Initialize(IEventSource eventSource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", eventSource == null ? null : eventSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,7 +210,7 @@ public class Logger extends NetObject  {
 
     public void Shutdown() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Shutdown");
         } catch (JCNativeException jcne) {
@@ -212,10 +224,14 @@ public class Logger extends NetObject  {
     
     public LoggerVerbosity getVerbosity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerbosity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Verbosity");
+            retObjectVerbosity = classInstance.Get("Verbosity");
+            JCObject val = (JCObject)retObjectVerbosity;
             return new LoggerVerbosity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerbosity != null ? retObjectVerbosity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +239,7 @@ public class Logger extends NetObject  {
 
     public void setVerbosity(LoggerVerbosity Verbosity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Verbosity", Verbosity == null ? null : Verbosity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -233,9 +249,13 @@ public class Logger extends NetObject  {
 
     public java.lang.String getParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameters = null;
         try {
-            return (java.lang.String)classInstance.Get("Parameters");
+            retObjectParameters = classInstance.Get("Parameters");
+            return (java.lang.String)retObjectParameters;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectParameters != null ? retObjectParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +263,7 @@ public class Logger extends NetObject  {
 
     public void setParameters(java.lang.String Parameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Parameters", Parameters);
         } catch (JCNativeException jcne) {

@@ -164,7 +164,7 @@ public class RegistrationHelper extends MarshalByRefObject  {
     
     public void InstallAssembly(java.lang.String assembly, JCORefOut application, JCORefOut tlb, InstallationFlags installFlags) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.NullReferenceException, system.OverflowException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NotSupportedException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException, system.OutOfMemoryException, system.enterpriseservices.RegistrationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.UnauthorizedAccessException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InstallAssembly", assembly, application.getJCRefOut(), tlb.getJCRefOut(), installFlags == null ? null : installFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -174,7 +174,7 @@ public class RegistrationHelper extends MarshalByRefObject  {
 
     public void InstallAssembly(java.lang.String assembly, JCORefOut application, java.lang.String partition, JCORefOut tlb, InstallationFlags installFlags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.transactions.TransactionException, system.OutOfMemoryException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException, system.enterpriseservices.RegistrationException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InstallAssembly", assembly, application.getJCRefOut(), partition, tlb.getJCRefOut(), installFlags == null ? null : installFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -184,7 +184,7 @@ public class RegistrationHelper extends MarshalByRefObject  {
 
     public void InstallAssemblyFromConfig(JCORefOut<RegistrationConfig> regConfig) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException, system.OverflowException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException, system.OutOfMemoryException, system.enterpriseservices.RegistrationException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InstallAssemblyFromConfig", regConfig.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -194,7 +194,7 @@ public class RegistrationHelper extends MarshalByRefObject  {
 
     public void UninstallAssembly(java.lang.String assembly, java.lang.String application) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.NullReferenceException, system.OverflowException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NotSupportedException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.enterpriseservices.RegistrationException, system.io.PathTooLongException, system.UnauthorizedAccessException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UninstallAssembly", assembly, application);
         } catch (JCNativeException jcne) {
@@ -204,7 +204,7 @@ public class RegistrationHelper extends MarshalByRefObject  {
 
     public void UninstallAssembly(java.lang.String assembly, java.lang.String application, java.lang.String partition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.transactions.TransactionException, system.OutOfMemoryException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.enterpriseservices.RegistrationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UninstallAssembly", assembly, application, partition);
         } catch (JCNativeException jcne) {
@@ -214,7 +214,7 @@ public class RegistrationHelper extends MarshalByRefObject  {
 
     public void UninstallAssemblyFromConfig(JCORefOut<RegistrationConfig> regConfig) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException, system.OverflowException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.enterpriseservices.RegistrationException, system.io.PathTooLongException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UninstallAssemblyFromConfig", regConfig.getJCRefOut());
         } catch (JCNativeException jcne) {

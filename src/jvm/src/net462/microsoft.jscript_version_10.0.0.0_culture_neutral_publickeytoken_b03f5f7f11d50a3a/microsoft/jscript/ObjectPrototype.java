@@ -157,9 +157,13 @@ public class ObjectPrototype extends JSObject  {
     
     public static boolean hasOwnProperty(NetObject thisob, NetObject name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, microsoft.jscript.vsa.JSVsaException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecthasOwnProperty = null;
         try {
-            return (boolean)classType.Invoke("hasOwnProperty", thisob == null ? null : thisob.getJCOInstance(), name == null ? null : name.getJCOInstance());
+            retObjecthasOwnProperty = classType.Invoke("hasOwnProperty", thisob == null ? null : thisob.getJCOInstance(), name == null ? null : name.getJCOInstance());
+            return (boolean)retObjecthasOwnProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjecthasOwnProperty != null ? retObjecthasOwnProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class ObjectPrototype extends JSObject  {
 
     public static boolean isPrototypeOf(NetObject thisob, NetObject ob) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectisPrototypeOf = null;
         try {
-            return (boolean)classType.Invoke("isPrototypeOf", thisob == null ? null : thisob.getJCOInstance(), ob == null ? null : ob.getJCOInstance());
+            retObjectisPrototypeOf = classType.Invoke("isPrototypeOf", thisob == null ? null : thisob.getJCOInstance(), ob == null ? null : ob.getJCOInstance());
+            return (boolean)retObjectisPrototypeOf;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectisPrototypeOf != null ? retObjectisPrototypeOf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +185,13 @@ public class ObjectPrototype extends JSObject  {
 
     public static boolean propertyIsEnumerable(NetObject thisob, NetObject name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, microsoft.jscript.vsa.JSVsaException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectpropertyIsEnumerable = null;
         try {
-            return (boolean)classType.Invoke("propertyIsEnumerable", thisob == null ? null : thisob.getJCOInstance(), name == null ? null : name.getJCOInstance());
+            retObjectpropertyIsEnumerable = classType.Invoke("propertyIsEnumerable", thisob == null ? null : thisob.getJCOInstance(), name == null ? null : name.getJCOInstance());
+            return (boolean)retObjectpropertyIsEnumerable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectpropertyIsEnumerable != null ? retObjectpropertyIsEnumerable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +199,14 @@ public class ObjectPrototype extends JSObject  {
 
     public static NetObject valueOf(NetObject thisob) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectvalueOf = null;
         try {
-            JCObject objvalueOf = (JCObject)classType.Invoke("valueOf", thisob == null ? null : thisob.getJCOInstance());
+            retObjectvalueOf = classType.Invoke("valueOf", thisob == null ? null : thisob.getJCOInstance());
+            JCObject objvalueOf = (JCObject)retObjectvalueOf;
             return new NetObject(objvalueOf);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectvalueOf != null ? retObjectvalueOf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +214,13 @@ public class ObjectPrototype extends JSObject  {
 
     public static java.lang.String toLocaleString(NetObject thisob) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecttoLocaleString = null;
         try {
-            return (java.lang.String)classType.Invoke("toLocaleString", thisob == null ? null : thisob.getJCOInstance());
+            retObjecttoLocaleString = classType.Invoke("toLocaleString", thisob == null ? null : thisob.getJCOInstance());
+            return (java.lang.String)retObjecttoLocaleString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjecttoLocaleString != null ? retObjecttoLocaleString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +228,13 @@ public class ObjectPrototype extends JSObject  {
 
     public static java.lang.String toString(NetObject thisob) throws Throwable, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecttoString = null;
         try {
-            return (java.lang.String)classType.Invoke("toString", thisob == null ? null : thisob.getJCOInstance());
+            retObjecttoString = classType.Invoke("toString", thisob == null ? null : thisob.getJCOInstance());
+            return (java.lang.String)retObjecttoString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjecttoString != null ? retObjecttoString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +246,14 @@ public class ObjectPrototype extends JSObject  {
     
     public static ObjectConstructor getconstructor() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectconstructor = null;
         try {
-            JCObject val = (JCObject)classType.Get("constructor");
+            retObjectconstructor = classType.Get("constructor");
+            JCObject val = (JCObject)retObjectconstructor;
             return new ObjectConstructor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectconstructor != null ? retObjectconstructor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

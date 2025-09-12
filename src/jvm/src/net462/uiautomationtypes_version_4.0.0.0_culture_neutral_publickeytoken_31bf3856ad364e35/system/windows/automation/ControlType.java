@@ -159,16 +159,20 @@ public class ControlType extends AutomationIdentifier  {
     
     public AutomationPattern[] GetNeverSupportedPatterns() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNeverSupportedPatterns = null;
         try {
             ArrayList<AutomationPattern> resultingArrayList = new ArrayList<AutomationPattern>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetNeverSupportedPatterns");
+            retObjectGetNeverSupportedPatterns = classInstance.Invoke("GetNeverSupportedPatterns");
+            JCObject resultingObjects = (JCObject)retObjectGetNeverSupportedPatterns;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new AutomationPattern(resultingObject));
             }
             AutomationPattern[] resultingArray = new AutomationPattern[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNeverSupportedPatterns != null ? retObjectGetNeverSupportedPatterns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,16 +180,20 @@ public class ControlType extends AutomationIdentifier  {
 
     public AutomationProperty[] GetRequiredProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRequiredProperties = null;
         try {
             ArrayList<AutomationProperty> resultingArrayList = new ArrayList<AutomationProperty>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRequiredProperties");
+            retObjectGetRequiredProperties = classInstance.Invoke("GetRequiredProperties");
+            JCObject resultingObjects = (JCObject)retObjectGetRequiredProperties;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new AutomationProperty(resultingObject));
             }
             AutomationProperty[] resultingArray = new AutomationProperty[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRequiredProperties != null ? retObjectGetRequiredProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class ControlType extends AutomationIdentifier  {
 
     public static ControlType LookupById(int id) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLookupById = null;
         try {
-            JCObject objLookupById = (JCObject)classType.Invoke("LookupById", id);
+            retObjectLookupById = classType.Invoke("LookupById", id);
+            JCObject objLookupById = (JCObject)retObjectLookupById;
             return new ControlType(objLookupById);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLookupById != null ? retObjectLookupById.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +220,13 @@ public class ControlType extends AutomationIdentifier  {
     
     public java.lang.String getLocalizedControlType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalizedControlType = null;
         try {
-            return (java.lang.String)classInstance.Get("LocalizedControlType");
+            retObjectLocalizedControlType = classInstance.Get("LocalizedControlType");
+            return (java.lang.String)retObjectLocalizedControlType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLocalizedControlType != null ? retObjectLocalizedControlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -170,7 +170,7 @@ public class XmlSerializerMessageContractImporter extends NetObject  {
      */
     @Deprecated 
     public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlImportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlImportExtension to obtain the full interface.");
     }
 
     /**
@@ -179,7 +179,7 @@ public class XmlSerializerMessageContractImporter extends NetObject  {
      */
     @Deprecated 
     public void ImportEndpoint(WsdlImporter importer, WsdlEndpointConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlImportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlImportExtension to obtain the full interface.");
     }
 
 

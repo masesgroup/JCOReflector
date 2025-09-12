@@ -168,10 +168,14 @@ public class DataGridTemplateColumn extends DataGridColumn  {
     
     public DataTemplateSelector getCellEditingTemplateSelector() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellEditingTemplateSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CellEditingTemplateSelector");
+            retObjectCellEditingTemplateSelector = classInstance.Get("CellEditingTemplateSelector");
+            JCObject val = (JCObject)retObjectCellEditingTemplateSelector;
             return new DataTemplateSelector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCellEditingTemplateSelector != null ? retObjectCellEditingTemplateSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class DataGridTemplateColumn extends DataGridColumn  {
 
     public void setCellEditingTemplateSelector(DataTemplateSelector CellEditingTemplateSelector) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellEditingTemplateSelector", CellEditingTemplateSelector == null ? null : CellEditingTemplateSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,10 +193,14 @@ public class DataGridTemplateColumn extends DataGridColumn  {
 
     public DataTemplateSelector getCellTemplateSelector() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellTemplateSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CellTemplateSelector");
+            retObjectCellTemplateSelector = classInstance.Get("CellTemplateSelector");
+            JCObject val = (JCObject)retObjectCellTemplateSelector;
             return new DataTemplateSelector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCellTemplateSelector != null ? retObjectCellTemplateSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class DataGridTemplateColumn extends DataGridColumn  {
 
     public void setCellTemplateSelector(DataTemplateSelector CellTemplateSelector) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellTemplateSelector", CellTemplateSelector == null ? null : CellTemplateSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,10 +218,14 @@ public class DataGridTemplateColumn extends DataGridColumn  {
 
     public DataTemplate getCellEditingTemplate() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellEditingTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CellEditingTemplate");
+            retObjectCellEditingTemplate = classInstance.Get("CellEditingTemplate");
+            JCObject val = (JCObject)retObjectCellEditingTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCellEditingTemplate != null ? retObjectCellEditingTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +233,7 @@ public class DataGridTemplateColumn extends DataGridColumn  {
 
     public void setCellEditingTemplate(DataTemplate CellEditingTemplate) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellEditingTemplate", CellEditingTemplate == null ? null : CellEditingTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,10 +243,14 @@ public class DataGridTemplateColumn extends DataGridColumn  {
 
     public DataTemplate getCellTemplate() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CellTemplate");
+            retObjectCellTemplate = classInstance.Get("CellTemplate");
+            JCObject val = (JCObject)retObjectCellTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCellTemplate != null ? retObjectCellTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class DataGridTemplateColumn extends DataGridColumn  {
 
     public void setCellTemplate(DataTemplate CellTemplate) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellTemplate", CellTemplate == null ? null : CellTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {

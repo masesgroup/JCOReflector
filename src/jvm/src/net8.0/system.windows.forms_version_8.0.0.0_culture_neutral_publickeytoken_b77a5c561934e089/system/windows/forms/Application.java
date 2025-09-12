@@ -172,9 +172,13 @@ public class Application extends NetObject  {
     
     public static boolean FilterMessage(JCORefOut<Message> message) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFilterMessage = null;
         try {
-            return (boolean)classType.Invoke("FilterMessage", message.getJCRefOut());
+            retObjectFilterMessage = classType.Invoke("FilterMessage", message.getJCRefOut());
+            return (boolean)retObjectFilterMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFilterMessage != null ? retObjectFilterMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class Application extends NetObject  {
 
     public static boolean SetHighDpiMode(HighDpiMode highDpiMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSetHighDpiMode = null;
         try {
-            return (boolean)classType.Invoke("SetHighDpiMode", highDpiMode == null ? null : highDpiMode.getJCOInstance());
+            retObjectSetHighDpiMode = classType.Invoke("SetHighDpiMode", highDpiMode == null ? null : highDpiMode.getJCOInstance());
+            return (boolean)retObjectSetHighDpiMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetHighDpiMode != null ? retObjectSetHighDpiMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +200,13 @@ public class Application extends NetObject  {
 
     public static boolean SetSuspendState(PowerState state, boolean force, boolean disableWakeEvent) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSetSuspendState = null;
         try {
-            return (boolean)classType.Invoke("SetSuspendState", state == null ? null : state.getJCOInstance(), force, disableWakeEvent);
+            retObjectSetSuspendState = classType.Invoke("SetSuspendState", state == null ? null : state.getJCOInstance(), force, disableWakeEvent);
+            return (boolean)retObjectSetSuspendState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetSuspendState != null ? retObjectSetSuspendState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +214,14 @@ public class Application extends NetObject  {
 
     public static ApartmentState OleRequired() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOleRequired = null;
         try {
-            JCObject objOleRequired = (JCObject)classType.Invoke("OleRequired");
+            retObjectOleRequired = classType.Invoke("OleRequired");
+            JCObject objOleRequired = (JCObject)retObjectOleRequired;
             return new ApartmentState(objOleRequired);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOleRequired != null ? retObjectOleRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +229,7 @@ public class Application extends NetObject  {
 
     public static void AddMessageFilter(IMessageFilter value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddMessageFilter", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -223,7 +239,7 @@ public class Application extends NetObject  {
 
     public static void DoEvents() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DoEvents");
         } catch (JCNativeException jcne) {
@@ -233,7 +249,7 @@ public class Application extends NetObject  {
 
     public static void EnableVisualStyles() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("EnableVisualStyles");
         } catch (JCNativeException jcne) {
@@ -243,7 +259,7 @@ public class Application extends NetObject  {
 
     public static void Exit() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Exit");
         } catch (JCNativeException jcne) {
@@ -253,7 +269,7 @@ public class Application extends NetObject  {
 
     public static void Exit(CancelEventArgs e) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Exit", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -263,7 +279,7 @@ public class Application extends NetObject  {
 
     public static void ExitThread() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ExitThread");
         } catch (JCNativeException jcne) {
@@ -273,7 +289,7 @@ public class Application extends NetObject  {
 
     public static void OnThreadException(NetException t) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("OnThreadException", t == null ? null : t.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -283,7 +299,7 @@ public class Application extends NetObject  {
 
     public static void RaiseIdle(EventArgs e) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RaiseIdle", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -293,7 +309,7 @@ public class Application extends NetObject  {
 
     public static void RemoveMessageFilter(IMessageFilter value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveMessageFilter", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -303,7 +319,7 @@ public class Application extends NetObject  {
 
     public static void Restart() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.NullReferenceException, system.ObjectDisposedException, system.AggregateException, system.componentmodel.Win32Exception, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Restart");
         } catch (JCNativeException jcne) {
@@ -313,7 +329,7 @@ public class Application extends NetObject  {
 
     public static void Run() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.MulticastNotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Run");
         } catch (JCNativeException jcne) {
@@ -323,7 +339,7 @@ public class Application extends NetObject  {
 
     public static void Run(ApplicationContext context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Run", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -333,7 +349,7 @@ public class Application extends NetObject  {
 
     public static void Run(Form mainForm) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.MulticastNotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Run", mainForm == null ? null : mainForm.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -343,7 +359,7 @@ public class Application extends NetObject  {
 
     public static void SetCompatibleTextRenderingDefault(boolean defaultValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCompatibleTextRenderingDefault", defaultValue);
         } catch (JCNativeException jcne) {
@@ -353,7 +369,7 @@ public class Application extends NetObject  {
 
     public static void SetDefaultFont(Font font) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetDefaultFont", font == null ? null : font.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -363,7 +379,7 @@ public class Application extends NetObject  {
 
     public static void SetUnhandledExceptionMode(UnhandledExceptionMode mode, boolean threadScope) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetUnhandledExceptionMode", mode == null ? null : mode.getJCOInstance(), threadScope);
         } catch (JCNativeException jcne) {
@@ -373,7 +389,7 @@ public class Application extends NetObject  {
 
     public static void SetUnhandledExceptionMode(UnhandledExceptionMode mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetUnhandledExceptionMode", mode == null ? null : mode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -383,7 +399,7 @@ public class Application extends NetObject  {
 
     public static void UnregisterMessageLoop() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("UnregisterMessageLoop");
         } catch (JCNativeException jcne) {
@@ -397,9 +413,13 @@ public class Application extends NetObject  {
     
     public static boolean getAllowQuit() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAllowQuit = null;
         try {
-            return (boolean)classType.Get("AllowQuit");
+            retObjectAllowQuit = classType.Get("AllowQuit");
+            return (boolean)retObjectAllowQuit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowQuit != null ? retObjectAllowQuit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,9 +427,13 @@ public class Application extends NetObject  {
 
     public static boolean getMessageLoop() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMessageLoop = null;
         try {
-            return (boolean)classType.Get("MessageLoop");
+            retObjectMessageLoop = classType.Get("MessageLoop");
+            return (boolean)retObjectMessageLoop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMessageLoop != null ? retObjectMessageLoop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,9 +441,13 @@ public class Application extends NetObject  {
 
     public static boolean getRenderWithVisualStyles() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRenderWithVisualStyles = null;
         try {
-            return (boolean)classType.Get("RenderWithVisualStyles");
+            retObjectRenderWithVisualStyles = classType.Get("RenderWithVisualStyles");
+            return (boolean)retObjectRenderWithVisualStyles;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRenderWithVisualStyles != null ? retObjectRenderWithVisualStyles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,9 +455,13 @@ public class Application extends NetObject  {
 
     public static boolean getUseVisualStyles() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUseVisualStyles = null;
         try {
-            return (boolean)classType.Get("UseVisualStyles");
+            retObjectUseVisualStyles = classType.Get("UseVisualStyles");
+            return (boolean)retObjectUseVisualStyles;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseVisualStyles != null ? retObjectUseVisualStyles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,7 +469,7 @@ public class Application extends NetObject  {
 
     public static void setUseVisualStyles(boolean UseVisualStyles) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("UseVisualStyles", UseVisualStyles);
         } catch (JCNativeException jcne) {
@@ -447,9 +479,13 @@ public class Application extends NetObject  {
 
     public static boolean getUseWaitCursor() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUseWaitCursor = null;
         try {
-            return (boolean)classType.Get("UseWaitCursor");
+            retObjectUseWaitCursor = classType.Get("UseWaitCursor");
+            return (boolean)retObjectUseWaitCursor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseWaitCursor != null ? retObjectUseWaitCursor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,7 +493,7 @@ public class Application extends NetObject  {
 
     public static void setUseWaitCursor(boolean UseWaitCursor) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("UseWaitCursor", UseWaitCursor);
         } catch (JCNativeException jcne) {
@@ -467,10 +503,14 @@ public class Application extends NetObject  {
 
     public static RegistryKey getCommonAppDataRegistry() throws Throwable, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.OutOfMemoryException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.RankException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.FormatException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCommonAppDataRegistry = null;
         try {
-            JCObject val = (JCObject)classType.Get("CommonAppDataRegistry");
+            retObjectCommonAppDataRegistry = classType.Get("CommonAppDataRegistry");
+            JCObject val = (JCObject)retObjectCommonAppDataRegistry;
             return new RegistryKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommonAppDataRegistry != null ? retObjectCommonAppDataRegistry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -478,10 +518,14 @@ public class Application extends NetObject  {
 
     public static RegistryKey getUserAppDataRegistry() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.OutOfMemoryException, system.FormatException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.ArgumentNullException, system.RankException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUserAppDataRegistry = null;
         try {
-            JCObject val = (JCObject)classType.Get("UserAppDataRegistry");
+            retObjectUserAppDataRegistry = classType.Get("UserAppDataRegistry");
+            JCObject val = (JCObject)retObjectUserAppDataRegistry;
             return new RegistryKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserAppDataRegistry != null ? retObjectUserAppDataRegistry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -489,10 +533,14 @@ public class Application extends NetObject  {
 
     public static CultureInfo getCurrentCulture() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentCulture = null;
         try {
-            JCObject val = (JCObject)classType.Get("CurrentCulture");
+            retObjectCurrentCulture = classType.Get("CurrentCulture");
+            JCObject val = (JCObject)retObjectCurrentCulture;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentCulture != null ? retObjectCurrentCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -500,7 +548,7 @@ public class Application extends NetObject  {
 
     public static void setCurrentCulture(CultureInfo CurrentCulture) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("CurrentCulture", CurrentCulture == null ? null : CurrentCulture.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -510,9 +558,13 @@ public class Application extends NetObject  {
 
     public static java.lang.String getCommonAppDataPath() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.io.FileNotFoundException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCommonAppDataPath = null;
         try {
-            return (java.lang.String)classType.Get("CommonAppDataPath");
+            retObjectCommonAppDataPath = classType.Get("CommonAppDataPath");
+            return (java.lang.String)retObjectCommonAppDataPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCommonAppDataPath != null ? retObjectCommonAppDataPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -520,9 +572,13 @@ public class Application extends NetObject  {
 
     public static java.lang.String getCompanyName() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompanyName = null;
         try {
-            return (java.lang.String)classType.Get("CompanyName");
+            retObjectCompanyName = classType.Get("CompanyName");
+            return (java.lang.String)retObjectCompanyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCompanyName != null ? retObjectCompanyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -530,9 +586,13 @@ public class Application extends NetObject  {
 
     public static java.lang.String getExecutablePath() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExecutablePath = null;
         try {
-            return (java.lang.String)classType.Get("ExecutablePath");
+            retObjectExecutablePath = classType.Get("ExecutablePath");
+            return (java.lang.String)retObjectExecutablePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExecutablePath != null ? retObjectExecutablePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -540,9 +600,13 @@ public class Application extends NetObject  {
 
     public static java.lang.String getLocalUserAppDataPath() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.io.FileNotFoundException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLocalUserAppDataPath = null;
         try {
-            return (java.lang.String)classType.Get("LocalUserAppDataPath");
+            retObjectLocalUserAppDataPath = classType.Get("LocalUserAppDataPath");
+            return (java.lang.String)retObjectLocalUserAppDataPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLocalUserAppDataPath != null ? retObjectLocalUserAppDataPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -550,9 +614,13 @@ public class Application extends NetObject  {
 
     public static java.lang.String getProductName() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProductName = null;
         try {
-            return (java.lang.String)classType.Get("ProductName");
+            retObjectProductName = classType.Get("ProductName");
+            return (java.lang.String)retObjectProductName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProductName != null ? retObjectProductName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -560,9 +628,13 @@ public class Application extends NetObject  {
 
     public static java.lang.String getProductVersion() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProductVersion = null;
         try {
-            return (java.lang.String)classType.Get("ProductVersion");
+            retObjectProductVersion = classType.Get("ProductVersion");
+            return (java.lang.String)retObjectProductVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProductVersion != null ? retObjectProductVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -570,9 +642,13 @@ public class Application extends NetObject  {
 
     public static java.lang.String getSafeTopLevelCaptionFormat() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSafeTopLevelCaptionFormat = null;
         try {
-            return (java.lang.String)classType.Get("SafeTopLevelCaptionFormat");
+            retObjectSafeTopLevelCaptionFormat = classType.Get("SafeTopLevelCaptionFormat");
+            return (java.lang.String)retObjectSafeTopLevelCaptionFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSafeTopLevelCaptionFormat != null ? retObjectSafeTopLevelCaptionFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -580,7 +656,7 @@ public class Application extends NetObject  {
 
     public static void setSafeTopLevelCaptionFormat(java.lang.String SafeTopLevelCaptionFormat) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("SafeTopLevelCaptionFormat", SafeTopLevelCaptionFormat);
         } catch (JCNativeException jcne) {
@@ -590,9 +666,13 @@ public class Application extends NetObject  {
 
     public static java.lang.String getStartupPath() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStartupPath = null;
         try {
-            return (java.lang.String)classType.Get("StartupPath");
+            retObjectStartupPath = classType.Get("StartupPath");
+            return (java.lang.String)retObjectStartupPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStartupPath != null ? retObjectStartupPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -600,9 +680,13 @@ public class Application extends NetObject  {
 
     public static java.lang.String getUserAppDataPath() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.io.FileNotFoundException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUserAppDataPath = null;
         try {
-            return (java.lang.String)classType.Get("UserAppDataPath");
+            retObjectUserAppDataPath = classType.Get("UserAppDataPath");
+            return (java.lang.String)retObjectUserAppDataPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserAppDataPath != null ? retObjectUserAppDataPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -610,10 +694,14 @@ public class Application extends NetObject  {
 
     public static FormCollection getOpenForms() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenForms = null;
         try {
-            JCObject val = (JCObject)classType.Get("OpenForms");
+            retObjectOpenForms = classType.Get("OpenForms");
+            JCObject val = (JCObject)retObjectOpenForms;
             return new FormCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenForms != null ? retObjectOpenForms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -621,10 +709,14 @@ public class Application extends NetObject  {
 
     public static HighDpiMode getHighDpiMode() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHighDpiMode = null;
         try {
-            JCObject val = (JCObject)classType.Get("HighDpiMode");
+            retObjectHighDpiMode = classType.Get("HighDpiMode");
+            JCObject val = (JCObject)retObjectHighDpiMode;
             return new HighDpiMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHighDpiMode != null ? retObjectHighDpiMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -632,10 +724,14 @@ public class Application extends NetObject  {
 
     public static InputLanguage getCurrentInputLanguage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentInputLanguage = null;
         try {
-            JCObject val = (JCObject)classType.Get("CurrentInputLanguage");
+            retObjectCurrentInputLanguage = classType.Get("CurrentInputLanguage");
+            JCObject val = (JCObject)retObjectCurrentInputLanguage;
             return new InputLanguage(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentInputLanguage != null ? retObjectCurrentInputLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -643,7 +739,7 @@ public class Application extends NetObject  {
 
     public static void setCurrentInputLanguage(InputLanguage CurrentInputLanguage) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("CurrentInputLanguage", CurrentInputLanguage == null ? null : CurrentInputLanguage.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -653,10 +749,14 @@ public class Application extends NetObject  {
 
     public static VisualStyleState getVisualStyleState() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVisualStyleState = null;
         try {
-            JCObject val = (JCObject)classType.Get("VisualStyleState");
+            retObjectVisualStyleState = classType.Get("VisualStyleState");
+            JCObject val = (JCObject)retObjectVisualStyleState;
             return new VisualStyleState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisualStyleState != null ? retObjectVisualStyleState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -664,7 +764,7 @@ public class Application extends NetObject  {
 
     public static void setVisualStyleState(VisualStyleState VisualStyleState) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("VisualStyleState", VisualStyleState == null ? null : VisualStyleState.getJCOInstance());
         } catch (JCNativeException jcne) {

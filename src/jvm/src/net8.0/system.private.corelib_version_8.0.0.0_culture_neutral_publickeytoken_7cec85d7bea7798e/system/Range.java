@@ -168,9 +168,13 @@ public class Range extends ValueType  {
     
     public boolean Equals(Range other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class Range extends ValueType  {
 
     public static Range EndAt(Index end) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEndAt = null;
         try {
-            JCObject objEndAt = (JCObject)classType.Invoke("EndAt", end == null ? null : end.getJCOInstance());
+            retObjectEndAt = classType.Invoke("EndAt", end == null ? null : end.getJCOInstance());
+            JCObject objEndAt = (JCObject)retObjectEndAt;
             return new Range(objEndAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndAt != null ? retObjectEndAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +197,14 @@ public class Range extends ValueType  {
 
     public static Range StartAt(Index start) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStartAt = null;
         try {
-            JCObject objStartAt = (JCObject)classType.Invoke("StartAt", start == null ? null : start.getJCOInstance());
+            retObjectStartAt = classType.Invoke("StartAt", start == null ? null : start.getJCOInstance());
+            JCObject objStartAt = (JCObject)retObjectStartAt;
             return new Range(objStartAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartAt != null ? retObjectStartAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +216,14 @@ public class Range extends ValueType  {
     
     public Index getEnd() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("End");
+            retObjectEnd = classInstance.Get("End");
+            JCObject val = (JCObject)retObjectEnd;
             return new Index(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnd != null ? retObjectEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +231,14 @@ public class Range extends ValueType  {
 
     public Index getStart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStart = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Start");
+            retObjectStart = classInstance.Get("Start");
+            JCObject val = (JCObject)retObjectStart;
             return new Index(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStart != null ? retObjectStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +246,14 @@ public class Range extends ValueType  {
 
     public static Range getAll() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAll = null;
         try {
-            JCObject val = (JCObject)classType.Get("All");
+            retObjectAll = classType.Get("All");
+            JCObject val = (JCObject)retObjectAll;
             return new Range(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAll != null ? retObjectAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

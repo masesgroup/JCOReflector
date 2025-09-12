@@ -157,10 +157,14 @@ public class CallSite extends NetObject  {
     
     public static CallSite Create(NetType delegateType, CallSiteBinder binder) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", delegateType == null ? null : delegateType.getJCOInstance(), binder == null ? null : binder.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", delegateType == null ? null : delegateType.getJCOInstance(), binder == null ? null : binder.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new CallSite(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class CallSite extends NetObject  {
     
     public CallSiteBinder getBinder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Binder");
+            retObjectBinder = classInstance.Get("Binder");
+            JCObject val = (JCObject)retObjectBinder;
             return new CallSiteBinder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBinder != null ? retObjectBinder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -164,10 +164,14 @@ public class AssociationSetEnd extends MetadataItem  {
     
     public AssociationEndMember getCorrespondingAssociationEndMember() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCorrespondingAssociationEndMember = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CorrespondingAssociationEndMember");
+            retObjectCorrespondingAssociationEndMember = classInstance.Get("CorrespondingAssociationEndMember");
+            JCObject val = (JCObject)retObjectCorrespondingAssociationEndMember;
             return new AssociationEndMember(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCorrespondingAssociationEndMember != null ? retObjectCorrespondingAssociationEndMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class AssociationSetEnd extends MetadataItem  {
 
     public AssociationSet getParentAssociationSet() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParentAssociationSet = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParentAssociationSet");
+            retObjectParentAssociationSet = classInstance.Get("ParentAssociationSet");
+            JCObject val = (JCObject)retObjectParentAssociationSet;
             return new AssociationSet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParentAssociationSet != null ? retObjectParentAssociationSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,14 @@ public class AssociationSetEnd extends MetadataItem  {
 
     public EntitySet getEntitySet() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntitySet = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EntitySet");
+            retObjectEntitySet = classInstance.Get("EntitySet");
+            JCObject val = (JCObject)retObjectEntitySet;
             return new EntitySet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntitySet != null ? retObjectEntitySet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +209,13 @@ public class AssociationSetEnd extends MetadataItem  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +223,13 @@ public class AssociationSetEnd extends MetadataItem  {
 
     public java.lang.String getRole() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRole = null;
         try {
-            return (java.lang.String)classInstance.Get("Role");
+            retObjectRole = classInstance.Get("Role");
+            return (java.lang.String)retObjectRole;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRole != null ? retObjectRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

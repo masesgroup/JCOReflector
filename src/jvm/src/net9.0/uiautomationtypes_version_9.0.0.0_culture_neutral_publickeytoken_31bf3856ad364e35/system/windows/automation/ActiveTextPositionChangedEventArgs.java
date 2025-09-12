@@ -172,10 +172,14 @@ public class ActiveTextPositionChangedEventArgs extends AutomationEventArgs  {
     
     public ITextRangeProvider getTextRange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextRange = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextRange");
+            retObjectTextRange = classInstance.Get("TextRange");
+            JCObject val = (JCObject)retObjectTextRange;
             return new ITextRangeProviderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextRange != null ? retObjectTextRange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +187,7 @@ public class ActiveTextPositionChangedEventArgs extends AutomationEventArgs  {
 
     public void setTextRange(ITextRangeProvider TextRange) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextRange", TextRange == null ? null : TextRange.getJCOInstance());
         } catch (JCNativeException jcne) {

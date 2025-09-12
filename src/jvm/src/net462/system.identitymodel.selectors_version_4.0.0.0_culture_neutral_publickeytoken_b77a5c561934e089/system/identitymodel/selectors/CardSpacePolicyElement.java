@@ -161,9 +161,13 @@ public class CardSpacePolicyElement extends NetObject  {
     
     public boolean getIsManagedIssuer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsManagedIssuer = null;
         try {
-            return (boolean)classInstance.Get("IsManagedIssuer");
+            retObjectIsManagedIssuer = classInstance.Get("IsManagedIssuer");
+            return (boolean)retObjectIsManagedIssuer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsManagedIssuer != null ? retObjectIsManagedIssuer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class CardSpacePolicyElement extends NetObject  {
 
     public void setIsManagedIssuer(boolean IsManagedIssuer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsManagedIssuer", IsManagedIssuer);
         } catch (JCNativeException jcne) {
@@ -181,9 +185,19 @@ public class CardSpacePolicyElement extends NetObject  {
 
     public int getPolicyNoticeVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPolicyNoticeVersion = null;
         try {
-            return (int)classInstance.Get("PolicyNoticeVersion");
+            retObjectPolicyNoticeVersion = classInstance.Get("PolicyNoticeVersion");
+            return (int)retObjectPolicyNoticeVersion;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPolicyNoticeVersionNumber = (java.lang.Number)retObjectPolicyNoticeVersion;
+                return retObjectPolicyNoticeVersionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPolicyNoticeVersion != null ? retObjectPolicyNoticeVersion.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +205,7 @@ public class CardSpacePolicyElement extends NetObject  {
 
     public void setPolicyNoticeVersion(int PolicyNoticeVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PolicyNoticeVersion", PolicyNoticeVersion);
         } catch (JCNativeException jcne) {
@@ -201,10 +215,14 @@ public class CardSpacePolicyElement extends NetObject  {
 
     public Uri getPolicyNoticeLink() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPolicyNoticeLink = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PolicyNoticeLink");
+            retObjectPolicyNoticeLink = classInstance.Get("PolicyNoticeLink");
+            JCObject val = (JCObject)retObjectPolicyNoticeLink;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPolicyNoticeLink != null ? retObjectPolicyNoticeLink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +230,7 @@ public class CardSpacePolicyElement extends NetObject  {
 
     public void setPolicyNoticeLink(Uri PolicyNoticeLink) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PolicyNoticeLink", PolicyNoticeLink == null ? null : PolicyNoticeLink.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -222,10 +240,14 @@ public class CardSpacePolicyElement extends NetObject  {
 
     public XmlElement getIssuer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Issuer");
+            retObjectIssuer = classInstance.Get("Issuer");
+            JCObject val = (JCObject)retObjectIssuer;
             return new XmlElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuer != null ? retObjectIssuer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +255,7 @@ public class CardSpacePolicyElement extends NetObject  {
 
     public void setIssuer(XmlElement Issuer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Issuer", Issuer == null ? null : Issuer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,10 +265,14 @@ public class CardSpacePolicyElement extends NetObject  {
 
     public XmlElement getTarget() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Target");
+            retObjectTarget = classInstance.Get("Target");
+            JCObject val = (JCObject)retObjectTarget;
             return new XmlElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTarget != null ? retObjectTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,7 +280,7 @@ public class CardSpacePolicyElement extends NetObject  {
 
     public void setTarget(XmlElement Target) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Target", Target == null ? null : Target.getJCOInstance());
         } catch (JCNativeException jcne) {

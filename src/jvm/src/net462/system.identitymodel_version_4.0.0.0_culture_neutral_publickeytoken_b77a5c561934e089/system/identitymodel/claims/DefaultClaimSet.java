@@ -177,9 +177,13 @@ public class DefaultClaimSet extends ClaimSet  {
     
     public boolean ContainsClaim(Claim claim) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsClaim = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsClaim", claim == null ? null : claim.getJCOInstance());
+            retObjectContainsClaim = classInstance.Invoke("ContainsClaim", claim == null ? null : claim.getJCOInstance());
+            return (boolean)retObjectContainsClaim;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsClaim != null ? retObjectContainsClaim.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

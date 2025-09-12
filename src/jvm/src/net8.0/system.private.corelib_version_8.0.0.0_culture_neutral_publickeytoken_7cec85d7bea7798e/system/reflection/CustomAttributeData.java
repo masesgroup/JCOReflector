@@ -160,10 +160,14 @@ public class CustomAttributeData extends NetObject  {
     
     public ConstructorInfo getConstructor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConstructor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Constructor");
+            retObjectConstructor = classInstance.Get("Constructor");
+            JCObject val = (JCObject)retObjectConstructor;
             return new ConstructorInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConstructor != null ? retObjectConstructor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class CustomAttributeData extends NetObject  {
 
     public NetType getAttributeType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributeType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AttributeType");
+            retObjectAttributeType = classInstance.Get("AttributeType");
+            JCObject val = (JCObject)retObjectAttributeType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributeType != null ? retObjectAttributeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

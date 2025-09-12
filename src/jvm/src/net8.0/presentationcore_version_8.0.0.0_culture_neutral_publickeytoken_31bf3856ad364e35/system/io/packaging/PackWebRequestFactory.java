@@ -169,7 +169,7 @@ public class PackWebRequestFactory extends NetObject implements system.net.IWebR
      */
     @Deprecated 
     public WebRequest Create(Uri uri) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWebRequestCreate to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWebRequestCreate to obtain the full interface.");
     }
 
 

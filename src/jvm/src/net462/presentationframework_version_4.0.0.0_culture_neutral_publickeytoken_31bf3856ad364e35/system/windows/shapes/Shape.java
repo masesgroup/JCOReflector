@@ -165,9 +165,19 @@ public class Shape extends FrameworkElement  {
     
     public double getStrokeDashOffset() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrokeDashOffset = null;
         try {
-            return (double)classInstance.Get("StrokeDashOffset");
+            retObjectStrokeDashOffset = classInstance.Get("StrokeDashOffset");
+            return (double)retObjectStrokeDashOffset;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStrokeDashOffsetNumber = (java.lang.Number)retObjectStrokeDashOffset;
+                return retObjectStrokeDashOffsetNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectStrokeDashOffset != null ? retObjectStrokeDashOffset.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +185,7 @@ public class Shape extends FrameworkElement  {
 
     public void setStrokeDashOffset(double StrokeDashOffset) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StrokeDashOffset", StrokeDashOffset);
         } catch (JCNativeException jcne) {
@@ -185,9 +195,19 @@ public class Shape extends FrameworkElement  {
 
     public double getStrokeMiterLimit() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrokeMiterLimit = null;
         try {
-            return (double)classInstance.Get("StrokeMiterLimit");
+            retObjectStrokeMiterLimit = classInstance.Get("StrokeMiterLimit");
+            return (double)retObjectStrokeMiterLimit;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStrokeMiterLimitNumber = (java.lang.Number)retObjectStrokeMiterLimit;
+                return retObjectStrokeMiterLimitNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectStrokeMiterLimit != null ? retObjectStrokeMiterLimit.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +215,7 @@ public class Shape extends FrameworkElement  {
 
     public void setStrokeMiterLimit(double StrokeMiterLimit) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StrokeMiterLimit", StrokeMiterLimit);
         } catch (JCNativeException jcne) {
@@ -205,9 +225,19 @@ public class Shape extends FrameworkElement  {
 
     public double getStrokeThickness() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrokeThickness = null;
         try {
-            return (double)classInstance.Get("StrokeThickness");
+            retObjectStrokeThickness = classInstance.Get("StrokeThickness");
+            return (double)retObjectStrokeThickness;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStrokeThicknessNumber = (java.lang.Number)retObjectStrokeThickness;
+                return retObjectStrokeThicknessNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectStrokeThickness != null ? retObjectStrokeThickness.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +245,7 @@ public class Shape extends FrameworkElement  {
 
     public void setStrokeThickness(double StrokeThickness) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StrokeThickness", StrokeThickness);
         } catch (JCNativeException jcne) {
@@ -225,10 +255,14 @@ public class Shape extends FrameworkElement  {
 
     public Brush getFill() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFill = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Fill");
+            retObjectFill = classInstance.Get("Fill");
+            JCObject val = (JCObject)retObjectFill;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFill != null ? retObjectFill.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +270,7 @@ public class Shape extends FrameworkElement  {
 
     public void setFill(Brush Fill) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Fill", Fill == null ? null : Fill.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -246,10 +280,14 @@ public class Shape extends FrameworkElement  {
 
     public Brush getStroke() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStroke = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Stroke");
+            retObjectStroke = classInstance.Get("Stroke");
+            JCObject val = (JCObject)retObjectStroke;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStroke != null ? retObjectStroke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +295,7 @@ public class Shape extends FrameworkElement  {
 
     public void setStroke(Brush Stroke) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Stroke", Stroke == null ? null : Stroke.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -267,10 +305,14 @@ public class Shape extends FrameworkElement  {
 
     public DoubleCollection getStrokeDashArray() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrokeDashArray = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StrokeDashArray");
+            retObjectStrokeDashArray = classInstance.Get("StrokeDashArray");
+            JCObject val = (JCObject)retObjectStrokeDashArray;
             return new DoubleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStrokeDashArray != null ? retObjectStrokeDashArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +320,7 @@ public class Shape extends FrameworkElement  {
 
     public void setStrokeDashArray(DoubleCollection StrokeDashArray) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StrokeDashArray", StrokeDashArray == null ? null : StrokeDashArray.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -288,10 +330,14 @@ public class Shape extends FrameworkElement  {
 
     public Geometry getRenderedGeometry() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenderedGeometry = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RenderedGeometry");
+            retObjectRenderedGeometry = classInstance.Get("RenderedGeometry");
+            JCObject val = (JCObject)retObjectRenderedGeometry;
             return new Geometry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRenderedGeometry != null ? retObjectRenderedGeometry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,10 +345,14 @@ public class Shape extends FrameworkElement  {
 
     public PenLineCap getStrokeDashCap() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrokeDashCap = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StrokeDashCap");
+            retObjectStrokeDashCap = classInstance.Get("StrokeDashCap");
+            JCObject val = (JCObject)retObjectStrokeDashCap;
             return new PenLineCap(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStrokeDashCap != null ? retObjectStrokeDashCap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +360,7 @@ public class Shape extends FrameworkElement  {
 
     public void setStrokeDashCap(PenLineCap StrokeDashCap) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StrokeDashCap", StrokeDashCap == null ? null : StrokeDashCap.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -320,10 +370,14 @@ public class Shape extends FrameworkElement  {
 
     public PenLineCap getStrokeEndLineCap() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrokeEndLineCap = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StrokeEndLineCap");
+            retObjectStrokeEndLineCap = classInstance.Get("StrokeEndLineCap");
+            JCObject val = (JCObject)retObjectStrokeEndLineCap;
             return new PenLineCap(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStrokeEndLineCap != null ? retObjectStrokeEndLineCap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,7 +385,7 @@ public class Shape extends FrameworkElement  {
 
     public void setStrokeEndLineCap(PenLineCap StrokeEndLineCap) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StrokeEndLineCap", StrokeEndLineCap == null ? null : StrokeEndLineCap.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -341,10 +395,14 @@ public class Shape extends FrameworkElement  {
 
     public PenLineCap getStrokeStartLineCap() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrokeStartLineCap = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StrokeStartLineCap");
+            retObjectStrokeStartLineCap = classInstance.Get("StrokeStartLineCap");
+            JCObject val = (JCObject)retObjectStrokeStartLineCap;
             return new PenLineCap(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStrokeStartLineCap != null ? retObjectStrokeStartLineCap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,7 +410,7 @@ public class Shape extends FrameworkElement  {
 
     public void setStrokeStartLineCap(PenLineCap StrokeStartLineCap) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StrokeStartLineCap", StrokeStartLineCap == null ? null : StrokeStartLineCap.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -362,10 +420,14 @@ public class Shape extends FrameworkElement  {
 
     public PenLineJoin getStrokeLineJoin() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrokeLineJoin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StrokeLineJoin");
+            retObjectStrokeLineJoin = classInstance.Get("StrokeLineJoin");
+            JCObject val = (JCObject)retObjectStrokeLineJoin;
             return new PenLineJoin(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStrokeLineJoin != null ? retObjectStrokeLineJoin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,7 +435,7 @@ public class Shape extends FrameworkElement  {
 
     public void setStrokeLineJoin(PenLineJoin StrokeLineJoin) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StrokeLineJoin", StrokeLineJoin == null ? null : StrokeLineJoin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -383,10 +445,14 @@ public class Shape extends FrameworkElement  {
 
     public Stretch getStretch() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStretch = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Stretch");
+            retObjectStretch = classInstance.Get("Stretch");
+            JCObject val = (JCObject)retObjectStretch;
             return new Stretch(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStretch != null ? retObjectStretch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,7 +460,7 @@ public class Shape extends FrameworkElement  {
 
     public void setStretch(Stretch Stretch) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Stretch", Stretch == null ? null : Stretch.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -404,10 +470,14 @@ public class Shape extends FrameworkElement  {
 
     public Transform getGeometryTransform() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryTransform = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GeometryTransform");
+            retObjectGeometryTransform = classInstance.Get("GeometryTransform");
+            JCObject val = (JCObject)retObjectGeometryTransform;
             return new Transform(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryTransform != null ? retObjectGeometryTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

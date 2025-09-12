@@ -161,10 +161,14 @@ public class ConnectorEventArgs extends EventArgs  {
     
     public Connector getConnector() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Connector");
+            retObjectConnector = classInstance.Get("Connector");
+            JCObject val = (JCObject)retObjectConnector;
             return new Connector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnector != null ? retObjectConnector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

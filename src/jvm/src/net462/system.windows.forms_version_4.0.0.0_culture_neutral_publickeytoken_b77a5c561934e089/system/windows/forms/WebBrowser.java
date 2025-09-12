@@ -176,9 +176,13 @@ public class WebBrowser extends WebBrowserBase  {
     
     public boolean GoBack() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGoBack = null;
         try {
-            return (boolean)classInstance.Invoke("GoBack");
+            retObjectGoBack = classInstance.Invoke("GoBack");
+            return (boolean)retObjectGoBack;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGoBack != null ? retObjectGoBack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +190,13 @@ public class WebBrowser extends WebBrowserBase  {
 
     public boolean GoForward() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGoForward = null;
         try {
-            return (boolean)classInstance.Invoke("GoForward");
+            retObjectGoForward = classInstance.Invoke("GoForward");
+            return (boolean)retObjectGoForward;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGoForward != null ? retObjectGoForward.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void GoHome() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GoHome");
         } catch (JCNativeException jcne) {
@@ -206,7 +214,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void GoSearch() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GoSearch");
         } catch (JCNativeException jcne) {
@@ -216,7 +224,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void Navigate(java.lang.String urlString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Navigate", urlString);
         } catch (JCNativeException jcne) {
@@ -226,7 +234,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void Navigate(java.lang.String urlString, boolean newWindow) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Navigate", urlString, newWindow);
         } catch (JCNativeException jcne) {
@@ -236,7 +244,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void Navigate(java.lang.String urlString, java.lang.String targetFrameName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Navigate", urlString, targetFrameName);
         } catch (JCNativeException jcne) {
@@ -246,7 +254,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void Navigate(java.lang.String urlString, java.lang.String targetFrameName, byte[] postData, java.lang.String additionalHeaders) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Navigate", urlString, targetFrameName, postData, additionalHeaders);
         } catch (JCNativeException jcne) {
@@ -256,7 +264,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void Navigate(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, java.lang.String dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Navigate", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3);
         } catch (JCNativeException jcne) {
@@ -266,7 +274,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void Navigate(Uri url) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.UriFormatException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Navigate", url == null ? null : url.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -276,7 +284,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void Navigate(Uri url, boolean newWindow) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.InvalidCastException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Navigate", url == null ? null : url.getJCOInstance(), newWindow);
         } catch (JCNativeException jcne) {
@@ -286,7 +294,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void Navigate(Uri url, java.lang.String targetFrameName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.InvalidCastException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Navigate", url == null ? null : url.getJCOInstance(), targetFrameName);
         } catch (JCNativeException jcne) {
@@ -296,7 +304,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void Navigate(Uri url, java.lang.String targetFrameName, byte[] postData, java.lang.String additionalHeaders) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.InvalidCastException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Navigate", url == null ? null : url.getJCOInstance(), targetFrameName, postData, additionalHeaders);
         } catch (JCNativeException jcne) {
@@ -306,7 +314,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void Navigate(Uri dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, java.lang.String dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.InvalidCastException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Navigate", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut(), dupParam3);
         } catch (JCNativeException jcne) {
@@ -316,7 +324,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void Print() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Print");
         } catch (JCNativeException jcne) {
@@ -326,7 +334,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void Refresh() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.reflection.TargetInvocationException, system.ArgumentException, system.UriFormatException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Refresh");
         } catch (JCNativeException jcne) {
@@ -336,7 +344,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void Refresh(WebBrowserRefreshOption opt) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.reflection.TargetInvocationException, system.ArgumentException, system.UriFormatException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Refresh", opt == null ? null : opt.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -346,7 +354,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void ShowPageSetupDialog() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowPageSetupDialog");
         } catch (JCNativeException jcne) {
@@ -356,7 +364,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void ShowPrintDialog() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowPrintDialog");
         } catch (JCNativeException jcne) {
@@ -366,7 +374,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void ShowPrintPreviewDialog() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowPrintPreviewDialog");
         } catch (JCNativeException jcne) {
@@ -376,7 +384,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void ShowPropertiesDialog() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowPropertiesDialog");
         } catch (JCNativeException jcne) {
@@ -386,7 +394,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void ShowSaveAsDialog() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowSaveAsDialog");
         } catch (JCNativeException jcne) {
@@ -396,7 +404,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void Stop() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Stop");
         } catch (JCNativeException jcne) {
@@ -410,9 +418,13 @@ public class WebBrowser extends WebBrowserBase  {
     
     public boolean getAllowNavigation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowNavigation = null;
         try {
-            return (boolean)classInstance.Get("AllowNavigation");
+            retObjectAllowNavigation = classInstance.Get("AllowNavigation");
+            return (boolean)retObjectAllowNavigation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowNavigation != null ? retObjectAllowNavigation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,7 +432,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void setAllowNavigation(boolean AllowNavigation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowNavigation", AllowNavigation);
         } catch (JCNativeException jcne) {
@@ -430,9 +442,13 @@ public class WebBrowser extends WebBrowserBase  {
 
     public boolean getAllowWebBrowserDrop() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowWebBrowserDrop = null;
         try {
-            return (boolean)classInstance.Get("AllowWebBrowserDrop");
+            retObjectAllowWebBrowserDrop = classInstance.Get("AllowWebBrowserDrop");
+            return (boolean)retObjectAllowWebBrowserDrop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowWebBrowserDrop != null ? retObjectAllowWebBrowserDrop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -440,7 +456,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void setAllowWebBrowserDrop(boolean AllowWebBrowserDrop) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowWebBrowserDrop", AllowWebBrowserDrop);
         } catch (JCNativeException jcne) {
@@ -450,9 +466,13 @@ public class WebBrowser extends WebBrowserBase  {
 
     public boolean getCanGoBack() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanGoBack = null;
         try {
-            return (boolean)classInstance.Get("CanGoBack");
+            retObjectCanGoBack = classInstance.Get("CanGoBack");
+            return (boolean)retObjectCanGoBack;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanGoBack != null ? retObjectCanGoBack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,9 +480,13 @@ public class WebBrowser extends WebBrowserBase  {
 
     public boolean getCanGoForward() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanGoForward = null;
         try {
-            return (boolean)classInstance.Get("CanGoForward");
+            retObjectCanGoForward = classInstance.Get("CanGoForward");
+            return (boolean)retObjectCanGoForward;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanGoForward != null ? retObjectCanGoForward.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -470,9 +494,13 @@ public class WebBrowser extends WebBrowserBase  {
 
     public boolean getIsBusy() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.MemberAccessException, system.UriFormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBusy = null;
         try {
-            return (boolean)classInstance.Get("IsBusy");
+            retObjectIsBusy = classInstance.Get("IsBusy");
+            return (boolean)retObjectIsBusy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBusy != null ? retObjectIsBusy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -480,9 +508,13 @@ public class WebBrowser extends WebBrowserBase  {
 
     public boolean getIsOffline() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOffline = null;
         try {
-            return (boolean)classInstance.Get("IsOffline");
+            retObjectIsOffline = classInstance.Get("IsOffline");
+            return (boolean)retObjectIsOffline;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOffline != null ? retObjectIsOffline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -490,9 +522,13 @@ public class WebBrowser extends WebBrowserBase  {
 
     public boolean getIsWebBrowserContextMenuEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsWebBrowserContextMenuEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsWebBrowserContextMenuEnabled");
+            retObjectIsWebBrowserContextMenuEnabled = classInstance.Get("IsWebBrowserContextMenuEnabled");
+            return (boolean)retObjectIsWebBrowserContextMenuEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsWebBrowserContextMenuEnabled != null ? retObjectIsWebBrowserContextMenuEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -500,7 +536,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void setIsWebBrowserContextMenuEnabled(boolean IsWebBrowserContextMenuEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsWebBrowserContextMenuEnabled", IsWebBrowserContextMenuEnabled);
         } catch (JCNativeException jcne) {
@@ -510,9 +546,13 @@ public class WebBrowser extends WebBrowserBase  {
 
     public boolean getScriptErrorsSuppressed() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScriptErrorsSuppressed = null;
         try {
-            return (boolean)classInstance.Get("ScriptErrorsSuppressed");
+            retObjectScriptErrorsSuppressed = classInstance.Get("ScriptErrorsSuppressed");
+            return (boolean)retObjectScriptErrorsSuppressed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectScriptErrorsSuppressed != null ? retObjectScriptErrorsSuppressed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -520,7 +560,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void setScriptErrorsSuppressed(boolean ScriptErrorsSuppressed) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScriptErrorsSuppressed", ScriptErrorsSuppressed);
         } catch (JCNativeException jcne) {
@@ -530,9 +570,13 @@ public class WebBrowser extends WebBrowserBase  {
 
     public boolean getScrollBarsEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScrollBarsEnabled = null;
         try {
-            return (boolean)classInstance.Get("ScrollBarsEnabled");
+            retObjectScrollBarsEnabled = classInstance.Get("ScrollBarsEnabled");
+            return (boolean)retObjectScrollBarsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectScrollBarsEnabled != null ? retObjectScrollBarsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -540,7 +584,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void setScrollBarsEnabled(boolean ScrollBarsEnabled) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScrollBarsEnabled", ScrollBarsEnabled);
         } catch (JCNativeException jcne) {
@@ -550,9 +594,13 @@ public class WebBrowser extends WebBrowserBase  {
 
     public boolean getWebBrowserShortcutsEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebBrowserShortcutsEnabled = null;
         try {
-            return (boolean)classInstance.Get("WebBrowserShortcutsEnabled");
+            retObjectWebBrowserShortcutsEnabled = classInstance.Get("WebBrowserShortcutsEnabled");
+            return (boolean)retObjectWebBrowserShortcutsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWebBrowserShortcutsEnabled != null ? retObjectWebBrowserShortcutsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -560,7 +608,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void setWebBrowserShortcutsEnabled(boolean WebBrowserShortcutsEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WebBrowserShortcutsEnabled", WebBrowserShortcutsEnabled);
         } catch (JCNativeException jcne) {
@@ -570,10 +618,14 @@ public class WebBrowser extends WebBrowserBase  {
 
     public Stream getDocumentStream() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.MemberAccessException, system.UriFormatException, system.NotSupportedException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentStream = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DocumentStream");
+            retObjectDocumentStream = classInstance.Get("DocumentStream");
+            JCObject val = (JCObject)retObjectDocumentStream;
             return new Stream(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocumentStream != null ? retObjectDocumentStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -581,7 +633,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void setDocumentStream(Stream DocumentStream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DocumentStream", DocumentStream == null ? null : DocumentStream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -591,10 +643,14 @@ public class WebBrowser extends WebBrowserBase  {
 
     public NetObject getObjectForScripting() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObjectForScripting = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectForScripting");
+            retObjectObjectForScripting = classInstance.Get("ObjectForScripting");
+            JCObject val = (JCObject)retObjectObjectForScripting;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObjectForScripting != null ? retObjectObjectForScripting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -602,7 +658,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void setObjectForScripting(NetObject ObjectForScripting) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ObjectForScripting", ObjectForScripting == null ? null : ObjectForScripting.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -612,9 +668,13 @@ public class WebBrowser extends WebBrowserBase  {
 
     public java.lang.String getDocumentText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentText = null;
         try {
-            return (java.lang.String)classInstance.Get("DocumentText");
+            retObjectDocumentText = classInstance.Get("DocumentText");
+            return (java.lang.String)retObjectDocumentText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDocumentText != null ? retObjectDocumentText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -622,7 +682,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void setDocumentText(java.lang.String DocumentText) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DocumentText", DocumentText);
         } catch (JCNativeException jcne) {
@@ -632,9 +692,13 @@ public class WebBrowser extends WebBrowserBase  {
 
     public java.lang.String getDocumentTitle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.MemberAccessException, system.UriFormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("DocumentTitle");
+            retObjectDocumentTitle = classInstance.Get("DocumentTitle");
+            return (java.lang.String)retObjectDocumentTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDocumentTitle != null ? retObjectDocumentTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -642,9 +706,13 @@ public class WebBrowser extends WebBrowserBase  {
 
     public java.lang.String getDocumentType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.MemberAccessException, system.UriFormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentType = null;
         try {
-            return (java.lang.String)classInstance.Get("DocumentType");
+            retObjectDocumentType = classInstance.Get("DocumentType");
+            return (java.lang.String)retObjectDocumentType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDocumentType != null ? retObjectDocumentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -652,9 +720,13 @@ public class WebBrowser extends WebBrowserBase  {
 
     public java.lang.String getStatusText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.MemberAccessException, system.UriFormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatusText = null;
         try {
-            return (java.lang.String)classInstance.Get("StatusText");
+            retObjectStatusText = classInstance.Get("StatusText");
+            return (java.lang.String)retObjectStatusText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStatusText != null ? retObjectStatusText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -662,10 +734,14 @@ public class WebBrowser extends WebBrowserBase  {
 
     public Uri getUrl() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.MemberAccessException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUrl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Url");
+            retObjectUrl = classInstance.Get("Url");
+            JCObject val = (JCObject)retObjectUrl;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUrl != null ? retObjectUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -673,7 +749,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void setUrl(Uri Url) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.InvalidCastException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Url", Url == null ? null : Url.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -683,10 +759,14 @@ public class WebBrowser extends WebBrowserBase  {
 
     public Version getVersion() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NullReferenceException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            JCObject val = (JCObject)retObjectVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -694,10 +774,14 @@ public class WebBrowser extends WebBrowserBase  {
 
     public HtmlDocument getDocument() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.MemberAccessException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocument = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Document");
+            retObjectDocument = classInstance.Get("Document");
+            JCObject val = (JCObject)retObjectDocument;
             return new HtmlDocument(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocument != null ? retObjectDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -705,10 +789,14 @@ public class WebBrowser extends WebBrowserBase  {
 
     public Padding getPadding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            JCObject val = (JCObject)retObjectPadding;
             return new Padding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -716,7 +804,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void setPadding(Padding Padding) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -726,10 +814,14 @@ public class WebBrowser extends WebBrowserBase  {
 
     public WebBrowserEncryptionLevel getEncryptionLevel() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.MemberAccessException, system.UriFormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptionLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EncryptionLevel");
+            retObjectEncryptionLevel = classInstance.Get("EncryptionLevel");
+            JCObject val = (JCObject)retObjectEncryptionLevel;
             return new WebBrowserEncryptionLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncryptionLevel != null ? retObjectEncryptionLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -737,10 +829,14 @@ public class WebBrowser extends WebBrowserBase  {
 
     public WebBrowserReadyState getReadyState() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.MemberAccessException, system.UriFormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadyState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReadyState");
+            retObjectReadyState = classInstance.Get("ReadyState");
+            JCObject val = (JCObject)retObjectReadyState;
             return new WebBrowserReadyState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadyState != null ? retObjectReadyState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -753,7 +849,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void addNewWindow(CancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("NewWindow", handler);
         } catch (JCNativeException jcne) {
@@ -763,7 +859,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void removeNewWindow(CancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("NewWindow", handler);
         } catch (JCNativeException jcne) {
@@ -773,7 +869,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void addCanGoBackChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CanGoBackChanged", handler);
         } catch (JCNativeException jcne) {
@@ -783,7 +879,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void removeCanGoBackChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CanGoBackChanged", handler);
         } catch (JCNativeException jcne) {
@@ -793,7 +889,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void addCanGoForwardChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CanGoForwardChanged", handler);
         } catch (JCNativeException jcne) {
@@ -803,7 +899,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void removeCanGoForwardChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CanGoForwardChanged", handler);
         } catch (JCNativeException jcne) {
@@ -813,7 +909,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void addDocumentTitleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DocumentTitleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -823,7 +919,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void removeDocumentTitleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DocumentTitleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -833,7 +929,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void addEncryptionLevelChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("EncryptionLevelChanged", handler);
         } catch (JCNativeException jcne) {
@@ -843,7 +939,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void removeEncryptionLevelChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EncryptionLevelChanged", handler);
         } catch (JCNativeException jcne) {
@@ -853,7 +949,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void addFileDownload(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FileDownload", handler);
         } catch (JCNativeException jcne) {
@@ -863,7 +959,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void removeFileDownload(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FileDownload", handler);
         } catch (JCNativeException jcne) {
@@ -873,7 +969,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void addPaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -883,7 +979,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void removePaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -893,7 +989,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void addStatusTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StatusTextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -903,7 +999,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void removeStatusTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StatusTextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -913,7 +1009,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void addDocumentCompleted(WebBrowserDocumentCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DocumentCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -923,7 +1019,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void removeDocumentCompleted(WebBrowserDocumentCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DocumentCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -933,7 +1029,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void addNavigated(WebBrowserNavigatedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Navigated", handler);
         } catch (JCNativeException jcne) {
@@ -943,7 +1039,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void removeNavigated(WebBrowserNavigatedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Navigated", handler);
         } catch (JCNativeException jcne) {
@@ -953,7 +1049,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void addNavigating(WebBrowserNavigatingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Navigating", handler);
         } catch (JCNativeException jcne) {
@@ -963,7 +1059,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void removeNavigating(WebBrowserNavigatingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Navigating", handler);
         } catch (JCNativeException jcne) {
@@ -973,7 +1069,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void addProgressChanged(WebBrowserProgressChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ProgressChanged", handler);
         } catch (JCNativeException jcne) {
@@ -983,7 +1079,7 @@ public class WebBrowser extends WebBrowserBase  {
 
     public void removeProgressChanged(WebBrowserProgressChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ProgressChanged", handler);
         } catch (JCNativeException jcne) {

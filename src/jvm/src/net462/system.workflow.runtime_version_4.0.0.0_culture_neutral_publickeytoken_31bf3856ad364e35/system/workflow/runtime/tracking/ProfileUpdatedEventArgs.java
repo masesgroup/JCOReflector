@@ -177,10 +177,14 @@ public class ProfileUpdatedEventArgs extends EventArgs  {
     
     public NetType getWorkflowType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowType");
+            retObjectWorkflowType = classInstance.Get("WorkflowType");
+            JCObject val = (JCObject)retObjectWorkflowType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowType != null ? retObjectWorkflowType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class ProfileUpdatedEventArgs extends EventArgs  {
 
     public void setWorkflowType(NetType WorkflowType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WorkflowType", WorkflowType == null ? null : WorkflowType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,10 +202,14 @@ public class ProfileUpdatedEventArgs extends EventArgs  {
 
     public TrackingProfile getTrackingProfile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrackingProfile = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TrackingProfile");
+            retObjectTrackingProfile = classInstance.Get("TrackingProfile");
+            JCObject val = (JCObject)retObjectTrackingProfile;
             return new TrackingProfile(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrackingProfile != null ? retObjectTrackingProfile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +217,7 @@ public class ProfileUpdatedEventArgs extends EventArgs  {
 
     public void setTrackingProfile(TrackingProfile TrackingProfile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TrackingProfile", TrackingProfile == null ? null : TrackingProfile.getJCOInstance());
         } catch (JCNativeException jcne) {

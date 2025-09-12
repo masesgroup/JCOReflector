@@ -157,10 +157,14 @@ public class PipeWriter extends NetObject  {
     
     public static PipeWriter Create(Stream stream, StreamPipeWriterOptions writerOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", stream == null ? null : stream.getJCOInstance(), writerOptions == null ? null : writerOptions.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", stream == null ? null : stream.getJCOInstance(), writerOptions == null ? null : writerOptions.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new PipeWriter(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class PipeWriter extends NetObject  {
 
     public Stream AsStream(boolean leaveOpen) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsStream = null;
         try {
-            JCObject objAsStream = (JCObject)classInstance.Invoke("AsStream", leaveOpen);
+            retObjectAsStream = classInstance.Invoke("AsStream", leaveOpen);
+            JCObject objAsStream = (JCObject)retObjectAsStream;
             return new Stream(objAsStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsStream != null ? retObjectAsStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class PipeWriter extends NetObject  {
 
     public ValueTask CompleteAsync(NetException exception) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompleteAsync = null;
         try {
-            JCObject objCompleteAsync = (JCObject)classInstance.Invoke("CompleteAsync", exception == null ? null : exception.getJCOInstance());
+            retObjectCompleteAsync = classInstance.Invoke("CompleteAsync", exception == null ? null : exception.getJCOInstance());
+            JCObject objCompleteAsync = (JCObject)retObjectCompleteAsync;
             return new ValueTask(objCompleteAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompleteAsync != null ? retObjectCompleteAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +202,7 @@ public class PipeWriter extends NetObject  {
 
     public void Advance(int bytes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Advance", bytes);
         } catch (JCNativeException jcne) {
@@ -200,7 +212,7 @@ public class PipeWriter extends NetObject  {
 
     public void CancelPendingFlush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelPendingFlush");
         } catch (JCNativeException jcne) {
@@ -210,7 +222,7 @@ public class PipeWriter extends NetObject  {
 
     public void Complete(NetException exception) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Complete", exception == null ? null : exception.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -224,9 +236,13 @@ public class PipeWriter extends NetObject  {
     
     public boolean getCanGetUnflushedBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanGetUnflushedBytes = null;
         try {
-            return (boolean)classInstance.Get("CanGetUnflushedBytes");
+            retObjectCanGetUnflushedBytes = classInstance.Get("CanGetUnflushedBytes");
+            return (boolean)retObjectCanGetUnflushedBytes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanGetUnflushedBytes != null ? retObjectCanGetUnflushedBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +250,19 @@ public class PipeWriter extends NetObject  {
 
     public long getUnflushedBytes() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnflushedBytes = null;
         try {
-            return (long)classInstance.Get("UnflushedBytes");
+            retObjectUnflushedBytes = classInstance.Get("UnflushedBytes");
+            return (long)retObjectUnflushedBytes;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUnflushedBytesNumber = (java.lang.Number)retObjectUnflushedBytes;
+                return retObjectUnflushedBytesNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectUnflushedBytes != null ? retObjectUnflushedBytes.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

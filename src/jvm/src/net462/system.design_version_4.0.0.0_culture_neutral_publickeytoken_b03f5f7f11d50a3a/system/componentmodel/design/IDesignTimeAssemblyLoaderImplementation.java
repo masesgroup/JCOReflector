@@ -145,10 +145,14 @@ public class IDesignTimeAssemblyLoaderImplementation extends NetObject implement
     
     public Assembly LoadRuntimeAssembly(AssemblyName targetAssemblyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadRuntimeAssembly = null;
         try {
-            JCObject objLoadRuntimeAssembly = (JCObject)classInstance.Invoke("LoadRuntimeAssembly", targetAssemblyName == null ? null : targetAssemblyName.getJCOInstance());
+            retObjectLoadRuntimeAssembly = classInstance.Invoke("LoadRuntimeAssembly", targetAssemblyName == null ? null : targetAssemblyName.getJCOInstance());
+            JCObject objLoadRuntimeAssembly = (JCObject)retObjectLoadRuntimeAssembly;
             return new Assembly(objLoadRuntimeAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadRuntimeAssembly != null ? retObjectLoadRuntimeAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,9 +160,13 @@ public class IDesignTimeAssemblyLoaderImplementation extends NetObject implement
 
     public java.lang.String GetTargetAssemblyPath(AssemblyName runtimeOrTargetAssemblyName, java.lang.String suggestedAssemblyPath, FrameworkName targetFramework) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTargetAssemblyPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetTargetAssemblyPath", runtimeOrTargetAssemblyName == null ? null : runtimeOrTargetAssemblyName.getJCOInstance(), suggestedAssemblyPath, targetFramework == null ? null : targetFramework.getJCOInstance());
+            retObjectGetTargetAssemblyPath = classInstance.Invoke("GetTargetAssemblyPath", runtimeOrTargetAssemblyName == null ? null : runtimeOrTargetAssemblyName.getJCOInstance(), suggestedAssemblyPath, targetFramework == null ? null : targetFramework.getJCOInstance());
+            return (java.lang.String)retObjectGetTargetAssemblyPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetTargetAssemblyPath != null ? retObjectGetTargetAssemblyPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

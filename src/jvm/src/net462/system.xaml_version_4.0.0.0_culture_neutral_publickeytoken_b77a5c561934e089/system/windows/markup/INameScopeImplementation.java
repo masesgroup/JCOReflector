@@ -142,10 +142,14 @@ public class INameScopeImplementation extends NetObject implements INameScope {
     
     public NetObject FindName(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindName = null;
         try {
-            JCObject objFindName = (JCObject)classInstance.Invoke("FindName", name);
+            retObjectFindName = classInstance.Invoke("FindName", name);
+            JCObject objFindName = (JCObject)retObjectFindName;
             return new NetObject(objFindName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindName != null ? retObjectFindName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,7 +157,7 @@ public class INameScopeImplementation extends NetObject implements INameScope {
 
     public void RegisterName(java.lang.String name, NetObject scopedElement) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterName", name, scopedElement == null ? null : scopedElement.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -163,7 +167,7 @@ public class INameScopeImplementation extends NetObject implements INameScope {
 
     public void UnregisterName(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnregisterName", name);
         } catch (JCNativeException jcne) {

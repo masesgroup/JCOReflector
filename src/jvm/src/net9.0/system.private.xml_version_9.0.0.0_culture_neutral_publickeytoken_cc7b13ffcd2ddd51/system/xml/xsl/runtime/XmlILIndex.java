@@ -157,10 +157,14 @@ public class XmlILIndex extends NetObject  {
     
     public XmlQueryNodeSequence Lookup(java.lang.String key) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLookup = null;
         try {
-            JCObject objLookup = (JCObject)classInstance.Invoke("Lookup", key);
+            retObjectLookup = classInstance.Invoke("Lookup", key);
+            JCObject objLookup = (JCObject)retObjectLookup;
             return new XmlQueryNodeSequence(objLookup);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLookup != null ? retObjectLookup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class XmlILIndex extends NetObject  {
 
     public void Add(java.lang.String key, XPathNavigator navigator) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", key, navigator == null ? null : navigator.getJCOInstance());
         } catch (JCNativeException jcne) {

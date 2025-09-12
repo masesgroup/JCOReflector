@@ -144,7 +144,7 @@ public class IParseTextImplementation extends NetObject implements IParseText {
     
     public void Parse(java.lang.String code, IErrorHandler error) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Parse", code, error == null ? null : error.getJCOInstance());
         } catch (JCNativeException jcne) {

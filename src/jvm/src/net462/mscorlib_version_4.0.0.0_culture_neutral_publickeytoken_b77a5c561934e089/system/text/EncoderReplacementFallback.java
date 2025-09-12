@@ -173,10 +173,14 @@ public class EncoderReplacementFallback extends EncoderFallback  {
     
     public EncoderFallbackBuffer CreateFallbackBuffer() throws Throwable, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateFallbackBuffer = null;
         try {
-            JCObject objCreateFallbackBuffer = (JCObject)classInstance.Invoke("CreateFallbackBuffer");
+            retObjectCreateFallbackBuffer = classInstance.Invoke("CreateFallbackBuffer");
+            JCObject objCreateFallbackBuffer = (JCObject)retObjectCreateFallbackBuffer;
             return new EncoderFallbackBuffer(objCreateFallbackBuffer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFallbackBuffer != null ? retObjectCreateFallbackBuffer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +192,13 @@ public class EncoderReplacementFallback extends EncoderFallback  {
     
     public java.lang.String getDefaultString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultString = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultString");
+            retObjectDefaultString = classInstance.Get("DefaultString");
+            return (java.lang.String)retObjectDefaultString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultString != null ? retObjectDefaultString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

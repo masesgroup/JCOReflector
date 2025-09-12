@@ -159,9 +159,13 @@ public class MessageHeader extends MessageHeaderInfo  {
     
     public boolean IsMessageVersionSupported(MessageVersion messageVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMessageVersionSupported = null;
         try {
-            return (boolean)classInstance.Invoke("IsMessageVersionSupported", messageVersion == null ? null : messageVersion.getJCOInstance());
+            retObjectIsMessageVersionSupported = classInstance.Invoke("IsMessageVersionSupported", messageVersion == null ? null : messageVersion.getJCOInstance());
+            return (boolean)retObjectIsMessageVersionSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsMessageVersionSupported != null ? retObjectIsMessageVersionSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class MessageHeader extends MessageHeaderInfo  {
 
     public static MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateHeader = null;
         try {
-            JCObject objCreateHeader = (JCObject)classType.Invoke("CreateHeader", name, ns, value == null ? null : value.getJCOInstance());
+            retObjectCreateHeader = classType.Invoke("CreateHeader", name, ns, value == null ? null : value.getJCOInstance());
+            JCObject objCreateHeader = (JCObject)retObjectCreateHeader;
             return new MessageHeader(objCreateHeader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHeader != null ? retObjectCreateHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class MessageHeader extends MessageHeaderInfo  {
 
     public static MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, boolean mustUnderstand) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateHeader = null;
         try {
-            JCObject objCreateHeader = (JCObject)classType.Invoke("CreateHeader", name, ns, value == null ? null : value.getJCOInstance(), mustUnderstand);
+            retObjectCreateHeader = classType.Invoke("CreateHeader", name, ns, value == null ? null : value.getJCOInstance(), mustUnderstand);
+            JCObject objCreateHeader = (JCObject)retObjectCreateHeader;
             return new MessageHeader(objCreateHeader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHeader != null ? retObjectCreateHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class MessageHeader extends MessageHeaderInfo  {
 
     public static MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, boolean mustUnderstand, java.lang.String actor) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateHeader = null;
         try {
-            JCObject objCreateHeader = (JCObject)classType.Invoke("CreateHeader", name, ns, value == null ? null : value.getJCOInstance(), mustUnderstand, actor);
+            retObjectCreateHeader = classType.Invoke("CreateHeader", name, ns, value == null ? null : value.getJCOInstance(), mustUnderstand, actor);
+            JCObject objCreateHeader = (JCObject)retObjectCreateHeader;
             return new MessageHeader(objCreateHeader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHeader != null ? retObjectCreateHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class MessageHeader extends MessageHeaderInfo  {
 
     public static MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, boolean mustUnderstand, java.lang.String actor, boolean relay) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.security.SecurityException, system.UriFormatException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateHeader = null;
         try {
-            JCObject objCreateHeader = (JCObject)classType.Invoke("CreateHeader", name, ns, value == null ? null : value.getJCOInstance(), mustUnderstand, actor, relay);
+            retObjectCreateHeader = classType.Invoke("CreateHeader", name, ns, value == null ? null : value.getJCOInstance(), mustUnderstand, actor, relay);
+            JCObject objCreateHeader = (JCObject)retObjectCreateHeader;
             return new MessageHeader(objCreateHeader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHeader != null ? retObjectCreateHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class MessageHeader extends MessageHeaderInfo  {
 
     public static MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, XmlObjectSerializer serializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateHeader = null;
         try {
-            JCObject objCreateHeader = (JCObject)classType.Invoke("CreateHeader", name, ns, value == null ? null : value.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance());
+            retObjectCreateHeader = classType.Invoke("CreateHeader", name, ns, value == null ? null : value.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance());
+            JCObject objCreateHeader = (JCObject)retObjectCreateHeader;
             return new MessageHeader(objCreateHeader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHeader != null ? retObjectCreateHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +248,14 @@ public class MessageHeader extends MessageHeaderInfo  {
 
     public static MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, XmlObjectSerializer serializer, boolean mustUnderstand) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateHeader = null;
         try {
-            JCObject objCreateHeader = (JCObject)classType.Invoke("CreateHeader", name, ns, value == null ? null : value.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance(), mustUnderstand);
+            retObjectCreateHeader = classType.Invoke("CreateHeader", name, ns, value == null ? null : value.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance(), mustUnderstand);
+            JCObject objCreateHeader = (JCObject)retObjectCreateHeader;
             return new MessageHeader(objCreateHeader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHeader != null ? retObjectCreateHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +263,14 @@ public class MessageHeader extends MessageHeaderInfo  {
 
     public static MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, XmlObjectSerializer serializer, boolean mustUnderstand, java.lang.String actor) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateHeader = null;
         try {
-            JCObject objCreateHeader = (JCObject)classType.Invoke("CreateHeader", name, ns, value == null ? null : value.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance(), mustUnderstand, actor);
+            retObjectCreateHeader = classType.Invoke("CreateHeader", name, ns, value == null ? null : value.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance(), mustUnderstand, actor);
+            JCObject objCreateHeader = (JCObject)retObjectCreateHeader;
             return new MessageHeader(objCreateHeader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHeader != null ? retObjectCreateHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +278,14 @@ public class MessageHeader extends MessageHeaderInfo  {
 
     public static MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, XmlObjectSerializer serializer, boolean mustUnderstand, java.lang.String actor, boolean relay) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateHeader = null;
         try {
-            JCObject objCreateHeader = (JCObject)classType.Invoke("CreateHeader", name, ns, value == null ? null : value.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance(), mustUnderstand, actor, relay);
+            retObjectCreateHeader = classType.Invoke("CreateHeader", name, ns, value == null ? null : value.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance(), mustUnderstand, actor, relay);
+            JCObject objCreateHeader = (JCObject)retObjectCreateHeader;
             return new MessageHeader(objCreateHeader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHeader != null ? retObjectCreateHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +293,7 @@ public class MessageHeader extends MessageHeaderInfo  {
 
     public void WriteHeader(XmlDictionaryWriter writer, MessageVersion messageVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteHeader", writer == null ? null : writer.getJCOInstance(), messageVersion == null ? null : messageVersion.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -267,7 +303,7 @@ public class MessageHeader extends MessageHeaderInfo  {
 
     public void WriteHeader(XmlWriter writer, MessageVersion messageVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteHeader", writer == null ? null : writer.getJCOInstance(), messageVersion == null ? null : messageVersion.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -277,7 +313,7 @@ public class MessageHeader extends MessageHeaderInfo  {
 
     public void WriteHeaderContents(XmlDictionaryWriter writer, MessageVersion messageVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteHeaderContents", writer == null ? null : writer.getJCOInstance(), messageVersion == null ? null : messageVersion.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -287,7 +323,7 @@ public class MessageHeader extends MessageHeaderInfo  {
 
     public void WriteStartHeader(XmlDictionaryWriter writer, MessageVersion messageVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartHeader", writer == null ? null : writer.getJCOInstance(), messageVersion == null ? null : messageVersion.getJCOInstance());
         } catch (JCNativeException jcne) {

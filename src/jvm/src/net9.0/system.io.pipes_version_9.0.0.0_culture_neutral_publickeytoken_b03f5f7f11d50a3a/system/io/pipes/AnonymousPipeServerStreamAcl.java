@@ -157,10 +157,14 @@ public class AnonymousPipeServerStreamAcl extends NetObject  {
     
     public static AnonymousPipeServerStream Create(PipeDirection direction, HandleInheritability inheritability, int bufferSize, PipeSecurity pipeSecurity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.threading.LockRecursionException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", direction == null ? null : direction.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance(), bufferSize, pipeSecurity == null ? null : pipeSecurity.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", direction == null ? null : direction.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance(), bufferSize, pipeSecurity == null ? null : pipeSecurity.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new AnonymousPipeServerStream(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

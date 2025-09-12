@@ -163,10 +163,14 @@ public class CompositionBatch extends NetObject  {
     
     public ComposablePart AddExport(Export export) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddExport = null;
         try {
-            JCObject objAddExport = (JCObject)classInstance.Invoke("AddExport", export == null ? null : export.getJCOInstance());
+            retObjectAddExport = classInstance.Invoke("AddExport", export == null ? null : export.getJCOInstance());
+            JCObject objAddExport = (JCObject)retObjectAddExport;
             return new ComposablePart(objAddExport);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddExport != null ? retObjectAddExport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +178,7 @@ public class CompositionBatch extends NetObject  {
 
     public void AddPart(ComposablePart part) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddPart", part == null ? null : part.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -184,7 +188,7 @@ public class CompositionBatch extends NetObject  {
 
     public void RemovePart(ComposablePart part) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemovePart", part == null ? null : part.getJCOInstance());
         } catch (JCNativeException jcne) {

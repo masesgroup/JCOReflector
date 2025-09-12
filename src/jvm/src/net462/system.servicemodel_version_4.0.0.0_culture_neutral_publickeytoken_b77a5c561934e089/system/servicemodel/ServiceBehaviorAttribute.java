@@ -168,9 +168,13 @@ public class ServiceBehaviorAttribute extends Attribute  {
     
     public boolean ShouldSerializeConfigurationName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeConfigurationName = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeConfigurationName");
+            retObjectShouldSerializeConfigurationName = classInstance.Invoke("ShouldSerializeConfigurationName");
+            return (boolean)retObjectShouldSerializeConfigurationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeConfigurationName != null ? retObjectShouldSerializeConfigurationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public boolean ShouldSerializeReleaseServiceInstanceOnTransactionComplete() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeReleaseServiceInstanceOnTransactionComplete = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeReleaseServiceInstanceOnTransactionComplete");
+            retObjectShouldSerializeReleaseServiceInstanceOnTransactionComplete = classInstance.Invoke("ShouldSerializeReleaseServiceInstanceOnTransactionComplete");
+            return (boolean)retObjectShouldSerializeReleaseServiceInstanceOnTransactionComplete;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeReleaseServiceInstanceOnTransactionComplete != null ? retObjectShouldSerializeReleaseServiceInstanceOnTransactionComplete.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +196,13 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public boolean ShouldSerializeTransactionAutoCompleteOnSessionClose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeTransactionAutoCompleteOnSessionClose = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeTransactionAutoCompleteOnSessionClose");
+            retObjectShouldSerializeTransactionAutoCompleteOnSessionClose = classInstance.Invoke("ShouldSerializeTransactionAutoCompleteOnSessionClose");
+            return (boolean)retObjectShouldSerializeTransactionAutoCompleteOnSessionClose;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeTransactionAutoCompleteOnSessionClose != null ? retObjectShouldSerializeTransactionAutoCompleteOnSessionClose.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +210,13 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public boolean ShouldSerializeTransactionIsolationLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeTransactionIsolationLevel = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeTransactionIsolationLevel");
+            retObjectShouldSerializeTransactionIsolationLevel = classInstance.Invoke("ShouldSerializeTransactionIsolationLevel");
+            return (boolean)retObjectShouldSerializeTransactionIsolationLevel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeTransactionIsolationLevel != null ? retObjectShouldSerializeTransactionIsolationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +224,13 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public boolean ShouldSerializeTransactionTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeTransactionTimeout = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeTransactionTimeout");
+            retObjectShouldSerializeTransactionTimeout = classInstance.Invoke("ShouldSerializeTransactionTimeout");
+            return (boolean)retObjectShouldSerializeTransactionTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeTransactionTimeout != null ? retObjectShouldSerializeTransactionTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +238,14 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public NetObject GetWellKnownSingleton() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetWellKnownSingleton = null;
         try {
-            JCObject objGetWellKnownSingleton = (JCObject)classInstance.Invoke("GetWellKnownSingleton");
+            retObjectGetWellKnownSingleton = classInstance.Invoke("GetWellKnownSingleton");
+            JCObject objGetWellKnownSingleton = (JCObject)retObjectGetWellKnownSingleton;
             return new NetObject(objGetWellKnownSingleton);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetWellKnownSingleton != null ? retObjectGetWellKnownSingleton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +253,7 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public void SetWellKnownSingleton(NetObject value) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetWellKnownSingleton", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,7 +267,7 @@ public class ServiceBehaviorAttribute extends Attribute  {
      */
     @Deprecated 
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
     /**
@@ -252,7 +276,7 @@ public class ServiceBehaviorAttribute extends Attribute  {
      */
     @Deprecated 
     public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
 
@@ -261,9 +285,13 @@ public class ServiceBehaviorAttribute extends Attribute  {
     
     public boolean getAutomaticSessionShutdown() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutomaticSessionShutdown = null;
         try {
-            return (boolean)classInstance.Get("AutomaticSessionShutdown");
+            retObjectAutomaticSessionShutdown = classInstance.Get("AutomaticSessionShutdown");
+            return (boolean)retObjectAutomaticSessionShutdown;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutomaticSessionShutdown != null ? retObjectAutomaticSessionShutdown.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +299,7 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public void setAutomaticSessionShutdown(boolean AutomaticSessionShutdown) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutomaticSessionShutdown", AutomaticSessionShutdown);
         } catch (JCNativeException jcne) {
@@ -281,9 +309,13 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public boolean getEnsureOrderedDispatch() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnsureOrderedDispatch = null;
         try {
-            return (boolean)classInstance.Get("EnsureOrderedDispatch");
+            retObjectEnsureOrderedDispatch = classInstance.Get("EnsureOrderedDispatch");
+            return (boolean)retObjectEnsureOrderedDispatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnsureOrderedDispatch != null ? retObjectEnsureOrderedDispatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,7 +323,7 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public void setEnsureOrderedDispatch(boolean EnsureOrderedDispatch) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnsureOrderedDispatch", EnsureOrderedDispatch);
         } catch (JCNativeException jcne) {
@@ -301,9 +333,13 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public boolean getIgnoreExtensionDataObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoreExtensionDataObject = null;
         try {
-            return (boolean)classInstance.Get("IgnoreExtensionDataObject");
+            retObjectIgnoreExtensionDataObject = classInstance.Get("IgnoreExtensionDataObject");
+            return (boolean)retObjectIgnoreExtensionDataObject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreExtensionDataObject != null ? retObjectIgnoreExtensionDataObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,7 +347,7 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public void setIgnoreExtensionDataObject(boolean IgnoreExtensionDataObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnoreExtensionDataObject", IgnoreExtensionDataObject);
         } catch (JCNativeException jcne) {
@@ -321,9 +357,13 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public boolean getIncludeExceptionDetailInFaults() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludeExceptionDetailInFaults = null;
         try {
-            return (boolean)classInstance.Get("IncludeExceptionDetailInFaults");
+            retObjectIncludeExceptionDetailInFaults = classInstance.Get("IncludeExceptionDetailInFaults");
+            return (boolean)retObjectIncludeExceptionDetailInFaults;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIncludeExceptionDetailInFaults != null ? retObjectIncludeExceptionDetailInFaults.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,7 +371,7 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public void setIncludeExceptionDetailInFaults(boolean IncludeExceptionDetailInFaults) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncludeExceptionDetailInFaults", IncludeExceptionDetailInFaults);
         } catch (JCNativeException jcne) {
@@ -341,9 +381,13 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public boolean getReleaseServiceInstanceOnTransactionComplete() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReleaseServiceInstanceOnTransactionComplete = null;
         try {
-            return (boolean)classInstance.Get("ReleaseServiceInstanceOnTransactionComplete");
+            retObjectReleaseServiceInstanceOnTransactionComplete = classInstance.Get("ReleaseServiceInstanceOnTransactionComplete");
+            return (boolean)retObjectReleaseServiceInstanceOnTransactionComplete;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReleaseServiceInstanceOnTransactionComplete != null ? retObjectReleaseServiceInstanceOnTransactionComplete.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,7 +395,7 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public void setReleaseServiceInstanceOnTransactionComplete(boolean ReleaseServiceInstanceOnTransactionComplete) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReleaseServiceInstanceOnTransactionComplete", ReleaseServiceInstanceOnTransactionComplete);
         } catch (JCNativeException jcne) {
@@ -361,9 +405,13 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public boolean getTransactionAutoCompleteOnSessionClose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactionAutoCompleteOnSessionClose = null;
         try {
-            return (boolean)classInstance.Get("TransactionAutoCompleteOnSessionClose");
+            retObjectTransactionAutoCompleteOnSessionClose = classInstance.Get("TransactionAutoCompleteOnSessionClose");
+            return (boolean)retObjectTransactionAutoCompleteOnSessionClose;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTransactionAutoCompleteOnSessionClose != null ? retObjectTransactionAutoCompleteOnSessionClose.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,7 +419,7 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public void setTransactionAutoCompleteOnSessionClose(boolean TransactionAutoCompleteOnSessionClose) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransactionAutoCompleteOnSessionClose", TransactionAutoCompleteOnSessionClose);
         } catch (JCNativeException jcne) {
@@ -381,9 +429,13 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public boolean getUseSynchronizationContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseSynchronizationContext = null;
         try {
-            return (boolean)classInstance.Get("UseSynchronizationContext");
+            retObjectUseSynchronizationContext = classInstance.Get("UseSynchronizationContext");
+            return (boolean)retObjectUseSynchronizationContext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseSynchronizationContext != null ? retObjectUseSynchronizationContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,7 +443,7 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public void setUseSynchronizationContext(boolean UseSynchronizationContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseSynchronizationContext", UseSynchronizationContext);
         } catch (JCNativeException jcne) {
@@ -401,9 +453,13 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public boolean getValidateMustUnderstand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateMustUnderstand = null;
         try {
-            return (boolean)classInstance.Get("ValidateMustUnderstand");
+            retObjectValidateMustUnderstand = classInstance.Get("ValidateMustUnderstand");
+            return (boolean)retObjectValidateMustUnderstand;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValidateMustUnderstand != null ? retObjectValidateMustUnderstand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,7 +467,7 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public void setValidateMustUnderstand(boolean ValidateMustUnderstand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidateMustUnderstand", ValidateMustUnderstand);
         } catch (JCNativeException jcne) {
@@ -421,9 +477,19 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public int getMaxItemsInObjectGraph() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxItemsInObjectGraph = null;
         try {
-            return (int)classInstance.Get("MaxItemsInObjectGraph");
+            retObjectMaxItemsInObjectGraph = classInstance.Get("MaxItemsInObjectGraph");
+            return (int)retObjectMaxItemsInObjectGraph;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxItemsInObjectGraphNumber = (java.lang.Number)retObjectMaxItemsInObjectGraph;
+                return retObjectMaxItemsInObjectGraphNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxItemsInObjectGraph != null ? retObjectMaxItemsInObjectGraph.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,7 +497,7 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public void setMaxItemsInObjectGraph(int MaxItemsInObjectGraph) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxItemsInObjectGraph", MaxItemsInObjectGraph);
         } catch (JCNativeException jcne) {
@@ -441,10 +507,14 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public AddressFilterMode getAddressFilterMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddressFilterMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AddressFilterMode");
+            retObjectAddressFilterMode = classInstance.Get("AddressFilterMode");
+            JCObject val = (JCObject)retObjectAddressFilterMode;
             return new AddressFilterMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddressFilterMode != null ? retObjectAddressFilterMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,7 +522,7 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public void setAddressFilterMode(AddressFilterMode AddressFilterMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AddressFilterMode", AddressFilterMode == null ? null : AddressFilterMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -462,10 +532,14 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public ConcurrencyMode getConcurrencyMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConcurrencyMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConcurrencyMode");
+            retObjectConcurrencyMode = classInstance.Get("ConcurrencyMode");
+            JCObject val = (JCObject)retObjectConcurrencyMode;
             return new ConcurrencyMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConcurrencyMode != null ? retObjectConcurrencyMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -473,7 +547,7 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public void setConcurrencyMode(ConcurrencyMode ConcurrencyMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConcurrencyMode", ConcurrencyMode == null ? null : ConcurrencyMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -483,10 +557,14 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public InstanceContextMode getInstanceContextMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceContextMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstanceContextMode");
+            retObjectInstanceContextMode = classInstance.Get("InstanceContextMode");
+            JCObject val = (JCObject)retObjectInstanceContextMode;
             return new InstanceContextMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceContextMode != null ? retObjectInstanceContextMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -494,7 +572,7 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public void setInstanceContextMode(InstanceContextMode InstanceContextMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstanceContextMode", InstanceContextMode == null ? null : InstanceContextMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -504,9 +582,13 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public java.lang.String getConfigurationName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfigurationName = null;
         try {
-            return (java.lang.String)classInstance.Get("ConfigurationName");
+            retObjectConfigurationName = classInstance.Get("ConfigurationName");
+            return (java.lang.String)retObjectConfigurationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConfigurationName != null ? retObjectConfigurationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -514,7 +596,7 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public void setConfigurationName(java.lang.String ConfigurationName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConfigurationName", ConfigurationName);
         } catch (JCNativeException jcne) {
@@ -524,9 +606,13 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -534,7 +620,7 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -544,9 +630,13 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("Namespace");
+            retObjectNamespace = classInstance.Get("Namespace");
+            return (java.lang.String)retObjectNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespace != null ? retObjectNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -554,7 +644,7 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public void setNamespace(java.lang.String Namespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Namespace", Namespace);
         } catch (JCNativeException jcne) {
@@ -564,9 +654,13 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public java.lang.String getTransactionTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactionTimeout = null;
         try {
-            return (java.lang.String)classInstance.Get("TransactionTimeout");
+            retObjectTransactionTimeout = classInstance.Get("TransactionTimeout");
+            return (java.lang.String)retObjectTransactionTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTransactionTimeout != null ? retObjectTransactionTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -574,7 +668,7 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public void setTransactionTimeout(java.lang.String TransactionTimeout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransactionTimeout", TransactionTimeout);
         } catch (JCNativeException jcne) {
@@ -584,10 +678,14 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public IsolationLevel getTransactionIsolationLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactionIsolationLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransactionIsolationLevel");
+            retObjectTransactionIsolationLevel = classInstance.Get("TransactionIsolationLevel");
+            JCObject val = (JCObject)retObjectTransactionIsolationLevel;
             return new IsolationLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransactionIsolationLevel != null ? retObjectTransactionIsolationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -595,7 +693,7 @@ public class ServiceBehaviorAttribute extends Attribute  {
 
     public void setTransactionIsolationLevel(IsolationLevel TransactionIsolationLevel) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransactionIsolationLevel", TransactionIsolationLevel == null ? null : TransactionIsolationLevel.getJCOInstance());
         } catch (JCNativeException jcne) {

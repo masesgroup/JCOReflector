@@ -170,9 +170,13 @@ public class ConditionalAttribute extends Attribute  {
     
     public java.lang.String getConditionString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConditionString = null;
         try {
-            return (java.lang.String)classInstance.Get("ConditionString");
+            retObjectConditionString = classInstance.Get("ConditionString");
+            return (java.lang.String)retObjectConditionString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConditionString != null ? retObjectConditionString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

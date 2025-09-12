@@ -153,10 +153,14 @@ public class MethodInvoker extends NetObject  {
     
     public NetObject Invoke(NetObject thisob, NetObject[] parameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
-            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", thisob == null ? null : thisob.getJCOInstance(), toObjectFromArray(parameters));
+            retObjectInvoke = classInstance.Invoke("Invoke", thisob == null ? null : thisob.getJCOInstance(), toObjectFromArray(parameters));
+            JCObject objInvoke = (JCObject)retObjectInvoke;
             return new NetObject(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

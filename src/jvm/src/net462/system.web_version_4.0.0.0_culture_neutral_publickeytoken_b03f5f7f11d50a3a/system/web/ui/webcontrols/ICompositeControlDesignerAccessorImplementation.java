@@ -142,7 +142,7 @@ public class ICompositeControlDesignerAccessorImplementation extends NetObject i
     
     public void RecreateChildControls() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RecreateChildControls");
         } catch (JCNativeException jcne) {

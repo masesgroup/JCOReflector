@@ -159,9 +159,19 @@ public class Globals extends NetObject  {
     
     public static int getScriptEngineBuildVersion() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectScriptEngineBuildVersion = null;
         try {
-            return (int)classType.Get("ScriptEngineBuildVersion");
+            retObjectScriptEngineBuildVersion = classType.Get("ScriptEngineBuildVersion");
+            return (int)retObjectScriptEngineBuildVersion;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectScriptEngineBuildVersionNumber = (java.lang.Number)retObjectScriptEngineBuildVersion;
+                return retObjectScriptEngineBuildVersionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectScriptEngineBuildVersion != null ? retObjectScriptEngineBuildVersion.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +179,19 @@ public class Globals extends NetObject  {
 
     public static int getScriptEngineMajorVersion() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectScriptEngineMajorVersion = null;
         try {
-            return (int)classType.Get("ScriptEngineMajorVersion");
+            retObjectScriptEngineMajorVersion = classType.Get("ScriptEngineMajorVersion");
+            return (int)retObjectScriptEngineMajorVersion;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectScriptEngineMajorVersionNumber = (java.lang.Number)retObjectScriptEngineMajorVersion;
+                return retObjectScriptEngineMajorVersionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectScriptEngineMajorVersion != null ? retObjectScriptEngineMajorVersion.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +199,19 @@ public class Globals extends NetObject  {
 
     public static int getScriptEngineMinorVersion() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectScriptEngineMinorVersion = null;
         try {
-            return (int)classType.Get("ScriptEngineMinorVersion");
+            retObjectScriptEngineMinorVersion = classType.Get("ScriptEngineMinorVersion");
+            return (int)retObjectScriptEngineMinorVersion;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectScriptEngineMinorVersionNumber = (java.lang.Number)retObjectScriptEngineMinorVersion;
+                return retObjectScriptEngineMinorVersionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectScriptEngineMinorVersion != null ? retObjectScriptEngineMinorVersion.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +219,13 @@ public class Globals extends NetObject  {
 
     public static java.lang.String getScriptEngine() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectScriptEngine = null;
         try {
-            return (java.lang.String)classType.Get("ScriptEngine");
+            retObjectScriptEngine = classType.Get("ScriptEngine");
+            return (java.lang.String)retObjectScriptEngine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectScriptEngine != null ? retObjectScriptEngine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

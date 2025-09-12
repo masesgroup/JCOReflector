@@ -163,7 +163,7 @@ public class SoapHttpClientProtocol extends HttpWebClientProtocol  {
     
     public void Discover() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException, system.net.WebException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Discover");
         } catch (JCNativeException jcne) {
@@ -177,10 +177,14 @@ public class SoapHttpClientProtocol extends HttpWebClientProtocol  {
     
     public SoapProtocolVersion getSoapVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSoapVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SoapVersion");
+            retObjectSoapVersion = classInstance.Get("SoapVersion");
+            JCObject val = (JCObject)retObjectSoapVersion;
             return new SoapProtocolVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoapVersion != null ? retObjectSoapVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class SoapHttpClientProtocol extends HttpWebClientProtocol  {
 
     public void setSoapVersion(SoapProtocolVersion SoapVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SoapVersion", SoapVersion == null ? null : SoapVersion.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -169,7 +169,7 @@ public class ActivityPreviewDesignerTheme extends CompositeDesignerTheme  {
     
     public void Initialize() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotImplementedException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize");
         } catch (JCNativeException jcne) {
@@ -179,7 +179,7 @@ public class ActivityPreviewDesignerTheme extends CompositeDesignerTheme  {
 
     public void OnAmbientPropertyChanged(AmbientProperty ambientProperty) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnAmbientPropertyChanged", ambientProperty == null ? null : ambientProperty.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -193,10 +193,14 @@ public class ActivityPreviewDesignerTheme extends CompositeDesignerTheme  {
     
     public Color getPreviewBackColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreviewBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreviewBackColor");
+            retObjectPreviewBackColor = classInstance.Get("PreviewBackColor");
+            JCObject val = (JCObject)retObjectPreviewBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreviewBackColor != null ? retObjectPreviewBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +208,7 @@ public class ActivityPreviewDesignerTheme extends CompositeDesignerTheme  {
 
     public void setPreviewBackColor(Color PreviewBackColor) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreviewBackColor", PreviewBackColor == null ? null : PreviewBackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -214,10 +218,14 @@ public class ActivityPreviewDesignerTheme extends CompositeDesignerTheme  {
 
     public Color getPreviewBorderColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreviewBorderColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreviewBorderColor");
+            retObjectPreviewBorderColor = classInstance.Get("PreviewBorderColor");
+            JCObject val = (JCObject)retObjectPreviewBorderColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreviewBorderColor != null ? retObjectPreviewBorderColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +233,7 @@ public class ActivityPreviewDesignerTheme extends CompositeDesignerTheme  {
 
     public void setPreviewBorderColor(Color PreviewBorderColor) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreviewBorderColor", PreviewBorderColor == null ? null : PreviewBorderColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -235,10 +243,14 @@ public class ActivityPreviewDesignerTheme extends CompositeDesignerTheme  {
 
     public Color getPreviewForeColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreviewForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreviewForeColor");
+            retObjectPreviewForeColor = classInstance.Get("PreviewForeColor");
+            JCObject val = (JCObject)retObjectPreviewForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreviewForeColor != null ? retObjectPreviewForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +258,7 @@ public class ActivityPreviewDesignerTheme extends CompositeDesignerTheme  {
 
     public void setPreviewForeColor(Color PreviewForeColor) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreviewForeColor", PreviewForeColor == null ? null : PreviewForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {

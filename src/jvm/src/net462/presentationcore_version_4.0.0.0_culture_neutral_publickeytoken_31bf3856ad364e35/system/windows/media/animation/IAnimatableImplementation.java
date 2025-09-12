@@ -146,10 +146,14 @@ public class IAnimatableImplementation extends NetObject implements IAnimatable 
     
     public NetObject GetAnimationBaseValue(DependencyProperty dp) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAnimationBaseValue = null;
         try {
-            JCObject objGetAnimationBaseValue = (JCObject)classInstance.Invoke("GetAnimationBaseValue", dp == null ? null : dp.getJCOInstance());
+            retObjectGetAnimationBaseValue = classInstance.Invoke("GetAnimationBaseValue", dp == null ? null : dp.getJCOInstance());
+            JCObject objGetAnimationBaseValue = (JCObject)retObjectGetAnimationBaseValue;
             return new NetObject(objGetAnimationBaseValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAnimationBaseValue != null ? retObjectGetAnimationBaseValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,7 +161,7 @@ public class IAnimatableImplementation extends NetObject implements IAnimatable 
 
     public void ApplyAnimationClock(DependencyProperty dp, AnimationClock clock) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyAnimationClock", dp == null ? null : dp.getJCOInstance(), clock == null ? null : clock.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -167,7 +171,7 @@ public class IAnimatableImplementation extends NetObject implements IAnimatable 
 
     public void ApplyAnimationClock(DependencyProperty dp, AnimationClock clock, HandoffBehavior handoffBehavior) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyAnimationClock", dp == null ? null : dp.getJCOInstance(), clock == null ? null : clock.getJCOInstance(), handoffBehavior == null ? null : handoffBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -177,7 +181,7 @@ public class IAnimatableImplementation extends NetObject implements IAnimatable 
 
     public void BeginAnimation(DependencyProperty dp, AnimationTimeline animation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginAnimation", dp == null ? null : dp.getJCOInstance(), animation == null ? null : animation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,7 +191,7 @@ public class IAnimatableImplementation extends NetObject implements IAnimatable 
 
     public void BeginAnimation(DependencyProperty dp, AnimationTimeline animation, HandoffBehavior handoffBehavior) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginAnimation", dp == null ? null : dp.getJCOInstance(), animation == null ? null : animation.getJCOInstance(), handoffBehavior == null ? null : handoffBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,9 +205,13 @@ public class IAnimatableImplementation extends NetObject implements IAnimatable 
     
     public boolean getHasAnimatedProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasAnimatedProperties = null;
         try {
-            return (boolean)classInstance.Get("HasAnimatedProperties");
+            retObjectHasAnimatedProperties = classInstance.Get("HasAnimatedProperties");
+            return (boolean)retObjectHasAnimatedProperties;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasAnimatedProperties != null ? retObjectHasAnimatedProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

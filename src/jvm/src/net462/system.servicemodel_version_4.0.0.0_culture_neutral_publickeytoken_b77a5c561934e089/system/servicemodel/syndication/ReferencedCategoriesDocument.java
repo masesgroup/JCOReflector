@@ -177,10 +177,14 @@ public class ReferencedCategoriesDocument extends CategoriesDocument  {
     
     public Uri getLink() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLink = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Link");
+            retObjectLink = classInstance.Get("Link");
+            JCObject val = (JCObject)retObjectLink;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLink != null ? retObjectLink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class ReferencedCategoriesDocument extends CategoriesDocument  {
 
     public void setLink(Uri Link) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Link", Link == null ? null : Link.getJCOInstance());
         } catch (JCNativeException jcne) {

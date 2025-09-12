@@ -158,10 +158,14 @@ public class DynamicUpdateMap extends NetObject  {
     
     public static DynamicUpdateMap Merge(DynamicUpdateMap... maps) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMerge = null;
         try {
-            JCObject objMerge = (JCObject)classType.Invoke("Merge", (java.lang.Object)toObjectFromArray(maps));
+            retObjectMerge = classType.Invoke("Merge", (java.lang.Object)toObjectFromArray(maps));
+            JCObject objMerge = (JCObject)retObjectMerge;
             return new DynamicUpdateMap(objMerge);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMerge != null ? retObjectMerge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class DynamicUpdateMap extends NetObject  {
 
     public DynamicUpdateMapQuery Query(Activity updatedWorkflowDefinition, Activity originalWorkflowDefinition) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuery = null;
         try {
-            JCObject objQuery = (JCObject)classInstance.Invoke("Query", updatedWorkflowDefinition == null ? null : updatedWorkflowDefinition.getJCOInstance(), originalWorkflowDefinition == null ? null : originalWorkflowDefinition.getJCOInstance());
+            retObjectQuery = classInstance.Invoke("Query", updatedWorkflowDefinition == null ? null : updatedWorkflowDefinition.getJCOInstance(), originalWorkflowDefinition == null ? null : originalWorkflowDefinition.getJCOInstance());
+            JCObject objQuery = (JCObject)retObjectQuery;
             return new DynamicUpdateMapQuery(objQuery);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQuery != null ? retObjectQuery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class DynamicUpdateMap extends NetObject  {
     
     public static DynamicUpdateMap getNoChanges() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNoChanges = null;
         try {
-            JCObject val = (JCObject)classType.Get("NoChanges");
+            retObjectNoChanges = classType.Get("NoChanges");
+            JCObject val = (JCObject)retObjectNoChanges;
             return new DynamicUpdateMap(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNoChanges != null ? retObjectNoChanges.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

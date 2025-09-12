@@ -163,7 +163,7 @@ public class DataGridTextBox extends TextBox  {
     
     public void SetDataGrid(DataGrid parentGrid) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDataGrid", parentGrid == null ? null : parentGrid.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -177,9 +177,13 @@ public class DataGridTextBox extends TextBox  {
     
     public boolean getIsInEditOrNavigateMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInEditOrNavigateMode = null;
         try {
-            return (boolean)classInstance.Get("IsInEditOrNavigateMode");
+            retObjectIsInEditOrNavigateMode = classInstance.Get("IsInEditOrNavigateMode");
+            return (boolean)retObjectIsInEditOrNavigateMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInEditOrNavigateMode != null ? retObjectIsInEditOrNavigateMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class DataGridTextBox extends TextBox  {
 
     public void setIsInEditOrNavigateMode(boolean IsInEditOrNavigateMode) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsInEditOrNavigateMode", IsInEditOrNavigateMode);
         } catch (JCNativeException jcne) {

@@ -154,7 +154,7 @@ public class CriticalHandle extends CriticalFinalizerObject implements AutoClose
     
     public void Close() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -164,7 +164,7 @@ public class CriticalHandle extends CriticalFinalizerObject implements AutoClose
 
     public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -174,7 +174,7 @@ public class CriticalHandle extends CriticalFinalizerObject implements AutoClose
 
     public void SetHandleAsInvalid() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetHandleAsInvalid");
         } catch (JCNativeException jcne) {
@@ -185,7 +185,7 @@ public class CriticalHandle extends CriticalFinalizerObject implements AutoClose
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -201,9 +201,13 @@ public class CriticalHandle extends CriticalFinalizerObject implements AutoClose
     
     public boolean getIsClosed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsClosed = null;
         try {
-            return (boolean)classInstance.Get("IsClosed");
+            retObjectIsClosed = classInstance.Get("IsClosed");
+            return (boolean)retObjectIsClosed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsClosed != null ? retObjectIsClosed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +215,13 @@ public class CriticalHandle extends CriticalFinalizerObject implements AutoClose
 
     public boolean getIsInvalid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInvalid = null;
         try {
-            return (boolean)classInstance.Get("IsInvalid");
+            retObjectIsInvalid = classInstance.Get("IsInvalid");
+            return (boolean)retObjectIsInvalid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInvalid != null ? retObjectIsInvalid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

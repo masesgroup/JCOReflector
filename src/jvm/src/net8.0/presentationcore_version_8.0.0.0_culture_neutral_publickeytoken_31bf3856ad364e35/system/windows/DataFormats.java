@@ -154,10 +154,14 @@ public class DataFormats extends NetObject  {
     
     public static DataFormat GetDataFormat(int id) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDataFormat = null;
         try {
-            JCObject objGetDataFormat = (JCObject)classType.Invoke("GetDataFormat", id);
+            retObjectGetDataFormat = classType.Invoke("GetDataFormat", id);
+            JCObject objGetDataFormat = (JCObject)retObjectGetDataFormat;
             return new DataFormat(objGetDataFormat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataFormat != null ? retObjectGetDataFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,10 +169,14 @@ public class DataFormats extends NetObject  {
 
     public static DataFormat GetDataFormat(java.lang.String format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDataFormat = null;
         try {
-            JCObject objGetDataFormat = (JCObject)classType.Invoke("GetDataFormat", format);
+            retObjectGetDataFormat = classType.Invoke("GetDataFormat", format);
+            JCObject objGetDataFormat = (JCObject)retObjectGetDataFormat;
             return new DataFormat(objGetDataFormat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataFormat != null ? retObjectGetDataFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

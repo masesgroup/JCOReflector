@@ -164,10 +164,14 @@ public class WorkflowServiceHostFactory extends ServiceHostFactoryBase  {
     
     public ServiceHostBase CreateServiceHost(java.lang.String constructorString, Uri[] baseAddresses) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.OutOfMemoryException, system.UriFormatException, system.web.HttpCompileException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.threading.ThreadAbortException, system.security.SecurityException, system.OverflowException, system.xml.XmlException, system.NotImplementedException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.FormatException, system.globalization.CultureNotFoundException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateServiceHost = null;
         try {
-            JCObject objCreateServiceHost = (JCObject)classInstance.Invoke("CreateServiceHost", constructorString, toObjectFromArray(baseAddresses));
+            retObjectCreateServiceHost = classInstance.Invoke("CreateServiceHost", constructorString, toObjectFromArray(baseAddresses));
+            JCObject objCreateServiceHost = (JCObject)retObjectCreateServiceHost;
             return new ServiceHostBase(objCreateServiceHost);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateServiceHost != null ? retObjectCreateServiceHost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

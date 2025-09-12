@@ -164,9 +164,13 @@ public class StylusPointDescription extends NetObject  {
     
     public static boolean AreCompatible(StylusPointDescription stylusPointDescription1, StylusPointDescription stylusPointDescription2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAreCompatible = null;
         try {
-            return (boolean)classType.Invoke("AreCompatible", stylusPointDescription1 == null ? null : stylusPointDescription1.getJCOInstance(), stylusPointDescription2 == null ? null : stylusPointDescription2.getJCOInstance());
+            retObjectAreCompatible = classType.Invoke("AreCompatible", stylusPointDescription1 == null ? null : stylusPointDescription1.getJCOInstance(), stylusPointDescription2 == null ? null : stylusPointDescription2.getJCOInstance());
+            return (boolean)retObjectAreCompatible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAreCompatible != null ? retObjectAreCompatible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class StylusPointDescription extends NetObject  {
 
     public boolean HasProperty(StylusPointProperty stylusPointProperty) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasProperty = null;
         try {
-            return (boolean)classInstance.Invoke("HasProperty", stylusPointProperty == null ? null : stylusPointProperty.getJCOInstance());
+            retObjectHasProperty = classInstance.Invoke("HasProperty", stylusPointProperty == null ? null : stylusPointProperty.getJCOInstance());
+            return (boolean)retObjectHasProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasProperty != null ? retObjectHasProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class StylusPointDescription extends NetObject  {
 
     public boolean IsSubsetOf(StylusPointDescription stylusPointDescriptionSuperset) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSubsetOf = null;
         try {
-            return (boolean)classInstance.Invoke("IsSubsetOf", stylusPointDescriptionSuperset == null ? null : stylusPointDescriptionSuperset.getJCOInstance());
+            retObjectIsSubsetOf = classInstance.Invoke("IsSubsetOf", stylusPointDescriptionSuperset == null ? null : stylusPointDescriptionSuperset.getJCOInstance());
+            return (boolean)retObjectIsSubsetOf;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSubsetOf != null ? retObjectIsSubsetOf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +206,14 @@ public class StylusPointDescription extends NetObject  {
 
     public static StylusPointDescription GetCommonDescription(StylusPointDescription stylusPointDescription, StylusPointDescription stylusPointDescriptionPreserveInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCommonDescription = null;
         try {
-            JCObject objGetCommonDescription = (JCObject)classType.Invoke("GetCommonDescription", stylusPointDescription == null ? null : stylusPointDescription.getJCOInstance(), stylusPointDescriptionPreserveInfo == null ? null : stylusPointDescriptionPreserveInfo.getJCOInstance());
+            retObjectGetCommonDescription = classType.Invoke("GetCommonDescription", stylusPointDescription == null ? null : stylusPointDescription.getJCOInstance(), stylusPointDescriptionPreserveInfo == null ? null : stylusPointDescriptionPreserveInfo.getJCOInstance());
+            JCObject objGetCommonDescription = (JCObject)retObjectGetCommonDescription;
             return new StylusPointDescription(objGetCommonDescription);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCommonDescription != null ? retObjectGetCommonDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +221,14 @@ public class StylusPointDescription extends NetObject  {
 
     public StylusPointPropertyInfo GetPropertyInfo(StylusPointProperty stylusPointProperty) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyInfo = null;
         try {
-            JCObject objGetPropertyInfo = (JCObject)classInstance.Invoke("GetPropertyInfo", stylusPointProperty == null ? null : stylusPointProperty.getJCOInstance());
+            retObjectGetPropertyInfo = classInstance.Invoke("GetPropertyInfo", stylusPointProperty == null ? null : stylusPointProperty.getJCOInstance());
+            JCObject objGetPropertyInfo = (JCObject)retObjectGetPropertyInfo;
             return new StylusPointPropertyInfo(objGetPropertyInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyInfo != null ? retObjectGetPropertyInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +240,19 @@ public class StylusPointDescription extends NetObject  {
     
     public int getPropertyCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyCount = null;
         try {
-            return (int)classInstance.Get("PropertyCount");
+            retObjectPropertyCount = classInstance.Get("PropertyCount");
+            return (int)retObjectPropertyCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPropertyCountNumber = (java.lang.Number)retObjectPropertyCount;
+                return retObjectPropertyCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPropertyCount != null ? retObjectPropertyCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

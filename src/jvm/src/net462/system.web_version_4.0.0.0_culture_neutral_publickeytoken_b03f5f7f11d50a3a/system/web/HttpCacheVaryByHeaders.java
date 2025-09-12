@@ -161,10 +161,12 @@ public class HttpCacheVaryByHeaders extends NetObject  {
     
     public java.lang.String[] GetHeaders() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHeaders = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetHeaders");
+            retObjectGetHeaders = classInstance.Invoke("GetHeaders");
+            JCObject resultingObjects = (JCObject)retObjectGetHeaders;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -173,6 +175,8 @@ public class HttpCacheVaryByHeaders extends NetObject  {
 				resultingArray[indexGetHeaders] = (java.lang.String)resultingArrayList.get(indexGetHeaders);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetHeaders != null ? retObjectGetHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class HttpCacheVaryByHeaders extends NetObject  {
 
     public void SetHeaders(java.lang.String[] headers) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetHeaders", (java.lang.Object)headers);
         } catch (JCNativeException jcne) {
@@ -190,7 +194,7 @@ public class HttpCacheVaryByHeaders extends NetObject  {
 
     public void SetHeaders(JCORefOut dupParam0) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetHeaders", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -200,7 +204,7 @@ public class HttpCacheVaryByHeaders extends NetObject  {
 
     public void VaryByUnspecifiedParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("VaryByUnspecifiedParameters");
         } catch (JCNativeException jcne) {
@@ -214,9 +218,13 @@ public class HttpCacheVaryByHeaders extends NetObject  {
     
     public boolean getAcceptTypes() throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptTypes = null;
         try {
-            return (boolean)classInstance.Get("AcceptTypes");
+            retObjectAcceptTypes = classInstance.Get("AcceptTypes");
+            return (boolean)retObjectAcceptTypes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAcceptTypes != null ? retObjectAcceptTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +232,7 @@ public class HttpCacheVaryByHeaders extends NetObject  {
 
     public void setAcceptTypes(boolean AcceptTypes) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptTypes", AcceptTypes);
         } catch (JCNativeException jcne) {
@@ -234,9 +242,13 @@ public class HttpCacheVaryByHeaders extends NetObject  {
 
     public boolean getUserAgent() throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserAgent = null;
         try {
-            return (boolean)classInstance.Get("UserAgent");
+            retObjectUserAgent = classInstance.Get("UserAgent");
+            return (boolean)retObjectUserAgent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUserAgent != null ? retObjectUserAgent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +256,7 @@ public class HttpCacheVaryByHeaders extends NetObject  {
 
     public void setUserAgent(boolean UserAgent) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserAgent", UserAgent);
         } catch (JCNativeException jcne) {
@@ -254,9 +266,13 @@ public class HttpCacheVaryByHeaders extends NetObject  {
 
     public boolean getUserCharSet() throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserCharSet = null;
         try {
-            return (boolean)classInstance.Get("UserCharSet");
+            retObjectUserCharSet = classInstance.Get("UserCharSet");
+            return (boolean)retObjectUserCharSet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUserCharSet != null ? retObjectUserCharSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,7 +280,7 @@ public class HttpCacheVaryByHeaders extends NetObject  {
 
     public void setUserCharSet(boolean UserCharSet) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserCharSet", UserCharSet);
         } catch (JCNativeException jcne) {
@@ -274,9 +290,13 @@ public class HttpCacheVaryByHeaders extends NetObject  {
 
     public boolean getUserLanguage() throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserLanguage = null;
         try {
-            return (boolean)classInstance.Get("UserLanguage");
+            retObjectUserLanguage = classInstance.Get("UserLanguage");
+            return (boolean)retObjectUserLanguage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUserLanguage != null ? retObjectUserLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +304,7 @@ public class HttpCacheVaryByHeaders extends NetObject  {
 
     public void setUserLanguage(boolean UserLanguage) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserLanguage", UserLanguage);
         } catch (JCNativeException jcne) {

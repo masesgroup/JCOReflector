@@ -172,10 +172,14 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
     
     public NetObject GetNextSelectableObject(NetObject current, DesignerNavigationDirection navigate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextSelectableObject = null;
         try {
-            JCObject objGetNextSelectableObject = (JCObject)classInstance.Invoke("GetNextSelectableObject", current == null ? null : current.getJCOInstance(), navigate == null ? null : navigate.getJCOInstance());
+            retObjectGetNextSelectableObject = classInstance.Invoke("GetNextSelectableObject", current == null ? null : current.getJCOInstance(), navigate == null ? null : navigate.getJCOInstance());
+            JCObject objGetNextSelectableObject = (JCObject)retObjectGetNextSelectableObject;
             return new NetObject(objGetNextSelectableObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextSelectableObject != null ? retObjectGetNextSelectableObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
 
     public Connector AddConnector(ConnectionPoint source, ConnectionPoint target) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddConnector = null;
         try {
-            JCObject objAddConnector = (JCObject)classInstance.Invoke("AddConnector", source == null ? null : source.getJCOInstance(), target == null ? null : target.getJCOInstance());
+            retObjectAddConnector = classInstance.Invoke("AddConnector", source == null ? null : source.getJCOInstance(), target == null ? null : target.getJCOInstance());
+            JCObject objAddConnector = (JCObject)retObjectAddConnector;
             return new Connector(objAddConnector);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddConnector != null ? retObjectAddConnector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +202,14 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
 
     public HitTestInfo HitTest(Point point) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.NotSupportedException, system.runtime.interopservices.ExternalException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitTest = null;
         try {
-            JCObject objHitTest = (JCObject)classInstance.Invoke("HitTest", point == null ? null : point.getJCOInstance());
+            retObjectHitTest = classInstance.Invoke("HitTest", point == null ? null : point.getJCOInstance());
+            JCObject objHitTest = (JCObject)retObjectHitTest;
             return new HitTestInfo(objHitTest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHitTest != null ? retObjectHitTest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +217,7 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
 
     public void BringToFront(ActivityDesigner containedDesigner) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BringToFront", containedDesigner == null ? null : containedDesigner.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -215,7 +227,7 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
 
     public void MoveContainedDesigner(ActivityDesigner containedDesigner, Point newLocation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveContainedDesigner", containedDesigner == null ? null : containedDesigner.getJCOInstance(), newLocation == null ? null : newLocation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,7 +237,7 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
 
     public void RemoveConnector(Connector connector) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveConnector", connector == null ? null : connector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -235,7 +247,7 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
 
     public void ResizeContainedDesigner(ActivityDesigner containedDesigner, Size newSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResizeContainedDesigner", containedDesigner == null ? null : containedDesigner.getJCOInstance(), newSize == null ? null : newSize.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -245,7 +257,7 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
 
     public void SendToBack(ActivityDesigner containedDesigner) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendToBack", containedDesigner == null ? null : containedDesigner.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -259,9 +271,13 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
     
     public boolean getAutoSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoSize = null;
         try {
-            return (boolean)classInstance.Get("AutoSize");
+            retObjectAutoSize = classInstance.Get("AutoSize");
+            return (boolean)retObjectAutoSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoSize != null ? retObjectAutoSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +285,7 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
 
     public void setAutoSize(boolean AutoSize) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoSize", AutoSize);
         } catch (JCNativeException jcne) {
@@ -279,9 +295,13 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
 
     public boolean getEnableUserDrawnConnectors() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableUserDrawnConnectors = null;
         try {
-            return (boolean)classInstance.Get("EnableUserDrawnConnectors");
+            retObjectEnableUserDrawnConnectors = classInstance.Get("EnableUserDrawnConnectors");
+            return (boolean)retObjectEnableUserDrawnConnectors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableUserDrawnConnectors != null ? retObjectEnableUserDrawnConnectors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +309,7 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
 
     public void setEnableUserDrawnConnectors(boolean EnableUserDrawnConnectors) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableUserDrawnConnectors", EnableUserDrawnConnectors);
         } catch (JCNativeException jcne) {
@@ -299,10 +319,14 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
 
     public Size getAutoSizeMargin() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoSizeMargin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoSizeMargin");
+            retObjectAutoSizeMargin = classInstance.Get("AutoSizeMargin");
+            JCObject val = (JCObject)retObjectAutoSizeMargin;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoSizeMargin != null ? retObjectAutoSizeMargin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +334,7 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
 
     public void setAutoSizeMargin(Size AutoSizeMargin) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoSizeMargin", AutoSizeMargin == null ? null : AutoSizeMargin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -320,10 +344,14 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
 
     public AutoSizeMode getAutoSizeMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoSizeMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoSizeMode");
+            retObjectAutoSizeMode = classInstance.Get("AutoSizeMode");
+            JCObject val = (JCObject)retObjectAutoSizeMode;
             return new AutoSizeMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoSizeMode != null ? retObjectAutoSizeMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,7 +359,7 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
 
     public void setAutoSizeMode(AutoSizeMode AutoSizeMode) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoSizeMode", AutoSizeMode == null ? null : AutoSizeMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -346,7 +374,7 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
 
     public void addConnectorAdded(ConnectorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ConnectorAdded", handler);
         } catch (JCNativeException jcne) {
@@ -356,7 +384,7 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
 
     public void removeConnectorAdded(ConnectorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ConnectorAdded", handler);
         } catch (JCNativeException jcne) {
@@ -366,7 +394,7 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
 
     public void addConnectorChanged(ConnectorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ConnectorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -376,7 +404,7 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
 
     public void removeConnectorChanged(ConnectorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ConnectorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -386,7 +414,7 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
 
     public void addConnectorRemoved(ConnectorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ConnectorRemoved", handler);
         } catch (JCNativeException jcne) {
@@ -396,7 +424,7 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
 
     public void removeConnectorRemoved(ConnectorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ConnectorRemoved", handler);
         } catch (JCNativeException jcne) {

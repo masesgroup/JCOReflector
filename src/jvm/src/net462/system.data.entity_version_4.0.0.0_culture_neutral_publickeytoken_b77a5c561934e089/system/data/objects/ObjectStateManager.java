@@ -171,9 +171,13 @@ public class ObjectStateManager extends NetObject  {
     
     public boolean TryGetObjectStateEntry(EntityKey key, JCORefOut<ObjectStateEntry> entry) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetObjectStateEntry = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetObjectStateEntry", key == null ? null : key.getJCOInstance(), entry.getJCRefOut());
+            retObjectTryGetObjectStateEntry = classInstance.Invoke("TryGetObjectStateEntry", key == null ? null : key.getJCOInstance(), entry.getJCRefOut());
+            return (boolean)retObjectTryGetObjectStateEntry;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetObjectStateEntry != null ? retObjectTryGetObjectStateEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class ObjectStateManager extends NetObject  {
 
     public boolean TryGetObjectStateEntry(NetObject entity, JCORefOut<ObjectStateEntry> entry) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetObjectStateEntry = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetObjectStateEntry", entity == null ? null : entity.getJCOInstance(), entry.getJCRefOut());
+            retObjectTryGetObjectStateEntry = classInstance.Invoke("TryGetObjectStateEntry", entity == null ? null : entity.getJCOInstance(), entry.getJCRefOut());
+            return (boolean)retObjectTryGetObjectStateEntry;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetObjectStateEntry != null ? retObjectTryGetObjectStateEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +199,13 @@ public class ObjectStateManager extends NetObject  {
 
     public boolean TryGetRelationshipManager(NetObject entity, JCORefOut<RelationshipManager> relationshipManager) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetRelationshipManager = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetRelationshipManager", entity == null ? null : entity.getJCOInstance(), relationshipManager.getJCRefOut());
+            retObjectTryGetRelationshipManager = classInstance.Invoke("TryGetRelationshipManager", entity == null ? null : entity.getJCOInstance(), relationshipManager.getJCRefOut());
+            return (boolean)retObjectTryGetRelationshipManager;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetRelationshipManager != null ? retObjectTryGetRelationshipManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +213,14 @@ public class ObjectStateManager extends NetObject  {
 
     public RelationshipManager GetRelationshipManager(NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRelationshipManager = null;
         try {
-            JCObject objGetRelationshipManager = (JCObject)classInstance.Invoke("GetRelationshipManager", entity == null ? null : entity.getJCOInstance());
+            retObjectGetRelationshipManager = classInstance.Invoke("GetRelationshipManager", entity == null ? null : entity.getJCOInstance());
+            JCObject objGetRelationshipManager = (JCObject)retObjectGetRelationshipManager;
             return new RelationshipManager(objGetRelationshipManager);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRelationshipManager != null ? retObjectGetRelationshipManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +228,14 @@ public class ObjectStateManager extends NetObject  {
 
     public ObjectStateEntry ChangeObjectState(NetObject entity, EntityState entityState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.data.MetadataException, system.data.MappingException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangeObjectState = null;
         try {
-            JCObject objChangeObjectState = (JCObject)classInstance.Invoke("ChangeObjectState", entity == null ? null : entity.getJCOInstance(), entityState == null ? null : entityState.getJCOInstance());
+            retObjectChangeObjectState = classInstance.Invoke("ChangeObjectState", entity == null ? null : entity.getJCOInstance(), entityState == null ? null : entityState.getJCOInstance());
+            JCObject objChangeObjectState = (JCObject)retObjectChangeObjectState;
             return new ObjectStateEntry(objChangeObjectState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChangeObjectState != null ? retObjectChangeObjectState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +243,14 @@ public class ObjectStateManager extends NetObject  {
 
     public ObjectStateEntry ChangeRelationshipState(NetObject sourceEntity, NetObject targetEntity, java.lang.String navigationProperty, EntityState relationshipState) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangeRelationshipState = null;
         try {
-            JCObject objChangeRelationshipState = (JCObject)classInstance.Invoke("ChangeRelationshipState", sourceEntity == null ? null : sourceEntity.getJCOInstance(), targetEntity == null ? null : targetEntity.getJCOInstance(), navigationProperty, relationshipState == null ? null : relationshipState.getJCOInstance());
+            retObjectChangeRelationshipState = classInstance.Invoke("ChangeRelationshipState", sourceEntity == null ? null : sourceEntity.getJCOInstance(), targetEntity == null ? null : targetEntity.getJCOInstance(), navigationProperty, relationshipState == null ? null : relationshipState.getJCOInstance());
+            JCObject objChangeRelationshipState = (JCObject)retObjectChangeRelationshipState;
             return new ObjectStateEntry(objChangeRelationshipState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChangeRelationshipState != null ? retObjectChangeRelationshipState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +258,14 @@ public class ObjectStateManager extends NetObject  {
 
     public ObjectStateEntry ChangeRelationshipState(NetObject sourceEntity, NetObject targetEntity, java.lang.String relationshipName, java.lang.String targetRoleName, EntityState relationshipState) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangeRelationshipState = null;
         try {
-            JCObject objChangeRelationshipState = (JCObject)classInstance.Invoke("ChangeRelationshipState", sourceEntity == null ? null : sourceEntity.getJCOInstance(), targetEntity == null ? null : targetEntity.getJCOInstance(), relationshipName, targetRoleName, relationshipState == null ? null : relationshipState.getJCOInstance());
+            retObjectChangeRelationshipState = classInstance.Invoke("ChangeRelationshipState", sourceEntity == null ? null : sourceEntity.getJCOInstance(), targetEntity == null ? null : targetEntity.getJCOInstance(), relationshipName, targetRoleName, relationshipState == null ? null : relationshipState.getJCOInstance());
+            JCObject objChangeRelationshipState = (JCObject)retObjectChangeRelationshipState;
             return new ObjectStateEntry(objChangeRelationshipState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChangeRelationshipState != null ? retObjectChangeRelationshipState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +273,14 @@ public class ObjectStateManager extends NetObject  {
 
     public ObjectStateEntry GetObjectStateEntry(EntityKey key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetObjectStateEntry = null;
         try {
-            JCObject objGetObjectStateEntry = (JCObject)classInstance.Invoke("GetObjectStateEntry", key == null ? null : key.getJCOInstance());
+            retObjectGetObjectStateEntry = classInstance.Invoke("GetObjectStateEntry", key == null ? null : key.getJCOInstance());
+            JCObject objGetObjectStateEntry = (JCObject)retObjectGetObjectStateEntry;
             return new ObjectStateEntry(objGetObjectStateEntry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObjectStateEntry != null ? retObjectGetObjectStateEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +288,14 @@ public class ObjectStateManager extends NetObject  {
 
     public ObjectStateEntry GetObjectStateEntry(NetObject entity) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetObjectStateEntry = null;
         try {
-            JCObject objGetObjectStateEntry = (JCObject)classInstance.Invoke("GetObjectStateEntry", entity == null ? null : entity.getJCOInstance());
+            retObjectGetObjectStateEntry = classInstance.Invoke("GetObjectStateEntry", entity == null ? null : entity.getJCOInstance());
+            JCObject objGetObjectStateEntry = (JCObject)retObjectGetObjectStateEntry;
             return new ObjectStateEntry(objGetObjectStateEntry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObjectStateEntry != null ? retObjectGetObjectStateEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,10 +307,14 @@ public class ObjectStateManager extends NetObject  {
     
     public MetadataWorkspace getMetadataWorkspace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadataWorkspace = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MetadataWorkspace");
+            retObjectMetadataWorkspace = classInstance.Get("MetadataWorkspace");
+            JCObject val = (JCObject)retObjectMetadataWorkspace;
             return new MetadataWorkspace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMetadataWorkspace != null ? retObjectMetadataWorkspace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,7 +327,7 @@ public class ObjectStateManager extends NetObject  {
 
     public void addObjectStateManagerChanged(CollectionChangeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ObjectStateManagerChanged", handler);
         } catch (JCNativeException jcne) {
@@ -297,7 +337,7 @@ public class ObjectStateManager extends NetObject  {
 
     public void removeObjectStateManagerChanged(CollectionChangeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ObjectStateManagerChanged", handler);
         } catch (JCNativeException jcne) {

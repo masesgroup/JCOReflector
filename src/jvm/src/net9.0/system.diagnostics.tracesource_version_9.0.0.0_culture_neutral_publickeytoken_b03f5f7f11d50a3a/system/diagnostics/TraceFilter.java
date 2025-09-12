@@ -155,9 +155,13 @@ public class TraceFilter extends NetObject  {
     
     public boolean ShouldTrace(TraceEventCache cache, java.lang.String source, TraceEventType eventType, int id, java.lang.String formatOrMessage, NetObject[] args, NetObject data1, NetObject[] data) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldTrace = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldTrace", cache == null ? null : cache.getJCOInstance(), source, eventType == null ? null : eventType.getJCOInstance(), id, formatOrMessage, toObjectFromArray(args), data1 == null ? null : data1.getJCOInstance(), toObjectFromArray(data));
+            retObjectShouldTrace = classInstance.Invoke("ShouldTrace", cache == null ? null : cache.getJCOInstance(), source, eventType == null ? null : eventType.getJCOInstance(), id, formatOrMessage, toObjectFromArray(args), data1 == null ? null : data1.getJCOInstance(), toObjectFromArray(data));
+            return (boolean)retObjectShouldTrace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldTrace != null ? retObjectShouldTrace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

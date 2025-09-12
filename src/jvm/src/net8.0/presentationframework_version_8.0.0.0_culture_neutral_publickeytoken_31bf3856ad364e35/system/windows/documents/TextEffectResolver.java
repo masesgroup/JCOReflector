@@ -156,16 +156,20 @@ public class TextEffectResolver extends NetObject  {
     
     public static TextEffectTarget[] Resolve(TextPointer startPosition, TextPointer endPosition, TextEffect effect) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResolve = null;
         try {
             ArrayList<TextEffectTarget> resultingArrayList = new ArrayList<TextEffectTarget>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("Resolve", startPosition == null ? null : startPosition.getJCOInstance(), endPosition == null ? null : endPosition.getJCOInstance(), effect == null ? null : effect.getJCOInstance());
+            retObjectResolve = classType.Invoke("Resolve", startPosition == null ? null : startPosition.getJCOInstance(), endPosition == null ? null : endPosition.getJCOInstance(), effect == null ? null : effect.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectResolve;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new TextEffectTarget(resultingObject));
             }
             TextEffectTarget[] resultingArray = new TextEffectTarget[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolve != null ? retObjectResolve.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

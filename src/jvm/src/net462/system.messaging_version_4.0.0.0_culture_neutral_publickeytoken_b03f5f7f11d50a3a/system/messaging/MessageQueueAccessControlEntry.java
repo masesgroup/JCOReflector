@@ -183,10 +183,14 @@ public class MessageQueueAccessControlEntry extends AccessControlEntry  {
     
     public MessageQueueAccessRights getMessageQueueAccessRights() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageQueueAccessRights = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageQueueAccessRights");
+            retObjectMessageQueueAccessRights = classInstance.Get("MessageQueueAccessRights");
+            JCObject val = (JCObject)retObjectMessageQueueAccessRights;
             return new MessageQueueAccessRights(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageQueueAccessRights != null ? retObjectMessageQueueAccessRights.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +198,7 @@ public class MessageQueueAccessControlEntry extends AccessControlEntry  {
 
     public void setMessageQueueAccessRights(MessageQueueAccessRights MessageQueueAccessRights) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageQueueAccessRights", MessageQueueAccessRights == null ? null : MessageQueueAccessRights.getJCOInstance());
         } catch (JCNativeException jcne) {

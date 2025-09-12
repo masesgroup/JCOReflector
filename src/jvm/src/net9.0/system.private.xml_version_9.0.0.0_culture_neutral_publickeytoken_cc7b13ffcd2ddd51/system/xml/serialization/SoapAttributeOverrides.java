@@ -162,7 +162,7 @@ public class SoapAttributeOverrides extends NetObject  {
     
     public void Add(NetType type, java.lang.String member, SoapAttributes attributes) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", type == null ? null : type.getJCOInstance(), member, attributes == null ? null : attributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -172,7 +172,7 @@ public class SoapAttributeOverrides extends NetObject  {
 
     public void Add(NetType type, SoapAttributes attributes) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", type == null ? null : type.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance());
         } catch (JCNativeException jcne) {

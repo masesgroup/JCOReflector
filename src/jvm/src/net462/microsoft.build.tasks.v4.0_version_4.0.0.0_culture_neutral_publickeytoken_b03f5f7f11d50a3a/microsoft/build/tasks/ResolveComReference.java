@@ -164,9 +164,13 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
     
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.OverflowException, system.NotSupportedException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NullReferenceException, system.security.SecurityException, system.runtime.serialization.SerializationException, system.runtime.interopservices.COMException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.AbandonedMutexException, system.TypeLoadException, system.NotImplementedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
     
     public boolean getDelaySign() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelaySign = null;
         try {
-            return (boolean)classInstance.Get("DelaySign");
+            retObjectDelaySign = classInstance.Get("DelaySign");
+            return (boolean)retObjectDelaySign;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDelaySign != null ? retObjectDelaySign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public void setDelaySign(boolean DelaySign) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DelaySign", DelaySign);
         } catch (JCNativeException jcne) {
@@ -198,9 +206,13 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public boolean getExecuteAsTool() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteAsTool = null;
         try {
-            return (boolean)classInstance.Get("ExecuteAsTool");
+            retObjectExecuteAsTool = classInstance.Get("ExecuteAsTool");
+            return (boolean)retObjectExecuteAsTool;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExecuteAsTool != null ? retObjectExecuteAsTool.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +220,7 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public void setExecuteAsTool(boolean ExecuteAsTool) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExecuteAsTool", ExecuteAsTool);
         } catch (JCNativeException jcne) {
@@ -218,9 +230,13 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public boolean getIncludeVersionInInteropName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludeVersionInInteropName = null;
         try {
-            return (boolean)classInstance.Get("IncludeVersionInInteropName");
+            retObjectIncludeVersionInInteropName = classInstance.Get("IncludeVersionInInteropName");
+            return (boolean)retObjectIncludeVersionInInteropName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIncludeVersionInInteropName != null ? retObjectIncludeVersionInInteropName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +244,7 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public void setIncludeVersionInInteropName(boolean IncludeVersionInInteropName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncludeVersionInInteropName", IncludeVersionInInteropName);
         } catch (JCNativeException jcne) {
@@ -238,9 +254,13 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public boolean getNoClassMembers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoClassMembers = null;
         try {
-            return (boolean)classInstance.Get("NoClassMembers");
+            retObjectNoClassMembers = classInstance.Get("NoClassMembers");
+            return (boolean)retObjectNoClassMembers;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNoClassMembers != null ? retObjectNoClassMembers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +268,7 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public void setNoClassMembers(boolean NoClassMembers) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoClassMembers", NoClassMembers);
         } catch (JCNativeException jcne) {
@@ -258,9 +278,13 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public boolean getSilent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSilent = null;
         try {
-            return (boolean)classInstance.Get("Silent");
+            retObjectSilent = classInstance.Get("Silent");
+            return (boolean)retObjectSilent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSilent != null ? retObjectSilent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +292,7 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public void setSilent(boolean Silent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Silent", Silent);
         } catch (JCNativeException jcne) {
@@ -278,16 +302,20 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public final ITaskItem[] getResolvedAssemblyReferences() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolvedAssemblyReferences = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ResolvedAssemblyReferences");
+            retObjectResolvedAssemblyReferences = classInstance.Get("ResolvedAssemblyReferences");
+            JCObject resultingObjects = (JCObject)retObjectResolvedAssemblyReferences;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolvedAssemblyReferences != null ? retObjectResolvedAssemblyReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +323,7 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public void setResolvedAssemblyReferences(ITaskItem[] ResolvedAssemblyReferences) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResolvedAssemblyReferences", toObjectFromArray(ResolvedAssemblyReferences));
         } catch (JCNativeException jcne) {
@@ -305,16 +333,20 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public final ITaskItem[] getResolvedFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolvedFiles = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ResolvedFiles");
+            retObjectResolvedFiles = classInstance.Get("ResolvedFiles");
+            JCObject resultingObjects = (JCObject)retObjectResolvedFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolvedFiles != null ? retObjectResolvedFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +354,7 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public void setResolvedFiles(ITaskItem[] ResolvedFiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResolvedFiles", toObjectFromArray(ResolvedFiles));
         } catch (JCNativeException jcne) {
@@ -332,16 +364,20 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public final ITaskItem[] getResolvedModules() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolvedModules = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ResolvedModules");
+            retObjectResolvedModules = classInstance.Get("ResolvedModules");
+            JCObject resultingObjects = (JCObject)retObjectResolvedModules;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolvedModules != null ? retObjectResolvedModules.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,7 +385,7 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public void setResolvedModules(ITaskItem[] ResolvedModules) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResolvedModules", toObjectFromArray(ResolvedModules));
         } catch (JCNativeException jcne) {
@@ -359,16 +395,20 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public final ITaskItem[] getTypeLibFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeLibFiles = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("TypeLibFiles");
+            retObjectTypeLibFiles = classInstance.Get("TypeLibFiles");
+            JCObject resultingObjects = (JCObject)retObjectTypeLibFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeLibFiles != null ? retObjectTypeLibFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,7 +416,7 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public void setTypeLibFiles(ITaskItem[] TypeLibFiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypeLibFiles", toObjectFromArray(TypeLibFiles));
         } catch (JCNativeException jcne) {
@@ -386,16 +426,20 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public final ITaskItem[] getTypeLibNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeLibNames = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("TypeLibNames");
+            retObjectTypeLibNames = classInstance.Get("TypeLibNames");
+            JCObject resultingObjects = (JCObject)retObjectTypeLibNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeLibNames != null ? retObjectTypeLibNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,7 +447,7 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public void setTypeLibNames(ITaskItem[] TypeLibNames) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypeLibNames", toObjectFromArray(TypeLibNames));
         } catch (JCNativeException jcne) {
@@ -413,9 +457,13 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public java.lang.String getKeyContainer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyContainer = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyContainer");
+            retObjectKeyContainer = classInstance.Get("KeyContainer");
+            return (java.lang.String)retObjectKeyContainer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyContainer != null ? retObjectKeyContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -423,7 +471,7 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public void setKeyContainer(java.lang.String KeyContainer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyContainer", KeyContainer);
         } catch (JCNativeException jcne) {
@@ -433,9 +481,13 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public java.lang.String getKeyFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyFile = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyFile");
+            retObjectKeyFile = classInstance.Get("KeyFile");
+            return (java.lang.String)retObjectKeyFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyFile != null ? retObjectKeyFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,7 +495,7 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public void setKeyFile(java.lang.String KeyFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyFile", KeyFile);
         } catch (JCNativeException jcne) {
@@ -453,9 +505,13 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public java.lang.String getSdkToolsPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSdkToolsPath = null;
         try {
-            return (java.lang.String)classInstance.Get("SdkToolsPath");
+            retObjectSdkToolsPath = classInstance.Get("SdkToolsPath");
+            return (java.lang.String)retObjectSdkToolsPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSdkToolsPath != null ? retObjectSdkToolsPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -463,7 +519,7 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public void setSdkToolsPath(java.lang.String SdkToolsPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SdkToolsPath", SdkToolsPath);
         } catch (JCNativeException jcne) {
@@ -473,9 +529,13 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public java.lang.String getStateFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStateFile = null;
         try {
-            return (java.lang.String)classInstance.Get("StateFile");
+            retObjectStateFile = classInstance.Get("StateFile");
+            return (java.lang.String)retObjectStateFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStateFile != null ? retObjectStateFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -483,7 +543,7 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public void setStateFile(java.lang.String StateFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StateFile", StateFile);
         } catch (JCNativeException jcne) {
@@ -493,9 +553,13 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public java.lang.String getTargetFrameworkVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetFrameworkVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetFrameworkVersion");
+            retObjectTargetFrameworkVersion = classInstance.Get("TargetFrameworkVersion");
+            return (java.lang.String)retObjectTargetFrameworkVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetFrameworkVersion != null ? retObjectTargetFrameworkVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -503,7 +567,7 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public void setTargetFrameworkVersion(java.lang.String TargetFrameworkVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetFrameworkVersion", TargetFrameworkVersion);
         } catch (JCNativeException jcne) {
@@ -513,9 +577,13 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public java.lang.String getTargetProcessorArchitecture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetProcessorArchitecture = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetProcessorArchitecture");
+            retObjectTargetProcessorArchitecture = classInstance.Get("TargetProcessorArchitecture");
+            return (java.lang.String)retObjectTargetProcessorArchitecture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetProcessorArchitecture != null ? retObjectTargetProcessorArchitecture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -523,7 +591,7 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public void setTargetProcessorArchitecture(java.lang.String TargetProcessorArchitecture) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetProcessorArchitecture", TargetProcessorArchitecture);
         } catch (JCNativeException jcne) {
@@ -533,9 +601,13 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public java.lang.String getWrapperOutputDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWrapperOutputDirectory = null;
         try {
-            return (java.lang.String)classInstance.Get("WrapperOutputDirectory");
+            retObjectWrapperOutputDirectory = classInstance.Get("WrapperOutputDirectory");
+            return (java.lang.String)retObjectWrapperOutputDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWrapperOutputDirectory != null ? retObjectWrapperOutputDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -543,7 +615,7 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public void setWrapperOutputDirectory(java.lang.String WrapperOutputDirectory) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WrapperOutputDirectory", WrapperOutputDirectory);
         } catch (JCNativeException jcne) {
@@ -553,10 +625,12 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public java.lang.String[] getEnvironmentVariables() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnvironmentVariables = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("EnvironmentVariables");
+            retObjectEnvironmentVariables = classInstance.Get("EnvironmentVariables");
+            JCObject resultingObjects = (JCObject)retObjectEnvironmentVariables;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -565,6 +639,8 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 				resultingArray[indexEnvironmentVariables] = (java.lang.String)resultingArrayList.get(indexEnvironmentVariables);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectEnvironmentVariables != null ? retObjectEnvironmentVariables.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -572,7 +648,7 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
 
     public void setEnvironmentVariables(java.lang.String[] EnvironmentVariables) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnvironmentVariables", EnvironmentVariables);
         } catch (JCNativeException jcne) {

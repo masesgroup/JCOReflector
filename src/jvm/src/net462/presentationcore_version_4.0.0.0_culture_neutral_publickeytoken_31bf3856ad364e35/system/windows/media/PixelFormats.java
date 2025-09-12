@@ -158,10 +158,14 @@ public class PixelFormats extends NetObject  {
     
     public static PixelFormat getBgr101010() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBgr101010 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Bgr101010");
+            retObjectBgr101010 = classType.Get("Bgr101010");
+            JCObject val = (JCObject)retObjectBgr101010;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBgr101010 != null ? retObjectBgr101010.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getBgr24() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBgr24 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Bgr24");
+            retObjectBgr24 = classType.Get("Bgr24");
+            JCObject val = (JCObject)retObjectBgr24;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBgr24 != null ? retObjectBgr24.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getBgr32() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBgr32 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Bgr32");
+            retObjectBgr32 = classType.Get("Bgr32");
+            JCObject val = (JCObject)retObjectBgr32;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBgr32 != null ? retObjectBgr32.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getBgr555() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBgr555 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Bgr555");
+            retObjectBgr555 = classType.Get("Bgr555");
+            JCObject val = (JCObject)retObjectBgr555;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBgr555 != null ? retObjectBgr555.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getBgr565() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBgr565 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Bgr565");
+            retObjectBgr565 = classType.Get("Bgr565");
+            JCObject val = (JCObject)retObjectBgr565;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBgr565 != null ? retObjectBgr565.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getBgra32() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBgra32 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Bgra32");
+            retObjectBgra32 = classType.Get("Bgra32");
+            JCObject val = (JCObject)retObjectBgra32;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBgra32 != null ? retObjectBgra32.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +248,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getBlackWhite() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBlackWhite = null;
         try {
-            JCObject val = (JCObject)classType.Get("BlackWhite");
+            retObjectBlackWhite = classType.Get("BlackWhite");
+            JCObject val = (JCObject)retObjectBlackWhite;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlackWhite != null ? retObjectBlackWhite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +263,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getCmyk32() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCmyk32 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Cmyk32");
+            retObjectCmyk32 = classType.Get("Cmyk32");
+            JCObject val = (JCObject)retObjectCmyk32;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCmyk32 != null ? retObjectCmyk32.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +278,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getDefault() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            retObjectDefault = classType.Get("Default");
+            JCObject val = (JCObject)retObjectDefault;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +293,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getGray16() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGray16 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Gray16");
+            retObjectGray16 = classType.Get("Gray16");
+            JCObject val = (JCObject)retObjectGray16;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGray16 != null ? retObjectGray16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +308,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getGray2() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGray2 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Gray2");
+            retObjectGray2 = classType.Get("Gray2");
+            JCObject val = (JCObject)retObjectGray2;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGray2 != null ? retObjectGray2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +323,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getGray32Float() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGray32Float = null;
         try {
-            JCObject val = (JCObject)classType.Get("Gray32Float");
+            retObjectGray32Float = classType.Get("Gray32Float");
+            JCObject val = (JCObject)retObjectGray32Float;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGray32Float != null ? retObjectGray32Float.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +338,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getGray4() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGray4 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Gray4");
+            retObjectGray4 = classType.Get("Gray4");
+            JCObject val = (JCObject)retObjectGray4;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGray4 != null ? retObjectGray4.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +353,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getGray8() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGray8 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Gray8");
+            retObjectGray8 = classType.Get("Gray8");
+            JCObject val = (JCObject)retObjectGray8;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGray8 != null ? retObjectGray8.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,10 +368,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getIndexed1() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIndexed1 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Indexed1");
+            retObjectIndexed1 = classType.Get("Indexed1");
+            JCObject val = (JCObject)retObjectIndexed1;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIndexed1 != null ? retObjectIndexed1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +383,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getIndexed2() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIndexed2 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Indexed2");
+            retObjectIndexed2 = classType.Get("Indexed2");
+            JCObject val = (JCObject)retObjectIndexed2;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIndexed2 != null ? retObjectIndexed2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,10 +398,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getIndexed4() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIndexed4 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Indexed4");
+            retObjectIndexed4 = classType.Get("Indexed4");
+            JCObject val = (JCObject)retObjectIndexed4;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIndexed4 != null ? retObjectIndexed4.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,10 +413,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getIndexed8() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIndexed8 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Indexed8");
+            retObjectIndexed8 = classType.Get("Indexed8");
+            JCObject val = (JCObject)retObjectIndexed8;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIndexed8 != null ? retObjectIndexed8.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,10 +428,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getPbgra32() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPbgra32 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Pbgra32");
+            retObjectPbgra32 = classType.Get("Pbgra32");
+            JCObject val = (JCObject)retObjectPbgra32;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPbgra32 != null ? retObjectPbgra32.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,10 +443,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getPrgba128Float() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPrgba128Float = null;
         try {
-            JCObject val = (JCObject)classType.Get("Prgba128Float");
+            retObjectPrgba128Float = classType.Get("Prgba128Float");
+            JCObject val = (JCObject)retObjectPrgba128Float;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrgba128Float != null ? retObjectPrgba128Float.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,10 +458,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getPrgba64() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPrgba64 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Prgba64");
+            retObjectPrgba64 = classType.Get("Prgba64");
+            JCObject val = (JCObject)retObjectPrgba64;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrgba64 != null ? retObjectPrgba64.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,10 +473,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getRgb128Float() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRgb128Float = null;
         try {
-            JCObject val = (JCObject)classType.Get("Rgb128Float");
+            retObjectRgb128Float = classType.Get("Rgb128Float");
+            JCObject val = (JCObject)retObjectRgb128Float;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRgb128Float != null ? retObjectRgb128Float.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,10 +488,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getRgb24() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRgb24 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Rgb24");
+            retObjectRgb24 = classType.Get("Rgb24");
+            JCObject val = (JCObject)retObjectRgb24;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRgb24 != null ? retObjectRgb24.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,10 +503,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getRgb48() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRgb48 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Rgb48");
+            retObjectRgb48 = classType.Get("Rgb48");
+            JCObject val = (JCObject)retObjectRgb48;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRgb48 != null ? retObjectRgb48.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,10 +518,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getRgba128Float() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRgba128Float = null;
         try {
-            JCObject val = (JCObject)classType.Get("Rgba128Float");
+            retObjectRgba128Float = classType.Get("Rgba128Float");
+            JCObject val = (JCObject)retObjectRgba128Float;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRgba128Float != null ? retObjectRgba128Float.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,10 +533,14 @@ public class PixelFormats extends NetObject  {
 
     public static PixelFormat getRgba64() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRgba64 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Rgba64");
+            retObjectRgba64 = classType.Get("Rgba64");
+            JCObject val = (JCObject)retObjectRgba64;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRgba64 != null ? retObjectRgba64.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

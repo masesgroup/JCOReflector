@@ -166,9 +166,13 @@ public class DirectiveAttribute extends Attribute  {
     
     public boolean getAllowedOnMobilePages() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowedOnMobilePages = null;
         try {
-            return (boolean)classInstance.Get("AllowedOnMobilePages");
+            retObjectAllowedOnMobilePages = classInstance.Get("AllowedOnMobilePages");
+            return (boolean)retObjectAllowedOnMobilePages;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowedOnMobilePages != null ? retObjectAllowedOnMobilePages.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class DirectiveAttribute extends Attribute  {
 
     public void setAllowedOnMobilePages(boolean AllowedOnMobilePages) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowedOnMobilePages", AllowedOnMobilePages);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class DirectiveAttribute extends Attribute  {
 
     public boolean getCulture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCulture = null;
         try {
-            return (boolean)classInstance.Get("Culture");
+            retObjectCulture = classInstance.Get("Culture");
+            return (boolean)retObjectCulture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCulture != null ? retObjectCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class DirectiveAttribute extends Attribute  {
 
     public void setCulture(boolean Culture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Culture", Culture);
         } catch (JCNativeException jcne) {
@@ -206,9 +214,13 @@ public class DirectiveAttribute extends Attribute  {
 
     public boolean getServerLanguageExtensions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServerLanguageExtensions = null;
         try {
-            return (boolean)classInstance.Get("ServerLanguageExtensions");
+            retObjectServerLanguageExtensions = classInstance.Get("ServerLanguageExtensions");
+            return (boolean)retObjectServerLanguageExtensions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectServerLanguageExtensions != null ? retObjectServerLanguageExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class DirectiveAttribute extends Attribute  {
 
     public void setServerLanguageExtensions(boolean ServerLanguageExtensions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServerLanguageExtensions", ServerLanguageExtensions);
         } catch (JCNativeException jcne) {
@@ -226,9 +238,13 @@ public class DirectiveAttribute extends Attribute  {
 
     public boolean getServerLanguageNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServerLanguageNames = null;
         try {
-            return (boolean)classInstance.Get("ServerLanguageNames");
+            retObjectServerLanguageNames = classInstance.Get("ServerLanguageNames");
+            return (boolean)retObjectServerLanguageNames;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectServerLanguageNames != null ? retObjectServerLanguageNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +252,7 @@ public class DirectiveAttribute extends Attribute  {
 
     public void setServerLanguageNames(boolean ServerLanguageNames) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServerLanguageNames", ServerLanguageNames);
         } catch (JCNativeException jcne) {
@@ -246,9 +262,13 @@ public class DirectiveAttribute extends Attribute  {
 
     public java.lang.String getBuilderType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuilderType = null;
         try {
-            return (java.lang.String)classInstance.Get("BuilderType");
+            retObjectBuilderType = classInstance.Get("BuilderType");
+            return (java.lang.String)retObjectBuilderType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBuilderType != null ? retObjectBuilderType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +276,7 @@ public class DirectiveAttribute extends Attribute  {
 
     public void setBuilderType(java.lang.String BuilderType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BuilderType", BuilderType);
         } catch (JCNativeException jcne) {
@@ -266,9 +286,13 @@ public class DirectiveAttribute extends Attribute  {
 
     public java.lang.String getRenameType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenameType = null;
         try {
-            return (java.lang.String)classInstance.Get("RenameType");
+            retObjectRenameType = classInstance.Get("RenameType");
+            return (java.lang.String)retObjectRenameType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRenameType != null ? retObjectRenameType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +300,7 @@ public class DirectiveAttribute extends Attribute  {
 
     public void setRenameType(java.lang.String RenameType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RenameType", RenameType);
         } catch (JCNativeException jcne) {

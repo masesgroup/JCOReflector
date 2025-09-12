@@ -144,9 +144,13 @@ public class IDebuggerObjectImplementation extends NetObject implements IDebugge
     
     public boolean HasEnumerableMember(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasEnumerableMember = null;
         try {
-            return (boolean)classInstance.Invoke("HasEnumerableMember", name);
+            retObjectHasEnumerableMember = classInstance.Invoke("HasEnumerableMember", name);
+            return (boolean)retObjectHasEnumerableMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasEnumerableMember != null ? retObjectHasEnumerableMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,9 +158,13 @@ public class IDebuggerObjectImplementation extends NetObject implements IDebugge
 
     public boolean IsCOMObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCOMObject = null;
         try {
-            return (boolean)classInstance.Invoke("IsCOMObject");
+            retObjectIsCOMObject = classInstance.Invoke("IsCOMObject");
+            return (boolean)retObjectIsCOMObject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsCOMObject != null ? retObjectIsCOMObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +172,13 @@ public class IDebuggerObjectImplementation extends NetObject implements IDebugge
 
     public boolean IsEqual(IDebuggerObject o) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEqual = null;
         try {
-            return (boolean)classInstance.Invoke("IsEqual", o == null ? null : o.getJCOInstance());
+            retObjectIsEqual = classInstance.Invoke("IsEqual", o == null ? null : o.getJCOInstance());
+            return (boolean)retObjectIsEqual;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEqual != null ? retObjectIsEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +186,13 @@ public class IDebuggerObjectImplementation extends NetObject implements IDebugge
 
     public boolean IsScriptFunction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsScriptFunction = null;
         try {
-            return (boolean)classInstance.Invoke("IsScriptFunction");
+            retObjectIsScriptFunction = classInstance.Invoke("IsScriptFunction");
+            return (boolean)retObjectIsScriptFunction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsScriptFunction != null ? retObjectIsScriptFunction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +200,13 @@ public class IDebuggerObjectImplementation extends NetObject implements IDebugge
 
     public boolean IsScriptObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsScriptObject = null;
         try {
-            return (boolean)classInstance.Invoke("IsScriptObject");
+            retObjectIsScriptObject = classInstance.Invoke("IsScriptObject");
+            return (boolean)retObjectIsScriptObject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsScriptObject != null ? retObjectIsScriptObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

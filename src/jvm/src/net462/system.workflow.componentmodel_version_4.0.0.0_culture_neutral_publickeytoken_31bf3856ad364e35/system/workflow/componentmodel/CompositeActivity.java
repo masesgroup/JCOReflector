@@ -177,10 +177,14 @@ public class CompositeActivity extends Activity  {
     
     public ActivityCollection getActivities() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivities = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Activities");
+            retObjectActivities = classInstance.Get("Activities");
+            JCObject val = (JCObject)retObjectActivities;
             return new ActivityCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivities != null ? retObjectActivities.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

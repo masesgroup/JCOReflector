@@ -174,10 +174,14 @@ public class CompositeDesignerTheme extends ActivityDesignerTheme  {
     
     public Brush GetExpandButtonBackgroundBrush(Rectangle rectangle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExpandButtonBackgroundBrush = null;
         try {
-            JCObject objGetExpandButtonBackgroundBrush = (JCObject)classInstance.Invoke("GetExpandButtonBackgroundBrush", rectangle == null ? null : rectangle.getJCOInstance());
+            retObjectGetExpandButtonBackgroundBrush = classInstance.Invoke("GetExpandButtonBackgroundBrush", rectangle == null ? null : rectangle.getJCOInstance());
+            JCObject objGetExpandButtonBackgroundBrush = (JCObject)retObjectGetExpandButtonBackgroundBrush;
             return new Brush(objGetExpandButtonBackgroundBrush);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExpandButtonBackgroundBrush != null ? retObjectGetExpandButtonBackgroundBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +189,7 @@ public class CompositeDesignerTheme extends ActivityDesignerTheme  {
 
     public void Initialize() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize");
         } catch (JCNativeException jcne) {
@@ -195,7 +199,7 @@ public class CompositeDesignerTheme extends ActivityDesignerTheme  {
 
     public void OnAmbientPropertyChanged(AmbientProperty ambientProperty) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnAmbientPropertyChanged", ambientProperty == null ? null : ambientProperty.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,9 +213,13 @@ public class CompositeDesignerTheme extends ActivityDesignerTheme  {
     
     public boolean getShowDropShadow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowDropShadow = null;
         try {
-            return (boolean)classInstance.Get("ShowDropShadow");
+            retObjectShowDropShadow = classInstance.Get("ShowDropShadow");
+            return (boolean)retObjectShowDropShadow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowDropShadow != null ? retObjectShowDropShadow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +227,7 @@ public class CompositeDesignerTheme extends ActivityDesignerTheme  {
 
     public void setShowDropShadow(boolean ShowDropShadow) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowDropShadow", ShowDropShadow);
         } catch (JCNativeException jcne) {
@@ -229,10 +237,14 @@ public class CompositeDesignerTheme extends ActivityDesignerTheme  {
 
     public Image getWatermarkImage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWatermarkImage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WatermarkImage");
+            retObjectWatermarkImage = classInstance.Get("WatermarkImage");
+            JCObject val = (JCObject)retObjectWatermarkImage;
             return new Image(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWatermarkImage != null ? retObjectWatermarkImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +252,14 @@ public class CompositeDesignerTheme extends ActivityDesignerTheme  {
 
     public Size getConnectorSize() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectorSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConnectorSize");
+            retObjectConnectorSize = classInstance.Get("ConnectorSize");
+            JCObject val = (JCObject)retObjectConnectorSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectorSize != null ? retObjectConnectorSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,10 +267,14 @@ public class CompositeDesignerTheme extends ActivityDesignerTheme  {
 
     public Size getExpandButtonSize() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpandButtonSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExpandButtonSize");
+            retObjectExpandButtonSize = classInstance.Get("ExpandButtonSize");
+            JCObject val = (JCObject)retObjectExpandButtonSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpandButtonSize != null ? retObjectExpandButtonSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,9 +282,13 @@ public class CompositeDesignerTheme extends ActivityDesignerTheme  {
 
     public java.lang.String getWatermarkImagePath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWatermarkImagePath = null;
         try {
-            return (java.lang.String)classInstance.Get("WatermarkImagePath");
+            retObjectWatermarkImagePath = classInstance.Get("WatermarkImagePath");
+            return (java.lang.String)retObjectWatermarkImagePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWatermarkImagePath != null ? retObjectWatermarkImagePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +296,7 @@ public class CompositeDesignerTheme extends ActivityDesignerTheme  {
 
     public void setWatermarkImagePath(java.lang.String WatermarkImagePath) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WatermarkImagePath", WatermarkImagePath);
         } catch (JCNativeException jcne) {
@@ -282,10 +306,14 @@ public class CompositeDesignerTheme extends ActivityDesignerTheme  {
 
     public DesignerContentAlignment getWatermarkAlignment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWatermarkAlignment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WatermarkAlignment");
+            retObjectWatermarkAlignment = classInstance.Get("WatermarkAlignment");
+            JCObject val = (JCObject)retObjectWatermarkAlignment;
             return new DesignerContentAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWatermarkAlignment != null ? retObjectWatermarkAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,7 +321,7 @@ public class CompositeDesignerTheme extends ActivityDesignerTheme  {
 
     public void setWatermarkAlignment(DesignerContentAlignment WatermarkAlignment) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WatermarkAlignment", WatermarkAlignment == null ? null : WatermarkAlignment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -303,10 +331,14 @@ public class CompositeDesignerTheme extends ActivityDesignerTheme  {
 
     public LineAnchor getConnectorEndCap() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectorEndCap = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConnectorEndCap");
+            retObjectConnectorEndCap = classInstance.Get("ConnectorEndCap");
+            JCObject val = (JCObject)retObjectConnectorEndCap;
             return new LineAnchor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectorEndCap != null ? retObjectConnectorEndCap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,7 +346,7 @@ public class CompositeDesignerTheme extends ActivityDesignerTheme  {
 
     public void setConnectorEndCap(LineAnchor ConnectorEndCap) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConnectorEndCap", ConnectorEndCap == null ? null : ConnectorEndCap.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -324,10 +356,14 @@ public class CompositeDesignerTheme extends ActivityDesignerTheme  {
 
     public LineAnchor getConnectorStartCap() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectorStartCap = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConnectorStartCap");
+            retObjectConnectorStartCap = classInstance.Get("ConnectorStartCap");
+            JCObject val = (JCObject)retObjectConnectorStartCap;
             return new LineAnchor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectorStartCap != null ? retObjectConnectorStartCap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,7 +371,7 @@ public class CompositeDesignerTheme extends ActivityDesignerTheme  {
 
     public void setConnectorStartCap(LineAnchor ConnectorStartCap) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConnectorStartCap", ConnectorStartCap == null ? null : ConnectorStartCap.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -149,10 +149,14 @@ public class ICustomTypeDescriptorImplementation extends NetObject implements IC
     
     public AttributeCollection GetAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttributes = null;
         try {
-            JCObject objGetAttributes = (JCObject)classInstance.Invoke("GetAttributes");
+            retObjectGetAttributes = classInstance.Invoke("GetAttributes");
+            JCObject objGetAttributes = (JCObject)retObjectGetAttributes;
             return new AttributeCollection(objGetAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAttributes != null ? retObjectGetAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,10 +164,14 @@ public class ICustomTypeDescriptorImplementation extends NetObject implements IC
 
     public EventDescriptor GetDefaultEvent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDefaultEvent = null;
         try {
-            JCObject objGetDefaultEvent = (JCObject)classInstance.Invoke("GetDefaultEvent");
+            retObjectGetDefaultEvent = classInstance.Invoke("GetDefaultEvent");
+            JCObject objGetDefaultEvent = (JCObject)retObjectGetDefaultEvent;
             return new EventDescriptor(objGetDefaultEvent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDefaultEvent != null ? retObjectGetDefaultEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +179,14 @@ public class ICustomTypeDescriptorImplementation extends NetObject implements IC
 
     public EventDescriptorCollection GetEvents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEvents = null;
         try {
-            JCObject objGetEvents = (JCObject)classInstance.Invoke("GetEvents");
+            retObjectGetEvents = classInstance.Invoke("GetEvents");
+            JCObject objGetEvents = (JCObject)retObjectGetEvents;
             return new EventDescriptorCollection(objGetEvents);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEvents != null ? retObjectGetEvents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +194,14 @@ public class ICustomTypeDescriptorImplementation extends NetObject implements IC
 
     public EventDescriptorCollection GetEvents(Attribute[] attributes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEvents = null;
         try {
-            JCObject objGetEvents = (JCObject)classInstance.Invoke("GetEvents", (java.lang.Object)toObjectFromArray(attributes));
+            retObjectGetEvents = classInstance.Invoke("GetEvents", (java.lang.Object)toObjectFromArray(attributes));
+            JCObject objGetEvents = (JCObject)retObjectGetEvents;
             return new EventDescriptorCollection(objGetEvents);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEvents != null ? retObjectGetEvents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +209,14 @@ public class ICustomTypeDescriptorImplementation extends NetObject implements IC
 
     public EventDescriptorCollection GetEventsFromRegisteredType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEventsFromRegisteredType = null;
         try {
-            JCObject objGetEventsFromRegisteredType = (JCObject)classInstance.Invoke("GetEventsFromRegisteredType");
+            retObjectGetEventsFromRegisteredType = classInstance.Invoke("GetEventsFromRegisteredType");
+            JCObject objGetEventsFromRegisteredType = (JCObject)retObjectGetEventsFromRegisteredType;
             return new EventDescriptorCollection(objGetEventsFromRegisteredType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEventsFromRegisteredType != null ? retObjectGetEventsFromRegisteredType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +224,14 @@ public class ICustomTypeDescriptorImplementation extends NetObject implements IC
 
     public PropertyDescriptor GetDefaultProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDefaultProperty = null;
         try {
-            JCObject objGetDefaultProperty = (JCObject)classInstance.Invoke("GetDefaultProperty");
+            retObjectGetDefaultProperty = classInstance.Invoke("GetDefaultProperty");
+            JCObject objGetDefaultProperty = (JCObject)retObjectGetDefaultProperty;
             return new PropertyDescriptor(objGetDefaultProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDefaultProperty != null ? retObjectGetDefaultProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +239,14 @@ public class ICustomTypeDescriptorImplementation extends NetObject implements IC
 
     public PropertyDescriptorCollection GetProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProperties = null;
         try {
-            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties");
+            retObjectGetProperties = classInstance.Invoke("GetProperties");
+            JCObject objGetProperties = (JCObject)retObjectGetProperties;
             return new PropertyDescriptorCollection(objGetProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperties != null ? retObjectGetProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +254,14 @@ public class ICustomTypeDescriptorImplementation extends NetObject implements IC
 
     public PropertyDescriptorCollection GetProperties(Attribute[] attributes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProperties = null;
         try {
-            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties", (java.lang.Object)toObjectFromArray(attributes));
+            retObjectGetProperties = classInstance.Invoke("GetProperties", (java.lang.Object)toObjectFromArray(attributes));
+            JCObject objGetProperties = (JCObject)retObjectGetProperties;
             return new PropertyDescriptorCollection(objGetProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperties != null ? retObjectGetProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +269,14 @@ public class ICustomTypeDescriptorImplementation extends NetObject implements IC
 
     public PropertyDescriptorCollection GetPropertiesFromRegisteredType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertiesFromRegisteredType = null;
         try {
-            JCObject objGetPropertiesFromRegisteredType = (JCObject)classInstance.Invoke("GetPropertiesFromRegisteredType");
+            retObjectGetPropertiesFromRegisteredType = classInstance.Invoke("GetPropertiesFromRegisteredType");
+            JCObject objGetPropertiesFromRegisteredType = (JCObject)retObjectGetPropertiesFromRegisteredType;
             return new PropertyDescriptorCollection(objGetPropertiesFromRegisteredType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertiesFromRegisteredType != null ? retObjectGetPropertiesFromRegisteredType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +284,14 @@ public class ICustomTypeDescriptorImplementation extends NetObject implements IC
 
     public TypeConverter GetConverter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetConverter = null;
         try {
-            JCObject objGetConverter = (JCObject)classInstance.Invoke("GetConverter");
+            retObjectGetConverter = classInstance.Invoke("GetConverter");
+            JCObject objGetConverter = (JCObject)retObjectGetConverter;
             return new TypeConverter(objGetConverter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConverter != null ? retObjectGetConverter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,10 +299,14 @@ public class ICustomTypeDescriptorImplementation extends NetObject implements IC
 
     public TypeConverter GetConverterFromRegisteredType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetConverterFromRegisteredType = null;
         try {
-            JCObject objGetConverterFromRegisteredType = (JCObject)classInstance.Invoke("GetConverterFromRegisteredType");
+            retObjectGetConverterFromRegisteredType = classInstance.Invoke("GetConverterFromRegisteredType");
+            JCObject objGetConverterFromRegisteredType = (JCObject)retObjectGetConverterFromRegisteredType;
             return new TypeConverter(objGetConverterFromRegisteredType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConverterFromRegisteredType != null ? retObjectGetConverterFromRegisteredType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,10 +314,14 @@ public class ICustomTypeDescriptorImplementation extends NetObject implements IC
 
     public NetObject GetEditor(NetType editorBaseType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEditor = null;
         try {
-            JCObject objGetEditor = (JCObject)classInstance.Invoke("GetEditor", editorBaseType == null ? null : editorBaseType.getJCOInstance());
+            retObjectGetEditor = classInstance.Invoke("GetEditor", editorBaseType == null ? null : editorBaseType.getJCOInstance());
+            JCObject objGetEditor = (JCObject)retObjectGetEditor;
             return new NetObject(objGetEditor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEditor != null ? retObjectGetEditor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,10 +329,14 @@ public class ICustomTypeDescriptorImplementation extends NetObject implements IC
 
     public NetObject GetPropertyOwner(PropertyDescriptor pd) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyOwner = null;
         try {
-            JCObject objGetPropertyOwner = (JCObject)classInstance.Invoke("GetPropertyOwner", pd == null ? null : pd.getJCOInstance());
+            retObjectGetPropertyOwner = classInstance.Invoke("GetPropertyOwner", pd == null ? null : pd.getJCOInstance());
+            JCObject objGetPropertyOwner = (JCObject)retObjectGetPropertyOwner;
             return new NetObject(objGetPropertyOwner);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyOwner != null ? retObjectGetPropertyOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,9 +344,13 @@ public class ICustomTypeDescriptorImplementation extends NetObject implements IC
 
     public java.lang.String GetClassName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClassName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetClassName");
+            retObjectGetClassName = classInstance.Invoke("GetClassName");
+            return (java.lang.String)retObjectGetClassName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetClassName != null ? retObjectGetClassName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,9 +358,13 @@ public class ICustomTypeDescriptorImplementation extends NetObject implements IC
 
     public java.lang.String GetComponentName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetComponentName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetComponentName");
+            retObjectGetComponentName = classInstance.Invoke("GetComponentName");
+            return (java.lang.String)retObjectGetComponentName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetComponentName != null ? retObjectGetComponentName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

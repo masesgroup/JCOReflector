@@ -159,9 +159,13 @@ public class SecurityManager extends NetObject  {
     
     public static boolean CurrentThreadRequiresSecurityContextCapture() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentThreadRequiresSecurityContextCapture = null;
         try {
-            return (boolean)classType.Invoke("CurrentThreadRequiresSecurityContextCapture");
+            retObjectCurrentThreadRequiresSecurityContextCapture = classType.Invoke("CurrentThreadRequiresSecurityContextCapture");
+            return (boolean)retObjectCurrentThreadRequiresSecurityContextCapture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCurrentThreadRequiresSecurityContextCapture != null ? retObjectCurrentThreadRequiresSecurityContextCapture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class SecurityManager extends NetObject  {
 
     public static boolean IsGranted(IPermission perm) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.security.SecurityException, system.MissingMethodException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsGranted = null;
         try {
-            return (boolean)classType.Invoke("IsGranted", perm == null ? null : perm.getJCOInstance());
+            retObjectIsGranted = classType.Invoke("IsGranted", perm == null ? null : perm.getJCOInstance());
+            return (boolean)retObjectIsGranted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsGranted != null ? retObjectIsGranted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class SecurityManager extends NetObject  {
 
     public static IEnumerator PolicyHierarchy() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPolicyHierarchy = null;
         try {
-            JCObject objPolicyHierarchy = (JCObject)classType.Invoke("PolicyHierarchy");
+            retObjectPolicyHierarchy = classType.Invoke("PolicyHierarchy");
+            JCObject objPolicyHierarchy = (JCObject)retObjectPolicyHierarchy;
             return new IEnumeratorImplementation(objPolicyHierarchy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPolicyHierarchy != null ? retObjectPolicyHierarchy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class SecurityManager extends NetObject  {
 
     public static IEnumerator ResolvePolicyGroups(Evidence evidence) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResolvePolicyGroups = null;
         try {
-            JCObject objResolvePolicyGroups = (JCObject)classType.Invoke("ResolvePolicyGroups", evidence == null ? null : evidence.getJCOInstance());
+            retObjectResolvePolicyGroups = classType.Invoke("ResolvePolicyGroups", evidence == null ? null : evidence.getJCOInstance());
+            JCObject objResolvePolicyGroups = (JCObject)retObjectResolvePolicyGroups;
             return new IEnumeratorImplementation(objResolvePolicyGroups);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolvePolicyGroups != null ? retObjectResolvePolicyGroups.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +217,14 @@ public class SecurityManager extends NetObject  {
 
     public static PermissionSet GetStandardSandbox(Evidence evidence) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.security.XmlSyntaxException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStandardSandbox = null;
         try {
-            JCObject objGetStandardSandbox = (JCObject)classType.Invoke("GetStandardSandbox", evidence == null ? null : evidence.getJCOInstance());
+            retObjectGetStandardSandbox = classType.Invoke("GetStandardSandbox", evidence == null ? null : evidence.getJCOInstance());
+            JCObject objGetStandardSandbox = (JCObject)retObjectGetStandardSandbox;
             return new PermissionSet(objGetStandardSandbox);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStandardSandbox != null ? retObjectGetStandardSandbox.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +232,14 @@ public class SecurityManager extends NetObject  {
 
     public static PermissionSet ResolvePolicy(Evidence evidence) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.MemberAccessException, system.security.XmlSyntaxException, system.security.policy.PolicyException, system.MissingMethodException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResolvePolicy = null;
         try {
-            JCObject objResolvePolicy = (JCObject)classType.Invoke("ResolvePolicy", evidence == null ? null : evidence.getJCOInstance());
+            retObjectResolvePolicy = classType.Invoke("ResolvePolicy", evidence == null ? null : evidence.getJCOInstance());
+            JCObject objResolvePolicy = (JCObject)retObjectResolvePolicy;
             return new PermissionSet(objResolvePolicy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolvePolicy != null ? retObjectResolvePolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +247,14 @@ public class SecurityManager extends NetObject  {
 
     public static PermissionSet ResolvePolicy(Evidence evidence, PermissionSet reqdPset, PermissionSet optPset, PermissionSet denyPset, JCORefOut<PermissionSet> denied) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.MissingMethodException, system.IndexOutOfRangeException, system.MemberAccessException, system.security.XmlSyntaxException, system.security.policy.PolicyException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResolvePolicy = null;
         try {
-            JCObject objResolvePolicy = (JCObject)classType.Invoke("ResolvePolicy", evidence == null ? null : evidence.getJCOInstance(), reqdPset == null ? null : reqdPset.getJCOInstance(), optPset == null ? null : optPset.getJCOInstance(), denyPset == null ? null : denyPset.getJCOInstance(), denied.getJCRefOut());
+            retObjectResolvePolicy = classType.Invoke("ResolvePolicy", evidence == null ? null : evidence.getJCOInstance(), reqdPset == null ? null : reqdPset.getJCOInstance(), optPset == null ? null : optPset.getJCOInstance(), denyPset == null ? null : denyPset.getJCOInstance(), denied.getJCRefOut());
+            JCObject objResolvePolicy = (JCObject)retObjectResolvePolicy;
             return new PermissionSet(objResolvePolicy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolvePolicy != null ? retObjectResolvePolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +262,14 @@ public class SecurityManager extends NetObject  {
 
     public static PermissionSet ResolvePolicy(Evidence[] evidences) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.MemberAccessException, system.security.XmlSyntaxException, system.security.policy.PolicyException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResolvePolicy = null;
         try {
-            JCObject objResolvePolicy = (JCObject)classType.Invoke("ResolvePolicy", (java.lang.Object)toObjectFromArray(evidences));
+            retObjectResolvePolicy = classType.Invoke("ResolvePolicy", (java.lang.Object)toObjectFromArray(evidences));
+            JCObject objResolvePolicy = (JCObject)retObjectResolvePolicy;
             return new PermissionSet(objResolvePolicy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolvePolicy != null ? retObjectResolvePolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +277,14 @@ public class SecurityManager extends NetObject  {
 
     public static PermissionSet ResolveSystemPolicy(Evidence evidence) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.security.XmlSyntaxException, system.InvalidCastException, system.security.SecurityException, system.security.policy.PolicyException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResolveSystemPolicy = null;
         try {
-            JCObject objResolveSystemPolicy = (JCObject)classType.Invoke("ResolveSystemPolicy", evidence == null ? null : evidence.getJCOInstance());
+            retObjectResolveSystemPolicy = classType.Invoke("ResolveSystemPolicy", evidence == null ? null : evidence.getJCOInstance());
+            JCObject objResolveSystemPolicy = (JCObject)retObjectResolveSystemPolicy;
             return new PermissionSet(objResolveSystemPolicy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveSystemPolicy != null ? retObjectResolveSystemPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +292,14 @@ public class SecurityManager extends NetObject  {
 
     public static PolicyLevel LoadPolicyLevelFromFile(java.lang.String path, PolicyLevelType type) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.security.SecurityException, system.OutOfMemoryException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoadPolicyLevelFromFile = null;
         try {
-            JCObject objLoadPolicyLevelFromFile = (JCObject)classType.Invoke("LoadPolicyLevelFromFile", path, type == null ? null : type.getJCOInstance());
+            retObjectLoadPolicyLevelFromFile = classType.Invoke("LoadPolicyLevelFromFile", path, type == null ? null : type.getJCOInstance());
+            JCObject objLoadPolicyLevelFromFile = (JCObject)retObjectLoadPolicyLevelFromFile;
             return new PolicyLevel(objLoadPolicyLevelFromFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadPolicyLevelFromFile != null ? retObjectLoadPolicyLevelFromFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +307,14 @@ public class SecurityManager extends NetObject  {
 
     public static PolicyLevel LoadPolicyLevelFromString(java.lang.String str, PolicyLevelType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoadPolicyLevelFromString = null;
         try {
-            JCObject objLoadPolicyLevelFromString = (JCObject)classType.Invoke("LoadPolicyLevelFromString", str, type == null ? null : type.getJCOInstance());
+            retObjectLoadPolicyLevelFromString = classType.Invoke("LoadPolicyLevelFromString", str, type == null ? null : type.getJCOInstance());
+            JCObject objLoadPolicyLevelFromString = (JCObject)retObjectLoadPolicyLevelFromString;
             return new PolicyLevel(objLoadPolicyLevelFromString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadPolicyLevelFromString != null ? retObjectLoadPolicyLevelFromString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +322,7 @@ public class SecurityManager extends NetObject  {
 
     public static void GetZoneAndOrigin(JCORefOut<NetArrayList> zone, JCORefOut<NetArrayList> origin) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("GetZoneAndOrigin", zone.getJCRefOut(), origin.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -288,7 +332,7 @@ public class SecurityManager extends NetObject  {
 
     public static void SavePolicy() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.security.policy.PolicyException, system.security.SecurityException, system.security.XmlSyntaxException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SavePolicy");
         } catch (JCNativeException jcne) {
@@ -298,7 +342,7 @@ public class SecurityManager extends NetObject  {
 
     public static void SavePolicyLevel(PolicyLevel level) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.security.policy.PolicyException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.security.XmlSyntaxException, system.RankException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SavePolicyLevel", level == null ? null : level.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -312,9 +356,13 @@ public class SecurityManager extends NetObject  {
     
     public static boolean getCheckExecutionRights() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCheckExecutionRights = null;
         try {
-            return (boolean)classType.Get("CheckExecutionRights");
+            retObjectCheckExecutionRights = classType.Get("CheckExecutionRights");
+            return (boolean)retObjectCheckExecutionRights;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCheckExecutionRights != null ? retObjectCheckExecutionRights.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +370,7 @@ public class SecurityManager extends NetObject  {
 
     public static void setCheckExecutionRights(boolean CheckExecutionRights) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("CheckExecutionRights", CheckExecutionRights);
         } catch (JCNativeException jcne) {
@@ -332,9 +380,13 @@ public class SecurityManager extends NetObject  {
 
     public static boolean getSecurityEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSecurityEnabled = null;
         try {
-            return (boolean)classType.Get("SecurityEnabled");
+            retObjectSecurityEnabled = classType.Get("SecurityEnabled");
+            return (boolean)retObjectSecurityEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSecurityEnabled != null ? retObjectSecurityEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +394,7 @@ public class SecurityManager extends NetObject  {
 
     public static void setSecurityEnabled(boolean SecurityEnabled) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("SecurityEnabled", SecurityEnabled);
         } catch (JCNativeException jcne) {

@@ -167,7 +167,7 @@ public class XPathMessageFilterElementComparer extends NetObject implements syst
      */
     @Deprecated 
     public int Compare(NetObject x, NetObject y) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComparer to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComparer to obtain the full interface.");
     }
 
 

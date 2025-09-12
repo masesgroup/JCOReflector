@@ -198,9 +198,13 @@ public class EncryptedKeyIdentifierClause extends BinaryKeyIdentifierClause  {
     
     public boolean Matches(byte[] encryptedKey, java.lang.String encryptionMethod, java.lang.String carriedKeyName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", encryptedKey, encryptionMethod, carriedKeyName);
+            retObjectMatches = classInstance.Invoke("Matches", encryptedKey, encryptionMethod, carriedKeyName);
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +212,13 @@ public class EncryptedKeyIdentifierClause extends BinaryKeyIdentifierClause  {
 
     public boolean Matches(JCORefOut dupParam0, java.lang.String dupParam1, java.lang.String dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectMatches = classInstance.Invoke("Matches", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +226,13 @@ public class EncryptedKeyIdentifierClause extends BinaryKeyIdentifierClause  {
 
     public boolean Matches(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            retObjectMatches = classInstance.Invoke("Matches", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +240,12 @@ public class EncryptedKeyIdentifierClause extends BinaryKeyIdentifierClause  {
 
     public byte[] GetEncryptedKey() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEncryptedKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetEncryptedKey");
+            retObjectGetEncryptedKey = classInstance.Invoke("GetEncryptedKey");
+            JCObject resultingObjects = (JCObject)retObjectGetEncryptedKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -240,6 +254,8 @@ public class EncryptedKeyIdentifierClause extends BinaryKeyIdentifierClause  {
 				resultingArray[indexGetEncryptedKey] = (byte)resultingArrayList.get(indexGetEncryptedKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetEncryptedKey != null ? retObjectGetEncryptedKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,10 +267,14 @@ public class EncryptedKeyIdentifierClause extends BinaryKeyIdentifierClause  {
     
     public SecurityKeyIdentifier getEncryptingKeyIdentifier() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptingKeyIdentifier = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EncryptingKeyIdentifier");
+            retObjectEncryptingKeyIdentifier = classInstance.Get("EncryptingKeyIdentifier");
+            JCObject val = (JCObject)retObjectEncryptingKeyIdentifier;
             return new SecurityKeyIdentifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncryptingKeyIdentifier != null ? retObjectEncryptingKeyIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,9 +282,13 @@ public class EncryptedKeyIdentifierClause extends BinaryKeyIdentifierClause  {
 
     public java.lang.String getCarriedKeyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCarriedKeyName = null;
         try {
-            return (java.lang.String)classInstance.Get("CarriedKeyName");
+            retObjectCarriedKeyName = classInstance.Get("CarriedKeyName");
+            return (java.lang.String)retObjectCarriedKeyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCarriedKeyName != null ? retObjectCarriedKeyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,9 +296,13 @@ public class EncryptedKeyIdentifierClause extends BinaryKeyIdentifierClause  {
 
     public java.lang.String getEncryptionMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptionMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("EncryptionMethod");
+            retObjectEncryptionMethod = classInstance.Get("EncryptionMethod");
+            return (java.lang.String)retObjectEncryptionMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEncryptionMethod != null ? retObjectEncryptionMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

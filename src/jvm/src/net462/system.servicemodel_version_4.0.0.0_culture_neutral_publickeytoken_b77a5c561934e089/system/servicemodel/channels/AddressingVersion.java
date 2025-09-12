@@ -160,10 +160,14 @@ public class AddressingVersion extends NetObject  {
     
     public static AddressingVersion getNone() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNone = null;
         try {
-            JCObject val = (JCObject)classType.Get("None");
+            retObjectNone = classType.Get("None");
+            JCObject val = (JCObject)retObjectNone;
             return new AddressingVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNone != null ? retObjectNone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class AddressingVersion extends NetObject  {
 
     public static AddressingVersion getWSAddressing10() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWSAddressing10 = null;
         try {
-            JCObject val = (JCObject)classType.Get("WSAddressing10");
+            retObjectWSAddressing10 = classType.Get("WSAddressing10");
+            JCObject val = (JCObject)retObjectWSAddressing10;
             return new AddressingVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSAddressing10 != null ? retObjectWSAddressing10.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class AddressingVersion extends NetObject  {
 
     public static AddressingVersion getWSAddressingAugust2004() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWSAddressingAugust2004 = null;
         try {
-            JCObject val = (JCObject)classType.Get("WSAddressingAugust2004");
+            retObjectWSAddressingAugust2004 = classType.Get("WSAddressingAugust2004");
+            JCObject val = (JCObject)retObjectWSAddressingAugust2004;
             return new AddressingVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSAddressingAugust2004 != null ? retObjectWSAddressingAugust2004.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

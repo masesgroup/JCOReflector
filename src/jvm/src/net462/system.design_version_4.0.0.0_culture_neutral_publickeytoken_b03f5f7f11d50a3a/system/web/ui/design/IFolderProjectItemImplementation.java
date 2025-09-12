@@ -148,10 +148,14 @@ public class IFolderProjectItemImplementation extends NetObject implements IFold
     
     public IDocumentProjectItem AddDocument(java.lang.String name, byte[] content) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddDocument = null;
         try {
-            JCObject objAddDocument = (JCObject)classInstance.Invoke("AddDocument", name, content);
+            retObjectAddDocument = classInstance.Invoke("AddDocument", name, content);
+            JCObject objAddDocument = (JCObject)retObjectAddDocument;
             return new IDocumentProjectItemImplementation(objAddDocument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddDocument != null ? retObjectAddDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,10 +163,14 @@ public class IFolderProjectItemImplementation extends NetObject implements IFold
 
     public IDocumentProjectItem AddDocument(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddDocument = null;
         try {
-            JCObject objAddDocument = (JCObject)classInstance.Invoke("AddDocument", dupParam0, dupParam1.getJCRefOut());
+            retObjectAddDocument = classInstance.Invoke("AddDocument", dupParam0, dupParam1.getJCRefOut());
+            JCObject objAddDocument = (JCObject)retObjectAddDocument;
             return new IDocumentProjectItemImplementation(objAddDocument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddDocument != null ? retObjectAddDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +178,14 @@ public class IFolderProjectItemImplementation extends NetObject implements IFold
 
     public IFolderProjectItem AddFolder(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddFolder = null;
         try {
-            JCObject objAddFolder = (JCObject)classInstance.Invoke("AddFolder", name);
+            retObjectAddFolder = classInstance.Invoke("AddFolder", name);
+            JCObject objAddFolder = (JCObject)retObjectAddFolder;
             return new IFolderProjectItemImplementation(objAddFolder);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddFolder != null ? retObjectAddFolder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +197,14 @@ public class IFolderProjectItemImplementation extends NetObject implements IFold
     
     public ICollection getChildren() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChildren = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Children");
+            retObjectChildren = classInstance.Get("Children");
+            JCObject val = (JCObject)retObjectChildren;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChildren != null ? retObjectChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

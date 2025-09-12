@@ -167,9 +167,13 @@ public class CompareValidator extends BaseCompareValidator  {
     
     public java.lang.String getControlToCompare() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlToCompare = null;
         try {
-            return (java.lang.String)classInstance.Get("ControlToCompare");
+            retObjectControlToCompare = classInstance.Get("ControlToCompare");
+            return (java.lang.String)retObjectControlToCompare;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectControlToCompare != null ? retObjectControlToCompare.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class CompareValidator extends BaseCompareValidator  {
 
     public void setControlToCompare(java.lang.String ControlToCompare) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ControlToCompare", ControlToCompare);
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class CompareValidator extends BaseCompareValidator  {
 
     public java.lang.String getValueToCompare() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueToCompare = null;
         try {
-            return (java.lang.String)classInstance.Get("ValueToCompare");
+            retObjectValueToCompare = classInstance.Get("ValueToCompare");
+            return (java.lang.String)retObjectValueToCompare;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValueToCompare != null ? retObjectValueToCompare.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class CompareValidator extends BaseCompareValidator  {
 
     public void setValueToCompare(java.lang.String ValueToCompare) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValueToCompare", ValueToCompare);
         } catch (JCNativeException jcne) {
@@ -207,10 +215,14 @@ public class CompareValidator extends BaseCompareValidator  {
 
     public ValidationCompareOperator getOperator() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Operator");
+            retObjectOperator = classInstance.Get("Operator");
+            JCObject val = (JCObject)retObjectOperator;
             return new ValidationCompareOperator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperator != null ? retObjectOperator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class CompareValidator extends BaseCompareValidator  {
 
     public void setOperator(ValidationCompareOperator Operator) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Operator", Operator == null ? null : Operator.getJCOInstance());
         } catch (JCNativeException jcne) {

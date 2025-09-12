@@ -171,10 +171,14 @@ public class TouchEventArgs extends InputEventArgs  {
     
     public TouchPoint GetTouchPoint(IInputElement relativeTo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTouchPoint = null;
         try {
-            JCObject objGetTouchPoint = (JCObject)classInstance.Invoke("GetTouchPoint", relativeTo == null ? null : relativeTo.getJCOInstance());
+            retObjectGetTouchPoint = classInstance.Invoke("GetTouchPoint", relativeTo == null ? null : relativeTo.getJCOInstance());
+            JCObject objGetTouchPoint = (JCObject)retObjectGetTouchPoint;
             return new TouchPoint(objGetTouchPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTouchPoint != null ? retObjectGetTouchPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class TouchEventArgs extends InputEventArgs  {
 
     public TouchPointCollection GetIntermediateTouchPoints(IInputElement relativeTo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIntermediateTouchPoints = null;
         try {
-            JCObject objGetIntermediateTouchPoints = (JCObject)classInstance.Invoke("GetIntermediateTouchPoints", relativeTo == null ? null : relativeTo.getJCOInstance());
+            retObjectGetIntermediateTouchPoints = classInstance.Invoke("GetIntermediateTouchPoints", relativeTo == null ? null : relativeTo.getJCOInstance());
+            JCObject objGetIntermediateTouchPoints = (JCObject)retObjectGetIntermediateTouchPoints;
             return new TouchPointCollection(objGetIntermediateTouchPoints);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIntermediateTouchPoints != null ? retObjectGetIntermediateTouchPoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +205,14 @@ public class TouchEventArgs extends InputEventArgs  {
     
     public TouchDevice getTouchDevice() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTouchDevice = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TouchDevice");
+            retObjectTouchDevice = classInstance.Get("TouchDevice");
+            JCObject val = (JCObject)retObjectTouchDevice;
             return new TouchDevice(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTouchDevice != null ? retObjectTouchDevice.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

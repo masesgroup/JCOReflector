@@ -170,10 +170,14 @@ public class CacheItemPolicy extends NetObject  {
     
     public DateTimeOffset getAbsoluteExpiration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAbsoluteExpiration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AbsoluteExpiration");
+            retObjectAbsoluteExpiration = classInstance.Get("AbsoluteExpiration");
+            JCObject val = (JCObject)retObjectAbsoluteExpiration;
             return new DateTimeOffset(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAbsoluteExpiration != null ? retObjectAbsoluteExpiration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class CacheItemPolicy extends NetObject  {
 
     public void setAbsoluteExpiration(DateTimeOffset AbsoluteExpiration) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AbsoluteExpiration", AbsoluteExpiration == null ? null : AbsoluteExpiration.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -191,9 +195,13 @@ public class CacheItemPolicy extends NetObject  {
 
     public CacheEntryRemovedCallback getRemovedCallback() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemovedCallback = null;
         try {
-            return (CacheEntryRemovedCallback)classInstance.Get("RemovedCallback");
+            retObjectRemovedCallback = classInstance.Get("RemovedCallback");
+            return (CacheEntryRemovedCallback)retObjectRemovedCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into CacheEntryRemovedCallback", retObjectRemovedCallback != null ? retObjectRemovedCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class CacheItemPolicy extends NetObject  {
 
     public void setRemovedCallback(CacheEntryRemovedCallback RemovedCallback) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RemovedCallback", RemovedCallback);
         } catch (JCNativeException jcne) {
@@ -211,9 +219,13 @@ public class CacheItemPolicy extends NetObject  {
 
     public CacheEntryUpdateCallback getUpdateCallback() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateCallback = null;
         try {
-            return (CacheEntryUpdateCallback)classInstance.Get("UpdateCallback");
+            retObjectUpdateCallback = classInstance.Get("UpdateCallback");
+            return (CacheEntryUpdateCallback)retObjectUpdateCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into CacheEntryUpdateCallback", retObjectUpdateCallback != null ? retObjectUpdateCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +233,7 @@ public class CacheItemPolicy extends NetObject  {
 
     public void setUpdateCallback(CacheEntryUpdateCallback UpdateCallback) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateCallback", UpdateCallback);
         } catch (JCNativeException jcne) {
@@ -231,10 +243,14 @@ public class CacheItemPolicy extends NetObject  {
 
     public CacheItemPriority getPriority() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPriority = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Priority");
+            retObjectPriority = classInstance.Get("Priority");
+            JCObject val = (JCObject)retObjectPriority;
             return new CacheItemPriority(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPriority != null ? retObjectPriority.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class CacheItemPolicy extends NetObject  {
 
     public void setPriority(CacheItemPriority Priority) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Priority", Priority == null ? null : Priority.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,10 +268,14 @@ public class CacheItemPolicy extends NetObject  {
 
     public TimeSpan getSlidingExpiration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSlidingExpiration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SlidingExpiration");
+            retObjectSlidingExpiration = classInstance.Get("SlidingExpiration");
+            JCObject val = (JCObject)retObjectSlidingExpiration;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSlidingExpiration != null ? retObjectSlidingExpiration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +283,7 @@ public class CacheItemPolicy extends NetObject  {
 
     public void setSlidingExpiration(TimeSpan SlidingExpiration) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SlidingExpiration", SlidingExpiration == null ? null : SlidingExpiration.getJCOInstance());
         } catch (JCNativeException jcne) {

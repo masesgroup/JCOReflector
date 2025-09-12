@@ -166,10 +166,14 @@ public class CallingDataMethodsEventArgs extends EventArgs  {
     
     public NetObject getDataMethodsObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataMethodsObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataMethodsObject");
+            retObjectDataMethodsObject = classInstance.Get("DataMethodsObject");
+            JCObject val = (JCObject)retObjectDataMethodsObject;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataMethodsObject != null ? retObjectDataMethodsObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class CallingDataMethodsEventArgs extends EventArgs  {
 
     public void setDataMethodsObject(NetObject DataMethodsObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataMethodsObject", DataMethodsObject == null ? null : DataMethodsObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,10 +191,14 @@ public class CallingDataMethodsEventArgs extends EventArgs  {
 
     public NetType getDataMethodsType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataMethodsType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataMethodsType");
+            retObjectDataMethodsType = classInstance.Get("DataMethodsType");
+            JCObject val = (JCObject)retObjectDataMethodsType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataMethodsType != null ? retObjectDataMethodsType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class CallingDataMethodsEventArgs extends EventArgs  {
 
     public void setDataMethodsType(NetType DataMethodsType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataMethodsType", DataMethodsType == null ? null : DataMethodsType.getJCOInstance());
         } catch (JCNativeException jcne) {

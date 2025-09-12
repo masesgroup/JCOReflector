@@ -181,10 +181,14 @@ public class InstrumentationClassAttribute extends Attribute  {
     
     public InstrumentationType getInstrumentationType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstrumentationType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstrumentationType");
+            retObjectInstrumentationType = classInstance.Get("InstrumentationType");
+            JCObject val = (JCObject)retObjectInstrumentationType;
             return new InstrumentationType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstrumentationType != null ? retObjectInstrumentationType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +196,13 @@ public class InstrumentationClassAttribute extends Attribute  {
 
     public java.lang.String getManagedBaseClassName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManagedBaseClassName = null;
         try {
-            return (java.lang.String)classInstance.Get("ManagedBaseClassName");
+            retObjectManagedBaseClassName = classInstance.Get("ManagedBaseClassName");
+            return (java.lang.String)retObjectManagedBaseClassName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectManagedBaseClassName != null ? retObjectManagedBaseClassName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

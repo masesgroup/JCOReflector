@@ -159,10 +159,14 @@ public class DirectoryRequest extends DirectoryOperation  {
     
     public DirectoryControlCollection getControls() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControls = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Controls");
+            retObjectControls = classInstance.Get("Controls");
+            JCObject val = (JCObject)retObjectControls;
             return new DirectoryControlCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControls != null ? retObjectControls.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class DirectoryRequest extends DirectoryOperation  {
 
     public java.lang.String getRequestId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestId = null;
         try {
-            return (java.lang.String)classInstance.Get("RequestId");
+            retObjectRequestId = classInstance.Get("RequestId");
+            return (java.lang.String)retObjectRequestId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRequestId != null ? retObjectRequestId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +188,7 @@ public class DirectoryRequest extends DirectoryOperation  {
 
     public void setRequestId(java.lang.String RequestId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequestId", RequestId);
         } catch (JCNativeException jcne) {

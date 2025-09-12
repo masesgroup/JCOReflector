@@ -162,10 +162,14 @@ public class AsyncResult extends NetObject  {
     
     public IMessage GetReplyMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReplyMessage = null;
         try {
-            JCObject objGetReplyMessage = (JCObject)classInstance.Invoke("GetReplyMessage");
+            retObjectGetReplyMessage = classInstance.Invoke("GetReplyMessage");
+            JCObject objGetReplyMessage = (JCObject)retObjectGetReplyMessage;
             return new IMessageImplementation(objGetReplyMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReplyMessage != null ? retObjectGetReplyMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class AsyncResult extends NetObject  {
 
     public IMessage SyncProcessMessage(IMessage msg) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSyncProcessMessage = null;
         try {
-            JCObject objSyncProcessMessage = (JCObject)classInstance.Invoke("SyncProcessMessage", msg == null ? null : msg.getJCOInstance());
+            retObjectSyncProcessMessage = classInstance.Invoke("SyncProcessMessage", msg == null ? null : msg.getJCOInstance());
+            JCObject objSyncProcessMessage = (JCObject)retObjectSyncProcessMessage;
             return new IMessageImplementation(objSyncProcessMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSyncProcessMessage != null ? retObjectSyncProcessMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class AsyncResult extends NetObject  {
 
     public IMessageCtrl AsyncProcessMessage(IMessage msg, IMessageSink replySink) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsyncProcessMessage = null;
         try {
-            JCObject objAsyncProcessMessage = (JCObject)classInstance.Invoke("AsyncProcessMessage", msg == null ? null : msg.getJCOInstance(), replySink == null ? null : replySink.getJCOInstance());
+            retObjectAsyncProcessMessage = classInstance.Invoke("AsyncProcessMessage", msg == null ? null : msg.getJCOInstance(), replySink == null ? null : replySink.getJCOInstance());
+            JCObject objAsyncProcessMessage = (JCObject)retObjectAsyncProcessMessage;
             return new IMessageCtrlImplementation(objAsyncProcessMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsyncProcessMessage != null ? retObjectAsyncProcessMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +207,7 @@ public class AsyncResult extends NetObject  {
 
     public void SetMessageCtrl(IMessageCtrl mc) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetMessageCtrl", mc == null ? null : mc.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,9 +221,13 @@ public class AsyncResult extends NetObject  {
     
     public boolean getCompletedSynchronously() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompletedSynchronously = null;
         try {
-            return (boolean)classInstance.Get("CompletedSynchronously");
+            retObjectCompletedSynchronously = classInstance.Get("CompletedSynchronously");
+            return (boolean)retObjectCompletedSynchronously;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCompletedSynchronously != null ? retObjectCompletedSynchronously.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +235,13 @@ public class AsyncResult extends NetObject  {
 
     public boolean getEndInvokeCalled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndInvokeCalled = null;
         try {
-            return (boolean)classInstance.Get("EndInvokeCalled");
+            retObjectEndInvokeCalled = classInstance.Get("EndInvokeCalled");
+            return (boolean)retObjectEndInvokeCalled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEndInvokeCalled != null ? retObjectEndInvokeCalled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +249,7 @@ public class AsyncResult extends NetObject  {
 
     public void setEndInvokeCalled(boolean EndInvokeCalled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EndInvokeCalled", EndInvokeCalled);
         } catch (JCNativeException jcne) {
@@ -239,9 +259,13 @@ public class AsyncResult extends NetObject  {
 
     public boolean getIsCompleted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCompleted = null;
         try {
-            return (boolean)classInstance.Get("IsCompleted");
+            retObjectIsCompleted = classInstance.Get("IsCompleted");
+            return (boolean)retObjectIsCompleted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCompleted != null ? retObjectIsCompleted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +273,14 @@ public class AsyncResult extends NetObject  {
 
     public NetObject getAsyncDelegate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsyncDelegate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AsyncDelegate");
+            retObjectAsyncDelegate = classInstance.Get("AsyncDelegate");
+            JCObject val = (JCObject)retObjectAsyncDelegate;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsyncDelegate != null ? retObjectAsyncDelegate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +288,14 @@ public class AsyncResult extends NetObject  {
 
     public NetObject getAsyncState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsyncState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AsyncState");
+            retObjectAsyncState = classInstance.Get("AsyncState");
+            JCObject val = (JCObject)retObjectAsyncState;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsyncState != null ? retObjectAsyncState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,10 +303,14 @@ public class AsyncResult extends NetObject  {
 
     public IMessageSink getNextSink() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextSink = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NextSink");
+            retObjectNextSink = classInstance.Get("NextSink");
+            JCObject val = (JCObject)retObjectNextSink;
             return new IMessageSinkImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNextSink != null ? retObjectNextSink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,10 +318,14 @@ public class AsyncResult extends NetObject  {
 
     public WaitHandle getAsyncWaitHandle() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsyncWaitHandle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AsyncWaitHandle");
+            retObjectAsyncWaitHandle = classInstance.Get("AsyncWaitHandle");
+            JCObject val = (JCObject)retObjectAsyncWaitHandle;
             return new WaitHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsyncWaitHandle != null ? retObjectAsyncWaitHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

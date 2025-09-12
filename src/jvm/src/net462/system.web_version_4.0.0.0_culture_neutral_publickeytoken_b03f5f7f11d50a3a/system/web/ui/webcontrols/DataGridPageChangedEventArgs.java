@@ -170,9 +170,19 @@ public class DataGridPageChangedEventArgs extends EventArgs  {
     
     public int getNewPageIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewPageIndex = null;
         try {
-            return (int)classInstance.Get("NewPageIndex");
+            retObjectNewPageIndex = classInstance.Get("NewPageIndex");
+            return (int)retObjectNewPageIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNewPageIndexNumber = (java.lang.Number)retObjectNewPageIndex;
+                return retObjectNewPageIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNewPageIndex != null ? retObjectNewPageIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +190,14 @@ public class DataGridPageChangedEventArgs extends EventArgs  {
 
     public NetObject getCommandSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandSource");
+            retObjectCommandSource = classInstance.Get("CommandSource");
+            JCObject val = (JCObject)retObjectCommandSource;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandSource != null ? retObjectCommandSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -168,7 +168,7 @@ public class EditorPartChrome extends NetObject  {
     
     public void PerformPreRender() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PerformPreRender");
         } catch (JCNativeException jcne) {
@@ -178,7 +178,7 @@ public class EditorPartChrome extends NetObject  {
 
     public void RenderEditorPart(HtmlTextWriter writer, EditorPart editorPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException, system.FormatException, system.threading.ThreadAbortException, system.globalization.CultureNotFoundException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderEditorPart", writer == null ? null : writer.getJCOInstance(), editorPart == null ? null : editorPart.getJCOInstance());
         } catch (JCNativeException jcne) {

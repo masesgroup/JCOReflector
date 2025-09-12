@@ -168,9 +168,13 @@ public class ConnectionsZone extends ToolZone  {
     
     public java.lang.String getConfigureConnectionTitle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfigureConnectionTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("ConfigureConnectionTitle");
+            retObjectConfigureConnectionTitle = classInstance.Get("ConfigureConnectionTitle");
+            return (java.lang.String)retObjectConfigureConnectionTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConfigureConnectionTitle != null ? retObjectConfigureConnectionTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class ConnectionsZone extends ToolZone  {
 
     public void setConfigureConnectionTitle(java.lang.String ConfigureConnectionTitle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConfigureConnectionTitle", ConfigureConnectionTitle);
         } catch (JCNativeException jcne) {
@@ -188,9 +192,13 @@ public class ConnectionsZone extends ToolZone  {
 
     public java.lang.String getConnectToConsumerInstructionText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectToConsumerInstructionText = null;
         try {
-            return (java.lang.String)classInstance.Get("ConnectToConsumerInstructionText");
+            retObjectConnectToConsumerInstructionText = classInstance.Get("ConnectToConsumerInstructionText");
+            return (java.lang.String)retObjectConnectToConsumerInstructionText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConnectToConsumerInstructionText != null ? retObjectConnectToConsumerInstructionText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class ConnectionsZone extends ToolZone  {
 
     public void setConnectToConsumerInstructionText(java.lang.String ConnectToConsumerInstructionText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConnectToConsumerInstructionText", ConnectToConsumerInstructionText);
         } catch (JCNativeException jcne) {
@@ -208,9 +216,13 @@ public class ConnectionsZone extends ToolZone  {
 
     public java.lang.String getConnectToConsumerText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectToConsumerText = null;
         try {
-            return (java.lang.String)classInstance.Get("ConnectToConsumerText");
+            retObjectConnectToConsumerText = classInstance.Get("ConnectToConsumerText");
+            return (java.lang.String)retObjectConnectToConsumerText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConnectToConsumerText != null ? retObjectConnectToConsumerText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class ConnectionsZone extends ToolZone  {
 
     public void setConnectToConsumerText(java.lang.String ConnectToConsumerText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConnectToConsumerText", ConnectToConsumerText);
         } catch (JCNativeException jcne) {
@@ -228,9 +240,13 @@ public class ConnectionsZone extends ToolZone  {
 
     public java.lang.String getConnectToConsumerTitle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectToConsumerTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("ConnectToConsumerTitle");
+            retObjectConnectToConsumerTitle = classInstance.Get("ConnectToConsumerTitle");
+            return (java.lang.String)retObjectConnectToConsumerTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConnectToConsumerTitle != null ? retObjectConnectToConsumerTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +254,7 @@ public class ConnectionsZone extends ToolZone  {
 
     public void setConnectToConsumerTitle(java.lang.String ConnectToConsumerTitle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConnectToConsumerTitle", ConnectToConsumerTitle);
         } catch (JCNativeException jcne) {
@@ -248,9 +264,13 @@ public class ConnectionsZone extends ToolZone  {
 
     public java.lang.String getConnectToProviderInstructionText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectToProviderInstructionText = null;
         try {
-            return (java.lang.String)classInstance.Get("ConnectToProviderInstructionText");
+            retObjectConnectToProviderInstructionText = classInstance.Get("ConnectToProviderInstructionText");
+            return (java.lang.String)retObjectConnectToProviderInstructionText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConnectToProviderInstructionText != null ? retObjectConnectToProviderInstructionText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +278,7 @@ public class ConnectionsZone extends ToolZone  {
 
     public void setConnectToProviderInstructionText(java.lang.String ConnectToProviderInstructionText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConnectToProviderInstructionText", ConnectToProviderInstructionText);
         } catch (JCNativeException jcne) {
@@ -268,9 +288,13 @@ public class ConnectionsZone extends ToolZone  {
 
     public java.lang.String getConnectToProviderText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectToProviderText = null;
         try {
-            return (java.lang.String)classInstance.Get("ConnectToProviderText");
+            retObjectConnectToProviderText = classInstance.Get("ConnectToProviderText");
+            return (java.lang.String)retObjectConnectToProviderText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConnectToProviderText != null ? retObjectConnectToProviderText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +302,7 @@ public class ConnectionsZone extends ToolZone  {
 
     public void setConnectToProviderText(java.lang.String ConnectToProviderText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConnectToProviderText", ConnectToProviderText);
         } catch (JCNativeException jcne) {
@@ -288,9 +312,13 @@ public class ConnectionsZone extends ToolZone  {
 
     public java.lang.String getConnectToProviderTitle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectToProviderTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("ConnectToProviderTitle");
+            retObjectConnectToProviderTitle = classInstance.Get("ConnectToProviderTitle");
+            return (java.lang.String)retObjectConnectToProviderTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConnectToProviderTitle != null ? retObjectConnectToProviderTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +326,7 @@ public class ConnectionsZone extends ToolZone  {
 
     public void setConnectToProviderTitle(java.lang.String ConnectToProviderTitle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConnectToProviderTitle", ConnectToProviderTitle);
         } catch (JCNativeException jcne) {
@@ -308,9 +336,13 @@ public class ConnectionsZone extends ToolZone  {
 
     public java.lang.String getConsumersInstructionText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConsumersInstructionText = null;
         try {
-            return (java.lang.String)classInstance.Get("ConsumersInstructionText");
+            retObjectConsumersInstructionText = classInstance.Get("ConsumersInstructionText");
+            return (java.lang.String)retObjectConsumersInstructionText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConsumersInstructionText != null ? retObjectConsumersInstructionText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,7 +350,7 @@ public class ConnectionsZone extends ToolZone  {
 
     public void setConsumersInstructionText(java.lang.String ConsumersInstructionText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConsumersInstructionText", ConsumersInstructionText);
         } catch (JCNativeException jcne) {
@@ -328,9 +360,13 @@ public class ConnectionsZone extends ToolZone  {
 
     public java.lang.String getConsumersTitle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConsumersTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("ConsumersTitle");
+            retObjectConsumersTitle = classInstance.Get("ConsumersTitle");
+            return (java.lang.String)retObjectConsumersTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConsumersTitle != null ? retObjectConsumersTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,7 +374,7 @@ public class ConnectionsZone extends ToolZone  {
 
     public void setConsumersTitle(java.lang.String ConsumersTitle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConsumersTitle", ConsumersTitle);
         } catch (JCNativeException jcne) {
@@ -348,9 +384,13 @@ public class ConnectionsZone extends ToolZone  {
 
     public java.lang.String getExistingConnectionErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExistingConnectionErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("ExistingConnectionErrorMessage");
+            retObjectExistingConnectionErrorMessage = classInstance.Get("ExistingConnectionErrorMessage");
+            return (java.lang.String)retObjectExistingConnectionErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExistingConnectionErrorMessage != null ? retObjectExistingConnectionErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,7 +398,7 @@ public class ConnectionsZone extends ToolZone  {
 
     public void setExistingConnectionErrorMessage(java.lang.String ExistingConnectionErrorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExistingConnectionErrorMessage", ExistingConnectionErrorMessage);
         } catch (JCNativeException jcne) {
@@ -368,9 +408,13 @@ public class ConnectionsZone extends ToolZone  {
 
     public java.lang.String getGetFromText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFromText = null;
         try {
-            return (java.lang.String)classInstance.Get("GetFromText");
+            retObjectGetFromText = classInstance.Get("GetFromText");
+            return (java.lang.String)retObjectGetFromText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetFromText != null ? retObjectGetFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,7 +422,7 @@ public class ConnectionsZone extends ToolZone  {
 
     public void setGetFromText(java.lang.String GetFromText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GetFromText", GetFromText);
         } catch (JCNativeException jcne) {
@@ -388,9 +432,13 @@ public class ConnectionsZone extends ToolZone  {
 
     public java.lang.String getGetText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetText = null;
         try {
-            return (java.lang.String)classInstance.Get("GetText");
+            retObjectGetText = classInstance.Get("GetText");
+            return (java.lang.String)retObjectGetText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetText != null ? retObjectGetText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,7 +446,7 @@ public class ConnectionsZone extends ToolZone  {
 
     public void setGetText(java.lang.String GetText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GetText", GetText);
         } catch (JCNativeException jcne) {
@@ -408,9 +456,13 @@ public class ConnectionsZone extends ToolZone  {
 
     public java.lang.String getInstructionTitle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstructionTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("InstructionTitle");
+            retObjectInstructionTitle = classInstance.Get("InstructionTitle");
+            return (java.lang.String)retObjectInstructionTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInstructionTitle != null ? retObjectInstructionTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,7 +470,7 @@ public class ConnectionsZone extends ToolZone  {
 
     public void setInstructionTitle(java.lang.String InstructionTitle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstructionTitle", InstructionTitle);
         } catch (JCNativeException jcne) {
@@ -428,9 +480,13 @@ public class ConnectionsZone extends ToolZone  {
 
     public java.lang.String getNewConnectionErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewConnectionErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("NewConnectionErrorMessage");
+            retObjectNewConnectionErrorMessage = classInstance.Get("NewConnectionErrorMessage");
+            return (java.lang.String)retObjectNewConnectionErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNewConnectionErrorMessage != null ? retObjectNewConnectionErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,7 +494,7 @@ public class ConnectionsZone extends ToolZone  {
 
     public void setNewConnectionErrorMessage(java.lang.String NewConnectionErrorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewConnectionErrorMessage", NewConnectionErrorMessage);
         } catch (JCNativeException jcne) {
@@ -448,9 +504,13 @@ public class ConnectionsZone extends ToolZone  {
 
     public java.lang.String getNoExistingConnectionInstructionText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoExistingConnectionInstructionText = null;
         try {
-            return (java.lang.String)classInstance.Get("NoExistingConnectionInstructionText");
+            retObjectNoExistingConnectionInstructionText = classInstance.Get("NoExistingConnectionInstructionText");
+            return (java.lang.String)retObjectNoExistingConnectionInstructionText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNoExistingConnectionInstructionText != null ? retObjectNoExistingConnectionInstructionText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -458,7 +518,7 @@ public class ConnectionsZone extends ToolZone  {
 
     public void setNoExistingConnectionInstructionText(java.lang.String NoExistingConnectionInstructionText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoExistingConnectionInstructionText", NoExistingConnectionInstructionText);
         } catch (JCNativeException jcne) {
@@ -468,9 +528,13 @@ public class ConnectionsZone extends ToolZone  {
 
     public java.lang.String getNoExistingConnectionTitle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoExistingConnectionTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("NoExistingConnectionTitle");
+            retObjectNoExistingConnectionTitle = classInstance.Get("NoExistingConnectionTitle");
+            return (java.lang.String)retObjectNoExistingConnectionTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNoExistingConnectionTitle != null ? retObjectNoExistingConnectionTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -478,7 +542,7 @@ public class ConnectionsZone extends ToolZone  {
 
     public void setNoExistingConnectionTitle(java.lang.String NoExistingConnectionTitle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoExistingConnectionTitle", NoExistingConnectionTitle);
         } catch (JCNativeException jcne) {
@@ -488,9 +552,13 @@ public class ConnectionsZone extends ToolZone  {
 
     public java.lang.String getProvidersInstructionText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProvidersInstructionText = null;
         try {
-            return (java.lang.String)classInstance.Get("ProvidersInstructionText");
+            retObjectProvidersInstructionText = classInstance.Get("ProvidersInstructionText");
+            return (java.lang.String)retObjectProvidersInstructionText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProvidersInstructionText != null ? retObjectProvidersInstructionText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -498,7 +566,7 @@ public class ConnectionsZone extends ToolZone  {
 
     public void setProvidersInstructionText(java.lang.String ProvidersInstructionText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProvidersInstructionText", ProvidersInstructionText);
         } catch (JCNativeException jcne) {
@@ -508,9 +576,13 @@ public class ConnectionsZone extends ToolZone  {
 
     public java.lang.String getProvidersTitle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProvidersTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("ProvidersTitle");
+            retObjectProvidersTitle = classInstance.Get("ProvidersTitle");
+            return (java.lang.String)retObjectProvidersTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProvidersTitle != null ? retObjectProvidersTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -518,7 +590,7 @@ public class ConnectionsZone extends ToolZone  {
 
     public void setProvidersTitle(java.lang.String ProvidersTitle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProvidersTitle", ProvidersTitle);
         } catch (JCNativeException jcne) {
@@ -528,9 +600,13 @@ public class ConnectionsZone extends ToolZone  {
 
     public java.lang.String getSendText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendText = null;
         try {
-            return (java.lang.String)classInstance.Get("SendText");
+            retObjectSendText = classInstance.Get("SendText");
+            return (java.lang.String)retObjectSendText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSendText != null ? retObjectSendText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,7 +614,7 @@ public class ConnectionsZone extends ToolZone  {
 
     public void setSendText(java.lang.String SendText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SendText", SendText);
         } catch (JCNativeException jcne) {
@@ -548,9 +624,13 @@ public class ConnectionsZone extends ToolZone  {
 
     public java.lang.String getSendToText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendToText = null;
         try {
-            return (java.lang.String)classInstance.Get("SendToText");
+            retObjectSendToText = classInstance.Get("SendToText");
+            return (java.lang.String)retObjectSendToText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSendToText != null ? retObjectSendToText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -558,7 +638,7 @@ public class ConnectionsZone extends ToolZone  {
 
     public void setSendToText(java.lang.String SendToText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SendToText", SendToText);
         } catch (JCNativeException jcne) {
@@ -568,10 +648,14 @@ public class ConnectionsZone extends ToolZone  {
 
     public WebPartVerb getCancelVerb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancelVerb = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CancelVerb");
+            retObjectCancelVerb = classInstance.Get("CancelVerb");
+            JCObject val = (JCObject)retObjectCancelVerb;
             return new WebPartVerb(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCancelVerb != null ? retObjectCancelVerb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -579,10 +663,14 @@ public class ConnectionsZone extends ToolZone  {
 
     public WebPartVerb getCloseVerb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloseVerb = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CloseVerb");
+            retObjectCloseVerb = classInstance.Get("CloseVerb");
+            JCObject val = (JCObject)retObjectCloseVerb;
             return new WebPartVerb(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloseVerb != null ? retObjectCloseVerb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -590,10 +678,14 @@ public class ConnectionsZone extends ToolZone  {
 
     public WebPartVerb getConfigureVerb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfigureVerb = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConfigureVerb");
+            retObjectConfigureVerb = classInstance.Get("ConfigureVerb");
+            JCObject val = (JCObject)retObjectConfigureVerb;
             return new WebPartVerb(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConfigureVerb != null ? retObjectConfigureVerb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -601,10 +693,14 @@ public class ConnectionsZone extends ToolZone  {
 
     public WebPartVerb getConnectVerb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectVerb = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConnectVerb");
+            retObjectConnectVerb = classInstance.Get("ConnectVerb");
+            JCObject val = (JCObject)retObjectConnectVerb;
             return new WebPartVerb(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectVerb != null ? retObjectConnectVerb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -612,10 +708,14 @@ public class ConnectionsZone extends ToolZone  {
 
     public WebPartVerb getDisconnectVerb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisconnectVerb = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DisconnectVerb");
+            retObjectDisconnectVerb = classInstance.Get("DisconnectVerb");
+            JCObject val = (JCObject)retObjectDisconnectVerb;
             return new WebPartVerb(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisconnectVerb != null ? retObjectDisconnectVerb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

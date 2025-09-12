@@ -166,7 +166,7 @@ public class RuleAnalysis extends NetObject  {
     
     public void AddSymbol(java.lang.String symbol) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddSymbol", symbol);
         } catch (JCNativeException jcne) {
@@ -180,9 +180,13 @@ public class RuleAnalysis extends NetObject  {
     
     public boolean getForWrites() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForWrites = null;
         try {
-            return (boolean)classInstance.Get("ForWrites");
+            retObjectForWrites = classInstance.Get("ForWrites");
+            return (boolean)retObjectForWrites;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectForWrites != null ? retObjectForWrites.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

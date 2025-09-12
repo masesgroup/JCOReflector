@@ -147,7 +147,7 @@ public class ITypeCompImplementation extends NetObject implements ITypeComp {
     
     public void BindType(java.lang.String szName, int lHashVal, JCORefOut<ITypeInfo> ppTInfo, JCORefOut<ITypeComp> ppTComp) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BindType", szName, lHashVal, ppTInfo.getJCRefOut(), ppTComp.getJCRefOut());
         } catch (JCNativeException jcne) {

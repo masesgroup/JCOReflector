@@ -157,9 +157,13 @@ public class ListSourceHelper extends NetObject  {
     
     public static boolean ContainsListCollection(IDataSource dataSource) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContainsListCollection = null;
         try {
-            return (boolean)classType.Invoke("ContainsListCollection", dataSource == null ? null : dataSource.getJCOInstance());
+            retObjectContainsListCollection = classType.Invoke("ContainsListCollection", dataSource == null ? null : dataSource.getJCOInstance());
+            return (boolean)retObjectContainsListCollection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsListCollection != null ? retObjectContainsListCollection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class ListSourceHelper extends NetObject  {
 
     public static IList GetList(IDataSource dataSource) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetList = null;
         try {
-            JCObject objGetList = (JCObject)classType.Invoke("GetList", dataSource == null ? null : dataSource.getJCOInstance());
+            retObjectGetList = classType.Invoke("GetList", dataSource == null ? null : dataSource.getJCOInstance());
+            JCObject objGetList = (JCObject)retObjectGetList;
             return new IListImplementation(objGetList);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetList != null ? retObjectGetList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

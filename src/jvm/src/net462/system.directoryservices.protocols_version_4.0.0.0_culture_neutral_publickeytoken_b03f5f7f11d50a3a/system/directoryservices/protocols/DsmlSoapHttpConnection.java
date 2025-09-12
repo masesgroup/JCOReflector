@@ -208,10 +208,14 @@ public class DsmlSoapHttpConnection extends DsmlSoapConnection  {
     
     public DirectoryResponse SendRequest(DirectoryRequest request) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.FormatException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.xml.xpath.XPathException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.UriFormatException, system.InvalidCastException, system.MissingMethodException, system.directoryservices.protocols.ErrorResponseException, system.OverflowException, system.directoryservices.protocols.DirectoryOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendRequest = null;
         try {
-            JCObject objSendRequest = (JCObject)classInstance.Invoke("SendRequest", request == null ? null : request.getJCOInstance());
+            retObjectSendRequest = classInstance.Invoke("SendRequest", request == null ? null : request.getJCOInstance());
+            JCObject objSendRequest = (JCObject)retObjectSendRequest;
             return new DirectoryResponse(objSendRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendRequest != null ? retObjectSendRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +223,14 @@ public class DsmlSoapHttpConnection extends DsmlSoapConnection  {
 
     public DsmlResponseDocument EndSendRequest(IAsyncResult asyncResult) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.PlatformNotSupportedException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.xml.xpath.XPathException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndSendRequest = null;
         try {
-            JCObject objEndSendRequest = (JCObject)classInstance.Invoke("EndSendRequest", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndSendRequest = classInstance.Invoke("EndSendRequest", asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject objEndSendRequest = (JCObject)retObjectEndSendRequest;
             return new DsmlResponseDocument(objEndSendRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndSendRequest != null ? retObjectEndSendRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +238,14 @@ public class DsmlSoapHttpConnection extends DsmlSoapConnection  {
 
     public DsmlResponseDocument SendRequest(DsmlRequestDocument request) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.PlatformNotSupportedException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.xml.xpath.XPathException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.UriFormatException, system.InvalidCastException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendRequest = null;
         try {
-            JCObject objSendRequest = (JCObject)classInstance.Invoke("SendRequest", request == null ? null : request.getJCOInstance());
+            retObjectSendRequest = classInstance.Invoke("SendRequest", request == null ? null : request.getJCOInstance());
+            JCObject objSendRequest = (JCObject)retObjectSendRequest;
             return new DsmlResponseDocument(objSendRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendRequest != null ? retObjectSendRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +253,14 @@ public class DsmlSoapHttpConnection extends DsmlSoapConnection  {
 
     public IAsyncResult BeginSendRequest(DsmlRequestDocument request, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.InvalidCastException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginSendRequest = null;
         try {
-            JCObject objBeginSendRequest = (JCObject)classInstance.Invoke("BeginSendRequest", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginSendRequest = classInstance.Invoke("BeginSendRequest", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginSendRequest = (JCObject)retObjectBeginSendRequest;
             return new IAsyncResultImplementation(objBeginSendRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginSendRequest != null ? retObjectBeginSendRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +268,7 @@ public class DsmlSoapHttpConnection extends DsmlSoapConnection  {
 
     public void Abort(IAsyncResult asyncResult) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abort", asyncResult == null ? null : asyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -262,7 +278,7 @@ public class DsmlSoapHttpConnection extends DsmlSoapConnection  {
 
     public void BeginSession() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.xml.xpath.XPathException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.UriFormatException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginSession");
         } catch (JCNativeException jcne) {
@@ -272,7 +288,7 @@ public class DsmlSoapHttpConnection extends DsmlSoapConnection  {
 
     public void EndSession() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.UriFormatException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndSession");
         } catch (JCNativeException jcne) {
@@ -286,10 +302,14 @@ public class DsmlSoapHttpConnection extends DsmlSoapConnection  {
     
     public AuthType getAuthType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AuthType");
+            retObjectAuthType = classInstance.Get("AuthType");
+            JCObject val = (JCObject)retObjectAuthType;
             return new AuthType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthType != null ? retObjectAuthType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +317,7 @@ public class DsmlSoapHttpConnection extends DsmlSoapConnection  {
 
     public void setAuthType(AuthType AuthType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AuthType", AuthType == null ? null : AuthType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -307,9 +327,13 @@ public class DsmlSoapHttpConnection extends DsmlSoapConnection  {
 
     public java.lang.String getSoapActionHeader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSoapActionHeader = null;
         try {
-            return (java.lang.String)classInstance.Get("SoapActionHeader");
+            retObjectSoapActionHeader = classInstance.Get("SoapActionHeader");
+            return (java.lang.String)retObjectSoapActionHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSoapActionHeader != null ? retObjectSoapActionHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,7 +341,7 @@ public class DsmlSoapHttpConnection extends DsmlSoapConnection  {
 
     public void setSoapActionHeader(java.lang.String SoapActionHeader) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SoapActionHeader", SoapActionHeader);
         } catch (JCNativeException jcne) {

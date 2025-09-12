@@ -157,9 +157,19 @@ public class IcmpV6Statistics extends NetObject  {
     
     public long getDestinationUnreachableMessagesReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDestinationUnreachableMessagesReceived = null;
         try {
-            return (long)classInstance.Get("DestinationUnreachableMessagesReceived");
+            retObjectDestinationUnreachableMessagesReceived = classInstance.Get("DestinationUnreachableMessagesReceived");
+            return (long)retObjectDestinationUnreachableMessagesReceived;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDestinationUnreachableMessagesReceivedNumber = (java.lang.Number)retObjectDestinationUnreachableMessagesReceived;
+                return retObjectDestinationUnreachableMessagesReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectDestinationUnreachableMessagesReceived != null ? retObjectDestinationUnreachableMessagesReceived.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +177,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getDestinationUnreachableMessagesSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDestinationUnreachableMessagesSent = null;
         try {
-            return (long)classInstance.Get("DestinationUnreachableMessagesSent");
+            retObjectDestinationUnreachableMessagesSent = classInstance.Get("DestinationUnreachableMessagesSent");
+            return (long)retObjectDestinationUnreachableMessagesSent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDestinationUnreachableMessagesSentNumber = (java.lang.Number)retObjectDestinationUnreachableMessagesSent;
+                return retObjectDestinationUnreachableMessagesSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectDestinationUnreachableMessagesSent != null ? retObjectDestinationUnreachableMessagesSent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +197,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getEchoRepliesReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEchoRepliesReceived = null;
         try {
-            return (long)classInstance.Get("EchoRepliesReceived");
+            retObjectEchoRepliesReceived = classInstance.Get("EchoRepliesReceived");
+            return (long)retObjectEchoRepliesReceived;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEchoRepliesReceivedNumber = (java.lang.Number)retObjectEchoRepliesReceived;
+                return retObjectEchoRepliesReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectEchoRepliesReceived != null ? retObjectEchoRepliesReceived.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +217,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getEchoRepliesSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEchoRepliesSent = null;
         try {
-            return (long)classInstance.Get("EchoRepliesSent");
+            retObjectEchoRepliesSent = classInstance.Get("EchoRepliesSent");
+            return (long)retObjectEchoRepliesSent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEchoRepliesSentNumber = (java.lang.Number)retObjectEchoRepliesSent;
+                return retObjectEchoRepliesSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectEchoRepliesSent != null ? retObjectEchoRepliesSent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +237,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getEchoRequestsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEchoRequestsReceived = null;
         try {
-            return (long)classInstance.Get("EchoRequestsReceived");
+            retObjectEchoRequestsReceived = classInstance.Get("EchoRequestsReceived");
+            return (long)retObjectEchoRequestsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEchoRequestsReceivedNumber = (java.lang.Number)retObjectEchoRequestsReceived;
+                return retObjectEchoRequestsReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectEchoRequestsReceived != null ? retObjectEchoRequestsReceived.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +257,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getEchoRequestsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEchoRequestsSent = null;
         try {
-            return (long)classInstance.Get("EchoRequestsSent");
+            retObjectEchoRequestsSent = classInstance.Get("EchoRequestsSent");
+            return (long)retObjectEchoRequestsSent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEchoRequestsSentNumber = (java.lang.Number)retObjectEchoRequestsSent;
+                return retObjectEchoRequestsSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectEchoRequestsSent != null ? retObjectEchoRequestsSent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +277,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getErrorsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorsReceived = null;
         try {
-            return (long)classInstance.Get("ErrorsReceived");
+            retObjectErrorsReceived = classInstance.Get("ErrorsReceived");
+            return (long)retObjectErrorsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectErrorsReceivedNumber = (java.lang.Number)retObjectErrorsReceived;
+                return retObjectErrorsReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectErrorsReceived != null ? retObjectErrorsReceived.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +297,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getErrorsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorsSent = null;
         try {
-            return (long)classInstance.Get("ErrorsSent");
+            retObjectErrorsSent = classInstance.Get("ErrorsSent");
+            return (long)retObjectErrorsSent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectErrorsSentNumber = (java.lang.Number)retObjectErrorsSent;
+                return retObjectErrorsSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectErrorsSent != null ? retObjectErrorsSent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +317,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getMembershipQueriesReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMembershipQueriesReceived = null;
         try {
-            return (long)classInstance.Get("MembershipQueriesReceived");
+            retObjectMembershipQueriesReceived = classInstance.Get("MembershipQueriesReceived");
+            return (long)retObjectMembershipQueriesReceived;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMembershipQueriesReceivedNumber = (java.lang.Number)retObjectMembershipQueriesReceived;
+                return retObjectMembershipQueriesReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMembershipQueriesReceived != null ? retObjectMembershipQueriesReceived.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +337,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getMembershipQueriesSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMembershipQueriesSent = null;
         try {
-            return (long)classInstance.Get("MembershipQueriesSent");
+            retObjectMembershipQueriesSent = classInstance.Get("MembershipQueriesSent");
+            return (long)retObjectMembershipQueriesSent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMembershipQueriesSentNumber = (java.lang.Number)retObjectMembershipQueriesSent;
+                return retObjectMembershipQueriesSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMembershipQueriesSent != null ? retObjectMembershipQueriesSent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,9 +357,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getMembershipReductionsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMembershipReductionsReceived = null;
         try {
-            return (long)classInstance.Get("MembershipReductionsReceived");
+            retObjectMembershipReductionsReceived = classInstance.Get("MembershipReductionsReceived");
+            return (long)retObjectMembershipReductionsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMembershipReductionsReceivedNumber = (java.lang.Number)retObjectMembershipReductionsReceived;
+                return retObjectMembershipReductionsReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMembershipReductionsReceived != null ? retObjectMembershipReductionsReceived.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,9 +377,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getMembershipReductionsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMembershipReductionsSent = null;
         try {
-            return (long)classInstance.Get("MembershipReductionsSent");
+            retObjectMembershipReductionsSent = classInstance.Get("MembershipReductionsSent");
+            return (long)retObjectMembershipReductionsSent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMembershipReductionsSentNumber = (java.lang.Number)retObjectMembershipReductionsSent;
+                return retObjectMembershipReductionsSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMembershipReductionsSent != null ? retObjectMembershipReductionsSent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,9 +397,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getMembershipReportsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMembershipReportsReceived = null;
         try {
-            return (long)classInstance.Get("MembershipReportsReceived");
+            retObjectMembershipReportsReceived = classInstance.Get("MembershipReportsReceived");
+            return (long)retObjectMembershipReportsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMembershipReportsReceivedNumber = (java.lang.Number)retObjectMembershipReportsReceived;
+                return retObjectMembershipReportsReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMembershipReportsReceived != null ? retObjectMembershipReportsReceived.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,9 +417,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getMembershipReportsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMembershipReportsSent = null;
         try {
-            return (long)classInstance.Get("MembershipReportsSent");
+            retObjectMembershipReportsSent = classInstance.Get("MembershipReportsSent");
+            return (long)retObjectMembershipReportsSent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMembershipReportsSentNumber = (java.lang.Number)retObjectMembershipReportsSent;
+                return retObjectMembershipReportsSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMembershipReportsSent != null ? retObjectMembershipReportsSent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,9 +437,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getMessagesReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessagesReceived = null;
         try {
-            return (long)classInstance.Get("MessagesReceived");
+            retObjectMessagesReceived = classInstance.Get("MessagesReceived");
+            return (long)retObjectMessagesReceived;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMessagesReceivedNumber = (java.lang.Number)retObjectMessagesReceived;
+                return retObjectMessagesReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMessagesReceived != null ? retObjectMessagesReceived.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,9 +457,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getMessagesSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessagesSent = null;
         try {
-            return (long)classInstance.Get("MessagesSent");
+            retObjectMessagesSent = classInstance.Get("MessagesSent");
+            return (long)retObjectMessagesSent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMessagesSentNumber = (java.lang.Number)retObjectMessagesSent;
+                return retObjectMessagesSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMessagesSent != null ? retObjectMessagesSent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,9 +477,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getNeighborAdvertisementsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNeighborAdvertisementsReceived = null;
         try {
-            return (long)classInstance.Get("NeighborAdvertisementsReceived");
+            retObjectNeighborAdvertisementsReceived = classInstance.Get("NeighborAdvertisementsReceived");
+            return (long)retObjectNeighborAdvertisementsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNeighborAdvertisementsReceivedNumber = (java.lang.Number)retObjectNeighborAdvertisementsReceived;
+                return retObjectNeighborAdvertisementsReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectNeighborAdvertisementsReceived != null ? retObjectNeighborAdvertisementsReceived.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,9 +497,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getNeighborAdvertisementsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNeighborAdvertisementsSent = null;
         try {
-            return (long)classInstance.Get("NeighborAdvertisementsSent");
+            retObjectNeighborAdvertisementsSent = classInstance.Get("NeighborAdvertisementsSent");
+            return (long)retObjectNeighborAdvertisementsSent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNeighborAdvertisementsSentNumber = (java.lang.Number)retObjectNeighborAdvertisementsSent;
+                return retObjectNeighborAdvertisementsSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectNeighborAdvertisementsSent != null ? retObjectNeighborAdvertisementsSent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,9 +517,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getNeighborSolicitsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNeighborSolicitsReceived = null;
         try {
-            return (long)classInstance.Get("NeighborSolicitsReceived");
+            retObjectNeighborSolicitsReceived = classInstance.Get("NeighborSolicitsReceived");
+            return (long)retObjectNeighborSolicitsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNeighborSolicitsReceivedNumber = (java.lang.Number)retObjectNeighborSolicitsReceived;
+                return retObjectNeighborSolicitsReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectNeighborSolicitsReceived != null ? retObjectNeighborSolicitsReceived.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,9 +537,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getNeighborSolicitsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNeighborSolicitsSent = null;
         try {
-            return (long)classInstance.Get("NeighborSolicitsSent");
+            retObjectNeighborSolicitsSent = classInstance.Get("NeighborSolicitsSent");
+            return (long)retObjectNeighborSolicitsSent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNeighborSolicitsSentNumber = (java.lang.Number)retObjectNeighborSolicitsSent;
+                return retObjectNeighborSolicitsSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectNeighborSolicitsSent != null ? retObjectNeighborSolicitsSent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,9 +557,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getPacketTooBigMessagesReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPacketTooBigMessagesReceived = null;
         try {
-            return (long)classInstance.Get("PacketTooBigMessagesReceived");
+            retObjectPacketTooBigMessagesReceived = classInstance.Get("PacketTooBigMessagesReceived");
+            return (long)retObjectPacketTooBigMessagesReceived;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPacketTooBigMessagesReceivedNumber = (java.lang.Number)retObjectPacketTooBigMessagesReceived;
+                return retObjectPacketTooBigMessagesReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectPacketTooBigMessagesReceived != null ? retObjectPacketTooBigMessagesReceived.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,9 +577,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getPacketTooBigMessagesSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPacketTooBigMessagesSent = null;
         try {
-            return (long)classInstance.Get("PacketTooBigMessagesSent");
+            retObjectPacketTooBigMessagesSent = classInstance.Get("PacketTooBigMessagesSent");
+            return (long)retObjectPacketTooBigMessagesSent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPacketTooBigMessagesSentNumber = (java.lang.Number)retObjectPacketTooBigMessagesSent;
+                return retObjectPacketTooBigMessagesSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectPacketTooBigMessagesSent != null ? retObjectPacketTooBigMessagesSent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,9 +597,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getParameterProblemsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterProblemsReceived = null;
         try {
-            return (long)classInstance.Get("ParameterProblemsReceived");
+            retObjectParameterProblemsReceived = classInstance.Get("ParameterProblemsReceived");
+            return (long)retObjectParameterProblemsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectParameterProblemsReceivedNumber = (java.lang.Number)retObjectParameterProblemsReceived;
+                return retObjectParameterProblemsReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectParameterProblemsReceived != null ? retObjectParameterProblemsReceived.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,9 +617,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getParameterProblemsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterProblemsSent = null;
         try {
-            return (long)classInstance.Get("ParameterProblemsSent");
+            retObjectParameterProblemsSent = classInstance.Get("ParameterProblemsSent");
+            return (long)retObjectParameterProblemsSent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectParameterProblemsSentNumber = (java.lang.Number)retObjectParameterProblemsSent;
+                return retObjectParameterProblemsSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectParameterProblemsSent != null ? retObjectParameterProblemsSent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,9 +637,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getRedirectsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRedirectsReceived = null;
         try {
-            return (long)classInstance.Get("RedirectsReceived");
+            retObjectRedirectsReceived = classInstance.Get("RedirectsReceived");
+            return (long)retObjectRedirectsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRedirectsReceivedNumber = (java.lang.Number)retObjectRedirectsReceived;
+                return retObjectRedirectsReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectRedirectsReceived != null ? retObjectRedirectsReceived.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,9 +657,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getRedirectsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRedirectsSent = null;
         try {
-            return (long)classInstance.Get("RedirectsSent");
+            retObjectRedirectsSent = classInstance.Get("RedirectsSent");
+            return (long)retObjectRedirectsSent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRedirectsSentNumber = (java.lang.Number)retObjectRedirectsSent;
+                return retObjectRedirectsSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectRedirectsSent != null ? retObjectRedirectsSent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,9 +677,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getRouterAdvertisementsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRouterAdvertisementsReceived = null;
         try {
-            return (long)classInstance.Get("RouterAdvertisementsReceived");
+            retObjectRouterAdvertisementsReceived = classInstance.Get("RouterAdvertisementsReceived");
+            return (long)retObjectRouterAdvertisementsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRouterAdvertisementsReceivedNumber = (java.lang.Number)retObjectRouterAdvertisementsReceived;
+                return retObjectRouterAdvertisementsReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectRouterAdvertisementsReceived != null ? retObjectRouterAdvertisementsReceived.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,9 +697,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getRouterAdvertisementsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRouterAdvertisementsSent = null;
         try {
-            return (long)classInstance.Get("RouterAdvertisementsSent");
+            retObjectRouterAdvertisementsSent = classInstance.Get("RouterAdvertisementsSent");
+            return (long)retObjectRouterAdvertisementsSent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRouterAdvertisementsSentNumber = (java.lang.Number)retObjectRouterAdvertisementsSent;
+                return retObjectRouterAdvertisementsSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectRouterAdvertisementsSent != null ? retObjectRouterAdvertisementsSent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,9 +717,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getRouterSolicitsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRouterSolicitsReceived = null;
         try {
-            return (long)classInstance.Get("RouterSolicitsReceived");
+            retObjectRouterSolicitsReceived = classInstance.Get("RouterSolicitsReceived");
+            return (long)retObjectRouterSolicitsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRouterSolicitsReceivedNumber = (java.lang.Number)retObjectRouterSolicitsReceived;
+                return retObjectRouterSolicitsReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectRouterSolicitsReceived != null ? retObjectRouterSolicitsReceived.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -447,9 +737,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getRouterSolicitsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRouterSolicitsSent = null;
         try {
-            return (long)classInstance.Get("RouterSolicitsSent");
+            retObjectRouterSolicitsSent = classInstance.Get("RouterSolicitsSent");
+            return (long)retObjectRouterSolicitsSent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRouterSolicitsSentNumber = (java.lang.Number)retObjectRouterSolicitsSent;
+                return retObjectRouterSolicitsSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectRouterSolicitsSent != null ? retObjectRouterSolicitsSent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,9 +757,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getTimeExceededMessagesReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeExceededMessagesReceived = null;
         try {
-            return (long)classInstance.Get("TimeExceededMessagesReceived");
+            retObjectTimeExceededMessagesReceived = classInstance.Get("TimeExceededMessagesReceived");
+            return (long)retObjectTimeExceededMessagesReceived;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTimeExceededMessagesReceivedNumber = (java.lang.Number)retObjectTimeExceededMessagesReceived;
+                return retObjectTimeExceededMessagesReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTimeExceededMessagesReceived != null ? retObjectTimeExceededMessagesReceived.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -467,9 +777,19 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getTimeExceededMessagesSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeExceededMessagesSent = null;
         try {
-            return (long)classInstance.Get("TimeExceededMessagesSent");
+            retObjectTimeExceededMessagesSent = classInstance.Get("TimeExceededMessagesSent");
+            return (long)retObjectTimeExceededMessagesSent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTimeExceededMessagesSentNumber = (java.lang.Number)retObjectTimeExceededMessagesSent;
+                return retObjectTimeExceededMessagesSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTimeExceededMessagesSent != null ? retObjectTimeExceededMessagesSent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

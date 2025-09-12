@@ -167,9 +167,13 @@ public class SoapOperationBinding extends ServiceDescriptionFormatExtension  {
     
     public java.lang.String getSoapAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSoapAction = null;
         try {
-            return (java.lang.String)classInstance.Get("SoapAction");
+            retObjectSoapAction = classInstance.Get("SoapAction");
+            return (java.lang.String)retObjectSoapAction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSoapAction != null ? retObjectSoapAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class SoapOperationBinding extends ServiceDescriptionFormatExtension  {
 
     public void setSoapAction(java.lang.String SoapAction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SoapAction", SoapAction);
         } catch (JCNativeException jcne) {
@@ -187,10 +191,14 @@ public class SoapOperationBinding extends ServiceDescriptionFormatExtension  {
 
     public SoapBindingStyle getStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Style");
+            retObjectStyle = classInstance.Get("Style");
+            JCObject val = (JCObject)retObjectStyle;
             return new SoapBindingStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStyle != null ? retObjectStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class SoapOperationBinding extends ServiceDescriptionFormatExtension  {
 
     public void setStyle(SoapBindingStyle Style) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Style", Style == null ? null : Style.getJCOInstance());
         } catch (JCNativeException jcne) {

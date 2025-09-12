@@ -142,7 +142,7 @@ public class IServiceCallImplementation extends NetObject implements IServiceCal
     
     public void OnCall() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnCall");
         } catch (JCNativeException jcne) {

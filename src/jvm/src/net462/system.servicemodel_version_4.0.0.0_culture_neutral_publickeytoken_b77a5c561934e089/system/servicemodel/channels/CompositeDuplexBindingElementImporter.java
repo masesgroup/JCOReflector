@@ -169,7 +169,7 @@ public class CompositeDuplexBindingElementImporter extends NetObject implements 
      */
     @Deprecated 
     public void ImportPolicy(MetadataImporter importer, PolicyConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyImportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyImportExtension to obtain the full interface.");
     }
 
 

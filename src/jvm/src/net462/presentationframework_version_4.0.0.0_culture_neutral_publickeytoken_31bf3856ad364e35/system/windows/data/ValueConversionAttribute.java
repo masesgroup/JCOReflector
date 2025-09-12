@@ -170,10 +170,14 @@ public class ValueConversionAttribute extends Attribute  {
     
     public NetType getParameterType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParameterType");
+            retObjectParameterType = classInstance.Get("ParameterType");
+            JCObject val = (JCObject)retObjectParameterType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameterType != null ? retObjectParameterType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class ValueConversionAttribute extends Attribute  {
 
     public void setParameterType(NetType ParameterType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParameterType", ParameterType == null ? null : ParameterType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -191,10 +195,14 @@ public class ValueConversionAttribute extends Attribute  {
 
     public NetType getSourceType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceType");
+            retObjectSourceType = classInstance.Get("SourceType");
+            JCObject val = (JCObject)retObjectSourceType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceType != null ? retObjectSourceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +210,14 @@ public class ValueConversionAttribute extends Attribute  {
 
     public NetType getTargetType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetType");
+            retObjectTargetType = classInstance.Get("TargetType");
+            JCObject val = (JCObject)retObjectTargetType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetType != null ? retObjectTargetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

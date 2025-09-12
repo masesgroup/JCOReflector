@@ -142,7 +142,7 @@ public class IModalServiceImplementation extends NetObject implements IModalServ
     
     public void SetModalState(boolean isModal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetModalState", isModal);
         } catch (JCNativeException jcne) {

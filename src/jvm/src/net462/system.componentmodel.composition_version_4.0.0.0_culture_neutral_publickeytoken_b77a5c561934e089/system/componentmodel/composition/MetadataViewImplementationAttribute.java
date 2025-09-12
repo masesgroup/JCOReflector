@@ -170,10 +170,14 @@ public class MetadataViewImplementationAttribute extends Attribute  {
     
     public NetType getImplementationType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImplementationType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImplementationType");
+            retObjectImplementationType = classInstance.Get("ImplementationType");
+            JCObject val = (JCObject)retObjectImplementationType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImplementationType != null ? retObjectImplementationType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class MetadataViewImplementationAttribute extends Attribute  {
 
     public void setImplementationType(NetType ImplementationType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImplementationType", ImplementationType == null ? null : ImplementationType.getJCOInstance());
         } catch (JCNativeException jcne) {

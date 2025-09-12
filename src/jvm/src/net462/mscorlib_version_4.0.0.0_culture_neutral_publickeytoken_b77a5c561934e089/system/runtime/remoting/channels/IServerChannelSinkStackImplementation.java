@@ -153,10 +153,14 @@ public class IServerChannelSinkStackImplementation extends NetObject implements 
     
     public Stream GetResponseStream(IMessage msg, ITransportHeaders headers) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResponseStream = null;
         try {
-            JCObject objGetResponseStream = (JCObject)classInstance.Invoke("GetResponseStream", msg == null ? null : msg.getJCOInstance(), headers == null ? null : headers.getJCOInstance());
+            retObjectGetResponseStream = classInstance.Invoke("GetResponseStream", msg == null ? null : msg.getJCOInstance(), headers == null ? null : headers.getJCOInstance());
+            JCObject objGetResponseStream = (JCObject)retObjectGetResponseStream;
             return new Stream(objGetResponseStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResponseStream != null ? retObjectGetResponseStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,10 +168,14 @@ public class IServerChannelSinkStackImplementation extends NetObject implements 
 
     public NetObject Pop(IServerChannelSink sink) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPop = null;
         try {
-            JCObject objPop = (JCObject)classInstance.Invoke("Pop", sink == null ? null : sink.getJCOInstance());
+            retObjectPop = classInstance.Invoke("Pop", sink == null ? null : sink.getJCOInstance());
+            JCObject objPop = (JCObject)retObjectPop;
             return new NetObject(objPop);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPop != null ? retObjectPop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +183,7 @@ public class IServerChannelSinkStackImplementation extends NetObject implements 
 
     public void AsyncProcessResponse(IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AsyncProcessResponse", msg == null ? null : msg.getJCOInstance(), headers == null ? null : headers.getJCOInstance(), stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -185,7 +193,7 @@ public class IServerChannelSinkStackImplementation extends NetObject implements 
 
     public void Push(IServerChannelSink sink, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Push", sink == null ? null : sink.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -195,7 +203,7 @@ public class IServerChannelSinkStackImplementation extends NetObject implements 
 
     public void ServerCallback(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ServerCallback", ar == null ? null : ar.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,7 +213,7 @@ public class IServerChannelSinkStackImplementation extends NetObject implements 
 
     public void Store(IServerChannelSink sink, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Store", sink == null ? null : sink.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -215,7 +223,7 @@ public class IServerChannelSinkStackImplementation extends NetObject implements 
 
     public void StoreAndDispatch(IServerChannelSink sink, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StoreAndDispatch", sink == null ? null : sink.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -157,9 +157,13 @@ public class RoutedEventHandlerInfo extends ValueType  {
     
     public boolean Equals(RoutedEventHandlerInfo handlerInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", handlerInfo == null ? null : handlerInfo.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", handlerInfo == null ? null : handlerInfo.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class RoutedEventHandlerInfo extends ValueType  {
     
     public boolean getInvokeHandledEventsToo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeHandledEventsToo = null;
         try {
-            return (boolean)classInstance.Get("InvokeHandledEventsToo");
+            retObjectInvokeHandledEventsToo = classInstance.Get("InvokeHandledEventsToo");
+            return (boolean)retObjectInvokeHandledEventsToo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInvokeHandledEventsToo != null ? retObjectInvokeHandledEventsToo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

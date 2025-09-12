@@ -167,10 +167,14 @@ public class RuleDefinitions extends NetObject  {
     
     public RuleConditionCollection getConditions() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConditions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Conditions");
+            retObjectConditions = classInstance.Get("Conditions");
+            JCObject val = (JCObject)retObjectConditions;
             return new RuleConditionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConditions != null ? retObjectConditions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class RuleDefinitions extends NetObject  {
 
     public RuleSetCollection getRuleSets() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRuleSets = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RuleSets");
+            retObjectRuleSets = classInstance.Get("RuleSets");
+            JCObject val = (JCObject)retObjectRuleSets;
             return new RuleSetCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRuleSets != null ? retObjectRuleSets.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

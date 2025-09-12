@@ -168,7 +168,7 @@ public class CustomAttributeElementTypeEncoder extends ValueType  {
     
     public void Boolean() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Boolean");
         } catch (JCNativeException jcne) {
@@ -178,7 +178,7 @@ public class CustomAttributeElementTypeEncoder extends ValueType  {
 
     public void Byte() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Byte");
         } catch (JCNativeException jcne) {
@@ -188,7 +188,7 @@ public class CustomAttributeElementTypeEncoder extends ValueType  {
 
     public void Char() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Char");
         } catch (JCNativeException jcne) {
@@ -198,7 +198,7 @@ public class CustomAttributeElementTypeEncoder extends ValueType  {
 
     public void Double() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Double");
         } catch (JCNativeException jcne) {
@@ -208,7 +208,7 @@ public class CustomAttributeElementTypeEncoder extends ValueType  {
 
     public void Enum(java.lang.String enumTypeName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Enum", enumTypeName);
         } catch (JCNativeException jcne) {
@@ -218,7 +218,7 @@ public class CustomAttributeElementTypeEncoder extends ValueType  {
 
     public void Int16() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Int16");
         } catch (JCNativeException jcne) {
@@ -228,7 +228,7 @@ public class CustomAttributeElementTypeEncoder extends ValueType  {
 
     public void Int32() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Int32");
         } catch (JCNativeException jcne) {
@@ -238,7 +238,7 @@ public class CustomAttributeElementTypeEncoder extends ValueType  {
 
     public void Int64() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Int64");
         } catch (JCNativeException jcne) {
@@ -248,7 +248,7 @@ public class CustomAttributeElementTypeEncoder extends ValueType  {
 
     public void PrimitiveType(PrimitiveSerializationTypeCode type) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PrimitiveType", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -258,7 +258,7 @@ public class CustomAttributeElementTypeEncoder extends ValueType  {
 
     public void SByte() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SByte");
         } catch (JCNativeException jcne) {
@@ -268,7 +268,7 @@ public class CustomAttributeElementTypeEncoder extends ValueType  {
 
     public void Single() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Single");
         } catch (JCNativeException jcne) {
@@ -278,7 +278,7 @@ public class CustomAttributeElementTypeEncoder extends ValueType  {
 
     public void String() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("String");
         } catch (JCNativeException jcne) {
@@ -288,7 +288,7 @@ public class CustomAttributeElementTypeEncoder extends ValueType  {
 
     public void SystemType() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SystemType");
         } catch (JCNativeException jcne) {
@@ -298,7 +298,7 @@ public class CustomAttributeElementTypeEncoder extends ValueType  {
 
     public void UInt16() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UInt16");
         } catch (JCNativeException jcne) {
@@ -308,7 +308,7 @@ public class CustomAttributeElementTypeEncoder extends ValueType  {
 
     public void UInt32() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UInt32");
         } catch (JCNativeException jcne) {
@@ -318,7 +318,7 @@ public class CustomAttributeElementTypeEncoder extends ValueType  {
 
     public void UInt64() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UInt64");
         } catch (JCNativeException jcne) {
@@ -332,10 +332,14 @@ public class CustomAttributeElementTypeEncoder extends ValueType  {
     
     public BlobBuilder getBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuilder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Builder");
+            retObjectBuilder = classInstance.Get("Builder");
+            JCObject val = (JCObject)retObjectBuilder;
             return new BlobBuilder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuilder != null ? retObjectBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

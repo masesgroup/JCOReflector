@@ -153,9 +153,13 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
     
     public boolean IsSupportedActivityType(NetType activityType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSupportedActivityType = null;
         try {
-            return (boolean)classInstance.Invoke("IsSupportedActivityType", activityType == null ? null : activityType.getJCOInstance());
+            retObjectIsSupportedActivityType = classInstance.Invoke("IsSupportedActivityType", activityType == null ? null : activityType.getJCOInstance());
+            return (boolean)retObjectIsSupportedActivityType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSupportedActivityType != null ? retObjectIsSupportedActivityType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,10 +167,14 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
 
     public NetObject GetView(ViewTechnology technology) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetView = null;
         try {
-            JCObject objGetView = (JCObject)classInstance.Invoke("GetView", technology == null ? null : technology.getJCOInstance());
+            retObjectGetView = classInstance.Invoke("GetView", technology == null ? null : technology.getJCOInstance());
+            JCObject objGetView = (JCObject)retObjectGetView;
             return new NetObject(objGetView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetView != null ? retObjectGetView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +182,7 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -184,7 +192,7 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
 
     public void DoDefaultAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DoDefaultAction");
         } catch (JCNativeException jcne) {
@@ -194,7 +202,7 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
 
     public void Initialize(IComponent component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,9 +216,13 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
     
     public boolean getSupportsLayoutPersistence() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsLayoutPersistence = null;
         try {
-            return (boolean)classInstance.Get("SupportsLayoutPersistence");
+            retObjectSupportsLayoutPersistence = classInstance.Get("SupportsLayoutPersistence");
+            return (boolean)retObjectSupportsLayoutPersistence;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsLayoutPersistence != null ? retObjectSupportsLayoutPersistence.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +230,14 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
 
     public DesignerVerbCollection getVerbs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerbs = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Verbs");
+            retObjectVerbs = classInstance.Get("Verbs");
+            JCObject val = (JCObject)retObjectVerbs;
             return new DesignerVerbCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerbs != null ? retObjectVerbs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,16 +245,20 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
 
     public final ViewTechnology[] getSupportedTechnologies() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportedTechnologies = null;
         try {
             ArrayList<ViewTechnology> resultingArrayList = new ArrayList<ViewTechnology>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SupportedTechnologies");
+            retObjectSupportedTechnologies = classInstance.Get("SupportedTechnologies");
+            JCObject resultingObjects = (JCObject)retObjectSupportedTechnologies;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ViewTechnology(resultingObject));
             }
             ViewTechnology[] resultingArray = new ViewTechnology[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSupportedTechnologies != null ? retObjectSupportedTechnologies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +266,14 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
 
     public IComponent getComponent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComponent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Component");
+            retObjectComponent = classInstance.Get("Component");
+            JCObject val = (JCObject)retObjectComponent;
             return new IComponentImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComponent != null ? retObjectComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +281,14 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
 
     public CompositeActivityDesigner getInvokingDesigner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokingDesigner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InvokingDesigner");
+            retObjectInvokingDesigner = classInstance.Get("InvokingDesigner");
+            JCObject val = (JCObject)retObjectInvokingDesigner;
             return new CompositeActivityDesigner(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokingDesigner != null ? retObjectInvokingDesigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +296,7 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
 
     public void setInvokingDesigner(CompositeActivityDesigner InvokingDesigner) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InvokingDesigner", InvokingDesigner == null ? null : InvokingDesigner.getJCOInstance());
         } catch (JCNativeException jcne) {

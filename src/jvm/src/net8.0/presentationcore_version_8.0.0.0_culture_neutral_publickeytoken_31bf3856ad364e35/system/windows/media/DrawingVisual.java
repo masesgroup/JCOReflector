@@ -164,10 +164,14 @@ public class DrawingVisual extends ContainerVisual  {
     
     public DrawingContext RenderOpen() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OverflowException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TimeoutException, system.FormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenderOpen = null;
         try {
-            JCObject objRenderOpen = (JCObject)classInstance.Invoke("RenderOpen");
+            retObjectRenderOpen = classInstance.Invoke("RenderOpen");
+            JCObject objRenderOpen = (JCObject)retObjectRenderOpen;
             return new DrawingContext(objRenderOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRenderOpen != null ? retObjectRenderOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class DrawingVisual extends ContainerVisual  {
     
     public DrawingGroup getDrawing() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDrawing = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Drawing");
+            retObjectDrawing = classInstance.Get("Drawing");
+            JCObject val = (JCObject)retObjectDrawing;
             return new DrawingGroup(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDrawing != null ? retObjectDrawing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

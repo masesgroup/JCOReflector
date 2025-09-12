@@ -154,9 +154,13 @@ public class ContractHelper extends NetObject  {
     
     public static java.lang.String RaiseContractFailedEvent(ContractFailureKind failureKind, java.lang.String userMessage, java.lang.String conditionText, NetException innerException) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.diagnostics.contracts.ContractException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRaiseContractFailedEvent = null;
         try {
-            return (java.lang.String)classType.Invoke("RaiseContractFailedEvent", failureKind == null ? null : failureKind.getJCOInstance(), userMessage, conditionText, innerException == null ? null : innerException.getJCOInstance());
+            retObjectRaiseContractFailedEvent = classType.Invoke("RaiseContractFailedEvent", failureKind == null ? null : failureKind.getJCOInstance(), userMessage, conditionText, innerException == null ? null : innerException.getJCOInstance());
+            return (java.lang.String)retObjectRaiseContractFailedEvent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectRaiseContractFailedEvent != null ? retObjectRaiseContractFailedEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,7 +168,7 @@ public class ContractHelper extends NetObject  {
 
     public static void TriggerFailure(ContractFailureKind kind, java.lang.String displayMessage, java.lang.String userMessage, java.lang.String conditionText, NetException innerException) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.contracts.ContractException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("TriggerFailure", kind == null ? null : kind.getJCOInstance(), displayMessage, userMessage, conditionText, innerException == null ? null : innerException.getJCOInstance());
         } catch (JCNativeException jcne) {

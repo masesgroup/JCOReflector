@@ -163,10 +163,14 @@ public class SubscriptionListChangedEventArgs extends EventArgs  {
     
     public PeerChangeType getPeerChangeType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeerChangeType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PeerChangeType");
+            retObjectPeerChangeType = classInstance.Get("PeerChangeType");
+            JCObject val = (JCObject)retObjectPeerChangeType;
             return new PeerChangeType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeerChangeType != null ? retObjectPeerChangeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class SubscriptionListChangedEventArgs extends EventArgs  {
 
     public PeerContact getPeerContact() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeerContact = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PeerContact");
+            retObjectPeerContact = classInstance.Get("PeerContact");
+            JCObject val = (JCObject)retObjectPeerContact;
             return new PeerContact(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeerContact != null ? retObjectPeerContact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class SubscriptionListChangedEventArgs extends EventArgs  {
 
     public PeerEndPoint getPeerEndPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeerEndPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PeerEndPoint");
+            retObjectPeerEndPoint = classInstance.Get("PeerEndPoint");
+            JCObject val = (JCObject)retObjectPeerEndPoint;
             return new PeerEndPoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeerEndPoint != null ? retObjectPeerEndPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

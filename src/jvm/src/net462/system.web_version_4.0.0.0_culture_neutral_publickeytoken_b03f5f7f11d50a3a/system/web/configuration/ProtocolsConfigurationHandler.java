@@ -162,10 +162,14 @@ public class ProtocolsConfigurationHandler extends NetObject  {
     
     public NetObject Create(NetObject parent, NetObject configContextObj, XmlNode section) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.io.PathTooLongException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classInstance.Invoke("Create", parent == null ? null : parent.getJCOInstance(), configContextObj == null ? null : configContextObj.getJCOInstance(), section == null ? null : section.getJCOInstance());
+            retObjectCreate = classInstance.Invoke("Create", parent == null ? null : parent.getJCOInstance(), configContextObj == null ? null : configContextObj.getJCOInstance(), section == null ? null : section.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new NetObject(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

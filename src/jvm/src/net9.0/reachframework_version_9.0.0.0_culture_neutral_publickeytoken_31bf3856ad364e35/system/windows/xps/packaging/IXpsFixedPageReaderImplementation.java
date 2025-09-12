@@ -154,10 +154,14 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
     
     public XpsColorContext GetColorContext(Uri uri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetColorContext = null;
         try {
-            JCObject objGetColorContext = (JCObject)classInstance.Invoke("GetColorContext", uri == null ? null : uri.getJCOInstance());
+            retObjectGetColorContext = classInstance.Invoke("GetColorContext", uri == null ? null : uri.getJCOInstance());
+            JCObject objGetColorContext = (JCObject)retObjectGetColorContext;
             return new XpsColorContext(objGetColorContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetColorContext != null ? retObjectGetColorContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,10 +169,14 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
 
     public XpsFont GetFont(Uri uri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFont = null;
         try {
-            JCObject objGetFont = (JCObject)classInstance.Invoke("GetFont", uri == null ? null : uri.getJCOInstance());
+            retObjectGetFont = classInstance.Invoke("GetFont", uri == null ? null : uri.getJCOInstance());
+            JCObject objGetFont = (JCObject)retObjectGetFont;
             return new XpsFont(objGetFont);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFont != null ? retObjectGetFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +184,14 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
 
     public XpsImage GetImage(Uri uri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetImage = null;
         try {
-            JCObject objGetImage = (JCObject)classInstance.Invoke("GetImage", uri == null ? null : uri.getJCOInstance());
+            retObjectGetImage = classInstance.Invoke("GetImage", uri == null ? null : uri.getJCOInstance());
+            JCObject objGetImage = (JCObject)retObjectGetImage;
             return new XpsImage(objGetImage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetImage != null ? retObjectGetImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +199,14 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
 
     public XpsResource GetResource(Uri resourceUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResource = null;
         try {
-            JCObject objGetResource = (JCObject)classInstance.Invoke("GetResource", resourceUri == null ? null : resourceUri.getJCOInstance());
+            retObjectGetResource = classInstance.Invoke("GetResource", resourceUri == null ? null : resourceUri.getJCOInstance());
+            JCObject objGetResource = (JCObject)retObjectGetResource;
             return new XpsResource(objGetResource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResource != null ? retObjectGetResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +214,14 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
 
     public XpsResourceDictionary GetResourceDictionary(Uri uri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResourceDictionary = null;
         try {
-            JCObject objGetResourceDictionary = (JCObject)classInstance.Invoke("GetResourceDictionary", uri == null ? null : uri.getJCOInstance());
+            retObjectGetResourceDictionary = classInstance.Invoke("GetResourceDictionary", uri == null ? null : uri.getJCOInstance());
+            JCObject objGetResourceDictionary = (JCObject)retObjectGetResourceDictionary;
             return new XpsResourceDictionary(objGetResourceDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResourceDictionary != null ? retObjectGetResourceDictionary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +229,14 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
 
     public XpsStructure AddStoryFragment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddStoryFragment = null;
         try {
-            JCObject objAddStoryFragment = (JCObject)classInstance.Invoke("AddStoryFragment");
+            retObjectAddStoryFragment = classInstance.Invoke("AddStoryFragment");
+            JCObject objAddStoryFragment = (JCObject)retObjectAddStoryFragment;
             return new XpsStructure(objAddStoryFragment);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddStoryFragment != null ? retObjectAddStoryFragment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,9 +248,19 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
     
     public int getPageNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageNumber = null;
         try {
-            return (int)classInstance.Get("PageNumber");
+            retObjectPageNumber = classInstance.Get("PageNumber");
+            return (int)retObjectPageNumber;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPageNumberNumber = (java.lang.Number)retObjectPageNumber;
+                return retObjectPageNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageNumber != null ? retObjectPageNumber.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +268,14 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
 
     public PrintTicket getPrintTicket() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrintTicket = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrintTicket");
+            retObjectPrintTicket = classInstance.Get("PrintTicket");
+            JCObject val = (JCObject)retObjectPrintTicket;
             return new PrintTicket(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrintTicket != null ? retObjectPrintTicket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +283,14 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
 
     public Uri getUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Uri");
+            retObjectUri = classInstance.Get("Uri");
+            JCObject val = (JCObject)retObjectUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUri != null ? retObjectUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +298,14 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
 
     public XpsStructure getStoryFragment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStoryFragment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StoryFragment");
+            retObjectStoryFragment = classInstance.Get("StoryFragment");
+            JCObject val = (JCObject)retObjectStoryFragment;
             return new XpsStructure(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStoryFragment != null ? retObjectStoryFragment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +313,14 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
 
     public XpsThumbnail getThumbnail() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThumbnail = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Thumbnail");
+            retObjectThumbnail = classInstance.Get("Thumbnail");
+            JCObject val = (JCObject)retObjectThumbnail;
             return new XpsThumbnail(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThumbnail != null ? retObjectThumbnail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +328,14 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
 
     public XmlReader getXmlReader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlReader = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlReader");
+            retObjectXmlReader = classInstance.Get("XmlReader");
+            JCObject val = (JCObject)retObjectXmlReader;
             return new XmlReader(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlReader != null ? retObjectXmlReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

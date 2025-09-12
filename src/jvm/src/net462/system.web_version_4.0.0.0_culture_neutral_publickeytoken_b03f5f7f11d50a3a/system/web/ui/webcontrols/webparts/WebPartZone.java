@@ -168,10 +168,14 @@ public class WebPartZone extends WebPartZoneBase  {
     
     public ITemplate getZoneTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectZoneTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ZoneTemplate");
+            retObjectZoneTemplate = classInstance.Get("ZoneTemplate");
+            JCObject val = (JCObject)retObjectZoneTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectZoneTemplate != null ? retObjectZoneTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class WebPartZone extends WebPartZoneBase  {
 
     public void setZoneTemplate(ITemplate ZoneTemplate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ZoneTemplate", ZoneTemplate == null ? null : ZoneTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {

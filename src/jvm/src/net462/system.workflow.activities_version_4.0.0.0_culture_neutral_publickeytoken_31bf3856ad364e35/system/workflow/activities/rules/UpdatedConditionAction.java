@@ -177,10 +177,14 @@ public class UpdatedConditionAction extends RuleConditionChangeAction  {
     
     public RuleCondition getConditionDefinition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConditionDefinition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConditionDefinition");
+            retObjectConditionDefinition = classInstance.Get("ConditionDefinition");
+            JCObject val = (JCObject)retObjectConditionDefinition;
             return new RuleCondition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConditionDefinition != null ? retObjectConditionDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class UpdatedConditionAction extends RuleConditionChangeAction  {
 
     public void setConditionDefinition(RuleCondition ConditionDefinition) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConditionDefinition", ConditionDefinition == null ? null : ConditionDefinition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,10 +202,14 @@ public class UpdatedConditionAction extends RuleConditionChangeAction  {
 
     public RuleCondition getNewConditionDefinition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewConditionDefinition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewConditionDefinition");
+            retObjectNewConditionDefinition = classInstance.Get("NewConditionDefinition");
+            JCObject val = (JCObject)retObjectNewConditionDefinition;
             return new RuleCondition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewConditionDefinition != null ? retObjectNewConditionDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +217,7 @@ public class UpdatedConditionAction extends RuleConditionChangeAction  {
 
     public void setNewConditionDefinition(RuleCondition NewConditionDefinition) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewConditionDefinition", NewConditionDefinition == null ? null : NewConditionDefinition.getJCOInstance());
         } catch (JCNativeException jcne) {

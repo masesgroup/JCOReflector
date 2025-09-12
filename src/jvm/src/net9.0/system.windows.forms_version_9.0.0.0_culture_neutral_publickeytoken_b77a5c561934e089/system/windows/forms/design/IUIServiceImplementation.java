@@ -150,9 +150,13 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
     
     public boolean CanShowComponentEditor(NetObject component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanShowComponentEditor = null;
         try {
-            return (boolean)classInstance.Invoke("CanShowComponentEditor", component == null ? null : component.getJCOInstance());
+            retObjectCanShowComponentEditor = classInstance.Invoke("CanShowComponentEditor", component == null ? null : component.getJCOInstance());
+            return (boolean)retObjectCanShowComponentEditor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanShowComponentEditor != null ? retObjectCanShowComponentEditor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,9 +164,13 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
 
     public boolean ShowComponentEditor(NetObject component, IWin32Window parent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowComponentEditor = null;
         try {
-            return (boolean)classInstance.Invoke("ShowComponentEditor", component == null ? null : component.getJCOInstance(), parent == null ? null : parent.getJCOInstance());
+            retObjectShowComponentEditor = classInstance.Invoke("ShowComponentEditor", component == null ? null : component.getJCOInstance(), parent == null ? null : parent.getJCOInstance());
+            return (boolean)retObjectShowComponentEditor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShowComponentEditor != null ? retObjectShowComponentEditor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +178,13 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
 
     public boolean ShowToolWindow(Guid toolWindow) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowToolWindow = null;
         try {
-            return (boolean)classInstance.Invoke("ShowToolWindow", toolWindow == null ? null : toolWindow.getJCOInstance());
+            retObjectShowToolWindow = classInstance.Invoke("ShowToolWindow", toolWindow == null ? null : toolWindow.getJCOInstance());
+            return (boolean)retObjectShowToolWindow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShowToolWindow != null ? retObjectShowToolWindow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +192,14 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
 
     public DialogResult ShowDialog(Form form) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowDialog = null;
         try {
-            JCObject objShowDialog = (JCObject)classInstance.Invoke("ShowDialog", form == null ? null : form.getJCOInstance());
+            retObjectShowDialog = classInstance.Invoke("ShowDialog", form == null ? null : form.getJCOInstance());
+            JCObject objShowDialog = (JCObject)retObjectShowDialog;
             return new DialogResult(objShowDialog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowDialog != null ? retObjectShowDialog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +207,14 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
 
     public DialogResult ShowMessage(java.lang.String message, java.lang.String caption, MessageBoxButtons buttons) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowMessage = null;
         try {
-            JCObject objShowMessage = (JCObject)classInstance.Invoke("ShowMessage", message, caption, buttons == null ? null : buttons.getJCOInstance());
+            retObjectShowMessage = classInstance.Invoke("ShowMessage", message, caption, buttons == null ? null : buttons.getJCOInstance());
+            JCObject objShowMessage = (JCObject)retObjectShowMessage;
             return new DialogResult(objShowMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowMessage != null ? retObjectShowMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +222,14 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
 
     public IWin32Window GetDialogOwnerWindow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDialogOwnerWindow = null;
         try {
-            JCObject objGetDialogOwnerWindow = (JCObject)classInstance.Invoke("GetDialogOwnerWindow");
+            retObjectGetDialogOwnerWindow = classInstance.Invoke("GetDialogOwnerWindow");
+            JCObject objGetDialogOwnerWindow = (JCObject)retObjectGetDialogOwnerWindow;
             return new IWin32WindowImplementation(objGetDialogOwnerWindow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDialogOwnerWindow != null ? retObjectGetDialogOwnerWindow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +237,7 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
 
     public void SetUIDirty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetUIDirty");
         } catch (JCNativeException jcne) {
@@ -223,7 +247,7 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
 
     public void ShowError(NetException ex, java.lang.String message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowError", ex == null ? null : ex.getJCOInstance(), message);
         } catch (JCNativeException jcne) {
@@ -233,7 +257,7 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
 
     public void ShowError(NetException ex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowError", ex == null ? null : ex.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,7 +267,7 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
 
     public void ShowError(java.lang.String message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowError", message);
         } catch (JCNativeException jcne) {
@@ -253,7 +277,7 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
 
     public void ShowMessage(java.lang.String message, java.lang.String caption) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowMessage", message, caption);
         } catch (JCNativeException jcne) {
@@ -263,7 +287,7 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
 
     public void ShowMessage(java.lang.String message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowMessage", message);
         } catch (JCNativeException jcne) {
@@ -277,10 +301,14 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
     
     public IDictionary getStyles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStyles = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Styles");
+            retObjectStyles = classInstance.Get("Styles");
+            JCObject val = (JCObject)retObjectStyles;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStyles != null ? retObjectStyles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -156,7 +156,7 @@ public class SmtpMail extends NetObject  {
     
     public static void Send(java.lang.String from, java.lang.String to, java.lang.String subject, java.lang.String messageText) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.PlatformNotSupportedException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Send", from, to, subject, messageText);
         } catch (JCNativeException jcne) {
@@ -166,7 +166,7 @@ public class SmtpMail extends NetObject  {
 
     public static void Send(MailMessage message) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.PlatformNotSupportedException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Send", message == null ? null : message.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -180,9 +180,13 @@ public class SmtpMail extends NetObject  {
     
     public static java.lang.String getSmtpServer() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmtpServer = null;
         try {
-            return (java.lang.String)classType.Get("SmtpServer");
+            retObjectSmtpServer = classType.Get("SmtpServer");
+            return (java.lang.String)retObjectSmtpServer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSmtpServer != null ? retObjectSmtpServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +194,7 @@ public class SmtpMail extends NetObject  {
 
     public static void setSmtpServer(java.lang.String SmtpServer) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("SmtpServer", SmtpServer);
         } catch (JCNativeException jcne) {

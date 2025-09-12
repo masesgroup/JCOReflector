@@ -171,10 +171,14 @@ public class ColorMatrixEffect extends Effect  {
     
     public ColorMatrix getMatrix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix");
+            retObjectMatrix = classInstance.Get("Matrix");
+            JCObject val = (JCObject)retObjectMatrix;
             return new ColorMatrix(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix != null ? retObjectMatrix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

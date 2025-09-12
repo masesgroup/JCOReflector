@@ -144,7 +144,7 @@ public class IFileChangeNotificationSystemImplementation extends NetObject imple
     
     public void StartMonitoring(java.lang.String filePath, OnChangedCallback onChangedCallback, JCORefOut<NetObject> state, JCORefOut<DateTimeOffset> lastWriteTime, JCORefOut<java.util.concurrent.atomic.AtomicLong> fileSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartMonitoring", filePath, onChangedCallback, state.getJCRefOut(), lastWriteTime.getJCRefOut(), fileSize.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class IFileChangeNotificationSystemImplementation extends NetObject imple
 
     public void StopMonitoring(java.lang.String filePath, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StopMonitoring", filePath, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {

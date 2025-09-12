@@ -177,7 +177,7 @@ public class ChtmlTextWriter extends Html32TextWriter  {
     
     public void AddRecognizedAttribute(java.lang.String elementName, java.lang.String attributeName) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRecognizedAttribute", elementName, attributeName);
         } catch (JCNativeException jcne) {
@@ -187,7 +187,7 @@ public class ChtmlTextWriter extends Html32TextWriter  {
 
     public void RemoveRecognizedAttribute(java.lang.String elementName, java.lang.String attributeName) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveRecognizedAttribute", elementName, attributeName);
         } catch (JCNativeException jcne) {
@@ -197,7 +197,7 @@ public class ChtmlTextWriter extends Html32TextWriter  {
 
     public void WriteBreak() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBreak");
         } catch (JCNativeException jcne) {
@@ -207,7 +207,7 @@ public class ChtmlTextWriter extends Html32TextWriter  {
 
     public void WriteEncodedText(java.lang.String text) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEncodedText", text);
         } catch (JCNativeException jcne) {

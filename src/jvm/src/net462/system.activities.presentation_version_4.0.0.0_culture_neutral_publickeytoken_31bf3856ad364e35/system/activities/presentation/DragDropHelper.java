@@ -166,9 +166,13 @@ public class DragDropHelper extends NetObject  {
     
     public static boolean AllowDrop(IDataObject draggedDataObject, EditingContext context, NetType... allowedItemTypes) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.TypeLoadException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAllowDrop = null;
         try {
-            return (boolean)classType.Invoke("AllowDrop", draggedDataObject == null ? null : draggedDataObject.getJCOInstance(), context == null ? null : context.getJCOInstance(), toObjectFromArray(allowedItemTypes));
+            retObjectAllowDrop = classType.Invoke("AllowDrop", draggedDataObject == null ? null : draggedDataObject.getJCOInstance(), context == null ? null : context.getJCOInstance(), toObjectFromArray(allowedItemTypes));
+            return (boolean)retObjectAllowDrop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAllowDrop != null ? retObjectAllowDrop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class DragDropHelper extends NetObject  {
 
     public static ICompositeView GetCompositeView(DragEventArgs e) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCompositeView = null;
         try {
-            JCObject objGetCompositeView = (JCObject)classType.Invoke("GetCompositeView", e == null ? null : e.getJCOInstance());
+            retObjectGetCompositeView = classType.Invoke("GetCompositeView", e == null ? null : e.getJCOInstance());
+            JCObject objGetCompositeView = (JCObject)retObjectGetCompositeView;
             return new ICompositeViewImplementation(objGetCompositeView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCompositeView != null ? retObjectGetCompositeView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +195,14 @@ public class DragDropHelper extends NetObject  {
 
     public static ModelItem GetDraggedModelItem(DragEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDraggedModelItem = null;
         try {
-            JCObject objGetDraggedModelItem = (JCObject)classType.Invoke("GetDraggedModelItem", e == null ? null : e.getJCOInstance());
+            retObjectGetDraggedModelItem = classType.Invoke("GetDraggedModelItem", e == null ? null : e.getJCOInstance());
+            JCObject objGetDraggedModelItem = (JCObject)retObjectGetDraggedModelItem;
             return new ModelItem(objGetDraggedModelItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDraggedModelItem != null ? retObjectGetDraggedModelItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +210,14 @@ public class DragDropHelper extends NetObject  {
 
     public static NetObject GetDroppedObject(DependencyObject dropTarget, DragEventArgs e, EditingContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.OverflowException, system.io.IOException, system.security.SecurityException, system.NotImplementedException, system.RankException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.FormatException, system.OutOfMemoryException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDroppedObject = null;
         try {
-            JCObject objGetDroppedObject = (JCObject)classType.Invoke("GetDroppedObject", dropTarget == null ? null : dropTarget.getJCOInstance(), e == null ? null : e.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            retObjectGetDroppedObject = classType.Invoke("GetDroppedObject", dropTarget == null ? null : dropTarget.getJCOInstance(), e == null ? null : e.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objGetDroppedObject = (JCObject)retObjectGetDroppedObject;
             return new NetObject(objGetDroppedObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDroppedObject != null ? retObjectGetDroppedObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +225,14 @@ public class DragDropHelper extends NetObject  {
 
     public static DragDropEffects DoDragMove(WorkflowViewElement draggedViewElement, Point referencePoint) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.NotImplementedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.RankException, system.OutOfMemoryException, system.threading.ThreadStateException, system.SystemException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDoDragMove = null;
         try {
-            JCObject objDoDragMove = (JCObject)classType.Invoke("DoDragMove", draggedViewElement == null ? null : draggedViewElement.getJCOInstance(), referencePoint == null ? null : referencePoint.getJCOInstance());
+            retObjectDoDragMove = classType.Invoke("DoDragMove", draggedViewElement == null ? null : draggedViewElement.getJCOInstance(), referencePoint == null ? null : referencePoint.getJCOInstance());
+            JCObject objDoDragMove = (JCObject)retObjectDoDragMove;
             return new DragDropEffects(objDoDragMove);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDoDragMove != null ? retObjectDoDragMove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +240,14 @@ public class DragDropHelper extends NetObject  {
 
     public static DragDropEffects GetDragDropCompletedEffects(DataObject data) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDragDropCompletedEffects = null;
         try {
-            JCObject objGetDragDropCompletedEffects = (JCObject)classType.Invoke("GetDragDropCompletedEffects", data == null ? null : data.getJCOInstance());
+            retObjectGetDragDropCompletedEffects = classType.Invoke("GetDragDropCompletedEffects", data == null ? null : data.getJCOInstance());
+            JCObject objGetDragDropCompletedEffects = (JCObject)retObjectGetDragDropCompletedEffects;
             return new DragDropEffects(objGetDragDropCompletedEffects);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDragDropCompletedEffects != null ? retObjectGetDragDropCompletedEffects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +255,14 @@ public class DragDropHelper extends NetObject  {
 
     public static Point GetDragDropAnchorPoint(DragEventArgs e) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDragDropAnchorPoint = null;
         try {
-            JCObject objGetDragDropAnchorPoint = (JCObject)classType.Invoke("GetDragDropAnchorPoint", e == null ? null : e.getJCOInstance());
+            retObjectGetDragDropAnchorPoint = classType.Invoke("GetDragDropAnchorPoint", e == null ? null : e.getJCOInstance());
+            JCObject objGetDragDropAnchorPoint = (JCObject)retObjectGetDragDropAnchorPoint;
             return new Point(objGetDragDropAnchorPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDragDropAnchorPoint != null ? retObjectGetDragDropAnchorPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +270,14 @@ public class DragDropHelper extends NetObject  {
 
     public static UIElement GetCompositeView(WorkflowViewElement workflowViewElement) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCompositeView = null;
         try {
-            JCObject objGetCompositeView = (JCObject)classType.Invoke("GetCompositeView", workflowViewElement == null ? null : workflowViewElement.getJCOInstance());
+            retObjectGetCompositeView = classType.Invoke("GetCompositeView", workflowViewElement == null ? null : workflowViewElement.getJCOInstance());
+            JCObject objGetCompositeView = (JCObject)retObjectGetCompositeView;
             return new UIElement(objGetCompositeView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCompositeView != null ? retObjectGetCompositeView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +285,7 @@ public class DragDropHelper extends NetObject  {
 
     public static void SetCompositeView(WorkflowViewElement workflowViewElement, UIElement dragSource) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCompositeView", workflowViewElement == null ? null : workflowViewElement.getJCOInstance(), dragSource == null ? null : dragSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -263,7 +295,7 @@ public class DragDropHelper extends NetObject  {
 
     public static void SetDragDropCompletedEffects(DragEventArgs e, DragDropEffects completedEffects) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetDragDropCompletedEffects", e == null ? null : e.getJCOInstance(), completedEffects == null ? null : completedEffects.getJCOInstance());
         } catch (JCNativeException jcne) {

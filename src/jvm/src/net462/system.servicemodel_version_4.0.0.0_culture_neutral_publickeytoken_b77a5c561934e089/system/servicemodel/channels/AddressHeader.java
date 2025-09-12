@@ -159,10 +159,14 @@ public class AddressHeader extends NetObject  {
     
     public static AddressHeader CreateAddressHeader(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateAddressHeader = null;
         try {
-            JCObject objCreateAddressHeader = (JCObject)classType.Invoke("CreateAddressHeader", value == null ? null : value.getJCOInstance());
+            retObjectCreateAddressHeader = classType.Invoke("CreateAddressHeader", value == null ? null : value.getJCOInstance());
+            JCObject objCreateAddressHeader = (JCObject)retObjectCreateAddressHeader;
             return new AddressHeader(objCreateAddressHeader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateAddressHeader != null ? retObjectCreateAddressHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class AddressHeader extends NetObject  {
 
     public static AddressHeader CreateAddressHeader(NetObject value, XmlObjectSerializer serializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateAddressHeader = null;
         try {
-            JCObject objCreateAddressHeader = (JCObject)classType.Invoke("CreateAddressHeader", value == null ? null : value.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance());
+            retObjectCreateAddressHeader = classType.Invoke("CreateAddressHeader", value == null ? null : value.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance());
+            JCObject objCreateAddressHeader = (JCObject)retObjectCreateAddressHeader;
             return new AddressHeader(objCreateAddressHeader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateAddressHeader != null ? retObjectCreateAddressHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class AddressHeader extends NetObject  {
 
     public static AddressHeader CreateAddressHeader(java.lang.String name, java.lang.String ns, NetObject value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateAddressHeader = null;
         try {
-            JCObject objCreateAddressHeader = (JCObject)classType.Invoke("CreateAddressHeader", name, ns, value == null ? null : value.getJCOInstance());
+            retObjectCreateAddressHeader = classType.Invoke("CreateAddressHeader", name, ns, value == null ? null : value.getJCOInstance());
+            JCObject objCreateAddressHeader = (JCObject)retObjectCreateAddressHeader;
             return new AddressHeader(objCreateAddressHeader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateAddressHeader != null ? retObjectCreateAddressHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class AddressHeader extends NetObject  {
 
     public static AddressHeader CreateAddressHeader(java.lang.String name, java.lang.String ns, NetObject value, XmlObjectSerializer serializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateAddressHeader = null;
         try {
-            JCObject objCreateAddressHeader = (JCObject)classType.Invoke("CreateAddressHeader", name, ns, value == null ? null : value.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance());
+            retObjectCreateAddressHeader = classType.Invoke("CreateAddressHeader", name, ns, value == null ? null : value.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance());
+            JCObject objCreateAddressHeader = (JCObject)retObjectCreateAddressHeader;
             return new AddressHeader(objCreateAddressHeader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateAddressHeader != null ? retObjectCreateAddressHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class AddressHeader extends NetObject  {
 
     public MessageHeader ToMessageHeader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToMessageHeader = null;
         try {
-            JCObject objToMessageHeader = (JCObject)classInstance.Invoke("ToMessageHeader");
+            retObjectToMessageHeader = classInstance.Invoke("ToMessageHeader");
+            JCObject objToMessageHeader = (JCObject)retObjectToMessageHeader;
             return new MessageHeader(objToMessageHeader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToMessageHeader != null ? retObjectToMessageHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +234,14 @@ public class AddressHeader extends NetObject  {
 
     public XmlDictionaryReader GetAddressHeaderReader() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAddressHeaderReader = null;
         try {
-            JCObject objGetAddressHeaderReader = (JCObject)classInstance.Invoke("GetAddressHeaderReader");
+            retObjectGetAddressHeaderReader = classInstance.Invoke("GetAddressHeaderReader");
+            JCObject objGetAddressHeaderReader = (JCObject)retObjectGetAddressHeaderReader;
             return new XmlDictionaryReader(objGetAddressHeaderReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAddressHeaderReader != null ? retObjectGetAddressHeaderReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +249,7 @@ public class AddressHeader extends NetObject  {
 
     public void WriteAddressHeader(XmlDictionaryWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAddressHeader", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -235,7 +259,7 @@ public class AddressHeader extends NetObject  {
 
     public void WriteAddressHeader(XmlWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAddressHeader", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -245,7 +269,7 @@ public class AddressHeader extends NetObject  {
 
     public void WriteAddressHeaderContents(XmlDictionaryWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAddressHeaderContents", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -255,7 +279,7 @@ public class AddressHeader extends NetObject  {
 
     public void WriteStartAddressHeader(XmlDictionaryWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartAddressHeader", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -269,9 +293,13 @@ public class AddressHeader extends NetObject  {
     
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,9 +307,13 @@ public class AddressHeader extends NetObject  {
 
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("Namespace");
+            retObjectNamespace = classInstance.Get("Namespace");
+            return (java.lang.String)retObjectNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespace != null ? retObjectNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

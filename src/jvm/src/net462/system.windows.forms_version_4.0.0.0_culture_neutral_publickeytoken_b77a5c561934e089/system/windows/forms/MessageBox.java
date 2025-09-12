@@ -163,10 +163,14 @@ public class MessageBox extends NetObject  {
     
     public static DialogResult Show(java.lang.String text) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.NullReferenceException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", text);
+            retObjectShow = classType.Invoke("Show", text);
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class MessageBox extends NetObject  {
 
     public static DialogResult Show(java.lang.String text, java.lang.String caption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.NullReferenceException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", text, caption);
+            retObjectShow = classType.Invoke("Show", text, caption);
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class MessageBox extends NetObject  {
 
     public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.NullReferenceException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", text, caption, buttons == null ? null : buttons.getJCOInstance());
+            retObjectShow = classType.Invoke("Show", text, caption, buttons == null ? null : buttons.getJCOInstance());
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +208,14 @@ public class MessageBox extends NetObject  {
 
     public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.NullReferenceException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance());
+            retObjectShow = classType.Invoke("Show", text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance());
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +223,14 @@ public class MessageBox extends NetObject  {
 
     public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.NullReferenceException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance());
+            retObjectShow = classType.Invoke("Show", text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance());
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +238,14 @@ public class MessageBox extends NetObject  {
 
     public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.NullReferenceException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            retObjectShow = classType.Invoke("Show", text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +253,14 @@ public class MessageBox extends NetObject  {
 
     public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, boolean displayHelpButton) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.NullReferenceException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance(), displayHelpButton);
+            retObjectShow = classType.Invoke("Show", text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance(), displayHelpButton);
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +268,14 @@ public class MessageBox extends NetObject  {
 
     public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance(), helpFilePath);
+            retObjectShow = classType.Invoke("Show", text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance(), helpFilePath);
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,10 +283,14 @@ public class MessageBox extends NetObject  {
 
     public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, java.lang.String keyword) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance(), helpFilePath, keyword);
+            retObjectShow = classType.Invoke("Show", text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance(), helpFilePath, keyword);
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,10 +298,14 @@ public class MessageBox extends NetObject  {
 
     public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, HelpNavigator navigator) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance(), helpFilePath, navigator == null ? null : navigator.getJCOInstance());
+            retObjectShow = classType.Invoke("Show", text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance(), helpFilePath, navigator == null ? null : navigator.getJCOInstance());
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,10 +313,14 @@ public class MessageBox extends NetObject  {
 
     public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, HelpNavigator navigator, NetObject param) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance(), helpFilePath, navigator == null ? null : navigator.getJCOInstance(), param == null ? null : param.getJCOInstance());
+            retObjectShow = classType.Invoke("Show", text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance(), helpFilePath, navigator == null ? null : navigator.getJCOInstance(), param == null ? null : param.getJCOInstance());
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,10 +328,14 @@ public class MessageBox extends NetObject  {
 
     public static DialogResult Show(IWin32Window owner, java.lang.String text) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.NullReferenceException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), text);
+            retObjectShow = classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), text);
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,10 +343,14 @@ public class MessageBox extends NetObject  {
 
     public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.NullReferenceException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), text, caption);
+            retObjectShow = classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), text, caption);
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,10 +358,14 @@ public class MessageBox extends NetObject  {
 
     public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.NullReferenceException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), text, caption, buttons == null ? null : buttons.getJCOInstance());
+            retObjectShow = classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), text, caption, buttons == null ? null : buttons.getJCOInstance());
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,10 +373,14 @@ public class MessageBox extends NetObject  {
 
     public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.NullReferenceException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance());
+            retObjectShow = classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance());
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,10 +388,14 @@ public class MessageBox extends NetObject  {
 
     public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.NullReferenceException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance());
+            retObjectShow = classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance());
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,10 +403,14 @@ public class MessageBox extends NetObject  {
 
     public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.NullReferenceException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            retObjectShow = classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,10 +418,14 @@ public class MessageBox extends NetObject  {
 
     public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance(), helpFilePath);
+            retObjectShow = classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance(), helpFilePath);
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,10 +433,14 @@ public class MessageBox extends NetObject  {
 
     public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, java.lang.String keyword) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance(), helpFilePath, keyword);
+            retObjectShow = classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance(), helpFilePath, keyword);
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,10 +448,14 @@ public class MessageBox extends NetObject  {
 
     public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, HelpNavigator navigator) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance(), helpFilePath, navigator == null ? null : navigator.getJCOInstance());
+            retObjectShow = classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance(), helpFilePath, navigator == null ? null : navigator.getJCOInstance());
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,10 +463,14 @@ public class MessageBox extends NetObject  {
 
     public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, HelpNavigator navigator, NetObject param) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance(), helpFilePath, navigator == null ? null : navigator.getJCOInstance(), param == null ? null : param.getJCOInstance());
+            retObjectShow = classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), text, caption, buttons == null ? null : buttons.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultButton == null ? null : defaultButton.getJCOInstance(), options == null ? null : options.getJCOInstance(), helpFilePath, navigator == null ? null : navigator.getJCOInstance(), param == null ? null : param.getJCOInstance());
+            JCObject objShow = (JCObject)retObjectShow;
             return new DialogResult(objShow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -164,10 +164,14 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
     
     public static MsmqIntegrationMessageProperty Get(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGet = null;
         try {
-            JCObject objGet = (JCObject)classType.Invoke("Get", message == null ? null : message.getJCOInstance());
+            retObjectGet = classType.Invoke("Get", message == null ? null : message.getJCOInstance());
+            JCObject objGet = (JCObject)retObjectGet;
             return new MsmqIntegrationMessageProperty(objGet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGet != null ? retObjectGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,12 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
     
     public byte[] getExtension() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtension = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Extension");
+            retObjectExtension = classInstance.Get("Extension");
+            JCObject resultingObjects = (JCObject)retObjectExtension;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -191,6 +197,8 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
 				resultingArray[indexExtension] = (byte)resultingArrayList.get(indexExtension);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectExtension != null ? retObjectExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
 
     public void setExtension(byte[] Extension) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Extension", Extension);
         } catch (JCNativeException jcne) {
@@ -208,10 +216,12 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
 
     public byte[] getSenderId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSenderId = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SenderId");
+            retObjectSenderId = classInstance.Get("SenderId");
+            JCObject resultingObjects = (JCObject)retObjectSenderId;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -220,6 +230,8 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
 				resultingArray[indexSenderId] = (byte)resultingArrayList.get(indexSenderId);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectSenderId != null ? retObjectSenderId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +239,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
 
     public void setSenderId(byte[] SenderId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SenderId", SenderId);
         } catch (JCNativeException jcne) {
@@ -237,10 +249,14 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
 
     public NetObject getBody() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBody = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Body");
+            retObjectBody = classInstance.Get("Body");
+            JCObject val = (JCObject)retObjectBody;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBody != null ? retObjectBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +264,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
 
     public void setBody(NetObject Body) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Body", Body == null ? null : Body.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -258,9 +274,13 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
 
     public java.lang.String getCorrelationId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCorrelationId = null;
         try {
-            return (java.lang.String)classInstance.Get("CorrelationId");
+            retObjectCorrelationId = classInstance.Get("CorrelationId");
+            return (java.lang.String)retObjectCorrelationId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCorrelationId != null ? retObjectCorrelationId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +288,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
 
     public void setCorrelationId(java.lang.String CorrelationId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CorrelationId", CorrelationId);
         } catch (JCNativeException jcne) {
@@ -278,9 +298,13 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
 
     public java.lang.String getId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (java.lang.String)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (java.lang.String)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +312,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
 
     public void setId(java.lang.String Id) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Id", Id);
         } catch (JCNativeException jcne) {
@@ -298,9 +322,13 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
 
     public java.lang.String getLabel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLabel = null;
         try {
-            return (java.lang.String)classInstance.Get("Label");
+            retObjectLabel = classInstance.Get("Label");
+            return (java.lang.String)retObjectLabel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLabel != null ? retObjectLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,7 +336,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
 
     public void setLabel(java.lang.String Label) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Label", Label);
         } catch (JCNativeException jcne) {
@@ -318,10 +346,14 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
 
     public Uri getAdministrationQueue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdministrationQueue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AdministrationQueue");
+            retObjectAdministrationQueue = classInstance.Get("AdministrationQueue");
+            JCObject val = (JCObject)retObjectAdministrationQueue;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdministrationQueue != null ? retObjectAdministrationQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,7 +361,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
 
     public void setAdministrationQueue(Uri AdministrationQueue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AdministrationQueue", AdministrationQueue == null ? null : AdministrationQueue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -339,10 +371,14 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
 
     public Uri getDestinationQueue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDestinationQueue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DestinationQueue");
+            retObjectDestinationQueue = classInstance.Get("DestinationQueue");
+            JCObject val = (JCObject)retObjectDestinationQueue;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDestinationQueue != null ? retObjectDestinationQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,7 +386,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
 
     public void setDestinationQueue(Uri DestinationQueue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DestinationQueue", DestinationQueue == null ? null : DestinationQueue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -360,10 +396,14 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
 
     public Uri getResponseQueue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResponseQueue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResponseQueue");
+            retObjectResponseQueue = classInstance.Get("ResponseQueue");
+            JCObject val = (JCObject)retObjectResponseQueue;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResponseQueue != null ? retObjectResponseQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,7 +411,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
 
     public void setResponseQueue(Uri ResponseQueue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResponseQueue", ResponseQueue == null ? null : ResponseQueue.getJCOInstance());
         } catch (JCNativeException jcne) {

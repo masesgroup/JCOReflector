@@ -162,10 +162,14 @@ public class DbFunctionCommandTree extends DbCommandTree  {
     
     public EdmFunction getEdmFunction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEdmFunction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EdmFunction");
+            retObjectEdmFunction = classInstance.Get("EdmFunction");
+            JCObject val = (JCObject)retObjectEdmFunction;
             return new EdmFunction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEdmFunction != null ? retObjectEdmFunction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class DbFunctionCommandTree extends DbCommandTree  {
 
     public TypeUsage getResultType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResultType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResultType");
+            retObjectResultType = classInstance.Get("ResultType");
+            JCObject val = (JCObject)retObjectResultType;
             return new TypeUsage(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResultType != null ? retObjectResultType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

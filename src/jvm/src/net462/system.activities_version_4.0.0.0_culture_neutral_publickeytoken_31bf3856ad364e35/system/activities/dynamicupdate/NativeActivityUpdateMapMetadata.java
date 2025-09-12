@@ -157,7 +157,7 @@ public class NativeActivityUpdateMapMetadata extends UpdateMapMetadata  {
     
     public void SaveOriginalValue(Activity updatedChildActivity, NetObject originalValue) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveOriginalValue", updatedChildActivity == null ? null : updatedChildActivity.getJCOInstance(), originalValue == null ? null : originalValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -167,7 +167,7 @@ public class NativeActivityUpdateMapMetadata extends UpdateMapMetadata  {
 
     public void SaveOriginalValue(java.lang.String propertyName, NetObject originalValue) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveOriginalValue", propertyName, originalValue == null ? null : originalValue.getJCOInstance());
         } catch (JCNativeException jcne) {

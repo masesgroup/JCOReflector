@@ -173,7 +173,7 @@ public class BulletedList extends ListControl implements system.web.ui.IPostBack
      */
     @Deprecated 
     public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
     }
 
 
@@ -182,9 +182,13 @@ public class BulletedList extends ListControl implements system.web.ui.IPostBack
     
     public boolean getRenderWhenDataEmpty() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenderWhenDataEmpty = null;
         try {
-            return (boolean)classInstance.Get("RenderWhenDataEmpty");
+            retObjectRenderWhenDataEmpty = classInstance.Get("RenderWhenDataEmpty");
+            return (boolean)retObjectRenderWhenDataEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRenderWhenDataEmpty != null ? retObjectRenderWhenDataEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +196,7 @@ public class BulletedList extends ListControl implements system.web.ui.IPostBack
 
     public void setRenderWhenDataEmpty(boolean RenderWhenDataEmpty) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RenderWhenDataEmpty", RenderWhenDataEmpty);
         } catch (JCNativeException jcne) {
@@ -202,9 +206,19 @@ public class BulletedList extends ListControl implements system.web.ui.IPostBack
 
     public int getFirstBulletNumber() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFirstBulletNumber = null;
         try {
-            return (int)classInstance.Get("FirstBulletNumber");
+            retObjectFirstBulletNumber = classInstance.Get("FirstBulletNumber");
+            return (int)retObjectFirstBulletNumber;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFirstBulletNumberNumber = (java.lang.Number)retObjectFirstBulletNumber;
+                return retObjectFirstBulletNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFirstBulletNumber != null ? retObjectFirstBulletNumber.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +226,7 @@ public class BulletedList extends ListControl implements system.web.ui.IPostBack
 
     public void setFirstBulletNumber(int FirstBulletNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FirstBulletNumber", FirstBulletNumber);
         } catch (JCNativeException jcne) {
@@ -222,9 +236,13 @@ public class BulletedList extends ListControl implements system.web.ui.IPostBack
 
     public java.lang.String getBulletImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBulletImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("BulletImageUrl");
+            retObjectBulletImageUrl = classInstance.Get("BulletImageUrl");
+            return (java.lang.String)retObjectBulletImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBulletImageUrl != null ? retObjectBulletImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +250,7 @@ public class BulletedList extends ListControl implements system.web.ui.IPostBack
 
     public void setBulletImageUrl(java.lang.String BulletImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BulletImageUrl", BulletImageUrl);
         } catch (JCNativeException jcne) {
@@ -242,9 +260,13 @@ public class BulletedList extends ListControl implements system.web.ui.IPostBack
 
     public java.lang.String getTarget() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTarget = null;
         try {
-            return (java.lang.String)classInstance.Get("Target");
+            retObjectTarget = classInstance.Get("Target");
+            return (java.lang.String)retObjectTarget;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTarget != null ? retObjectTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +274,7 @@ public class BulletedList extends ListControl implements system.web.ui.IPostBack
 
     public void setTarget(java.lang.String Target) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Target", Target);
         } catch (JCNativeException jcne) {
@@ -262,10 +284,14 @@ public class BulletedList extends ListControl implements system.web.ui.IPostBack
 
     public BulletedListDisplayMode getDisplayMode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DisplayMode");
+            retObjectDisplayMode = classInstance.Get("DisplayMode");
+            JCObject val = (JCObject)retObjectDisplayMode;
             return new BulletedListDisplayMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisplayMode != null ? retObjectDisplayMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,7 +299,7 @@ public class BulletedList extends ListControl implements system.web.ui.IPostBack
 
     public void setDisplayMode(BulletedListDisplayMode DisplayMode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayMode", DisplayMode == null ? null : DisplayMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -283,10 +309,14 @@ public class BulletedList extends ListControl implements system.web.ui.IPostBack
 
     public BulletStyle getBulletStyle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBulletStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BulletStyle");
+            retObjectBulletStyle = classInstance.Get("BulletStyle");
+            JCObject val = (JCObject)retObjectBulletStyle;
             return new BulletStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBulletStyle != null ? retObjectBulletStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,7 +324,7 @@ public class BulletedList extends ListControl implements system.web.ui.IPostBack
 
     public void setBulletStyle(BulletStyle BulletStyle) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BulletStyle", BulletStyle == null ? null : BulletStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -309,7 +339,7 @@ public class BulletedList extends ListControl implements system.web.ui.IPostBack
 
     public void addClick(BulletedListEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -319,7 +349,7 @@ public class BulletedList extends ListControl implements system.web.ui.IPostBack
 
     public void removeClick(BulletedListEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {

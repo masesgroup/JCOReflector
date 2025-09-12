@@ -167,8 +167,8 @@ public class SessionStateItemExpireCallback extends JCVoidDelegate implements IJ
         } else if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
         } else
-            throw new UnsupportedOperationException(
-                    String.format("Class %s is not supported.", instance.getClass().getTypeName()));
+            throw new java.lang.UnsupportedOperationException(
+                    java.lang.String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
     protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
@@ -181,7 +181,7 @@ public class SessionStateItemExpireCallback extends JCVoidDelegate implements IJ
 
     public void DynamicInvoke(java.lang.String id, SessionStateStoreData item) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DynamicInvoke", id, item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {

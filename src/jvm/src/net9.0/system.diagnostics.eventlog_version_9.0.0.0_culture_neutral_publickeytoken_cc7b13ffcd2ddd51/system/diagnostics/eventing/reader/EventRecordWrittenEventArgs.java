@@ -161,10 +161,14 @@ public class EventRecordWrittenEventArgs extends EventArgs  {
     
     public EventRecord getEventRecord() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventRecord = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventRecord");
+            retObjectEventRecord = classInstance.Get("EventRecord");
+            JCObject val = (JCObject)retObjectEventRecord;
             return new EventRecord(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventRecord != null ? retObjectEventRecord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class EventRecordWrittenEventArgs extends EventArgs  {
 
     public NetException getEventException() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventException = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventException");
+            retObjectEventException = classInstance.Get("EventException");
+            JCObject val = (JCObject)retObjectEventException;
             return new NetException(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventException != null ? retObjectEventException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

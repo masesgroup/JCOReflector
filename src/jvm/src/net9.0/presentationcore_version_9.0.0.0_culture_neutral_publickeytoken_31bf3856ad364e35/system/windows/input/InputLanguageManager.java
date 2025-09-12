@@ -162,9 +162,13 @@ public class InputLanguageManager extends DispatcherObject  {
     
     public static boolean GetRestoreInputLanguage(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRestoreInputLanguage = null;
         try {
-            return (boolean)classType.Invoke("GetRestoreInputLanguage", target == null ? null : target.getJCOInstance());
+            retObjectGetRestoreInputLanguage = classType.Invoke("GetRestoreInputLanguage", target == null ? null : target.getJCOInstance());
+            return (boolean)retObjectGetRestoreInputLanguage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetRestoreInputLanguage != null ? retObjectGetRestoreInputLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class InputLanguageManager extends DispatcherObject  {
 
     public boolean ReportInputLanguageChanging(CultureInfo newLanguageId, CultureInfo previousLanguageId) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReportInputLanguageChanging = null;
         try {
-            return (boolean)classInstance.Invoke("ReportInputLanguageChanging", newLanguageId == null ? null : newLanguageId.getJCOInstance(), previousLanguageId == null ? null : previousLanguageId.getJCOInstance());
+            retObjectReportInputLanguageChanging = classInstance.Invoke("ReportInputLanguageChanging", newLanguageId == null ? null : newLanguageId.getJCOInstance(), previousLanguageId == null ? null : previousLanguageId.getJCOInstance());
+            return (boolean)retObjectReportInputLanguageChanging;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReportInputLanguageChanging != null ? retObjectReportInputLanguageChanging.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class InputLanguageManager extends DispatcherObject  {
 
     public static CultureInfo GetInputLanguage(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetInputLanguage = null;
         try {
-            JCObject objGetInputLanguage = (JCObject)classType.Invoke("GetInputLanguage", target == null ? null : target.getJCOInstance());
+            retObjectGetInputLanguage = classType.Invoke("GetInputLanguage", target == null ? null : target.getJCOInstance());
+            JCObject objGetInputLanguage = (JCObject)retObjectGetInputLanguage;
             return new CultureInfo(objGetInputLanguage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInputLanguage != null ? retObjectGetInputLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +205,7 @@ public class InputLanguageManager extends DispatcherObject  {
 
     public void RegisterInputLanguageSource(IInputLanguageSource inputLanguageSource) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterInputLanguageSource", inputLanguageSource == null ? null : inputLanguageSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,7 +215,7 @@ public class InputLanguageManager extends DispatcherObject  {
 
     public void ReportInputLanguageChanged(CultureInfo newLanguageId, CultureInfo previousLanguageId) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReportInputLanguageChanged", newLanguageId == null ? null : newLanguageId.getJCOInstance(), previousLanguageId == null ? null : previousLanguageId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -213,7 +225,7 @@ public class InputLanguageManager extends DispatcherObject  {
 
     public static void SetInputLanguage(DependencyObject target, CultureInfo inputLanguage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetInputLanguage", target == null ? null : target.getJCOInstance(), inputLanguage == null ? null : inputLanguage.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -223,7 +235,7 @@ public class InputLanguageManager extends DispatcherObject  {
 
     public static void SetRestoreInputLanguage(DependencyObject target, boolean restore) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetRestoreInputLanguage", target == null ? null : target.getJCOInstance(), restore);
         } catch (JCNativeException jcne) {
@@ -237,10 +249,14 @@ public class InputLanguageManager extends DispatcherObject  {
     
     public IEnumerable getAvailableInputLanguages() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAvailableInputLanguages = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AvailableInputLanguages");
+            retObjectAvailableInputLanguages = classInstance.Get("AvailableInputLanguages");
+            JCObject val = (JCObject)retObjectAvailableInputLanguages;
             return new IEnumerableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAvailableInputLanguages != null ? retObjectAvailableInputLanguages.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +264,14 @@ public class InputLanguageManager extends DispatcherObject  {
 
     public CultureInfo getCurrentInputLanguage() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentInputLanguage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentInputLanguage");
+            retObjectCurrentInputLanguage = classInstance.Get("CurrentInputLanguage");
+            JCObject val = (JCObject)retObjectCurrentInputLanguage;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentInputLanguage != null ? retObjectCurrentInputLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +279,7 @@ public class InputLanguageManager extends DispatcherObject  {
 
     public void setCurrentInputLanguage(CultureInfo CurrentInputLanguage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentInputLanguage", CurrentInputLanguage == null ? null : CurrentInputLanguage.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -269,10 +289,14 @@ public class InputLanguageManager extends DispatcherObject  {
 
     public static InputLanguageManager getCurrent() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Current");
+            retObjectCurrent = classType.Get("Current");
+            JCObject val = (JCObject)retObjectCurrent;
             return new InputLanguageManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrent != null ? retObjectCurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +309,7 @@ public class InputLanguageManager extends DispatcherObject  {
 
     public void addInputLanguageChanged(InputLanguageEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("InputLanguageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -295,7 +319,7 @@ public class InputLanguageManager extends DispatcherObject  {
 
     public void removeInputLanguageChanged(InputLanguageEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("InputLanguageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -305,7 +329,7 @@ public class InputLanguageManager extends DispatcherObject  {
 
     public void addInputLanguageChanging(InputLanguageEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("InputLanguageChanging", handler);
         } catch (JCNativeException jcne) {
@@ -315,7 +339,7 @@ public class InputLanguageManager extends DispatcherObject  {
 
     public void removeInputLanguageChanging(InputLanguageEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("InputLanguageChanging", handler);
         } catch (JCNativeException jcne) {

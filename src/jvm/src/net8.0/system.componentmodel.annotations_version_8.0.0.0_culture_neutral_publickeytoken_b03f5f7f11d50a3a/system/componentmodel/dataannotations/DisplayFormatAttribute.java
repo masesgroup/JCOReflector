@@ -162,9 +162,13 @@ public class DisplayFormatAttribute extends Attribute  {
     
     public java.lang.String GetNullDisplayText() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNullDisplayText = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetNullDisplayText");
+            retObjectGetNullDisplayText = classInstance.Invoke("GetNullDisplayText");
+            return (java.lang.String)retObjectGetNullDisplayText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetNullDisplayText != null ? retObjectGetNullDisplayText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class DisplayFormatAttribute extends Attribute  {
     
     public boolean getApplyFormatInEditMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplyFormatInEditMode = null;
         try {
-            return (boolean)classInstance.Get("ApplyFormatInEditMode");
+            retObjectApplyFormatInEditMode = classInstance.Get("ApplyFormatInEditMode");
+            return (boolean)retObjectApplyFormatInEditMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectApplyFormatInEditMode != null ? retObjectApplyFormatInEditMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +194,7 @@ public class DisplayFormatAttribute extends Attribute  {
 
     public void setApplyFormatInEditMode(boolean ApplyFormatInEditMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplyFormatInEditMode", ApplyFormatInEditMode);
         } catch (JCNativeException jcne) {
@@ -196,9 +204,13 @@ public class DisplayFormatAttribute extends Attribute  {
 
     public boolean getConvertEmptyStringToNull() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertEmptyStringToNull = null;
         try {
-            return (boolean)classInstance.Get("ConvertEmptyStringToNull");
+            retObjectConvertEmptyStringToNull = classInstance.Get("ConvertEmptyStringToNull");
+            return (boolean)retObjectConvertEmptyStringToNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectConvertEmptyStringToNull != null ? retObjectConvertEmptyStringToNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +218,7 @@ public class DisplayFormatAttribute extends Attribute  {
 
     public void setConvertEmptyStringToNull(boolean ConvertEmptyStringToNull) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConvertEmptyStringToNull", ConvertEmptyStringToNull);
         } catch (JCNativeException jcne) {
@@ -216,9 +228,13 @@ public class DisplayFormatAttribute extends Attribute  {
 
     public boolean getHtmlEncode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHtmlEncode = null;
         try {
-            return (boolean)classInstance.Get("HtmlEncode");
+            retObjectHtmlEncode = classInstance.Get("HtmlEncode");
+            return (boolean)retObjectHtmlEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHtmlEncode != null ? retObjectHtmlEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +242,7 @@ public class DisplayFormatAttribute extends Attribute  {
 
     public void setHtmlEncode(boolean HtmlEncode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HtmlEncode", HtmlEncode);
         } catch (JCNativeException jcne) {
@@ -236,9 +252,13 @@ public class DisplayFormatAttribute extends Attribute  {
 
     public java.lang.String getDataFormatString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataFormatString = null;
         try {
-            return (java.lang.String)classInstance.Get("DataFormatString");
+            retObjectDataFormatString = classInstance.Get("DataFormatString");
+            return (java.lang.String)retObjectDataFormatString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataFormatString != null ? retObjectDataFormatString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +266,7 @@ public class DisplayFormatAttribute extends Attribute  {
 
     public void setDataFormatString(java.lang.String DataFormatString) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataFormatString", DataFormatString);
         } catch (JCNativeException jcne) {
@@ -256,9 +276,13 @@ public class DisplayFormatAttribute extends Attribute  {
 
     public java.lang.String getNullDisplayText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNullDisplayText = null;
         try {
-            return (java.lang.String)classInstance.Get("NullDisplayText");
+            retObjectNullDisplayText = classInstance.Get("NullDisplayText");
+            return (java.lang.String)retObjectNullDisplayText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNullDisplayText != null ? retObjectNullDisplayText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +290,7 @@ public class DisplayFormatAttribute extends Attribute  {
 
     public void setNullDisplayText(java.lang.String NullDisplayText) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NullDisplayText", NullDisplayText);
         } catch (JCNativeException jcne) {
@@ -276,10 +300,14 @@ public class DisplayFormatAttribute extends Attribute  {
 
     public NetType getNullDisplayTextResourceType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNullDisplayTextResourceType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NullDisplayTextResourceType");
+            retObjectNullDisplayTextResourceType = classInstance.Get("NullDisplayTextResourceType");
+            JCObject val = (JCObject)retObjectNullDisplayTextResourceType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNullDisplayTextResourceType != null ? retObjectNullDisplayTextResourceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,7 +315,7 @@ public class DisplayFormatAttribute extends Attribute  {
 
     public void setNullDisplayTextResourceType(NetType NullDisplayTextResourceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NullDisplayTextResourceType", NullDisplayTextResourceType == null ? null : NullDisplayTextResourceType.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -166,9 +166,13 @@ public class StateMachineStateRecord extends CustomTrackingRecord  {
     
     public java.lang.String getStateMachineName() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStateMachineName = null;
         try {
-            return (java.lang.String)classInstance.Get("StateMachineName");
+            retObjectStateMachineName = classInstance.Get("StateMachineName");
+            return (java.lang.String)retObjectStateMachineName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStateMachineName != null ? retObjectStateMachineName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class StateMachineStateRecord extends CustomTrackingRecord  {
 
     public void setStateMachineName(java.lang.String StateMachineName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StateMachineName", StateMachineName);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class StateMachineStateRecord extends CustomTrackingRecord  {
 
     public java.lang.String getStateName() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStateName = null;
         try {
-            return (java.lang.String)classInstance.Get("StateName");
+            retObjectStateName = classInstance.Get("StateName");
+            return (java.lang.String)retObjectStateName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStateName != null ? retObjectStateName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class StateMachineStateRecord extends CustomTrackingRecord  {
 
     public void setStateName(java.lang.String StateName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StateName", StateName);
         } catch (JCNativeException jcne) {

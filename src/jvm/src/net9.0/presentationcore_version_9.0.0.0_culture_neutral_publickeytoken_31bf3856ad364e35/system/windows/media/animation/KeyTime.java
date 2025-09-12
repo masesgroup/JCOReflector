@@ -159,9 +159,13 @@ public class KeyTime extends ValueType  {
     
     public static boolean Equals(KeyTime keyTime1, KeyTime keyTime2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classType.Invoke("Equals", keyTime1 == null ? null : keyTime1.getJCOInstance(), keyTime2 == null ? null : keyTime2.getJCOInstance());
+            retObjectEquals = classType.Invoke("Equals", keyTime1 == null ? null : keyTime1.getJCOInstance(), keyTime2 == null ? null : keyTime2.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class KeyTime extends ValueType  {
 
     public boolean Equals(KeyTime value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class KeyTime extends ValueType  {
 
     public static KeyTime FromPercent(double percent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromPercent = null;
         try {
-            JCObject objFromPercent = (JCObject)classType.Invoke("FromPercent", percent);
+            retObjectFromPercent = classType.Invoke("FromPercent", percent);
+            JCObject objFromPercent = (JCObject)retObjectFromPercent;
             return new KeyTime(objFromPercent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromPercent != null ? retObjectFromPercent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class KeyTime extends ValueType  {
 
     public static KeyTime FromTimeSpan(TimeSpan timeSpan) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromTimeSpan = null;
         try {
-            JCObject objFromTimeSpan = (JCObject)classType.Invoke("FromTimeSpan", timeSpan == null ? null : timeSpan.getJCOInstance());
+            retObjectFromTimeSpan = classType.Invoke("FromTimeSpan", timeSpan == null ? null : timeSpan.getJCOInstance());
+            JCObject objFromTimeSpan = (JCObject)retObjectFromTimeSpan;
             return new KeyTime(objFromTimeSpan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromTimeSpan != null ? retObjectFromTimeSpan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +221,19 @@ public class KeyTime extends ValueType  {
     
     public double getPercent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPercent = null;
         try {
-            return (double)classInstance.Get("Percent");
+            retObjectPercent = classInstance.Get("Percent");
+            return (double)retObjectPercent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPercentNumber = (java.lang.Number)retObjectPercent;
+                return retObjectPercentNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectPercent != null ? retObjectPercent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +241,14 @@ public class KeyTime extends ValueType  {
 
     public TimeSpan getTimeSpan() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeSpan = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TimeSpan");
+            retObjectTimeSpan = classInstance.Get("TimeSpan");
+            JCObject val = (JCObject)retObjectTimeSpan;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeSpan != null ? retObjectTimeSpan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +256,14 @@ public class KeyTime extends ValueType  {
 
     public static KeyTime getPaced() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPaced = null;
         try {
-            JCObject val = (JCObject)classType.Get("Paced");
+            retObjectPaced = classType.Get("Paced");
+            JCObject val = (JCObject)retObjectPaced;
             return new KeyTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPaced != null ? retObjectPaced.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +271,14 @@ public class KeyTime extends ValueType  {
 
     public static KeyTime getUniform() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUniform = null;
         try {
-            JCObject val = (JCObject)classType.Get("Uniform");
+            retObjectUniform = classType.Get("Uniform");
+            JCObject val = (JCObject)retObjectUniform;
             return new KeyTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUniform != null ? retObjectUniform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +286,14 @@ public class KeyTime extends ValueType  {
 
     public KeyTimeType getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            JCObject val = (JCObject)retObjectType;
             return new KeyTimeType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

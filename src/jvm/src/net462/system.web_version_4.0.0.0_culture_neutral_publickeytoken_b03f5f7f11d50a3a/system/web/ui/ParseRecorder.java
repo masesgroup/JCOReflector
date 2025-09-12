@@ -159,7 +159,7 @@ public class ParseRecorder extends NetObject  {
     
     public void Initialize(TemplateParser parser) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", parser == null ? null : parser.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -169,7 +169,7 @@ public class ParseRecorder extends NetObject  {
 
     public void ParseComplete(ControlBuilder root) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ParseComplete", root == null ? null : root.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -179,7 +179,7 @@ public class ParseRecorder extends NetObject  {
 
     public void ProcessGeneratedCode(ControlBuilder builder, CodeCompileUnit codeCompileUnit, CodeTypeDeclaration baseType, CodeTypeDeclaration derivedType, CodeMemberMethod buildMethod, CodeMemberMethod dataBindingMethod) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ProcessGeneratedCode", builder == null ? null : builder.getJCOInstance(), codeCompileUnit == null ? null : codeCompileUnit.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance(), derivedType == null ? null : derivedType.getJCOInstance(), buildMethod == null ? null : buildMethod.getJCOInstance(), dataBindingMethod == null ? null : dataBindingMethod.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,7 +189,7 @@ public class ParseRecorder extends NetObject  {
 
     public void RecordBeginTag(ControlBuilder builder, Match tag) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RecordBeginTag", builder == null ? null : builder.getJCOInstance(), tag == null ? null : tag.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,7 +199,7 @@ public class ParseRecorder extends NetObject  {
 
     public void RecordCodeBlock(ControlBuilder builder, Match codeBlock) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RecordCodeBlock", builder == null ? null : builder.getJCOInstance(), codeBlock == null ? null : codeBlock.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,7 +209,7 @@ public class ParseRecorder extends NetObject  {
 
     public void RecordEmptyTag(ControlBuilder builder, Match tag) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RecordEmptyTag", builder == null ? null : builder.getJCOInstance(), tag == null ? null : tag.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -219,7 +219,7 @@ public class ParseRecorder extends NetObject  {
 
     public void RecordEndTag(ControlBuilder builder, Match tag) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RecordEndTag", builder == null ? null : builder.getJCOInstance(), tag == null ? null : tag.getJCOInstance());
         } catch (JCNativeException jcne) {

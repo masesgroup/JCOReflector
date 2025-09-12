@@ -157,9 +157,13 @@ public class SecurityTokenTypes extends NetObject  {
     
     public static java.lang.String getKerberos() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKerberos = null;
         try {
-            return (java.lang.String)classType.Get("Kerberos");
+            retObjectKerberos = classType.Get("Kerberos");
+            return (java.lang.String)retObjectKerberos;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKerberos != null ? retObjectKerberos.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class SecurityTokenTypes extends NetObject  {
 
     public static java.lang.String getRsa() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRsa = null;
         try {
-            return (java.lang.String)classType.Get("Rsa");
+            retObjectRsa = classType.Get("Rsa");
+            return (java.lang.String)retObjectRsa;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRsa != null ? retObjectRsa.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +185,13 @@ public class SecurityTokenTypes extends NetObject  {
 
     public static java.lang.String getSaml() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSaml = null;
         try {
-            return (java.lang.String)classType.Get("Saml");
+            retObjectSaml = classType.Get("Saml");
+            return (java.lang.String)retObjectSaml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSaml != null ? retObjectSaml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +199,13 @@ public class SecurityTokenTypes extends NetObject  {
 
     public static java.lang.String getUserName() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUserName = null;
         try {
-            return (java.lang.String)classType.Get("UserName");
+            retObjectUserName = classType.Get("UserName");
+            return (java.lang.String)retObjectUserName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserName != null ? retObjectUserName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +213,13 @@ public class SecurityTokenTypes extends NetObject  {
 
     public static java.lang.String getX509Certificate() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectX509Certificate = null;
         try {
-            return (java.lang.String)classType.Get("X509Certificate");
+            retObjectX509Certificate = classType.Get("X509Certificate");
+            return (java.lang.String)retObjectX509Certificate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectX509Certificate != null ? retObjectX509Certificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

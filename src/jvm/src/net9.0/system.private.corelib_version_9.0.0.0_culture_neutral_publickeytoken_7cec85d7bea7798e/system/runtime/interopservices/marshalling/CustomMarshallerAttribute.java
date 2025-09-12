@@ -171,10 +171,14 @@ public class CustomMarshallerAttribute extends Attribute  {
     
     public MarshalMode getMarshalMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMarshalMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MarshalMode");
+            retObjectMarshalMode = classInstance.Get("MarshalMode");
+            JCObject val = (JCObject)retObjectMarshalMode;
             return new MarshalMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMarshalMode != null ? retObjectMarshalMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class CustomMarshallerAttribute extends Attribute  {
 
     public NetType getManagedType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManagedType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ManagedType");
+            retObjectManagedType = classInstance.Get("ManagedType");
+            JCObject val = (JCObject)retObjectManagedType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectManagedType != null ? retObjectManagedType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class CustomMarshallerAttribute extends Attribute  {
 
     public NetType getMarshallerType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMarshallerType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MarshallerType");
+            retObjectMarshallerType = classInstance.Get("MarshallerType");
+            JCObject val = (JCObject)retObjectMarshallerType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMarshallerType != null ? retObjectMarshallerType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

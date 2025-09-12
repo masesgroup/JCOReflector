@@ -164,9 +164,13 @@ public class WebSocketTransportSettings extends NetObject  {
     
     public boolean Equals(WebSocketTransportSettings other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class WebSocketTransportSettings extends NetObject  {
     
     public boolean getCreateNotificationOnConnection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateNotificationOnConnection = null;
         try {
-            return (boolean)classInstance.Get("CreateNotificationOnConnection");
+            retObjectCreateNotificationOnConnection = classInstance.Get("CreateNotificationOnConnection");
+            return (boolean)retObjectCreateNotificationOnConnection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCreateNotificationOnConnection != null ? retObjectCreateNotificationOnConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class WebSocketTransportSettings extends NetObject  {
 
     public void setCreateNotificationOnConnection(boolean CreateNotificationOnConnection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CreateNotificationOnConnection", CreateNotificationOnConnection);
         } catch (JCNativeException jcne) {
@@ -198,9 +206,13 @@ public class WebSocketTransportSettings extends NetObject  {
 
     public boolean getDisablePayloadMasking() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisablePayloadMasking = null;
         try {
-            return (boolean)classInstance.Get("DisablePayloadMasking");
+            retObjectDisablePayloadMasking = classInstance.Get("DisablePayloadMasking");
+            return (boolean)retObjectDisablePayloadMasking;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDisablePayloadMasking != null ? retObjectDisablePayloadMasking.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +220,7 @@ public class WebSocketTransportSettings extends NetObject  {
 
     public void setDisablePayloadMasking(boolean DisablePayloadMasking) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisablePayloadMasking", DisablePayloadMasking);
         } catch (JCNativeException jcne) {
@@ -218,9 +230,19 @@ public class WebSocketTransportSettings extends NetObject  {
 
     public int getMaxPendingConnections() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxPendingConnections = null;
         try {
-            return (int)classInstance.Get("MaxPendingConnections");
+            retObjectMaxPendingConnections = classInstance.Get("MaxPendingConnections");
+            return (int)retObjectMaxPendingConnections;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxPendingConnectionsNumber = (java.lang.Number)retObjectMaxPendingConnections;
+                return retObjectMaxPendingConnectionsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxPendingConnections != null ? retObjectMaxPendingConnections.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +250,7 @@ public class WebSocketTransportSettings extends NetObject  {
 
     public void setMaxPendingConnections(int MaxPendingConnections) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxPendingConnections", MaxPendingConnections);
         } catch (JCNativeException jcne) {
@@ -238,10 +260,14 @@ public class WebSocketTransportSettings extends NetObject  {
 
     public WebSocketTransportUsage getTransportUsage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransportUsage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransportUsage");
+            retObjectTransportUsage = classInstance.Get("TransportUsage");
+            JCObject val = (JCObject)retObjectTransportUsage;
             return new WebSocketTransportUsage(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransportUsage != null ? retObjectTransportUsage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +275,7 @@ public class WebSocketTransportSettings extends NetObject  {
 
     public void setTransportUsage(WebSocketTransportUsage TransportUsage) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransportUsage", TransportUsage == null ? null : TransportUsage.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -259,9 +285,13 @@ public class WebSocketTransportSettings extends NetObject  {
 
     public java.lang.String getSubProtocol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubProtocol = null;
         try {
-            return (java.lang.String)classInstance.Get("SubProtocol");
+            retObjectSubProtocol = classInstance.Get("SubProtocol");
+            return (java.lang.String)retObjectSubProtocol;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSubProtocol != null ? retObjectSubProtocol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +299,7 @@ public class WebSocketTransportSettings extends NetObject  {
 
     public void setSubProtocol(java.lang.String SubProtocol) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SubProtocol", SubProtocol);
         } catch (JCNativeException jcne) {
@@ -279,10 +309,14 @@ public class WebSocketTransportSettings extends NetObject  {
 
     public TimeSpan getKeepAliveInterval() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeepAliveInterval = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeepAliveInterval");
+            retObjectKeepAliveInterval = classInstance.Get("KeepAliveInterval");
+            JCObject val = (JCObject)retObjectKeepAliveInterval;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeepAliveInterval != null ? retObjectKeepAliveInterval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,7 +324,7 @@ public class WebSocketTransportSettings extends NetObject  {
 
     public void setKeepAliveInterval(TimeSpan KeepAliveInterval) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeepAliveInterval", KeepAliveInterval == null ? null : KeepAliveInterval.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -163,10 +163,14 @@ public class StyleSelector extends NetObject  {
     
     public Style SelectStyle(NetObject item, DependencyObject container) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectStyle = null;
         try {
-            JCObject objSelectStyle = (JCObject)classInstance.Invoke("SelectStyle", item == null ? null : item.getJCOInstance(), container == null ? null : container.getJCOInstance());
+            retObjectSelectStyle = classInstance.Invoke("SelectStyle", item == null ? null : item.getJCOInstance(), container == null ? null : container.getJCOInstance());
+            JCObject objSelectStyle = (JCObject)retObjectSelectStyle;
             return new Style(objSelectStyle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectStyle != null ? retObjectSelectStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

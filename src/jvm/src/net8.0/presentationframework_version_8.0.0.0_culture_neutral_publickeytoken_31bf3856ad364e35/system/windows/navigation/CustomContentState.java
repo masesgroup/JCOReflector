@@ -155,7 +155,7 @@ public class CustomContentState extends NetObject  {
     
     public void Replay(NavigationService navigationService, NavigationMode mode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Replay", navigationService == null ? null : navigationService.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -169,9 +169,13 @@ public class CustomContentState extends NetObject  {
     
     public java.lang.String getJournalEntryName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectJournalEntryName = null;
         try {
-            return (java.lang.String)classInstance.Get("JournalEntryName");
+            retObjectJournalEntryName = classInstance.Get("JournalEntryName");
+            return (java.lang.String)retObjectJournalEntryName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectJournalEntryName != null ? retObjectJournalEntryName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

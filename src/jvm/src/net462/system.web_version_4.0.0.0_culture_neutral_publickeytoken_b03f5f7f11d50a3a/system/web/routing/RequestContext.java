@@ -177,10 +177,14 @@ public class RequestContext extends NetObject  {
     
     public HttpContextBase getHttpContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHttpContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HttpContext");
+            retObjectHttpContext = classInstance.Get("HttpContext");
+            JCObject val = (JCObject)retObjectHttpContext;
             return new HttpContextBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHttpContext != null ? retObjectHttpContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class RequestContext extends NetObject  {
 
     public void setHttpContext(HttpContextBase HttpContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HttpContext", HttpContext == null ? null : HttpContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,10 +202,14 @@ public class RequestContext extends NetObject  {
 
     public RouteData getRouteData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRouteData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RouteData");
+            retObjectRouteData = classInstance.Get("RouteData");
+            JCObject val = (JCObject)retObjectRouteData;
             return new RouteData(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRouteData != null ? retObjectRouteData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +217,7 @@ public class RequestContext extends NetObject  {
 
     public void setRouteData(RouteData RouteData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RouteData", RouteData == null ? null : RouteData.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -154,9 +154,13 @@ public class TextExpression extends NetObject  {
     
     public static boolean ShouldSerializeNamespaces(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShouldSerializeNamespaces = null;
         try {
-            return (boolean)classType.Invoke("ShouldSerializeNamespaces", target == null ? null : target.getJCOInstance());
+            retObjectShouldSerializeNamespaces = classType.Invoke("ShouldSerializeNamespaces", target == null ? null : target.getJCOInstance());
+            return (boolean)retObjectShouldSerializeNamespaces;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeNamespaces != null ? retObjectShouldSerializeNamespaces.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,13 @@ public class TextExpression extends NetObject  {
 
     public static boolean ShouldSerializeNamespacesForImplementation(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShouldSerializeNamespacesForImplementation = null;
         try {
-            return (boolean)classType.Invoke("ShouldSerializeNamespacesForImplementation", target == null ? null : target.getJCOInstance());
+            retObjectShouldSerializeNamespacesForImplementation = classType.Invoke("ShouldSerializeNamespacesForImplementation", target == null ? null : target.getJCOInstance());
+            return (boolean)retObjectShouldSerializeNamespacesForImplementation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeNamespacesForImplementation != null ? retObjectShouldSerializeNamespacesForImplementation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +182,13 @@ public class TextExpression extends NetObject  {
 
     public static boolean ShouldSerializeReferences(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShouldSerializeReferences = null;
         try {
-            return (boolean)classType.Invoke("ShouldSerializeReferences", target == null ? null : target.getJCOInstance());
+            retObjectShouldSerializeReferences = classType.Invoke("ShouldSerializeReferences", target == null ? null : target.getJCOInstance());
+            return (boolean)retObjectShouldSerializeReferences;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeReferences != null ? retObjectShouldSerializeReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +196,13 @@ public class TextExpression extends NetObject  {
 
     public static boolean ShouldSerializeReferencesForImplementation(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShouldSerializeReferencesForImplementation = null;
         try {
-            return (boolean)classType.Invoke("ShouldSerializeReferencesForImplementation", target == null ? null : target.getJCOInstance());
+            retObjectShouldSerializeReferencesForImplementation = classType.Invoke("ShouldSerializeReferencesForImplementation", target == null ? null : target.getJCOInstance());
+            return (boolean)retObjectShouldSerializeReferencesForImplementation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeReferencesForImplementation != null ? retObjectShouldSerializeReferencesForImplementation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +210,7 @@ public class TextExpression extends NetObject  {
 
     public static void SetNamespaces(NetObject target, java.lang.String... namespaces) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetNamespaces", target == null ? null : target.getJCOInstance(), namespaces);
         } catch (JCNativeException jcne) {
@@ -204,7 +220,7 @@ public class TextExpression extends NetObject  {
 
     public static void SetNamespaces(NetObject dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetNamespaces", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -214,7 +230,7 @@ public class TextExpression extends NetObject  {
 
     public static void SetNamespacesForImplementation(NetObject target, java.lang.String... namespaces) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetNamespacesForImplementation", target == null ? null : target.getJCOInstance(), namespaces);
         } catch (JCNativeException jcne) {
@@ -224,7 +240,7 @@ public class TextExpression extends NetObject  {
 
     public static void SetNamespacesForImplementation(NetObject dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetNamespacesForImplementation", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -234,7 +250,7 @@ public class TextExpression extends NetObject  {
 
     public static void SetReferences(NetObject target, AssemblyReference... references) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetReferences", target == null ? null : target.getJCOInstance(), toObjectFromArray(references));
         } catch (JCNativeException jcne) {
@@ -244,7 +260,7 @@ public class TextExpression extends NetObject  {
 
     public static void SetReferencesForImplementation(NetObject target, AssemblyReference... references) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetReferencesForImplementation", target == null ? null : target.getJCOInstance(), toObjectFromArray(references));
         } catch (JCNativeException jcne) {

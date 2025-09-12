@@ -168,10 +168,14 @@ public class SoapServerType extends ServerType  {
     
     public SoapServerMethod GetDuplicateMethod(NetObject key) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDuplicateMethod = null;
         try {
-            JCObject objGetDuplicateMethod = (JCObject)classInstance.Invoke("GetDuplicateMethod", key == null ? null : key.getJCOInstance());
+            retObjectGetDuplicateMethod = classInstance.Invoke("GetDuplicateMethod", key == null ? null : key.getJCOInstance());
+            JCObject objGetDuplicateMethod = (JCObject)retObjectGetDuplicateMethod;
             return new SoapServerMethod(objGetDuplicateMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDuplicateMethod != null ? retObjectGetDuplicateMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class SoapServerType extends ServerType  {
 
     public SoapServerMethod GetMethod(NetObject key) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMethod = null;
         try {
-            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", key == null ? null : key.getJCOInstance());
+            retObjectGetMethod = classInstance.Invoke("GetMethod", key == null ? null : key.getJCOInstance());
+            JCObject objGetMethod = (JCObject)retObjectGetMethod;
             return new SoapServerMethod(objGetMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethod != null ? retObjectGetMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +202,13 @@ public class SoapServerType extends ServerType  {
     
     public boolean getServiceDefaultIsEncoded() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceDefaultIsEncoded = null;
         try {
-            return (boolean)classInstance.Get("ServiceDefaultIsEncoded");
+            retObjectServiceDefaultIsEncoded = classInstance.Get("ServiceDefaultIsEncoded");
+            return (boolean)retObjectServiceDefaultIsEncoded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectServiceDefaultIsEncoded != null ? retObjectServiceDefaultIsEncoded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +216,13 @@ public class SoapServerType extends ServerType  {
 
     public boolean getServiceRoutingOnSoapAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceRoutingOnSoapAction = null;
         try {
-            return (boolean)classInstance.Get("ServiceRoutingOnSoapAction");
+            retObjectServiceRoutingOnSoapAction = classInstance.Get("ServiceRoutingOnSoapAction");
+            return (boolean)retObjectServiceRoutingOnSoapAction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectServiceRoutingOnSoapAction != null ? retObjectServiceRoutingOnSoapAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +230,13 @@ public class SoapServerType extends ServerType  {
 
     public java.lang.String getServiceNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("ServiceNamespace");
+            retObjectServiceNamespace = classInstance.Get("ServiceNamespace");
+            return (java.lang.String)retObjectServiceNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectServiceNamespace != null ? retObjectServiceNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

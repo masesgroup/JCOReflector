@@ -224,9 +224,13 @@ public class MessageHeaderException extends ProtocolException {
     
     public boolean getIsDuplicate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDuplicate = null;
         try {
-            return (boolean)classInstance.Get("IsDuplicate");
+            retObjectIsDuplicate = classInstance.Get("IsDuplicate");
+            return (boolean)retObjectIsDuplicate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDuplicate != null ? retObjectIsDuplicate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +238,13 @@ public class MessageHeaderException extends ProtocolException {
 
     public java.lang.String getHeaderName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderName = null;
         try {
-            return (java.lang.String)classInstance.Get("HeaderName");
+            retObjectHeaderName = classInstance.Get("HeaderName");
+            return (java.lang.String)retObjectHeaderName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHeaderName != null ? retObjectHeaderName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,9 +252,13 @@ public class MessageHeaderException extends ProtocolException {
 
     public java.lang.String getHeaderNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("HeaderNamespace");
+            retObjectHeaderNamespace = classInstance.Get("HeaderNamespace");
+            return (java.lang.String)retObjectHeaderNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHeaderNamespace != null ? retObjectHeaderNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -159,9 +159,13 @@ public class SessionStateStoreProviderBase extends ProviderBase  {
     
     public boolean SetItemExpireCallback(SessionStateItemExpireCallback expireCallback) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetItemExpireCallback = null;
         try {
-            return (boolean)classInstance.Invoke("SetItemExpireCallback", expireCallback);
+            retObjectSetItemExpireCallback = classInstance.Invoke("SetItemExpireCallback", expireCallback);
+            return (boolean)retObjectSetItemExpireCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetItemExpireCallback != null ? retObjectSetItemExpireCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class SessionStateStoreProviderBase extends ProviderBase  {
 
     public SessionStateStoreData CreateNewStoreData(HttpContext context, int timeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateNewStoreData = null;
         try {
-            JCObject objCreateNewStoreData = (JCObject)classInstance.Invoke("CreateNewStoreData", context == null ? null : context.getJCOInstance(), timeout);
+            retObjectCreateNewStoreData = classInstance.Invoke("CreateNewStoreData", context == null ? null : context.getJCOInstance(), timeout);
+            JCObject objCreateNewStoreData = (JCObject)retObjectCreateNewStoreData;
             return new SessionStateStoreData(objCreateNewStoreData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateNewStoreData != null ? retObjectCreateNewStoreData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class SessionStateStoreProviderBase extends ProviderBase  {
 
     public SessionStateStoreData GetItem(HttpContext context, java.lang.String id, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> locked, JCORefOut<TimeSpan> lockAge, JCORefOut<NetObject> lockId, JCORefOut<SessionStateActions> actions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItem = null;
         try {
-            JCObject objGetItem = (JCObject)classInstance.Invoke("GetItem", context == null ? null : context.getJCOInstance(), id, locked.getJCRefOut(), lockAge.getJCRefOut(), lockId.getJCRefOut(), actions.getJCRefOut());
+            retObjectGetItem = classInstance.Invoke("GetItem", context == null ? null : context.getJCOInstance(), id, locked.getJCRefOut(), lockAge.getJCRefOut(), lockId.getJCRefOut(), actions.getJCRefOut());
+            JCObject objGetItem = (JCObject)retObjectGetItem;
             return new SessionStateStoreData(objGetItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItem != null ? retObjectGetItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class SessionStateStoreProviderBase extends ProviderBase  {
 
     public SessionStateStoreData GetItemExclusive(HttpContext context, java.lang.String id, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> locked, JCORefOut<TimeSpan> lockAge, JCORefOut<NetObject> lockId, JCORefOut<SessionStateActions> actions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItemExclusive = null;
         try {
-            JCObject objGetItemExclusive = (JCObject)classInstance.Invoke("GetItemExclusive", context == null ? null : context.getJCOInstance(), id, locked.getJCRefOut(), lockAge.getJCRefOut(), lockId.getJCRefOut(), actions.getJCRefOut());
+            retObjectGetItemExclusive = classInstance.Invoke("GetItemExclusive", context == null ? null : context.getJCOInstance(), id, locked.getJCRefOut(), lockAge.getJCRefOut(), lockId.getJCRefOut(), actions.getJCRefOut());
+            JCObject objGetItemExclusive = (JCObject)retObjectGetItemExclusive;
             return new SessionStateStoreData(objGetItemExclusive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItemExclusive != null ? retObjectGetItemExclusive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +218,7 @@ public class SessionStateStoreProviderBase extends ProviderBase  {
 
     public void CreateUninitializedItem(HttpContext context, java.lang.String id, int timeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateUninitializedItem", context == null ? null : context.getJCOInstance(), id, timeout);
         } catch (JCNativeException jcne) {
@@ -212,7 +228,7 @@ public class SessionStateStoreProviderBase extends ProviderBase  {
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -222,7 +238,7 @@ public class SessionStateStoreProviderBase extends ProviderBase  {
 
     public void EndRequest(HttpContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndRequest", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -232,7 +248,7 @@ public class SessionStateStoreProviderBase extends ProviderBase  {
 
     public void InitializeRequest(HttpContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitializeRequest", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -242,7 +258,7 @@ public class SessionStateStoreProviderBase extends ProviderBase  {
 
     public void ReleaseItemExclusive(HttpContext context, java.lang.String id, NetObject lockId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseItemExclusive", context == null ? null : context.getJCOInstance(), id, lockId == null ? null : lockId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,7 +268,7 @@ public class SessionStateStoreProviderBase extends ProviderBase  {
 
     public void RemoveItem(HttpContext context, java.lang.String id, NetObject lockId, SessionStateStoreData item) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveItem", context == null ? null : context.getJCOInstance(), id, lockId == null ? null : lockId.getJCOInstance(), item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -262,7 +278,7 @@ public class SessionStateStoreProviderBase extends ProviderBase  {
 
     public void ResetItemTimeout(HttpContext context, java.lang.String id) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetItemTimeout", context == null ? null : context.getJCOInstance(), id);
         } catch (JCNativeException jcne) {
@@ -272,7 +288,7 @@ public class SessionStateStoreProviderBase extends ProviderBase  {
 
     public void SetAndReleaseItemExclusive(HttpContext context, java.lang.String id, SessionStateStoreData item, NetObject lockId, boolean newItem) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAndReleaseItemExclusive", context == null ? null : context.getJCOInstance(), id, item == null ? null : item.getJCOInstance(), lockId == null ? null : lockId.getJCOInstance(), newItem);
         } catch (JCNativeException jcne) {

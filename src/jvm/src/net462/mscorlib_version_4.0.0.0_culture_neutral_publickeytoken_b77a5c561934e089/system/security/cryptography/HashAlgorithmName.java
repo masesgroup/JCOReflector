@@ -167,9 +167,13 @@ public class HashAlgorithmName extends ValueType  {
     
     public boolean Equals(HashAlgorithmName other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class HashAlgorithmName extends ValueType  {
     
     public static HashAlgorithmName getMD5() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMD5 = null;
         try {
-            JCObject val = (JCObject)classType.Get("MD5");
+            retObjectMD5 = classType.Get("MD5");
+            JCObject val = (JCObject)retObjectMD5;
             return new HashAlgorithmName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMD5 != null ? retObjectMD5.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class HashAlgorithmName extends ValueType  {
 
     public static HashAlgorithmName getSHA1() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSHA1 = null;
         try {
-            JCObject val = (JCObject)classType.Get("SHA1");
+            retObjectSHA1 = classType.Get("SHA1");
+            JCObject val = (JCObject)retObjectSHA1;
             return new HashAlgorithmName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSHA1 != null ? retObjectSHA1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +215,14 @@ public class HashAlgorithmName extends ValueType  {
 
     public static HashAlgorithmName getSHA256() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSHA256 = null;
         try {
-            JCObject val = (JCObject)classType.Get("SHA256");
+            retObjectSHA256 = classType.Get("SHA256");
+            JCObject val = (JCObject)retObjectSHA256;
             return new HashAlgorithmName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSHA256 != null ? retObjectSHA256.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +230,14 @@ public class HashAlgorithmName extends ValueType  {
 
     public static HashAlgorithmName getSHA384() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSHA384 = null;
         try {
-            JCObject val = (JCObject)classType.Get("SHA384");
+            retObjectSHA384 = classType.Get("SHA384");
+            JCObject val = (JCObject)retObjectSHA384;
             return new HashAlgorithmName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSHA384 != null ? retObjectSHA384.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +245,14 @@ public class HashAlgorithmName extends ValueType  {
 
     public static HashAlgorithmName getSHA512() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSHA512 = null;
         try {
-            JCObject val = (JCObject)classType.Get("SHA512");
+            retObjectSHA512 = classType.Get("SHA512");
+            JCObject val = (JCObject)retObjectSHA512;
             return new HashAlgorithmName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSHA512 != null ? retObjectSHA512.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +260,13 @@ public class HashAlgorithmName extends ValueType  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

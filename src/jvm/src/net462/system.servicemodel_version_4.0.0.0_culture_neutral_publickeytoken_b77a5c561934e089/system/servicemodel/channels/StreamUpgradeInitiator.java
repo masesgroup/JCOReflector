@@ -157,10 +157,14 @@ public class StreamUpgradeInitiator extends NetObject  {
     
     public IAsyncResult BeginInitiateUpgrade(Stream stream, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginInitiateUpgrade = null;
         try {
-            JCObject objBeginInitiateUpgrade = (JCObject)classInstance.Invoke("BeginInitiateUpgrade", stream == null ? null : stream.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginInitiateUpgrade = classInstance.Invoke("BeginInitiateUpgrade", stream == null ? null : stream.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginInitiateUpgrade = (JCObject)retObjectBeginInitiateUpgrade;
             return new IAsyncResultImplementation(objBeginInitiateUpgrade);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginInitiateUpgrade != null ? retObjectBeginInitiateUpgrade.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class StreamUpgradeInitiator extends NetObject  {
 
     public Stream EndInitiateUpgrade(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndInitiateUpgrade = null;
         try {
-            JCObject objEndInitiateUpgrade = (JCObject)classInstance.Invoke("EndInitiateUpgrade", result == null ? null : result.getJCOInstance());
+            retObjectEndInitiateUpgrade = classInstance.Invoke("EndInitiateUpgrade", result == null ? null : result.getJCOInstance());
+            JCObject objEndInitiateUpgrade = (JCObject)retObjectEndInitiateUpgrade;
             return new Stream(objEndInitiateUpgrade);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndInitiateUpgrade != null ? retObjectEndInitiateUpgrade.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class StreamUpgradeInitiator extends NetObject  {
 
     public Stream InitiateUpgrade(Stream stream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitiateUpgrade = null;
         try {
-            JCObject objInitiateUpgrade = (JCObject)classInstance.Invoke("InitiateUpgrade", stream == null ? null : stream.getJCOInstance());
+            retObjectInitiateUpgrade = classInstance.Invoke("InitiateUpgrade", stream == null ? null : stream.getJCOInstance());
+            JCObject objInitiateUpgrade = (JCObject)retObjectInitiateUpgrade;
             return new Stream(objInitiateUpgrade);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitiateUpgrade != null ? retObjectInitiateUpgrade.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +202,13 @@ public class StreamUpgradeInitiator extends NetObject  {
 
     public java.lang.String GetNextUpgrade() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextUpgrade = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetNextUpgrade");
+            retObjectGetNextUpgrade = classInstance.Invoke("GetNextUpgrade");
+            return (java.lang.String)retObjectGetNextUpgrade;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetNextUpgrade != null ? retObjectGetNextUpgrade.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

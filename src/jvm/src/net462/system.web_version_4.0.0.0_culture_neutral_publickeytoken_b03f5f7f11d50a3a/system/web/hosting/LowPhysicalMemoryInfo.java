@@ -169,9 +169,13 @@ public class LowPhysicalMemoryInfo extends NetObject  {
     
     public boolean getRequestGC() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestGC = null;
         try {
-            return (boolean)classInstance.Get("RequestGC");
+            retObjectRequestGC = classInstance.Get("RequestGC");
+            return (boolean)retObjectRequestGC;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequestGC != null ? retObjectRequestGC.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class LowPhysicalMemoryInfo extends NetObject  {
 
     public void setRequestGC(boolean RequestGC) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequestGC", RequestGC);
         } catch (JCNativeException jcne) {
@@ -189,9 +193,19 @@ public class LowPhysicalMemoryInfo extends NetObject  {
 
     public int getCurrentPercentUsed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentPercentUsed = null;
         try {
-            return (int)classInstance.Get("CurrentPercentUsed");
+            retObjectCurrentPercentUsed = classInstance.Get("CurrentPercentUsed");
+            return (int)retObjectCurrentPercentUsed;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCurrentPercentUsedNumber = (java.lang.Number)retObjectCurrentPercentUsed;
+                return retObjectCurrentPercentUsedNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCurrentPercentUsed != null ? retObjectCurrentPercentUsed.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +213,19 @@ public class LowPhysicalMemoryInfo extends NetObject  {
 
     public int getPercentLimit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPercentLimit = null;
         try {
-            return (int)classInstance.Get("PercentLimit");
+            retObjectPercentLimit = classInstance.Get("PercentLimit");
+            return (int)retObjectPercentLimit;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPercentLimitNumber = (java.lang.Number)retObjectPercentLimit;
+                return retObjectPercentLimitNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPercentLimit != null ? retObjectPercentLimit.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -181,9 +181,13 @@ public class SecurityContextSecurityToken extends SecurityToken implements AutoC
     
     public boolean MatchesKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchesKeyIdentifierClause = null;
         try {
-            return (boolean)classInstance.Invoke("MatchesKeyIdentifierClause", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            retObjectMatchesKeyIdentifierClause = classInstance.Invoke("MatchesKeyIdentifierClause", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            return (boolean)retObjectMatchesKeyIdentifierClause;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatchesKeyIdentifierClause != null ? retObjectMatchesKeyIdentifierClause.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +195,7 @@ public class SecurityContextSecurityToken extends SecurityToken implements AutoC
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -202,7 +206,7 @@ public class SecurityContextSecurityToken extends SecurityToken implements AutoC
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -218,9 +222,13 @@ public class SecurityContextSecurityToken extends SecurityToken implements AutoC
     
     public boolean getIsCookieMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCookieMode = null;
         try {
-            return (boolean)classInstance.Get("IsCookieMode");
+            retObjectIsCookieMode = classInstance.Get("IsCookieMode");
+            return (boolean)retObjectIsCookieMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCookieMode != null ? retObjectIsCookieMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +236,14 @@ public class SecurityContextSecurityToken extends SecurityToken implements AutoC
 
     public DateTime getKeyEffectiveTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyEffectiveTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyEffectiveTime");
+            retObjectKeyEffectiveTime = classInstance.Get("KeyEffectiveTime");
+            JCObject val = (JCObject)retObjectKeyEffectiveTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyEffectiveTime != null ? retObjectKeyEffectiveTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +251,14 @@ public class SecurityContextSecurityToken extends SecurityToken implements AutoC
 
     public DateTime getKeyExpirationTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyExpirationTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyExpirationTime");
+            retObjectKeyExpirationTime = classInstance.Get("KeyExpirationTime");
+            JCObject val = (JCObject)retObjectKeyExpirationTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyExpirationTime != null ? retObjectKeyExpirationTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +266,14 @@ public class SecurityContextSecurityToken extends SecurityToken implements AutoC
 
     public SecurityMessageProperty getBootstrapMessageProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBootstrapMessageProperty = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BootstrapMessageProperty");
+            retObjectBootstrapMessageProperty = classInstance.Get("BootstrapMessageProperty");
+            JCObject val = (JCObject)retObjectBootstrapMessageProperty;
             return new SecurityMessageProperty(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBootstrapMessageProperty != null ? retObjectBootstrapMessageProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +281,7 @@ public class SecurityContextSecurityToken extends SecurityToken implements AutoC
 
     public void setBootstrapMessageProperty(SecurityMessageProperty BootstrapMessageProperty) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BootstrapMessageProperty", BootstrapMessageProperty == null ? null : BootstrapMessageProperty.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -271,10 +291,14 @@ public class SecurityContextSecurityToken extends SecurityToken implements AutoC
 
     public UniqueId getContextId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContextId");
+            retObjectContextId = classInstance.Get("ContextId");
+            JCObject val = (JCObject)retObjectContextId;
             return new UniqueId(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextId != null ? retObjectContextId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,10 +306,14 @@ public class SecurityContextSecurityToken extends SecurityToken implements AutoC
 
     public UniqueId getKeyGeneration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyGeneration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyGeneration");
+            retObjectKeyGeneration = classInstance.Get("KeyGeneration");
+            JCObject val = (JCObject)retObjectKeyGeneration;
             return new UniqueId(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyGeneration != null ? retObjectKeyGeneration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

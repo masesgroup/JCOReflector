@@ -143,7 +143,7 @@ public class IWorkflowInstanceExtensionImplementation extends NetObject implemen
     
     public void SetInstance(WorkflowInstanceProxy instance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetInstance", instance == null ? null : instance.getJCOInstance());
         } catch (JCNativeException jcne) {

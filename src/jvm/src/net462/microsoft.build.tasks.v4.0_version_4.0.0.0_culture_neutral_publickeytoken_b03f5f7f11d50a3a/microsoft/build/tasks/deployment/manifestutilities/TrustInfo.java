@@ -163,7 +163,7 @@ public class TrustInfo extends NetObject  {
     
     public void Clear() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class TrustInfo extends NetObject  {
 
     public void Read(Stream input) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Read", input == null ? null : input.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -183,7 +183,7 @@ public class TrustInfo extends NetObject  {
 
     public void Read(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Read", path);
         } catch (JCNativeException jcne) {
@@ -193,7 +193,7 @@ public class TrustInfo extends NetObject  {
 
     public void ReadManifest(Stream input) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadManifest", input == null ? null : input.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,7 +203,7 @@ public class TrustInfo extends NetObject  {
 
     public void ReadManifest(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadManifest", path);
         } catch (JCNativeException jcne) {
@@ -213,7 +213,7 @@ public class TrustInfo extends NetObject  {
 
     public void Write(Stream output) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.RankException, system.NotSupportedException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.FormatException, system.xml.schema.XmlSchemaException, system.security.SecurityException, system.xml.xsl.XsltException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", output == null ? null : output.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -223,7 +223,7 @@ public class TrustInfo extends NetObject  {
 
     public void Write(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.xml.XmlException, system.xml.xpath.XPathException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", path);
         } catch (JCNativeException jcne) {
@@ -233,7 +233,7 @@ public class TrustInfo extends NetObject  {
 
     public void WriteManifest(Stream output) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.BadImageFormatException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteManifest", output == null ? null : output.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,7 +243,7 @@ public class TrustInfo extends NetObject  {
 
     public void WriteManifest(Stream input, Stream output) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.xml.xpath.XPathException, system.BadImageFormatException, system.FormatException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteManifest", input == null ? null : input.getJCOInstance(), output == null ? null : output.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -253,7 +253,7 @@ public class TrustInfo extends NetObject  {
 
     public void WriteManifest(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.NotImplementedException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteManifest", path);
         } catch (JCNativeException jcne) {
@@ -267,9 +267,13 @@ public class TrustInfo extends NetObject  {
     
     public boolean getHasUnmanagedCodePermission() throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.xml.xpath.XPathException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasUnmanagedCodePermission = null;
         try {
-            return (boolean)classInstance.Get("HasUnmanagedCodePermission");
+            retObjectHasUnmanagedCodePermission = classInstance.Get("HasUnmanagedCodePermission");
+            return (boolean)retObjectHasUnmanagedCodePermission;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasUnmanagedCodePermission != null ? retObjectHasUnmanagedCodePermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,9 +281,13 @@ public class TrustInfo extends NetObject  {
 
     public boolean getIsFullTrust() throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.xml.xpath.XPathException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFullTrust = null;
         try {
-            return (boolean)classInstance.Get("IsFullTrust");
+            retObjectIsFullTrust = classInstance.Get("IsFullTrust");
+            return (boolean)retObjectIsFullTrust;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFullTrust != null ? retObjectIsFullTrust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,7 +295,7 @@ public class TrustInfo extends NetObject  {
 
     public void setIsFullTrust(boolean IsFullTrust) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsFullTrust", IsFullTrust);
         } catch (JCNativeException jcne) {
@@ -297,9 +305,13 @@ public class TrustInfo extends NetObject  {
 
     public boolean getPreserveFullTrustPermissionSet() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreserveFullTrustPermissionSet = null;
         try {
-            return (boolean)classInstance.Get("PreserveFullTrustPermissionSet");
+            retObjectPreserveFullTrustPermissionSet = classInstance.Get("PreserveFullTrustPermissionSet");
+            return (boolean)retObjectPreserveFullTrustPermissionSet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPreserveFullTrustPermissionSet != null ? retObjectPreserveFullTrustPermissionSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,7 +319,7 @@ public class TrustInfo extends NetObject  {
 
     public void setPreserveFullTrustPermissionSet(boolean PreserveFullTrustPermissionSet) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreserveFullTrustPermissionSet", PreserveFullTrustPermissionSet);
         } catch (JCNativeException jcne) {
@@ -317,10 +329,14 @@ public class TrustInfo extends NetObject  {
 
     public PermissionSet getPermissionSet() throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.xml.xpath.XPathException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPermissionSet = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PermissionSet");
+            retObjectPermissionSet = classInstance.Get("PermissionSet");
+            JCObject val = (JCObject)retObjectPermissionSet;
             return new PermissionSet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPermissionSet != null ? retObjectPermissionSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,7 +344,7 @@ public class TrustInfo extends NetObject  {
 
     public void setPermissionSet(PermissionSet PermissionSet) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PermissionSet", PermissionSet == null ? null : PermissionSet.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -338,9 +354,13 @@ public class TrustInfo extends NetObject  {
 
     public java.lang.String getSameSiteAccess() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSameSiteAccess = null;
         try {
-            return (java.lang.String)classInstance.Get("SameSiteAccess");
+            retObjectSameSiteAccess = classInstance.Get("SameSiteAccess");
+            return (java.lang.String)retObjectSameSiteAccess;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSameSiteAccess != null ? retObjectSameSiteAccess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,7 +368,7 @@ public class TrustInfo extends NetObject  {
 
     public void setSameSiteAccess(java.lang.String SameSiteAccess) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SameSiteAccess", SameSiteAccess);
         } catch (JCNativeException jcne) {

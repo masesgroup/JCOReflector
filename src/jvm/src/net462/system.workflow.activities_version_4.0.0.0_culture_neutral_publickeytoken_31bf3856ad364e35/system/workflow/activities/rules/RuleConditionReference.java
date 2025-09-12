@@ -165,9 +165,13 @@ public class RuleConditionReference extends ActivityCondition  {
     
     public boolean Evaluate(Activity activity, IServiceProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluate = null;
         try {
-            return (boolean)classInstance.Invoke("Evaluate", activity == null ? null : activity.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            retObjectEvaluate = classInstance.Invoke("Evaluate", activity == null ? null : activity.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            return (boolean)retObjectEvaluate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEvaluate != null ? retObjectEvaluate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +183,13 @@ public class RuleConditionReference extends ActivityCondition  {
     
     public java.lang.String getConditionName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConditionName = null;
         try {
-            return (java.lang.String)classInstance.Get("ConditionName");
+            retObjectConditionName = classInstance.Get("ConditionName");
+            return (java.lang.String)retObjectConditionName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConditionName != null ? retObjectConditionName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class RuleConditionReference extends ActivityCondition  {
 
     public void setConditionName(java.lang.String ConditionName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConditionName", ConditionName);
         } catch (JCNativeException jcne) {

@@ -157,10 +157,14 @@ public class WorkflowDesignerLoader extends BasicDesignerLoader  {
     
     public TextReader GetFileReader(java.lang.String filePath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFileReader = null;
         try {
-            JCObject objGetFileReader = (JCObject)classInstance.Invoke("GetFileReader", filePath);
+            retObjectGetFileReader = classInstance.Invoke("GetFileReader", filePath);
+            JCObject objGetFileReader = (JCObject)retObjectGetFileReader;
             return new TextReader(objGetFileReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFileReader != null ? retObjectGetFileReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class WorkflowDesignerLoader extends BasicDesignerLoader  {
 
     public TextWriter GetFileWriter(java.lang.String filePath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFileWriter = null;
         try {
-            JCObject objGetFileWriter = (JCObject)classInstance.Invoke("GetFileWriter", filePath);
+            retObjectGetFileWriter = classInstance.Invoke("GetFileWriter", filePath);
+            JCObject objGetFileWriter = (JCObject)retObjectGetFileWriter;
             return new TextWriter(objGetFileWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFileWriter != null ? retObjectGetFileWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +187,7 @@ public class WorkflowDesignerLoader extends BasicDesignerLoader  {
 
     public void AddActivityToDesigner(Activity activity) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddActivityToDesigner", activity == null ? null : activity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,7 +197,7 @@ public class WorkflowDesignerLoader extends BasicDesignerLoader  {
 
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.RankException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -199,7 +207,7 @@ public class WorkflowDesignerLoader extends BasicDesignerLoader  {
 
     public void Flush() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -209,7 +217,7 @@ public class WorkflowDesignerLoader extends BasicDesignerLoader  {
 
     public void ForceReload() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.MulticastNotSupportedException, system.FormatException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ForceReload");
         } catch (JCNativeException jcne) {
@@ -219,7 +227,7 @@ public class WorkflowDesignerLoader extends BasicDesignerLoader  {
 
     public void RemoveActivityFromDesigner(Activity activity) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveActivityFromDesigner", activity == null ? null : activity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -233,9 +241,13 @@ public class WorkflowDesignerLoader extends BasicDesignerLoader  {
     
     public boolean getInDebugMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInDebugMode = null;
         try {
-            return (boolean)classInstance.Get("InDebugMode");
+            retObjectInDebugMode = classInstance.Get("InDebugMode");
+            return (boolean)retObjectInDebugMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInDebugMode != null ? retObjectInDebugMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,9 +255,13 @@ public class WorkflowDesignerLoader extends BasicDesignerLoader  {
 
     public java.lang.String getFileName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileName = null;
         try {
-            return (java.lang.String)classInstance.Get("FileName");
+            retObjectFileName = classInstance.Get("FileName");
+            return (java.lang.String)retObjectFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFileName != null ? retObjectFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

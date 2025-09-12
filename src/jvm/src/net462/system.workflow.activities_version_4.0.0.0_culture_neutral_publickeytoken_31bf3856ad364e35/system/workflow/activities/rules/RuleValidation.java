@@ -181,9 +181,13 @@ public class RuleValidation extends NetObject  {
     
     public boolean PushParentExpression(CodeExpression newParent) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPushParentExpression = null;
         try {
-            return (boolean)classInstance.Invoke("PushParentExpression", newParent == null ? null : newParent.getJCOInstance());
+            retObjectPushParentExpression = classInstance.Invoke("PushParentExpression", newParent == null ? null : newParent.getJCOInstance());
+            return (boolean)retObjectPushParentExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPushParentExpression != null ? retObjectPushParentExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +195,14 @@ public class RuleValidation extends NetObject  {
 
     public RuleExpressionInfo ExpressionInfo(CodeExpression expression) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpressionInfo = null;
         try {
-            JCObject objExpressionInfo = (JCObject)classInstance.Invoke("ExpressionInfo", expression == null ? null : expression.getJCOInstance());
+            retObjectExpressionInfo = classInstance.Invoke("ExpressionInfo", expression == null ? null : expression.getJCOInstance());
+            JCObject objExpressionInfo = (JCObject)retObjectExpressionInfo;
             return new RuleExpressionInfo(objExpressionInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpressionInfo != null ? retObjectExpressionInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +210,7 @@ public class RuleValidation extends NetObject  {
 
     public void PopParentExpression() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PopParentExpression");
         } catch (JCNativeException jcne) {
@@ -216,10 +224,14 @@ public class RuleValidation extends NetObject  {
     
     public NetType getThisType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThisType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ThisType");
+            retObjectThisType = classInstance.Get("ThisType");
+            JCObject val = (JCObject)retObjectThisType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThisType != null ? retObjectThisType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +239,14 @@ public class RuleValidation extends NetObject  {
 
     public ValidationErrorCollection getErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrors = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Errors");
+            retObjectErrors = classInstance.Get("Errors");
+            JCObject val = (JCObject)retObjectErrors;
             return new ValidationErrorCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectErrors != null ? retObjectErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

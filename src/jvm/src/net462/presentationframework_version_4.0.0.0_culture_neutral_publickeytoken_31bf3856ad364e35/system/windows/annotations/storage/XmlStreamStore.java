@@ -169,10 +169,14 @@ public class XmlStreamStore extends AnnotationStore  {
     
     public Annotation DeleteAnnotation(Guid annotationId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidCastException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteAnnotation = null;
         try {
-            JCObject objDeleteAnnotation = (JCObject)classInstance.Invoke("DeleteAnnotation", annotationId == null ? null : annotationId.getJCOInstance());
+            retObjectDeleteAnnotation = classInstance.Invoke("DeleteAnnotation", annotationId == null ? null : annotationId.getJCOInstance());
+            JCObject objDeleteAnnotation = (JCObject)retObjectDeleteAnnotation;
             return new Annotation(objDeleteAnnotation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteAnnotation != null ? retObjectDeleteAnnotation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class XmlStreamStore extends AnnotationStore  {
 
     public Annotation GetAnnotation(Guid annotationId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidCastException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAnnotation = null;
         try {
-            JCObject objGetAnnotation = (JCObject)classInstance.Invoke("GetAnnotation", annotationId == null ? null : annotationId.getJCOInstance());
+            retObjectGetAnnotation = classInstance.Invoke("GetAnnotation", annotationId == null ? null : annotationId.getJCOInstance());
+            JCObject objGetAnnotation = (JCObject)retObjectGetAnnotation;
             return new Annotation(objGetAnnotation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAnnotation != null ? retObjectGetAnnotation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +199,7 @@ public class XmlStreamStore extends AnnotationStore  {
 
     public void AddAnnotation(Annotation newAnnotation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddAnnotation", newAnnotation == null ? null : newAnnotation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,7 +209,7 @@ public class XmlStreamStore extends AnnotationStore  {
 
     public void Flush() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.NotSupportedException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {

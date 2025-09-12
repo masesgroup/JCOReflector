@@ -148,10 +148,14 @@ public class ITableMappingImplementation extends NetObject implements ITableMapp
     
     public IColumnMappingCollection getColumnMappings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnMappings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnMappings");
+            retObjectColumnMappings = classInstance.Get("ColumnMappings");
+            JCObject val = (JCObject)retObjectColumnMappings;
             return new IColumnMappingCollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnMappings != null ? retObjectColumnMappings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,9 +163,13 @@ public class ITableMappingImplementation extends NetObject implements ITableMapp
 
     public java.lang.String getDataSetTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSetTable = null;
         try {
-            return (java.lang.String)classInstance.Get("DataSetTable");
+            retObjectDataSetTable = classInstance.Get("DataSetTable");
+            return (java.lang.String)retObjectDataSetTable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataSetTable != null ? retObjectDataSetTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +177,7 @@ public class ITableMappingImplementation extends NetObject implements ITableMapp
 
     public void setDataSetTable(java.lang.String DataSetTable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSetTable", DataSetTable);
         } catch (JCNativeException jcne) {
@@ -179,9 +187,13 @@ public class ITableMappingImplementation extends NetObject implements ITableMapp
 
     public java.lang.String getSourceTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceTable = null;
         try {
-            return (java.lang.String)classInstance.Get("SourceTable");
+            retObjectSourceTable = classInstance.Get("SourceTable");
+            return (java.lang.String)retObjectSourceTable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourceTable != null ? retObjectSourceTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +201,7 @@ public class ITableMappingImplementation extends NetObject implements ITableMapp
 
     public void setSourceTable(java.lang.String SourceTable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceTable", SourceTable);
         } catch (JCNativeException jcne) {

@@ -163,9 +163,13 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
     
     public boolean Contains(NetObject containItem) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", containItem == null ? null : containItem.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", containItem == null ? null : containItem.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +177,13 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
 
     public boolean MoveCurrentTo(NetObject item) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveCurrentTo = null;
         try {
-            return (boolean)classInstance.Invoke("MoveCurrentTo", item == null ? null : item.getJCOInstance());
+            retObjectMoveCurrentTo = classInstance.Invoke("MoveCurrentTo", item == null ? null : item.getJCOInstance());
+            return (boolean)retObjectMoveCurrentTo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveCurrentTo != null ? retObjectMoveCurrentTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +191,13 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
 
     public boolean MoveCurrentToFirst() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveCurrentToFirst = null;
         try {
-            return (boolean)classInstance.Invoke("MoveCurrentToFirst");
+            retObjectMoveCurrentToFirst = classInstance.Invoke("MoveCurrentToFirst");
+            return (boolean)retObjectMoveCurrentToFirst;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveCurrentToFirst != null ? retObjectMoveCurrentToFirst.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +205,13 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
 
     public boolean MoveCurrentToLast() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveCurrentToLast = null;
         try {
-            return (boolean)classInstance.Invoke("MoveCurrentToLast");
+            retObjectMoveCurrentToLast = classInstance.Invoke("MoveCurrentToLast");
+            return (boolean)retObjectMoveCurrentToLast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveCurrentToLast != null ? retObjectMoveCurrentToLast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +219,13 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
 
     public boolean MoveCurrentToNext() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveCurrentToNext = null;
         try {
-            return (boolean)classInstance.Invoke("MoveCurrentToNext");
+            retObjectMoveCurrentToNext = classInstance.Invoke("MoveCurrentToNext");
+            return (boolean)retObjectMoveCurrentToNext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveCurrentToNext != null ? retObjectMoveCurrentToNext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +233,13 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
 
     public boolean MoveCurrentToPosition(int position) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveCurrentToPosition = null;
         try {
-            return (boolean)classInstance.Invoke("MoveCurrentToPosition", position);
+            retObjectMoveCurrentToPosition = classInstance.Invoke("MoveCurrentToPosition", position);
+            return (boolean)retObjectMoveCurrentToPosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveCurrentToPosition != null ? retObjectMoveCurrentToPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +247,13 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
 
     public boolean MoveCurrentToPrevious() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveCurrentToPrevious = null;
         try {
-            return (boolean)classInstance.Invoke("MoveCurrentToPrevious");
+            retObjectMoveCurrentToPrevious = classInstance.Invoke("MoveCurrentToPrevious");
+            return (boolean)retObjectMoveCurrentToPrevious;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveCurrentToPrevious != null ? retObjectMoveCurrentToPrevious.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +261,13 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
 
     public boolean PassesFilter(NetObject item) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPassesFilter = null;
         try {
-            return (boolean)classInstance.Invoke("PassesFilter", item == null ? null : item.getJCOInstance());
+            retObjectPassesFilter = classInstance.Invoke("PassesFilter", item == null ? null : item.getJCOInstance());
+            return (boolean)retObjectPassesFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPassesFilter != null ? retObjectPassesFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,9 +275,19 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
 
     public int Add(NetObject newItem) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (int)classInstance.Invoke("Add", newItem == null ? null : newItem.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", newItem == null ? null : newItem.getJCOInstance());
+            return (int)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAddNumber = (java.lang.Number)retObjectAdd;
+                return retObjectAddNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +295,19 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
 
     public int IndexOf(NetObject item) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", item == null ? null : item.getJCOInstance());
+            retObjectIndexOf = classInstance.Invoke("IndexOf", item == null ? null : item.getJCOInstance());
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +315,14 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
 
     public IDisposable DeferRefresh() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeferRefresh = null;
         try {
-            JCObject objDeferRefresh = (JCObject)classInstance.Invoke("DeferRefresh");
+            retObjectDeferRefresh = classInstance.Invoke("DeferRefresh");
+            JCObject objDeferRefresh = (JCObject)retObjectDeferRefresh;
             return new IDisposableImplementation(objDeferRefresh);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeferRefresh != null ? retObjectDeferRefresh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,10 +330,14 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
 
     public NetObject GetItemAt(int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItemAt = null;
         try {
-            JCObject objGetItemAt = (JCObject)classInstance.Invoke("GetItemAt", index);
+            retObjectGetItemAt = classInstance.Invoke("GetItemAt", index);
+            JCObject objGetItemAt = (JCObject)retObjectGetItemAt;
             return new NetObject(objGetItemAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItemAt != null ? retObjectGetItemAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +345,7 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
 
     public void Clear() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -295,7 +355,7 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
 
     public void CopyTo(Array array, int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", array == null ? null : array.getJCOInstance(), index);
         } catch (JCNativeException jcne) {
@@ -305,7 +365,7 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
 
     public void Insert(int insertIndex, NetObject insertItem) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Insert", insertIndex, insertItem == null ? null : insertItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -315,7 +375,7 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
 
     public void Remove(NetObject removeItem) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", removeItem == null ? null : removeItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -325,7 +385,7 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
 
     public void RemoveAt(int removeIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", removeIndex);
         } catch (JCNativeException jcne) {
@@ -339,7 +399,7 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
      */
     @Deprecated 
     public NetObject AddNewItem(NetObject newItem) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionViewAddNewItem to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionViewAddNewItem to obtain the full interface.");
     }
 
     /**
@@ -348,7 +408,7 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
      */
     @Deprecated 
     public NetObject AddNew() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionView to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionView to obtain the full interface.");
     }
 
     /**
@@ -357,7 +417,7 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
      */
     @Deprecated 
     public void CancelEdit() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionView to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionView to obtain the full interface.");
     }
 
     /**
@@ -366,7 +426,7 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
      */
     @Deprecated 
     public void CancelNew() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionView to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionView to obtain the full interface.");
     }
 
     /**
@@ -375,7 +435,7 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
      */
     @Deprecated 
     public void CommitEdit() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionView to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionView to obtain the full interface.");
     }
 
     /**
@@ -384,7 +444,7 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
      */
     @Deprecated 
     public void CommitNew() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionView to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionView to obtain the full interface.");
     }
 
     /**
@@ -393,7 +453,7 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
      */
     @Deprecated 
     public void EditItem(NetObject item) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionView to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionView to obtain the full interface.");
     }
 
     /**
@@ -402,7 +462,7 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
      */
     @Deprecated 
     public boolean ReceiveWeakEvent(NetType managerType, NetObject sender, EventArgs e) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWeakEventListener to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWeakEventListener to obtain the full interface.");
     }
 
 
@@ -411,9 +471,13 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
     
     public boolean getCanChangeLiveFiltering() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanChangeLiveFiltering = null;
         try {
-            return (boolean)classInstance.Get("CanChangeLiveFiltering");
+            retObjectCanChangeLiveFiltering = classInstance.Get("CanChangeLiveFiltering");
+            return (boolean)retObjectCanChangeLiveFiltering;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanChangeLiveFiltering != null ? retObjectCanChangeLiveFiltering.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,9 +485,13 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
 
     public boolean getCanChangeLiveGrouping() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanChangeLiveGrouping = null;
         try {
-            return (boolean)classInstance.Get("CanChangeLiveGrouping");
+            retObjectCanChangeLiveGrouping = classInstance.Get("CanChangeLiveGrouping");
+            return (boolean)retObjectCanChangeLiveGrouping;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanChangeLiveGrouping != null ? retObjectCanChangeLiveGrouping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,9 +499,13 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
 
     public boolean getCanChangeLiveSorting() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanChangeLiveSorting = null;
         try {
-            return (boolean)classInstance.Get("CanChangeLiveSorting");
+            retObjectCanChangeLiveSorting = classInstance.Get("CanChangeLiveSorting");
+            return (boolean)retObjectCanChangeLiveSorting;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanChangeLiveSorting != null ? retObjectCanChangeLiveSorting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

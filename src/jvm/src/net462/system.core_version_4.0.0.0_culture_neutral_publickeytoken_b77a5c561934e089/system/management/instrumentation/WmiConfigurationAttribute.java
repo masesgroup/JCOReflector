@@ -171,9 +171,13 @@ public class WmiConfigurationAttribute extends Attribute  {
     
     public boolean getIdentifyLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdentifyLevel = null;
         try {
-            return (boolean)classInstance.Get("IdentifyLevel");
+            retObjectIdentifyLevel = classInstance.Get("IdentifyLevel");
+            return (boolean)retObjectIdentifyLevel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIdentifyLevel != null ? retObjectIdentifyLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class WmiConfigurationAttribute extends Attribute  {
 
     public void setIdentifyLevel(boolean IdentifyLevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IdentifyLevel", IdentifyLevel);
         } catch (JCNativeException jcne) {
@@ -191,10 +195,14 @@ public class WmiConfigurationAttribute extends Attribute  {
 
     public ManagementHostingModel getHostingModel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHostingModel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HostingModel");
+            retObjectHostingModel = classInstance.Get("HostingModel");
+            JCObject val = (JCObject)retObjectHostingModel;
             return new ManagementHostingModel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHostingModel != null ? retObjectHostingModel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +210,7 @@ public class WmiConfigurationAttribute extends Attribute  {
 
     public void setHostingModel(ManagementHostingModel HostingModel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HostingModel", HostingModel == null ? null : HostingModel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,9 +220,13 @@ public class WmiConfigurationAttribute extends Attribute  {
 
     public java.lang.String getHostingGroup() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHostingGroup = null;
         try {
-            return (java.lang.String)classInstance.Get("HostingGroup");
+            retObjectHostingGroup = classInstance.Get("HostingGroup");
+            return (java.lang.String)retObjectHostingGroup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHostingGroup != null ? retObjectHostingGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +234,7 @@ public class WmiConfigurationAttribute extends Attribute  {
 
     public void setHostingGroup(java.lang.String HostingGroup) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HostingGroup", HostingGroup);
         } catch (JCNativeException jcne) {
@@ -232,9 +244,13 @@ public class WmiConfigurationAttribute extends Attribute  {
 
     public java.lang.String getNamespaceSecurity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespaceSecurity = null;
         try {
-            return (java.lang.String)classInstance.Get("NamespaceSecurity");
+            retObjectNamespaceSecurity = classInstance.Get("NamespaceSecurity");
+            return (java.lang.String)retObjectNamespaceSecurity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespaceSecurity != null ? retObjectNamespaceSecurity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class WmiConfigurationAttribute extends Attribute  {
 
     public void setNamespaceSecurity(java.lang.String NamespaceSecurity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NamespaceSecurity", NamespaceSecurity);
         } catch (JCNativeException jcne) {
@@ -252,9 +268,13 @@ public class WmiConfigurationAttribute extends Attribute  {
 
     public java.lang.String getScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScope = null;
         try {
-            return (java.lang.String)classInstance.Get("Scope");
+            retObjectScope = classInstance.Get("Scope");
+            return (java.lang.String)retObjectScope;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectScope != null ? retObjectScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,9 +282,13 @@ public class WmiConfigurationAttribute extends Attribute  {
 
     public java.lang.String getSecurityRestriction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityRestriction = null;
         try {
-            return (java.lang.String)classInstance.Get("SecurityRestriction");
+            retObjectSecurityRestriction = classInstance.Get("SecurityRestriction");
+            return (java.lang.String)retObjectSecurityRestriction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSecurityRestriction != null ? retObjectSecurityRestriction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +296,7 @@ public class WmiConfigurationAttribute extends Attribute  {
 
     public void setSecurityRestriction(java.lang.String SecurityRestriction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecurityRestriction", SecurityRestriction);
         } catch (JCNativeException jcne) {

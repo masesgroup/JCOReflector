@@ -168,9 +168,13 @@ public class TimeSpanValidatorAttribute extends ConfigurationValidatorAttribute 
     
     public boolean getExcludeRange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExcludeRange = null;
         try {
-            return (boolean)classInstance.Get("ExcludeRange");
+            retObjectExcludeRange = classInstance.Get("ExcludeRange");
+            return (boolean)retObjectExcludeRange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExcludeRange != null ? retObjectExcludeRange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class TimeSpanValidatorAttribute extends ConfigurationValidatorAttribute 
 
     public void setExcludeRange(boolean ExcludeRange) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExcludeRange", ExcludeRange);
         } catch (JCNativeException jcne) {
@@ -188,9 +192,13 @@ public class TimeSpanValidatorAttribute extends ConfigurationValidatorAttribute 
 
     public java.lang.String getMaxValueString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxValueString = null;
         try {
-            return (java.lang.String)classInstance.Get("MaxValueString");
+            retObjectMaxValueString = classInstance.Get("MaxValueString");
+            return (java.lang.String)retObjectMaxValueString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMaxValueString != null ? retObjectMaxValueString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class TimeSpanValidatorAttribute extends ConfigurationValidatorAttribute 
 
     public void setMaxValueString(java.lang.String MaxValueString) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxValueString", MaxValueString);
         } catch (JCNativeException jcne) {
@@ -208,9 +216,13 @@ public class TimeSpanValidatorAttribute extends ConfigurationValidatorAttribute 
 
     public java.lang.String getMinValueString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinValueString = null;
         try {
-            return (java.lang.String)classInstance.Get("MinValueString");
+            retObjectMinValueString = classInstance.Get("MinValueString");
+            return (java.lang.String)retObjectMinValueString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMinValueString != null ? retObjectMinValueString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class TimeSpanValidatorAttribute extends ConfigurationValidatorAttribute 
 
     public void setMinValueString(java.lang.String MinValueString) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinValueString", MinValueString);
         } catch (JCNativeException jcne) {
@@ -228,10 +240,14 @@ public class TimeSpanValidatorAttribute extends ConfigurationValidatorAttribute 
 
     public TimeSpan getMaxValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MaxValue");
+            retObjectMaxValue = classInstance.Get("MaxValue");
+            JCObject val = (JCObject)retObjectMaxValue;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxValue != null ? retObjectMaxValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +255,7 @@ public class TimeSpanValidatorAttribute extends ConfigurationValidatorAttribute 
 
     public void setMaxValue(TimeSpan MaxValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxValue", MaxValue == null ? null : MaxValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -249,10 +265,14 @@ public class TimeSpanValidatorAttribute extends ConfigurationValidatorAttribute 
 
     public TimeSpan getMinValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MinValue");
+            retObjectMinValue = classInstance.Get("MinValue");
+            JCObject val = (JCObject)retObjectMinValue;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinValue != null ? retObjectMinValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +280,7 @@ public class TimeSpanValidatorAttribute extends ConfigurationValidatorAttribute 
 
     public void setMinValue(TimeSpan MinValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinValue", MinValue == null ? null : MinValue.getJCOInstance());
         } catch (JCNativeException jcne) {

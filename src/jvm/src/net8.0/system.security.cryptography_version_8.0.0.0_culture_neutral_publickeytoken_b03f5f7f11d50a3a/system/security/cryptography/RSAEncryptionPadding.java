@@ -158,9 +158,13 @@ public class RSAEncryptionPadding extends NetObject  {
     
     public boolean Equals(RSAEncryptionPadding other) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class RSAEncryptionPadding extends NetObject  {
 
     public static RSAEncryptionPadding CreateOaep(HashAlgorithmName hashAlgorithm) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateOaep = null;
         try {
-            JCObject objCreateOaep = (JCObject)classType.Invoke("CreateOaep", hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            retObjectCreateOaep = classType.Invoke("CreateOaep", hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            JCObject objCreateOaep = (JCObject)retObjectCreateOaep;
             return new RSAEncryptionPadding(objCreateOaep);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateOaep != null ? retObjectCreateOaep.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class RSAEncryptionPadding extends NetObject  {
     
     public HashAlgorithmName getOaepHashAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOaepHashAlgorithm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OaepHashAlgorithm");
+            retObjectOaepHashAlgorithm = classInstance.Get("OaepHashAlgorithm");
+            JCObject val = (JCObject)retObjectOaepHashAlgorithm;
             return new HashAlgorithmName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOaepHashAlgorithm != null ? retObjectOaepHashAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +206,14 @@ public class RSAEncryptionPadding extends NetObject  {
 
     public static RSAEncryptionPadding getOaepSHA1() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOaepSHA1 = null;
         try {
-            JCObject val = (JCObject)classType.Get("OaepSHA1");
+            retObjectOaepSHA1 = classType.Get("OaepSHA1");
+            JCObject val = (JCObject)retObjectOaepSHA1;
             return new RSAEncryptionPadding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOaepSHA1 != null ? retObjectOaepSHA1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +221,14 @@ public class RSAEncryptionPadding extends NetObject  {
 
     public static RSAEncryptionPadding getOaepSHA256() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOaepSHA256 = null;
         try {
-            JCObject val = (JCObject)classType.Get("OaepSHA256");
+            retObjectOaepSHA256 = classType.Get("OaepSHA256");
+            JCObject val = (JCObject)retObjectOaepSHA256;
             return new RSAEncryptionPadding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOaepSHA256 != null ? retObjectOaepSHA256.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +236,14 @@ public class RSAEncryptionPadding extends NetObject  {
 
     public static RSAEncryptionPadding getOaepSHA3_256() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOaepSHA3_256 = null;
         try {
-            JCObject val = (JCObject)classType.Get("OaepSHA3_256");
+            retObjectOaepSHA3_256 = classType.Get("OaepSHA3_256");
+            JCObject val = (JCObject)retObjectOaepSHA3_256;
             return new RSAEncryptionPadding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOaepSHA3_256 != null ? retObjectOaepSHA3_256.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +251,14 @@ public class RSAEncryptionPadding extends NetObject  {
 
     public static RSAEncryptionPadding getOaepSHA3_384() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOaepSHA3_384 = null;
         try {
-            JCObject val = (JCObject)classType.Get("OaepSHA3_384");
+            retObjectOaepSHA3_384 = classType.Get("OaepSHA3_384");
+            JCObject val = (JCObject)retObjectOaepSHA3_384;
             return new RSAEncryptionPadding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOaepSHA3_384 != null ? retObjectOaepSHA3_384.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +266,14 @@ public class RSAEncryptionPadding extends NetObject  {
 
     public static RSAEncryptionPadding getOaepSHA3_512() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOaepSHA3_512 = null;
         try {
-            JCObject val = (JCObject)classType.Get("OaepSHA3_512");
+            retObjectOaepSHA3_512 = classType.Get("OaepSHA3_512");
+            JCObject val = (JCObject)retObjectOaepSHA3_512;
             return new RSAEncryptionPadding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOaepSHA3_512 != null ? retObjectOaepSHA3_512.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +281,14 @@ public class RSAEncryptionPadding extends NetObject  {
 
     public static RSAEncryptionPadding getOaepSHA384() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOaepSHA384 = null;
         try {
-            JCObject val = (JCObject)classType.Get("OaepSHA384");
+            retObjectOaepSHA384 = classType.Get("OaepSHA384");
+            JCObject val = (JCObject)retObjectOaepSHA384;
             return new RSAEncryptionPadding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOaepSHA384 != null ? retObjectOaepSHA384.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +296,14 @@ public class RSAEncryptionPadding extends NetObject  {
 
     public static RSAEncryptionPadding getOaepSHA512() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOaepSHA512 = null;
         try {
-            JCObject val = (JCObject)classType.Get("OaepSHA512");
+            retObjectOaepSHA512 = classType.Get("OaepSHA512");
+            JCObject val = (JCObject)retObjectOaepSHA512;
             return new RSAEncryptionPadding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOaepSHA512 != null ? retObjectOaepSHA512.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,10 +311,14 @@ public class RSAEncryptionPadding extends NetObject  {
 
     public static RSAEncryptionPadding getPkcs1() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPkcs1 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Pkcs1");
+            retObjectPkcs1 = classType.Get("Pkcs1");
+            JCObject val = (JCObject)retObjectPkcs1;
             return new RSAEncryptionPadding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPkcs1 != null ? retObjectPkcs1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,10 +326,14 @@ public class RSAEncryptionPadding extends NetObject  {
 
     public RSAEncryptionPaddingMode getMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Mode");
+            retObjectMode = classInstance.Get("Mode");
+            JCObject val = (JCObject)retObjectMode;
             return new RSAEncryptionPaddingMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMode != null ? retObjectMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

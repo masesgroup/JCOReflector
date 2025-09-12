@@ -146,7 +146,7 @@ public class IAdviseSinkImplementation extends NetObject implements IAdviseSink 
     
     public void OnClose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnClose");
         } catch (JCNativeException jcne) {
@@ -156,7 +156,7 @@ public class IAdviseSinkImplementation extends NetObject implements IAdviseSink 
 
     public void OnDataChange(JCORefOut<FORMATETC> format, JCORefOut<STGMEDIUM> stgmedium) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnDataChange", format.getJCRefOut(), stgmedium.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -166,7 +166,7 @@ public class IAdviseSinkImplementation extends NetObject implements IAdviseSink 
 
     public void OnRename(IMoniker moniker) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnRename", moniker == null ? null : moniker.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -176,7 +176,7 @@ public class IAdviseSinkImplementation extends NetObject implements IAdviseSink 
 
     public void OnSave() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnSave");
         } catch (JCNativeException jcne) {
@@ -186,7 +186,7 @@ public class IAdviseSinkImplementation extends NetObject implements IAdviseSink 
 
     public void OnViewChange(int aspect, int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnViewChange", aspect, index);
         } catch (JCNativeException jcne) {

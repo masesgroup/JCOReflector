@@ -186,9 +186,13 @@ public class SslSecurityTokenParameters extends SecurityTokenParameters  {
     
     public boolean getRequireCancellation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequireCancellation = null;
         try {
-            return (boolean)classInstance.Get("RequireCancellation");
+            retObjectRequireCancellation = classInstance.Get("RequireCancellation");
+            return (boolean)retObjectRequireCancellation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequireCancellation != null ? retObjectRequireCancellation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +200,7 @@ public class SslSecurityTokenParameters extends SecurityTokenParameters  {
 
     public void setRequireCancellation(boolean RequireCancellation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequireCancellation", RequireCancellation);
         } catch (JCNativeException jcne) {
@@ -206,9 +210,13 @@ public class SslSecurityTokenParameters extends SecurityTokenParameters  {
 
     public boolean getRequireClientCertificate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequireClientCertificate = null;
         try {
-            return (boolean)classInstance.Get("RequireClientCertificate");
+            retObjectRequireClientCertificate = classInstance.Get("RequireClientCertificate");
+            return (boolean)retObjectRequireClientCertificate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequireClientCertificate != null ? retObjectRequireClientCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +224,7 @@ public class SslSecurityTokenParameters extends SecurityTokenParameters  {
 
     public void setRequireClientCertificate(boolean RequireClientCertificate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequireClientCertificate", RequireClientCertificate);
         } catch (JCNativeException jcne) {

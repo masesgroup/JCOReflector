@@ -178,9 +178,13 @@ public class CreateUserWizard extends Wizard  {
     
     public boolean getAutoGeneratePassword() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoGeneratePassword = null;
         try {
-            return (boolean)classInstance.Get("AutoGeneratePassword");
+            retObjectAutoGeneratePassword = classInstance.Get("AutoGeneratePassword");
+            return (boolean)retObjectAutoGeneratePassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoGeneratePassword != null ? retObjectAutoGeneratePassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setAutoGeneratePassword(boolean AutoGeneratePassword) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoGeneratePassword", AutoGeneratePassword);
         } catch (JCNativeException jcne) {
@@ -198,9 +202,13 @@ public class CreateUserWizard extends Wizard  {
 
     public boolean getDisableCreatedUser() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisableCreatedUser = null;
         try {
-            return (boolean)classInstance.Get("DisableCreatedUser");
+            retObjectDisableCreatedUser = classInstance.Get("DisableCreatedUser");
+            return (boolean)retObjectDisableCreatedUser;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDisableCreatedUser != null ? retObjectDisableCreatedUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +216,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setDisableCreatedUser(boolean DisableCreatedUser) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisableCreatedUser", DisableCreatedUser);
         } catch (JCNativeException jcne) {
@@ -218,9 +226,13 @@ public class CreateUserWizard extends Wizard  {
 
     public boolean getLoginCreatedUser() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoginCreatedUser = null;
         try {
-            return (boolean)classInstance.Get("LoginCreatedUser");
+            retObjectLoginCreatedUser = classInstance.Get("LoginCreatedUser");
+            return (boolean)retObjectLoginCreatedUser;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLoginCreatedUser != null ? retObjectLoginCreatedUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +240,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setLoginCreatedUser(boolean LoginCreatedUser) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LoginCreatedUser", LoginCreatedUser);
         } catch (JCNativeException jcne) {
@@ -238,9 +250,13 @@ public class CreateUserWizard extends Wizard  {
 
     public boolean getRequireEmail() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequireEmail = null;
         try {
-            return (boolean)classInstance.Get("RequireEmail");
+            retObjectRequireEmail = classInstance.Get("RequireEmail");
+            return (boolean)retObjectRequireEmail;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequireEmail != null ? retObjectRequireEmail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +264,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setRequireEmail(boolean RequireEmail) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequireEmail", RequireEmail);
         } catch (JCNativeException jcne) {
@@ -258,9 +274,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getAnswer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnswer = null;
         try {
-            return (java.lang.String)classInstance.Get("Answer");
+            retObjectAnswer = classInstance.Get("Answer");
+            return (java.lang.String)retObjectAnswer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAnswer != null ? retObjectAnswer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +288,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setAnswer(java.lang.String Answer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Answer", Answer);
         } catch (JCNativeException jcne) {
@@ -278,9 +298,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getAnswerLabelText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnswerLabelText = null;
         try {
-            return (java.lang.String)classInstance.Get("AnswerLabelText");
+            retObjectAnswerLabelText = classInstance.Get("AnswerLabelText");
+            return (java.lang.String)retObjectAnswerLabelText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAnswerLabelText != null ? retObjectAnswerLabelText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +312,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setAnswerLabelText(java.lang.String AnswerLabelText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AnswerLabelText", AnswerLabelText);
         } catch (JCNativeException jcne) {
@@ -298,9 +322,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getAnswerRequiredErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnswerRequiredErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("AnswerRequiredErrorMessage");
+            retObjectAnswerRequiredErrorMessage = classInstance.Get("AnswerRequiredErrorMessage");
+            return (java.lang.String)retObjectAnswerRequiredErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAnswerRequiredErrorMessage != null ? retObjectAnswerRequiredErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,7 +336,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setAnswerRequiredErrorMessage(java.lang.String AnswerRequiredErrorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AnswerRequiredErrorMessage", AnswerRequiredErrorMessage);
         } catch (JCNativeException jcne) {
@@ -318,9 +346,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getCompleteSuccessText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompleteSuccessText = null;
         try {
-            return (java.lang.String)classInstance.Get("CompleteSuccessText");
+            retObjectCompleteSuccessText = classInstance.Get("CompleteSuccessText");
+            return (java.lang.String)retObjectCompleteSuccessText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCompleteSuccessText != null ? retObjectCompleteSuccessText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,7 +360,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setCompleteSuccessText(java.lang.String CompleteSuccessText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CompleteSuccessText", CompleteSuccessText);
         } catch (JCNativeException jcne) {
@@ -338,9 +370,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getConfirmPassword() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfirmPassword = null;
         try {
-            return (java.lang.String)classInstance.Get("ConfirmPassword");
+            retObjectConfirmPassword = classInstance.Get("ConfirmPassword");
+            return (java.lang.String)retObjectConfirmPassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConfirmPassword != null ? retObjectConfirmPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,9 +384,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getConfirmPasswordCompareErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfirmPasswordCompareErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("ConfirmPasswordCompareErrorMessage");
+            retObjectConfirmPasswordCompareErrorMessage = classInstance.Get("ConfirmPasswordCompareErrorMessage");
+            return (java.lang.String)retObjectConfirmPasswordCompareErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConfirmPasswordCompareErrorMessage != null ? retObjectConfirmPasswordCompareErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,7 +398,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setConfirmPasswordCompareErrorMessage(java.lang.String ConfirmPasswordCompareErrorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConfirmPasswordCompareErrorMessage", ConfirmPasswordCompareErrorMessage);
         } catch (JCNativeException jcne) {
@@ -368,9 +408,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getConfirmPasswordLabelText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfirmPasswordLabelText = null;
         try {
-            return (java.lang.String)classInstance.Get("ConfirmPasswordLabelText");
+            retObjectConfirmPasswordLabelText = classInstance.Get("ConfirmPasswordLabelText");
+            return (java.lang.String)retObjectConfirmPasswordLabelText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConfirmPasswordLabelText != null ? retObjectConfirmPasswordLabelText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,7 +422,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setConfirmPasswordLabelText(java.lang.String ConfirmPasswordLabelText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConfirmPasswordLabelText", ConfirmPasswordLabelText);
         } catch (JCNativeException jcne) {
@@ -388,9 +432,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getConfirmPasswordRequiredErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfirmPasswordRequiredErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("ConfirmPasswordRequiredErrorMessage");
+            retObjectConfirmPasswordRequiredErrorMessage = classInstance.Get("ConfirmPasswordRequiredErrorMessage");
+            return (java.lang.String)retObjectConfirmPasswordRequiredErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConfirmPasswordRequiredErrorMessage != null ? retObjectConfirmPasswordRequiredErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,7 +446,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setConfirmPasswordRequiredErrorMessage(java.lang.String ConfirmPasswordRequiredErrorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConfirmPasswordRequiredErrorMessage", ConfirmPasswordRequiredErrorMessage);
         } catch (JCNativeException jcne) {
@@ -408,9 +456,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getContinueButtonImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueButtonImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("ContinueButtonImageUrl");
+            retObjectContinueButtonImageUrl = classInstance.Get("ContinueButtonImageUrl");
+            return (java.lang.String)retObjectContinueButtonImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContinueButtonImageUrl != null ? retObjectContinueButtonImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,7 +470,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setContinueButtonImageUrl(java.lang.String ContinueButtonImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContinueButtonImageUrl", ContinueButtonImageUrl);
         } catch (JCNativeException jcne) {
@@ -428,9 +480,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getContinueButtonText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueButtonText = null;
         try {
-            return (java.lang.String)classInstance.Get("ContinueButtonText");
+            retObjectContinueButtonText = classInstance.Get("ContinueButtonText");
+            return (java.lang.String)retObjectContinueButtonText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContinueButtonText != null ? retObjectContinueButtonText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,7 +494,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setContinueButtonText(java.lang.String ContinueButtonText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContinueButtonText", ContinueButtonText);
         } catch (JCNativeException jcne) {
@@ -448,9 +504,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getContinueDestinationPageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueDestinationPageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("ContinueDestinationPageUrl");
+            retObjectContinueDestinationPageUrl = classInstance.Get("ContinueDestinationPageUrl");
+            return (java.lang.String)retObjectContinueDestinationPageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContinueDestinationPageUrl != null ? retObjectContinueDestinationPageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -458,7 +518,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setContinueDestinationPageUrl(java.lang.String ContinueDestinationPageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContinueDestinationPageUrl", ContinueDestinationPageUrl);
         } catch (JCNativeException jcne) {
@@ -468,9 +528,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getCreateUserButtonImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateUserButtonImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("CreateUserButtonImageUrl");
+            retObjectCreateUserButtonImageUrl = classInstance.Get("CreateUserButtonImageUrl");
+            return (java.lang.String)retObjectCreateUserButtonImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCreateUserButtonImageUrl != null ? retObjectCreateUserButtonImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -478,7 +542,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setCreateUserButtonImageUrl(java.lang.String CreateUserButtonImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CreateUserButtonImageUrl", CreateUserButtonImageUrl);
         } catch (JCNativeException jcne) {
@@ -488,9 +552,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getCreateUserButtonText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateUserButtonText = null;
         try {
-            return (java.lang.String)classInstance.Get("CreateUserButtonText");
+            retObjectCreateUserButtonText = classInstance.Get("CreateUserButtonText");
+            return (java.lang.String)retObjectCreateUserButtonText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCreateUserButtonText != null ? retObjectCreateUserButtonText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -498,7 +566,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setCreateUserButtonText(java.lang.String CreateUserButtonText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CreateUserButtonText", CreateUserButtonText);
         } catch (JCNativeException jcne) {
@@ -508,9 +576,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getDuplicateEmailErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDuplicateEmailErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("DuplicateEmailErrorMessage");
+            retObjectDuplicateEmailErrorMessage = classInstance.Get("DuplicateEmailErrorMessage");
+            return (java.lang.String)retObjectDuplicateEmailErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDuplicateEmailErrorMessage != null ? retObjectDuplicateEmailErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -518,7 +590,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setDuplicateEmailErrorMessage(java.lang.String DuplicateEmailErrorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DuplicateEmailErrorMessage", DuplicateEmailErrorMessage);
         } catch (JCNativeException jcne) {
@@ -528,9 +600,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getDuplicateUserNameErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDuplicateUserNameErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("DuplicateUserNameErrorMessage");
+            retObjectDuplicateUserNameErrorMessage = classInstance.Get("DuplicateUserNameErrorMessage");
+            return (java.lang.String)retObjectDuplicateUserNameErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDuplicateUserNameErrorMessage != null ? retObjectDuplicateUserNameErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,7 +614,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setDuplicateUserNameErrorMessage(java.lang.String DuplicateUserNameErrorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DuplicateUserNameErrorMessage", DuplicateUserNameErrorMessage);
         } catch (JCNativeException jcne) {
@@ -548,9 +624,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getEditProfileIconUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditProfileIconUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("EditProfileIconUrl");
+            retObjectEditProfileIconUrl = classInstance.Get("EditProfileIconUrl");
+            return (java.lang.String)retObjectEditProfileIconUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEditProfileIconUrl != null ? retObjectEditProfileIconUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -558,7 +638,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setEditProfileIconUrl(java.lang.String EditProfileIconUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EditProfileIconUrl", EditProfileIconUrl);
         } catch (JCNativeException jcne) {
@@ -568,9 +648,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getEditProfileText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditProfileText = null;
         try {
-            return (java.lang.String)classInstance.Get("EditProfileText");
+            retObjectEditProfileText = classInstance.Get("EditProfileText");
+            return (java.lang.String)retObjectEditProfileText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEditProfileText != null ? retObjectEditProfileText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -578,7 +662,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setEditProfileText(java.lang.String EditProfileText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EditProfileText", EditProfileText);
         } catch (JCNativeException jcne) {
@@ -588,9 +672,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getEditProfileUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditProfileUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("EditProfileUrl");
+            retObjectEditProfileUrl = classInstance.Get("EditProfileUrl");
+            return (java.lang.String)retObjectEditProfileUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEditProfileUrl != null ? retObjectEditProfileUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -598,7 +686,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setEditProfileUrl(java.lang.String EditProfileUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EditProfileUrl", EditProfileUrl);
         } catch (JCNativeException jcne) {
@@ -608,9 +696,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getEmail() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmail = null;
         try {
-            return (java.lang.String)classInstance.Get("Email");
+            retObjectEmail = classInstance.Get("Email");
+            return (java.lang.String)retObjectEmail;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEmail != null ? retObjectEmail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -618,7 +710,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setEmail(java.lang.String Email) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Email", Email);
         } catch (JCNativeException jcne) {
@@ -628,9 +720,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getEmailLabelText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmailLabelText = null;
         try {
-            return (java.lang.String)classInstance.Get("EmailLabelText");
+            retObjectEmailLabelText = classInstance.Get("EmailLabelText");
+            return (java.lang.String)retObjectEmailLabelText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEmailLabelText != null ? retObjectEmailLabelText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -638,7 +734,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setEmailLabelText(java.lang.String EmailLabelText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EmailLabelText", EmailLabelText);
         } catch (JCNativeException jcne) {
@@ -648,9 +744,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getEmailRegularExpression() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmailRegularExpression = null;
         try {
-            return (java.lang.String)classInstance.Get("EmailRegularExpression");
+            retObjectEmailRegularExpression = classInstance.Get("EmailRegularExpression");
+            return (java.lang.String)retObjectEmailRegularExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEmailRegularExpression != null ? retObjectEmailRegularExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -658,7 +758,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setEmailRegularExpression(java.lang.String EmailRegularExpression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EmailRegularExpression", EmailRegularExpression);
         } catch (JCNativeException jcne) {
@@ -668,9 +768,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getEmailRegularExpressionErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmailRegularExpressionErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("EmailRegularExpressionErrorMessage");
+            retObjectEmailRegularExpressionErrorMessage = classInstance.Get("EmailRegularExpressionErrorMessage");
+            return (java.lang.String)retObjectEmailRegularExpressionErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEmailRegularExpressionErrorMessage != null ? retObjectEmailRegularExpressionErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -678,7 +782,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setEmailRegularExpressionErrorMessage(java.lang.String EmailRegularExpressionErrorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EmailRegularExpressionErrorMessage", EmailRegularExpressionErrorMessage);
         } catch (JCNativeException jcne) {
@@ -688,9 +792,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getEmailRequiredErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmailRequiredErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("EmailRequiredErrorMessage");
+            retObjectEmailRequiredErrorMessage = classInstance.Get("EmailRequiredErrorMessage");
+            return (java.lang.String)retObjectEmailRequiredErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEmailRequiredErrorMessage != null ? retObjectEmailRequiredErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -698,7 +806,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setEmailRequiredErrorMessage(java.lang.String EmailRequiredErrorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EmailRequiredErrorMessage", EmailRequiredErrorMessage);
         } catch (JCNativeException jcne) {
@@ -708,9 +816,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getHelpPageIconUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpPageIconUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("HelpPageIconUrl");
+            retObjectHelpPageIconUrl = classInstance.Get("HelpPageIconUrl");
+            return (java.lang.String)retObjectHelpPageIconUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHelpPageIconUrl != null ? retObjectHelpPageIconUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -718,7 +830,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setHelpPageIconUrl(java.lang.String HelpPageIconUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpPageIconUrl", HelpPageIconUrl);
         } catch (JCNativeException jcne) {
@@ -728,9 +840,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getHelpPageText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpPageText = null;
         try {
-            return (java.lang.String)classInstance.Get("HelpPageText");
+            retObjectHelpPageText = classInstance.Get("HelpPageText");
+            return (java.lang.String)retObjectHelpPageText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHelpPageText != null ? retObjectHelpPageText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -738,7 +854,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setHelpPageText(java.lang.String HelpPageText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpPageText", HelpPageText);
         } catch (JCNativeException jcne) {
@@ -748,9 +864,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getHelpPageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpPageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("HelpPageUrl");
+            retObjectHelpPageUrl = classInstance.Get("HelpPageUrl");
+            return (java.lang.String)retObjectHelpPageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHelpPageUrl != null ? retObjectHelpPageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -758,7 +878,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setHelpPageUrl(java.lang.String HelpPageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpPageUrl", HelpPageUrl);
         } catch (JCNativeException jcne) {
@@ -768,9 +888,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getInstructionText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstructionText = null;
         try {
-            return (java.lang.String)classInstance.Get("InstructionText");
+            retObjectInstructionText = classInstance.Get("InstructionText");
+            return (java.lang.String)retObjectInstructionText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInstructionText != null ? retObjectInstructionText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -778,7 +902,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setInstructionText(java.lang.String InstructionText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstructionText", InstructionText);
         } catch (JCNativeException jcne) {
@@ -788,9 +912,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getInvalidAnswerErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvalidAnswerErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("InvalidAnswerErrorMessage");
+            retObjectInvalidAnswerErrorMessage = classInstance.Get("InvalidAnswerErrorMessage");
+            return (java.lang.String)retObjectInvalidAnswerErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInvalidAnswerErrorMessage != null ? retObjectInvalidAnswerErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -798,7 +926,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setInvalidAnswerErrorMessage(java.lang.String InvalidAnswerErrorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InvalidAnswerErrorMessage", InvalidAnswerErrorMessage);
         } catch (JCNativeException jcne) {
@@ -808,9 +936,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getInvalidEmailErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvalidEmailErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("InvalidEmailErrorMessage");
+            retObjectInvalidEmailErrorMessage = classInstance.Get("InvalidEmailErrorMessage");
+            return (java.lang.String)retObjectInvalidEmailErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInvalidEmailErrorMessage != null ? retObjectInvalidEmailErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -818,7 +950,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setInvalidEmailErrorMessage(java.lang.String InvalidEmailErrorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InvalidEmailErrorMessage", InvalidEmailErrorMessage);
         } catch (JCNativeException jcne) {
@@ -828,9 +960,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getInvalidPasswordErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvalidPasswordErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("InvalidPasswordErrorMessage");
+            retObjectInvalidPasswordErrorMessage = classInstance.Get("InvalidPasswordErrorMessage");
+            return (java.lang.String)retObjectInvalidPasswordErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInvalidPasswordErrorMessage != null ? retObjectInvalidPasswordErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -838,7 +974,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setInvalidPasswordErrorMessage(java.lang.String InvalidPasswordErrorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InvalidPasswordErrorMessage", InvalidPasswordErrorMessage);
         } catch (JCNativeException jcne) {
@@ -848,9 +984,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getInvalidQuestionErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvalidQuestionErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("InvalidQuestionErrorMessage");
+            retObjectInvalidQuestionErrorMessage = classInstance.Get("InvalidQuestionErrorMessage");
+            return (java.lang.String)retObjectInvalidQuestionErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInvalidQuestionErrorMessage != null ? retObjectInvalidQuestionErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -858,7 +998,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setInvalidQuestionErrorMessage(java.lang.String InvalidQuestionErrorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InvalidQuestionErrorMessage", InvalidQuestionErrorMessage);
         } catch (JCNativeException jcne) {
@@ -868,9 +1008,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getMembershipProvider() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMembershipProvider = null;
         try {
-            return (java.lang.String)classInstance.Get("MembershipProvider");
+            retObjectMembershipProvider = classInstance.Get("MembershipProvider");
+            return (java.lang.String)retObjectMembershipProvider;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMembershipProvider != null ? retObjectMembershipProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -878,7 +1022,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setMembershipProvider(java.lang.String MembershipProvider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MembershipProvider", MembershipProvider);
         } catch (JCNativeException jcne) {
@@ -888,9 +1032,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getPassword() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPassword = null;
         try {
-            return (java.lang.String)classInstance.Get("Password");
+            retObjectPassword = classInstance.Get("Password");
+            return (java.lang.String)retObjectPassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPassword != null ? retObjectPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -898,9 +1046,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getPasswordHintText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPasswordHintText = null;
         try {
-            return (java.lang.String)classInstance.Get("PasswordHintText");
+            retObjectPasswordHintText = classInstance.Get("PasswordHintText");
+            return (java.lang.String)retObjectPasswordHintText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPasswordHintText != null ? retObjectPasswordHintText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -908,7 +1060,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setPasswordHintText(java.lang.String PasswordHintText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PasswordHintText", PasswordHintText);
         } catch (JCNativeException jcne) {
@@ -918,9 +1070,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getPasswordLabelText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPasswordLabelText = null;
         try {
-            return (java.lang.String)classInstance.Get("PasswordLabelText");
+            retObjectPasswordLabelText = classInstance.Get("PasswordLabelText");
+            return (java.lang.String)retObjectPasswordLabelText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPasswordLabelText != null ? retObjectPasswordLabelText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -928,7 +1084,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setPasswordLabelText(java.lang.String PasswordLabelText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PasswordLabelText", PasswordLabelText);
         } catch (JCNativeException jcne) {
@@ -938,9 +1094,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getPasswordRegularExpression() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPasswordRegularExpression = null;
         try {
-            return (java.lang.String)classInstance.Get("PasswordRegularExpression");
+            retObjectPasswordRegularExpression = classInstance.Get("PasswordRegularExpression");
+            return (java.lang.String)retObjectPasswordRegularExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPasswordRegularExpression != null ? retObjectPasswordRegularExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -948,7 +1108,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setPasswordRegularExpression(java.lang.String PasswordRegularExpression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PasswordRegularExpression", PasswordRegularExpression);
         } catch (JCNativeException jcne) {
@@ -958,9 +1118,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getPasswordRegularExpressionErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPasswordRegularExpressionErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("PasswordRegularExpressionErrorMessage");
+            retObjectPasswordRegularExpressionErrorMessage = classInstance.Get("PasswordRegularExpressionErrorMessage");
+            return (java.lang.String)retObjectPasswordRegularExpressionErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPasswordRegularExpressionErrorMessage != null ? retObjectPasswordRegularExpressionErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -968,7 +1132,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setPasswordRegularExpressionErrorMessage(java.lang.String PasswordRegularExpressionErrorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PasswordRegularExpressionErrorMessage", PasswordRegularExpressionErrorMessage);
         } catch (JCNativeException jcne) {
@@ -978,9 +1142,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getPasswordRequiredErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPasswordRequiredErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("PasswordRequiredErrorMessage");
+            retObjectPasswordRequiredErrorMessage = classInstance.Get("PasswordRequiredErrorMessage");
+            return (java.lang.String)retObjectPasswordRequiredErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPasswordRequiredErrorMessage != null ? retObjectPasswordRequiredErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -988,7 +1156,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setPasswordRequiredErrorMessage(java.lang.String PasswordRequiredErrorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PasswordRequiredErrorMessage", PasswordRequiredErrorMessage);
         } catch (JCNativeException jcne) {
@@ -998,9 +1166,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getQuestion() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuestion = null;
         try {
-            return (java.lang.String)classInstance.Get("Question");
+            retObjectQuestion = classInstance.Get("Question");
+            return (java.lang.String)retObjectQuestion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectQuestion != null ? retObjectQuestion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1008,7 +1180,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setQuestion(java.lang.String Question) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Question", Question);
         } catch (JCNativeException jcne) {
@@ -1018,9 +1190,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getQuestionLabelText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuestionLabelText = null;
         try {
-            return (java.lang.String)classInstance.Get("QuestionLabelText");
+            retObjectQuestionLabelText = classInstance.Get("QuestionLabelText");
+            return (java.lang.String)retObjectQuestionLabelText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectQuestionLabelText != null ? retObjectQuestionLabelText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1028,7 +1204,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setQuestionLabelText(java.lang.String QuestionLabelText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QuestionLabelText", QuestionLabelText);
         } catch (JCNativeException jcne) {
@@ -1038,9 +1214,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getQuestionRequiredErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuestionRequiredErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("QuestionRequiredErrorMessage");
+            retObjectQuestionRequiredErrorMessage = classInstance.Get("QuestionRequiredErrorMessage");
+            return (java.lang.String)retObjectQuestionRequiredErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectQuestionRequiredErrorMessage != null ? retObjectQuestionRequiredErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1048,7 +1228,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setQuestionRequiredErrorMessage(java.lang.String QuestionRequiredErrorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QuestionRequiredErrorMessage", QuestionRequiredErrorMessage);
         } catch (JCNativeException jcne) {
@@ -1058,9 +1238,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getUnknownErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnknownErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("UnknownErrorMessage");
+            retObjectUnknownErrorMessage = classInstance.Get("UnknownErrorMessage");
+            return (java.lang.String)retObjectUnknownErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUnknownErrorMessage != null ? retObjectUnknownErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1068,7 +1252,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setUnknownErrorMessage(java.lang.String UnknownErrorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnknownErrorMessage", UnknownErrorMessage);
         } catch (JCNativeException jcne) {
@@ -1078,9 +1262,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getUserName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserName = null;
         try {
-            return (java.lang.String)classInstance.Get("UserName");
+            retObjectUserName = classInstance.Get("UserName");
+            return (java.lang.String)retObjectUserName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserName != null ? retObjectUserName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1088,7 +1276,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setUserName(java.lang.String UserName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserName", UserName);
         } catch (JCNativeException jcne) {
@@ -1098,9 +1286,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getUserNameLabelText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserNameLabelText = null;
         try {
-            return (java.lang.String)classInstance.Get("UserNameLabelText");
+            retObjectUserNameLabelText = classInstance.Get("UserNameLabelText");
+            return (java.lang.String)retObjectUserNameLabelText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserNameLabelText != null ? retObjectUserNameLabelText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1108,7 +1300,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setUserNameLabelText(java.lang.String UserNameLabelText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserNameLabelText", UserNameLabelText);
         } catch (JCNativeException jcne) {
@@ -1118,9 +1310,13 @@ public class CreateUserWizard extends Wizard  {
 
     public java.lang.String getUserNameRequiredErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserNameRequiredErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("UserNameRequiredErrorMessage");
+            retObjectUserNameRequiredErrorMessage = classInstance.Get("UserNameRequiredErrorMessage");
+            return (java.lang.String)retObjectUserNameRequiredErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserNameRequiredErrorMessage != null ? retObjectUserNameRequiredErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1128,7 +1324,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setUserNameRequiredErrorMessage(java.lang.String UserNameRequiredErrorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserNameRequiredErrorMessage", UserNameRequiredErrorMessage);
         } catch (JCNativeException jcne) {
@@ -1138,10 +1334,14 @@ public class CreateUserWizard extends Wizard  {
 
     public ButtonType getContinueButtonType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueButtonType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContinueButtonType");
+            retObjectContinueButtonType = classInstance.Get("ContinueButtonType");
+            JCObject val = (JCObject)retObjectContinueButtonType;
             return new ButtonType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueButtonType != null ? retObjectContinueButtonType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1149,7 +1349,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setContinueButtonType(ButtonType ContinueButtonType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContinueButtonType", ContinueButtonType == null ? null : ContinueButtonType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1159,10 +1359,14 @@ public class CreateUserWizard extends Wizard  {
 
     public ButtonType getCreateUserButtonType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateUserButtonType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CreateUserButtonType");
+            retObjectCreateUserButtonType = classInstance.Get("CreateUserButtonType");
+            JCObject val = (JCObject)retObjectCreateUserButtonType;
             return new ButtonType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUserButtonType != null ? retObjectCreateUserButtonType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1170,7 +1374,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void setCreateUserButtonType(ButtonType CreateUserButtonType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CreateUserButtonType", CreateUserButtonType == null ? null : CreateUserButtonType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1180,10 +1384,14 @@ public class CreateUserWizard extends Wizard  {
 
     public CompleteWizardStep getCompleteStep() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompleteStep = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompleteStep");
+            retObjectCompleteStep = classInstance.Get("CompleteStep");
+            JCObject val = (JCObject)retObjectCompleteStep;
             return new CompleteWizardStep(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompleteStep != null ? retObjectCompleteStep.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1191,10 +1399,14 @@ public class CreateUserWizard extends Wizard  {
 
     public CreateUserWizardStep getCreateUserStep() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateUserStep = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CreateUserStep");
+            retObjectCreateUserStep = classInstance.Get("CreateUserStep");
+            JCObject val = (JCObject)retObjectCreateUserStep;
             return new CreateUserWizardStep(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUserStep != null ? retObjectCreateUserStep.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1202,10 +1414,14 @@ public class CreateUserWizard extends Wizard  {
 
     public MailDefinition getMailDefinition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMailDefinition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MailDefinition");
+            retObjectMailDefinition = classInstance.Get("MailDefinition");
+            JCObject val = (JCObject)retObjectMailDefinition;
             return new MailDefinition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMailDefinition != null ? retObjectMailDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1213,10 +1429,14 @@ public class CreateUserWizard extends Wizard  {
 
     public Style getContinueButtonStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueButtonStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContinueButtonStyle");
+            retObjectContinueButtonStyle = classInstance.Get("ContinueButtonStyle");
+            JCObject val = (JCObject)retObjectContinueButtonStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueButtonStyle != null ? retObjectContinueButtonStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1224,10 +1444,14 @@ public class CreateUserWizard extends Wizard  {
 
     public Style getCreateUserButtonStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateUserButtonStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CreateUserButtonStyle");
+            retObjectCreateUserButtonStyle = classInstance.Get("CreateUserButtonStyle");
+            JCObject val = (JCObject)retObjectCreateUserButtonStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUserButtonStyle != null ? retObjectCreateUserButtonStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1235,10 +1459,14 @@ public class CreateUserWizard extends Wizard  {
 
     public Style getTextBoxStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextBoxStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextBoxStyle");
+            retObjectTextBoxStyle = classInstance.Get("TextBoxStyle");
+            JCObject val = (JCObject)retObjectTextBoxStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextBoxStyle != null ? retObjectTextBoxStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1246,10 +1474,14 @@ public class CreateUserWizard extends Wizard  {
 
     public Style getValidatorTextStyle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidatorTextStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidatorTextStyle");
+            retObjectValidatorTextStyle = classInstance.Get("ValidatorTextStyle");
+            JCObject val = (JCObject)retObjectValidatorTextStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidatorTextStyle != null ? retObjectValidatorTextStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1257,10 +1489,14 @@ public class CreateUserWizard extends Wizard  {
 
     public TableItemStyle getCompleteSuccessTextStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompleteSuccessTextStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompleteSuccessTextStyle");
+            retObjectCompleteSuccessTextStyle = classInstance.Get("CompleteSuccessTextStyle");
+            JCObject val = (JCObject)retObjectCompleteSuccessTextStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompleteSuccessTextStyle != null ? retObjectCompleteSuccessTextStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1268,10 +1504,14 @@ public class CreateUserWizard extends Wizard  {
 
     public TableItemStyle getErrorMessageStyle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorMessageStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ErrorMessageStyle");
+            retObjectErrorMessageStyle = classInstance.Get("ErrorMessageStyle");
+            JCObject val = (JCObject)retObjectErrorMessageStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectErrorMessageStyle != null ? retObjectErrorMessageStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1279,10 +1519,14 @@ public class CreateUserWizard extends Wizard  {
 
     public TableItemStyle getHyperLinkStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHyperLinkStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HyperLinkStyle");
+            retObjectHyperLinkStyle = classInstance.Get("HyperLinkStyle");
+            JCObject val = (JCObject)retObjectHyperLinkStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHyperLinkStyle != null ? retObjectHyperLinkStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1290,10 +1534,14 @@ public class CreateUserWizard extends Wizard  {
 
     public TableItemStyle getInstructionTextStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstructionTextStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstructionTextStyle");
+            retObjectInstructionTextStyle = classInstance.Get("InstructionTextStyle");
+            JCObject val = (JCObject)retObjectInstructionTextStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstructionTextStyle != null ? retObjectInstructionTextStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1301,10 +1549,14 @@ public class CreateUserWizard extends Wizard  {
 
     public TableItemStyle getLabelStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLabelStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LabelStyle");
+            retObjectLabelStyle = classInstance.Get("LabelStyle");
+            JCObject val = (JCObject)retObjectLabelStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLabelStyle != null ? retObjectLabelStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1312,10 +1564,14 @@ public class CreateUserWizard extends Wizard  {
 
     public TableItemStyle getPasswordHintStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPasswordHintStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PasswordHintStyle");
+            retObjectPasswordHintStyle = classInstance.Get("PasswordHintStyle");
+            JCObject val = (JCObject)retObjectPasswordHintStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPasswordHintStyle != null ? retObjectPasswordHintStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1323,10 +1579,14 @@ public class CreateUserWizard extends Wizard  {
 
     public TableItemStyle getTitleTextStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitleTextStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TitleTextStyle");
+            retObjectTitleTextStyle = classInstance.Get("TitleTextStyle");
+            JCObject val = (JCObject)retObjectTitleTextStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTitleTextStyle != null ? retObjectTitleTextStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1339,7 +1599,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void addContinueButtonClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ContinueButtonClick", handler);
         } catch (JCNativeException jcne) {
@@ -1349,7 +1609,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void removeContinueButtonClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ContinueButtonClick", handler);
         } catch (JCNativeException jcne) {
@@ -1359,7 +1619,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void addCreatedUser(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CreatedUser", handler);
         } catch (JCNativeException jcne) {
@@ -1369,7 +1629,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void removeCreatedUser(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CreatedUser", handler);
         } catch (JCNativeException jcne) {
@@ -1379,7 +1639,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void addCreateUserError(CreateUserErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CreateUserError", handler);
         } catch (JCNativeException jcne) {
@@ -1389,7 +1649,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void removeCreateUserError(CreateUserErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CreateUserError", handler);
         } catch (JCNativeException jcne) {
@@ -1399,7 +1659,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void addCreatingUser(LoginCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CreatingUser", handler);
         } catch (JCNativeException jcne) {
@@ -1409,7 +1669,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void removeCreatingUser(LoginCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CreatingUser", handler);
         } catch (JCNativeException jcne) {
@@ -1419,7 +1679,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void addSendingMail(MailMessageEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SendingMail", handler);
         } catch (JCNativeException jcne) {
@@ -1429,7 +1689,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void removeSendingMail(MailMessageEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SendingMail", handler);
         } catch (JCNativeException jcne) {
@@ -1439,7 +1699,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void addSendMailError(SendMailErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SendMailError", handler);
         } catch (JCNativeException jcne) {
@@ -1449,7 +1709,7 @@ public class CreateUserWizard extends Wizard  {
 
     public void removeSendMailError(SendMailErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SendMailError", handler);
         } catch (JCNativeException jcne) {

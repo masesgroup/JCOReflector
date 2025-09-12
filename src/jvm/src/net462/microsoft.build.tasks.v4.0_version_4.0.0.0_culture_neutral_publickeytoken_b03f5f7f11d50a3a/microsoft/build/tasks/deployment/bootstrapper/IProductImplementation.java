@@ -148,10 +148,14 @@ public class IProductImplementation extends NetObject implements IProduct {
     
     public ProductBuilder getProductBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProductBuilder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProductBuilder");
+            retObjectProductBuilder = classInstance.Get("ProductBuilder");
+            JCObject val = (JCObject)retObjectProductBuilder;
             return new ProductBuilder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProductBuilder != null ? retObjectProductBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,10 +163,14 @@ public class IProductImplementation extends NetObject implements IProduct {
 
     public ProductCollection getIncludes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Includes");
+            retObjectIncludes = classInstance.Get("Includes");
+            JCObject val = (JCObject)retObjectIncludes;
             return new ProductCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncludes != null ? retObjectIncludes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +178,13 @@ public class IProductImplementation extends NetObject implements IProduct {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +192,13 @@ public class IProductImplementation extends NetObject implements IProduct {
 
     public java.lang.String getProductCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProductCode = null;
         try {
-            return (java.lang.String)classInstance.Get("ProductCode");
+            retObjectProductCode = classInstance.Get("ProductCode");
+            return (java.lang.String)retObjectProductCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProductCode != null ? retObjectProductCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

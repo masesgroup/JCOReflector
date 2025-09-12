@@ -158,9 +158,13 @@ public class OSPlatformAttribute extends Attribute  {
     
     public java.lang.String getPlatformName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPlatformName = null;
         try {
-            return (java.lang.String)classInstance.Get("PlatformName");
+            retObjectPlatformName = classInstance.Get("PlatformName");
+            return (java.lang.String)retObjectPlatformName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPlatformName != null ? retObjectPlatformName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

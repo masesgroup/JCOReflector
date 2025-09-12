@@ -160,9 +160,13 @@ public class SiteMapProvider extends ProviderBase  {
     
     public boolean IsAccessibleToUser(HttpContext context, SiteMapNode node) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException, system.web.HttpRequestValidationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAccessibleToUser = null;
         try {
-            return (boolean)classInstance.Invoke("IsAccessibleToUser", context == null ? null : context.getJCOInstance(), node == null ? null : node.getJCOInstance());
+            retObjectIsAccessibleToUser = classInstance.Invoke("IsAccessibleToUser", context == null ? null : context.getJCOInstance(), node == null ? null : node.getJCOInstance());
+            return (boolean)retObjectIsAccessibleToUser;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAccessibleToUser != null ? retObjectIsAccessibleToUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class SiteMapProvider extends ProviderBase  {
 
     public SiteMapNode FindSiteMapNode(java.lang.String rawUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindSiteMapNode = null;
         try {
-            JCObject objFindSiteMapNode = (JCObject)classInstance.Invoke("FindSiteMapNode", rawUrl);
+            retObjectFindSiteMapNode = classInstance.Invoke("FindSiteMapNode", rawUrl);
+            JCObject objFindSiteMapNode = (JCObject)retObjectFindSiteMapNode;
             return new SiteMapNode(objFindSiteMapNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindSiteMapNode != null ? retObjectFindSiteMapNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class SiteMapProvider extends ProviderBase  {
 
     public SiteMapNode FindSiteMapNode(HttpContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindSiteMapNode = null;
         try {
-            JCObject objFindSiteMapNode = (JCObject)classInstance.Invoke("FindSiteMapNode", context == null ? null : context.getJCOInstance());
+            retObjectFindSiteMapNode = classInstance.Invoke("FindSiteMapNode", context == null ? null : context.getJCOInstance());
+            JCObject objFindSiteMapNode = (JCObject)retObjectFindSiteMapNode;
             return new SiteMapNode(objFindSiteMapNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindSiteMapNode != null ? retObjectFindSiteMapNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class SiteMapProvider extends ProviderBase  {
 
     public SiteMapNode FindSiteMapNodeFromKey(java.lang.String key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindSiteMapNodeFromKey = null;
         try {
-            JCObject objFindSiteMapNodeFromKey = (JCObject)classInstance.Invoke("FindSiteMapNodeFromKey", key);
+            retObjectFindSiteMapNodeFromKey = classInstance.Invoke("FindSiteMapNodeFromKey", key);
+            JCObject objFindSiteMapNodeFromKey = (JCObject)retObjectFindSiteMapNodeFromKey;
             return new SiteMapNode(objFindSiteMapNodeFromKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindSiteMapNodeFromKey != null ? retObjectFindSiteMapNodeFromKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class SiteMapProvider extends ProviderBase  {
 
     public SiteMapNode GetCurrentNodeAndHintAncestorNodes(int upLevel) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentNodeAndHintAncestorNodes = null;
         try {
-            JCObject objGetCurrentNodeAndHintAncestorNodes = (JCObject)classInstance.Invoke("GetCurrentNodeAndHintAncestorNodes", upLevel);
+            retObjectGetCurrentNodeAndHintAncestorNodes = classInstance.Invoke("GetCurrentNodeAndHintAncestorNodes", upLevel);
+            JCObject objGetCurrentNodeAndHintAncestorNodes = (JCObject)retObjectGetCurrentNodeAndHintAncestorNodes;
             return new SiteMapNode(objGetCurrentNodeAndHintAncestorNodes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentNodeAndHintAncestorNodes != null ? retObjectGetCurrentNodeAndHintAncestorNodes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +234,14 @@ public class SiteMapProvider extends ProviderBase  {
 
     public SiteMapNode GetCurrentNodeAndHintNeighborhoodNodes(int upLevel, int downLevel) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentNodeAndHintNeighborhoodNodes = null;
         try {
-            JCObject objGetCurrentNodeAndHintNeighborhoodNodes = (JCObject)classInstance.Invoke("GetCurrentNodeAndHintNeighborhoodNodes", upLevel, downLevel);
+            retObjectGetCurrentNodeAndHintNeighborhoodNodes = classInstance.Invoke("GetCurrentNodeAndHintNeighborhoodNodes", upLevel, downLevel);
+            JCObject objGetCurrentNodeAndHintNeighborhoodNodes = (JCObject)retObjectGetCurrentNodeAndHintNeighborhoodNodes;
             return new SiteMapNode(objGetCurrentNodeAndHintNeighborhoodNodes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentNodeAndHintNeighborhoodNodes != null ? retObjectGetCurrentNodeAndHintNeighborhoodNodes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +249,14 @@ public class SiteMapProvider extends ProviderBase  {
 
     public SiteMapNode GetParentNode(SiteMapNode node) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParentNode = null;
         try {
-            JCObject objGetParentNode = (JCObject)classInstance.Invoke("GetParentNode", node == null ? null : node.getJCOInstance());
+            retObjectGetParentNode = classInstance.Invoke("GetParentNode", node == null ? null : node.getJCOInstance());
+            JCObject objGetParentNode = (JCObject)retObjectGetParentNode;
             return new SiteMapNode(objGetParentNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParentNode != null ? retObjectGetParentNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +264,14 @@ public class SiteMapProvider extends ProviderBase  {
 
     public SiteMapNode GetParentNodeRelativeToCurrentNodeAndHintDownFromParent(int walkupLevels, int relativeDepthFromWalkup) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParentNodeRelativeToCurrentNodeAndHintDownFromParent = null;
         try {
-            JCObject objGetParentNodeRelativeToCurrentNodeAndHintDownFromParent = (JCObject)classInstance.Invoke("GetParentNodeRelativeToCurrentNodeAndHintDownFromParent", walkupLevels, relativeDepthFromWalkup);
+            retObjectGetParentNodeRelativeToCurrentNodeAndHintDownFromParent = classInstance.Invoke("GetParentNodeRelativeToCurrentNodeAndHintDownFromParent", walkupLevels, relativeDepthFromWalkup);
+            JCObject objGetParentNodeRelativeToCurrentNodeAndHintDownFromParent = (JCObject)retObjectGetParentNodeRelativeToCurrentNodeAndHintDownFromParent;
             return new SiteMapNode(objGetParentNodeRelativeToCurrentNodeAndHintDownFromParent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParentNodeRelativeToCurrentNodeAndHintDownFromParent != null ? retObjectGetParentNodeRelativeToCurrentNodeAndHintDownFromParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,10 +279,14 @@ public class SiteMapProvider extends ProviderBase  {
 
     public SiteMapNode GetParentNodeRelativeToNodeAndHintDownFromParent(SiteMapNode node, int walkupLevels, int relativeDepthFromWalkup) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParentNodeRelativeToNodeAndHintDownFromParent = null;
         try {
-            JCObject objGetParentNodeRelativeToNodeAndHintDownFromParent = (JCObject)classInstance.Invoke("GetParentNodeRelativeToNodeAndHintDownFromParent", node == null ? null : node.getJCOInstance(), walkupLevels, relativeDepthFromWalkup);
+            retObjectGetParentNodeRelativeToNodeAndHintDownFromParent = classInstance.Invoke("GetParentNodeRelativeToNodeAndHintDownFromParent", node == null ? null : node.getJCOInstance(), walkupLevels, relativeDepthFromWalkup);
+            JCObject objGetParentNodeRelativeToNodeAndHintDownFromParent = (JCObject)retObjectGetParentNodeRelativeToNodeAndHintDownFromParent;
             return new SiteMapNode(objGetParentNodeRelativeToNodeAndHintDownFromParent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParentNodeRelativeToNodeAndHintDownFromParent != null ? retObjectGetParentNodeRelativeToNodeAndHintDownFromParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +294,14 @@ public class SiteMapProvider extends ProviderBase  {
 
     public SiteMapNodeCollection GetChildNodes(SiteMapNode node) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildNodes = null;
         try {
-            JCObject objGetChildNodes = (JCObject)classInstance.Invoke("GetChildNodes", node == null ? null : node.getJCOInstance());
+            retObjectGetChildNodes = classInstance.Invoke("GetChildNodes", node == null ? null : node.getJCOInstance());
+            JCObject objGetChildNodes = (JCObject)retObjectGetChildNodes;
             return new SiteMapNodeCollection(objGetChildNodes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildNodes != null ? retObjectGetChildNodes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +309,7 @@ public class SiteMapProvider extends ProviderBase  {
 
     public void HintAncestorNodes(SiteMapNode node, int upLevel) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("HintAncestorNodes", node == null ? null : node.getJCOInstance(), upLevel);
         } catch (JCNativeException jcne) {
@@ -279,7 +319,7 @@ public class SiteMapProvider extends ProviderBase  {
 
     public void HintNeighborhoodNodes(SiteMapNode node, int upLevel, int downLevel) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("HintNeighborhoodNodes", node == null ? null : node.getJCOInstance(), upLevel, downLevel);
         } catch (JCNativeException jcne) {
@@ -289,7 +329,7 @@ public class SiteMapProvider extends ProviderBase  {
 
     public void Initialize(java.lang.String name, NameValueCollection attributes) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", name, attributes == null ? null : attributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -303,9 +343,13 @@ public class SiteMapProvider extends ProviderBase  {
     
     public boolean getEnableLocalization() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableLocalization = null;
         try {
-            return (boolean)classInstance.Get("EnableLocalization");
+            retObjectEnableLocalization = classInstance.Get("EnableLocalization");
+            return (boolean)retObjectEnableLocalization;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableLocalization != null ? retObjectEnableLocalization.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,7 +357,7 @@ public class SiteMapProvider extends ProviderBase  {
 
     public void setEnableLocalization(boolean EnableLocalization) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableLocalization", EnableLocalization);
         } catch (JCNativeException jcne) {
@@ -323,9 +367,13 @@ public class SiteMapProvider extends ProviderBase  {
 
     public boolean getSecurityTrimmingEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityTrimmingEnabled = null;
         try {
-            return (boolean)classInstance.Get("SecurityTrimmingEnabled");
+            retObjectSecurityTrimmingEnabled = classInstance.Get("SecurityTrimmingEnabled");
+            return (boolean)retObjectSecurityTrimmingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSecurityTrimmingEnabled != null ? retObjectSecurityTrimmingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,9 +381,13 @@ public class SiteMapProvider extends ProviderBase  {
 
     public java.lang.String getResourceKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourceKey = null;
         try {
-            return (java.lang.String)classInstance.Get("ResourceKey");
+            retObjectResourceKey = classInstance.Get("ResourceKey");
+            return (java.lang.String)retObjectResourceKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectResourceKey != null ? retObjectResourceKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,7 +395,7 @@ public class SiteMapProvider extends ProviderBase  {
 
     public void setResourceKey(java.lang.String ResourceKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResourceKey", ResourceKey);
         } catch (JCNativeException jcne) {
@@ -353,10 +405,14 @@ public class SiteMapProvider extends ProviderBase  {
 
     public SiteMapNode getCurrentNode() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentNode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentNode");
+            retObjectCurrentNode = classInstance.Get("CurrentNode");
+            JCObject val = (JCObject)retObjectCurrentNode;
             return new SiteMapNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentNode != null ? retObjectCurrentNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,10 +420,14 @@ public class SiteMapProvider extends ProviderBase  {
 
     public SiteMapNode getRootNode() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootNode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootNode");
+            retObjectRootNode = classInstance.Get("RootNode");
+            JCObject val = (JCObject)retObjectRootNode;
             return new SiteMapNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootNode != null ? retObjectRootNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,10 +435,14 @@ public class SiteMapProvider extends ProviderBase  {
 
     public SiteMapProvider getParentProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParentProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParentProvider");
+            retObjectParentProvider = classInstance.Get("ParentProvider");
+            JCObject val = (JCObject)retObjectParentProvider;
             return new SiteMapProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParentProvider != null ? retObjectParentProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,7 +450,7 @@ public class SiteMapProvider extends ProviderBase  {
 
     public void setParentProvider(SiteMapProvider ParentProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParentProvider", ParentProvider == null ? null : ParentProvider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -396,10 +460,14 @@ public class SiteMapProvider extends ProviderBase  {
 
     public SiteMapProvider getRootProvider() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootProvider");
+            retObjectRootProvider = classInstance.Get("RootProvider");
+            JCObject val = (JCObject)retObjectRootProvider;
             return new SiteMapProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootProvider != null ? retObjectRootProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -412,7 +480,7 @@ public class SiteMapProvider extends ProviderBase  {
 
     public void addSiteMapResolve(SiteMapResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SiteMapResolve", handler);
         } catch (JCNativeException jcne) {
@@ -422,7 +490,7 @@ public class SiteMapProvider extends ProviderBase  {
 
     public void removeSiteMapResolve(SiteMapResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SiteMapResolve", handler);
         } catch (JCNativeException jcne) {

@@ -180,10 +180,14 @@ public class MsmqTransportSecurity extends NetObject  {
     
     public ProtectionLevel getMsmqProtectionLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMsmqProtectionLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MsmqProtectionLevel");
+            retObjectMsmqProtectionLevel = classInstance.Get("MsmqProtectionLevel");
+            JCObject val = (JCObject)retObjectMsmqProtectionLevel;
             return new ProtectionLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMsmqProtectionLevel != null ? retObjectMsmqProtectionLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +195,7 @@ public class MsmqTransportSecurity extends NetObject  {
 
     public void setMsmqProtectionLevel(ProtectionLevel MsmqProtectionLevel) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MsmqProtectionLevel", MsmqProtectionLevel == null ? null : MsmqProtectionLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,10 +205,14 @@ public class MsmqTransportSecurity extends NetObject  {
 
     public MsmqAuthenticationMode getMsmqAuthenticationMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMsmqAuthenticationMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MsmqAuthenticationMode");
+            retObjectMsmqAuthenticationMode = classInstance.Get("MsmqAuthenticationMode");
+            JCObject val = (JCObject)retObjectMsmqAuthenticationMode;
             return new MsmqAuthenticationMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMsmqAuthenticationMode != null ? retObjectMsmqAuthenticationMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +220,7 @@ public class MsmqTransportSecurity extends NetObject  {
 
     public void setMsmqAuthenticationMode(MsmqAuthenticationMode MsmqAuthenticationMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MsmqAuthenticationMode", MsmqAuthenticationMode == null ? null : MsmqAuthenticationMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -222,10 +230,14 @@ public class MsmqTransportSecurity extends NetObject  {
 
     public MsmqEncryptionAlgorithm getMsmqEncryptionAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMsmqEncryptionAlgorithm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MsmqEncryptionAlgorithm");
+            retObjectMsmqEncryptionAlgorithm = classInstance.Get("MsmqEncryptionAlgorithm");
+            JCObject val = (JCObject)retObjectMsmqEncryptionAlgorithm;
             return new MsmqEncryptionAlgorithm(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMsmqEncryptionAlgorithm != null ? retObjectMsmqEncryptionAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +245,7 @@ public class MsmqTransportSecurity extends NetObject  {
 
     public void setMsmqEncryptionAlgorithm(MsmqEncryptionAlgorithm MsmqEncryptionAlgorithm) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MsmqEncryptionAlgorithm", MsmqEncryptionAlgorithm == null ? null : MsmqEncryptionAlgorithm.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,10 +255,14 @@ public class MsmqTransportSecurity extends NetObject  {
 
     public MsmqSecureHashAlgorithm getMsmqSecureHashAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMsmqSecureHashAlgorithm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MsmqSecureHashAlgorithm");
+            retObjectMsmqSecureHashAlgorithm = classInstance.Get("MsmqSecureHashAlgorithm");
+            JCObject val = (JCObject)retObjectMsmqSecureHashAlgorithm;
             return new MsmqSecureHashAlgorithm(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMsmqSecureHashAlgorithm != null ? retObjectMsmqSecureHashAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,7 +270,7 @@ public class MsmqTransportSecurity extends NetObject  {
 
     public void setMsmqSecureHashAlgorithm(MsmqSecureHashAlgorithm MsmqSecureHashAlgorithm) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MsmqSecureHashAlgorithm", MsmqSecureHashAlgorithm == null ? null : MsmqSecureHashAlgorithm.getJCOInstance());
         } catch (JCNativeException jcne) {

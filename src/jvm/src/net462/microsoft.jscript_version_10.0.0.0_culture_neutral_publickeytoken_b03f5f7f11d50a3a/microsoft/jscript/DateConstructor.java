@@ -157,9 +157,19 @@ public class DateConstructor extends ScriptFunction  {
     
     public static double parse(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArithmeticException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectparse = null;
         try {
-            return (double)classType.Invoke("parse", str);
+            retObjectparse = classType.Invoke("parse", str);
+            return (double)retObjectparse;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectparseNumber = (java.lang.Number)retObjectparse;
+                return retObjectparseNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectparse != null ? retObjectparse.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +177,19 @@ public class DateConstructor extends ScriptFunction  {
 
     public static double UTC(NetObject year, NetObject month, NetObject date, NetObject hours, NetObject minutes, NetObject seconds, NetObject ms) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUTC = null;
         try {
-            return (double)classType.Invoke("UTC", year == null ? null : year.getJCOInstance(), month == null ? null : month.getJCOInstance(), date == null ? null : date.getJCOInstance(), hours == null ? null : hours.getJCOInstance(), minutes == null ? null : minutes.getJCOInstance(), seconds == null ? null : seconds.getJCOInstance(), ms == null ? null : ms.getJCOInstance());
+            retObjectUTC = classType.Invoke("UTC", year == null ? null : year.getJCOInstance(), month == null ? null : month.getJCOInstance(), date == null ? null : date.getJCOInstance(), hours == null ? null : hours.getJCOInstance(), minutes == null ? null : minutes.getJCOInstance(), seconds == null ? null : seconds.getJCOInstance(), ms == null ? null : ms.getJCOInstance());
+            return (double)retObjectUTC;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUTCNumber = (java.lang.Number)retObjectUTC;
+                return retObjectUTCNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectUTC != null ? retObjectUTC.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +197,14 @@ public class DateConstructor extends ScriptFunction  {
 
     public DateObject CreateInstanceNewDateConstructor(NetObject... args) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException, system.NotImplementedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, microsoft.jscript.JScriptException, system.NullReferenceException, microsoft.jscript.EndOfFile, system.MissingMethodException, system.ArithmeticException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", (java.lang.Object)toObjectFromArray(args));
+            retObjectCreateInstance = classInstance.Invoke("CreateInstance", (java.lang.Object)toObjectFromArray(args));
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new DateObject(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +212,13 @@ public class DateConstructor extends ScriptFunction  {
 
     public java.lang.String Invoke() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Invoke");
+            retObjectInvoke = classInstance.Invoke("Invoke");
+            return (java.lang.String)retObjectInvoke;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -175,9 +175,13 @@ public class ListCollectionView extends CollectionView implements system.collect
     
     public boolean Contains(NetObject item) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", item == null ? null : item.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", item == null ? null : item.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +189,13 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public boolean MoveCurrentToPosition(int position) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveCurrentToPosition = null;
         try {
-            return (boolean)classInstance.Invoke("MoveCurrentToPosition", position);
+            retObjectMoveCurrentToPosition = classInstance.Invoke("MoveCurrentToPosition", position);
+            return (boolean)retObjectMoveCurrentToPosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveCurrentToPosition != null ? retObjectMoveCurrentToPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +203,13 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public boolean PassesFilter(NetObject item) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPassesFilter = null;
         try {
-            return (boolean)classInstance.Invoke("PassesFilter", item == null ? null : item.getJCOInstance());
+            retObjectPassesFilter = classInstance.Invoke("PassesFilter", item == null ? null : item.getJCOInstance());
+            return (boolean)retObjectPassesFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPassesFilter != null ? retObjectPassesFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +217,19 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public int IndexOf(NetObject item) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", item == null ? null : item.getJCOInstance());
+            retObjectIndexOf = classInstance.Invoke("IndexOf", item == null ? null : item.getJCOInstance());
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +237,14 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public NetObject AddNew() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddNew = null;
         try {
-            JCObject objAddNew = (JCObject)classInstance.Invoke("AddNew");
+            retObjectAddNew = classInstance.Invoke("AddNew");
+            JCObject objAddNew = (JCObject)retObjectAddNew;
             return new NetObject(objAddNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddNew != null ? retObjectAddNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +252,14 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public NetObject AddNewItem(NetObject newItem) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddNewItem = null;
         try {
-            JCObject objAddNewItem = (JCObject)classInstance.Invoke("AddNewItem", newItem == null ? null : newItem.getJCOInstance());
+            retObjectAddNewItem = classInstance.Invoke("AddNewItem", newItem == null ? null : newItem.getJCOInstance());
+            JCObject objAddNewItem = (JCObject)retObjectAddNewItem;
             return new NetObject(objAddNewItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddNewItem != null ? retObjectAddNewItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +267,14 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public NetObject GetItemAt(int index) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItemAt = null;
         try {
-            JCObject objGetItemAt = (JCObject)classInstance.Invoke("GetItemAt", index);
+            retObjectGetItemAt = classInstance.Invoke("GetItemAt", index);
+            JCObject objGetItemAt = (JCObject)retObjectGetItemAt;
             return new NetObject(objGetItemAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItemAt != null ? retObjectGetItemAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +282,7 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public void CancelEdit() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelEdit");
         } catch (JCNativeException jcne) {
@@ -258,7 +292,7 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public void CancelNew() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OverflowException, system.NotSupportedException, system.RankException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelNew");
         } catch (JCNativeException jcne) {
@@ -268,7 +302,7 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public void CommitEdit() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CommitEdit");
         } catch (JCNativeException jcne) {
@@ -278,7 +312,7 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public void CommitNew() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.RankException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CommitNew");
         } catch (JCNativeException jcne) {
@@ -288,7 +322,7 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public void EditItem(NetObject item) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.RankException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EditItem", item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -298,7 +332,7 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public void Remove(NetObject item) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OverflowException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -308,7 +342,7 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public void RemoveAt(int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.io.IOException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", index);
         } catch (JCNativeException jcne) {
@@ -322,7 +356,7 @@ public class ListCollectionView extends CollectionView implements system.collect
      */
     @Deprecated 
     public int Compare(NetObject x, NetObject y) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComparer to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComparer to obtain the full interface.");
     }
 
 
@@ -331,9 +365,13 @@ public class ListCollectionView extends CollectionView implements system.collect
     
     public boolean getCanAddNew() throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanAddNew = null;
         try {
-            return (boolean)classInstance.Get("CanAddNew");
+            retObjectCanAddNew = classInstance.Get("CanAddNew");
+            return (boolean)retObjectCanAddNew;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanAddNew != null ? retObjectCanAddNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,9 +379,13 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public boolean getCanAddNewItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanAddNewItem = null;
         try {
-            return (boolean)classInstance.Get("CanAddNewItem");
+            retObjectCanAddNewItem = classInstance.Get("CanAddNewItem");
+            return (boolean)retObjectCanAddNewItem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanAddNewItem != null ? retObjectCanAddNewItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,9 +393,13 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public boolean getCanCancelEdit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCancelEdit = null;
         try {
-            return (boolean)classInstance.Get("CanCancelEdit");
+            retObjectCanCancelEdit = classInstance.Get("CanCancelEdit");
+            return (boolean)retObjectCanCancelEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanCancelEdit != null ? retObjectCanCancelEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,9 +407,13 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public boolean getCanChangeLiveFiltering() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanChangeLiveFiltering = null;
         try {
-            return (boolean)classInstance.Get("CanChangeLiveFiltering");
+            retObjectCanChangeLiveFiltering = classInstance.Get("CanChangeLiveFiltering");
+            return (boolean)retObjectCanChangeLiveFiltering;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanChangeLiveFiltering != null ? retObjectCanChangeLiveFiltering.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,9 +421,13 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public boolean getCanChangeLiveGrouping() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanChangeLiveGrouping = null;
         try {
-            return (boolean)classInstance.Get("CanChangeLiveGrouping");
+            retObjectCanChangeLiveGrouping = classInstance.Get("CanChangeLiveGrouping");
+            return (boolean)retObjectCanChangeLiveGrouping;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanChangeLiveGrouping != null ? retObjectCanChangeLiveGrouping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,9 +435,13 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public boolean getCanChangeLiveSorting() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanChangeLiveSorting = null;
         try {
-            return (boolean)classInstance.Get("CanChangeLiveSorting");
+            retObjectCanChangeLiveSorting = classInstance.Get("CanChangeLiveSorting");
+            return (boolean)retObjectCanChangeLiveSorting;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanChangeLiveSorting != null ? retObjectCanChangeLiveSorting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,9 +449,13 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public boolean getCanRemove() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRemove = null;
         try {
-            return (boolean)classInstance.Get("CanRemove");
+            retObjectCanRemove = classInstance.Get("CanRemove");
+            return (boolean)retObjectCanRemove;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanRemove != null ? retObjectCanRemove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -401,9 +463,13 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public boolean getIsAddingNew() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAddingNew = null;
         try {
-            return (boolean)classInstance.Get("IsAddingNew");
+            retObjectIsAddingNew = classInstance.Get("IsAddingNew");
+            return (boolean)retObjectIsAddingNew;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAddingNew != null ? retObjectIsAddingNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,9 +477,13 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public boolean getIsDataInGroupOrder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDataInGroupOrder = null;
         try {
-            return (boolean)classInstance.Get("IsDataInGroupOrder");
+            retObjectIsDataInGroupOrder = classInstance.Get("IsDataInGroupOrder");
+            return (boolean)retObjectIsDataInGroupOrder;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDataInGroupOrder != null ? retObjectIsDataInGroupOrder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,7 +491,7 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public void setIsDataInGroupOrder(boolean IsDataInGroupOrder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsDataInGroupOrder", IsDataInGroupOrder);
         } catch (JCNativeException jcne) {
@@ -431,9 +501,13 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public boolean getIsEditingItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEditingItem = null;
         try {
-            return (boolean)classInstance.Get("IsEditingItem");
+            retObjectIsEditingItem = classInstance.Get("IsEditingItem");
+            return (boolean)retObjectIsEditingItem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEditingItem != null ? retObjectIsEditingItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,10 +515,14 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public IComparer getCustomSort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomSort = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomSort");
+            retObjectCustomSort = classInstance.Get("CustomSort");
+            JCObject val = (JCObject)retObjectCustomSort;
             return new IComparerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomSort != null ? retObjectCustomSort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,7 +530,7 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public void setCustomSort(IComparer CustomSort) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CustomSort", CustomSort == null ? null : CustomSort.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -462,10 +540,14 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public NewItemPlaceholderPosition getNewItemPlaceholderPosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewItemPlaceholderPosition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewItemPlaceholderPosition");
+            retObjectNewItemPlaceholderPosition = classInstance.Get("NewItemPlaceholderPosition");
+            JCObject val = (JCObject)retObjectNewItemPlaceholderPosition;
             return new NewItemPlaceholderPosition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewItemPlaceholderPosition != null ? retObjectNewItemPlaceholderPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -473,7 +555,7 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public void setNewItemPlaceholderPosition(NewItemPlaceholderPosition NewItemPlaceholderPosition) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewItemPlaceholderPosition", NewItemPlaceholderPosition == null ? null : NewItemPlaceholderPosition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -483,10 +565,14 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public NetObject getCurrentAddItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentAddItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentAddItem");
+            retObjectCurrentAddItem = classInstance.Get("CurrentAddItem");
+            JCObject val = (JCObject)retObjectCurrentAddItem;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentAddItem != null ? retObjectCurrentAddItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -494,10 +580,14 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public NetObject getCurrentEditItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentEditItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentEditItem");
+            retObjectCurrentEditItem = classInstance.Get("CurrentEditItem");
+            JCObject val = (JCObject)retObjectCurrentEditItem;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentEditItem != null ? retObjectCurrentEditItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -505,9 +595,13 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public GroupDescriptionSelectorCallback getGroupBySelector() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroupBySelector = null;
         try {
-            return (GroupDescriptionSelectorCallback)classInstance.Get("GroupBySelector");
+            retObjectGroupBySelector = classInstance.Get("GroupBySelector");
+            return (GroupDescriptionSelectorCallback)retObjectGroupBySelector;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into GroupDescriptionSelectorCallback", retObjectGroupBySelector != null ? retObjectGroupBySelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -515,7 +609,7 @@ public class ListCollectionView extends CollectionView implements system.collect
 
     public void setGroupBySelector(GroupDescriptionSelectorCallback GroupBySelector) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GroupBySelector", GroupBySelector);
         } catch (JCNativeException jcne) {

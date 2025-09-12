@@ -156,10 +156,14 @@ public class ConfigurationSettings extends NetObject  {
     
     public static NetObject GetConfig(java.lang.String sectionName) throws Throwable, system.NotSupportedException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetConfig = null;
         try {
-            JCObject objGetConfig = (JCObject)classType.Invoke("GetConfig", sectionName);
+            retObjectGetConfig = classType.Invoke("GetConfig", sectionName);
+            JCObject objGetConfig = (JCObject)retObjectGetConfig;
             return new NetObject(objGetConfig);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConfig != null ? retObjectGetConfig.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class ConfigurationSettings extends NetObject  {
     
     public static NameValueCollection getAppSettings() throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppSettings = null;
         try {
-            JCObject val = (JCObject)classType.Get("AppSettings");
+            retObjectAppSettings = classType.Get("AppSettings");
+            JCObject val = (JCObject)retObjectAppSettings;
             return new NameValueCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppSettings != null ? retObjectAppSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

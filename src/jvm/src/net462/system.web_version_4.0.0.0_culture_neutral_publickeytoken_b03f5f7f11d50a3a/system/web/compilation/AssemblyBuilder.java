@@ -161,10 +161,14 @@ public class AssemblyBuilder extends NetObject  {
     
     public Stream CreateEmbeddedResource(BuildProvider buildProvider, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateEmbeddedResource = null;
         try {
-            JCObject objCreateEmbeddedResource = (JCObject)classInstance.Invoke("CreateEmbeddedResource", buildProvider == null ? null : buildProvider.getJCOInstance(), name);
+            retObjectCreateEmbeddedResource = classInstance.Invoke("CreateEmbeddedResource", buildProvider == null ? null : buildProvider.getJCOInstance(), name);
+            JCObject objCreateEmbeddedResource = (JCObject)retObjectCreateEmbeddedResource;
             return new Stream(objCreateEmbeddedResource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEmbeddedResource != null ? retObjectCreateEmbeddedResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class AssemblyBuilder extends NetObject  {
 
     public TextWriter CreateCodeFile(BuildProvider buildProvider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCodeFile = null;
         try {
-            JCObject objCreateCodeFile = (JCObject)classInstance.Invoke("CreateCodeFile", buildProvider == null ? null : buildProvider.getJCOInstance());
+            retObjectCreateCodeFile = classInstance.Invoke("CreateCodeFile", buildProvider == null ? null : buildProvider.getJCOInstance());
+            JCObject objCreateCodeFile = (JCObject)retObjectCreateCodeFile;
             return new TextWriter(objCreateCodeFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCodeFile != null ? retObjectCreateCodeFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +191,13 @@ public class AssemblyBuilder extends NetObject  {
 
     public java.lang.String GetTempFilePhysicalPath(java.lang.String extension) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.AccessViolationException, system.componentmodel.Win32Exception, system.NullReferenceException, system.TypeInitializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTempFilePhysicalPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetTempFilePhysicalPath", extension);
+            retObjectGetTempFilePhysicalPath = classInstance.Invoke("GetTempFilePhysicalPath", extension);
+            return (java.lang.String)retObjectGetTempFilePhysicalPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetTempFilePhysicalPath != null ? retObjectGetTempFilePhysicalPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +205,7 @@ public class AssemblyBuilder extends NetObject  {
 
     public void AddAssemblyReference(Assembly a) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddAssemblyReference", a == null ? null : a.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,7 +215,7 @@ public class AssemblyBuilder extends NetObject  {
 
     public void AddCodeCompileUnit(BuildProvider buildProvider, CodeCompileUnit compileUnit) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.web.HttpException, system.OutOfMemoryException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.configuration.ConfigurationException, system.security.SecurityException, system.UriFormatException, system.ApplicationException, system.TypeLoadException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.web.HttpCompileException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCodeCompileUnit", buildProvider == null ? null : buildProvider.getJCOInstance(), compileUnit == null ? null : compileUnit.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -213,7 +225,7 @@ public class AssemblyBuilder extends NetObject  {
 
     public void GenerateTypeFactory(java.lang.String typeName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.IndexOutOfRangeException, system.InvalidOperationException, system.AccessViolationException, system.componentmodel.Win32Exception, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenerateTypeFactory", typeName);
         } catch (JCNativeException jcne) {
@@ -227,10 +239,14 @@ public class AssemblyBuilder extends NetObject  {
     
     public CodeDomProvider getCodeDomProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodeDomProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CodeDomProvider");
+            retObjectCodeDomProvider = classInstance.Get("CodeDomProvider");
+            JCObject val = (JCObject)retObjectCodeDomProvider;
             return new CodeDomProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCodeDomProvider != null ? retObjectCodeDomProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

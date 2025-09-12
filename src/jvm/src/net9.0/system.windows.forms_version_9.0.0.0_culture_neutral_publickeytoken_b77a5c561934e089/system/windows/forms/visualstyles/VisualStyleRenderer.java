@@ -206,9 +206,13 @@ public class VisualStyleRenderer extends NetObject  {
     
     public boolean GetBoolean(BooleanProperty prop) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBoolean = null;
         try {
-            return (boolean)classInstance.Invoke("GetBoolean", prop == null ? null : prop.getJCOInstance());
+            retObjectGetBoolean = classInstance.Invoke("GetBoolean", prop == null ? null : prop.getJCOInstance());
+            return (boolean)retObjectGetBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetBoolean != null ? retObjectGetBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +220,13 @@ public class VisualStyleRenderer extends NetObject  {
 
     public boolean IsBackgroundPartiallyTransparent() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBackgroundPartiallyTransparent = null;
         try {
-            return (boolean)classInstance.Invoke("IsBackgroundPartiallyTransparent");
+            retObjectIsBackgroundPartiallyTransparent = classInstance.Invoke("IsBackgroundPartiallyTransparent");
+            return (boolean)retObjectIsBackgroundPartiallyTransparent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBackgroundPartiallyTransparent != null ? retObjectIsBackgroundPartiallyTransparent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +234,13 @@ public class VisualStyleRenderer extends NetObject  {
 
     public static boolean IsElementDefined(VisualStyleElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsElementDefined = null;
         try {
-            return (boolean)classType.Invoke("IsElementDefined", element == null ? null : element.getJCOInstance());
+            retObjectIsElementDefined = classType.Invoke("IsElementDefined", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectIsElementDefined;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsElementDefined != null ? retObjectIsElementDefined.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +248,19 @@ public class VisualStyleRenderer extends NetObject  {
 
     public int GetEnumValue(EnumProperty prop) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEnumValue = null;
         try {
-            return (int)classInstance.Invoke("GetEnumValue", prop == null ? null : prop.getJCOInstance());
+            retObjectGetEnumValue = classInstance.Invoke("GetEnumValue", prop == null ? null : prop.getJCOInstance());
+            return (int)retObjectGetEnumValue;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetEnumValueNumber = (java.lang.Number)retObjectGetEnumValue;
+                return retObjectGetEnumValueNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetEnumValue != null ? retObjectGetEnumValue.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +268,19 @@ public class VisualStyleRenderer extends NetObject  {
 
     public int GetInteger(IntegerProperty prop) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInteger = null;
         try {
-            return (int)classInstance.Invoke("GetInteger", prop == null ? null : prop.getJCOInstance());
+            retObjectGetInteger = classInstance.Invoke("GetInteger", prop == null ? null : prop.getJCOInstance());
+            return (int)retObjectGetInteger;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetIntegerNumber = (java.lang.Number)retObjectGetInteger;
+                return retObjectGetIntegerNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetInteger != null ? retObjectGetInteger.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +288,14 @@ public class VisualStyleRenderer extends NetObject  {
 
     public Color GetColor(ColorProperty prop) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetColor = null;
         try {
-            JCObject objGetColor = (JCObject)classInstance.Invoke("GetColor", prop == null ? null : prop.getJCOInstance());
+            retObjectGetColor = classInstance.Invoke("GetColor", prop == null ? null : prop.getJCOInstance());
+            JCObject objGetColor = (JCObject)retObjectGetColor;
             return new Color(objGetColor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetColor != null ? retObjectGetColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +303,14 @@ public class VisualStyleRenderer extends NetObject  {
 
     public Font GetFont(IDeviceContext dc, FontProperty prop) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFont = null;
         try {
-            JCObject objGetFont = (JCObject)classInstance.Invoke("GetFont", dc == null ? null : dc.getJCOInstance(), prop == null ? null : prop.getJCOInstance());
+            retObjectGetFont = classInstance.Invoke("GetFont", dc == null ? null : dc.getJCOInstance(), prop == null ? null : prop.getJCOInstance());
+            JCObject objGetFont = (JCObject)retObjectGetFont;
             return new Font(objGetFont);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFont != null ? retObjectGetFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +318,14 @@ public class VisualStyleRenderer extends NetObject  {
 
     public Point GetPoint(PointProperty prop) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPoint = null;
         try {
-            JCObject objGetPoint = (JCObject)classInstance.Invoke("GetPoint", prop == null ? null : prop.getJCOInstance());
+            retObjectGetPoint = classInstance.Invoke("GetPoint", prop == null ? null : prop.getJCOInstance());
+            JCObject objGetPoint = (JCObject)retObjectGetPoint;
             return new Point(objGetPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPoint != null ? retObjectGetPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,10 +333,14 @@ public class VisualStyleRenderer extends NetObject  {
 
     public Rectangle DrawEdge(IDeviceContext dc, Rectangle bounds, Edges edges, EdgeStyle style, EdgeEffects effects) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDrawEdge = null;
         try {
-            JCObject objDrawEdge = (JCObject)classInstance.Invoke("DrawEdge", dc == null ? null : dc.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), edges == null ? null : edges.getJCOInstance(), style == null ? null : style.getJCOInstance(), effects == null ? null : effects.getJCOInstance());
+            retObjectDrawEdge = classInstance.Invoke("DrawEdge", dc == null ? null : dc.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), edges == null ? null : edges.getJCOInstance(), style == null ? null : style.getJCOInstance(), effects == null ? null : effects.getJCOInstance());
+            JCObject objDrawEdge = (JCObject)retObjectDrawEdge;
             return new Rectangle(objDrawEdge);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDrawEdge != null ? retObjectDrawEdge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,10 +348,14 @@ public class VisualStyleRenderer extends NetObject  {
 
     public Rectangle GetBackgroundContentRectangle(IDeviceContext dc, Rectangle bounds) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBackgroundContentRectangle = null;
         try {
-            JCObject objGetBackgroundContentRectangle = (JCObject)classInstance.Invoke("GetBackgroundContentRectangle", dc == null ? null : dc.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance());
+            retObjectGetBackgroundContentRectangle = classInstance.Invoke("GetBackgroundContentRectangle", dc == null ? null : dc.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance());
+            JCObject objGetBackgroundContentRectangle = (JCObject)retObjectGetBackgroundContentRectangle;
             return new Rectangle(objGetBackgroundContentRectangle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBackgroundContentRectangle != null ? retObjectGetBackgroundContentRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,10 +363,14 @@ public class VisualStyleRenderer extends NetObject  {
 
     public Rectangle GetBackgroundExtent(IDeviceContext dc, Rectangle contentBounds) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBackgroundExtent = null;
         try {
-            JCObject objGetBackgroundExtent = (JCObject)classInstance.Invoke("GetBackgroundExtent", dc == null ? null : dc.getJCOInstance(), contentBounds == null ? null : contentBounds.getJCOInstance());
+            retObjectGetBackgroundExtent = classInstance.Invoke("GetBackgroundExtent", dc == null ? null : dc.getJCOInstance(), contentBounds == null ? null : contentBounds.getJCOInstance());
+            JCObject objGetBackgroundExtent = (JCObject)retObjectGetBackgroundExtent;
             return new Rectangle(objGetBackgroundExtent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBackgroundExtent != null ? retObjectGetBackgroundExtent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,10 +378,14 @@ public class VisualStyleRenderer extends NetObject  {
 
     public Rectangle GetTextExtent(IDeviceContext dc, Rectangle bounds, java.lang.String textToDraw, TextFormatFlags flags) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTextExtent = null;
         try {
-            JCObject objGetTextExtent = (JCObject)classInstance.Invoke("GetTextExtent", dc == null ? null : dc.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), textToDraw, flags == null ? null : flags.getJCOInstance());
+            retObjectGetTextExtent = classInstance.Invoke("GetTextExtent", dc == null ? null : dc.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), textToDraw, flags == null ? null : flags.getJCOInstance());
+            JCObject objGetTextExtent = (JCObject)retObjectGetTextExtent;
             return new Rectangle(objGetTextExtent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTextExtent != null ? retObjectGetTextExtent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,10 +393,14 @@ public class VisualStyleRenderer extends NetObject  {
 
     public Rectangle GetTextExtent(IDeviceContext dc, java.lang.String textToDraw, TextFormatFlags flags) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTextExtent = null;
         try {
-            JCObject objGetTextExtent = (JCObject)classInstance.Invoke("GetTextExtent", dc == null ? null : dc.getJCOInstance(), textToDraw, flags == null ? null : flags.getJCOInstance());
+            retObjectGetTextExtent = classInstance.Invoke("GetTextExtent", dc == null ? null : dc.getJCOInstance(), textToDraw, flags == null ? null : flags.getJCOInstance());
+            JCObject objGetTextExtent = (JCObject)retObjectGetTextExtent;
             return new Rectangle(objGetTextExtent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTextExtent != null ? retObjectGetTextExtent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,10 +408,14 @@ public class VisualStyleRenderer extends NetObject  {
 
     public Region GetBackgroundRegion(IDeviceContext dc, Rectangle bounds) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBackgroundRegion = null;
         try {
-            JCObject objGetBackgroundRegion = (JCObject)classInstance.Invoke("GetBackgroundRegion", dc == null ? null : dc.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance());
+            retObjectGetBackgroundRegion = classInstance.Invoke("GetBackgroundRegion", dc == null ? null : dc.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance());
+            JCObject objGetBackgroundRegion = (JCObject)retObjectGetBackgroundRegion;
             return new Region(objGetBackgroundRegion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBackgroundRegion != null ? retObjectGetBackgroundRegion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,10 +423,14 @@ public class VisualStyleRenderer extends NetObject  {
 
     public Size GetPartSize(IDeviceContext dc, Rectangle bounds, ThemeSizeType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPartSize = null;
         try {
-            JCObject objGetPartSize = (JCObject)classInstance.Invoke("GetPartSize", dc == null ? null : dc.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectGetPartSize = classInstance.Invoke("GetPartSize", dc == null ? null : dc.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objGetPartSize = (JCObject)retObjectGetPartSize;
             return new Size(objGetPartSize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPartSize != null ? retObjectGetPartSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,10 +438,14 @@ public class VisualStyleRenderer extends NetObject  {
 
     public Size GetPartSize(IDeviceContext dc, ThemeSizeType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPartSize = null;
         try {
-            JCObject objGetPartSize = (JCObject)classInstance.Invoke("GetPartSize", dc == null ? null : dc.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectGetPartSize = classInstance.Invoke("GetPartSize", dc == null ? null : dc.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objGetPartSize = (JCObject)retObjectGetPartSize;
             return new Size(objGetPartSize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPartSize != null ? retObjectGetPartSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,9 +453,13 @@ public class VisualStyleRenderer extends NetObject  {
 
     public java.lang.String GetFilename(FilenameProperty prop) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFilename = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetFilename", prop == null ? null : prop.getJCOInstance());
+            retObjectGetFilename = classInstance.Invoke("GetFilename", prop == null ? null : prop.getJCOInstance());
+            return (java.lang.String)retObjectGetFilename;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetFilename != null ? retObjectGetFilename.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,9 +467,13 @@ public class VisualStyleRenderer extends NetObject  {
 
     public java.lang.String GetString(StringProperty prop) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetString", prop == null ? null : prop.getJCOInstance());
+            retObjectGetString = classInstance.Invoke("GetString", prop == null ? null : prop.getJCOInstance());
+            return (java.lang.String)retObjectGetString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetString != null ? retObjectGetString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,10 +481,14 @@ public class VisualStyleRenderer extends NetObject  {
 
     public Padding GetMargins(IDeviceContext dc, MarginProperty prop) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMargins = null;
         try {
-            JCObject objGetMargins = (JCObject)classInstance.Invoke("GetMargins", dc == null ? null : dc.getJCOInstance(), prop == null ? null : prop.getJCOInstance());
+            retObjectGetMargins = classInstance.Invoke("GetMargins", dc == null ? null : dc.getJCOInstance(), prop == null ? null : prop.getJCOInstance());
+            JCObject objGetMargins = (JCObject)retObjectGetMargins;
             return new Padding(objGetMargins);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMargins != null ? retObjectGetMargins.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,10 +496,14 @@ public class VisualStyleRenderer extends NetObject  {
 
     public HitTestCode HitTestBackground(Graphics g, Rectangle backgroundRectangle, Region region, Point pt, HitTestOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitTestBackground = null;
         try {
-            JCObject objHitTestBackground = (JCObject)classInstance.Invoke("HitTestBackground", g == null ? null : g.getJCOInstance(), backgroundRectangle == null ? null : backgroundRectangle.getJCOInstance(), region == null ? null : region.getJCOInstance(), pt == null ? null : pt.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            retObjectHitTestBackground = classInstance.Invoke("HitTestBackground", g == null ? null : g.getJCOInstance(), backgroundRectangle == null ? null : backgroundRectangle.getJCOInstance(), region == null ? null : region.getJCOInstance(), pt == null ? null : pt.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objHitTestBackground = (JCObject)retObjectHitTestBackground;
             return new HitTestCode(objHitTestBackground);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHitTestBackground != null ? retObjectHitTestBackground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,10 +511,14 @@ public class VisualStyleRenderer extends NetObject  {
 
     public HitTestCode HitTestBackground(IDeviceContext dc, Rectangle backgroundRectangle, Point pt, HitTestOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitTestBackground = null;
         try {
-            JCObject objHitTestBackground = (JCObject)classInstance.Invoke("HitTestBackground", dc == null ? null : dc.getJCOInstance(), backgroundRectangle == null ? null : backgroundRectangle.getJCOInstance(), pt == null ? null : pt.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            retObjectHitTestBackground = classInstance.Invoke("HitTestBackground", dc == null ? null : dc.getJCOInstance(), backgroundRectangle == null ? null : backgroundRectangle.getJCOInstance(), pt == null ? null : pt.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objHitTestBackground = (JCObject)retObjectHitTestBackground;
             return new HitTestCode(objHitTestBackground);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHitTestBackground != null ? retObjectHitTestBackground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -430,10 +526,14 @@ public class VisualStyleRenderer extends NetObject  {
 
     public TextMetrics GetTextMetrics(IDeviceContext dc) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTextMetrics = null;
         try {
-            JCObject objGetTextMetrics = (JCObject)classInstance.Invoke("GetTextMetrics", dc == null ? null : dc.getJCOInstance());
+            retObjectGetTextMetrics = classInstance.Invoke("GetTextMetrics", dc == null ? null : dc.getJCOInstance());
+            JCObject objGetTextMetrics = (JCObject)retObjectGetTextMetrics;
             return new TextMetrics(objGetTextMetrics);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTextMetrics != null ? retObjectGetTextMetrics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,7 +541,7 @@ public class VisualStyleRenderer extends NetObject  {
 
     public void DrawBackground(IDeviceContext dc, Rectangle bounds, Rectangle clipRectangle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawBackground", dc == null ? null : dc.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), clipRectangle == null ? null : clipRectangle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -451,7 +551,7 @@ public class VisualStyleRenderer extends NetObject  {
 
     public void DrawBackground(IDeviceContext dc, Rectangle bounds) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawBackground", dc == null ? null : dc.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -461,7 +561,7 @@ public class VisualStyleRenderer extends NetObject  {
 
     public void DrawImage(Graphics g, Rectangle bounds, Image image) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), image == null ? null : image.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -471,7 +571,7 @@ public class VisualStyleRenderer extends NetObject  {
 
     public void DrawImage(Graphics g, Rectangle bounds, ImageList imageList, int imageIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), imageList == null ? null : imageList.getJCOInstance(), imageIndex);
         } catch (JCNativeException jcne) {
@@ -481,7 +581,7 @@ public class VisualStyleRenderer extends NetObject  {
 
     public void DrawParentBackground(IDeviceContext dc, Rectangle bounds, Control childControl) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawParentBackground", dc == null ? null : dc.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), childControl == null ? null : childControl.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -491,7 +591,7 @@ public class VisualStyleRenderer extends NetObject  {
 
     public void DrawText(IDeviceContext dc, Rectangle bounds, java.lang.String textToDraw, boolean drawDisabled, TextFormatFlags flags) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawText", dc == null ? null : dc.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), textToDraw, drawDisabled, flags == null ? null : flags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -501,7 +601,7 @@ public class VisualStyleRenderer extends NetObject  {
 
     public void DrawText(IDeviceContext dc, Rectangle bounds, java.lang.String textToDraw, boolean drawDisabled) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawText", dc == null ? null : dc.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), textToDraw, drawDisabled);
         } catch (JCNativeException jcne) {
@@ -511,7 +611,7 @@ public class VisualStyleRenderer extends NetObject  {
 
     public void DrawText(IDeviceContext dc, Rectangle bounds, java.lang.String textToDraw) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawText", dc == null ? null : dc.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), textToDraw);
         } catch (JCNativeException jcne) {
@@ -521,7 +621,7 @@ public class VisualStyleRenderer extends NetObject  {
 
     public void SetParameters(java.lang.String className, int part, int state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetParameters", className, part, state);
         } catch (JCNativeException jcne) {
@@ -531,7 +631,7 @@ public class VisualStyleRenderer extends NetObject  {
 
     public void SetParameters(VisualStyleElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetParameters", element == null ? null : element.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -545,9 +645,13 @@ public class VisualStyleRenderer extends NetObject  {
     
     public static boolean getIsSupported() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSupported = null;
         try {
-            return (boolean)classType.Get("IsSupported");
+            retObjectIsSupported = classType.Get("IsSupported");
+            return (boolean)retObjectIsSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSupported != null ? retObjectIsSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -555,9 +659,19 @@ public class VisualStyleRenderer extends NetObject  {
 
     public int getLastHResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastHResult = null;
         try {
-            return (int)classInstance.Get("LastHResult");
+            retObjectLastHResult = classInstance.Get("LastHResult");
+            return (int)retObjectLastHResult;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLastHResultNumber = (java.lang.Number)retObjectLastHResult;
+                return retObjectLastHResultNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLastHResult != null ? retObjectLastHResult.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -565,9 +679,19 @@ public class VisualStyleRenderer extends NetObject  {
 
     public int getPart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPart = null;
         try {
-            return (int)classInstance.Get("Part");
+            retObjectPart = classInstance.Get("Part");
+            return (int)retObjectPart;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPartNumber = (java.lang.Number)retObjectPart;
+                return retObjectPartNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPart != null ? retObjectPart.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -575,7 +699,7 @@ public class VisualStyleRenderer extends NetObject  {
 
     public void setPart(int Part) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Part", Part);
         } catch (JCNativeException jcne) {
@@ -585,9 +709,19 @@ public class VisualStyleRenderer extends NetObject  {
 
     public int getState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectState = null;
         try {
-            return (int)classInstance.Get("State");
+            retObjectState = classInstance.Get("State");
+            return (int)retObjectState;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStateNumber = (java.lang.Number)retObjectState;
+                return retObjectStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectState != null ? retObjectState.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -595,7 +729,7 @@ public class VisualStyleRenderer extends NetObject  {
 
     public void setState(int State) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("State", State);
         } catch (JCNativeException jcne) {
@@ -605,9 +739,13 @@ public class VisualStyleRenderer extends NetObject  {
 
     public java.lang.String get_Class() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClass = null;
         try {
-            return (java.lang.String)classInstance.Get("Class");
+            retObjectClass = classInstance.Get("Class");
+            return (java.lang.String)retObjectClass;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClass != null ? retObjectClass.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -615,7 +753,7 @@ public class VisualStyleRenderer extends NetObject  {
 
     public void set_Class(java.lang.String Class) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Class", Class);
         } catch (JCNativeException jcne) {

@@ -167,9 +167,13 @@ public class JpegBitmapEncoder extends BitmapEncoder  {
     
     public boolean getFlipHorizontal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlipHorizontal = null;
         try {
-            return (boolean)classInstance.Get("FlipHorizontal");
+            retObjectFlipHorizontal = classInstance.Get("FlipHorizontal");
+            return (boolean)retObjectFlipHorizontal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFlipHorizontal != null ? retObjectFlipHorizontal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class JpegBitmapEncoder extends BitmapEncoder  {
 
     public void setFlipHorizontal(boolean FlipHorizontal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FlipHorizontal", FlipHorizontal);
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class JpegBitmapEncoder extends BitmapEncoder  {
 
     public boolean getFlipVertical() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlipVertical = null;
         try {
-            return (boolean)classInstance.Get("FlipVertical");
+            retObjectFlipVertical = classInstance.Get("FlipVertical");
+            return (boolean)retObjectFlipVertical;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFlipVertical != null ? retObjectFlipVertical.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class JpegBitmapEncoder extends BitmapEncoder  {
 
     public void setFlipVertical(boolean FlipVertical) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FlipVertical", FlipVertical);
         } catch (JCNativeException jcne) {
@@ -207,9 +215,19 @@ public class JpegBitmapEncoder extends BitmapEncoder  {
 
     public int getQualityLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQualityLevel = null;
         try {
-            return (int)classInstance.Get("QualityLevel");
+            retObjectQualityLevel = classInstance.Get("QualityLevel");
+            return (int)retObjectQualityLevel;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectQualityLevelNumber = (java.lang.Number)retObjectQualityLevel;
+                return retObjectQualityLevelNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectQualityLevel != null ? retObjectQualityLevel.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +235,7 @@ public class JpegBitmapEncoder extends BitmapEncoder  {
 
     public void setQualityLevel(int QualityLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QualityLevel", QualityLevel);
         } catch (JCNativeException jcne) {
@@ -227,10 +245,14 @@ public class JpegBitmapEncoder extends BitmapEncoder  {
 
     public Rotation getRotation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRotation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Rotation");
+            retObjectRotation = classInstance.Get("Rotation");
+            JCObject val = (JCObject)retObjectRotation;
             return new Rotation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRotation != null ? retObjectRotation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +260,7 @@ public class JpegBitmapEncoder extends BitmapEncoder  {
 
     public void setRotation(Rotation Rotation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Rotation", Rotation == null ? null : Rotation.getJCOInstance());
         } catch (JCNativeException jcne) {

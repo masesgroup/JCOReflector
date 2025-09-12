@@ -144,9 +144,13 @@ public class INameCreationServiceImplementation extends NetObject implements INa
     
     public boolean IsValidName(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValidName = null;
         try {
-            return (boolean)classInstance.Invoke("IsValidName", name);
+            retObjectIsValidName = classInstance.Invoke("IsValidName", name);
+            return (boolean)retObjectIsValidName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValidName != null ? retObjectIsValidName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,9 +158,13 @@ public class INameCreationServiceImplementation extends NetObject implements INa
 
     public java.lang.String CreateName(IContainer container, NetType dataType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("CreateName", container == null ? null : container.getJCOInstance(), dataType == null ? null : dataType.getJCOInstance());
+            retObjectCreateName = classInstance.Invoke("CreateName", container == null ? null : container.getJCOInstance(), dataType == null ? null : dataType.getJCOInstance());
+            return (java.lang.String)retObjectCreateName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCreateName != null ? retObjectCreateName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,7 +172,7 @@ public class INameCreationServiceImplementation extends NetObject implements INa
 
     public void ValidateName(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ValidateName", name);
         } catch (JCNativeException jcne) {

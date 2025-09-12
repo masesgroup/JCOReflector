@@ -179,9 +179,13 @@ public class VirtualDirectoryMapping extends NetObject  {
     
     public boolean getIsAppRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAppRoot = null;
         try {
-            return (boolean)classInstance.Get("IsAppRoot");
+            retObjectIsAppRoot = classInstance.Get("IsAppRoot");
+            return (boolean)retObjectIsAppRoot;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAppRoot != null ? retObjectIsAppRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +193,7 @@ public class VirtualDirectoryMapping extends NetObject  {
 
     public void setIsAppRoot(boolean IsAppRoot) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsAppRoot", IsAppRoot);
         } catch (JCNativeException jcne) {
@@ -199,9 +203,13 @@ public class VirtualDirectoryMapping extends NetObject  {
 
     public java.lang.String getConfigFileBaseName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfigFileBaseName = null;
         try {
-            return (java.lang.String)classInstance.Get("ConfigFileBaseName");
+            retObjectConfigFileBaseName = classInstance.Get("ConfigFileBaseName");
+            return (java.lang.String)retObjectConfigFileBaseName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConfigFileBaseName != null ? retObjectConfigFileBaseName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +217,7 @@ public class VirtualDirectoryMapping extends NetObject  {
 
     public void setConfigFileBaseName(java.lang.String ConfigFileBaseName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConfigFileBaseName", ConfigFileBaseName);
         } catch (JCNativeException jcne) {
@@ -219,9 +227,13 @@ public class VirtualDirectoryMapping extends NetObject  {
 
     public java.lang.String getPhysicalDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPhysicalDirectory = null;
         try {
-            return (java.lang.String)classInstance.Get("PhysicalDirectory");
+            retObjectPhysicalDirectory = classInstance.Get("PhysicalDirectory");
+            return (java.lang.String)retObjectPhysicalDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPhysicalDirectory != null ? retObjectPhysicalDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +241,7 @@ public class VirtualDirectoryMapping extends NetObject  {
 
     public void setPhysicalDirectory(java.lang.String PhysicalDirectory) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PhysicalDirectory", PhysicalDirectory);
         } catch (JCNativeException jcne) {
@@ -239,9 +251,13 @@ public class VirtualDirectoryMapping extends NetObject  {
 
     public java.lang.String getVirtualDirectory() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVirtualDirectory = null;
         try {
-            return (java.lang.String)classInstance.Get("VirtualDirectory");
+            retObjectVirtualDirectory = classInstance.Get("VirtualDirectory");
+            return (java.lang.String)retObjectVirtualDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVirtualDirectory != null ? retObjectVirtualDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

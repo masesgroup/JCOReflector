@@ -170,10 +170,14 @@ public class MetadataUpdateOriginalTypeAttribute extends Attribute  {
     
     public NetType getOriginalType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginalType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OriginalType");
+            retObjectOriginalType = classInstance.Get("OriginalType");
+            JCObject val = (JCObject)retObjectOriginalType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOriginalType != null ? retObjectOriginalType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

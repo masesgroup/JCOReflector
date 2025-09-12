@@ -167,7 +167,7 @@ public class CompensationExtension extends PersistenceParticipant  {
      */
     @Deprecated 
     public void SetInstance(WorkflowInstanceProxy instance) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWorkflowInstanceExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWorkflowInstanceExtension to obtain the full interface.");
     }
 
 

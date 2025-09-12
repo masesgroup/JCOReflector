@@ -173,9 +173,13 @@ public class ObjectDataSourceSelectingEventArgs extends ObjectDataSourceMethodEv
     
     public boolean getExecutingSelectCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecutingSelectCount = null;
         try {
-            return (boolean)classInstance.Get("ExecutingSelectCount");
+            retObjectExecutingSelectCount = classInstance.Get("ExecutingSelectCount");
+            return (boolean)retObjectExecutingSelectCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExecutingSelectCount != null ? retObjectExecutingSelectCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class ObjectDataSourceSelectingEventArgs extends ObjectDataSourceMethodEv
 
     public DataSourceSelectArguments getArguments() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArguments = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Arguments");
+            retObjectArguments = classInstance.Get("Arguments");
+            JCObject val = (JCObject)retObjectArguments;
             return new DataSourceSelectArguments(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArguments != null ? retObjectArguments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

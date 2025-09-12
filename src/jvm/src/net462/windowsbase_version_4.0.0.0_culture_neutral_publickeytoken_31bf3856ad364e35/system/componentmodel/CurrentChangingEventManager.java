@@ -160,7 +160,7 @@ public class CurrentChangingEventManager extends WeakEventManager  {
     
     public static void AddListener(ICollectionView source, IWeakEventListener listener) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddListener", source == null ? null : source.getJCOInstance(), listener == null ? null : listener.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -170,7 +170,7 @@ public class CurrentChangingEventManager extends WeakEventManager  {
 
     public static void RemoveListener(ICollectionView source, IWeakEventListener listener) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveListener", source == null ? null : source.getJCOInstance(), listener == null ? null : listener.getJCOInstance());
         } catch (JCNativeException jcne) {

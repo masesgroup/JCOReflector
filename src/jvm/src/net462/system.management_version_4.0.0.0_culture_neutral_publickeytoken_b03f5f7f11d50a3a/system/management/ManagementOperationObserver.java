@@ -165,7 +165,7 @@ public class ManagementOperationObserver extends NetObject  {
     
     public void Cancel() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Cancel");
         } catch (JCNativeException jcne) {
@@ -184,7 +184,7 @@ public class ManagementOperationObserver extends NetObject  {
 
     public void addCompleted(CompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Completed", handler);
         } catch (JCNativeException jcne) {
@@ -194,7 +194,7 @@ public class ManagementOperationObserver extends NetObject  {
 
     public void removeCompleted(CompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Completed", handler);
         } catch (JCNativeException jcne) {
@@ -204,7 +204,7 @@ public class ManagementOperationObserver extends NetObject  {
 
     public void addObjectPut(ObjectPutEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ObjectPut", handler);
         } catch (JCNativeException jcne) {
@@ -214,7 +214,7 @@ public class ManagementOperationObserver extends NetObject  {
 
     public void removeObjectPut(ObjectPutEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ObjectPut", handler);
         } catch (JCNativeException jcne) {
@@ -224,7 +224,7 @@ public class ManagementOperationObserver extends NetObject  {
 
     public void addObjectReady(ObjectReadyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ObjectReady", handler);
         } catch (JCNativeException jcne) {
@@ -234,7 +234,7 @@ public class ManagementOperationObserver extends NetObject  {
 
     public void removeObjectReady(ObjectReadyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ObjectReady", handler);
         } catch (JCNativeException jcne) {
@@ -244,7 +244,7 @@ public class ManagementOperationObserver extends NetObject  {
 
     public void addProgress(ProgressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Progress", handler);
         } catch (JCNativeException jcne) {
@@ -254,7 +254,7 @@ public class ManagementOperationObserver extends NetObject  {
 
     public void removeProgress(ProgressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Progress", handler);
         } catch (JCNativeException jcne) {

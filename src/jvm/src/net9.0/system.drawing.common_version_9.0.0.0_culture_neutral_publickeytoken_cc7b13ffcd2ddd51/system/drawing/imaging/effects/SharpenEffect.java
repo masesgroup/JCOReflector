@@ -171,10 +171,14 @@ public class SharpenEffect extends Effect  {
     
     public Single getAmount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAmount = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Amount");
+            retObjectAmount = classInstance.Get("Amount");
+            JCObject val = (JCObject)retObjectAmount;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAmount != null ? retObjectAmount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class SharpenEffect extends Effect  {
 
     public Single getRadius() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRadius = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Radius");
+            retObjectRadius = classInstance.Get("Radius");
+            JCObject val = (JCObject)retObjectRadius;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRadius != null ? retObjectRadius.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

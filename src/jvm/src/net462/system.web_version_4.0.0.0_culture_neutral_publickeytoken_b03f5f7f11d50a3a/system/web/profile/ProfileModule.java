@@ -165,7 +165,7 @@ public class ProfileModule extends NetObject  {
     
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -175,7 +175,7 @@ public class ProfileModule extends NetObject  {
 
     public void Init(HttpApplication app) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.security.SecurityException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.configuration.provider.ProviderException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Init", app == null ? null : app.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -194,7 +194,7 @@ public class ProfileModule extends NetObject  {
 
     public void addProfileAutoSaving(ProfileAutoSaveEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ProfileAutoSaving", handler);
         } catch (JCNativeException jcne) {
@@ -204,7 +204,7 @@ public class ProfileModule extends NetObject  {
 
     public void removeProfileAutoSaving(ProfileAutoSaveEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ProfileAutoSaving", handler);
         } catch (JCNativeException jcne) {
@@ -214,7 +214,7 @@ public class ProfileModule extends NetObject  {
 
     public void addPersonalize(ProfileEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Personalize", handler);
         } catch (JCNativeException jcne) {
@@ -224,7 +224,7 @@ public class ProfileModule extends NetObject  {
 
     public void removePersonalize(ProfileEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Personalize", handler);
         } catch (JCNativeException jcne) {
@@ -234,7 +234,7 @@ public class ProfileModule extends NetObject  {
 
     public void addMigrateAnonymous(ProfileMigrateEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MigrateAnonymous", handler);
         } catch (JCNativeException jcne) {
@@ -244,7 +244,7 @@ public class ProfileModule extends NetObject  {
 
     public void removeMigrateAnonymous(ProfileMigrateEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MigrateAnonymous", handler);
         } catch (JCNativeException jcne) {

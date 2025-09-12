@@ -153,9 +153,13 @@ public class FileSystemName extends NetObject  {
     
     public static java.lang.String TranslateWin32Expression(java.lang.String expression) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTranslateWin32Expression = null;
         try {
-            return (java.lang.String)classType.Invoke("TranslateWin32Expression", expression);
+            retObjectTranslateWin32Expression = classType.Invoke("TranslateWin32Expression", expression);
+            return (java.lang.String)retObjectTranslateWin32Expression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectTranslateWin32Expression != null ? retObjectTranslateWin32Expression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

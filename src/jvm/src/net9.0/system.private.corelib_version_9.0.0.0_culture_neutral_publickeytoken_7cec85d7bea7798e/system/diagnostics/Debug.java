@@ -154,10 +154,14 @@ public class Debug extends NetObject  {
     
     public static DebugProvider SetProvider(DebugProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSetProvider = null;
         try {
-            JCObject objSetProvider = (JCObject)classType.Invoke("SetProvider", provider == null ? null : provider.getJCOInstance());
+            retObjectSetProvider = classType.Invoke("SetProvider", provider == null ? null : provider.getJCOInstance());
+            JCObject objSetProvider = (JCObject)retObjectSetProvider;
             return new DebugProvider(objSetProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetProvider != null ? retObjectSetProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,7 +169,7 @@ public class Debug extends NetObject  {
 
     public static void Assert(boolean condition, java.lang.String message, java.lang.String detailMessageFormat, NetObject... args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Assert", condition, message, detailMessageFormat, toObjectFromArray(args));
         } catch (JCNativeException jcne) {
@@ -175,7 +179,7 @@ public class Debug extends NetObject  {
 
     public static void Assert(boolean condition, java.lang.String message, java.lang.String detailMessage) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Assert", condition, message, detailMessage);
         } catch (JCNativeException jcne) {
@@ -185,7 +189,7 @@ public class Debug extends NetObject  {
 
     public static void Assert(boolean condition, java.lang.String message) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Assert", condition, message);
         } catch (JCNativeException jcne) {
@@ -195,7 +199,7 @@ public class Debug extends NetObject  {
 
     public static void Assert(boolean condition) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Assert", condition);
         } catch (JCNativeException jcne) {
@@ -205,7 +209,7 @@ public class Debug extends NetObject  {
 
     public static void Close() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -215,7 +219,7 @@ public class Debug extends NetObject  {
 
     public static void Fail(java.lang.String message, java.lang.String detailMessage) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Fail", message, detailMessage);
         } catch (JCNativeException jcne) {
@@ -225,7 +229,7 @@ public class Debug extends NetObject  {
 
     public static void Fail(java.lang.String message) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Fail", message);
         } catch (JCNativeException jcne) {
@@ -235,7 +239,7 @@ public class Debug extends NetObject  {
 
     public static void Flush() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -245,7 +249,7 @@ public class Debug extends NetObject  {
 
     public static void Indent() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Indent");
         } catch (JCNativeException jcne) {
@@ -255,7 +259,7 @@ public class Debug extends NetObject  {
 
     public static void Print(java.lang.String format, NetObject... args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Print", format, toObjectFromArray(args));
         } catch (JCNativeException jcne) {
@@ -265,7 +269,7 @@ public class Debug extends NetObject  {
 
     public static void Print(java.lang.String message) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Print", message);
         } catch (JCNativeException jcne) {
@@ -275,7 +279,7 @@ public class Debug extends NetObject  {
 
     public static void Unindent() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Unindent");
         } catch (JCNativeException jcne) {
@@ -285,7 +289,7 @@ public class Debug extends NetObject  {
 
     public static void Write(NetObject value, java.lang.String category) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", value == null ? null : value.getJCOInstance(), category);
         } catch (JCNativeException jcne) {
@@ -295,7 +299,7 @@ public class Debug extends NetObject  {
 
     public static void Write(NetObject value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -305,7 +309,7 @@ public class Debug extends NetObject  {
 
     public static void Write(java.lang.String message, java.lang.String category) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", message, category);
         } catch (JCNativeException jcne) {
@@ -315,7 +319,7 @@ public class Debug extends NetObject  {
 
     public static void Write(java.lang.String message) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", message);
         } catch (JCNativeException jcne) {
@@ -325,7 +329,7 @@ public class Debug extends NetObject  {
 
     public static void WriteIf(boolean condition, NetObject value, java.lang.String category) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentNullException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteIf", condition, value == null ? null : value.getJCOInstance(), category);
         } catch (JCNativeException jcne) {
@@ -335,7 +339,7 @@ public class Debug extends NetObject  {
 
     public static void WriteIf(boolean condition, NetObject value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteIf", condition, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -345,7 +349,7 @@ public class Debug extends NetObject  {
 
     public static void WriteIf(boolean condition, java.lang.String message, java.lang.String category) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteIf", condition, message, category);
         } catch (JCNativeException jcne) {
@@ -355,7 +359,7 @@ public class Debug extends NetObject  {
 
     public static void WriteIf(boolean condition, java.lang.String message) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteIf", condition, message);
         } catch (JCNativeException jcne) {
@@ -365,7 +369,7 @@ public class Debug extends NetObject  {
 
     public static void WriteLine(NetObject value, java.lang.String category) throws Throwable, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", value == null ? null : value.getJCOInstance(), category);
         } catch (JCNativeException jcne) {
@@ -375,7 +379,7 @@ public class Debug extends NetObject  {
 
     public static void WriteLine(NetObject value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -385,7 +389,7 @@ public class Debug extends NetObject  {
 
     public static void WriteLine(java.lang.String format, NetObject... args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", format, toObjectFromArray(args));
         } catch (JCNativeException jcne) {
@@ -395,7 +399,7 @@ public class Debug extends NetObject  {
 
     public static void WriteLine(java.lang.String message, java.lang.String category) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", message, category);
         } catch (JCNativeException jcne) {
@@ -405,7 +409,7 @@ public class Debug extends NetObject  {
 
     public static void WriteLine(java.lang.String message) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", message);
         } catch (JCNativeException jcne) {
@@ -415,7 +419,7 @@ public class Debug extends NetObject  {
 
     public static void WriteLineIf(boolean condition, NetObject value, java.lang.String category) throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLineIf", condition, value == null ? null : value.getJCOInstance(), category);
         } catch (JCNativeException jcne) {
@@ -425,7 +429,7 @@ public class Debug extends NetObject  {
 
     public static void WriteLineIf(boolean condition, NetObject value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLineIf", condition, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -435,7 +439,7 @@ public class Debug extends NetObject  {
 
     public static void WriteLineIf(boolean condition, java.lang.String message, java.lang.String category) throws Throwable, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLineIf", condition, message, category);
         } catch (JCNativeException jcne) {
@@ -445,7 +449,7 @@ public class Debug extends NetObject  {
 
     public static void WriteLineIf(boolean condition, java.lang.String message) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLineIf", condition, message);
         } catch (JCNativeException jcne) {
@@ -459,9 +463,13 @@ public class Debug extends NetObject  {
     
     public static boolean getAutoFlush() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAutoFlush = null;
         try {
-            return (boolean)classType.Get("AutoFlush");
+            retObjectAutoFlush = classType.Get("AutoFlush");
+            return (boolean)retObjectAutoFlush;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoFlush != null ? retObjectAutoFlush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -469,7 +477,7 @@ public class Debug extends NetObject  {
 
     public static void setAutoFlush(boolean AutoFlush) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("AutoFlush", AutoFlush);
         } catch (JCNativeException jcne) {
@@ -479,9 +487,19 @@ public class Debug extends NetObject  {
 
     public static int getIndentLevel() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIndentLevel = null;
         try {
-            return (int)classType.Get("IndentLevel");
+            retObjectIndentLevel = classType.Get("IndentLevel");
+            return (int)retObjectIndentLevel;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndentLevelNumber = (java.lang.Number)retObjectIndentLevel;
+                return retObjectIndentLevelNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndentLevel != null ? retObjectIndentLevel.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -489,7 +507,7 @@ public class Debug extends NetObject  {
 
     public static void setIndentLevel(int IndentLevel) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("IndentLevel", IndentLevel);
         } catch (JCNativeException jcne) {
@@ -499,9 +517,19 @@ public class Debug extends NetObject  {
 
     public static int getIndentSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIndentSize = null;
         try {
-            return (int)classType.Get("IndentSize");
+            retObjectIndentSize = classType.Get("IndentSize");
+            return (int)retObjectIndentSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndentSizeNumber = (java.lang.Number)retObjectIndentSize;
+                return retObjectIndentSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndentSize != null ? retObjectIndentSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -509,7 +537,7 @@ public class Debug extends NetObject  {
 
     public static void setIndentSize(int IndentSize) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("IndentSize", IndentSize);
         } catch (JCNativeException jcne) {

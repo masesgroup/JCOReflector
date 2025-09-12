@@ -146,10 +146,14 @@ public class IImplicitResourceProviderImplementation extends NetObject implement
     
     public ICollection GetImplicitResourceKeys(java.lang.String keyPrefix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetImplicitResourceKeys = null;
         try {
-            JCObject objGetImplicitResourceKeys = (JCObject)classInstance.Invoke("GetImplicitResourceKeys", keyPrefix);
+            retObjectGetImplicitResourceKeys = classInstance.Invoke("GetImplicitResourceKeys", keyPrefix);
+            JCObject objGetImplicitResourceKeys = (JCObject)retObjectGetImplicitResourceKeys;
             return new ICollectionImplementation(objGetImplicitResourceKeys);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetImplicitResourceKeys != null ? retObjectGetImplicitResourceKeys.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,10 +161,14 @@ public class IImplicitResourceProviderImplementation extends NetObject implement
 
     public NetObject GetObject(ImplicitResourceKey key, CultureInfo culture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetObject = null;
         try {
-            JCObject objGetObject = (JCObject)classInstance.Invoke("GetObject", key == null ? null : key.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            retObjectGetObject = classInstance.Invoke("GetObject", key == null ? null : key.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            JCObject objGetObject = (JCObject)retObjectGetObject;
             return new NetObject(objGetObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObject != null ? retObjectGetObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

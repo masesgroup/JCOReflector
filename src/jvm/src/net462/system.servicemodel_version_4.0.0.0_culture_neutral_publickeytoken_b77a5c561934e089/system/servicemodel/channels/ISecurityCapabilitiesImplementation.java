@@ -147,9 +147,13 @@ public class ISecurityCapabilitiesImplementation extends NetObject implements IS
     
     public boolean getSupportsClientAuthentication() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsClientAuthentication = null;
         try {
-            return (boolean)classInstance.Get("SupportsClientAuthentication");
+            retObjectSupportsClientAuthentication = classInstance.Get("SupportsClientAuthentication");
+            return (boolean)retObjectSupportsClientAuthentication;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsClientAuthentication != null ? retObjectSupportsClientAuthentication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,9 +161,13 @@ public class ISecurityCapabilitiesImplementation extends NetObject implements IS
 
     public boolean getSupportsClientWindowsIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsClientWindowsIdentity = null;
         try {
-            return (boolean)classInstance.Get("SupportsClientWindowsIdentity");
+            retObjectSupportsClientWindowsIdentity = classInstance.Get("SupportsClientWindowsIdentity");
+            return (boolean)retObjectSupportsClientWindowsIdentity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsClientWindowsIdentity != null ? retObjectSupportsClientWindowsIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +175,13 @@ public class ISecurityCapabilitiesImplementation extends NetObject implements IS
 
     public boolean getSupportsServerAuthentication() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsServerAuthentication = null;
         try {
-            return (boolean)classInstance.Get("SupportsServerAuthentication");
+            retObjectSupportsServerAuthentication = classInstance.Get("SupportsServerAuthentication");
+            return (boolean)retObjectSupportsServerAuthentication;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsServerAuthentication != null ? retObjectSupportsServerAuthentication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +189,14 @@ public class ISecurityCapabilitiesImplementation extends NetObject implements IS
 
     public ProtectionLevel getSupportedRequestProtectionLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportedRequestProtectionLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SupportedRequestProtectionLevel");
+            retObjectSupportedRequestProtectionLevel = classInstance.Get("SupportedRequestProtectionLevel");
+            JCObject val = (JCObject)retObjectSupportedRequestProtectionLevel;
             return new ProtectionLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSupportedRequestProtectionLevel != null ? retObjectSupportedRequestProtectionLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +204,14 @@ public class ISecurityCapabilitiesImplementation extends NetObject implements IS
 
     public ProtectionLevel getSupportedResponseProtectionLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportedResponseProtectionLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SupportedResponseProtectionLevel");
+            retObjectSupportedResponseProtectionLevel = classInstance.Get("SupportedResponseProtectionLevel");
+            JCObject val = (JCObject)retObjectSupportedResponseProtectionLevel;
             return new ProtectionLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSupportedResponseProtectionLevel != null ? retObjectSupportedResponseProtectionLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

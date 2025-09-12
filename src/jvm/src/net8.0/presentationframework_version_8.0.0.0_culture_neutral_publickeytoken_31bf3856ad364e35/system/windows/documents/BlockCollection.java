@@ -160,10 +160,14 @@ public class BlockCollection extends NetObjectEnumerable  {
     
     public Block getFirstBlock() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MulticastNotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFirstBlock = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FirstBlock");
+            retObjectFirstBlock = classInstance.Get("FirstBlock");
+            JCObject val = (JCObject)retObjectFirstBlock;
             return new Block(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFirstBlock != null ? retObjectFirstBlock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class BlockCollection extends NetObjectEnumerable  {
 
     public Block getLastBlock() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MulticastNotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastBlock = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastBlock");
+            retObjectLastBlock = classInstance.Get("LastBlock");
+            JCObject val = (JCObject)retObjectLastBlock;
             return new Block(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastBlock != null ? retObjectLastBlock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

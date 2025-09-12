@@ -200,9 +200,13 @@ public class PartialCachingAttribute extends Attribute  {
     
     public boolean getShared() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShared = null;
         try {
-            return (boolean)classInstance.Get("Shared");
+            retObjectShared = classInstance.Get("Shared");
+            return (boolean)retObjectShared;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShared != null ? retObjectShared.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +214,7 @@ public class PartialCachingAttribute extends Attribute  {
 
     public void setShared(boolean Shared) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Shared", Shared);
         } catch (JCNativeException jcne) {
@@ -220,9 +224,19 @@ public class PartialCachingAttribute extends Attribute  {
 
     public int getDuration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDuration = null;
         try {
-            return (int)classInstance.Get("Duration");
+            retObjectDuration = classInstance.Get("Duration");
+            return (int)retObjectDuration;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDurationNumber = (java.lang.Number)retObjectDuration;
+                return retObjectDurationNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDuration != null ? retObjectDuration.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +244,7 @@ public class PartialCachingAttribute extends Attribute  {
 
     public void setDuration(int Duration) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Duration", Duration);
         } catch (JCNativeException jcne) {
@@ -240,9 +254,13 @@ public class PartialCachingAttribute extends Attribute  {
 
     public java.lang.String getProviderName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProviderName = null;
         try {
-            return (java.lang.String)classInstance.Get("ProviderName");
+            retObjectProviderName = classInstance.Get("ProviderName");
+            return (java.lang.String)retObjectProviderName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProviderName != null ? retObjectProviderName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +268,7 @@ public class PartialCachingAttribute extends Attribute  {
 
     public void setProviderName(java.lang.String ProviderName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProviderName", ProviderName);
         } catch (JCNativeException jcne) {
@@ -260,9 +278,13 @@ public class PartialCachingAttribute extends Attribute  {
 
     public java.lang.String getSqlDependency() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSqlDependency = null;
         try {
-            return (java.lang.String)classInstance.Get("SqlDependency");
+            retObjectSqlDependency = classInstance.Get("SqlDependency");
+            return (java.lang.String)retObjectSqlDependency;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSqlDependency != null ? retObjectSqlDependency.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +292,7 @@ public class PartialCachingAttribute extends Attribute  {
 
     public void setSqlDependency(java.lang.String SqlDependency) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SqlDependency", SqlDependency);
         } catch (JCNativeException jcne) {
@@ -280,9 +302,13 @@ public class PartialCachingAttribute extends Attribute  {
 
     public java.lang.String getVaryByControls() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVaryByControls = null;
         try {
-            return (java.lang.String)classInstance.Get("VaryByControls");
+            retObjectVaryByControls = classInstance.Get("VaryByControls");
+            return (java.lang.String)retObjectVaryByControls;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVaryByControls != null ? retObjectVaryByControls.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,7 +316,7 @@ public class PartialCachingAttribute extends Attribute  {
 
     public void setVaryByControls(java.lang.String VaryByControls) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VaryByControls", VaryByControls);
         } catch (JCNativeException jcne) {
@@ -300,9 +326,13 @@ public class PartialCachingAttribute extends Attribute  {
 
     public java.lang.String getVaryByCustom() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVaryByCustom = null;
         try {
-            return (java.lang.String)classInstance.Get("VaryByCustom");
+            retObjectVaryByCustom = classInstance.Get("VaryByCustom");
+            return (java.lang.String)retObjectVaryByCustom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVaryByCustom != null ? retObjectVaryByCustom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +340,7 @@ public class PartialCachingAttribute extends Attribute  {
 
     public void setVaryByCustom(java.lang.String VaryByCustom) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VaryByCustom", VaryByCustom);
         } catch (JCNativeException jcne) {
@@ -320,9 +350,13 @@ public class PartialCachingAttribute extends Attribute  {
 
     public java.lang.String getVaryByParams() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVaryByParams = null;
         try {
-            return (java.lang.String)classInstance.Get("VaryByParams");
+            retObjectVaryByParams = classInstance.Get("VaryByParams");
+            return (java.lang.String)retObjectVaryByParams;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVaryByParams != null ? retObjectVaryByParams.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,7 +364,7 @@ public class PartialCachingAttribute extends Attribute  {
 
     public void setVaryByParams(java.lang.String VaryByParams) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VaryByParams", VaryByParams);
         } catch (JCNativeException jcne) {

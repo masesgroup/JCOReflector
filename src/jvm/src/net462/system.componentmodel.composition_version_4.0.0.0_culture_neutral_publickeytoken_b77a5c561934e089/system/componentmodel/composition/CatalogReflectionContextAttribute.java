@@ -167,10 +167,14 @@ public class CatalogReflectionContextAttribute extends Attribute  {
     
     public ReflectionContext CreateReflectionContext() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateReflectionContext = null;
         try {
-            JCObject objCreateReflectionContext = (JCObject)classInstance.Invoke("CreateReflectionContext");
+            retObjectCreateReflectionContext = classInstance.Invoke("CreateReflectionContext");
+            JCObject objCreateReflectionContext = (JCObject)retObjectCreateReflectionContext;
             return new ReflectionContext(objCreateReflectionContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateReflectionContext != null ? retObjectCreateReflectionContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

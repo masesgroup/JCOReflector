@@ -166,9 +166,13 @@ public class SqlMethodAttribute extends SqlFunctionAttribute  {
     
     public boolean getInvokeIfReceiverIsNull() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeIfReceiverIsNull = null;
         try {
-            return (boolean)classInstance.Get("InvokeIfReceiverIsNull");
+            retObjectInvokeIfReceiverIsNull = classInstance.Get("InvokeIfReceiverIsNull");
+            return (boolean)retObjectInvokeIfReceiverIsNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInvokeIfReceiverIsNull != null ? retObjectInvokeIfReceiverIsNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class SqlMethodAttribute extends SqlFunctionAttribute  {
 
     public void setInvokeIfReceiverIsNull(boolean InvokeIfReceiverIsNull) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InvokeIfReceiverIsNull", InvokeIfReceiverIsNull);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class SqlMethodAttribute extends SqlFunctionAttribute  {
 
     public boolean getIsMutator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMutator = null;
         try {
-            return (boolean)classInstance.Get("IsMutator");
+            retObjectIsMutator = classInstance.Get("IsMutator");
+            return (boolean)retObjectIsMutator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMutator != null ? retObjectIsMutator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class SqlMethodAttribute extends SqlFunctionAttribute  {
 
     public void setIsMutator(boolean IsMutator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsMutator", IsMutator);
         } catch (JCNativeException jcne) {
@@ -206,9 +214,13 @@ public class SqlMethodAttribute extends SqlFunctionAttribute  {
 
     public boolean getOnNullCall() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnNullCall = null;
         try {
-            return (boolean)classInstance.Get("OnNullCall");
+            retObjectOnNullCall = classInstance.Get("OnNullCall");
+            return (boolean)retObjectOnNullCall;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOnNullCall != null ? retObjectOnNullCall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class SqlMethodAttribute extends SqlFunctionAttribute  {
 
     public void setOnNullCall(boolean OnNullCall) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OnNullCall", OnNullCall);
         } catch (JCNativeException jcne) {

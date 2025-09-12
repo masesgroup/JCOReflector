@@ -171,9 +171,19 @@ public class WhiteSaturationCurveEffect extends ColorCurveEffect  {
     
     public int getWhiteSaturation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWhiteSaturation = null;
         try {
-            return (int)classInstance.Get("WhiteSaturation");
+            retObjectWhiteSaturation = classInstance.Get("WhiteSaturation");
+            return (int)retObjectWhiteSaturation;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWhiteSaturationNumber = (java.lang.Number)retObjectWhiteSaturation;
+                return retObjectWhiteSaturationNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWhiteSaturation != null ? retObjectWhiteSaturation.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

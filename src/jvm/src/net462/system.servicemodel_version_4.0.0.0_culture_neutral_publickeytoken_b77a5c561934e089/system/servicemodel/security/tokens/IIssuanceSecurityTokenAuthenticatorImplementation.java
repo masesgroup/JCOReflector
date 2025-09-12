@@ -148,9 +148,13 @@ public class IIssuanceSecurityTokenAuthenticatorImplementation extends NetObject
     
     public IssuedSecurityTokenHandler getIssuedSecurityTokenHandler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuedSecurityTokenHandler = null;
         try {
-            return (IssuedSecurityTokenHandler)classInstance.Get("IssuedSecurityTokenHandler");
+            retObjectIssuedSecurityTokenHandler = classInstance.Get("IssuedSecurityTokenHandler");
+            return (IssuedSecurityTokenHandler)retObjectIssuedSecurityTokenHandler;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into IssuedSecurityTokenHandler", retObjectIssuedSecurityTokenHandler != null ? retObjectIssuedSecurityTokenHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,7 +162,7 @@ public class IIssuanceSecurityTokenAuthenticatorImplementation extends NetObject
 
     public void setIssuedSecurityTokenHandler(IssuedSecurityTokenHandler IssuedSecurityTokenHandler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuedSecurityTokenHandler", IssuedSecurityTokenHandler);
         } catch (JCNativeException jcne) {
@@ -168,9 +172,13 @@ public class IIssuanceSecurityTokenAuthenticatorImplementation extends NetObject
 
     public RenewedSecurityTokenHandler getRenewedSecurityTokenHandler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenewedSecurityTokenHandler = null;
         try {
-            return (RenewedSecurityTokenHandler)classInstance.Get("RenewedSecurityTokenHandler");
+            retObjectRenewedSecurityTokenHandler = classInstance.Get("RenewedSecurityTokenHandler");
+            return (RenewedSecurityTokenHandler)retObjectRenewedSecurityTokenHandler;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into RenewedSecurityTokenHandler", retObjectRenewedSecurityTokenHandler != null ? retObjectRenewedSecurityTokenHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +186,7 @@ public class IIssuanceSecurityTokenAuthenticatorImplementation extends NetObject
 
     public void setRenewedSecurityTokenHandler(RenewedSecurityTokenHandler RenewedSecurityTokenHandler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RenewedSecurityTokenHandler", RenewedSecurityTokenHandler);
         } catch (JCNativeException jcne) {

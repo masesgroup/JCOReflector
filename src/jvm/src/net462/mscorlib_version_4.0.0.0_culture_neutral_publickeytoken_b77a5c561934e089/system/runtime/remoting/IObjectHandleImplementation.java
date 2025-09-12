@@ -142,10 +142,14 @@ public class IObjectHandleImplementation extends NetObject implements IObjectHan
     
     public NetObject Unwrap() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnwrap = null;
         try {
-            JCObject objUnwrap = (JCObject)classInstance.Invoke("Unwrap");
+            retObjectUnwrap = classInstance.Invoke("Unwrap");
+            JCObject objUnwrap = (JCObject)retObjectUnwrap;
             return new NetObject(objUnwrap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnwrap != null ? retObjectUnwrap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

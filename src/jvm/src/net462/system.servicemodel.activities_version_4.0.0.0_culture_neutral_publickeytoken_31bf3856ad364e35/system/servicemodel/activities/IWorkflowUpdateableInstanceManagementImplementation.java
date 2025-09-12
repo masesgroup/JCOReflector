@@ -149,10 +149,14 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
     
     public IAsyncResult BeginAbandon(Guid instanceId, java.lang.String reason, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAbandon = null;
         try {
-            JCObject objBeginAbandon = (JCObject)classInstance.Invoke("BeginAbandon", instanceId == null ? null : instanceId.getJCOInstance(), reason, callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginAbandon = classInstance.Invoke("BeginAbandon", instanceId == null ? null : instanceId.getJCOInstance(), reason, callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginAbandon = (JCObject)retObjectBeginAbandon;
             return new IAsyncResultImplementation(objBeginAbandon);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAbandon != null ? retObjectBeginAbandon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,10 +164,14 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public IAsyncResult BeginCancel(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginCancel = null;
         try {
-            JCObject objBeginCancel = (JCObject)classInstance.Invoke("BeginCancel", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginCancel = classInstance.Invoke("BeginCancel", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginCancel = (JCObject)retObjectBeginCancel;
             return new IAsyncResultImplementation(objBeginCancel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginCancel != null ? retObjectBeginCancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +179,14 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public IAsyncResult BeginRun(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginRun = null;
         try {
-            JCObject objBeginRun = (JCObject)classInstance.Invoke("BeginRun", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginRun = classInstance.Invoke("BeginRun", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginRun = (JCObject)retObjectBeginRun;
             return new IAsyncResultImplementation(objBeginRun);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginRun != null ? retObjectBeginRun.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +194,14 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public IAsyncResult BeginSuspend(Guid instanceId, java.lang.String reason, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginSuspend = null;
         try {
-            JCObject objBeginSuspend = (JCObject)classInstance.Invoke("BeginSuspend", instanceId == null ? null : instanceId.getJCOInstance(), reason, callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginSuspend = classInstance.Invoke("BeginSuspend", instanceId == null ? null : instanceId.getJCOInstance(), reason, callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginSuspend = (JCObject)retObjectBeginSuspend;
             return new IAsyncResultImplementation(objBeginSuspend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginSuspend != null ? retObjectBeginSuspend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +209,14 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public IAsyncResult BeginTerminate(Guid instanceId, java.lang.String reason, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTerminate = null;
         try {
-            JCObject objBeginTerminate = (JCObject)classInstance.Invoke("BeginTerminate", instanceId == null ? null : instanceId.getJCOInstance(), reason, callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTerminate = classInstance.Invoke("BeginTerminate", instanceId == null ? null : instanceId.getJCOInstance(), reason, callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTerminate = (JCObject)retObjectBeginTerminate;
             return new IAsyncResultImplementation(objBeginTerminate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTerminate != null ? retObjectBeginTerminate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +224,14 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public IAsyncResult BeginTransactedCancel(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTransactedCancel = null;
         try {
-            JCObject objBeginTransactedCancel = (JCObject)classInstance.Invoke("BeginTransactedCancel", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTransactedCancel = classInstance.Invoke("BeginTransactedCancel", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTransactedCancel = (JCObject)retObjectBeginTransactedCancel;
             return new IAsyncResultImplementation(objBeginTransactedCancel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTransactedCancel != null ? retObjectBeginTransactedCancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +239,14 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public IAsyncResult BeginTransactedRun(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTransactedRun = null;
         try {
-            JCObject objBeginTransactedRun = (JCObject)classInstance.Invoke("BeginTransactedRun", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTransactedRun = classInstance.Invoke("BeginTransactedRun", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTransactedRun = (JCObject)retObjectBeginTransactedRun;
             return new IAsyncResultImplementation(objBeginTransactedRun);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTransactedRun != null ? retObjectBeginTransactedRun.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +254,14 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public IAsyncResult BeginTransactedSuspend(Guid instanceId, java.lang.String reason, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTransactedSuspend = null;
         try {
-            JCObject objBeginTransactedSuspend = (JCObject)classInstance.Invoke("BeginTransactedSuspend", instanceId == null ? null : instanceId.getJCOInstance(), reason, callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTransactedSuspend = classInstance.Invoke("BeginTransactedSuspend", instanceId == null ? null : instanceId.getJCOInstance(), reason, callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTransactedSuspend = (JCObject)retObjectBeginTransactedSuspend;
             return new IAsyncResultImplementation(objBeginTransactedSuspend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTransactedSuspend != null ? retObjectBeginTransactedSuspend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +269,14 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public IAsyncResult BeginTransactedTerminate(Guid instanceId, java.lang.String reason, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTransactedTerminate = null;
         try {
-            JCObject objBeginTransactedTerminate = (JCObject)classInstance.Invoke("BeginTransactedTerminate", instanceId == null ? null : instanceId.getJCOInstance(), reason, callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTransactedTerminate = classInstance.Invoke("BeginTransactedTerminate", instanceId == null ? null : instanceId.getJCOInstance(), reason, callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTransactedTerminate = (JCObject)retObjectBeginTransactedTerminate;
             return new IAsyncResultImplementation(objBeginTransactedTerminate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTransactedTerminate != null ? retObjectBeginTransactedTerminate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +284,14 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public IAsyncResult BeginTransactedUnsuspend(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTransactedUnsuspend = null;
         try {
-            JCObject objBeginTransactedUnsuspend = (JCObject)classInstance.Invoke("BeginTransactedUnsuspend", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTransactedUnsuspend = classInstance.Invoke("BeginTransactedUnsuspend", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTransactedUnsuspend = (JCObject)retObjectBeginTransactedUnsuspend;
             return new IAsyncResultImplementation(objBeginTransactedUnsuspend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTransactedUnsuspend != null ? retObjectBeginTransactedUnsuspend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,10 +299,14 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public IAsyncResult BeginTransactedUpdate(Guid instanceId, WorkflowIdentity updatedDefinitionIdentity, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTransactedUpdate = null;
         try {
-            JCObject objBeginTransactedUpdate = (JCObject)classInstance.Invoke("BeginTransactedUpdate", instanceId == null ? null : instanceId.getJCOInstance(), updatedDefinitionIdentity == null ? null : updatedDefinitionIdentity.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTransactedUpdate = classInstance.Invoke("BeginTransactedUpdate", instanceId == null ? null : instanceId.getJCOInstance(), updatedDefinitionIdentity == null ? null : updatedDefinitionIdentity.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTransactedUpdate = (JCObject)retObjectBeginTransactedUpdate;
             return new IAsyncResultImplementation(objBeginTransactedUpdate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTransactedUpdate != null ? retObjectBeginTransactedUpdate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,10 +314,14 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public IAsyncResult BeginUnsuspend(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginUnsuspend = null;
         try {
-            JCObject objBeginUnsuspend = (JCObject)classInstance.Invoke("BeginUnsuspend", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginUnsuspend = classInstance.Invoke("BeginUnsuspend", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginUnsuspend = (JCObject)retObjectBeginUnsuspend;
             return new IAsyncResultImplementation(objBeginUnsuspend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginUnsuspend != null ? retObjectBeginUnsuspend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,10 +329,14 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public IAsyncResult BeginUpdate(Guid instanceId, WorkflowIdentity updatedDefinitionIdentity, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginUpdate = null;
         try {
-            JCObject objBeginUpdate = (JCObject)classInstance.Invoke("BeginUpdate", instanceId == null ? null : instanceId.getJCOInstance(), updatedDefinitionIdentity == null ? null : updatedDefinitionIdentity.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginUpdate = classInstance.Invoke("BeginUpdate", instanceId == null ? null : instanceId.getJCOInstance(), updatedDefinitionIdentity == null ? null : updatedDefinitionIdentity.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginUpdate = (JCObject)retObjectBeginUpdate;
             return new IAsyncResultImplementation(objBeginUpdate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginUpdate != null ? retObjectBeginUpdate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +344,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void Abandon(Guid instanceId, java.lang.String reason) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abandon", instanceId == null ? null : instanceId.getJCOInstance(), reason);
         } catch (JCNativeException jcne) {
@@ -302,7 +354,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void Cancel(Guid instanceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Cancel", instanceId == null ? null : instanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -312,7 +364,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void EndAbandon(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndAbandon", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -322,7 +374,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void EndCancel(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndCancel", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -332,7 +384,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void EndRun(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndRun", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -342,7 +394,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void EndSuspend(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndSuspend", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -352,7 +404,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void EndTerminate(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndTerminate", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -362,7 +414,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void EndTransactedCancel(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndTransactedCancel", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -372,7 +424,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void EndTransactedRun(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndTransactedRun", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -382,7 +434,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void EndTransactedSuspend(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndTransactedSuspend", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -392,7 +444,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void EndTransactedTerminate(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndTransactedTerminate", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -402,7 +454,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void EndTransactedUnsuspend(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndTransactedUnsuspend", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -412,7 +464,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void EndTransactedUpdate(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndTransactedUpdate", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -422,7 +474,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void EndUnsuspend(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndUnsuspend", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -432,7 +484,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void EndUpdate(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndUpdate", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -442,7 +494,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void Run(Guid instanceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Run", instanceId == null ? null : instanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -452,7 +504,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void Suspend(Guid instanceId, java.lang.String reason) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Suspend", instanceId == null ? null : instanceId.getJCOInstance(), reason);
         } catch (JCNativeException jcne) {
@@ -462,7 +514,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void Terminate(Guid instanceId, java.lang.String reason) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Terminate", instanceId == null ? null : instanceId.getJCOInstance(), reason);
         } catch (JCNativeException jcne) {
@@ -472,7 +524,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void TransactedCancel(Guid instanceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TransactedCancel", instanceId == null ? null : instanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -482,7 +534,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void TransactedRun(Guid instanceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TransactedRun", instanceId == null ? null : instanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -492,7 +544,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void TransactedSuspend(Guid instanceId, java.lang.String reason) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TransactedSuspend", instanceId == null ? null : instanceId.getJCOInstance(), reason);
         } catch (JCNativeException jcne) {
@@ -502,7 +554,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void TransactedTerminate(Guid instanceId, java.lang.String reason) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TransactedTerminate", instanceId == null ? null : instanceId.getJCOInstance(), reason);
         } catch (JCNativeException jcne) {
@@ -512,7 +564,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void TransactedUnsuspend(Guid instanceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TransactedUnsuspend", instanceId == null ? null : instanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -522,7 +574,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void TransactedUpdate(Guid instanceId, WorkflowIdentity updatedDefinitionIdentity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TransactedUpdate", instanceId == null ? null : instanceId.getJCOInstance(), updatedDefinitionIdentity == null ? null : updatedDefinitionIdentity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -532,7 +584,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void Unsuspend(Guid instanceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Unsuspend", instanceId == null ? null : instanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -542,7 +594,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
 
     public void Update(Guid instanceId, WorkflowIdentity updatedDefinitionIdentity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Update", instanceId == null ? null : instanceId.getJCOInstance(), updatedDefinitionIdentity == null ? null : updatedDefinitionIdentity.getJCOInstance());
         } catch (JCNativeException jcne) {

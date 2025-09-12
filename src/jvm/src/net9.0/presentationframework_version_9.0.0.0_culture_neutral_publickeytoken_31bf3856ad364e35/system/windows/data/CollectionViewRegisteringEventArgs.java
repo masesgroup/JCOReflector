@@ -161,10 +161,14 @@ public class CollectionViewRegisteringEventArgs extends EventArgs  {
     
     public CollectionView getCollectionView() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCollectionView = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CollectionView");
+            retObjectCollectionView = classInstance.Get("CollectionView");
+            JCObject val = (JCObject)retObjectCollectionView;
             return new CollectionView(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCollectionView != null ? retObjectCollectionView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

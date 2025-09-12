@@ -161,10 +161,14 @@ public class DbQueryCommandTree extends DbCommandTree  {
     
     public DbExpression getQuery() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuery = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Query");
+            retObjectQuery = classInstance.Get("Query");
+            JCObject val = (JCObject)retObjectQuery;
             return new DbExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQuery != null ? retObjectQuery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

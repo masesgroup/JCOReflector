@@ -169,9 +169,13 @@ public class DynamicObject extends NetObject  {
     
     public boolean TryBinaryOperation(BinaryOperationBinder binder, NetObject arg, JCORefOut<NetObject> result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryBinaryOperation = null;
         try {
-            return (boolean)classInstance.Invoke("TryBinaryOperation", binder == null ? null : binder.getJCOInstance(), arg == null ? null : arg.getJCOInstance(), result.getJCRefOut());
+            retObjectTryBinaryOperation = classInstance.Invoke("TryBinaryOperation", binder == null ? null : binder.getJCOInstance(), arg == null ? null : arg.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryBinaryOperation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryBinaryOperation != null ? retObjectTryBinaryOperation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +183,13 @@ public class DynamicObject extends NetObject  {
 
     public boolean TryConvert(ConvertBinder binder, JCORefOut<NetObject> result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryConvert = null;
         try {
-            return (boolean)classInstance.Invoke("TryConvert", binder == null ? null : binder.getJCOInstance(), result.getJCRefOut());
+            retObjectTryConvert = classInstance.Invoke("TryConvert", binder == null ? null : binder.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryConvert;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryConvert != null ? retObjectTryConvert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +197,13 @@ public class DynamicObject extends NetObject  {
 
     public boolean TryCreateInstance(CreateInstanceBinder binder, NetObject[] args, JCORefOut<NetObject> result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryCreateInstance = null;
         try {
-            return (boolean)classInstance.Invoke("TryCreateInstance", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), result.getJCRefOut());
+            retObjectTryCreateInstance = classInstance.Invoke("TryCreateInstance", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), result.getJCRefOut());
+            return (boolean)retObjectTryCreateInstance;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryCreateInstance != null ? retObjectTryCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +211,13 @@ public class DynamicObject extends NetObject  {
 
     public boolean TryDeleteIndex(DeleteIndexBinder binder, NetObject[] indexes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryDeleteIndex = null;
         try {
-            return (boolean)classInstance.Invoke("TryDeleteIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes));
+            retObjectTryDeleteIndex = classInstance.Invoke("TryDeleteIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes));
+            return (boolean)retObjectTryDeleteIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryDeleteIndex != null ? retObjectTryDeleteIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +225,13 @@ public class DynamicObject extends NetObject  {
 
     public boolean TryDeleteMember(DeleteMemberBinder binder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryDeleteMember = null;
         try {
-            return (boolean)classInstance.Invoke("TryDeleteMember", binder == null ? null : binder.getJCOInstance());
+            retObjectTryDeleteMember = classInstance.Invoke("TryDeleteMember", binder == null ? null : binder.getJCOInstance());
+            return (boolean)retObjectTryDeleteMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryDeleteMember != null ? retObjectTryDeleteMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +239,13 @@ public class DynamicObject extends NetObject  {
 
     public boolean TryGetIndex(GetIndexBinder binder, NetObject[] indexes, JCORefOut<NetObject> result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetIndex = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes), result.getJCRefOut());
+            retObjectTryGetIndex = classInstance.Invoke("TryGetIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes), result.getJCRefOut());
+            return (boolean)retObjectTryGetIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetIndex != null ? retObjectTryGetIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,9 +253,13 @@ public class DynamicObject extends NetObject  {
 
     public boolean TryGetMember(GetMemberBinder binder, JCORefOut<NetObject> result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetMember = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetMember", binder == null ? null : binder.getJCOInstance(), result.getJCRefOut());
+            retObjectTryGetMember = classInstance.Invoke("TryGetMember", binder == null ? null : binder.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryGetMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetMember != null ? retObjectTryGetMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +267,13 @@ public class DynamicObject extends NetObject  {
 
     public boolean TryInvoke(InvokeBinder binder, NetObject[] args, JCORefOut<NetObject> result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryInvoke = null;
         try {
-            return (boolean)classInstance.Invoke("TryInvoke", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), result.getJCRefOut());
+            retObjectTryInvoke = classInstance.Invoke("TryInvoke", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), result.getJCRefOut());
+            return (boolean)retObjectTryInvoke;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryInvoke != null ? retObjectTryInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,9 +281,13 @@ public class DynamicObject extends NetObject  {
 
     public boolean TryInvokeMember(InvokeMemberBinder binder, NetObject[] args, JCORefOut<NetObject> result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryInvokeMember = null;
         try {
-            return (boolean)classInstance.Invoke("TryInvokeMember", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), result.getJCRefOut());
+            retObjectTryInvokeMember = classInstance.Invoke("TryInvokeMember", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), result.getJCRefOut());
+            return (boolean)retObjectTryInvokeMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryInvokeMember != null ? retObjectTryInvokeMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,9 +295,13 @@ public class DynamicObject extends NetObject  {
 
     public boolean TrySetIndex(SetIndexBinder binder, NetObject[] indexes, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrySetIndex = null;
         try {
-            return (boolean)classInstance.Invoke("TrySetIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes), value == null ? null : value.getJCOInstance());
+            retObjectTrySetIndex = classInstance.Invoke("TrySetIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes), value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectTrySetIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTrySetIndex != null ? retObjectTrySetIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,9 +309,13 @@ public class DynamicObject extends NetObject  {
 
     public boolean TrySetMember(SetMemberBinder binder, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrySetMember = null;
         try {
-            return (boolean)classInstance.Invoke("TrySetMember", binder == null ? null : binder.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectTrySetMember = classInstance.Invoke("TrySetMember", binder == null ? null : binder.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectTrySetMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTrySetMember != null ? retObjectTrySetMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,9 +323,13 @@ public class DynamicObject extends NetObject  {
 
     public boolean TryUnaryOperation(UnaryOperationBinder binder, JCORefOut<NetObject> result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryUnaryOperation = null;
         try {
-            return (boolean)classInstance.Invoke("TryUnaryOperation", binder == null ? null : binder.getJCOInstance(), result.getJCRefOut());
+            retObjectTryUnaryOperation = classInstance.Invoke("TryUnaryOperation", binder == null ? null : binder.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryUnaryOperation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryUnaryOperation != null ? retObjectTryUnaryOperation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,10 +337,14 @@ public class DynamicObject extends NetObject  {
 
     public DynamicMetaObject GetMetaObject(Expression parameter) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMetaObject = null;
         try {
-            JCObject objGetMetaObject = (JCObject)classInstance.Invoke("GetMetaObject", parameter == null ? null : parameter.getJCOInstance());
+            retObjectGetMetaObject = classInstance.Invoke("GetMetaObject", parameter == null ? null : parameter.getJCOInstance());
+            JCObject objGetMetaObject = (JCObject)retObjectGetMetaObject;
             return new DynamicMetaObject(objGetMetaObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMetaObject != null ? retObjectGetMetaObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

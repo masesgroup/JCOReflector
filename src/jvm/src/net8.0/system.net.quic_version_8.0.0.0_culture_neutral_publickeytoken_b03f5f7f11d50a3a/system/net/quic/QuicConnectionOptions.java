@@ -158,9 +158,19 @@ public class QuicConnectionOptions extends NetObject  {
     
     public int getMaxInboundBidirectionalStreams() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxInboundBidirectionalStreams = null;
         try {
-            return (int)classInstance.Get("MaxInboundBidirectionalStreams");
+            retObjectMaxInboundBidirectionalStreams = classInstance.Get("MaxInboundBidirectionalStreams");
+            return (int)retObjectMaxInboundBidirectionalStreams;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxInboundBidirectionalStreamsNumber = (java.lang.Number)retObjectMaxInboundBidirectionalStreams;
+                return retObjectMaxInboundBidirectionalStreamsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxInboundBidirectionalStreams != null ? retObjectMaxInboundBidirectionalStreams.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +178,7 @@ public class QuicConnectionOptions extends NetObject  {
 
     public void setMaxInboundBidirectionalStreams(int MaxInboundBidirectionalStreams) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxInboundBidirectionalStreams", MaxInboundBidirectionalStreams);
         } catch (JCNativeException jcne) {
@@ -178,9 +188,19 @@ public class QuicConnectionOptions extends NetObject  {
 
     public int getMaxInboundUnidirectionalStreams() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxInboundUnidirectionalStreams = null;
         try {
-            return (int)classInstance.Get("MaxInboundUnidirectionalStreams");
+            retObjectMaxInboundUnidirectionalStreams = classInstance.Get("MaxInboundUnidirectionalStreams");
+            return (int)retObjectMaxInboundUnidirectionalStreams;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxInboundUnidirectionalStreamsNumber = (java.lang.Number)retObjectMaxInboundUnidirectionalStreams;
+                return retObjectMaxInboundUnidirectionalStreamsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxInboundUnidirectionalStreams != null ? retObjectMaxInboundUnidirectionalStreams.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +208,7 @@ public class QuicConnectionOptions extends NetObject  {
 
     public void setMaxInboundUnidirectionalStreams(int MaxInboundUnidirectionalStreams) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxInboundUnidirectionalStreams", MaxInboundUnidirectionalStreams);
         } catch (JCNativeException jcne) {
@@ -198,9 +218,19 @@ public class QuicConnectionOptions extends NetObject  {
 
     public long getDefaultCloseErrorCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultCloseErrorCode = null;
         try {
-            return (long)classInstance.Get("DefaultCloseErrorCode");
+            retObjectDefaultCloseErrorCode = classInstance.Get("DefaultCloseErrorCode");
+            return (long)retObjectDefaultCloseErrorCode;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDefaultCloseErrorCodeNumber = (java.lang.Number)retObjectDefaultCloseErrorCode;
+                return retObjectDefaultCloseErrorCodeNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectDefaultCloseErrorCode != null ? retObjectDefaultCloseErrorCode.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +238,7 @@ public class QuicConnectionOptions extends NetObject  {
 
     public void setDefaultCloseErrorCode(long DefaultCloseErrorCode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultCloseErrorCode", DefaultCloseErrorCode);
         } catch (JCNativeException jcne) {
@@ -218,9 +248,19 @@ public class QuicConnectionOptions extends NetObject  {
 
     public long getDefaultStreamErrorCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultStreamErrorCode = null;
         try {
-            return (long)classInstance.Get("DefaultStreamErrorCode");
+            retObjectDefaultStreamErrorCode = classInstance.Get("DefaultStreamErrorCode");
+            return (long)retObjectDefaultStreamErrorCode;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDefaultStreamErrorCodeNumber = (java.lang.Number)retObjectDefaultStreamErrorCode;
+                return retObjectDefaultStreamErrorCodeNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectDefaultStreamErrorCode != null ? retObjectDefaultStreamErrorCode.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +268,7 @@ public class QuicConnectionOptions extends NetObject  {
 
     public void setDefaultStreamErrorCode(long DefaultStreamErrorCode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultStreamErrorCode", DefaultStreamErrorCode);
         } catch (JCNativeException jcne) {
@@ -238,10 +278,14 @@ public class QuicConnectionOptions extends NetObject  {
 
     public TimeSpan getIdleTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdleTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IdleTimeout");
+            retObjectIdleTimeout = classInstance.Get("IdleTimeout");
+            JCObject val = (JCObject)retObjectIdleTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdleTimeout != null ? retObjectIdleTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +293,7 @@ public class QuicConnectionOptions extends NetObject  {
 
     public void setIdleTimeout(TimeSpan IdleTimeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IdleTimeout", IdleTimeout == null ? null : IdleTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -164,9 +164,13 @@ public class ResolveSDKReference extends TaskExtension  {
     
     public boolean Execute() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.InvalidCastException, system.NotSupportedException, system.NullReferenceException, system.io.PathTooLongException, system.xml.XmlException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class ResolveSDKReference extends TaskExtension  {
     
     public boolean getLogResolutionErrorsAsWarnings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogResolutionErrorsAsWarnings = null;
         try {
-            return (boolean)classInstance.Get("LogResolutionErrorsAsWarnings");
+            retObjectLogResolutionErrorsAsWarnings = classInstance.Get("LogResolutionErrorsAsWarnings");
+            return (boolean)retObjectLogResolutionErrorsAsWarnings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLogResolutionErrorsAsWarnings != null ? retObjectLogResolutionErrorsAsWarnings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class ResolveSDKReference extends TaskExtension  {
 
     public void setLogResolutionErrorsAsWarnings(boolean LogResolutionErrorsAsWarnings) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LogResolutionErrorsAsWarnings", LogResolutionErrorsAsWarnings);
         } catch (JCNativeException jcne) {
@@ -198,9 +206,13 @@ public class ResolveSDKReference extends TaskExtension  {
 
     public boolean getPrefer32Bit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrefer32Bit = null;
         try {
-            return (boolean)classInstance.Get("Prefer32Bit");
+            retObjectPrefer32Bit = classInstance.Get("Prefer32Bit");
+            return (boolean)retObjectPrefer32Bit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPrefer32Bit != null ? retObjectPrefer32Bit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +220,7 @@ public class ResolveSDKReference extends TaskExtension  {
 
     public void setPrefer32Bit(boolean Prefer32Bit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Prefer32Bit", Prefer32Bit);
         } catch (JCNativeException jcne) {
@@ -218,16 +230,20 @@ public class ResolveSDKReference extends TaskExtension  {
 
     public final ITaskItem[] getInstalledSDKs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstalledSDKs = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("InstalledSDKs");
+            retObjectInstalledSDKs = classInstance.Get("InstalledSDKs");
+            JCObject resultingObjects = (JCObject)retObjectInstalledSDKs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstalledSDKs != null ? retObjectInstalledSDKs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +251,7 @@ public class ResolveSDKReference extends TaskExtension  {
 
     public void setInstalledSDKs(ITaskItem[] InstalledSDKs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstalledSDKs", toObjectFromArray(InstalledSDKs));
         } catch (JCNativeException jcne) {
@@ -245,16 +261,20 @@ public class ResolveSDKReference extends TaskExtension  {
 
     public final ITaskItem[] getReferences() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferences = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("References");
+            retObjectReferences = classInstance.Get("References");
+            JCObject resultingObjects = (JCObject)retObjectReferences;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferences != null ? retObjectReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +282,7 @@ public class ResolveSDKReference extends TaskExtension  {
 
     public void setReferences(ITaskItem[] References) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("References", toObjectFromArray(References));
         } catch (JCNativeException jcne) {
@@ -272,16 +292,20 @@ public class ResolveSDKReference extends TaskExtension  {
 
     public final ITaskItem[] getResolvedSDKReferences() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolvedSDKReferences = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ResolvedSDKReferences");
+            retObjectResolvedSDKReferences = classInstance.Get("ResolvedSDKReferences");
+            JCObject resultingObjects = (JCObject)retObjectResolvedSDKReferences;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolvedSDKReferences != null ? retObjectResolvedSDKReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +313,7 @@ public class ResolveSDKReference extends TaskExtension  {
 
     public void setResolvedSDKReferences(ITaskItem[] ResolvedSDKReferences) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResolvedSDKReferences", toObjectFromArray(ResolvedSDKReferences));
         } catch (JCNativeException jcne) {
@@ -299,16 +323,20 @@ public class ResolveSDKReference extends TaskExtension  {
 
     public final ITaskItem[] getSDKReferences() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSDKReferences = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SDKReferences");
+            retObjectSDKReferences = classInstance.Get("SDKReferences");
+            JCObject resultingObjects = (JCObject)retObjectSDKReferences;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSDKReferences != null ? retObjectSDKReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +344,7 @@ public class ResolveSDKReference extends TaskExtension  {
 
     public void setSDKReferences(ITaskItem[] SDKReferences) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SDKReferences", toObjectFromArray(SDKReferences));
         } catch (JCNativeException jcne) {
@@ -326,9 +354,13 @@ public class ResolveSDKReference extends TaskExtension  {
 
     public java.lang.String getTargetedSDKArchitecture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetedSDKArchitecture = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetedSDKArchitecture");
+            retObjectTargetedSDKArchitecture = classInstance.Get("TargetedSDKArchitecture");
+            return (java.lang.String)retObjectTargetedSDKArchitecture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetedSDKArchitecture != null ? retObjectTargetedSDKArchitecture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,7 +368,7 @@ public class ResolveSDKReference extends TaskExtension  {
 
     public void setTargetedSDKArchitecture(java.lang.String TargetedSDKArchitecture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetedSDKArchitecture", TargetedSDKArchitecture);
         } catch (JCNativeException jcne) {
@@ -346,9 +378,13 @@ public class ResolveSDKReference extends TaskExtension  {
 
     public java.lang.String getTargetedSDKConfiguration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetedSDKConfiguration = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetedSDKConfiguration");
+            retObjectTargetedSDKConfiguration = classInstance.Get("TargetedSDKConfiguration");
+            return (java.lang.String)retObjectTargetedSDKConfiguration;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetedSDKConfiguration != null ? retObjectTargetedSDKConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,7 +392,7 @@ public class ResolveSDKReference extends TaskExtension  {
 
     public void setTargetedSDKConfiguration(java.lang.String TargetedSDKConfiguration) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetedSDKConfiguration", TargetedSDKConfiguration);
         } catch (JCNativeException jcne) {

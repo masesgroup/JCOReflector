@@ -182,7 +182,7 @@ public class XslCompiledTransform extends NetObject  {
     
     public void Load(MethodInfo executeMethod, byte[] queryData, NetType[] earlyBoundTypes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.io.IOException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.xml.XmlException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", executeMethod == null ? null : executeMethod.getJCOInstance(), queryData, toObjectFromArray(earlyBoundTypes));
         } catch (JCNativeException jcne) {
@@ -192,7 +192,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Load(MethodInfo dupParam0, JCORefOut dupParam1, NetType[] dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.io.IOException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.xml.XmlException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), toObjectFromArray(dupParam2));
         } catch (JCNativeException jcne) {
@@ -202,7 +202,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Load(java.lang.String stylesheetUri, XsltSettings settings, XmlResolver stylesheetResolver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.xml.xsl.XsltException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", stylesheetUri, settings == null ? null : settings.getJCOInstance(), stylesheetResolver == null ? null : stylesheetResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,7 +212,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Load(java.lang.String stylesheetUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.xml.xsl.XsltException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", stylesheetUri);
         } catch (JCNativeException jcne) {
@@ -222,7 +222,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Load(NetType compiledStylesheet) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.io.IOException, system.OutOfMemoryException, system.xml.XmlException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", compiledStylesheet == null ? null : compiledStylesheet.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -232,7 +232,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Load(XmlReader stylesheet, XsltSettings settings, XmlResolver stylesheetResolver) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.xml.xsl.XsltException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", stylesheet == null ? null : stylesheet.getJCOInstance(), settings == null ? null : settings.getJCOInstance(), stylesheetResolver == null ? null : stylesheetResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -242,7 +242,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Load(XmlReader stylesheet) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.xml.xsl.XsltException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", stylesheet == null ? null : stylesheet.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,7 +252,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Load(IXPathNavigable stylesheet, XsltSettings settings, XmlResolver stylesheetResolver) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.xml.xsl.XsltException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", stylesheet == null ? null : stylesheet.getJCOInstance(), settings == null ? null : settings.getJCOInstance(), stylesheetResolver == null ? null : stylesheetResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -262,7 +262,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Load(IXPathNavigable stylesheet) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.xml.xsl.XsltException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", stylesheet == null ? null : stylesheet.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -272,7 +272,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Transform(java.lang.String inputUri, java.lang.String resultsFile) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.UriFormatException, system.diagnostics.UnreachableException, system.NotImplementedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.io.IOException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", inputUri, resultsFile);
         } catch (JCNativeException jcne) {
@@ -282,7 +282,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Transform(java.lang.String inputUri, XmlWriter results) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.UriFormatException, system.diagnostics.UnreachableException, system.NotImplementedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", inputUri, results == null ? null : results.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -292,7 +292,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Transform(java.lang.String inputUri, XsltArgumentList arguments, Stream results) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.UriFormatException, system.diagnostics.UnreachableException, system.NotImplementedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", inputUri, arguments == null ? null : arguments.getJCOInstance(), results == null ? null : results.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -302,7 +302,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Transform(java.lang.String inputUri, XsltArgumentList arguments, TextWriter results) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.UriFormatException, system.diagnostics.UnreachableException, system.NotImplementedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", inputUri, arguments == null ? null : arguments.getJCOInstance(), results == null ? null : results.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -312,7 +312,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Transform(java.lang.String inputUri, XsltArgumentList arguments, XmlWriter results) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.UriFormatException, system.diagnostics.UnreachableException, system.NotImplementedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", inputUri, arguments == null ? null : arguments.getJCOInstance(), results == null ? null : results.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -322,7 +322,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Transform(XmlReader input, XmlWriter results) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), results == null ? null : results.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -332,7 +332,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Transform(XmlReader input, XsltArgumentList arguments, Stream results) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), arguments == null ? null : arguments.getJCOInstance(), results == null ? null : results.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -342,7 +342,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Transform(XmlReader input, XsltArgumentList arguments, TextWriter results) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), arguments == null ? null : arguments.getJCOInstance(), results == null ? null : results.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -352,7 +352,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Transform(XmlReader input, XsltArgumentList arguments, XmlWriter results, XmlResolver documentResolver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), arguments == null ? null : arguments.getJCOInstance(), results == null ? null : results.getJCOInstance(), documentResolver == null ? null : documentResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -362,7 +362,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Transform(XmlReader input, XsltArgumentList arguments, XmlWriter results) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), arguments == null ? null : arguments.getJCOInstance(), results == null ? null : results.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -372,7 +372,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Transform(IXPathNavigable input, XmlWriter results) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), results == null ? null : results.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -382,7 +382,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Transform(IXPathNavigable input, XsltArgumentList arguments, Stream results) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), arguments == null ? null : arguments.getJCOInstance(), results == null ? null : results.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -392,7 +392,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Transform(IXPathNavigable input, XsltArgumentList arguments, TextWriter results) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), arguments == null ? null : arguments.getJCOInstance(), results == null ? null : results.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -402,7 +402,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Transform(IXPathNavigable input, XsltArgumentList arguments, XmlWriter results, XmlResolver documentResolver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), arguments == null ? null : arguments.getJCOInstance(), results == null ? null : results.getJCOInstance(), documentResolver == null ? null : documentResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -412,7 +412,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void Transform(IXPathNavigable input, XsltArgumentList arguments, XmlWriter results) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), arguments == null ? null : arguments.getJCOInstance(), results == null ? null : results.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -426,10 +426,14 @@ public class XslCompiledTransform extends NetObject  {
     
     public XmlWriterSettings getOutputSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutputSettings");
+            retObjectOutputSettings = classInstance.Get("OutputSettings");
+            JCObject val = (JCObject)retObjectOutputSettings;
             return new XmlWriterSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputSettings != null ? retObjectOutputSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,7 +441,7 @@ public class XslCompiledTransform extends NetObject  {
 
     public void setOutputSettings(XmlWriterSettings OutputSettings) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OutputSettings", OutputSettings == null ? null : OutputSettings.getJCOInstance());
         } catch (JCNativeException jcne) {

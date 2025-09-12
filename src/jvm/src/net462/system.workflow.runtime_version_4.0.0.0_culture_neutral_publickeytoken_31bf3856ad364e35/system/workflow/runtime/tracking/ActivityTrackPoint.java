@@ -168,10 +168,14 @@ public class ActivityTrackPoint extends NetObject  {
     
     public ActivityTrackingLocationCollection getExcludedLocations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExcludedLocations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExcludedLocations");
+            retObjectExcludedLocations = classInstance.Get("ExcludedLocations");
+            JCObject val = (JCObject)retObjectExcludedLocations;
             return new ActivityTrackingLocationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExcludedLocations != null ? retObjectExcludedLocations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class ActivityTrackPoint extends NetObject  {
 
     public ActivityTrackingLocationCollection getMatchingLocations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchingLocations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MatchingLocations");
+            retObjectMatchingLocations = classInstance.Get("MatchingLocations");
+            JCObject val = (JCObject)retObjectMatchingLocations;
             return new ActivityTrackingLocationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatchingLocations != null ? retObjectMatchingLocations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +198,14 @@ public class ActivityTrackPoint extends NetObject  {
 
     public ExtractCollection getExtracts() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtracts = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Extracts");
+            retObjectExtracts = classInstance.Get("Extracts");
+            JCObject val = (JCObject)retObjectExtracts;
             return new ExtractCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtracts != null ? retObjectExtracts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +213,14 @@ public class ActivityTrackPoint extends NetObject  {
 
     public TrackingAnnotationCollection getAnnotations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnnotations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Annotations");
+            retObjectAnnotations = classInstance.Get("Annotations");
+            JCObject val = (JCObject)retObjectAnnotations;
             return new TrackingAnnotationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnnotations != null ? retObjectAnnotations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

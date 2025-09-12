@@ -185,10 +185,14 @@ public class HttpIOException extends IOException {
     
     public HttpRequestError getHttpRequestError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHttpRequestError = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HttpRequestError");
+            retObjectHttpRequestError = classInstance.Get("HttpRequestError");
+            JCObject val = (JCObject)retObjectHttpRequestError;
             return new HttpRequestError(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHttpRequestError != null ? retObjectHttpRequestError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

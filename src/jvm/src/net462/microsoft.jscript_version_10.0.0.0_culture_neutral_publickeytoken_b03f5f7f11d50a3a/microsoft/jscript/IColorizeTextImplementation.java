@@ -145,10 +145,14 @@ public class IColorizeTextImplementation extends NetObject implements IColorizeT
     
     public ITokenEnumerator Colorize(java.lang.String sourceCode, SourceState state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColorize = null;
         try {
-            JCObject objColorize = (JCObject)classInstance.Invoke("Colorize", sourceCode, state == null ? null : state.getJCOInstance());
+            retObjectColorize = classInstance.Invoke("Colorize", sourceCode, state == null ? null : state.getJCOInstance());
+            JCObject objColorize = (JCObject)retObjectColorize;
             return new ITokenEnumeratorImplementation(objColorize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColorize != null ? retObjectColorize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,10 +160,14 @@ public class IColorizeTextImplementation extends NetObject implements IColorizeT
 
     public SourceState GetStateForText(java.lang.String sourceCode, SourceState currentState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStateForText = null;
         try {
-            JCObject objGetStateForText = (JCObject)classInstance.Invoke("GetStateForText", sourceCode, currentState == null ? null : currentState.getJCOInstance());
+            retObjectGetStateForText = classInstance.Invoke("GetStateForText", sourceCode, currentState == null ? null : currentState.getJCOInstance());
+            JCObject objGetStateForText = (JCObject)retObjectGetStateForText;
             return new SourceState(objGetStateForText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStateForText != null ? retObjectGetStateForText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

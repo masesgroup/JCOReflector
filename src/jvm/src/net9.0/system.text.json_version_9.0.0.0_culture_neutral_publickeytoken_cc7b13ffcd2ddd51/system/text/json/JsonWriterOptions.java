@@ -161,9 +161,13 @@ public class JsonWriterOptions extends ValueType  {
     
     public boolean getIndented() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndented = null;
         try {
-            return (boolean)classInstance.Get("Indented");
+            retObjectIndented = classInstance.Get("Indented");
+            return (boolean)retObjectIndented;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIndented != null ? retObjectIndented.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class JsonWriterOptions extends ValueType  {
 
     public void setIndented(boolean Indented) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Indented", Indented);
         } catch (JCNativeException jcne) {
@@ -181,9 +185,13 @@ public class JsonWriterOptions extends ValueType  {
 
     public boolean getSkipValidation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipValidation = null;
         try {
-            return (boolean)classInstance.Get("SkipValidation");
+            retObjectSkipValidation = classInstance.Get("SkipValidation");
+            return (boolean)retObjectSkipValidation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSkipValidation != null ? retObjectSkipValidation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +199,7 @@ public class JsonWriterOptions extends ValueType  {
 
     public void setSkipValidation(boolean SkipValidation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipValidation", SkipValidation);
         } catch (JCNativeException jcne) {
@@ -201,9 +209,13 @@ public class JsonWriterOptions extends ValueType  {
 
     public char getIndentCharacter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndentCharacter = null;
         try {
-            return (char)classInstance.Get("IndentCharacter");
+            retObjectIndentCharacter = classInstance.Get("IndentCharacter");
+            return (char)retObjectIndentCharacter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectIndentCharacter != null ? retObjectIndentCharacter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +223,7 @@ public class JsonWriterOptions extends ValueType  {
 
     public void setIndentCharacter(char IndentCharacter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IndentCharacter", IndentCharacter);
         } catch (JCNativeException jcne) {
@@ -221,9 +233,19 @@ public class JsonWriterOptions extends ValueType  {
 
     public int getIndentSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndentSize = null;
         try {
-            return (int)classInstance.Get("IndentSize");
+            retObjectIndentSize = classInstance.Get("IndentSize");
+            return (int)retObjectIndentSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndentSizeNumber = (java.lang.Number)retObjectIndentSize;
+                return retObjectIndentSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndentSize != null ? retObjectIndentSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +253,7 @@ public class JsonWriterOptions extends ValueType  {
 
     public void setIndentSize(int IndentSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IndentSize", IndentSize);
         } catch (JCNativeException jcne) {
@@ -241,9 +263,19 @@ public class JsonWriterOptions extends ValueType  {
 
     public int getMaxDepth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxDepth = null;
         try {
-            return (int)classInstance.Get("MaxDepth");
+            retObjectMaxDepth = classInstance.Get("MaxDepth");
+            return (int)retObjectMaxDepth;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxDepthNumber = (java.lang.Number)retObjectMaxDepth;
+                return retObjectMaxDepthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxDepth != null ? retObjectMaxDepth.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +283,7 @@ public class JsonWriterOptions extends ValueType  {
 
     public void setMaxDepth(int MaxDepth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxDepth", MaxDepth);
         } catch (JCNativeException jcne) {
@@ -261,9 +293,13 @@ public class JsonWriterOptions extends ValueType  {
 
     public java.lang.String getNewLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewLine = null;
         try {
-            return (java.lang.String)classInstance.Get("NewLine");
+            retObjectNewLine = classInstance.Get("NewLine");
+            return (java.lang.String)retObjectNewLine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNewLine != null ? retObjectNewLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +307,7 @@ public class JsonWriterOptions extends ValueType  {
 
     public void setNewLine(java.lang.String NewLine) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewLine", NewLine);
         } catch (JCNativeException jcne) {
@@ -281,10 +317,14 @@ public class JsonWriterOptions extends ValueType  {
 
     public JavaScriptEncoder getEncoder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncoder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Encoder");
+            retObjectEncoder = classInstance.Get("Encoder");
+            JCObject val = (JCObject)retObjectEncoder;
             return new JavaScriptEncoder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncoder != null ? retObjectEncoder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +332,7 @@ public class JsonWriterOptions extends ValueType  {
 
     public void setEncoder(JavaScriptEncoder Encoder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Encoder", Encoder == null ? null : Encoder.getJCOInstance());
         } catch (JCNativeException jcne) {

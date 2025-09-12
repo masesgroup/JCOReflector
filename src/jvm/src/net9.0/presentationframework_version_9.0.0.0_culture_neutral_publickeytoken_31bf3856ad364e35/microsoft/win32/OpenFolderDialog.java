@@ -163,7 +163,7 @@ public class OpenFolderDialog extends CommonItemDialog  {
     
     public void Reset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -177,9 +177,13 @@ public class OpenFolderDialog extends CommonItemDialog  {
     
     public boolean getMultiselect() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMultiselect = null;
         try {
-            return (boolean)classInstance.Get("Multiselect");
+            retObjectMultiselect = classInstance.Get("Multiselect");
+            return (boolean)retObjectMultiselect;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMultiselect != null ? retObjectMultiselect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class OpenFolderDialog extends CommonItemDialog  {
 
     public void setMultiselect(boolean Multiselect) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Multiselect", Multiselect);
         } catch (JCNativeException jcne) {
@@ -197,9 +201,13 @@ public class OpenFolderDialog extends CommonItemDialog  {
 
     public java.lang.String getFolderName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFolderName = null;
         try {
-            return (java.lang.String)classInstance.Get("FolderName");
+            retObjectFolderName = classInstance.Get("FolderName");
+            return (java.lang.String)retObjectFolderName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFolderName != null ? retObjectFolderName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +215,7 @@ public class OpenFolderDialog extends CommonItemDialog  {
 
     public void setFolderName(java.lang.String FolderName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FolderName", FolderName);
         } catch (JCNativeException jcne) {
@@ -217,9 +225,13 @@ public class OpenFolderDialog extends CommonItemDialog  {
 
     public java.lang.String getSafeFolderName() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSafeFolderName = null;
         try {
-            return (java.lang.String)classInstance.Get("SafeFolderName");
+            retObjectSafeFolderName = classInstance.Get("SafeFolderName");
+            return (java.lang.String)retObjectSafeFolderName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSafeFolderName != null ? retObjectSafeFolderName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +239,12 @@ public class OpenFolderDialog extends CommonItemDialog  {
 
     public java.lang.String[] getFolderNames() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFolderNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("FolderNames");
+            retObjectFolderNames = classInstance.Get("FolderNames");
+            JCObject resultingObjects = (JCObject)retObjectFolderNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -239,6 +253,8 @@ public class OpenFolderDialog extends CommonItemDialog  {
 				resultingArray[indexFolderNames] = (java.lang.String)resultingArrayList.get(indexFolderNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectFolderNames != null ? retObjectFolderNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +262,12 @@ public class OpenFolderDialog extends CommonItemDialog  {
 
     public java.lang.String[] getSafeFolderNames() throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSafeFolderNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SafeFolderNames");
+            retObjectSafeFolderNames = classInstance.Get("SafeFolderNames");
+            JCObject resultingObjects = (JCObject)retObjectSafeFolderNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -258,6 +276,8 @@ public class OpenFolderDialog extends CommonItemDialog  {
 				resultingArray[indexSafeFolderNames] = (java.lang.String)resultingArrayList.get(indexSafeFolderNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectSafeFolderNames != null ? retObjectSafeFolderNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +290,7 @@ public class OpenFolderDialog extends CommonItemDialog  {
 
     public void addFolderOk(CancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FolderOk", handler);
         } catch (JCNativeException jcne) {
@@ -280,7 +300,7 @@ public class OpenFolderDialog extends CommonItemDialog  {
 
     public void removeFolderOk(CancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FolderOk", handler);
         } catch (JCNativeException jcne) {

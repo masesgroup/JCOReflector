@@ -157,16 +157,20 @@ public class GridTablesFactory extends NetObject  {
     
     public static DataGridTableStyle[] CreateGridTables(DataGridTableStyle gridTable, NetObject dataSource, java.lang.String dataMember, BindingContext bindingManager) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateGridTables = null;
         try {
             ArrayList<DataGridTableStyle> resultingArrayList = new ArrayList<DataGridTableStyle>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("CreateGridTables", gridTable == null ? null : gridTable.getJCOInstance(), dataSource == null ? null : dataSource.getJCOInstance(), dataMember, bindingManager == null ? null : bindingManager.getJCOInstance());
+            retObjectCreateGridTables = classType.Invoke("CreateGridTables", gridTable == null ? null : gridTable.getJCOInstance(), dataSource == null ? null : dataSource.getJCOInstance(), dataMember, bindingManager == null ? null : bindingManager.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectCreateGridTables;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataGridTableStyle(resultingObject));
             }
             DataGridTableStyle[] resultingArray = new DataGridTableStyle[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateGridTables != null ? retObjectCreateGridTables.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

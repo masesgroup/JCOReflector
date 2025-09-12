@@ -164,9 +164,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
     
     public boolean ShouldSerializeAlgorithmSuite() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeAlgorithmSuite = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeAlgorithmSuite");
+            retObjectShouldSerializeAlgorithmSuite = classInstance.Invoke("ShouldSerializeAlgorithmSuite");
+            return (boolean)retObjectShouldSerializeAlgorithmSuite;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeAlgorithmSuite != null ? retObjectShouldSerializeAlgorithmSuite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     public boolean ShouldSerializeClaimTypeRequirements() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeClaimTypeRequirements = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeClaimTypeRequirements");
+            retObjectShouldSerializeClaimTypeRequirements = classInstance.Invoke("ShouldSerializeClaimTypeRequirements");
+            return (boolean)retObjectShouldSerializeClaimTypeRequirements;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeClaimTypeRequirements != null ? retObjectShouldSerializeClaimTypeRequirements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     public boolean ShouldSerializeEstablishSecurityContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeEstablishSecurityContext = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeEstablishSecurityContext");
+            retObjectShouldSerializeEstablishSecurityContext = classInstance.Invoke("ShouldSerializeEstablishSecurityContext");
+            return (boolean)retObjectShouldSerializeEstablishSecurityContext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeEstablishSecurityContext != null ? retObjectShouldSerializeEstablishSecurityContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +206,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     public boolean ShouldSerializeIssuedKeyType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeIssuedKeyType = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeIssuedKeyType");
+            retObjectShouldSerializeIssuedKeyType = classInstance.Invoke("ShouldSerializeIssuedKeyType");
+            return (boolean)retObjectShouldSerializeIssuedKeyType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeIssuedKeyType != null ? retObjectShouldSerializeIssuedKeyType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +220,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     public boolean ShouldSerializeNegotiateServiceCredential() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeNegotiateServiceCredential = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeNegotiateServiceCredential");
+            retObjectShouldSerializeNegotiateServiceCredential = classInstance.Invoke("ShouldSerializeNegotiateServiceCredential");
+            return (boolean)retObjectShouldSerializeNegotiateServiceCredential;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeNegotiateServiceCredential != null ? retObjectShouldSerializeNegotiateServiceCredential.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +234,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     public boolean ShouldSerializeTokenRequestParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeTokenRequestParameters = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeTokenRequestParameters");
+            retObjectShouldSerializeTokenRequestParameters = classInstance.Invoke("ShouldSerializeTokenRequestParameters");
+            return (boolean)retObjectShouldSerializeTokenRequestParameters;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeTokenRequestParameters != null ? retObjectShouldSerializeTokenRequestParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +252,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
     
     public boolean getEstablishSecurityContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEstablishSecurityContext = null;
         try {
-            return (boolean)classInstance.Get("EstablishSecurityContext");
+            retObjectEstablishSecurityContext = classInstance.Get("EstablishSecurityContext");
+            return (boolean)retObjectEstablishSecurityContext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEstablishSecurityContext != null ? retObjectEstablishSecurityContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +266,7 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     public void setEstablishSecurityContext(boolean EstablishSecurityContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EstablishSecurityContext", EstablishSecurityContext);
         } catch (JCNativeException jcne) {
@@ -248,9 +276,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     public boolean getNegotiateServiceCredential() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNegotiateServiceCredential = null;
         try {
-            return (boolean)classInstance.Get("NegotiateServiceCredential");
+            retObjectNegotiateServiceCredential = classInstance.Get("NegotiateServiceCredential");
+            return (boolean)retObjectNegotiateServiceCredential;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNegotiateServiceCredential != null ? retObjectNegotiateServiceCredential.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +290,7 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     public void setNegotiateServiceCredential(boolean NegotiateServiceCredential) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NegotiateServiceCredential", NegotiateServiceCredential);
         } catch (JCNativeException jcne) {
@@ -268,10 +300,14 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     public SecurityKeyType getIssuedKeyType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuedKeyType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IssuedKeyType");
+            retObjectIssuedKeyType = classInstance.Get("IssuedKeyType");
+            JCObject val = (JCObject)retObjectIssuedKeyType;
             return new SecurityKeyType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuedKeyType != null ? retObjectIssuedKeyType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +315,7 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     public void setIssuedKeyType(SecurityKeyType IssuedKeyType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuedKeyType", IssuedKeyType == null ? null : IssuedKeyType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -289,10 +325,14 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     public system.servicemodel.channels.Binding getIssuerBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuerBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IssuerBinding");
+            retObjectIssuerBinding = classInstance.Get("IssuerBinding");
+            JCObject val = (JCObject)retObjectIssuerBinding;
             return new system.servicemodel.channels.Binding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuerBinding != null ? retObjectIssuerBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +340,7 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     public void setIssuerBinding(system.servicemodel.channels.Binding IssuerBinding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuerBinding", IssuerBinding == null ? null : IssuerBinding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -310,10 +350,14 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     public EndpointAddress getIssuerAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuerAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IssuerAddress");
+            retObjectIssuerAddress = classInstance.Get("IssuerAddress");
+            JCObject val = (JCObject)retObjectIssuerAddress;
             return new EndpointAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuerAddress != null ? retObjectIssuerAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,7 +365,7 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     public void setIssuerAddress(EndpointAddress IssuerAddress) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuerAddress", IssuerAddress == null ? null : IssuerAddress.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -331,10 +375,14 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     public EndpointAddress getIssuerMetadataAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuerMetadataAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IssuerMetadataAddress");
+            retObjectIssuerMetadataAddress = classInstance.Get("IssuerMetadataAddress");
+            JCObject val = (JCObject)retObjectIssuerMetadataAddress;
             return new EndpointAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuerMetadataAddress != null ? retObjectIssuerMetadataAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +390,7 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     public void setIssuerMetadataAddress(EndpointAddress IssuerMetadataAddress) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuerMetadataAddress", IssuerMetadataAddress == null ? null : IssuerMetadataAddress.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -352,10 +400,14 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     public SecurityAlgorithmSuite getAlgorithmSuite() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlgorithmSuite = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AlgorithmSuite");
+            retObjectAlgorithmSuite = classInstance.Get("AlgorithmSuite");
+            JCObject val = (JCObject)retObjectAlgorithmSuite;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlgorithmSuite != null ? retObjectAlgorithmSuite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,7 +415,7 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     public void setAlgorithmSuite(SecurityAlgorithmSuite AlgorithmSuite) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlgorithmSuite", AlgorithmSuite == null ? null : AlgorithmSuite.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -373,9 +425,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     public java.lang.String getIssuedTokenType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuedTokenType = null;
         try {
-            return (java.lang.String)classInstance.Get("IssuedTokenType");
+            retObjectIssuedTokenType = classInstance.Get("IssuedTokenType");
+            return (java.lang.String)retObjectIssuedTokenType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIssuedTokenType != null ? retObjectIssuedTokenType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,7 +439,7 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     public void setIssuedTokenType(java.lang.String IssuedTokenType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuedTokenType", IssuedTokenType);
         } catch (JCNativeException jcne) {

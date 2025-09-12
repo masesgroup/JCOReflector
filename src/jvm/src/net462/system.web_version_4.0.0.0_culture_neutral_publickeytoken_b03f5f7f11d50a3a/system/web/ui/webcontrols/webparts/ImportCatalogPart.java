@@ -165,10 +165,14 @@ public class ImportCatalogPart extends CatalogPart  {
     
     public WebPart GetWebPart(WebPartDescription description) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.IndexOutOfRangeException, system.xml.XmlException, system.MulticastNotSupportedException, system.xml.schema.XmlSchemaException, system.FormatException, system.security.SecurityException, system.TypeLoadException, system.OverflowException, system.web.HttpRequestValidationException, system.web.HttpCompileException, system.reflection.AmbiguousMatchException, system.io.InvalidDataException, system.RankException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetWebPart = null;
         try {
-            JCObject objGetWebPart = (JCObject)classInstance.Invoke("GetWebPart", description == null ? null : description.getJCOInstance());
+            retObjectGetWebPart = classInstance.Invoke("GetWebPart", description == null ? null : description.getJCOInstance());
+            JCObject objGetWebPart = (JCObject)retObjectGetWebPart;
             return new WebPart(objGetWebPart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetWebPart != null ? retObjectGetWebPart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class ImportCatalogPart extends CatalogPart  {
 
     public WebPartDescriptionCollection GetAvailableWebPartDescriptions() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.MissingMethodException, system.NullReferenceException, system.security.SecurityException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.xml.XmlException, system.io.EndOfStreamException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAvailableWebPartDescriptions = null;
         try {
-            JCObject objGetAvailableWebPartDescriptions = (JCObject)classInstance.Invoke("GetAvailableWebPartDescriptions");
+            retObjectGetAvailableWebPartDescriptions = classInstance.Invoke("GetAvailableWebPartDescriptions");
+            JCObject objGetAvailableWebPartDescriptions = (JCObject)retObjectGetAvailableWebPartDescriptions;
             return new WebPartDescriptionCollection(objGetAvailableWebPartDescriptions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAvailableWebPartDescriptions != null ? retObjectGetAvailableWebPartDescriptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +199,13 @@ public class ImportCatalogPart extends CatalogPart  {
     
     public java.lang.String getBrowseHelpText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBrowseHelpText = null;
         try {
-            return (java.lang.String)classInstance.Get("BrowseHelpText");
+            retObjectBrowseHelpText = classInstance.Get("BrowseHelpText");
+            return (java.lang.String)retObjectBrowseHelpText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBrowseHelpText != null ? retObjectBrowseHelpText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +213,7 @@ public class ImportCatalogPart extends CatalogPart  {
 
     public void setBrowseHelpText(java.lang.String BrowseHelpText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BrowseHelpText", BrowseHelpText);
         } catch (JCNativeException jcne) {
@@ -211,9 +223,13 @@ public class ImportCatalogPart extends CatalogPart  {
 
     public java.lang.String getImportedPartLabelText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportedPartLabelText = null;
         try {
-            return (java.lang.String)classInstance.Get("ImportedPartLabelText");
+            retObjectImportedPartLabelText = classInstance.Get("ImportedPartLabelText");
+            return (java.lang.String)retObjectImportedPartLabelText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectImportedPartLabelText != null ? retObjectImportedPartLabelText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +237,7 @@ public class ImportCatalogPart extends CatalogPart  {
 
     public void setImportedPartLabelText(java.lang.String ImportedPartLabelText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImportedPartLabelText", ImportedPartLabelText);
         } catch (JCNativeException jcne) {
@@ -231,9 +247,13 @@ public class ImportCatalogPart extends CatalogPart  {
 
     public java.lang.String getPartImportErrorLabelText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartImportErrorLabelText = null;
         try {
-            return (java.lang.String)classInstance.Get("PartImportErrorLabelText");
+            retObjectPartImportErrorLabelText = classInstance.Get("PartImportErrorLabelText");
+            return (java.lang.String)retObjectPartImportErrorLabelText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPartImportErrorLabelText != null ? retObjectPartImportErrorLabelText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +261,7 @@ public class ImportCatalogPart extends CatalogPart  {
 
     public void setPartImportErrorLabelText(java.lang.String PartImportErrorLabelText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PartImportErrorLabelText", PartImportErrorLabelText);
         } catch (JCNativeException jcne) {
@@ -251,9 +271,13 @@ public class ImportCatalogPart extends CatalogPart  {
 
     public java.lang.String getUploadButtonText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadButtonText = null;
         try {
-            return (java.lang.String)classInstance.Get("UploadButtonText");
+            retObjectUploadButtonText = classInstance.Get("UploadButtonText");
+            return (java.lang.String)retObjectUploadButtonText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUploadButtonText != null ? retObjectUploadButtonText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +285,7 @@ public class ImportCatalogPart extends CatalogPart  {
 
     public void setUploadButtonText(java.lang.String UploadButtonText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UploadButtonText", UploadButtonText);
         } catch (JCNativeException jcne) {
@@ -271,9 +295,13 @@ public class ImportCatalogPart extends CatalogPart  {
 
     public java.lang.String getUploadHelpText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadHelpText = null;
         try {
-            return (java.lang.String)classInstance.Get("UploadHelpText");
+            retObjectUploadHelpText = classInstance.Get("UploadHelpText");
+            return (java.lang.String)retObjectUploadHelpText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUploadHelpText != null ? retObjectUploadHelpText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +309,7 @@ public class ImportCatalogPart extends CatalogPart  {
 
     public void setUploadHelpText(java.lang.String UploadHelpText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UploadHelpText", UploadHelpText);
         } catch (JCNativeException jcne) {

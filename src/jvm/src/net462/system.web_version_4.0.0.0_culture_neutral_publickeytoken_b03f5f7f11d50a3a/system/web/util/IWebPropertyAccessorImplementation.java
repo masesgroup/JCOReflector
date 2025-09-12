@@ -142,10 +142,14 @@ public class IWebPropertyAccessorImplementation extends NetObject implements IWe
     
     public NetObject GetProperty(NetObject target) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProperty = null;
         try {
-            JCObject objGetProperty = (JCObject)classInstance.Invoke("GetProperty", target == null ? null : target.getJCOInstance());
+            retObjectGetProperty = classInstance.Invoke("GetProperty", target == null ? null : target.getJCOInstance());
+            JCObject objGetProperty = (JCObject)retObjectGetProperty;
             return new NetObject(objGetProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperty != null ? retObjectGetProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,7 +157,7 @@ public class IWebPropertyAccessorImplementation extends NetObject implements IWe
 
     public void SetProperty(NetObject target, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetProperty", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

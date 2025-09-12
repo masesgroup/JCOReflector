@@ -167,9 +167,13 @@ public class XpsSignatureDefinition extends NetObject  {
     
     public boolean getHasBeenModified() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasBeenModified = null;
         try {
-            return (boolean)classInstance.Get("HasBeenModified");
+            retObjectHasBeenModified = classInstance.Get("HasBeenModified");
+            return (boolean)retObjectHasBeenModified;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasBeenModified != null ? retObjectHasBeenModified.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class XpsSignatureDefinition extends NetObject  {
 
     public void setHasBeenModified(boolean HasBeenModified) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HasBeenModified", HasBeenModified);
         } catch (JCNativeException jcne) {
@@ -187,10 +191,14 @@ public class XpsSignatureDefinition extends NetObject  {
 
     public CultureInfo getCulture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCulture = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Culture");
+            retObjectCulture = classInstance.Get("Culture");
+            JCObject val = (JCObject)retObjectCulture;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCulture != null ? retObjectCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class XpsSignatureDefinition extends NetObject  {
 
     public void setCulture(CultureInfo Culture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Culture", Culture == null ? null : Culture.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,9 +216,13 @@ public class XpsSignatureDefinition extends NetObject  {
 
     public java.lang.String getIntent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIntent = null;
         try {
-            return (java.lang.String)classInstance.Get("Intent");
+            retObjectIntent = classInstance.Get("Intent");
+            return (java.lang.String)retObjectIntent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIntent != null ? retObjectIntent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class XpsSignatureDefinition extends NetObject  {
 
     public void setIntent(java.lang.String Intent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Intent", Intent);
         } catch (JCNativeException jcne) {
@@ -228,9 +240,13 @@ public class XpsSignatureDefinition extends NetObject  {
 
     public java.lang.String getRequestedSigner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestedSigner = null;
         try {
-            return (java.lang.String)classInstance.Get("RequestedSigner");
+            retObjectRequestedSigner = classInstance.Get("RequestedSigner");
+            return (java.lang.String)retObjectRequestedSigner;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRequestedSigner != null ? retObjectRequestedSigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +254,7 @@ public class XpsSignatureDefinition extends NetObject  {
 
     public void setRequestedSigner(java.lang.String RequestedSigner) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequestedSigner", RequestedSigner);
         } catch (JCNativeException jcne) {
@@ -248,9 +264,13 @@ public class XpsSignatureDefinition extends NetObject  {
 
     public java.lang.String getSigningLocale() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSigningLocale = null;
         try {
-            return (java.lang.String)classInstance.Get("SigningLocale");
+            retObjectSigningLocale = classInstance.Get("SigningLocale");
+            return (java.lang.String)retObjectSigningLocale;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSigningLocale != null ? retObjectSigningLocale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +278,7 @@ public class XpsSignatureDefinition extends NetObject  {
 
     public void setSigningLocale(java.lang.String SigningLocale) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SigningLocale", SigningLocale);
         } catch (JCNativeException jcne) {
@@ -268,10 +288,14 @@ public class XpsSignatureDefinition extends NetObject  {
 
     public SpotLocation getSpotLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpotLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SpotLocation");
+            retObjectSpotLocation = classInstance.Get("SpotLocation");
+            JCObject val = (JCObject)retObjectSpotLocation;
             return new SpotLocation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpotLocation != null ? retObjectSpotLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +303,7 @@ public class XpsSignatureDefinition extends NetObject  {
 
     public void setSpotLocation(SpotLocation SpotLocation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SpotLocation", SpotLocation == null ? null : SpotLocation.getJCOInstance());
         } catch (JCNativeException jcne) {

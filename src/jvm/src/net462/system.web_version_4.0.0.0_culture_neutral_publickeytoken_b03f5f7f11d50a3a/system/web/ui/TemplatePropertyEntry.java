@@ -160,9 +160,13 @@ public class TemplatePropertyEntry extends BuilderPropertyEntry  {
     
     public boolean getBindableTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindableTemplate = null;
         try {
-            return (boolean)classInstance.Get("BindableTemplate");
+            retObjectBindableTemplate = classInstance.Get("BindableTemplate");
+            return (boolean)retObjectBindableTemplate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBindableTemplate != null ? retObjectBindableTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

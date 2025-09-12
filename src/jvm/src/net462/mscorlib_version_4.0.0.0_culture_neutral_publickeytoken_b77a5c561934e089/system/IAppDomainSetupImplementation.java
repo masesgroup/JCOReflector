@@ -146,9 +146,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
     
     public java.lang.String getApplicationBase() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationBase = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationBase");
+            retObjectApplicationBase = classInstance.Get("ApplicationBase");
+            return (java.lang.String)retObjectApplicationBase;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationBase != null ? retObjectApplicationBase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,7 +160,7 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
 
     public void setApplicationBase(java.lang.String ApplicationBase) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationBase", ApplicationBase);
         } catch (JCNativeException jcne) {
@@ -166,9 +170,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
 
     public java.lang.String getApplicationName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationName = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationName");
+            retObjectApplicationName = classInstance.Get("ApplicationName");
+            return (java.lang.String)retObjectApplicationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationName != null ? retObjectApplicationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +184,7 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
 
     public void setApplicationName(java.lang.String ApplicationName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationName", ApplicationName);
         } catch (JCNativeException jcne) {
@@ -186,9 +194,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
 
     public java.lang.String getCachePath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCachePath = null;
         try {
-            return (java.lang.String)classInstance.Get("CachePath");
+            retObjectCachePath = classInstance.Get("CachePath");
+            return (java.lang.String)retObjectCachePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCachePath != null ? retObjectCachePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +208,7 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
 
     public void setCachePath(java.lang.String CachePath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CachePath", CachePath);
         } catch (JCNativeException jcne) {
@@ -206,9 +218,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
 
     public java.lang.String getConfigurationFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfigurationFile = null;
         try {
-            return (java.lang.String)classInstance.Get("ConfigurationFile");
+            retObjectConfigurationFile = classInstance.Get("ConfigurationFile");
+            return (java.lang.String)retObjectConfigurationFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConfigurationFile != null ? retObjectConfigurationFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +232,7 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
 
     public void setConfigurationFile(java.lang.String ConfigurationFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConfigurationFile", ConfigurationFile);
         } catch (JCNativeException jcne) {
@@ -226,9 +242,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
 
     public java.lang.String getDynamicBase() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicBase = null;
         try {
-            return (java.lang.String)classInstance.Get("DynamicBase");
+            retObjectDynamicBase = classInstance.Get("DynamicBase");
+            return (java.lang.String)retObjectDynamicBase;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDynamicBase != null ? retObjectDynamicBase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +256,7 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
 
     public void setDynamicBase(java.lang.String DynamicBase) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DynamicBase", DynamicBase);
         } catch (JCNativeException jcne) {
@@ -246,9 +266,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
 
     public java.lang.String getLicenseFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLicenseFile = null;
         try {
-            return (java.lang.String)classInstance.Get("LicenseFile");
+            retObjectLicenseFile = classInstance.Get("LicenseFile");
+            return (java.lang.String)retObjectLicenseFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLicenseFile != null ? retObjectLicenseFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +280,7 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
 
     public void setLicenseFile(java.lang.String LicenseFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LicenseFile", LicenseFile);
         } catch (JCNativeException jcne) {
@@ -266,9 +290,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
 
     public java.lang.String getPrivateBinPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrivateBinPath = null;
         try {
-            return (java.lang.String)classInstance.Get("PrivateBinPath");
+            retObjectPrivateBinPath = classInstance.Get("PrivateBinPath");
+            return (java.lang.String)retObjectPrivateBinPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPrivateBinPath != null ? retObjectPrivateBinPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +304,7 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
 
     public void setPrivateBinPath(java.lang.String PrivateBinPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrivateBinPath", PrivateBinPath);
         } catch (JCNativeException jcne) {
@@ -286,9 +314,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
 
     public java.lang.String getPrivateBinPathProbe() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrivateBinPathProbe = null;
         try {
-            return (java.lang.String)classInstance.Get("PrivateBinPathProbe");
+            retObjectPrivateBinPathProbe = classInstance.Get("PrivateBinPathProbe");
+            return (java.lang.String)retObjectPrivateBinPathProbe;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPrivateBinPathProbe != null ? retObjectPrivateBinPathProbe.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,7 +328,7 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
 
     public void setPrivateBinPathProbe(java.lang.String PrivateBinPathProbe) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrivateBinPathProbe", PrivateBinPathProbe);
         } catch (JCNativeException jcne) {
@@ -306,9 +338,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
 
     public java.lang.String getShadowCopyDirectories() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShadowCopyDirectories = null;
         try {
-            return (java.lang.String)classInstance.Get("ShadowCopyDirectories");
+            retObjectShadowCopyDirectories = classInstance.Get("ShadowCopyDirectories");
+            return (java.lang.String)retObjectShadowCopyDirectories;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectShadowCopyDirectories != null ? retObjectShadowCopyDirectories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +352,7 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
 
     public void setShadowCopyDirectories(java.lang.String ShadowCopyDirectories) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShadowCopyDirectories", ShadowCopyDirectories);
         } catch (JCNativeException jcne) {
@@ -326,9 +362,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
 
     public java.lang.String getShadowCopyFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShadowCopyFiles = null;
         try {
-            return (java.lang.String)classInstance.Get("ShadowCopyFiles");
+            retObjectShadowCopyFiles = classInstance.Get("ShadowCopyFiles");
+            return (java.lang.String)retObjectShadowCopyFiles;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectShadowCopyFiles != null ? retObjectShadowCopyFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,7 +376,7 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
 
     public void setShadowCopyFiles(java.lang.String ShadowCopyFiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShadowCopyFiles", ShadowCopyFiles);
         } catch (JCNativeException jcne) {

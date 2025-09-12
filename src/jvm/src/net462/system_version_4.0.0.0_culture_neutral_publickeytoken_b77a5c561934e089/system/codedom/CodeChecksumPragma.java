@@ -177,10 +177,12 @@ public class CodeChecksumPragma extends CodeDirective  {
     
     public byte[] getChecksumData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChecksumData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ChecksumData");
+            retObjectChecksumData = classInstance.Get("ChecksumData");
+            JCObject resultingObjects = (JCObject)retObjectChecksumData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -189,6 +191,8 @@ public class CodeChecksumPragma extends CodeDirective  {
 				resultingArray[indexChecksumData] = (byte)resultingArrayList.get(indexChecksumData);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectChecksumData != null ? retObjectChecksumData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +200,7 @@ public class CodeChecksumPragma extends CodeDirective  {
 
     public void setChecksumData(byte[] ChecksumData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ChecksumData", ChecksumData);
         } catch (JCNativeException jcne) {
@@ -206,10 +210,14 @@ public class CodeChecksumPragma extends CodeDirective  {
 
     public Guid getChecksumAlgorithmId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChecksumAlgorithmId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ChecksumAlgorithmId");
+            retObjectChecksumAlgorithmId = classInstance.Get("ChecksumAlgorithmId");
+            JCObject val = (JCObject)retObjectChecksumAlgorithmId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChecksumAlgorithmId != null ? retObjectChecksumAlgorithmId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +225,7 @@ public class CodeChecksumPragma extends CodeDirective  {
 
     public void setChecksumAlgorithmId(Guid ChecksumAlgorithmId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ChecksumAlgorithmId", ChecksumAlgorithmId == null ? null : ChecksumAlgorithmId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -227,9 +235,13 @@ public class CodeChecksumPragma extends CodeDirective  {
 
     public java.lang.String getFileName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileName = null;
         try {
-            return (java.lang.String)classInstance.Get("FileName");
+            retObjectFileName = classInstance.Get("FileName");
+            return (java.lang.String)retObjectFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFileName != null ? retObjectFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +249,7 @@ public class CodeChecksumPragma extends CodeDirective  {
 
     public void setFileName(java.lang.String FileName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FileName", FileName);
         } catch (JCNativeException jcne) {

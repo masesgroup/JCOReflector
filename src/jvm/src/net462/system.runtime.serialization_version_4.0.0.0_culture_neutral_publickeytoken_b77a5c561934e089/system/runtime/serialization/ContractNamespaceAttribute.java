@@ -170,9 +170,13 @@ public class ContractNamespaceAttribute extends Attribute  {
     
     public java.lang.String getClrNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClrNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("ClrNamespace");
+            retObjectClrNamespace = classInstance.Get("ClrNamespace");
+            return (java.lang.String)retObjectClrNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClrNamespace != null ? retObjectClrNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class ContractNamespaceAttribute extends Attribute  {
 
     public void setClrNamespace(java.lang.String ClrNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClrNamespace", ClrNamespace);
         } catch (JCNativeException jcne) {
@@ -190,9 +194,13 @@ public class ContractNamespaceAttribute extends Attribute  {
 
     public java.lang.String getContractNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContractNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("ContractNamespace");
+            retObjectContractNamespace = classInstance.Get("ContractNamespace");
+            return (java.lang.String)retObjectContractNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContractNamespace != null ? retObjectContractNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

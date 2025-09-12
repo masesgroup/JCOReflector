@@ -155,10 +155,14 @@ public class MessageEncoderFactory extends NetObject  {
     
     public MessageEncoder CreateSessionEncoder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSessionEncoder = null;
         try {
-            JCObject objCreateSessionEncoder = (JCObject)classInstance.Invoke("CreateSessionEncoder");
+            retObjectCreateSessionEncoder = classInstance.Invoke("CreateSessionEncoder");
+            JCObject objCreateSessionEncoder = (JCObject)retObjectCreateSessionEncoder;
             return new MessageEncoder(objCreateSessionEncoder);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSessionEncoder != null ? retObjectCreateSessionEncoder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class MessageEncoderFactory extends NetObject  {
     
     public MessageEncoder getEncoder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncoder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Encoder");
+            retObjectEncoder = classInstance.Get("Encoder");
+            JCObject val = (JCObject)retObjectEncoder;
             return new MessageEncoder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncoder != null ? retObjectEncoder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class MessageEncoderFactory extends NetObject  {
 
     public MessageVersion getMessageVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageVersion");
+            retObjectMessageVersion = classInstance.Get("MessageVersion");
+            JCObject val = (JCObject)retObjectMessageVersion;
             return new MessageVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageVersion != null ? retObjectMessageVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -200,10 +200,14 @@ public class ActivityBlockingUpdate extends NetObject  {
     
     public Activity getActivity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Activity");
+            retObjectActivity = classInstance.Get("Activity");
+            JCObject val = (JCObject)retObjectActivity;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivity != null ? retObjectActivity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +215,13 @@ public class ActivityBlockingUpdate extends NetObject  {
 
     public java.lang.String getActivityInstanceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityInstanceId = null;
         try {
-            return (java.lang.String)classInstance.Get("ActivityInstanceId");
+            retObjectActivityInstanceId = classInstance.Get("ActivityInstanceId");
+            return (java.lang.String)retObjectActivityInstanceId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectActivityInstanceId != null ? retObjectActivityInstanceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +229,7 @@ public class ActivityBlockingUpdate extends NetObject  {
 
     public void setActivityInstanceId(java.lang.String ActivityInstanceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActivityInstanceId", ActivityInstanceId);
         } catch (JCNativeException jcne) {
@@ -231,9 +239,13 @@ public class ActivityBlockingUpdate extends NetObject  {
 
     public java.lang.String getOriginalActivityId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginalActivityId = null;
         try {
-            return (java.lang.String)classInstance.Get("OriginalActivityId");
+            retObjectOriginalActivityId = classInstance.Get("OriginalActivityId");
+            return (java.lang.String)retObjectOriginalActivityId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOriginalActivityId != null ? retObjectOriginalActivityId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +253,7 @@ public class ActivityBlockingUpdate extends NetObject  {
 
     public void setOriginalActivityId(java.lang.String OriginalActivityId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OriginalActivityId", OriginalActivityId);
         } catch (JCNativeException jcne) {
@@ -251,9 +263,13 @@ public class ActivityBlockingUpdate extends NetObject  {
 
     public java.lang.String getReason() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReason = null;
         try {
-            return (java.lang.String)classInstance.Get("Reason");
+            retObjectReason = classInstance.Get("Reason");
+            return (java.lang.String)retObjectReason;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectReason != null ? retObjectReason.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +277,7 @@ public class ActivityBlockingUpdate extends NetObject  {
 
     public void setReason(java.lang.String Reason) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Reason", Reason);
         } catch (JCNativeException jcne) {
@@ -271,9 +287,13 @@ public class ActivityBlockingUpdate extends NetObject  {
 
     public java.lang.String getUpdatedActivityId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdatedActivityId = null;
         try {
-            return (java.lang.String)classInstance.Get("UpdatedActivityId");
+            retObjectUpdatedActivityId = classInstance.Get("UpdatedActivityId");
+            return (java.lang.String)retObjectUpdatedActivityId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUpdatedActivityId != null ? retObjectUpdatedActivityId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +301,7 @@ public class ActivityBlockingUpdate extends NetObject  {
 
     public void setUpdatedActivityId(java.lang.String UpdatedActivityId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdatedActivityId", UpdatedActivityId);
         } catch (JCNativeException jcne) {

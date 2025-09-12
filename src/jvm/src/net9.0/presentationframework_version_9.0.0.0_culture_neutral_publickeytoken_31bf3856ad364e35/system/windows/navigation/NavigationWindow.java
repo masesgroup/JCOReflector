@@ -173,9 +173,13 @@ public class NavigationWindow extends Window  {
     
     public boolean Navigate(NetObject content, NetObject extraData) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.InvalidCastException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.globalization.CultureNotFoundException, system.UriFormatException, system.RankException, system.SystemException, system.ArgumentNullException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigate = null;
         try {
-            return (boolean)classInstance.Invoke("Navigate", content == null ? null : content.getJCOInstance(), extraData == null ? null : extraData.getJCOInstance());
+            retObjectNavigate = classInstance.Invoke("Navigate", content == null ? null : content.getJCOInstance(), extraData == null ? null : extraData.getJCOInstance());
+            return (boolean)retObjectNavigate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectNavigate != null ? retObjectNavigate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +187,13 @@ public class NavigationWindow extends Window  {
 
     public boolean Navigate(NetObject content) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.InvalidCastException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.UriFormatException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.SystemException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigate = null;
         try {
-            return (boolean)classInstance.Invoke("Navigate", content == null ? null : content.getJCOInstance());
+            retObjectNavigate = classInstance.Invoke("Navigate", content == null ? null : content.getJCOInstance());
+            return (boolean)retObjectNavigate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectNavigate != null ? retObjectNavigate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +201,13 @@ public class NavigationWindow extends Window  {
 
     public boolean Navigate(Uri source, NetObject extraData) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.UriFormatException, system.ArrayTypeMismatchException, system.FormatException, system.InvalidCastException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.RankException, system.SystemException, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigate = null;
         try {
-            return (boolean)classInstance.Invoke("Navigate", source == null ? null : source.getJCOInstance(), extraData == null ? null : extraData.getJCOInstance());
+            retObjectNavigate = classInstance.Invoke("Navigate", source == null ? null : source.getJCOInstance(), extraData == null ? null : extraData.getJCOInstance());
+            return (boolean)retObjectNavigate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectNavigate != null ? retObjectNavigate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +215,13 @@ public class NavigationWindow extends Window  {
 
     public boolean Navigate(Uri source) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.UriFormatException, system.ArrayTypeMismatchException, system.FormatException, system.InvalidCastException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.RankException, system.SystemException, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigate = null;
         try {
-            return (boolean)classInstance.Invoke("Navigate", source == null ? null : source.getJCOInstance());
+            retObjectNavigate = classInstance.Invoke("Navigate", source == null ? null : source.getJCOInstance());
+            return (boolean)retObjectNavigate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectNavigate != null ? retObjectNavigate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +229,13 @@ public class NavigationWindow extends Window  {
 
     public boolean ShouldSerializeContent() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.UriFormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeContent = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeContent");
+            retObjectShouldSerializeContent = classInstance.Invoke("ShouldSerializeContent");
+            return (boolean)retObjectShouldSerializeContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeContent != null ? retObjectShouldSerializeContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +243,14 @@ public class NavigationWindow extends Window  {
 
     public JournalEntry RemoveBackEntry() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveBackEntry = null;
         try {
-            JCObject objRemoveBackEntry = (JCObject)classInstance.Invoke("RemoveBackEntry");
+            retObjectRemoveBackEntry = classInstance.Invoke("RemoveBackEntry");
+            JCObject objRemoveBackEntry = (JCObject)retObjectRemoveBackEntry;
             return new JournalEntry(objRemoveBackEntry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveBackEntry != null ? retObjectRemoveBackEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +258,7 @@ public class NavigationWindow extends Window  {
 
     public void AddBackEntry(CustomContentState state) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.FormatException, system.SystemException, system.UriFormatException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddBackEntry", state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -244,7 +268,7 @@ public class NavigationWindow extends Window  {
 
     public void GoBack() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GoBack");
         } catch (JCNativeException jcne) {
@@ -254,7 +278,7 @@ public class NavigationWindow extends Window  {
 
     public void GoForward() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GoForward");
         } catch (JCNativeException jcne) {
@@ -264,7 +288,7 @@ public class NavigationWindow extends Window  {
 
     public void OnApplyTemplate() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {
@@ -274,7 +298,7 @@ public class NavigationWindow extends Window  {
 
     public void Refresh() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.FormatException, system.InvalidCastException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.RankException, system.ArrayTypeMismatchException, system.SystemException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Refresh");
         } catch (JCNativeException jcne) {
@@ -284,7 +308,7 @@ public class NavigationWindow extends Window  {
 
     public void StopLoading() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidCastException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StopLoading");
         } catch (JCNativeException jcne) {
@@ -298,9 +322,13 @@ public class NavigationWindow extends Window  {
     
     public boolean getCanGoBack() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanGoBack = null;
         try {
-            return (boolean)classInstance.Get("CanGoBack");
+            retObjectCanGoBack = classInstance.Get("CanGoBack");
+            return (boolean)retObjectCanGoBack;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanGoBack != null ? retObjectCanGoBack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,9 +336,13 @@ public class NavigationWindow extends Window  {
 
     public boolean getCanGoForward() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanGoForward = null;
         try {
-            return (boolean)classInstance.Get("CanGoForward");
+            retObjectCanGoForward = classInstance.Get("CanGoForward");
+            return (boolean)retObjectCanGoForward;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanGoForward != null ? retObjectCanGoForward.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,9 +350,13 @@ public class NavigationWindow extends Window  {
 
     public boolean getSandboxExternalContent() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSandboxExternalContent = null;
         try {
-            return (boolean)classInstance.Get("SandboxExternalContent");
+            retObjectSandboxExternalContent = classInstance.Get("SandboxExternalContent");
+            return (boolean)retObjectSandboxExternalContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSandboxExternalContent != null ? retObjectSandboxExternalContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,7 +364,7 @@ public class NavigationWindow extends Window  {
 
     public void setSandboxExternalContent(boolean SandboxExternalContent) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SandboxExternalContent", SandboxExternalContent);
         } catch (JCNativeException jcne) {
@@ -338,9 +374,13 @@ public class NavigationWindow extends Window  {
 
     public boolean getShowsNavigationUI() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowsNavigationUI = null;
         try {
-            return (boolean)classInstance.Get("ShowsNavigationUI");
+            retObjectShowsNavigationUI = classInstance.Get("ShowsNavigationUI");
+            return (boolean)retObjectShowsNavigationUI;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowsNavigationUI != null ? retObjectShowsNavigationUI.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,7 +388,7 @@ public class NavigationWindow extends Window  {
 
     public void setShowsNavigationUI(boolean ShowsNavigationUI) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowsNavigationUI", ShowsNavigationUI);
         } catch (JCNativeException jcne) {
@@ -358,10 +398,14 @@ public class NavigationWindow extends Window  {
 
     public IEnumerable getBackStack() throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackStack = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackStack");
+            retObjectBackStack = classInstance.Get("BackStack");
+            JCObject val = (JCObject)retObjectBackStack;
             return new IEnumerableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackStack != null ? retObjectBackStack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,10 +413,14 @@ public class NavigationWindow extends Window  {
 
     public IEnumerable getForwardStack() throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForwardStack = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ForwardStack");
+            retObjectForwardStack = classInstance.Get("ForwardStack");
+            JCObject val = (JCObject)retObjectForwardStack;
             return new IEnumerableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForwardStack != null ? retObjectForwardStack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,10 +428,14 @@ public class NavigationWindow extends Window  {
 
     public Uri getCurrentSource() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentSource");
+            retObjectCurrentSource = classInstance.Get("CurrentSource");
+            JCObject val = (JCObject)retObjectCurrentSource;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentSource != null ? retObjectCurrentSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,10 +443,14 @@ public class NavigationWindow extends Window  {
 
     public Uri getSource() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Source");
+            retObjectSource = classInstance.Get("Source");
+            JCObject val = (JCObject)retObjectSource;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSource != null ? retObjectSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,7 +458,7 @@ public class NavigationWindow extends Window  {
 
     public void setSource(Uri Source) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Source", Source == null ? null : Source.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -412,10 +468,14 @@ public class NavigationWindow extends Window  {
 
     public NavigationService getNavigationService() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigationService = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NavigationService");
+            retObjectNavigationService = classInstance.Get("NavigationService");
+            JCObject val = (JCObject)retObjectNavigationService;
             return new NavigationService(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavigationService != null ? retObjectNavigationService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,7 +488,7 @@ public class NavigationWindow extends Window  {
 
     public void addFragmentNavigation(FragmentNavigationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FragmentNavigation", handler);
         } catch (JCNativeException jcne) {
@@ -438,7 +498,7 @@ public class NavigationWindow extends Window  {
 
     public void removeFragmentNavigation(FragmentNavigationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FragmentNavigation", handler);
         } catch (JCNativeException jcne) {
@@ -448,7 +508,7 @@ public class NavigationWindow extends Window  {
 
     public void addLoadCompleted(LoadCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LoadCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -458,7 +518,7 @@ public class NavigationWindow extends Window  {
 
     public void removeLoadCompleted(LoadCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LoadCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -468,7 +528,7 @@ public class NavigationWindow extends Window  {
 
     public void addNavigated(NavigatedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Navigated", handler);
         } catch (JCNativeException jcne) {
@@ -478,7 +538,7 @@ public class NavigationWindow extends Window  {
 
     public void removeNavigated(NavigatedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Navigated", handler);
         } catch (JCNativeException jcne) {
@@ -488,7 +548,7 @@ public class NavigationWindow extends Window  {
 
     public void addNavigating(NavigatingCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Navigating", handler);
         } catch (JCNativeException jcne) {
@@ -498,7 +558,7 @@ public class NavigationWindow extends Window  {
 
     public void removeNavigating(NavigatingCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Navigating", handler);
         } catch (JCNativeException jcne) {
@@ -508,7 +568,7 @@ public class NavigationWindow extends Window  {
 
     public void addNavigationFailed(NavigationFailedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("NavigationFailed", handler);
         } catch (JCNativeException jcne) {
@@ -518,7 +578,7 @@ public class NavigationWindow extends Window  {
 
     public void removeNavigationFailed(NavigationFailedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("NavigationFailed", handler);
         } catch (JCNativeException jcne) {
@@ -528,7 +588,7 @@ public class NavigationWindow extends Window  {
 
     public void addNavigationProgress(NavigationProgressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("NavigationProgress", handler);
         } catch (JCNativeException jcne) {
@@ -538,7 +598,7 @@ public class NavigationWindow extends Window  {
 
     public void removeNavigationProgress(NavigationProgressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("NavigationProgress", handler);
         } catch (JCNativeException jcne) {
@@ -548,7 +608,7 @@ public class NavigationWindow extends Window  {
 
     public void addNavigationStopped(NavigationStoppedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("NavigationStopped", handler);
         } catch (JCNativeException jcne) {
@@ -558,7 +618,7 @@ public class NavigationWindow extends Window  {
 
     public void removeNavigationStopped(NavigationStoppedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("NavigationStopped", handler);
         } catch (JCNativeException jcne) {

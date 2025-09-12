@@ -166,9 +166,13 @@ public class IdentityProviderSingleSignOnDescriptor extends SingleSignOnDescript
     
     public boolean getWantAuthenticationRequestsSigned() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWantAuthenticationRequestsSigned = null;
         try {
-            return (boolean)classInstance.Get("WantAuthenticationRequestsSigned");
+            retObjectWantAuthenticationRequestsSigned = classInstance.Get("WantAuthenticationRequestsSigned");
+            return (boolean)retObjectWantAuthenticationRequestsSigned;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWantAuthenticationRequestsSigned != null ? retObjectWantAuthenticationRequestsSigned.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class IdentityProviderSingleSignOnDescriptor extends SingleSignOnDescript
 
     public void setWantAuthenticationRequestsSigned(boolean WantAuthenticationRequestsSigned) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WantAuthenticationRequestsSigned", WantAuthenticationRequestsSigned);
         } catch (JCNativeException jcne) {

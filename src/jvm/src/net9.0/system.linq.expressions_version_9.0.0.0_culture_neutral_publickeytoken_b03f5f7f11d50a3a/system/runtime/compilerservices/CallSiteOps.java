@@ -154,9 +154,13 @@ public class CallSiteOps extends NetObject  {
     
     public static boolean GetMatch(CallSite site) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMatch = null;
         try {
-            return (boolean)classType.Invoke("GetMatch", site == null ? null : site.getJCOInstance());
+            retObjectGetMatch = classType.Invoke("GetMatch", site == null ? null : site.getJCOInstance());
+            return (boolean)retObjectGetMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetMatch != null ? retObjectGetMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,13 @@ public class CallSiteOps extends NetObject  {
 
     public static boolean SetNotMatched(CallSite site) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSetNotMatched = null;
         try {
-            return (boolean)classType.Invoke("SetNotMatched", site == null ? null : site.getJCOInstance());
+            retObjectSetNotMatched = classType.Invoke("SetNotMatched", site == null ? null : site.getJCOInstance());
+            return (boolean)retObjectSetNotMatched;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetNotMatched != null ? retObjectSetNotMatched.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +182,7 @@ public class CallSiteOps extends NetObject  {
 
     public static void ClearMatch(CallSite site) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ClearMatch", site == null ? null : site.getJCOInstance());
         } catch (JCNativeException jcne) {

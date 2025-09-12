@@ -158,10 +158,14 @@ public class FontStyles extends NetObject  {
     
     public static FontStyle getItalic() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectItalic = null;
         try {
-            JCObject val = (JCObject)classType.Get("Italic");
+            retObjectItalic = classType.Get("Italic");
+            JCObject val = (JCObject)retObjectItalic;
             return new FontStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItalic != null ? retObjectItalic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class FontStyles extends NetObject  {
 
     public static FontStyle getNormal() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNormal = null;
         try {
-            JCObject val = (JCObject)classType.Get("Normal");
+            retObjectNormal = classType.Get("Normal");
+            JCObject val = (JCObject)retObjectNormal;
             return new FontStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNormal != null ? retObjectNormal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class FontStyles extends NetObject  {
 
     public static FontStyle getOblique() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOblique = null;
         try {
-            JCObject val = (JCObject)classType.Get("Oblique");
+            retObjectOblique = classType.Get("Oblique");
+            JCObject val = (JCObject)retObjectOblique;
             return new FontStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOblique != null ? retObjectOblique.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

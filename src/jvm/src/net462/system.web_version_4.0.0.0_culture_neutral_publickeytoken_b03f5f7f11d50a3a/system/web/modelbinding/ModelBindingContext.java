@@ -182,9 +182,13 @@ public class ModelBindingContext extends NetObject  {
     
     public boolean getValidateRequest() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateRequest = null;
         try {
-            return (boolean)classInstance.Get("ValidateRequest");
+            retObjectValidateRequest = classInstance.Get("ValidateRequest");
+            return (boolean)retObjectValidateRequest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValidateRequest != null ? retObjectValidateRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +196,7 @@ public class ModelBindingContext extends NetObject  {
 
     public void setValidateRequest(boolean ValidateRequest) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidateRequest", ValidateRequest);
         } catch (JCNativeException jcne) {
@@ -202,10 +206,14 @@ public class ModelBindingContext extends NetObject  {
 
     public NetObject getModel() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Model");
+            retObjectModel = classInstance.Get("Model");
+            JCObject val = (JCObject)retObjectModel;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModel != null ? retObjectModel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +221,7 @@ public class ModelBindingContext extends NetObject  {
 
     public void setModel(NetObject Model) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Model", Model == null ? null : Model.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -223,9 +231,13 @@ public class ModelBindingContext extends NetObject  {
 
     public java.lang.String getModelName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModelName = null;
         try {
-            return (java.lang.String)classInstance.Get("ModelName");
+            retObjectModelName = classInstance.Get("ModelName");
+            return (java.lang.String)retObjectModelName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectModelName != null ? retObjectModelName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +245,7 @@ public class ModelBindingContext extends NetObject  {
 
     public void setModelName(java.lang.String ModelName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ModelName", ModelName);
         } catch (JCNativeException jcne) {
@@ -243,10 +255,14 @@ public class ModelBindingContext extends NetObject  {
 
     public NetType getModelType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModelType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ModelType");
+            retObjectModelType = classInstance.Get("ModelType");
+            JCObject val = (JCObject)retObjectModelType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModelType != null ? retObjectModelType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +270,14 @@ public class ModelBindingContext extends NetObject  {
 
     public IValueProvider getValueProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValueProvider");
+            retObjectValueProvider = classInstance.Get("ValueProvider");
+            JCObject val = (JCObject)retObjectValueProvider;
             return new IValueProviderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValueProvider != null ? retObjectValueProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +285,7 @@ public class ModelBindingContext extends NetObject  {
 
     public void setValueProvider(IValueProvider ValueProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValueProvider", ValueProvider == null ? null : ValueProvider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -275,10 +295,14 @@ public class ModelBindingContext extends NetObject  {
 
     public ModelBinderProviderCollection getModelBinderProviders() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModelBinderProviders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ModelBinderProviders");
+            retObjectModelBinderProviders = classInstance.Get("ModelBinderProviders");
+            JCObject val = (JCObject)retObjectModelBinderProviders;
             return new ModelBinderProviderCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModelBinderProviders != null ? retObjectModelBinderProviders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +310,7 @@ public class ModelBindingContext extends NetObject  {
 
     public void setModelBinderProviders(ModelBinderProviderCollection ModelBinderProviders) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ModelBinderProviders", ModelBinderProviders == null ? null : ModelBinderProviders.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -296,10 +320,14 @@ public class ModelBindingContext extends NetObject  {
 
     public ModelMetadata getModelMetadata() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModelMetadata = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ModelMetadata");
+            retObjectModelMetadata = classInstance.Get("ModelMetadata");
+            JCObject val = (JCObject)retObjectModelMetadata;
             return new ModelMetadata(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModelMetadata != null ? retObjectModelMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,7 +335,7 @@ public class ModelBindingContext extends NetObject  {
 
     public void setModelMetadata(ModelMetadata ModelMetadata) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ModelMetadata", ModelMetadata == null ? null : ModelMetadata.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -317,10 +345,14 @@ public class ModelBindingContext extends NetObject  {
 
     public ModelStateDictionary getModelState() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModelState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ModelState");
+            retObjectModelState = classInstance.Get("ModelState");
+            JCObject val = (JCObject)retObjectModelState;
             return new ModelStateDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModelState != null ? retObjectModelState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,7 +360,7 @@ public class ModelBindingContext extends NetObject  {
 
     public void setModelState(ModelStateDictionary ModelState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ModelState", ModelState == null ? null : ModelState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -338,10 +370,14 @@ public class ModelBindingContext extends NetObject  {
 
     public ModelValidationNode getValidationNode() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidationNode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidationNode");
+            retObjectValidationNode = classInstance.Get("ValidationNode");
+            JCObject val = (JCObject)retObjectValidationNode;
             return new ModelValidationNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidationNode != null ? retObjectValidationNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,7 +385,7 @@ public class ModelBindingContext extends NetObject  {
 
     public void setValidationNode(ModelValidationNode ValidationNode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidationNode", ValidationNode == null ? null : ValidationNode.getJCOInstance());
         } catch (JCNativeException jcne) {

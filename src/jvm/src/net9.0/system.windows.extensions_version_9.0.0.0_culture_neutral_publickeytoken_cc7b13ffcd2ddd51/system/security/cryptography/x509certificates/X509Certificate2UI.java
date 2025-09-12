@@ -164,10 +164,14 @@ public class X509Certificate2UI extends NetObject  {
     
     public static X509Certificate2Collection SelectFromCollection(X509Certificate2Collection certificates, java.lang.String title, java.lang.String message, X509SelectionFlag selectionFlag) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.NullReferenceException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectFromCollection = null;
         try {
-            JCObject objSelectFromCollection = (JCObject)classType.Invoke("SelectFromCollection", certificates == null ? null : certificates.getJCOInstance(), title, message, selectionFlag == null ? null : selectionFlag.getJCOInstance());
+            retObjectSelectFromCollection = classType.Invoke("SelectFromCollection", certificates == null ? null : certificates.getJCOInstance(), title, message, selectionFlag == null ? null : selectionFlag.getJCOInstance());
+            JCObject objSelectFromCollection = (JCObject)retObjectSelectFromCollection;
             return new X509Certificate2Collection(objSelectFromCollection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectFromCollection != null ? retObjectSelectFromCollection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class X509Certificate2UI extends NetObject  {
 
     public static void DisplayCertificate(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DisplayCertificate", certificate == null ? null : certificate.getJCOInstance());
         } catch (JCNativeException jcne) {

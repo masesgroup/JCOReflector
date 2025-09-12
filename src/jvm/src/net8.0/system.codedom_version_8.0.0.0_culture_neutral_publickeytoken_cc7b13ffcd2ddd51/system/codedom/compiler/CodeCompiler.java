@@ -163,7 +163,7 @@ public class CodeCompiler extends CodeGenerator implements system.codedom.compil
      */
     @Deprecated 
     public CompilerResults CompileAssemblyFromDom(CompilerParameters options, CodeCompileUnit compilationUnit) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeCompiler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeCompiler to obtain the full interface.");
     }
 
     /**
@@ -172,7 +172,7 @@ public class CodeCompiler extends CodeGenerator implements system.codedom.compil
      */
     @Deprecated 
     public CompilerResults CompileAssemblyFromDomBatch(CompilerParameters options, CodeCompileUnit[] compilationUnits) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeCompiler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeCompiler to obtain the full interface.");
     }
 
     /**
@@ -181,7 +181,7 @@ public class CodeCompiler extends CodeGenerator implements system.codedom.compil
      */
     @Deprecated 
     public CompilerResults CompileAssemblyFromFile(CompilerParameters options, java.lang.String fileName) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeCompiler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeCompiler to obtain the full interface.");
     }
 
     /**
@@ -190,7 +190,7 @@ public class CodeCompiler extends CodeGenerator implements system.codedom.compil
      */
     @Deprecated 
     public CompilerResults CompileAssemblyFromFileBatch(CompilerParameters options, java.lang.String[] fileNames) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeCompiler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeCompiler to obtain the full interface.");
     }
 
     /**
@@ -199,7 +199,7 @@ public class CodeCompiler extends CodeGenerator implements system.codedom.compil
      */
     @Deprecated 
     public CompilerResults CompileAssemblyFromFileBatch(CompilerParameters dupParam0, JCORefOut dupParam1) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
     }
 
     /**
@@ -208,7 +208,7 @@ public class CodeCompiler extends CodeGenerator implements system.codedom.compil
      */
     @Deprecated 
     public CompilerResults CompileAssemblyFromSource(CompilerParameters options, java.lang.String source) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeCompiler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeCompiler to obtain the full interface.");
     }
 
     /**
@@ -217,7 +217,7 @@ public class CodeCompiler extends CodeGenerator implements system.codedom.compil
      */
     @Deprecated 
     public CompilerResults CompileAssemblyFromSourceBatch(CompilerParameters options, java.lang.String[] sources) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeCompiler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeCompiler to obtain the full interface.");
     }
 
     /**
@@ -226,7 +226,7 @@ public class CodeCompiler extends CodeGenerator implements system.codedom.compil
      */
     @Deprecated 
     public CompilerResults CompileAssemblyFromSourceBatch(CompilerParameters dupParam0, JCORefOut dupParam1) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
     }
 
 

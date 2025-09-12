@@ -165,9 +165,13 @@ public class FileAssociation extends NetObject  {
     
     public java.lang.String getDefaultIcon() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultIcon = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultIcon");
+            retObjectDefaultIcon = classInstance.Get("DefaultIcon");
+            return (java.lang.String)retObjectDefaultIcon;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultIcon != null ? retObjectDefaultIcon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class FileAssociation extends NetObject  {
 
     public void setDefaultIcon(java.lang.String DefaultIcon) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultIcon", DefaultIcon);
         } catch (JCNativeException jcne) {
@@ -185,9 +189,13 @@ public class FileAssociation extends NetObject  {
 
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class FileAssociation extends NetObject  {
 
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
@@ -205,9 +213,13 @@ public class FileAssociation extends NetObject  {
 
     public java.lang.String getExtension() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtension = null;
         try {
-            return (java.lang.String)classInstance.Get("Extension");
+            retObjectExtension = classInstance.Get("Extension");
+            return (java.lang.String)retObjectExtension;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExtension != null ? retObjectExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class FileAssociation extends NetObject  {
 
     public void setExtension(java.lang.String Extension) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Extension", Extension);
         } catch (JCNativeException jcne) {
@@ -225,9 +237,13 @@ public class FileAssociation extends NetObject  {
 
     public java.lang.String getProgId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProgId = null;
         try {
-            return (java.lang.String)classInstance.Get("ProgId");
+            retObjectProgId = classInstance.Get("ProgId");
+            return (java.lang.String)retObjectProgId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProgId != null ? retObjectProgId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +251,7 @@ public class FileAssociation extends NetObject  {
 
     public void setProgId(java.lang.String ProgId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProgId", ProgId);
         } catch (JCNativeException jcne) {
@@ -245,9 +261,13 @@ public class FileAssociation extends NetObject  {
 
     public java.lang.String getXmlDefaultIcon() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlDefaultIcon = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlDefaultIcon");
+            retObjectXmlDefaultIcon = classInstance.Get("XmlDefaultIcon");
+            return (java.lang.String)retObjectXmlDefaultIcon;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlDefaultIcon != null ? retObjectXmlDefaultIcon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +275,7 @@ public class FileAssociation extends NetObject  {
 
     public void setXmlDefaultIcon(java.lang.String XmlDefaultIcon) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlDefaultIcon", XmlDefaultIcon);
         } catch (JCNativeException jcne) {
@@ -265,9 +285,13 @@ public class FileAssociation extends NetObject  {
 
     public java.lang.String getXmlDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlDescription");
+            retObjectXmlDescription = classInstance.Get("XmlDescription");
+            return (java.lang.String)retObjectXmlDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlDescription != null ? retObjectXmlDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +299,7 @@ public class FileAssociation extends NetObject  {
 
     public void setXmlDescription(java.lang.String XmlDescription) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlDescription", XmlDescription);
         } catch (JCNativeException jcne) {
@@ -285,9 +309,13 @@ public class FileAssociation extends NetObject  {
 
     public java.lang.String getXmlExtension() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlExtension = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlExtension");
+            retObjectXmlExtension = classInstance.Get("XmlExtension");
+            return (java.lang.String)retObjectXmlExtension;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlExtension != null ? retObjectXmlExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +323,7 @@ public class FileAssociation extends NetObject  {
 
     public void setXmlExtension(java.lang.String XmlExtension) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlExtension", XmlExtension);
         } catch (JCNativeException jcne) {
@@ -305,9 +333,13 @@ public class FileAssociation extends NetObject  {
 
     public java.lang.String getXmlProgId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlProgId = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlProgId");
+            retObjectXmlProgId = classInstance.Get("XmlProgId");
+            return (java.lang.String)retObjectXmlProgId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlProgId != null ? retObjectXmlProgId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +347,7 @@ public class FileAssociation extends NetObject  {
 
     public void setXmlProgId(java.lang.String XmlProgId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlProgId", XmlProgId);
         } catch (JCNativeException jcne) {

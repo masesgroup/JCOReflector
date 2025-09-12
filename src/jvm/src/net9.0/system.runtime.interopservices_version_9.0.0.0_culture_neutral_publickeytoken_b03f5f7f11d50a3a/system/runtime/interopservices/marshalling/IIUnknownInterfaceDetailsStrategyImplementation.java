@@ -147,10 +147,14 @@ public class IIUnknownInterfaceDetailsStrategyImplementation extends NetObject i
     
     public IComExposedDetails GetComExposedTypeDetails(RuntimeTypeHandle type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetComExposedTypeDetails = null;
         try {
-            JCObject objGetComExposedTypeDetails = (JCObject)classInstance.Invoke("GetComExposedTypeDetails", type == null ? null : type.getJCOInstance());
+            retObjectGetComExposedTypeDetails = classInstance.Invoke("GetComExposedTypeDetails", type == null ? null : type.getJCOInstance());
+            JCObject objGetComExposedTypeDetails = (JCObject)retObjectGetComExposedTypeDetails;
             return new IComExposedDetailsImplementation(objGetComExposedTypeDetails);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetComExposedTypeDetails != null ? retObjectGetComExposedTypeDetails.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,10 +162,14 @@ public class IIUnknownInterfaceDetailsStrategyImplementation extends NetObject i
 
     public IIUnknownDerivedDetails GetIUnknownDerivedDetails(RuntimeTypeHandle type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIUnknownDerivedDetails = null;
         try {
-            JCObject objGetIUnknownDerivedDetails = (JCObject)classInstance.Invoke("GetIUnknownDerivedDetails", type == null ? null : type.getJCOInstance());
+            retObjectGetIUnknownDerivedDetails = classInstance.Invoke("GetIUnknownDerivedDetails", type == null ? null : type.getJCOInstance());
+            JCObject objGetIUnknownDerivedDetails = (JCObject)retObjectGetIUnknownDerivedDetails;
             return new IIUnknownDerivedDetailsImplementation(objGetIUnknownDerivedDetails);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIUnknownDerivedDetails != null ? retObjectGetIUnknownDerivedDetails.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

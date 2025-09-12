@@ -192,9 +192,13 @@ public class ParseChildrenAttribute extends Attribute  {
     
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefaultAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
+            retObjectIsDefaultAttribute = classInstance.Invoke("IsDefaultAttribute");
+            return (boolean)retObjectIsDefaultAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefaultAttribute != null ? retObjectIsDefaultAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +210,13 @@ public class ParseChildrenAttribute extends Attribute  {
     
     public boolean getChildrenAsProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChildrenAsProperties = null;
         try {
-            return (boolean)classInstance.Get("ChildrenAsProperties");
+            retObjectChildrenAsProperties = classInstance.Get("ChildrenAsProperties");
+            return (boolean)retObjectChildrenAsProperties;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectChildrenAsProperties != null ? retObjectChildrenAsProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +224,7 @@ public class ParseChildrenAttribute extends Attribute  {
 
     public void setChildrenAsProperties(boolean ChildrenAsProperties) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ChildrenAsProperties", ChildrenAsProperties);
         } catch (JCNativeException jcne) {
@@ -226,9 +234,13 @@ public class ParseChildrenAttribute extends Attribute  {
 
     public java.lang.String getDefaultProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultProperty = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultProperty");
+            retObjectDefaultProperty = classInstance.Get("DefaultProperty");
+            return (java.lang.String)retObjectDefaultProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultProperty != null ? retObjectDefaultProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +248,7 @@ public class ParseChildrenAttribute extends Attribute  {
 
     public void setDefaultProperty(java.lang.String DefaultProperty) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultProperty", DefaultProperty);
         } catch (JCNativeException jcne) {
@@ -246,10 +258,14 @@ public class ParseChildrenAttribute extends Attribute  {
 
     public NetType getChildControlType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChildControlType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ChildControlType");
+            retObjectChildControlType = classInstance.Get("ChildControlType");
+            JCObject val = (JCObject)retObjectChildControlType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChildControlType != null ? retObjectChildControlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

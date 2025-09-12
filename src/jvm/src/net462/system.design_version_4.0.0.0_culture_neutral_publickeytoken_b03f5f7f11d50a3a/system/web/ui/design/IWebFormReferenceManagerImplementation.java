@@ -142,9 +142,13 @@ public class IWebFormReferenceManagerImplementation extends NetObject implements
     
     public java.lang.String GetRegisterDirectives() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRegisterDirectives = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetRegisterDirectives");
+            retObjectGetRegisterDirectives = classInstance.Invoke("GetRegisterDirectives");
+            return (java.lang.String)retObjectGetRegisterDirectives;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetRegisterDirectives != null ? retObjectGetRegisterDirectives.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,9 +156,13 @@ public class IWebFormReferenceManagerImplementation extends NetObject implements
 
     public java.lang.String GetTagPrefix(NetType objectType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTagPrefix = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetTagPrefix", objectType == null ? null : objectType.getJCOInstance());
+            retObjectGetTagPrefix = classInstance.Invoke("GetTagPrefix", objectType == null ? null : objectType.getJCOInstance());
+            return (java.lang.String)retObjectGetTagPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetTagPrefix != null ? retObjectGetTagPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,10 +170,14 @@ public class IWebFormReferenceManagerImplementation extends NetObject implements
 
     public NetType GetObjectType(java.lang.String tagPrefix, java.lang.String typeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetObjectType = null;
         try {
-            JCObject objGetObjectType = (JCObject)classInstance.Invoke("GetObjectType", tagPrefix, typeName);
+            retObjectGetObjectType = classInstance.Invoke("GetObjectType", tagPrefix, typeName);
+            JCObject objGetObjectType = (JCObject)retObjectGetObjectType;
             return new NetType(objGetObjectType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObjectType != null ? retObjectGetObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

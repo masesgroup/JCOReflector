@@ -169,10 +169,14 @@ public class LocalVariableTypeEncoder extends ValueType  {
     
     public CustomModifiersEncoder CustomModifiers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomModifiers = null;
         try {
-            JCObject objCustomModifiers = (JCObject)classInstance.Invoke("CustomModifiers");
+            retObjectCustomModifiers = classInstance.Invoke("CustomModifiers");
+            JCObject objCustomModifiers = (JCObject)retObjectCustomModifiers;
             return new CustomModifiersEncoder(objCustomModifiers);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomModifiers != null ? retObjectCustomModifiers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class LocalVariableTypeEncoder extends ValueType  {
 
     public SignatureTypeEncoder Type(boolean isByRef, boolean isPinned) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject objType = (JCObject)classInstance.Invoke("Type", isByRef, isPinned);
+            retObjectType = classInstance.Invoke("Type", isByRef, isPinned);
+            JCObject objType = (JCObject)retObjectType;
             return new SignatureTypeEncoder(objType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +199,7 @@ public class LocalVariableTypeEncoder extends ValueType  {
 
     public void TypedReference() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TypedReference");
         } catch (JCNativeException jcne) {
@@ -205,10 +213,14 @@ public class LocalVariableTypeEncoder extends ValueType  {
     
     public BlobBuilder getBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuilder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Builder");
+            retObjectBuilder = classInstance.Get("Builder");
+            JCObject val = (JCObject)retObjectBuilder;
             return new BlobBuilder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuilder != null ? retObjectBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

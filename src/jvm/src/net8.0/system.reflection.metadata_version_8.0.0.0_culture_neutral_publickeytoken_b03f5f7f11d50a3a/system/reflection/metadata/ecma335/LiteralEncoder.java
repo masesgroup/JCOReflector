@@ -171,10 +171,14 @@ public class LiteralEncoder extends ValueType  {
     
     public ScalarEncoder Scalar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScalar = null;
         try {
-            JCObject objScalar = (JCObject)classInstance.Invoke("Scalar");
+            retObjectScalar = classInstance.Invoke("Scalar");
+            JCObject objScalar = (JCObject)retObjectScalar;
             return new ScalarEncoder(objScalar);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScalar != null ? retObjectScalar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class LiteralEncoder extends ValueType  {
 
     public VectorEncoder Vector() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVector = null;
         try {
-            JCObject objVector = (JCObject)classInstance.Invoke("Vector");
+            retObjectVector = classInstance.Invoke("Vector");
+            JCObject objVector = (JCObject)retObjectVector;
             return new VectorEncoder(objVector);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVector != null ? retObjectVector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +201,7 @@ public class LiteralEncoder extends ValueType  {
 
     public void TaggedScalar(JCORefOut<CustomAttributeElementTypeEncoder> type, JCORefOut<ScalarEncoder> scalar) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TaggedScalar", type.getJCRefOut(), scalar.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -203,7 +211,7 @@ public class LiteralEncoder extends ValueType  {
 
     public void TaggedVector(JCORefOut<CustomAttributeArrayTypeEncoder> arrayType, JCORefOut<VectorEncoder> vector) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TaggedVector", arrayType.getJCRefOut(), vector.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -217,10 +225,14 @@ public class LiteralEncoder extends ValueType  {
     
     public BlobBuilder getBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuilder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Builder");
+            retObjectBuilder = classInstance.Get("Builder");
+            JCObject val = (JCObject)retObjectBuilder;
             return new BlobBuilder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuilder != null ? retObjectBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

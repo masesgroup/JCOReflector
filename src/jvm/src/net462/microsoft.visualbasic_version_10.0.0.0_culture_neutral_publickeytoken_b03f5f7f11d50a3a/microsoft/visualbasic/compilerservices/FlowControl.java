@@ -158,9 +158,13 @@ public class FlowControl extends NetObject  {
     
     public static boolean ForEachNextObj(JCORefOut<NetObject> obj, IEnumerator enumerator) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEachNextObj = null;
         try {
-            return (boolean)classType.Invoke("ForEachNextObj", obj.getJCRefOut(), enumerator == null ? null : enumerator.getJCOInstance());
+            retObjectForEachNextObj = classType.Invoke("ForEachNextObj", obj.getJCRefOut(), enumerator == null ? null : enumerator.getJCOInstance());
+            return (boolean)retObjectForEachNextObj;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectForEachNextObj != null ? retObjectForEachNextObj.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class FlowControl extends NetObject  {
 
     public static boolean ForLoopInitObj(NetObject Counter, NetObject Start, NetObject Limit, NetObject StepValue, JCORefOut<NetObject> LoopForResult, JCORefOut<NetObject> CounterResult) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForLoopInitObj = null;
         try {
-            return (boolean)classType.Invoke("ForLoopInitObj", Counter == null ? null : Counter.getJCOInstance(), Start == null ? null : Start.getJCOInstance(), Limit == null ? null : Limit.getJCOInstance(), StepValue == null ? null : StepValue.getJCOInstance(), LoopForResult.getJCRefOut(), CounterResult.getJCRefOut());
+            retObjectForLoopInitObj = classType.Invoke("ForLoopInitObj", Counter == null ? null : Counter.getJCOInstance(), Start == null ? null : Start.getJCOInstance(), Limit == null ? null : Limit.getJCOInstance(), StepValue == null ? null : StepValue.getJCOInstance(), LoopForResult.getJCRefOut(), CounterResult.getJCRefOut());
+            return (boolean)retObjectForLoopInitObj;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectForLoopInitObj != null ? retObjectForLoopInitObj.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +186,13 @@ public class FlowControl extends NetObject  {
 
     public static boolean ForNextCheckDec(Decimal count, Decimal limit, Decimal StepValue) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForNextCheckDec = null;
         try {
-            return (boolean)classType.Invoke("ForNextCheckDec", count == null ? null : count.getJCOInstance(), limit == null ? null : limit.getJCOInstance(), StepValue == null ? null : StepValue.getJCOInstance());
+            retObjectForNextCheckDec = classType.Invoke("ForNextCheckDec", count == null ? null : count.getJCOInstance(), limit == null ? null : limit.getJCOInstance(), StepValue == null ? null : StepValue.getJCOInstance());
+            return (boolean)retObjectForNextCheckDec;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectForNextCheckDec != null ? retObjectForNextCheckDec.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +200,13 @@ public class FlowControl extends NetObject  {
 
     public static boolean ForNextCheckObj(NetObject Counter, NetObject LoopObj, JCORefOut<NetObject> CounterResult) throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.OverflowException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForNextCheckObj = null;
         try {
-            return (boolean)classType.Invoke("ForNextCheckObj", Counter == null ? null : Counter.getJCOInstance(), LoopObj == null ? null : LoopObj.getJCOInstance(), CounterResult.getJCRefOut());
+            retObjectForNextCheckObj = classType.Invoke("ForNextCheckObj", Counter == null ? null : Counter.getJCOInstance(), LoopObj == null ? null : LoopObj.getJCOInstance(), CounterResult.getJCRefOut());
+            return (boolean)retObjectForNextCheckObj;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectForNextCheckObj != null ? retObjectForNextCheckObj.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +214,13 @@ public class FlowControl extends NetObject  {
 
     public static boolean ForNextCheckR4(Single count, Single limit, Single StepValue) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForNextCheckR4 = null;
         try {
-            return (boolean)classType.Invoke("ForNextCheckR4", count == null ? null : count.getJCOInstance(), limit == null ? null : limit.getJCOInstance(), StepValue == null ? null : StepValue.getJCOInstance());
+            retObjectForNextCheckR4 = classType.Invoke("ForNextCheckR4", count == null ? null : count.getJCOInstance(), limit == null ? null : limit.getJCOInstance(), StepValue == null ? null : StepValue.getJCOInstance());
+            return (boolean)retObjectForNextCheckR4;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectForNextCheckR4 != null ? retObjectForNextCheckR4.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +228,13 @@ public class FlowControl extends NetObject  {
 
     public static boolean ForNextCheckR8(double count, double limit, double StepValue) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForNextCheckR8 = null;
         try {
-            return (boolean)classType.Invoke("ForNextCheckR8", count, limit, StepValue);
+            retObjectForNextCheckR8 = classType.Invoke("ForNextCheckR8", count, limit, StepValue);
+            return (boolean)retObjectForNextCheckR8;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectForNextCheckR8 != null ? retObjectForNextCheckR8.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +242,14 @@ public class FlowControl extends NetObject  {
 
     public static IEnumerator ForEachInArr(Array ary) throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEachInArr = null;
         try {
-            JCObject objForEachInArr = (JCObject)classType.Invoke("ForEachInArr", ary == null ? null : ary.getJCOInstance());
+            retObjectForEachInArr = classType.Invoke("ForEachInArr", ary == null ? null : ary.getJCOInstance());
+            JCObject objForEachInArr = (JCObject)retObjectForEachInArr;
             return new IEnumeratorImplementation(objForEachInArr);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEachInArr != null ? retObjectForEachInArr.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +257,14 @@ public class FlowControl extends NetObject  {
 
     public static IEnumerator ForEachInObj(NetObject obj) throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEachInObj = null;
         try {
-            JCObject objForEachInObj = (JCObject)classType.Invoke("ForEachInObj", obj == null ? null : obj.getJCOInstance());
+            retObjectForEachInObj = classType.Invoke("ForEachInObj", obj == null ? null : obj.getJCOInstance());
+            JCObject objForEachInObj = (JCObject)retObjectForEachInObj;
             return new IEnumeratorImplementation(objForEachInObj);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEachInObj != null ? retObjectForEachInObj.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +272,7 @@ public class FlowControl extends NetObject  {
 
     public static void CheckForSyncLockOnValueType(NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CheckForSyncLockOnValueType", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {

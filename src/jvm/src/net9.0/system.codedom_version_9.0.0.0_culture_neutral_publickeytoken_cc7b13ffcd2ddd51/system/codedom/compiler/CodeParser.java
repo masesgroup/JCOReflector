@@ -155,10 +155,14 @@ public class CodeParser extends NetObject  {
     
     public CodeCompileUnit Parse(TextReader codeStream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classInstance.Invoke("Parse", codeStream == null ? null : codeStream.getJCOInstance());
+            retObjectParse = classInstance.Invoke("Parse", codeStream == null ? null : codeStream.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
             return new CodeCompileUnit(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

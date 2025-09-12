@@ -144,9 +144,13 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
     
     public boolean WaitForInputIdle(int milliseconds) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitForInputIdle = null;
         try {
-            return (boolean)classInstance.Invoke("WaitForInputIdle", milliseconds);
+            retObjectWaitForInputIdle = classInstance.Invoke("WaitForInputIdle", milliseconds);
+            return (boolean)retObjectWaitForInputIdle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWaitForInputIdle != null ? retObjectWaitForInputIdle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,7 +158,7 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -164,7 +168,7 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
 
     public void SetVisualState(WindowVisualState state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetVisualState", state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -178,9 +182,13 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
     
     public boolean getIsModal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsModal = null;
         try {
-            return (boolean)classInstance.Get("IsModal");
+            retObjectIsModal = classInstance.Get("IsModal");
+            return (boolean)retObjectIsModal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsModal != null ? retObjectIsModal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +196,13 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
 
     public boolean getIsTopmost() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTopmost = null;
         try {
-            return (boolean)classInstance.Get("IsTopmost");
+            retObjectIsTopmost = classInstance.Get("IsTopmost");
+            return (boolean)retObjectIsTopmost;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTopmost != null ? retObjectIsTopmost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +210,13 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
 
     public boolean getMaximizable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximizable = null;
         try {
-            return (boolean)classInstance.Get("Maximizable");
+            retObjectMaximizable = classInstance.Get("Maximizable");
+            return (boolean)retObjectMaximizable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMaximizable != null ? retObjectMaximizable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +224,13 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
 
     public boolean getMinimizable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimizable = null;
         try {
-            return (boolean)classInstance.Get("Minimizable");
+            retObjectMinimizable = classInstance.Get("Minimizable");
+            return (boolean)retObjectMinimizable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMinimizable != null ? retObjectMinimizable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +238,14 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
 
     public WindowInteractionState getInteractionState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInteractionState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InteractionState");
+            retObjectInteractionState = classInstance.Get("InteractionState");
+            JCObject val = (JCObject)retObjectInteractionState;
             return new WindowInteractionState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInteractionState != null ? retObjectInteractionState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +253,14 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
 
     public WindowVisualState getVisualState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisualState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VisualState");
+            retObjectVisualState = classInstance.Get("VisualState");
+            JCObject val = (JCObject)retObjectVisualState;
             return new WindowVisualState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisualState != null ? retObjectVisualState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

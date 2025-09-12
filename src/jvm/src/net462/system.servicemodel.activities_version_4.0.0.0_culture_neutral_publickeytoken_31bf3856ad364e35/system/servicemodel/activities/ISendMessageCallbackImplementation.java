@@ -143,7 +143,7 @@ public class ISendMessageCallbackImplementation extends NetObject implements ISe
     
     public void OnSendMessage(OperationContext operationContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnSendMessage", operationContext == null ? null : operationContext.getJCOInstance());
         } catch (JCNativeException jcne) {

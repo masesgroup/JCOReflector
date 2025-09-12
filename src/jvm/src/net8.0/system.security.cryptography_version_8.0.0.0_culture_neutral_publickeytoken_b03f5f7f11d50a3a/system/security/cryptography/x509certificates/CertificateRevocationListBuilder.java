@@ -171,9 +171,13 @@ public class CertificateRevocationListBuilder extends NetObject  {
     
     public boolean RemoveEntry(byte[] serialNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveEntry = null;
         try {
-            return (boolean)classInstance.Invoke("RemoveEntry", (java.lang.Object)serialNumber);
+            retObjectRemoveEntry = classInstance.Invoke("RemoveEntry", (java.lang.Object)serialNumber);
+            return (boolean)retObjectRemoveEntry;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveEntry != null ? retObjectRemoveEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class CertificateRevocationListBuilder extends NetObject  {
 
     public boolean RemoveEntry(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveEntry = null;
         try {
-            return (boolean)classInstance.Invoke("RemoveEntry", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectRemoveEntry = classInstance.Invoke("RemoveEntry", (java.lang.Object)dupParam0.getJCRefOut());
+            return (boolean)retObjectRemoveEntry;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveEntry != null ? retObjectRemoveEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +199,14 @@ public class CertificateRevocationListBuilder extends NetObject  {
 
     public static CertificateRevocationListBuilder Load(byte[] currentCrl, JCORefOut<BigInteger> currentCrlNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException, system.security.cryptography.CryptographicException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoad = null;
         try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", currentCrl, currentCrlNumber.getJCRefOut());
+            retObjectLoad = classType.Invoke("Load", currentCrl, currentCrlNumber.getJCRefOut());
+            JCObject objLoad = (JCObject)retObjectLoad;
             return new CertificateRevocationListBuilder(objLoad);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoad != null ? retObjectLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +214,14 @@ public class CertificateRevocationListBuilder extends NetObject  {
 
     public static CertificateRevocationListBuilder LoadPem(java.lang.String currentCrl, JCORefOut<BigInteger> currentCrlNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoadPem = null;
         try {
-            JCObject objLoadPem = (JCObject)classType.Invoke("LoadPem", currentCrl, currentCrlNumber.getJCRefOut());
+            retObjectLoadPem = classType.Invoke("LoadPem", currentCrl, currentCrlNumber.getJCRefOut());
+            JCObject objLoadPem = (JCObject)retObjectLoadPem;
             return new CertificateRevocationListBuilder(objLoadPem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadPem != null ? retObjectLoadPem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -160,7 +160,7 @@ public class PropertyChangedEventManager extends WeakEventManager  {
     
     public static void AddListener(INotifyPropertyChanged source, IWeakEventListener listener, java.lang.String propertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddListener", source == null ? null : source.getJCOInstance(), listener == null ? null : listener.getJCOInstance(), propertyName);
         } catch (JCNativeException jcne) {
@@ -170,7 +170,7 @@ public class PropertyChangedEventManager extends WeakEventManager  {
 
     public static void RemoveListener(INotifyPropertyChanged source, IWeakEventListener listener, java.lang.String propertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveListener", source == null ? null : source.getJCOInstance(), listener == null ? null : listener.getJCOInstance(), propertyName);
         } catch (JCNativeException jcne) {

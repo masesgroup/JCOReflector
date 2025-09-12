@@ -168,7 +168,7 @@ public class HtmlControlDesigner extends ComponentDesigner  {
     
     public void Initialize(IComponent component) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.IndexOutOfRangeException, system.RankException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -178,7 +178,7 @@ public class HtmlControlDesigner extends ComponentDesigner  {
 
     public void OnSetParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnSetParent");
         } catch (JCNativeException jcne) {
@@ -192,9 +192,13 @@ public class HtmlControlDesigner extends ComponentDesigner  {
     
     public boolean getShouldCodeSerialize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldCodeSerialize = null;
         try {
-            return (boolean)classInstance.Get("ShouldCodeSerialize");
+            retObjectShouldCodeSerialize = classInstance.Get("ShouldCodeSerialize");
+            return (boolean)retObjectShouldCodeSerialize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShouldCodeSerialize != null ? retObjectShouldCodeSerialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +206,7 @@ public class HtmlControlDesigner extends ComponentDesigner  {
 
     public void setShouldCodeSerialize(boolean ShouldCodeSerialize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShouldCodeSerialize", ShouldCodeSerialize);
         } catch (JCNativeException jcne) {
@@ -212,10 +216,14 @@ public class HtmlControlDesigner extends ComponentDesigner  {
 
     public DataBindingCollection getDataBindings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataBindings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataBindings");
+            retObjectDataBindings = classInstance.Get("DataBindings");
+            JCObject val = (JCObject)retObjectDataBindings;
             return new DataBindingCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataBindings != null ? retObjectDataBindings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +231,14 @@ public class HtmlControlDesigner extends ComponentDesigner  {
 
     public IHtmlControlDesignerBehavior getBehavior() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBehavior = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Behavior");
+            retObjectBehavior = classInstance.Get("Behavior");
+            JCObject val = (JCObject)retObjectBehavior;
             return new IHtmlControlDesignerBehaviorImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBehavior != null ? retObjectBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +246,7 @@ public class HtmlControlDesigner extends ComponentDesigner  {
 
     public void setBehavior(IHtmlControlDesignerBehavior Behavior) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Behavior", Behavior == null ? null : Behavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -244,10 +256,14 @@ public class HtmlControlDesigner extends ComponentDesigner  {
 
     public ExpressionBindingCollection getExpressions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpressions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Expressions");
+            retObjectExpressions = classInstance.Get("Expressions");
+            JCObject val = (JCObject)retObjectExpressions;
             return new ExpressionBindingCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpressions != null ? retObjectExpressions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

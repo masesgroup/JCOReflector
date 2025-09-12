@@ -160,10 +160,14 @@ public class ObjectQuery extends NetObjectEnumerable  {
     
     public TypeUsage GetResultType() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.data.MappingException, system.InvalidOperationException, system.data.MetadataException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.threading.LockRecursionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResultType = null;
         try {
-            JCObject objGetResultType = (JCObject)classInstance.Invoke("GetResultType");
+            retObjectGetResultType = classInstance.Invoke("GetResultType");
+            JCObject objGetResultType = (JCObject)retObjectGetResultType;
             return new TypeUsage(objGetResultType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResultType != null ? retObjectGetResultType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class ObjectQuery extends NetObjectEnumerable  {
 
     public ObjectResult Execute(MergeOption mergeOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            JCObject objExecute = (JCObject)classInstance.Invoke("Execute", mergeOption == null ? null : mergeOption.getJCOInstance());
+            retObjectExecute = classInstance.Invoke("Execute", mergeOption == null ? null : mergeOption.getJCOInstance());
+            JCObject objExecute = (JCObject)retObjectExecute;
             return new ObjectResult(objExecute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,13 @@ public class ObjectQuery extends NetObjectEnumerable  {
 
     public java.lang.String ToTraceString() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToTraceString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToTraceString");
+            retObjectToTraceString = classInstance.Invoke("ToTraceString");
+            return (java.lang.String)retObjectToTraceString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToTraceString != null ? retObjectToTraceString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +208,7 @@ public class ObjectQuery extends NetObjectEnumerable  {
      */
     @Deprecated 
     public IList GetList() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIListSource to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIListSource to obtain the full interface.");
     }
 
 
@@ -205,9 +217,13 @@ public class ObjectQuery extends NetObjectEnumerable  {
     
     public boolean getEnablePlanCaching() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnablePlanCaching = null;
         try {
-            return (boolean)classInstance.Get("EnablePlanCaching");
+            retObjectEnablePlanCaching = classInstance.Get("EnablePlanCaching");
+            return (boolean)retObjectEnablePlanCaching;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnablePlanCaching != null ? retObjectEnablePlanCaching.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +231,7 @@ public class ObjectQuery extends NetObjectEnumerable  {
 
     public void setEnablePlanCaching(boolean EnablePlanCaching) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnablePlanCaching", EnablePlanCaching);
         } catch (JCNativeException jcne) {
@@ -225,10 +241,14 @@ public class ObjectQuery extends NetObjectEnumerable  {
 
     public MergeOption getMergeOption() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMergeOption = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MergeOption");
+            retObjectMergeOption = classInstance.Get("MergeOption");
+            JCObject val = (JCObject)retObjectMergeOption;
             return new MergeOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMergeOption != null ? retObjectMergeOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +256,7 @@ public class ObjectQuery extends NetObjectEnumerable  {
 
     public void setMergeOption(MergeOption MergeOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MergeOption", MergeOption == null ? null : MergeOption.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -246,10 +266,14 @@ public class ObjectQuery extends NetObjectEnumerable  {
 
     public ObjectContext getContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Context");
+            retObjectContext = classInstance.Get("Context");
+            JCObject val = (JCObject)retObjectContext;
             return new ObjectContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContext != null ? retObjectContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +281,14 @@ public class ObjectQuery extends NetObjectEnumerable  {
 
     public ObjectParameterCollection getParameters() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parameters");
+            retObjectParameters = classInstance.Get("Parameters");
+            JCObject val = (JCObject)retObjectParameters;
             return new ObjectParameterCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameters != null ? retObjectParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,9 +296,13 @@ public class ObjectQuery extends NetObjectEnumerable  {
 
     public java.lang.String getCommandText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandText = null;
         try {
-            return (java.lang.String)classInstance.Get("CommandText");
+            retObjectCommandText = classInstance.Get("CommandText");
+            return (java.lang.String)retObjectCommandText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCommandText != null ? retObjectCommandText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

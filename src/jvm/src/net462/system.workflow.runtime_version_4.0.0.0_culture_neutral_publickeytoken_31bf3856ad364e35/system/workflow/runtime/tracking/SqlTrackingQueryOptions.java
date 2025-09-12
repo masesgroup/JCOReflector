@@ -162,7 +162,7 @@ public class SqlTrackingQueryOptions extends NetObject  {
     
     public void Clear() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -176,10 +176,14 @@ public class SqlTrackingQueryOptions extends NetObject  {
     
     public DateTime getStatusMaxDateTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatusMaxDateTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StatusMaxDateTime");
+            retObjectStatusMaxDateTime = classInstance.Get("StatusMaxDateTime");
+            JCObject val = (JCObject)retObjectStatusMaxDateTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatusMaxDateTime != null ? retObjectStatusMaxDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class SqlTrackingQueryOptions extends NetObject  {
 
     public void setStatusMaxDateTime(DateTime StatusMaxDateTime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StatusMaxDateTime", StatusMaxDateTime == null ? null : StatusMaxDateTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,10 +201,14 @@ public class SqlTrackingQueryOptions extends NetObject  {
 
     public DateTime getStatusMinDateTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatusMinDateTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StatusMinDateTime");
+            retObjectStatusMinDateTime = classInstance.Get("StatusMinDateTime");
+            JCObject val = (JCObject)retObjectStatusMinDateTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatusMinDateTime != null ? retObjectStatusMinDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +216,7 @@ public class SqlTrackingQueryOptions extends NetObject  {
 
     public void setStatusMinDateTime(DateTime StatusMinDateTime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StatusMinDateTime", StatusMinDateTime == null ? null : StatusMinDateTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -218,10 +226,14 @@ public class SqlTrackingQueryOptions extends NetObject  {
 
     public NetType getWorkflowType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowType");
+            retObjectWorkflowType = classInstance.Get("WorkflowType");
+            JCObject val = (JCObject)retObjectWorkflowType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowType != null ? retObjectWorkflowType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +241,7 @@ public class SqlTrackingQueryOptions extends NetObject  {
 
     public void setWorkflowType(NetType WorkflowType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WorkflowType", WorkflowType == null ? null : WorkflowType.getJCOInstance());
         } catch (JCNativeException jcne) {

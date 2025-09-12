@@ -150,7 +150,7 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
     
     public void CreateInstance(NetObject pUnkOuter, JCORefOut<Guid> riid, JCORefOut<NetObject> ppvObj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateInstance", pUnkOuter == null ? null : pUnkOuter.getJCOInstance(), riid.getJCRefOut(), ppvObj.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -160,7 +160,7 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
 
     public void GetContainingTypeLib(JCORefOut<UCOMITypeLib> ppTLB, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetContainingTypeLib", ppTLB.getJCRefOut(), pIndex.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -170,7 +170,7 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
 
     public void GetDllEntry(int memid, INVOKEKIND invKind, JCORefOut pBstrDllName, JCORefOut pBstrName, JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Short>> pwOrdinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetDllEntry", memid, invKind == null ? null : invKind.getJCOInstance(), pBstrDllName.getJCRefOut(), pBstrName.getJCRefOut(), pwOrdinal.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -180,7 +180,7 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
 
     public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> dwHelpContext, JCORefOut strHelpFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetDocumentation", index, strName.getJCRefOut(), strDocString.getJCRefOut(), dwHelpContext.getJCRefOut(), strHelpFile.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -190,7 +190,7 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
 
     public void GetIDsOfNames(java.lang.String[] rgszNames, int cNames, JCORefOut pMemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetIDsOfNames", rgszNames, cNames, pMemId.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -200,7 +200,7 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
 
     public void GetImplTypeFlags(int index, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pImplTypeFlags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetImplTypeFlags", index, pImplTypeFlags.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -210,7 +210,7 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
 
     public void GetMops(int memid, JCORefOut pBstrMops) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetMops", memid, pBstrMops.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -220,7 +220,7 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
 
     public void GetNames(int memid, JCORefOut rgBstrNames, int cMaxNames, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pcNames) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetNames", memid, rgBstrNames.getJCRefOut(), cMaxNames, pcNames.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -230,7 +230,7 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
 
     public void GetRefTypeInfo(int hRef, JCORefOut<UCOMITypeInfo> ppTI) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetRefTypeInfo", hRef, ppTI.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -240,7 +240,7 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
 
     public void GetRefTypeOfImplType(int index, JCORefOut<java.util.concurrent.atomic.AtomicInteger> href) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetRefTypeOfImplType", index, href.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -250,7 +250,7 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
 
     public void GetTypeComp(JCORefOut<UCOMITypeComp> ppTComp) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetTypeComp", ppTComp.getJCRefOut());
         } catch (JCNativeException jcne) {

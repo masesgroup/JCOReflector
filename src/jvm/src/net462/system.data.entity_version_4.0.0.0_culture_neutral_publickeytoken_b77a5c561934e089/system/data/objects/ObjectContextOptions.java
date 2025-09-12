@@ -159,9 +159,13 @@ public class ObjectContextOptions extends NetObject  {
     
     public boolean getLazyLoadingEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLazyLoadingEnabled = null;
         try {
-            return (boolean)classInstance.Get("LazyLoadingEnabled");
+            retObjectLazyLoadingEnabled = classInstance.Get("LazyLoadingEnabled");
+            return (boolean)retObjectLazyLoadingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLazyLoadingEnabled != null ? retObjectLazyLoadingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +173,7 @@ public class ObjectContextOptions extends NetObject  {
 
     public void setLazyLoadingEnabled(boolean LazyLoadingEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LazyLoadingEnabled", LazyLoadingEnabled);
         } catch (JCNativeException jcne) {
@@ -179,9 +183,13 @@ public class ObjectContextOptions extends NetObject  {
 
     public boolean getProxyCreationEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProxyCreationEnabled = null;
         try {
-            return (boolean)classInstance.Get("ProxyCreationEnabled");
+            retObjectProxyCreationEnabled = classInstance.Get("ProxyCreationEnabled");
+            return (boolean)retObjectProxyCreationEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectProxyCreationEnabled != null ? retObjectProxyCreationEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class ObjectContextOptions extends NetObject  {
 
     public void setProxyCreationEnabled(boolean ProxyCreationEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProxyCreationEnabled", ProxyCreationEnabled);
         } catch (JCNativeException jcne) {
@@ -199,9 +207,13 @@ public class ObjectContextOptions extends NetObject  {
 
     public boolean getUseConsistentNullReferenceBehavior() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseConsistentNullReferenceBehavior = null;
         try {
-            return (boolean)classInstance.Get("UseConsistentNullReferenceBehavior");
+            retObjectUseConsistentNullReferenceBehavior = classInstance.Get("UseConsistentNullReferenceBehavior");
+            return (boolean)retObjectUseConsistentNullReferenceBehavior;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseConsistentNullReferenceBehavior != null ? retObjectUseConsistentNullReferenceBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +221,7 @@ public class ObjectContextOptions extends NetObject  {
 
     public void setUseConsistentNullReferenceBehavior(boolean UseConsistentNullReferenceBehavior) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseConsistentNullReferenceBehavior", UseConsistentNullReferenceBehavior);
         } catch (JCNativeException jcne) {
@@ -219,9 +231,13 @@ public class ObjectContextOptions extends NetObject  {
 
     public boolean getUseCSharpNullComparisonBehavior() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseCSharpNullComparisonBehavior = null;
         try {
-            return (boolean)classInstance.Get("UseCSharpNullComparisonBehavior");
+            retObjectUseCSharpNullComparisonBehavior = classInstance.Get("UseCSharpNullComparisonBehavior");
+            return (boolean)retObjectUseCSharpNullComparisonBehavior;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseCSharpNullComparisonBehavior != null ? retObjectUseCSharpNullComparisonBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +245,7 @@ public class ObjectContextOptions extends NetObject  {
 
     public void setUseCSharpNullComparisonBehavior(boolean UseCSharpNullComparisonBehavior) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseCSharpNullComparisonBehavior", UseCSharpNullComparisonBehavior);
         } catch (JCNativeException jcne) {
@@ -239,9 +255,13 @@ public class ObjectContextOptions extends NetObject  {
 
     public boolean getUseLegacyPreserveChangesBehavior() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseLegacyPreserveChangesBehavior = null;
         try {
-            return (boolean)classInstance.Get("UseLegacyPreserveChangesBehavior");
+            retObjectUseLegacyPreserveChangesBehavior = classInstance.Get("UseLegacyPreserveChangesBehavior");
+            return (boolean)retObjectUseLegacyPreserveChangesBehavior;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseLegacyPreserveChangesBehavior != null ? retObjectUseLegacyPreserveChangesBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +269,7 @@ public class ObjectContextOptions extends NetObject  {
 
     public void setUseLegacyPreserveChangesBehavior(boolean UseLegacyPreserveChangesBehavior) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseLegacyPreserveChangesBehavior", UseLegacyPreserveChangesBehavior);
         } catch (JCNativeException jcne) {

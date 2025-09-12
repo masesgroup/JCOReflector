@@ -146,10 +146,14 @@ public class IMetadataExchangeImplementation extends NetObject implements IMetad
     
     public IAsyncResult BeginGet(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginGet = null;
         try {
-            JCObject objBeginGet = (JCObject)classInstance.Invoke("BeginGet", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginGet = classInstance.Invoke("BeginGet", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginGet = (JCObject)retObjectBeginGet;
             return new IAsyncResultImplementation(objBeginGet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginGet != null ? retObjectBeginGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,10 +161,14 @@ public class IMetadataExchangeImplementation extends NetObject implements IMetad
 
     public Message EndGet(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndGet = null;
         try {
-            JCObject objEndGet = (JCObject)classInstance.Invoke("EndGet", result == null ? null : result.getJCOInstance());
+            retObjectEndGet = classInstance.Invoke("EndGet", result == null ? null : result.getJCOInstance());
+            JCObject objEndGet = (JCObject)retObjectEndGet;
             return new Message(objEndGet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndGet != null ? retObjectEndGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +176,14 @@ public class IMetadataExchangeImplementation extends NetObject implements IMetad
 
     public Message Get(Message request) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGet = null;
         try {
-            JCObject objGet = (JCObject)classInstance.Invoke("Get", request == null ? null : request.getJCOInstance());
+            retObjectGet = classInstance.Invoke("Get", request == null ? null : request.getJCOInstance());
+            JCObject objGet = (JCObject)retObjectGet;
             return new Message(objGet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGet != null ? retObjectGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

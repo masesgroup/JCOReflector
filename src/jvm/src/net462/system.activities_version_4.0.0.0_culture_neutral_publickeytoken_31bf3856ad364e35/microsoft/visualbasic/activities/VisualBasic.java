@@ -154,9 +154,13 @@ public class VisualBasic extends NetObject  {
     
     public static boolean ShouldSerializeSettings(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShouldSerializeSettings = null;
         try {
-            return (boolean)classType.Invoke("ShouldSerializeSettings", target == null ? null : target.getJCOInstance());
+            retObjectShouldSerializeSettings = classType.Invoke("ShouldSerializeSettings", target == null ? null : target.getJCOInstance());
+            return (boolean)retObjectShouldSerializeSettings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeSettings != null ? retObjectShouldSerializeSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,10 +168,14 @@ public class VisualBasic extends NetObject  {
 
     public static VisualBasicSettings GetSettings(NetObject target) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSettings = null;
         try {
-            JCObject objGetSettings = (JCObject)classType.Invoke("GetSettings", target == null ? null : target.getJCOInstance());
+            retObjectGetSettings = classType.Invoke("GetSettings", target == null ? null : target.getJCOInstance());
+            JCObject objGetSettings = (JCObject)retObjectGetSettings;
             return new VisualBasicSettings(objGetSettings);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSettings != null ? retObjectGetSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +183,7 @@ public class VisualBasic extends NetObject  {
 
     public static void SetSettings(NetObject target, VisualBasicSettings value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetSettings", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -185,7 +193,7 @@ public class VisualBasic extends NetObject  {
 
     public static void SetSettingsForImplementation(NetObject target, VisualBasicSettings value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetSettingsForImplementation", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

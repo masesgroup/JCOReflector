@@ -166,9 +166,13 @@ public class DataGridRowClipboardEventArgs extends EventArgs  {
     
     public java.lang.String FormatClipboardCellValues(java.lang.String format) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatClipboardCellValues = null;
         try {
-            return (java.lang.String)classInstance.Invoke("FormatClipboardCellValues", format);
+            retObjectFormatClipboardCellValues = classInstance.Invoke("FormatClipboardCellValues", format);
+            return (java.lang.String)retObjectFormatClipboardCellValues;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFormatClipboardCellValues != null ? retObjectFormatClipboardCellValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class DataGridRowClipboardEventArgs extends EventArgs  {
     
     public boolean getIsColumnHeadersRow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsColumnHeadersRow = null;
         try {
-            return (boolean)classInstance.Get("IsColumnHeadersRow");
+            retObjectIsColumnHeadersRow = classInstance.Get("IsColumnHeadersRow");
+            return (boolean)retObjectIsColumnHeadersRow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsColumnHeadersRow != null ? retObjectIsColumnHeadersRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,19 @@ public class DataGridRowClipboardEventArgs extends EventArgs  {
 
     public int getEndColumnDisplayIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndColumnDisplayIndex = null;
         try {
-            return (int)classInstance.Get("EndColumnDisplayIndex");
+            retObjectEndColumnDisplayIndex = classInstance.Get("EndColumnDisplayIndex");
+            return (int)retObjectEndColumnDisplayIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndColumnDisplayIndexNumber = (java.lang.Number)retObjectEndColumnDisplayIndex;
+                return retObjectEndColumnDisplayIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEndColumnDisplayIndex != null ? retObjectEndColumnDisplayIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +218,19 @@ public class DataGridRowClipboardEventArgs extends EventArgs  {
 
     public int getStartColumnDisplayIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartColumnDisplayIndex = null;
         try {
-            return (int)classInstance.Get("StartColumnDisplayIndex");
+            retObjectStartColumnDisplayIndex = classInstance.Get("StartColumnDisplayIndex");
+            return (int)retObjectStartColumnDisplayIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStartColumnDisplayIndexNumber = (java.lang.Number)retObjectStartColumnDisplayIndex;
+                return retObjectStartColumnDisplayIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStartColumnDisplayIndex != null ? retObjectStartColumnDisplayIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +238,14 @@ public class DataGridRowClipboardEventArgs extends EventArgs  {
 
     public NetObject getItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Item");
+            retObjectItem = classInstance.Get("Item");
+            JCObject val = (JCObject)retObjectItem;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItem != null ? retObjectItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

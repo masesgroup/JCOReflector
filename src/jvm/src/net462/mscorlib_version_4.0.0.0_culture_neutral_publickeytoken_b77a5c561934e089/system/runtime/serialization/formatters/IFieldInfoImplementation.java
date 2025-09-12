@@ -146,10 +146,12 @@ public class IFieldInfoImplementation extends NetObject implements IFieldInfo {
     
     public java.lang.String[] getFieldNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFieldNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("FieldNames");
+            retObjectFieldNames = classInstance.Get("FieldNames");
+            JCObject resultingObjects = (JCObject)retObjectFieldNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -158,6 +160,8 @@ public class IFieldInfoImplementation extends NetObject implements IFieldInfo {
 				resultingArray[indexFieldNames] = (java.lang.String)resultingArrayList.get(indexFieldNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectFieldNames != null ? retObjectFieldNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,7 +169,7 @@ public class IFieldInfoImplementation extends NetObject implements IFieldInfo {
 
     public void setFieldNames(java.lang.String[] FieldNames) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FieldNames", FieldNames);
         } catch (JCNativeException jcne) {
@@ -175,16 +179,20 @@ public class IFieldInfoImplementation extends NetObject implements IFieldInfo {
 
     public final NetType[] getFieldTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFieldTypes = null;
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("FieldTypes");
+            retObjectFieldTypes = classInstance.Get("FieldTypes");
+            JCObject resultingObjects = (JCObject)retObjectFieldTypes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFieldTypes != null ? retObjectFieldTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class IFieldInfoImplementation extends NetObject implements IFieldInfo {
 
     public void setFieldTypes(NetType[] FieldTypes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FieldTypes", toObjectFromArray(FieldTypes));
         } catch (JCNativeException jcne) {

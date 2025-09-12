@@ -157,7 +157,7 @@ public class Package extends AST  {
     
     public static void JScriptPackage(java.lang.String rootName, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("JScriptPackage", rootName, engine == null ? null : engine.getJCOInstance());
         } catch (JCNativeException jcne) {

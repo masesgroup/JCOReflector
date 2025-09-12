@@ -144,7 +144,7 @@ public class IDesignerFilterImplementation extends NetObject implements IDesigne
     
     public void PostFilterAttributes(IDictionary attributes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PostFilterAttributes", attributes == null ? null : attributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class IDesignerFilterImplementation extends NetObject implements IDesigne
 
     public void PostFilterEvents(IDictionary events) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PostFilterEvents", events == null ? null : events.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -164,7 +164,7 @@ public class IDesignerFilterImplementation extends NetObject implements IDesigne
 
     public void PostFilterProperties(IDictionary properties) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PostFilterProperties", properties == null ? null : properties.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -174,7 +174,7 @@ public class IDesignerFilterImplementation extends NetObject implements IDesigne
 
     public void PreFilterAttributes(IDictionary attributes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PreFilterAttributes", attributes == null ? null : attributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -184,7 +184,7 @@ public class IDesignerFilterImplementation extends NetObject implements IDesigne
 
     public void PreFilterEvents(IDictionary events) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PreFilterEvents", events == null ? null : events.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -194,7 +194,7 @@ public class IDesignerFilterImplementation extends NetObject implements IDesigne
 
     public void PreFilterProperties(IDictionary properties) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PreFilterProperties", properties == null ? null : properties.getJCOInstance());
         } catch (JCNativeException jcne) {

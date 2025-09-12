@@ -161,9 +161,19 @@ public class DpiChangedEventArgs extends CancelEventArgs  {
     
     public int getDeviceDpiNew() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeviceDpiNew = null;
         try {
-            return (int)classInstance.Get("DeviceDpiNew");
+            retObjectDeviceDpiNew = classInstance.Get("DeviceDpiNew");
+            return (int)retObjectDeviceDpiNew;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDeviceDpiNewNumber = (java.lang.Number)retObjectDeviceDpiNew;
+                return retObjectDeviceDpiNewNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDeviceDpiNew != null ? retObjectDeviceDpiNew.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +181,7 @@ public class DpiChangedEventArgs extends CancelEventArgs  {
 
     public void setDeviceDpiNew(int DeviceDpiNew) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeviceDpiNew", DeviceDpiNew);
         } catch (JCNativeException jcne) {
@@ -181,9 +191,19 @@ public class DpiChangedEventArgs extends CancelEventArgs  {
 
     public int getDeviceDpiOld() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeviceDpiOld = null;
         try {
-            return (int)classInstance.Get("DeviceDpiOld");
+            retObjectDeviceDpiOld = classInstance.Get("DeviceDpiOld");
+            return (int)retObjectDeviceDpiOld;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDeviceDpiOldNumber = (java.lang.Number)retObjectDeviceDpiOld;
+                return retObjectDeviceDpiOldNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDeviceDpiOld != null ? retObjectDeviceDpiOld.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +211,7 @@ public class DpiChangedEventArgs extends CancelEventArgs  {
 
     public void setDeviceDpiOld(int DeviceDpiOld) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeviceDpiOld", DeviceDpiOld);
         } catch (JCNativeException jcne) {
@@ -201,10 +221,14 @@ public class DpiChangedEventArgs extends CancelEventArgs  {
 
     public Rectangle getSuggestedRectangle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuggestedRectangle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SuggestedRectangle");
+            retObjectSuggestedRectangle = classInstance.Get("SuggestedRectangle");
+            JCObject val = (JCObject)retObjectSuggestedRectangle;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSuggestedRectangle != null ? retObjectSuggestedRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +236,7 @@ public class DpiChangedEventArgs extends CancelEventArgs  {
 
     public void setSuggestedRectangle(Rectangle SuggestedRectangle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SuggestedRectangle", SuggestedRectangle == null ? null : SuggestedRectangle.getJCOInstance());
         } catch (JCNativeException jcne) {

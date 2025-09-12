@@ -167,7 +167,7 @@ public class SpinLock extends ValueType  {
     
     public void Enter(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> lockTaken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.LockRecursionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Enter", lockTaken.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -177,7 +177,7 @@ public class SpinLock extends ValueType  {
 
     public void Exit() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Exit");
         } catch (JCNativeException jcne) {
@@ -187,7 +187,7 @@ public class SpinLock extends ValueType  {
 
     public void Exit(boolean useMemoryBarrier) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Exit", useMemoryBarrier);
         } catch (JCNativeException jcne) {
@@ -197,7 +197,7 @@ public class SpinLock extends ValueType  {
 
     public void TryEnter(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> lockTaken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.LockRecursionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TryEnter", lockTaken.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -207,7 +207,7 @@ public class SpinLock extends ValueType  {
 
     public void TryEnter(int millisecondsTimeout, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> lockTaken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.LockRecursionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TryEnter", millisecondsTimeout, lockTaken.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -217,7 +217,7 @@ public class SpinLock extends ValueType  {
 
     public void TryEnter(TimeSpan timeout, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> lockTaken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.LockRecursionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TryEnter", timeout == null ? null : timeout.getJCOInstance(), lockTaken.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -231,9 +231,13 @@ public class SpinLock extends ValueType  {
     
     public boolean getIsHeld() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsHeld = null;
         try {
-            return (boolean)classInstance.Get("IsHeld");
+            retObjectIsHeld = classInstance.Get("IsHeld");
+            return (boolean)retObjectIsHeld;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsHeld != null ? retObjectIsHeld.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,9 +245,13 @@ public class SpinLock extends ValueType  {
 
     public boolean getIsHeldByCurrentThread() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsHeldByCurrentThread = null;
         try {
-            return (boolean)classInstance.Get("IsHeldByCurrentThread");
+            retObjectIsHeldByCurrentThread = classInstance.Get("IsHeldByCurrentThread");
+            return (boolean)retObjectIsHeldByCurrentThread;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsHeldByCurrentThread != null ? retObjectIsHeldByCurrentThread.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,9 +259,13 @@ public class SpinLock extends ValueType  {
 
     public boolean getIsThreadOwnerTrackingEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsThreadOwnerTrackingEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsThreadOwnerTrackingEnabled");
+            retObjectIsThreadOwnerTrackingEnabled = classInstance.Get("IsThreadOwnerTrackingEnabled");
+            return (boolean)retObjectIsThreadOwnerTrackingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsThreadOwnerTrackingEnabled != null ? retObjectIsThreadOwnerTrackingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

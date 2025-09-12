@@ -163,10 +163,14 @@ public class AddressHeaderCollection extends NetObjectEnumerable  {
     
     public AddressHeader FindHeader(java.lang.String name, java.lang.String ns) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindHeader = null;
         try {
-            JCObject objFindHeader = (JCObject)classInstance.Invoke("FindHeader", name, ns);
+            retObjectFindHeader = classInstance.Invoke("FindHeader", name, ns);
+            JCObject objFindHeader = (JCObject)retObjectFindHeader;
             return new AddressHeader(objFindHeader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindHeader != null ? retObjectFindHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,16 +178,20 @@ public class AddressHeaderCollection extends NetObjectEnumerable  {
 
     public AddressHeader[] FindAll(java.lang.String name, java.lang.String ns) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindAll = null;
         try {
             ArrayList<AddressHeader> resultingArrayList = new ArrayList<AddressHeader>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindAll", name, ns);
+            retObjectFindAll = classInstance.Invoke("FindAll", name, ns);
+            JCObject resultingObjects = (JCObject)retObjectFindAll;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new AddressHeader(resultingObject));
             }
             AddressHeader[] resultingArray = new AddressHeader[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindAll != null ? retObjectFindAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +199,7 @@ public class AddressHeaderCollection extends NetObjectEnumerable  {
 
     public void AddHeadersTo(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddHeadersTo", message == null ? null : message.getJCOInstance());
         } catch (JCNativeException jcne) {

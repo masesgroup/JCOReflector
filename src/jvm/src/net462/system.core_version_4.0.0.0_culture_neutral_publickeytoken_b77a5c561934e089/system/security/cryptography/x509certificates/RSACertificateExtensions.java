@@ -155,10 +155,14 @@ public class RSACertificateExtensions extends NetObject  {
     
     public static RSA GetRSAPrivateKey(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.AccessViolationException, system.RankException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.NotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRSAPrivateKey = null;
         try {
-            JCObject objGetRSAPrivateKey = (JCObject)classType.Invoke("GetRSAPrivateKey", certificate == null ? null : certificate.getJCOInstance());
+            retObjectGetRSAPrivateKey = classType.Invoke("GetRSAPrivateKey", certificate == null ? null : certificate.getJCOInstance());
+            JCObject objGetRSAPrivateKey = (JCObject)retObjectGetRSAPrivateKey;
             return new RSA(objGetRSAPrivateKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRSAPrivateKey != null ? retObjectGetRSAPrivateKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class RSACertificateExtensions extends NetObject  {
 
     public static RSA GetRSAPublicKey(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.NullReferenceException, system.PlatformNotSupportedException, system.MissingMethodException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRSAPublicKey = null;
         try {
-            JCObject objGetRSAPublicKey = (JCObject)classType.Invoke("GetRSAPublicKey", certificate == null ? null : certificate.getJCOInstance());
+            retObjectGetRSAPublicKey = classType.Invoke("GetRSAPublicKey", certificate == null ? null : certificate.getJCOInstance());
+            JCObject objGetRSAPublicKey = (JCObject)retObjectGetRSAPublicKey;
             return new RSA(objGetRSAPublicKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRSAPublicKey != null ? retObjectGetRSAPublicKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +185,14 @@ public class RSACertificateExtensions extends NetObject  {
 
     public static X509Certificate2 CopyWithPrivateKey(X509Certificate2 certificate, RSA privateKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.NullReferenceException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.RankException, system.AccessViolationException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCopyWithPrivateKey = null;
         try {
-            JCObject objCopyWithPrivateKey = (JCObject)classType.Invoke("CopyWithPrivateKey", certificate == null ? null : certificate.getJCOInstance(), privateKey == null ? null : privateKey.getJCOInstance());
+            retObjectCopyWithPrivateKey = classType.Invoke("CopyWithPrivateKey", certificate == null ? null : certificate.getJCOInstance(), privateKey == null ? null : privateKey.getJCOInstance());
+            JCObject objCopyWithPrivateKey = (JCObject)retObjectCopyWithPrivateKey;
             return new X509Certificate2(objCopyWithPrivateKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopyWithPrivateKey != null ? retObjectCopyWithPrivateKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

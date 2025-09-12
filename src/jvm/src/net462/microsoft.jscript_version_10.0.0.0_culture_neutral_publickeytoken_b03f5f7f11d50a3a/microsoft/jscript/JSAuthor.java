@@ -165,10 +165,14 @@ public class JSAuthor extends NetObject  {
     
     public IColorizeText GetColorizer() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetColorizer = null;
         try {
-            JCObject objGetColorizer = (JCObject)classInstance.Invoke("GetColorizer");
+            retObjectGetColorizer = classInstance.Invoke("GetColorizer");
+            JCObject objGetColorizer = (JCObject)retObjectGetColorizer;
             return new IColorizeTextImplementation(objGetColorizer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetColorizer != null ? retObjectGetColorizer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class JSAuthor extends NetObject  {
 
     public IParseText GetCodeSense() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCodeSense = null;
         try {
-            JCObject objGetCodeSense = (JCObject)classInstance.Invoke("GetCodeSense");
+            retObjectGetCodeSense = classInstance.Invoke("GetCodeSense");
+            JCObject objGetCodeSense = (JCObject)retObjectGetCodeSense;
             return new IParseTextImplementation(objGetCodeSense);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCodeSense != null ? retObjectGetCodeSense.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

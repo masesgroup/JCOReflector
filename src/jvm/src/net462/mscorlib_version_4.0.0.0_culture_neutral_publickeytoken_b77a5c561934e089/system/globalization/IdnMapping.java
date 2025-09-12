@@ -161,9 +161,13 @@ public class IdnMapping extends NetObject  {
     
     public java.lang.String GetAscii(java.lang.String unicode) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAscii = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAscii", unicode);
+            retObjectGetAscii = classInstance.Invoke("GetAscii", unicode);
+            return (java.lang.String)retObjectGetAscii;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAscii != null ? retObjectGetAscii.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class IdnMapping extends NetObject  {
 
     public java.lang.String GetAscii(java.lang.String unicode, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAscii = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAscii", unicode, index);
+            retObjectGetAscii = classInstance.Invoke("GetAscii", unicode, index);
+            return (java.lang.String)retObjectGetAscii;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAscii != null ? retObjectGetAscii.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class IdnMapping extends NetObject  {
 
     public java.lang.String GetAscii(java.lang.String unicode, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAscii = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAscii", unicode, index, count);
+            retObjectGetAscii = classInstance.Invoke("GetAscii", unicode, index, count);
+            return (java.lang.String)retObjectGetAscii;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAscii != null ? retObjectGetAscii.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +203,13 @@ public class IdnMapping extends NetObject  {
 
     public java.lang.String GetUnicode(java.lang.String ascii) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUnicode = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetUnicode", ascii);
+            retObjectGetUnicode = classInstance.Invoke("GetUnicode", ascii);
+            return (java.lang.String)retObjectGetUnicode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetUnicode != null ? retObjectGetUnicode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +217,13 @@ public class IdnMapping extends NetObject  {
 
     public java.lang.String GetUnicode(java.lang.String ascii, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUnicode = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetUnicode", ascii, index);
+            retObjectGetUnicode = classInstance.Invoke("GetUnicode", ascii, index);
+            return (java.lang.String)retObjectGetUnicode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetUnicode != null ? retObjectGetUnicode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +231,13 @@ public class IdnMapping extends NetObject  {
 
     public java.lang.String GetUnicode(java.lang.String ascii, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUnicode = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetUnicode", ascii, index, count);
+            retObjectGetUnicode = classInstance.Invoke("GetUnicode", ascii, index, count);
+            return (java.lang.String)retObjectGetUnicode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetUnicode != null ? retObjectGetUnicode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +249,13 @@ public class IdnMapping extends NetObject  {
     
     public boolean getAllowUnassigned() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowUnassigned = null;
         try {
-            return (boolean)classInstance.Get("AllowUnassigned");
+            retObjectAllowUnassigned = classInstance.Get("AllowUnassigned");
+            return (boolean)retObjectAllowUnassigned;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowUnassigned != null ? retObjectAllowUnassigned.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +263,7 @@ public class IdnMapping extends NetObject  {
 
     public void setAllowUnassigned(boolean AllowUnassigned) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowUnassigned", AllowUnassigned);
         } catch (JCNativeException jcne) {
@@ -245,9 +273,13 @@ public class IdnMapping extends NetObject  {
 
     public boolean getUseStd3AsciiRules() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseStd3AsciiRules = null;
         try {
-            return (boolean)classInstance.Get("UseStd3AsciiRules");
+            retObjectUseStd3AsciiRules = classInstance.Get("UseStd3AsciiRules");
+            return (boolean)retObjectUseStd3AsciiRules;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseStd3AsciiRules != null ? retObjectUseStd3AsciiRules.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +287,7 @@ public class IdnMapping extends NetObject  {
 
     public void setUseStd3AsciiRules(boolean UseStd3AsciiRules) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseStd3AsciiRules", UseStd3AsciiRules);
         } catch (JCNativeException jcne) {

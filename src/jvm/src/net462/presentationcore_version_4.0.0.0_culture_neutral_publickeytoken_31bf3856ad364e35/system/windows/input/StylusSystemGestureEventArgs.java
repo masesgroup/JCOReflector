@@ -172,10 +172,14 @@ public class StylusSystemGestureEventArgs extends StylusEventArgs  {
     
     public SystemGesture getSystemGesture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSystemGesture = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SystemGesture");
+            retObjectSystemGesture = classInstance.Get("SystemGesture");
+            JCObject val = (JCObject)retObjectSystemGesture;
             return new SystemGesture(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSystemGesture != null ? retObjectSystemGesture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

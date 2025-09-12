@@ -160,9 +160,13 @@ public class InputMethodStateChangedEventArgs extends EventArgs  {
     
     public boolean getIsHandwritingStateChanged() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsHandwritingStateChanged = null;
         try {
-            return (boolean)classInstance.Get("IsHandwritingStateChanged");
+            retObjectIsHandwritingStateChanged = classInstance.Get("IsHandwritingStateChanged");
+            return (boolean)retObjectIsHandwritingStateChanged;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsHandwritingStateChanged != null ? retObjectIsHandwritingStateChanged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class InputMethodStateChangedEventArgs extends EventArgs  {
 
     public boolean getIsImeConversionModeChanged() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsImeConversionModeChanged = null;
         try {
-            return (boolean)classInstance.Get("IsImeConversionModeChanged");
+            retObjectIsImeConversionModeChanged = classInstance.Get("IsImeConversionModeChanged");
+            return (boolean)retObjectIsImeConversionModeChanged;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsImeConversionModeChanged != null ? retObjectIsImeConversionModeChanged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +188,13 @@ public class InputMethodStateChangedEventArgs extends EventArgs  {
 
     public boolean getIsImeSentenceModeChanged() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsImeSentenceModeChanged = null;
         try {
-            return (boolean)classInstance.Get("IsImeSentenceModeChanged");
+            retObjectIsImeSentenceModeChanged = classInstance.Get("IsImeSentenceModeChanged");
+            return (boolean)retObjectIsImeSentenceModeChanged;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsImeSentenceModeChanged != null ? retObjectIsImeSentenceModeChanged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +202,13 @@ public class InputMethodStateChangedEventArgs extends EventArgs  {
 
     public boolean getIsImeStateChanged() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsImeStateChanged = null;
         try {
-            return (boolean)classInstance.Get("IsImeStateChanged");
+            retObjectIsImeStateChanged = classInstance.Get("IsImeStateChanged");
+            return (boolean)retObjectIsImeStateChanged;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsImeStateChanged != null ? retObjectIsImeStateChanged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +216,13 @@ public class InputMethodStateChangedEventArgs extends EventArgs  {
 
     public boolean getIsMicrophoneStateChanged() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMicrophoneStateChanged = null;
         try {
-            return (boolean)classInstance.Get("IsMicrophoneStateChanged");
+            retObjectIsMicrophoneStateChanged = classInstance.Get("IsMicrophoneStateChanged");
+            return (boolean)retObjectIsMicrophoneStateChanged;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMicrophoneStateChanged != null ? retObjectIsMicrophoneStateChanged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +230,13 @@ public class InputMethodStateChangedEventArgs extends EventArgs  {
 
     public boolean getIsSpeechModeChanged() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSpeechModeChanged = null;
         try {
-            return (boolean)classInstance.Get("IsSpeechModeChanged");
+            retObjectIsSpeechModeChanged = classInstance.Get("IsSpeechModeChanged");
+            return (boolean)retObjectIsSpeechModeChanged;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSpeechModeChanged != null ? retObjectIsSpeechModeChanged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

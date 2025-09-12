@@ -225,10 +225,14 @@ public class XpsDocument extends XpsPartBase implements system.IDisposable, Auto
     
     public FixedDocumentSequence GetFixedDocumentSequence() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.windows.xps.XpsPackagingException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.io.InvalidDataException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.xaml.XamlSchemaException, system.NotImplementedException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFixedDocumentSequence = null;
         try {
-            JCObject objGetFixedDocumentSequence = (JCObject)classInstance.Invoke("GetFixedDocumentSequence");
+            retObjectGetFixedDocumentSequence = classInstance.Invoke("GetFixedDocumentSequence");
+            JCObject objGetFixedDocumentSequence = (JCObject)retObjectGetFixedDocumentSequence;
             return new FixedDocumentSequence(objGetFixedDocumentSequence);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFixedDocumentSequence != null ? retObjectGetFixedDocumentSequence.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +240,14 @@ public class XpsDocument extends XpsPartBase implements system.IDisposable, Auto
 
     public IXpsFixedDocumentSequenceWriter AddFixedDocumentSequence() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.windows.xps.XpsPackagingException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.io.InvalidDataException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddFixedDocumentSequence = null;
         try {
-            JCObject objAddFixedDocumentSequence = (JCObject)classInstance.Invoke("AddFixedDocumentSequence");
+            retObjectAddFixedDocumentSequence = classInstance.Invoke("AddFixedDocumentSequence");
+            JCObject objAddFixedDocumentSequence = (JCObject)retObjectAddFixedDocumentSequence;
             return new IXpsFixedDocumentSequenceWriterImplementation(objAddFixedDocumentSequence);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddFixedDocumentSequence != null ? retObjectAddFixedDocumentSequence.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,10 +255,14 @@ public class XpsDocument extends XpsPartBase implements system.IDisposable, Auto
 
     public XpsDigitalSignature SignDigitally(X509Certificate certificate, boolean embedCertificate, XpsDigSigPartAlteringRestrictions restrictions, Guid id, boolean testIsSignable) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.io.IOException, system.io.InvalidDataException, system.collections.generic.KeyNotFoundException, system.windows.xps.XpsPackagingException, system.io.FileFormatException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignDigitally = null;
         try {
-            JCObject objSignDigitally = (JCObject)classInstance.Invoke("SignDigitally", certificate == null ? null : certificate.getJCOInstance(), embedCertificate, restrictions == null ? null : restrictions.getJCOInstance(), id == null ? null : id.getJCOInstance(), testIsSignable);
+            retObjectSignDigitally = classInstance.Invoke("SignDigitally", certificate == null ? null : certificate.getJCOInstance(), embedCertificate, restrictions == null ? null : restrictions.getJCOInstance(), id == null ? null : id.getJCOInstance(), testIsSignable);
+            JCObject objSignDigitally = (JCObject)retObjectSignDigitally;
             return new XpsDigitalSignature(objSignDigitally);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignDigitally != null ? retObjectSignDigitally.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +270,14 @@ public class XpsDocument extends XpsPartBase implements system.IDisposable, Auto
 
     public XpsDigitalSignature SignDigitally(X509Certificate certificate, boolean embedCertificate, XpsDigSigPartAlteringRestrictions restrictions, Guid id) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.io.IOException, system.io.InvalidDataException, system.collections.generic.KeyNotFoundException, system.windows.xps.XpsPackagingException, system.io.FileFormatException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignDigitally = null;
         try {
-            JCObject objSignDigitally = (JCObject)classInstance.Invoke("SignDigitally", certificate == null ? null : certificate.getJCOInstance(), embedCertificate, restrictions == null ? null : restrictions.getJCOInstance(), id == null ? null : id.getJCOInstance());
+            retObjectSignDigitally = classInstance.Invoke("SignDigitally", certificate == null ? null : certificate.getJCOInstance(), embedCertificate, restrictions == null ? null : restrictions.getJCOInstance(), id == null ? null : id.getJCOInstance());
+            JCObject objSignDigitally = (JCObject)retObjectSignDigitally;
             return new XpsDigitalSignature(objSignDigitally);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignDigitally != null ? retObjectSignDigitally.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,10 +285,14 @@ public class XpsDocument extends XpsPartBase implements system.IDisposable, Auto
 
     public XpsDigitalSignature SignDigitally(X509Certificate certificate, boolean embedCertificate, XpsDigSigPartAlteringRestrictions restrictions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.IOException, system.io.InvalidDataException, system.collections.generic.KeyNotFoundException, system.windows.xps.XpsPackagingException, system.io.FileFormatException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.FormatException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignDigitally = null;
         try {
-            JCObject objSignDigitally = (JCObject)classInstance.Invoke("SignDigitally", certificate == null ? null : certificate.getJCOInstance(), embedCertificate, restrictions == null ? null : restrictions.getJCOInstance());
+            retObjectSignDigitally = classInstance.Invoke("SignDigitally", certificate == null ? null : certificate.getJCOInstance(), embedCertificate, restrictions == null ? null : restrictions.getJCOInstance());
+            JCObject objSignDigitally = (JCObject)retObjectSignDigitally;
             return new XpsDigitalSignature(objSignDigitally);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignDigitally != null ? retObjectSignDigitally.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +300,14 @@ public class XpsDocument extends XpsPartBase implements system.IDisposable, Auto
 
     public XpsThumbnail AddThumbnail(XpsImageType imageType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.IOException, system.io.InvalidDataException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.collections.generic.KeyNotFoundException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddThumbnail = null;
         try {
-            JCObject objAddThumbnail = (JCObject)classInstance.Invoke("AddThumbnail", imageType == null ? null : imageType.getJCOInstance());
+            retObjectAddThumbnail = classInstance.Invoke("AddThumbnail", imageType == null ? null : imageType.getJCOInstance());
+            JCObject objAddThumbnail = (JCObject)retObjectAddThumbnail;
             return new XpsThumbnail(objAddThumbnail);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddThumbnail != null ? retObjectAddThumbnail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,10 +315,14 @@ public class XpsDocument extends XpsPartBase implements system.IDisposable, Auto
 
     public static XpsDocumentWriter CreateXpsDocumentWriter(XpsDocument xpsDocument) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateXpsDocumentWriter = null;
         try {
-            JCObject objCreateXpsDocumentWriter = (JCObject)classType.Invoke("CreateXpsDocumentWriter", xpsDocument == null ? null : xpsDocument.getJCOInstance());
+            retObjectCreateXpsDocumentWriter = classType.Invoke("CreateXpsDocumentWriter", xpsDocument == null ? null : xpsDocument.getJCOInstance());
+            JCObject objCreateXpsDocumentWriter = (JCObject)retObjectCreateXpsDocumentWriter;
             return new XpsDocumentWriter(objCreateXpsDocumentWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateXpsDocumentWriter != null ? retObjectCreateXpsDocumentWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +330,7 @@ public class XpsDocument extends XpsPartBase implements system.IDisposable, Auto
 
     public void Close() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.io.IOException, system.ArgumentNullException, system.io.FileFormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.xml.XmlException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -312,7 +340,7 @@ public class XpsDocument extends XpsPartBase implements system.IDisposable, Auto
 
     public void RemoveSignature(XpsDigitalSignature signature) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException, system.io.IOException, system.io.FileFormatException, system.OutOfMemoryException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.io.InvalidDataException, system.windows.xps.XpsPackagingException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveSignature", signature == null ? null : signature.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -326,13 +354,13 @@ public class XpsDocument extends XpsPartBase implements system.IDisposable, Auto
      */
     @Deprecated 
     public void Dispose() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -348,9 +376,13 @@ public class XpsDocument extends XpsPartBase implements system.IDisposable, Auto
     
     public boolean getIsReader() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReader = null;
         try {
-            return (boolean)classInstance.Get("IsReader");
+            retObjectIsReader = classInstance.Get("IsReader");
+            return (boolean)retObjectIsReader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReader != null ? retObjectIsReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,9 +390,13 @@ public class XpsDocument extends XpsPartBase implements system.IDisposable, Auto
 
     public boolean getIsSignable() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.io.InvalidDataException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.windows.xps.XpsPackagingException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSignable = null;
         try {
-            return (boolean)classInstance.Get("IsSignable");
+            retObjectIsSignable = classInstance.Get("IsSignable");
+            return (boolean)retObjectIsSignable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSignable != null ? retObjectIsSignable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -368,9 +404,13 @@ public class XpsDocument extends XpsPartBase implements system.IDisposable, Auto
 
     public boolean getIsWriter() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsWriter = null;
         try {
-            return (boolean)classInstance.Get("IsWriter");
+            retObjectIsWriter = classInstance.Get("IsWriter");
+            return (boolean)retObjectIsWriter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsWriter != null ? retObjectIsWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,10 +418,14 @@ public class XpsDocument extends XpsPartBase implements system.IDisposable, Auto
 
     public PackageProperties getCoreDocumentProperties() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.IOException, system.io.FileFormatException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCoreDocumentProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CoreDocumentProperties");
+            retObjectCoreDocumentProperties = classInstance.Get("CoreDocumentProperties");
+            JCObject val = (JCObject)retObjectCoreDocumentProperties;
             return new PackageProperties(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCoreDocumentProperties != null ? retObjectCoreDocumentProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,10 +433,14 @@ public class XpsDocument extends XpsPartBase implements system.IDisposable, Auto
 
     public IXpsFixedDocumentSequenceReader getFixedDocumentSequenceReader() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.io.InvalidDataException, system.OutOfMemoryException, system.diagnostics.UnreachableException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFixedDocumentSequenceReader = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FixedDocumentSequenceReader");
+            retObjectFixedDocumentSequenceReader = classInstance.Get("FixedDocumentSequenceReader");
+            JCObject val = (JCObject)retObjectFixedDocumentSequenceReader;
             return new IXpsFixedDocumentSequenceReaderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFixedDocumentSequenceReader != null ? retObjectFixedDocumentSequenceReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,10 +448,14 @@ public class XpsDocument extends XpsPartBase implements system.IDisposable, Auto
 
     public XpsThumbnail getThumbnail() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.io.InvalidDataException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThumbnail = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Thumbnail");
+            retObjectThumbnail = classInstance.Get("Thumbnail");
+            JCObject val = (JCObject)retObjectThumbnail;
             return new XpsThumbnail(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThumbnail != null ? retObjectThumbnail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,7 +463,7 @@ public class XpsDocument extends XpsPartBase implements system.IDisposable, Auto
 
     public void setThumbnail(XpsThumbnail Thumbnail) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Thumbnail", Thumbnail == null ? null : Thumbnail.getJCOInstance());
         } catch (JCNativeException jcne) {

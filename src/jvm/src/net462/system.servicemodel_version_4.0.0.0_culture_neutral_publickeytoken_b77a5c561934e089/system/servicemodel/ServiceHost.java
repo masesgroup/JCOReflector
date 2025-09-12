@@ -178,10 +178,14 @@ public class ServiceHost extends ServiceHostBase  {
     
     public ServiceEndpoint AddServiceEndpoint(NetType implementedContract, system.servicemodel.channels.Binding binding, java.lang.String address) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddServiceEndpoint = null;
         try {
-            JCObject objAddServiceEndpoint = (JCObject)classInstance.Invoke("AddServiceEndpoint", implementedContract == null ? null : implementedContract.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), address);
+            retObjectAddServiceEndpoint = classInstance.Invoke("AddServiceEndpoint", implementedContract == null ? null : implementedContract.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), address);
+            JCObject objAddServiceEndpoint = (JCObject)retObjectAddServiceEndpoint;
             return new ServiceEndpoint(objAddServiceEndpoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddServiceEndpoint != null ? retObjectAddServiceEndpoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +193,14 @@ public class ServiceHost extends ServiceHostBase  {
 
     public ServiceEndpoint AddServiceEndpoint(NetType implementedContract, system.servicemodel.channels.Binding binding, java.lang.String address, Uri listenUri) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.MemberAccessException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddServiceEndpoint = null;
         try {
-            JCObject objAddServiceEndpoint = (JCObject)classInstance.Invoke("AddServiceEndpoint", implementedContract == null ? null : implementedContract.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), address, listenUri == null ? null : listenUri.getJCOInstance());
+            retObjectAddServiceEndpoint = classInstance.Invoke("AddServiceEndpoint", implementedContract == null ? null : implementedContract.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), address, listenUri == null ? null : listenUri.getJCOInstance());
+            JCObject objAddServiceEndpoint = (JCObject)retObjectAddServiceEndpoint;
             return new ServiceEndpoint(objAddServiceEndpoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddServiceEndpoint != null ? retObjectAddServiceEndpoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +208,14 @@ public class ServiceHost extends ServiceHostBase  {
 
     public ServiceEndpoint AddServiceEndpoint(NetType implementedContract, system.servicemodel.channels.Binding binding, Uri address) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddServiceEndpoint = null;
         try {
-            JCObject objAddServiceEndpoint = (JCObject)classInstance.Invoke("AddServiceEndpoint", implementedContract == null ? null : implementedContract.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), address == null ? null : address.getJCOInstance());
+            retObjectAddServiceEndpoint = classInstance.Invoke("AddServiceEndpoint", implementedContract == null ? null : implementedContract.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), address == null ? null : address.getJCOInstance());
+            JCObject objAddServiceEndpoint = (JCObject)retObjectAddServiceEndpoint;
             return new ServiceEndpoint(objAddServiceEndpoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddServiceEndpoint != null ? retObjectAddServiceEndpoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +223,14 @@ public class ServiceHost extends ServiceHostBase  {
 
     public ServiceEndpoint AddServiceEndpoint(NetType implementedContract, system.servicemodel.channels.Binding binding, Uri address, Uri listenUri) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddServiceEndpoint = null;
         try {
-            JCObject objAddServiceEndpoint = (JCObject)classInstance.Invoke("AddServiceEndpoint", implementedContract == null ? null : implementedContract.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), address == null ? null : address.getJCOInstance(), listenUri == null ? null : listenUri.getJCOInstance());
+            retObjectAddServiceEndpoint = classInstance.Invoke("AddServiceEndpoint", implementedContract == null ? null : implementedContract.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), address == null ? null : address.getJCOInstance(), listenUri == null ? null : listenUri.getJCOInstance());
+            JCObject objAddServiceEndpoint = (JCObject)retObjectAddServiceEndpoint;
             return new ServiceEndpoint(objAddServiceEndpoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddServiceEndpoint != null ? retObjectAddServiceEndpoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +242,14 @@ public class ServiceHost extends ServiceHostBase  {
     
     public NetObject getSingletonInstance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSingletonInstance = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SingletonInstance");
+            retObjectSingletonInstance = classInstance.Get("SingletonInstance");
+            JCObject val = (JCObject)retObjectSingletonInstance;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSingletonInstance != null ? retObjectSingletonInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

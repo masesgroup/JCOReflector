@@ -161,10 +161,14 @@ public class ComposablePartCatalogChangeEventArgs extends EventArgs  {
     
     public AtomicComposition getAtomicComposition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAtomicComposition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AtomicComposition");
+            retObjectAtomicComposition = classInstance.Get("AtomicComposition");
+            JCObject val = (JCObject)retObjectAtomicComposition;
             return new AtomicComposition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAtomicComposition != null ? retObjectAtomicComposition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class ComposablePartCatalogChangeEventArgs extends EventArgs  {
 
     public void setAtomicComposition(AtomicComposition AtomicComposition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AtomicComposition", AtomicComposition == null ? null : AtomicComposition.getJCOInstance());
         } catch (JCNativeException jcne) {

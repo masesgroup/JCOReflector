@@ -168,10 +168,14 @@ public class PermissionRequestEvidence extends EvidenceBase  {
     
     public EvidenceBase Clone() throws Throwable, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new EvidenceBase(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class PermissionRequestEvidence extends EvidenceBase  {
 
     public PermissionRequestEvidence Copy() throws Throwable, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopy = null;
         try {
-            JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
+            retObjectCopy = classInstance.Invoke("Copy");
+            JCObject objCopy = (JCObject)retObjectCopy;
             return new PermissionRequestEvidence(objCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopy != null ? retObjectCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +202,14 @@ public class PermissionRequestEvidence extends EvidenceBase  {
     
     public PermissionSet getDeniedPermissions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeniedPermissions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeniedPermissions");
+            retObjectDeniedPermissions = classInstance.Get("DeniedPermissions");
+            JCObject val = (JCObject)retObjectDeniedPermissions;
             return new PermissionSet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeniedPermissions != null ? retObjectDeniedPermissions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +217,14 @@ public class PermissionRequestEvidence extends EvidenceBase  {
 
     public PermissionSet getOptionalPermissions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptionalPermissions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OptionalPermissions");
+            retObjectOptionalPermissions = classInstance.Get("OptionalPermissions");
+            JCObject val = (JCObject)retObjectOptionalPermissions;
             return new PermissionSet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptionalPermissions != null ? retObjectOptionalPermissions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +232,14 @@ public class PermissionRequestEvidence extends EvidenceBase  {
 
     public PermissionSet getRequestedPermissions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestedPermissions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RequestedPermissions");
+            retObjectRequestedPermissions = classInstance.Get("RequestedPermissions");
+            JCObject val = (JCObject)retObjectRequestedPermissions;
             return new PermissionSet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequestedPermissions != null ? retObjectRequestedPermissions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

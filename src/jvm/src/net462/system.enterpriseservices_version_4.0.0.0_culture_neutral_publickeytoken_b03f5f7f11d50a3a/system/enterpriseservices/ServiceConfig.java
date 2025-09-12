@@ -177,9 +177,13 @@ public class ServiceConfig extends NetObject  {
     
     public boolean getCOMTIIntrinsicsEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCOMTIIntrinsicsEnabled = null;
         try {
-            return (boolean)classInstance.Get("COMTIIntrinsicsEnabled");
+            retObjectCOMTIIntrinsicsEnabled = classInstance.Get("COMTIIntrinsicsEnabled");
+            return (boolean)retObjectCOMTIIntrinsicsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCOMTIIntrinsicsEnabled != null ? retObjectCOMTIIntrinsicsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setCOMTIIntrinsicsEnabled(boolean COMTIIntrinsicsEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("COMTIIntrinsicsEnabled", COMTIIntrinsicsEnabled);
         } catch (JCNativeException jcne) {
@@ -197,9 +201,13 @@ public class ServiceConfig extends NetObject  {
 
     public boolean getIISIntrinsicsEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIISIntrinsicsEnabled = null;
         try {
-            return (boolean)classInstance.Get("IISIntrinsicsEnabled");
+            retObjectIISIntrinsicsEnabled = classInstance.Get("IISIntrinsicsEnabled");
+            return (boolean)retObjectIISIntrinsicsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIISIntrinsicsEnabled != null ? retObjectIISIntrinsicsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +215,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setIISIntrinsicsEnabled(boolean IISIntrinsicsEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IISIntrinsicsEnabled", IISIntrinsicsEnabled);
         } catch (JCNativeException jcne) {
@@ -217,9 +225,13 @@ public class ServiceConfig extends NetObject  {
 
     public boolean getTrackingEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrackingEnabled = null;
         try {
-            return (boolean)classInstance.Get("TrackingEnabled");
+            retObjectTrackingEnabled = classInstance.Get("TrackingEnabled");
+            return (boolean)retObjectTrackingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTrackingEnabled != null ? retObjectTrackingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +239,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setTrackingEnabled(boolean TrackingEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TrackingEnabled", TrackingEnabled);
         } catch (JCNativeException jcne) {
@@ -237,9 +249,19 @@ public class ServiceConfig extends NetObject  {
 
     public int getTransactionTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactionTimeout = null;
         try {
-            return (int)classInstance.Get("TransactionTimeout");
+            retObjectTransactionTimeout = classInstance.Get("TransactionTimeout");
+            return (int)retObjectTransactionTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTransactionTimeoutNumber = (java.lang.Number)retObjectTransactionTimeout;
+                return retObjectTransactionTimeoutNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTransactionTimeout != null ? retObjectTransactionTimeout.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +269,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setTransactionTimeout(int TransactionTimeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransactionTimeout", TransactionTimeout);
         } catch (JCNativeException jcne) {
@@ -257,10 +279,14 @@ public class ServiceConfig extends NetObject  {
 
     public BindingOption getBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Binding");
+            retObjectBinding = classInstance.Get("Binding");
+            JCObject val = (JCObject)retObjectBinding;
             return new BindingOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBinding != null ? retObjectBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +294,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setBinding(BindingOption Binding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Binding", Binding == null ? null : Binding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -278,10 +304,14 @@ public class ServiceConfig extends NetObject  {
 
     public InheritanceOption getInheritance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInheritance = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Inheritance");
+            retObjectInheritance = classInstance.Get("Inheritance");
+            JCObject val = (JCObject)retObjectInheritance;
             return new InheritanceOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInheritance != null ? retObjectInheritance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +319,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setInheritance(InheritanceOption Inheritance) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Inheritance", Inheritance == null ? null : Inheritance.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -299,10 +329,14 @@ public class ServiceConfig extends NetObject  {
 
     public ITransaction getBringYourOwnTransaction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBringYourOwnTransaction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BringYourOwnTransaction");
+            retObjectBringYourOwnTransaction = classInstance.Get("BringYourOwnTransaction");
+            JCObject val = (JCObject)retObjectBringYourOwnTransaction;
             return new ITransactionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBringYourOwnTransaction != null ? retObjectBringYourOwnTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +344,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setBringYourOwnTransaction(ITransaction BringYourOwnTransaction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BringYourOwnTransaction", BringYourOwnTransaction == null ? null : BringYourOwnTransaction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -320,10 +354,14 @@ public class ServiceConfig extends NetObject  {
 
     public PartitionOption getPartitionOption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartitionOption = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PartitionOption");
+            retObjectPartitionOption = classInstance.Get("PartitionOption");
+            JCObject val = (JCObject)retObjectPartitionOption;
             return new PartitionOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPartitionOption != null ? retObjectPartitionOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,7 +369,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setPartitionOption(PartitionOption PartitionOption) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PartitionOption", PartitionOption == null ? null : PartitionOption.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -341,10 +379,14 @@ public class ServiceConfig extends NetObject  {
 
     public SxsOption getSxsOption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSxsOption = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SxsOption");
+            retObjectSxsOption = classInstance.Get("SxsOption");
+            JCObject val = (JCObject)retObjectSxsOption;
             return new SxsOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSxsOption != null ? retObjectSxsOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,7 +394,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setSxsOption(SxsOption SxsOption) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SxsOption", SxsOption == null ? null : SxsOption.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -362,10 +404,14 @@ public class ServiceConfig extends NetObject  {
 
     public SynchronizationOption getSynchronization() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSynchronization = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Synchronization");
+            retObjectSynchronization = classInstance.Get("Synchronization");
+            JCObject val = (JCObject)retObjectSynchronization;
             return new SynchronizationOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSynchronization != null ? retObjectSynchronization.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,7 +419,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setSynchronization(SynchronizationOption Synchronization) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Synchronization", Synchronization == null ? null : Synchronization.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -383,10 +429,14 @@ public class ServiceConfig extends NetObject  {
 
     public ThreadPoolOption getThreadPool() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThreadPool = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ThreadPool");
+            retObjectThreadPool = classInstance.Get("ThreadPool");
+            JCObject val = (JCObject)retObjectThreadPool;
             return new ThreadPoolOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThreadPool != null ? retObjectThreadPool.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,7 +444,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setThreadPool(ThreadPoolOption ThreadPool) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ThreadPool", ThreadPool == null ? null : ThreadPool.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -404,10 +454,14 @@ public class ServiceConfig extends NetObject  {
 
     public TransactionIsolationLevel getIsolationLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsolationLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IsolationLevel");
+            retObjectIsolationLevel = classInstance.Get("IsolationLevel");
+            JCObject val = (JCObject)retObjectIsolationLevel;
             return new TransactionIsolationLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsolationLevel != null ? retObjectIsolationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -415,7 +469,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setIsolationLevel(TransactionIsolationLevel IsolationLevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsolationLevel", IsolationLevel == null ? null : IsolationLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -425,10 +479,14 @@ public class ServiceConfig extends NetObject  {
 
     public TransactionOption getTransaction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransaction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Transaction");
+            retObjectTransaction = classInstance.Get("Transaction");
+            JCObject val = (JCObject)retObjectTransaction;
             return new TransactionOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransaction != null ? retObjectTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -436,7 +494,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setTransaction(TransactionOption Transaction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Transaction", Transaction == null ? null : Transaction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -446,10 +504,14 @@ public class ServiceConfig extends NetObject  {
 
     public Guid getPartitionId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartitionId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PartitionId");
+            retObjectPartitionId = classInstance.Get("PartitionId");
+            JCObject val = (JCObject)retObjectPartitionId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPartitionId != null ? retObjectPartitionId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,7 +519,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setPartitionId(Guid PartitionId) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PartitionId", PartitionId == null ? null : PartitionId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -467,9 +529,13 @@ public class ServiceConfig extends NetObject  {
 
     public java.lang.String getSxsDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSxsDirectory = null;
         try {
-            return (java.lang.String)classInstance.Get("SxsDirectory");
+            retObjectSxsDirectory = classInstance.Get("SxsDirectory");
+            return (java.lang.String)retObjectSxsDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSxsDirectory != null ? retObjectSxsDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,7 +543,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setSxsDirectory(java.lang.String SxsDirectory) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SxsDirectory", SxsDirectory);
         } catch (JCNativeException jcne) {
@@ -487,9 +553,13 @@ public class ServiceConfig extends NetObject  {
 
     public java.lang.String getSxsName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSxsName = null;
         try {
-            return (java.lang.String)classInstance.Get("SxsName");
+            retObjectSxsName = classInstance.Get("SxsName");
+            return (java.lang.String)retObjectSxsName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSxsName != null ? retObjectSxsName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -497,7 +567,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setSxsName(java.lang.String SxsName) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SxsName", SxsName);
         } catch (JCNativeException jcne) {
@@ -507,9 +577,13 @@ public class ServiceConfig extends NetObject  {
 
     public java.lang.String getTipUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTipUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("TipUrl");
+            retObjectTipUrl = classInstance.Get("TipUrl");
+            return (java.lang.String)retObjectTipUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTipUrl != null ? retObjectTipUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -517,7 +591,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setTipUrl(java.lang.String TipUrl) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TipUrl", TipUrl);
         } catch (JCNativeException jcne) {
@@ -527,9 +601,13 @@ public class ServiceConfig extends NetObject  {
 
     public java.lang.String getTrackingAppName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrackingAppName = null;
         try {
-            return (java.lang.String)classInstance.Get("TrackingAppName");
+            retObjectTrackingAppName = classInstance.Get("TrackingAppName");
+            return (java.lang.String)retObjectTrackingAppName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTrackingAppName != null ? retObjectTrackingAppName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -537,7 +615,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setTrackingAppName(java.lang.String TrackingAppName) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TrackingAppName", TrackingAppName);
         } catch (JCNativeException jcne) {
@@ -547,9 +625,13 @@ public class ServiceConfig extends NetObject  {
 
     public java.lang.String getTrackingComponentName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrackingComponentName = null;
         try {
-            return (java.lang.String)classInstance.Get("TrackingComponentName");
+            retObjectTrackingComponentName = classInstance.Get("TrackingComponentName");
+            return (java.lang.String)retObjectTrackingComponentName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTrackingComponentName != null ? retObjectTrackingComponentName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -557,7 +639,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setTrackingComponentName(java.lang.String TrackingComponentName) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TrackingComponentName", TrackingComponentName);
         } catch (JCNativeException jcne) {
@@ -567,9 +649,13 @@ public class ServiceConfig extends NetObject  {
 
     public java.lang.String getTransactionDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactionDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("TransactionDescription");
+            retObjectTransactionDescription = classInstance.Get("TransactionDescription");
+            return (java.lang.String)retObjectTransactionDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTransactionDescription != null ? retObjectTransactionDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -577,7 +663,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setTransactionDescription(java.lang.String TransactionDescription) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransactionDescription", TransactionDescription);
         } catch (JCNativeException jcne) {
@@ -587,10 +673,14 @@ public class ServiceConfig extends NetObject  {
 
     public Transaction getBringYourOwnSystemTransaction() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.transactions.TransactionException, system.OverflowException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBringYourOwnSystemTransaction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BringYourOwnSystemTransaction");
+            retObjectBringYourOwnSystemTransaction = classInstance.Get("BringYourOwnSystemTransaction");
+            JCObject val = (JCObject)retObjectBringYourOwnSystemTransaction;
             return new Transaction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBringYourOwnSystemTransaction != null ? retObjectBringYourOwnSystemTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -598,7 +688,7 @@ public class ServiceConfig extends NetObject  {
 
     public void setBringYourOwnSystemTransaction(Transaction BringYourOwnSystemTransaction) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BringYourOwnSystemTransaction", BringYourOwnSystemTransaction == null ? null : BringYourOwnSystemTransaction.getJCOInstance());
         } catch (JCNativeException jcne) {

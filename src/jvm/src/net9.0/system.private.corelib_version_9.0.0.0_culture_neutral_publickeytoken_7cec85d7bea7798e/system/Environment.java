@@ -158,10 +158,14 @@ public class Environment extends NetObject  {
     
     public static IDictionary GetEnvironmentVariables() throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEnvironmentVariables = null;
         try {
-            JCObject objGetEnvironmentVariables = (JCObject)classType.Invoke("GetEnvironmentVariables");
+            retObjectGetEnvironmentVariables = classType.Invoke("GetEnvironmentVariables");
+            JCObject objGetEnvironmentVariables = (JCObject)retObjectGetEnvironmentVariables;
             return new IDictionaryImplementation(objGetEnvironmentVariables);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEnvironmentVariables != null ? retObjectGetEnvironmentVariables.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class Environment extends NetObject  {
 
     public static IDictionary GetEnvironmentVariables(EnvironmentVariableTarget target) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.UnauthorizedAccessException, system.io.IOException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEnvironmentVariables = null;
         try {
-            JCObject objGetEnvironmentVariables = (JCObject)classType.Invoke("GetEnvironmentVariables", target == null ? null : target.getJCOInstance());
+            retObjectGetEnvironmentVariables = classType.Invoke("GetEnvironmentVariables", target == null ? null : target.getJCOInstance());
+            JCObject objGetEnvironmentVariables = (JCObject)retObjectGetEnvironmentVariables;
             return new IDictionaryImplementation(objGetEnvironmentVariables);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEnvironmentVariables != null ? retObjectGetEnvironmentVariables.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +188,13 @@ public class Environment extends NetObject  {
 
     public static java.lang.String ExpandEnvironmentVariables(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExpandEnvironmentVariables = null;
         try {
-            return (java.lang.String)classType.Invoke("ExpandEnvironmentVariables", name);
+            retObjectExpandEnvironmentVariables = classType.Invoke("ExpandEnvironmentVariables", name);
+            return (java.lang.String)retObjectExpandEnvironmentVariables;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectExpandEnvironmentVariables != null ? retObjectExpandEnvironmentVariables.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +202,13 @@ public class Environment extends NetObject  {
 
     public static java.lang.String GetEnvironmentVariable(java.lang.String variable, EnvironmentVariableTarget target) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEnvironmentVariable = null;
         try {
-            return (java.lang.String)classType.Invoke("GetEnvironmentVariable", variable, target == null ? null : target.getJCOInstance());
+            retObjectGetEnvironmentVariable = classType.Invoke("GetEnvironmentVariable", variable, target == null ? null : target.getJCOInstance());
+            return (java.lang.String)retObjectGetEnvironmentVariable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetEnvironmentVariable != null ? retObjectGetEnvironmentVariable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +216,13 @@ public class Environment extends NetObject  {
 
     public static java.lang.String GetEnvironmentVariable(java.lang.String variable) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEnvironmentVariable = null;
         try {
-            return (java.lang.String)classType.Invoke("GetEnvironmentVariable", variable);
+            retObjectGetEnvironmentVariable = classType.Invoke("GetEnvironmentVariable", variable);
+            return (java.lang.String)retObjectGetEnvironmentVariable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetEnvironmentVariable != null ? retObjectGetEnvironmentVariable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +230,12 @@ public class Environment extends NetObject  {
 
     public static java.lang.String[] GetCommandLineArgs() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCommandLineArgs = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCommandLineArgs");
+            retObjectGetCommandLineArgs = classType.Invoke("GetCommandLineArgs");
+            JCObject resultingObjects = (JCObject)retObjectGetCommandLineArgs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -222,6 +244,8 @@ public class Environment extends NetObject  {
 				resultingArray[indexGetCommandLineArgs] = (java.lang.String)resultingArrayList.get(indexGetCommandLineArgs);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetCommandLineArgs != null ? retObjectGetCommandLineArgs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +253,12 @@ public class Environment extends NetObject  {
 
     public static java.lang.String[] GetLogicalDrives() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLogicalDrives = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetLogicalDrives");
+            retObjectGetLogicalDrives = classType.Invoke("GetLogicalDrives");
+            JCObject resultingObjects = (JCObject)retObjectGetLogicalDrives;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -241,6 +267,8 @@ public class Environment extends NetObject  {
 				resultingArray[indexGetLogicalDrives] = (java.lang.String)resultingArrayList.get(indexGetLogicalDrives);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetLogicalDrives != null ? retObjectGetLogicalDrives.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +276,7 @@ public class Environment extends NetObject  {
 
     public static void Exit(int exitCode) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Exit", exitCode);
         } catch (JCNativeException jcne) {
@@ -258,7 +286,7 @@ public class Environment extends NetObject  {
 
     public static void FailFast(java.lang.String message, NetException exception) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FailFast", message, exception == null ? null : exception.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -268,7 +296,7 @@ public class Environment extends NetObject  {
 
     public static void FailFast(java.lang.String message) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FailFast", message);
         } catch (JCNativeException jcne) {
@@ -278,7 +306,7 @@ public class Environment extends NetObject  {
 
     public static void SetEnvironmentVariable(java.lang.String variable, java.lang.String value, EnvironmentVariableTarget target) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetEnvironmentVariable", variable, value, target == null ? null : target.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -288,7 +316,7 @@ public class Environment extends NetObject  {
 
     public static void SetEnvironmentVariable(java.lang.String variable, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetEnvironmentVariable", variable, value);
         } catch (JCNativeException jcne) {
@@ -302,9 +330,13 @@ public class Environment extends NetObject  {
     
     public static boolean getHasShutdownStarted() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHasShutdownStarted = null;
         try {
-            return (boolean)classType.Get("HasShutdownStarted");
+            retObjectHasShutdownStarted = classType.Get("HasShutdownStarted");
+            return (boolean)retObjectHasShutdownStarted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasShutdownStarted != null ? retObjectHasShutdownStarted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,9 +344,13 @@ public class Environment extends NetObject  {
 
     public static boolean getIs64BitOperatingSystem() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIs64BitOperatingSystem = null;
         try {
-            return (boolean)classType.Get("Is64BitOperatingSystem");
+            retObjectIs64BitOperatingSystem = classType.Get("Is64BitOperatingSystem");
+            return (boolean)retObjectIs64BitOperatingSystem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIs64BitOperatingSystem != null ? retObjectIs64BitOperatingSystem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,9 +358,13 @@ public class Environment extends NetObject  {
 
     public static boolean getIs64BitProcess() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIs64BitProcess = null;
         try {
-            return (boolean)classType.Get("Is64BitProcess");
+            retObjectIs64BitProcess = classType.Get("Is64BitProcess");
+            return (boolean)retObjectIs64BitProcess;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIs64BitProcess != null ? retObjectIs64BitProcess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,9 +372,13 @@ public class Environment extends NetObject  {
 
     public static boolean getIsPrivilegedProcess() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.FormatException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPrivilegedProcess = null;
         try {
-            return (boolean)classType.Get("IsPrivilegedProcess");
+            retObjectIsPrivilegedProcess = classType.Get("IsPrivilegedProcess");
+            return (boolean)retObjectIsPrivilegedProcess;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPrivilegedProcess != null ? retObjectIsPrivilegedProcess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,9 +386,13 @@ public class Environment extends NetObject  {
 
     public static boolean getUserInteractive() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUserInteractive = null;
         try {
-            return (boolean)classType.Get("UserInteractive");
+            retObjectUserInteractive = classType.Get("UserInteractive");
+            return (boolean)retObjectUserInteractive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUserInteractive != null ? retObjectUserInteractive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,9 +400,19 @@ public class Environment extends NetObject  {
 
     public static int getCurrentManagedThreadId() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentManagedThreadId = null;
         try {
-            return (int)classType.Get("CurrentManagedThreadId");
+            retObjectCurrentManagedThreadId = classType.Get("CurrentManagedThreadId");
+            return (int)retObjectCurrentManagedThreadId;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCurrentManagedThreadIdNumber = (java.lang.Number)retObjectCurrentManagedThreadId;
+                return retObjectCurrentManagedThreadIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCurrentManagedThreadId != null ? retObjectCurrentManagedThreadId.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,9 +420,19 @@ public class Environment extends NetObject  {
 
     public static int getExitCode() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExitCode = null;
         try {
-            return (int)classType.Get("ExitCode");
+            retObjectExitCode = classType.Get("ExitCode");
+            return (int)retObjectExitCode;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExitCodeNumber = (java.lang.Number)retObjectExitCode;
+                return retObjectExitCodeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExitCode != null ? retObjectExitCode.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,7 +440,7 @@ public class Environment extends NetObject  {
 
     public static void setExitCode(int ExitCode) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("ExitCode", ExitCode);
         } catch (JCNativeException jcne) {
@@ -382,9 +450,19 @@ public class Environment extends NetObject  {
 
     public static int getProcessId() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProcessId = null;
         try {
-            return (int)classType.Get("ProcessId");
+            retObjectProcessId = classType.Get("ProcessId");
+            return (int)retObjectProcessId;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectProcessIdNumber = (java.lang.Number)retObjectProcessId;
+                return retObjectProcessIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectProcessId != null ? retObjectProcessId.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -392,9 +470,19 @@ public class Environment extends NetObject  {
 
     public static int getProcessorCount() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProcessorCount = null;
         try {
-            return (int)classType.Get("ProcessorCount");
+            retObjectProcessorCount = classType.Get("ProcessorCount");
+            return (int)retObjectProcessorCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectProcessorCountNumber = (java.lang.Number)retObjectProcessorCount;
+                return retObjectProcessorCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectProcessorCount != null ? retObjectProcessorCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,9 +490,19 @@ public class Environment extends NetObject  {
 
     public static int getSystemPageSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSystemPageSize = null;
         try {
-            return (int)classType.Get("SystemPageSize");
+            retObjectSystemPageSize = classType.Get("SystemPageSize");
+            return (int)retObjectSystemPageSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSystemPageSizeNumber = (java.lang.Number)retObjectSystemPageSize;
+                return retObjectSystemPageSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSystemPageSize != null ? retObjectSystemPageSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -412,9 +510,19 @@ public class Environment extends NetObject  {
 
     public static int getTickCount() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTickCount = null;
         try {
-            return (int)classType.Get("TickCount");
+            retObjectTickCount = classType.Get("TickCount");
+            return (int)retObjectTickCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTickCountNumber = (java.lang.Number)retObjectTickCount;
+                return retObjectTickCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTickCount != null ? retObjectTickCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,9 +530,19 @@ public class Environment extends NetObject  {
 
     public static long getTickCount64() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTickCount64 = null;
         try {
-            return (long)classType.Get("TickCount64");
+            retObjectTickCount64 = classType.Get("TickCount64");
+            return (long)retObjectTickCount64;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTickCount64Number = (java.lang.Number)retObjectTickCount64;
+                return retObjectTickCount64Number.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTickCount64 != null ? retObjectTickCount64.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,9 +550,19 @@ public class Environment extends NetObject  {
 
     public static long getWorkingSet() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWorkingSet = null;
         try {
-            return (long)classType.Get("WorkingSet");
+            retObjectWorkingSet = classType.Get("WorkingSet");
+            return (long)retObjectWorkingSet;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWorkingSetNumber = (java.lang.Number)retObjectWorkingSet;
+                return retObjectWorkingSetNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectWorkingSet != null ? retObjectWorkingSet.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,10 +570,14 @@ public class Environment extends NetObject  {
 
     public static OperatingSystem getOSVersion() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOSVersion = null;
         try {
-            JCObject val = (JCObject)classType.Get("OSVersion");
+            retObjectOSVersion = classType.Get("OSVersion");
+            JCObject val = (JCObject)retObjectOSVersion;
             return new OperatingSystem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOSVersion != null ? retObjectOSVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,9 +585,13 @@ public class Environment extends NetObject  {
 
     public static java.lang.String getCommandLine() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCommandLine = null;
         try {
-            return (java.lang.String)classType.Get("CommandLine");
+            retObjectCommandLine = classType.Get("CommandLine");
+            return (java.lang.String)retObjectCommandLine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCommandLine != null ? retObjectCommandLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -463,9 +599,13 @@ public class Environment extends NetObject  {
 
     public static java.lang.String getCurrentDirectory() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentDirectory = null;
         try {
-            return (java.lang.String)classType.Get("CurrentDirectory");
+            retObjectCurrentDirectory = classType.Get("CurrentDirectory");
+            return (java.lang.String)retObjectCurrentDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCurrentDirectory != null ? retObjectCurrentDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -473,7 +613,7 @@ public class Environment extends NetObject  {
 
     public static void setCurrentDirectory(java.lang.String CurrentDirectory) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("CurrentDirectory", CurrentDirectory);
         } catch (JCNativeException jcne) {
@@ -483,9 +623,13 @@ public class Environment extends NetObject  {
 
     public static java.lang.String getMachineName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMachineName = null;
         try {
-            return (java.lang.String)classType.Get("MachineName");
+            retObjectMachineName = classType.Get("MachineName");
+            return (java.lang.String)retObjectMachineName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMachineName != null ? retObjectMachineName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -493,9 +637,13 @@ public class Environment extends NetObject  {
 
     public static java.lang.String getNewLine() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNewLine = null;
         try {
-            return (java.lang.String)classType.Get("NewLine");
+            retObjectNewLine = classType.Get("NewLine");
+            return (java.lang.String)retObjectNewLine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNewLine != null ? retObjectNewLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -503,9 +651,13 @@ public class Environment extends NetObject  {
 
     public static java.lang.String getProcessPath() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProcessPath = null;
         try {
-            return (java.lang.String)classType.Get("ProcessPath");
+            retObjectProcessPath = classType.Get("ProcessPath");
+            return (java.lang.String)retObjectProcessPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProcessPath != null ? retObjectProcessPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -513,9 +665,13 @@ public class Environment extends NetObject  {
 
     public static java.lang.String getStackTrace() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.io.FileLoadException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.FormatException, system.RankException, system.IndexOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStackTrace = null;
         try {
-            return (java.lang.String)classType.Get("StackTrace");
+            retObjectStackTrace = classType.Get("StackTrace");
+            return (java.lang.String)retObjectStackTrace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStackTrace != null ? retObjectStackTrace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -523,9 +679,13 @@ public class Environment extends NetObject  {
 
     public static java.lang.String getSystemDirectory() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSystemDirectory = null;
         try {
-            return (java.lang.String)classType.Get("SystemDirectory");
+            retObjectSystemDirectory = classType.Get("SystemDirectory");
+            return (java.lang.String)retObjectSystemDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSystemDirectory != null ? retObjectSystemDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -533,9 +693,13 @@ public class Environment extends NetObject  {
 
     public static java.lang.String getUserDomainName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUserDomainName = null;
         try {
-            return (java.lang.String)classType.Get("UserDomainName");
+            retObjectUserDomainName = classType.Get("UserDomainName");
+            return (java.lang.String)retObjectUserDomainName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserDomainName != null ? retObjectUserDomainName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -543,9 +707,13 @@ public class Environment extends NetObject  {
 
     public static java.lang.String getUserName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUserName = null;
         try {
-            return (java.lang.String)classType.Get("UserName");
+            retObjectUserName = classType.Get("UserName");
+            return (java.lang.String)retObjectUserName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserName != null ? retObjectUserName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -553,10 +721,14 @@ public class Environment extends NetObject  {
 
     public static Version getVersion() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            JCObject val = (JCObject)classType.Get("Version");
+            retObjectVersion = classType.Get("Version");
+            JCObject val = (JCObject)retObjectVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -166,7 +166,7 @@ public class DataGridColumnHeader extends ButtonBase  {
     
     public void OnApplyTemplate() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {
@@ -180,9 +180,13 @@ public class DataGridColumnHeader extends ButtonBase  {
     
     public boolean getCanUserSort() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanUserSort = null;
         try {
-            return (boolean)classInstance.Get("CanUserSort");
+            retObjectCanUserSort = classInstance.Get("CanUserSort");
+            return (boolean)retObjectCanUserSort;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanUserSort != null ? retObjectCanUserSort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +194,13 @@ public class DataGridColumnHeader extends ButtonBase  {
 
     public boolean getIsFrozen() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFrozen = null;
         try {
-            return (boolean)classInstance.Get("IsFrozen");
+            retObjectIsFrozen = classInstance.Get("IsFrozen");
+            return (boolean)retObjectIsFrozen;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFrozen != null ? retObjectIsFrozen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +208,19 @@ public class DataGridColumnHeader extends ButtonBase  {
 
     public int getDisplayIndex() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayIndex = null;
         try {
-            return (int)classInstance.Get("DisplayIndex");
+            retObjectDisplayIndex = classInstance.Get("DisplayIndex");
+            return (int)retObjectDisplayIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDisplayIndexNumber = (java.lang.Number)retObjectDisplayIndex;
+                return retObjectDisplayIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDisplayIndex != null ? retObjectDisplayIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +228,14 @@ public class DataGridColumnHeader extends ButtonBase  {
 
     public static ComponentResourceKey getColumnFloatingHeaderStyleKey() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectColumnFloatingHeaderStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ColumnFloatingHeaderStyleKey");
+            retObjectColumnFloatingHeaderStyleKey = classType.Get("ColumnFloatingHeaderStyleKey");
+            JCObject val = (JCObject)retObjectColumnFloatingHeaderStyleKey;
             return new ComponentResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnFloatingHeaderStyleKey != null ? retObjectColumnFloatingHeaderStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +243,14 @@ public class DataGridColumnHeader extends ButtonBase  {
 
     public static ComponentResourceKey getColumnHeaderDropSeparatorStyleKey() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectColumnHeaderDropSeparatorStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ColumnHeaderDropSeparatorStyleKey");
+            retObjectColumnHeaderDropSeparatorStyleKey = classType.Get("ColumnHeaderDropSeparatorStyleKey");
+            JCObject val = (JCObject)retObjectColumnHeaderDropSeparatorStyleKey;
             return new ComponentResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnHeaderDropSeparatorStyleKey != null ? retObjectColumnHeaderDropSeparatorStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +258,14 @@ public class DataGridColumnHeader extends ButtonBase  {
 
     public DataGridColumn getColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumn = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Column");
+            retObjectColumn = classInstance.Get("Column");
+            JCObject val = (JCObject)retObjectColumn;
             return new DataGridColumn(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumn != null ? retObjectColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +273,14 @@ public class DataGridColumnHeader extends ButtonBase  {
 
     public Brush getSeparatorBrush() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeparatorBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SeparatorBrush");
+            retObjectSeparatorBrush = classInstance.Get("SeparatorBrush");
+            JCObject val = (JCObject)retObjectSeparatorBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSeparatorBrush != null ? retObjectSeparatorBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,7 +288,7 @@ public class DataGridColumnHeader extends ButtonBase  {
 
     public void setSeparatorBrush(Brush SeparatorBrush) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SeparatorBrush", SeparatorBrush == null ? null : SeparatorBrush.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -264,10 +298,14 @@ public class DataGridColumnHeader extends ButtonBase  {
 
     public Visibility getSeparatorVisibility() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeparatorVisibility = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SeparatorVisibility");
+            retObjectSeparatorVisibility = classInstance.Get("SeparatorVisibility");
+            JCObject val = (JCObject)retObjectSeparatorVisibility;
             return new Visibility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSeparatorVisibility != null ? retObjectSeparatorVisibility.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +313,7 @@ public class DataGridColumnHeader extends ButtonBase  {
 
     public void setSeparatorVisibility(Visibility SeparatorVisibility) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SeparatorVisibility", SeparatorVisibility == null ? null : SeparatorVisibility.getJCOInstance());
         } catch (JCNativeException jcne) {

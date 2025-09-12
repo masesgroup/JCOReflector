@@ -177,10 +177,14 @@ public class FaultReason extends NetObject  {
     
     public FaultReasonText GetMatchingTranslation() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMatchingTranslation = null;
         try {
-            JCObject objGetMatchingTranslation = (JCObject)classInstance.Invoke("GetMatchingTranslation");
+            retObjectGetMatchingTranslation = classInstance.Invoke("GetMatchingTranslation");
+            JCObject objGetMatchingTranslation = (JCObject)retObjectGetMatchingTranslation;
             return new FaultReasonText(objGetMatchingTranslation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMatchingTranslation != null ? retObjectGetMatchingTranslation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +192,14 @@ public class FaultReason extends NetObject  {
 
     public FaultReasonText GetMatchingTranslation(CultureInfo cultureInfo) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMatchingTranslation = null;
         try {
-            JCObject objGetMatchingTranslation = (JCObject)classInstance.Invoke("GetMatchingTranslation", cultureInfo == null ? null : cultureInfo.getJCOInstance());
+            retObjectGetMatchingTranslation = classInstance.Invoke("GetMatchingTranslation", cultureInfo == null ? null : cultureInfo.getJCOInstance());
+            JCObject objGetMatchingTranslation = (JCObject)retObjectGetMatchingTranslation;
             return new FaultReasonText(objGetMatchingTranslation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMatchingTranslation != null ? retObjectGetMatchingTranslation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

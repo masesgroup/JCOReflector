@@ -148,10 +148,14 @@ public class IClientChannelSinkProviderImplementation extends NetObject implemen
     
     public IClientChannelSink CreateSink(IChannelSender channel, java.lang.String url, NetObject remoteChannelData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSink = null;
         try {
-            JCObject objCreateSink = (JCObject)classInstance.Invoke("CreateSink", channel == null ? null : channel.getJCOInstance(), url, remoteChannelData == null ? null : remoteChannelData.getJCOInstance());
+            retObjectCreateSink = classInstance.Invoke("CreateSink", channel == null ? null : channel.getJCOInstance(), url, remoteChannelData == null ? null : remoteChannelData.getJCOInstance());
+            JCObject objCreateSink = (JCObject)retObjectCreateSink;
             return new IClientChannelSinkImplementation(objCreateSink);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSink != null ? retObjectCreateSink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,10 +167,14 @@ public class IClientChannelSinkProviderImplementation extends NetObject implemen
     
     public IClientChannelSinkProvider getNext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Next");
+            retObjectNext = classInstance.Get("Next");
+            JCObject val = (JCObject)retObjectNext;
             return new IClientChannelSinkProviderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNext != null ? retObjectNext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +182,7 @@ public class IClientChannelSinkProviderImplementation extends NetObject implemen
 
     public void setNext(IClientChannelSinkProvider Next) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Next", Next == null ? null : Next.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -142,9 +142,13 @@ public class ICommandServiceImplementation extends NetObject implements ICommand
     
     public boolean CanExecuteCommand(int commandId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanExecuteCommand = null;
         try {
-            return (boolean)classInstance.Invoke("CanExecuteCommand", commandId);
+            retObjectCanExecuteCommand = classInstance.Invoke("CanExecuteCommand", commandId);
+            return (boolean)retObjectCanExecuteCommand;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanExecuteCommand != null ? retObjectCanExecuteCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,9 +156,13 @@ public class ICommandServiceImplementation extends NetObject implements ICommand
 
     public boolean IsCommandSupported(int commandId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCommandSupported = null;
         try {
-            return (boolean)classInstance.Invoke("IsCommandSupported", commandId);
+            retObjectIsCommandSupported = classInstance.Invoke("IsCommandSupported", commandId);
+            return (boolean)retObjectIsCommandSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsCommandSupported != null ? retObjectIsCommandSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

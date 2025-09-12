@@ -158,10 +158,14 @@ public class Vector extends NetObject  {
     
     public static Plane AsPlane(Vector4 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsPlane = null;
         try {
-            JCObject objAsPlane = (JCObject)classType.Invoke("AsPlane", value == null ? null : value.getJCOInstance());
+            retObjectAsPlane = classType.Invoke("AsPlane", value == null ? null : value.getJCOInstance());
+            JCObject objAsPlane = (JCObject)retObjectAsPlane;
             return new Plane(objAsPlane);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsPlane != null ? retObjectAsPlane.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class Vector extends NetObject  {
 
     public static Quaternion AsQuaternion(Vector4 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsQuaternion = null;
         try {
-            JCObject objAsQuaternion = (JCObject)classType.Invoke("AsQuaternion", value == null ? null : value.getJCOInstance());
+            retObjectAsQuaternion = classType.Invoke("AsQuaternion", value == null ? null : value.getJCOInstance());
+            JCObject objAsQuaternion = (JCObject)retObjectAsQuaternion;
             return new Quaternion(objAsQuaternion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsQuaternion != null ? retObjectAsQuaternion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class Vector extends NetObject  {
 
     public static Vector2 AsVector2(Vector4 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsVector2 = null;
         try {
-            JCObject objAsVector2 = (JCObject)classType.Invoke("AsVector2", value == null ? null : value.getJCOInstance());
+            retObjectAsVector2 = classType.Invoke("AsVector2", value == null ? null : value.getJCOInstance());
+            JCObject objAsVector2 = (JCObject)retObjectAsVector2;
             return new Vector2(objAsVector2);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsVector2 != null ? retObjectAsVector2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class Vector extends NetObject  {
 
     public static Vector3 AsVector3(Vector4 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsVector3 = null;
         try {
-            JCObject objAsVector3 = (JCObject)classType.Invoke("AsVector3", value == null ? null : value.getJCOInstance());
+            retObjectAsVector3 = classType.Invoke("AsVector3", value == null ? null : value.getJCOInstance());
+            JCObject objAsVector3 = (JCObject)retObjectAsVector3;
             return new Vector3(objAsVector3);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsVector3 != null ? retObjectAsVector3.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class Vector extends NetObject  {
 
     public static Vector4 AsVector4(Plane value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsVector4 = null;
         try {
-            JCObject objAsVector4 = (JCObject)classType.Invoke("AsVector4", value == null ? null : value.getJCOInstance());
+            retObjectAsVector4 = classType.Invoke("AsVector4", value == null ? null : value.getJCOInstance());
+            JCObject objAsVector4 = (JCObject)retObjectAsVector4;
             return new Vector4(objAsVector4);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsVector4 != null ? retObjectAsVector4.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class Vector extends NetObject  {
 
     public static Vector4 AsVector4(Quaternion value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsVector4 = null;
         try {
-            JCObject objAsVector4 = (JCObject)classType.Invoke("AsVector4", value == null ? null : value.getJCOInstance());
+            retObjectAsVector4 = classType.Invoke("AsVector4", value == null ? null : value.getJCOInstance());
+            JCObject objAsVector4 = (JCObject)retObjectAsVector4;
             return new Vector4(objAsVector4);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsVector4 != null ? retObjectAsVector4.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +248,14 @@ public class Vector extends NetObject  {
 
     public static Vector4 AsVector4(Vector2 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsVector4 = null;
         try {
-            JCObject objAsVector4 = (JCObject)classType.Invoke("AsVector4", value == null ? null : value.getJCOInstance());
+            retObjectAsVector4 = classType.Invoke("AsVector4", value == null ? null : value.getJCOInstance());
+            JCObject objAsVector4 = (JCObject)retObjectAsVector4;
             return new Vector4(objAsVector4);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsVector4 != null ? retObjectAsVector4.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +263,14 @@ public class Vector extends NetObject  {
 
     public static Vector4 AsVector4(Vector3 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsVector4 = null;
         try {
-            JCObject objAsVector4 = (JCObject)classType.Invoke("AsVector4", value == null ? null : value.getJCOInstance());
+            retObjectAsVector4 = classType.Invoke("AsVector4", value == null ? null : value.getJCOInstance());
+            JCObject objAsVector4 = (JCObject)retObjectAsVector4;
             return new Vector4(objAsVector4);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsVector4 != null ? retObjectAsVector4.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +278,14 @@ public class Vector extends NetObject  {
 
     public static Vector4 AsVector4Unsafe(Vector2 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsVector4Unsafe = null;
         try {
-            JCObject objAsVector4Unsafe = (JCObject)classType.Invoke("AsVector4Unsafe", value == null ? null : value.getJCOInstance());
+            retObjectAsVector4Unsafe = classType.Invoke("AsVector4Unsafe", value == null ? null : value.getJCOInstance());
+            JCObject objAsVector4Unsafe = (JCObject)retObjectAsVector4Unsafe;
             return new Vector4(objAsVector4Unsafe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsVector4Unsafe != null ? retObjectAsVector4Unsafe.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +293,14 @@ public class Vector extends NetObject  {
 
     public static Vector4 AsVector4Unsafe(Vector3 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsVector4Unsafe = null;
         try {
-            JCObject objAsVector4Unsafe = (JCObject)classType.Invoke("AsVector4Unsafe", value == null ? null : value.getJCOInstance());
+            retObjectAsVector4Unsafe = classType.Invoke("AsVector4Unsafe", value == null ? null : value.getJCOInstance());
+            JCObject objAsVector4Unsafe = (JCObject)retObjectAsVector4Unsafe;
             return new Vector4(objAsVector4Unsafe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsVector4Unsafe != null ? retObjectAsVector4Unsafe.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,9 +312,13 @@ public class Vector extends NetObject  {
     
     public static boolean getIsHardwareAccelerated() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsHardwareAccelerated = null;
         try {
-            return (boolean)classType.Get("IsHardwareAccelerated");
+            retObjectIsHardwareAccelerated = classType.Get("IsHardwareAccelerated");
+            return (boolean)retObjectIsHardwareAccelerated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsHardwareAccelerated != null ? retObjectIsHardwareAccelerated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

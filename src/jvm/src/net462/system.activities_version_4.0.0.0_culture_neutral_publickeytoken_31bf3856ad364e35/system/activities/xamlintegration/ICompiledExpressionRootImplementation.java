@@ -143,9 +143,13 @@ public class ICompiledExpressionRootImplementation extends NetObject implements 
     
     public java.lang.String GetLanguage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLanguage = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetLanguage");
+            retObjectGetLanguage = classInstance.Invoke("GetLanguage");
+            return (java.lang.String)retObjectGetLanguage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetLanguage != null ? retObjectGetLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

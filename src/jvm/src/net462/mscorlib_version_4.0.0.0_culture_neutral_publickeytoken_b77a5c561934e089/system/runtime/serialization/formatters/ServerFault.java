@@ -169,9 +169,13 @@ public class ServerFault extends NetObject  {
     
     public java.lang.String getExceptionMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExceptionMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("ExceptionMessage");
+            retObjectExceptionMessage = classInstance.Get("ExceptionMessage");
+            return (java.lang.String)retObjectExceptionMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExceptionMessage != null ? retObjectExceptionMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class ServerFault extends NetObject  {
 
     public void setExceptionMessage(java.lang.String ExceptionMessage) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExceptionMessage", ExceptionMessage);
         } catch (JCNativeException jcne) {
@@ -189,9 +193,13 @@ public class ServerFault extends NetObject  {
 
     public java.lang.String getExceptionType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExceptionType = null;
         try {
-            return (java.lang.String)classInstance.Get("ExceptionType");
+            retObjectExceptionType = classInstance.Get("ExceptionType");
+            return (java.lang.String)retObjectExceptionType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExceptionType != null ? retObjectExceptionType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class ServerFault extends NetObject  {
 
     public void setExceptionType(java.lang.String ExceptionType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExceptionType", ExceptionType);
         } catch (JCNativeException jcne) {
@@ -209,9 +217,13 @@ public class ServerFault extends NetObject  {
 
     public java.lang.String getStackTrace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStackTrace = null;
         try {
-            return (java.lang.String)classInstance.Get("StackTrace");
+            retObjectStackTrace = classInstance.Get("StackTrace");
+            return (java.lang.String)retObjectStackTrace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStackTrace != null ? retObjectStackTrace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class ServerFault extends NetObject  {
 
     public void setStackTrace(java.lang.String StackTrace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StackTrace", StackTrace);
         } catch (JCNativeException jcne) {

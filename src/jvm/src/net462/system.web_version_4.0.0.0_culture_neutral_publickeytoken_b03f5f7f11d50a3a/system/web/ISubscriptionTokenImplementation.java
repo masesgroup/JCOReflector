@@ -142,7 +142,7 @@ public class ISubscriptionTokenImplementation extends NetObject implements ISubs
     
     public void Unsubscribe() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Unsubscribe");
         } catch (JCNativeException jcne) {
@@ -156,9 +156,13 @@ public class ISubscriptionTokenImplementation extends NetObject implements ISubs
     
     public boolean getIsActive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsActive = null;
         try {
-            return (boolean)classInstance.Get("IsActive");
+            retObjectIsActive = classInstance.Get("IsActive");
+            return (boolean)retObjectIsActive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsActive != null ? retObjectIsActive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

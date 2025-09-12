@@ -189,10 +189,14 @@ public class ConstructionCall extends MethodCall  {
     
     public IList getContextProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContextProperties");
+            retObjectContextProperties = classInstance.Get("ContextProperties");
+            JCObject val = (JCObject)retObjectContextProperties;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextProperties != null ? retObjectContextProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,16 +204,20 @@ public class ConstructionCall extends MethodCall  {
 
     public final NetObject[] getCallSiteActivationAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCallSiteActivationAttributes = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("CallSiteActivationAttributes");
+            retObjectCallSiteActivationAttributes = classInstance.Get("CallSiteActivationAttributes");
+            JCObject resultingObjects = (JCObject)retObjectCallSiteActivationAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCallSiteActivationAttributes != null ? retObjectCallSiteActivationAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +225,14 @@ public class ConstructionCall extends MethodCall  {
 
     public IActivator getActivator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Activator");
+            retObjectActivator = classInstance.Get("Activator");
+            JCObject val = (JCObject)retObjectActivator;
             return new IActivatorImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivator != null ? retObjectActivator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +240,7 @@ public class ConstructionCall extends MethodCall  {
 
     public void setActivator(IActivator Activator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Activator", Activator == null ? null : Activator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -238,9 +250,13 @@ public class ConstructionCall extends MethodCall  {
 
     public java.lang.String getActivationTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivationTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("ActivationTypeName");
+            retObjectActivationTypeName = classInstance.Get("ActivationTypeName");
+            return (java.lang.String)retObjectActivationTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectActivationTypeName != null ? retObjectActivationTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +264,14 @@ public class ConstructionCall extends MethodCall  {
 
     public NetType getActivationType() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivationType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActivationType");
+            retObjectActivationType = classInstance.Get("ActivationType");
+            JCObject val = (JCObject)retObjectActivationType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivationType != null ? retObjectActivationType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

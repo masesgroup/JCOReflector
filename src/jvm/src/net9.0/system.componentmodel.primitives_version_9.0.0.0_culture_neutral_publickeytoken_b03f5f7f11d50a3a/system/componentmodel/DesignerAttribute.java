@@ -210,9 +210,13 @@ public class DesignerAttribute extends Attribute  {
     
     public java.lang.String getDesignerBaseTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesignerBaseTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("DesignerBaseTypeName");
+            retObjectDesignerBaseTypeName = classInstance.Get("DesignerBaseTypeName");
+            return (java.lang.String)retObjectDesignerBaseTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDesignerBaseTypeName != null ? retObjectDesignerBaseTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +224,13 @@ public class DesignerAttribute extends Attribute  {
 
     public java.lang.String getDesignerTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesignerTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("DesignerTypeName");
+            retObjectDesignerTypeName = classInstance.Get("DesignerTypeName");
+            return (java.lang.String)retObjectDesignerTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDesignerTypeName != null ? retObjectDesignerTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

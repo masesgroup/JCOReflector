@@ -161,9 +161,13 @@ public class DependencyProperty extends NetObject  {
     
     public boolean IsValidType(NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValidType = null;
         try {
-            return (boolean)classInstance.Invoke("IsValidType", value == null ? null : value.getJCOInstance());
+            retObjectIsValidType = classInstance.Invoke("IsValidType", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsValidType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValidType != null ? retObjectIsValidType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class DependencyProperty extends NetObject  {
 
     public boolean IsValidValue(NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValidValue = null;
         try {
-            return (boolean)classInstance.Invoke("IsValidValue", value == null ? null : value.getJCOInstance());
+            retObjectIsValidValue = classInstance.Invoke("IsValidValue", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsValidValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValidValue != null ? retObjectIsValidValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class DependencyProperty extends NetObject  {
 
     public DependencyProperty AddOwner(NetType ownerType, PropertyMetadata typeMetadata) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddOwner = null;
         try {
-            JCObject objAddOwner = (JCObject)classInstance.Invoke("AddOwner", ownerType == null ? null : ownerType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance());
+            retObjectAddOwner = classInstance.Invoke("AddOwner", ownerType == null ? null : ownerType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance());
+            JCObject objAddOwner = (JCObject)retObjectAddOwner;
             return new DependencyProperty(objAddOwner);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddOwner != null ? retObjectAddOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class DependencyProperty extends NetObject  {
 
     public DependencyProperty AddOwner(NetType ownerType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddOwner = null;
         try {
-            JCObject objAddOwner = (JCObject)classInstance.Invoke("AddOwner", ownerType == null ? null : ownerType.getJCOInstance());
+            retObjectAddOwner = classInstance.Invoke("AddOwner", ownerType == null ? null : ownerType.getJCOInstance());
+            JCObject objAddOwner = (JCObject)retObjectAddOwner;
             return new DependencyProperty(objAddOwner);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddOwner != null ? retObjectAddOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class DependencyProperty extends NetObject  {
 
     public static DependencyProperty Register(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata typeMetadata, ValidateValueCallback validateValueCallback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRegister = null;
         try {
-            JCObject objRegister = (JCObject)classType.Invoke("Register", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance(), validateValueCallback);
+            retObjectRegister = classType.Invoke("Register", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance(), validateValueCallback);
+            JCObject objRegister = (JCObject)retObjectRegister;
             return new DependencyProperty(objRegister);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegister != null ? retObjectRegister.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +234,14 @@ public class DependencyProperty extends NetObject  {
 
     public static DependencyProperty Register(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata typeMetadata) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRegister = null;
         try {
-            JCObject objRegister = (JCObject)classType.Invoke("Register", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance());
+            retObjectRegister = classType.Invoke("Register", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance());
+            JCObject objRegister = (JCObject)retObjectRegister;
             return new DependencyProperty(objRegister);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegister != null ? retObjectRegister.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +249,14 @@ public class DependencyProperty extends NetObject  {
 
     public static DependencyProperty Register(java.lang.String name, NetType propertyType, NetType ownerType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRegister = null;
         try {
-            JCObject objRegister = (JCObject)classType.Invoke("Register", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance());
+            retObjectRegister = classType.Invoke("Register", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance());
+            JCObject objRegister = (JCObject)retObjectRegister;
             return new DependencyProperty(objRegister);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegister != null ? retObjectRegister.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +264,14 @@ public class DependencyProperty extends NetObject  {
 
     public static DependencyProperty RegisterAttached(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata defaultMetadata, ValidateValueCallback validateValueCallback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRegisterAttached = null;
         try {
-            JCObject objRegisterAttached = (JCObject)classType.Invoke("RegisterAttached", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), defaultMetadata == null ? null : defaultMetadata.getJCOInstance(), validateValueCallback);
+            retObjectRegisterAttached = classType.Invoke("RegisterAttached", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), defaultMetadata == null ? null : defaultMetadata.getJCOInstance(), validateValueCallback);
+            JCObject objRegisterAttached = (JCObject)retObjectRegisterAttached;
             return new DependencyProperty(objRegisterAttached);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegisterAttached != null ? retObjectRegisterAttached.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,10 +279,14 @@ public class DependencyProperty extends NetObject  {
 
     public static DependencyProperty RegisterAttached(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata defaultMetadata) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRegisterAttached = null;
         try {
-            JCObject objRegisterAttached = (JCObject)classType.Invoke("RegisterAttached", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), defaultMetadata == null ? null : defaultMetadata.getJCOInstance());
+            retObjectRegisterAttached = classType.Invoke("RegisterAttached", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), defaultMetadata == null ? null : defaultMetadata.getJCOInstance());
+            JCObject objRegisterAttached = (JCObject)retObjectRegisterAttached;
             return new DependencyProperty(objRegisterAttached);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegisterAttached != null ? retObjectRegisterAttached.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +294,14 @@ public class DependencyProperty extends NetObject  {
 
     public static DependencyProperty RegisterAttached(java.lang.String name, NetType propertyType, NetType ownerType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRegisterAttached = null;
         try {
-            JCObject objRegisterAttached = (JCObject)classType.Invoke("RegisterAttached", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance());
+            retObjectRegisterAttached = classType.Invoke("RegisterAttached", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance());
+            JCObject objRegisterAttached = (JCObject)retObjectRegisterAttached;
             return new DependencyProperty(objRegisterAttached);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegisterAttached != null ? retObjectRegisterAttached.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,10 +309,14 @@ public class DependencyProperty extends NetObject  {
 
     public static DependencyPropertyKey RegisterAttachedReadOnly(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata defaultMetadata, ValidateValueCallback validateValueCallback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.FormatException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRegisterAttachedReadOnly = null;
         try {
-            JCObject objRegisterAttachedReadOnly = (JCObject)classType.Invoke("RegisterAttachedReadOnly", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), defaultMetadata == null ? null : defaultMetadata.getJCOInstance(), validateValueCallback);
+            retObjectRegisterAttachedReadOnly = classType.Invoke("RegisterAttachedReadOnly", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), defaultMetadata == null ? null : defaultMetadata.getJCOInstance(), validateValueCallback);
+            JCObject objRegisterAttachedReadOnly = (JCObject)retObjectRegisterAttachedReadOnly;
             return new DependencyPropertyKey(objRegisterAttachedReadOnly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegisterAttachedReadOnly != null ? retObjectRegisterAttachedReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +324,14 @@ public class DependencyProperty extends NetObject  {
 
     public static DependencyPropertyKey RegisterAttachedReadOnly(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata defaultMetadata) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRegisterAttachedReadOnly = null;
         try {
-            JCObject objRegisterAttachedReadOnly = (JCObject)classType.Invoke("RegisterAttachedReadOnly", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), defaultMetadata == null ? null : defaultMetadata.getJCOInstance());
+            retObjectRegisterAttachedReadOnly = classType.Invoke("RegisterAttachedReadOnly", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), defaultMetadata == null ? null : defaultMetadata.getJCOInstance());
+            JCObject objRegisterAttachedReadOnly = (JCObject)retObjectRegisterAttachedReadOnly;
             return new DependencyPropertyKey(objRegisterAttachedReadOnly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegisterAttachedReadOnly != null ? retObjectRegisterAttachedReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,10 +339,14 @@ public class DependencyProperty extends NetObject  {
 
     public static DependencyPropertyKey RegisterReadOnly(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata typeMetadata, ValidateValueCallback validateValueCallback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.FormatException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRegisterReadOnly = null;
         try {
-            JCObject objRegisterReadOnly = (JCObject)classType.Invoke("RegisterReadOnly", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance(), validateValueCallback);
+            retObjectRegisterReadOnly = classType.Invoke("RegisterReadOnly", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance(), validateValueCallback);
+            JCObject objRegisterReadOnly = (JCObject)retObjectRegisterReadOnly;
             return new DependencyPropertyKey(objRegisterReadOnly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegisterReadOnly != null ? retObjectRegisterReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,10 +354,14 @@ public class DependencyProperty extends NetObject  {
 
     public static DependencyPropertyKey RegisterReadOnly(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata typeMetadata) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRegisterReadOnly = null;
         try {
-            JCObject objRegisterReadOnly = (JCObject)classType.Invoke("RegisterReadOnly", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance());
+            retObjectRegisterReadOnly = classType.Invoke("RegisterReadOnly", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance());
+            JCObject objRegisterReadOnly = (JCObject)retObjectRegisterReadOnly;
             return new DependencyPropertyKey(objRegisterReadOnly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegisterReadOnly != null ? retObjectRegisterReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,10 +369,14 @@ public class DependencyProperty extends NetObject  {
 
     public PropertyMetadata GetMetadata(NetType forType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMetadata = null;
         try {
-            JCObject objGetMetadata = (JCObject)classInstance.Invoke("GetMetadata", forType == null ? null : forType.getJCOInstance());
+            retObjectGetMetadata = classInstance.Invoke("GetMetadata", forType == null ? null : forType.getJCOInstance());
+            JCObject objGetMetadata = (JCObject)retObjectGetMetadata;
             return new PropertyMetadata(objGetMetadata);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMetadata != null ? retObjectGetMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,10 +384,14 @@ public class DependencyProperty extends NetObject  {
 
     public PropertyMetadata GetMetadata(DependencyObject dependencyObject) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMetadata = null;
         try {
-            JCObject objGetMetadata = (JCObject)classInstance.Invoke("GetMetadata", dependencyObject == null ? null : dependencyObject.getJCOInstance());
+            retObjectGetMetadata = classInstance.Invoke("GetMetadata", dependencyObject == null ? null : dependencyObject.getJCOInstance());
+            JCObject objGetMetadata = (JCObject)retObjectGetMetadata;
             return new PropertyMetadata(objGetMetadata);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMetadata != null ? retObjectGetMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,10 +399,14 @@ public class DependencyProperty extends NetObject  {
 
     public PropertyMetadata GetMetadata(DependencyObjectType dependencyObjectType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMetadata = null;
         try {
-            JCObject objGetMetadata = (JCObject)classInstance.Invoke("GetMetadata", dependencyObjectType == null ? null : dependencyObjectType.getJCOInstance());
+            retObjectGetMetadata = classInstance.Invoke("GetMetadata", dependencyObjectType == null ? null : dependencyObjectType.getJCOInstance());
+            JCObject objGetMetadata = (JCObject)retObjectGetMetadata;
             return new PropertyMetadata(objGetMetadata);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMetadata != null ? retObjectGetMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,7 +414,7 @@ public class DependencyProperty extends NetObject  {
 
     public void OverrideMetadata(NetType forType, PropertyMetadata typeMetadata, DependencyPropertyKey key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OverrideMetadata", forType == null ? null : forType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance(), key == null ? null : key.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -356,7 +424,7 @@ public class DependencyProperty extends NetObject  {
 
     public void OverrideMetadata(NetType forType, PropertyMetadata typeMetadata) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OverrideMetadata", forType == null ? null : forType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -370,9 +438,13 @@ public class DependencyProperty extends NetObject  {
     
     public boolean getReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadOnly = null;
         try {
-            return (boolean)classInstance.Get("ReadOnly");
+            retObjectReadOnly = classInstance.Get("ReadOnly");
+            return (boolean)retObjectReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReadOnly != null ? retObjectReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,9 +452,19 @@ public class DependencyProperty extends NetObject  {
 
     public int getGlobalIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGlobalIndex = null;
         try {
-            return (int)classInstance.Get("GlobalIndex");
+            retObjectGlobalIndex = classInstance.Get("GlobalIndex");
+            return (int)retObjectGlobalIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGlobalIndexNumber = (java.lang.Number)retObjectGlobalIndex;
+                return retObjectGlobalIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGlobalIndex != null ? retObjectGlobalIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -390,9 +472,13 @@ public class DependencyProperty extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,10 +486,14 @@ public class DependencyProperty extends NetObject  {
 
     public NetType getOwnerType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwnerType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OwnerType");
+            retObjectOwnerType = classInstance.Get("OwnerType");
+            JCObject val = (JCObject)retObjectOwnerType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwnerType != null ? retObjectOwnerType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,10 +501,14 @@ public class DependencyProperty extends NetObject  {
 
     public NetType getPropertyType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyType");
+            retObjectPropertyType = classInstance.Get("PropertyType");
+            JCObject val = (JCObject)retObjectPropertyType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyType != null ? retObjectPropertyType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,10 +516,14 @@ public class DependencyProperty extends NetObject  {
 
     public PropertyMetadata getDefaultMetadata() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultMetadata = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultMetadata");
+            retObjectDefaultMetadata = classInstance.Get("DefaultMetadata");
+            JCObject val = (JCObject)retObjectDefaultMetadata;
             return new PropertyMetadata(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultMetadata != null ? retObjectDefaultMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,9 +531,13 @@ public class DependencyProperty extends NetObject  {
 
     public ValidateValueCallback getValidateValueCallback() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateValueCallback = null;
         try {
-            return (ValidateValueCallback)classInstance.Get("ValidateValueCallback");
+            retObjectValidateValueCallback = classInstance.Get("ValidateValueCallback");
+            return (ValidateValueCallback)retObjectValidateValueCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into ValidateValueCallback", retObjectValidateValueCallback != null ? retObjectValidateValueCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

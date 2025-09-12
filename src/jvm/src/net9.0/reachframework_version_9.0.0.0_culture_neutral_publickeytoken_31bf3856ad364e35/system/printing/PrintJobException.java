@@ -212,7 +212,7 @@ public class PrintJobException extends PrintSystemException {
     
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -226,9 +226,19 @@ public class PrintJobException extends PrintSystemException {
     
     public int getJobId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectJobId = null;
         try {
-            return (int)classInstance.Get("JobId");
+            retObjectJobId = classInstance.Get("JobId");
+            return (int)retObjectJobId;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectJobIdNumber = (java.lang.Number)retObjectJobId;
+                return retObjectJobIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectJobId != null ? retObjectJobId.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +246,13 @@ public class PrintJobException extends PrintSystemException {
 
     public java.lang.String getJobName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectJobName = null;
         try {
-            return (java.lang.String)classInstance.Get("JobName");
+            retObjectJobName = classInstance.Get("JobName");
+            return (java.lang.String)retObjectJobName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectJobName != null ? retObjectJobName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +260,13 @@ public class PrintJobException extends PrintSystemException {
 
     public java.lang.String getPrintQueueName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrintQueueName = null;
         try {
-            return (java.lang.String)classInstance.Get("PrintQueueName");
+            retObjectPrintQueueName = classInstance.Get("PrintQueueName");
+            return (java.lang.String)retObjectPrintQueueName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPrintQueueName != null ? retObjectPrintQueueName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -164,9 +164,13 @@ public class SignFile extends Task  {
     
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.FormatException, system.AccessViolationException, system.NotSupportedException, system.RankException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.componentmodel.WarningException, system.threading.ThreadAbortException, system.security.accesscontrol.PrivilegeNotHeldException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class SignFile extends Task  {
     
     public ITaskItem getSigningTarget() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSigningTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SigningTarget");
+            retObjectSigningTarget = classInstance.Get("SigningTarget");
+            JCObject val = (JCObject)retObjectSigningTarget;
             return new ITaskItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSigningTarget != null ? retObjectSigningTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class SignFile extends Task  {
 
     public void setSigningTarget(ITaskItem SigningTarget) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SigningTarget", SigningTarget == null ? null : SigningTarget.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,9 +207,13 @@ public class SignFile extends Task  {
 
     public java.lang.String getCertificateThumbprint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificateThumbprint = null;
         try {
-            return (java.lang.String)classInstance.Get("CertificateThumbprint");
+            retObjectCertificateThumbprint = classInstance.Get("CertificateThumbprint");
+            return (java.lang.String)retObjectCertificateThumbprint;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCertificateThumbprint != null ? retObjectCertificateThumbprint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +221,7 @@ public class SignFile extends Task  {
 
     public void setCertificateThumbprint(java.lang.String CertificateThumbprint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CertificateThumbprint", CertificateThumbprint);
         } catch (JCNativeException jcne) {
@@ -219,9 +231,13 @@ public class SignFile extends Task  {
 
     public java.lang.String getTimestampUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimestampUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("TimestampUrl");
+            retObjectTimestampUrl = classInstance.Get("TimestampUrl");
+            return (java.lang.String)retObjectTimestampUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTimestampUrl != null ? retObjectTimestampUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +245,7 @@ public class SignFile extends Task  {
 
     public void setTimestampUrl(java.lang.String TimestampUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TimestampUrl", TimestampUrl);
         } catch (JCNativeException jcne) {

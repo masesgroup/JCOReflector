@@ -170,10 +170,14 @@ public class CodeCompileUnit extends CodeObject  {
     
     public CodeAttributeDeclarationCollection getAssemblyCustomAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyCustomAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssemblyCustomAttributes");
+            retObjectAssemblyCustomAttributes = classInstance.Get("AssemblyCustomAttributes");
+            JCObject val = (JCObject)retObjectAssemblyCustomAttributes;
             return new CodeAttributeDeclarationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblyCustomAttributes != null ? retObjectAssemblyCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class CodeCompileUnit extends CodeObject  {
 
     public CodeDirectiveCollection getEndDirectives() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndDirectives = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EndDirectives");
+            retObjectEndDirectives = classInstance.Get("EndDirectives");
+            JCObject val = (JCObject)retObjectEndDirectives;
             return new CodeDirectiveCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndDirectives != null ? retObjectEndDirectives.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class CodeCompileUnit extends CodeObject  {
 
     public CodeDirectiveCollection getStartDirectives() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartDirectives = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StartDirectives");
+            retObjectStartDirectives = classInstance.Get("StartDirectives");
+            JCObject val = (JCObject)retObjectStartDirectives;
             return new CodeDirectiveCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartDirectives != null ? retObjectStartDirectives.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +215,14 @@ public class CodeCompileUnit extends CodeObject  {
 
     public CodeNamespaceCollection getNamespaces() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespaces = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Namespaces");
+            retObjectNamespaces = classInstance.Get("Namespaces");
+            JCObject val = (JCObject)retObjectNamespaces;
             return new CodeNamespaceCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNamespaces != null ? retObjectNamespaces.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +230,14 @@ public class CodeCompileUnit extends CodeObject  {
 
     public StringCollection getReferencedAssemblies() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferencedAssemblies = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReferencedAssemblies");
+            retObjectReferencedAssemblies = classInstance.Get("ReferencedAssemblies");
+            JCObject val = (JCObject)retObjectReferencedAssemblies;
             return new StringCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferencedAssemblies != null ? retObjectReferencedAssemblies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

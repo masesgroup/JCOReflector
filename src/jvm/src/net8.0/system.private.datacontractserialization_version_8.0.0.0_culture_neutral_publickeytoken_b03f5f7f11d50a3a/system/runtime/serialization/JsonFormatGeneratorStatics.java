@@ -160,10 +160,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
     
     public static ConstructorInfo getExtensionDataObjectCtor() throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExtensionDataObjectCtor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ExtensionDataObjectCtor");
+            retObjectExtensionDataObjectCtor = classType.Get("ExtensionDataObjectCtor");
+            JCObject val = (JCObject)retObjectExtensionDataObjectCtor;
             return new ConstructorInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtensionDataObjectCtor != null ? retObjectExtensionDataObjectCtor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static ConstructorInfo getSerializationExceptionCtor() throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSerializationExceptionCtor = null;
         try {
-            JCObject val = (JCObject)classType.Get("SerializationExceptionCtor");
+            retObjectSerializationExceptionCtor = classType.Get("SerializationExceptionCtor");
+            JCObject val = (JCObject)retObjectSerializationExceptionCtor;
             return new ConstructorInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializationExceptionCtor != null ? retObjectSerializationExceptionCtor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getBoxPointer() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBoxPointer = null;
         try {
-            JCObject val = (JCObject)classType.Get("BoxPointer");
+            retObjectBoxPointer = classType.Get("BoxPointer");
+            JCObject val = (JCObject)retObjectBoxPointer;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBoxPointer != null ? retObjectBoxPointer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getGetCurrentMethod() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCurrentMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("GetCurrentMethod");
+            retObjectGetCurrentMethod = classType.Get("GetCurrentMethod");
+            JCObject val = (JCObject)retObjectGetCurrentMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentMethod != null ? retObjectGetCurrentMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +220,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getGetItemContractMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetItemContractMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("GetItemContractMethod");
+            retObjectGetItemContractMethod = classType.Get("GetItemContractMethod");
+            JCObject val = (JCObject)retObjectGetItemContractMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItemContractMethod != null ? retObjectGetItemContractMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +235,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getGetJsonDataContractMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetJsonDataContractMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("GetJsonDataContractMethod");
+            retObjectGetJsonDataContractMethod = classType.Get("GetJsonDataContractMethod");
+            JCObject val = (JCObject)retObjectGetJsonDataContractMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetJsonDataContractMethod != null ? retObjectGetJsonDataContractMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +250,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getGetJsonMemberIndexMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetJsonMemberIndexMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("GetJsonMemberIndexMethod");
+            retObjectGetJsonMemberIndexMethod = classType.Get("GetJsonMemberIndexMethod");
+            JCObject val = (JCObject)retObjectGetJsonMemberIndexMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetJsonMemberIndexMethod != null ? retObjectGetJsonMemberIndexMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +265,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getGetJsonMemberNameMethod() throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetJsonMemberNameMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("GetJsonMemberNameMethod");
+            retObjectGetJsonMemberNameMethod = classType.Get("GetJsonMemberNameMethod");
+            JCObject val = (JCObject)retObjectGetJsonMemberNameMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetJsonMemberNameMethod != null ? retObjectGetJsonMemberNameMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +280,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getGetRevisedItemContractMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRevisedItemContractMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("GetRevisedItemContractMethod");
+            retObjectGetRevisedItemContractMethod = classType.Get("GetRevisedItemContractMethod");
+            JCObject val = (JCObject)retObjectGetRevisedItemContractMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRevisedItemContractMethod != null ? retObjectGetRevisedItemContractMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,10 +295,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getGetUninitializedObjectMethod() throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetUninitializedObjectMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("GetUninitializedObjectMethod");
+            retObjectGetUninitializedObjectMethod = classType.Get("GetUninitializedObjectMethod");
+            JCObject val = (JCObject)retObjectGetUninitializedObjectMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUninitializedObjectMethod != null ? retObjectGetUninitializedObjectMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,10 +310,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getIsStartElementMethod0() throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsStartElementMethod0 = null;
         try {
-            JCObject val = (JCObject)classType.Get("IsStartElementMethod0");
+            retObjectIsStartElementMethod0 = classType.Get("IsStartElementMethod0");
+            JCObject val = (JCObject)retObjectIsStartElementMethod0;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsStartElementMethod0 != null ? retObjectIsStartElementMethod0.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,10 +325,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getIsStartElementMethod2() throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsStartElementMethod2 = null;
         try {
-            JCObject val = (JCObject)classType.Get("IsStartElementMethod2");
+            retObjectIsStartElementMethod2 = classType.Get("IsStartElementMethod2");
+            JCObject val = (JCObject)retObjectIsStartElementMethod2;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsStartElementMethod2 != null ? retObjectIsStartElementMethod2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,10 +340,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getMoveNextMethod() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMoveNextMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("MoveNextMethod");
+            retObjectMoveNextMethod = classType.Get("MoveNextMethod");
+            JCObject val = (JCObject)retObjectMoveNextMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveNextMethod != null ? retObjectMoveNextMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,10 +355,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getMoveToContentMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMoveToContentMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("MoveToContentMethod");
+            retObjectMoveToContentMethod = classType.Get("MoveToContentMethod");
+            JCObject val = (JCObject)retObjectMoveToContentMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveToContentMethod != null ? retObjectMoveToContentMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,10 +370,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getOnDeserializationMethod() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOnDeserializationMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("OnDeserializationMethod");
+            retObjectOnDeserializationMethod = classType.Get("OnDeserializationMethod");
+            JCObject val = (JCObject)retObjectOnDeserializationMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOnDeserializationMethod != null ? retObjectOnDeserializationMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,10 +385,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getParseEnumMethod() throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseEnumMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("ParseEnumMethod");
+            retObjectParseEnumMethod = classType.Get("ParseEnumMethod");
+            JCObject val = (JCObject)retObjectParseEnumMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseEnumMethod != null ? retObjectParseEnumMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,10 +400,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getReadJsonValueMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadJsonValueMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("ReadJsonValueMethod");
+            retObjectReadJsonValueMethod = classType.Get("ReadJsonValueMethod");
+            JCObject val = (JCObject)retObjectReadJsonValueMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadJsonValueMethod != null ? retObjectReadJsonValueMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,10 +415,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getThrowDuplicateMemberExceptionMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThrowDuplicateMemberExceptionMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("ThrowDuplicateMemberExceptionMethod");
+            retObjectThrowDuplicateMemberExceptionMethod = classType.Get("ThrowDuplicateMemberExceptionMethod");
+            JCObject val = (JCObject)retObjectThrowDuplicateMemberExceptionMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThrowDuplicateMemberExceptionMethod != null ? retObjectThrowDuplicateMemberExceptionMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,10 +430,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getThrowMissingRequiredMembersMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThrowMissingRequiredMembersMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("ThrowMissingRequiredMembersMethod");
+            retObjectThrowMissingRequiredMembersMethod = classType.Get("ThrowMissingRequiredMembersMethod");
+            JCObject val = (JCObject)retObjectThrowMissingRequiredMembersMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThrowMissingRequiredMembersMethod != null ? retObjectThrowMissingRequiredMembersMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,10 +445,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getUnboxPointer() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnboxPointer = null;
         try {
-            JCObject val = (JCObject)classType.Get("UnboxPointer");
+            retObjectUnboxPointer = classType.Get("UnboxPointer");
+            JCObject val = (JCObject)retObjectUnboxPointer;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnboxPointer != null ? retObjectUnboxPointer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,10 +460,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getWriteAttributeStringMethod() throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWriteAttributeStringMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("WriteAttributeStringMethod");
+            retObjectWriteAttributeStringMethod = classType.Get("WriteAttributeStringMethod");
+            JCObject val = (JCObject)retObjectWriteAttributeStringMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteAttributeStringMethod != null ? retObjectWriteAttributeStringMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,10 +475,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getWriteEndElementMethod() throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWriteEndElementMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("WriteEndElementMethod");
+            retObjectWriteEndElementMethod = classType.Get("WriteEndElementMethod");
+            JCObject val = (JCObject)retObjectWriteEndElementMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteEndElementMethod != null ? retObjectWriteEndElementMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,10 +490,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getWriteJsonISerializableMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWriteJsonISerializableMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("WriteJsonISerializableMethod");
+            retObjectWriteJsonISerializableMethod = classType.Get("WriteJsonISerializableMethod");
+            JCObject val = (JCObject)retObjectWriteJsonISerializableMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteJsonISerializableMethod != null ? retObjectWriteJsonISerializableMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,10 +505,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getWriteJsonNameWithMappingMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWriteJsonNameWithMappingMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("WriteJsonNameWithMappingMethod");
+            retObjectWriteJsonNameWithMappingMethod = classType.Get("WriteJsonNameWithMappingMethod");
+            JCObject val = (JCObject)retObjectWriteJsonNameWithMappingMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteJsonNameWithMappingMethod != null ? retObjectWriteJsonNameWithMappingMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,10 +520,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getWriteJsonValueMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWriteJsonValueMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("WriteJsonValueMethod");
+            retObjectWriteJsonValueMethod = classType.Get("WriteJsonValueMethod");
+            JCObject val = (JCObject)retObjectWriteJsonValueMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteJsonValueMethod != null ? retObjectWriteJsonValueMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,10 +535,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getWriteStartElementMethod() throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWriteStartElementMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("WriteStartElementMethod");
+            retObjectWriteStartElementMethod = classType.Get("WriteStartElementMethod");
+            JCObject val = (JCObject)retObjectWriteStartElementMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteStartElementMethod != null ? retObjectWriteStartElementMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -446,10 +550,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static MethodInfo getWriteStartElementStringMethod() throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWriteStartElementStringMethod = null;
         try {
-            JCObject val = (JCObject)classType.Get("WriteStartElementStringMethod");
+            retObjectWriteStartElementStringMethod = classType.Get("WriteStartElementStringMethod");
+            JCObject val = (JCObject)retObjectWriteStartElementStringMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteStartElementStringMethod != null ? retObjectWriteStartElementStringMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,10 +565,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static PropertyInfo getCollectionItemNameProperty() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCollectionItemNameProperty = null;
         try {
-            JCObject val = (JCObject)classType.Get("CollectionItemNameProperty");
+            retObjectCollectionItemNameProperty = classType.Get("CollectionItemNameProperty");
+            JCObject val = (JCObject)retObjectCollectionItemNameProperty;
             return new PropertyInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCollectionItemNameProperty != null ? retObjectCollectionItemNameProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -468,10 +580,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static PropertyInfo getExtensionDataProperty() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExtensionDataProperty = null;
         try {
-            JCObject val = (JCObject)classType.Get("ExtensionDataProperty");
+            retObjectExtensionDataProperty = classType.Get("ExtensionDataProperty");
+            JCObject val = (JCObject)retObjectExtensionDataProperty;
             return new PropertyInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtensionDataProperty != null ? retObjectExtensionDataProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -479,10 +595,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static PropertyInfo getLocalNameProperty() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLocalNameProperty = null;
         try {
-            JCObject val = (JCObject)classType.Get("LocalNameProperty");
+            retObjectLocalNameProperty = classType.Get("LocalNameProperty");
+            JCObject val = (JCObject)retObjectLocalNameProperty;
             return new PropertyInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalNameProperty != null ? retObjectLocalNameProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -490,10 +610,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static PropertyInfo getNamespaceProperty() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNamespaceProperty = null;
         try {
-            JCObject val = (JCObject)classType.Get("NamespaceProperty");
+            retObjectNamespaceProperty = classType.Get("NamespaceProperty");
+            JCObject val = (JCObject)retObjectNamespaceProperty;
             return new PropertyInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNamespaceProperty != null ? retObjectNamespaceProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,10 +625,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static PropertyInfo getNodeTypeProperty() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNodeTypeProperty = null;
         try {
-            JCObject val = (JCObject)classType.Get("NodeTypeProperty");
+            retObjectNodeTypeProperty = classType.Get("NodeTypeProperty");
+            JCObject val = (JCObject)retObjectNodeTypeProperty;
             return new PropertyInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNodeTypeProperty != null ? retObjectNodeTypeProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -512,10 +640,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static PropertyInfo getTypeHandleProperty() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTypeHandleProperty = null;
         try {
-            JCObject val = (JCObject)classType.Get("TypeHandleProperty");
+            retObjectTypeHandleProperty = classType.Get("TypeHandleProperty");
+            JCObject val = (JCObject)retObjectTypeHandleProperty;
             return new PropertyInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeHandleProperty != null ? retObjectTypeHandleProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -523,10 +655,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static PropertyInfo getUseSimpleDictionaryFormatReadProperty() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUseSimpleDictionaryFormatReadProperty = null;
         try {
-            JCObject val = (JCObject)classType.Get("UseSimpleDictionaryFormatReadProperty");
+            retObjectUseSimpleDictionaryFormatReadProperty = classType.Get("UseSimpleDictionaryFormatReadProperty");
+            JCObject val = (JCObject)retObjectUseSimpleDictionaryFormatReadProperty;
             return new PropertyInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUseSimpleDictionaryFormatReadProperty != null ? retObjectUseSimpleDictionaryFormatReadProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -534,10 +670,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public static PropertyInfo getUseSimpleDictionaryFormatWriteProperty() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUseSimpleDictionaryFormatWriteProperty = null;
         try {
-            JCObject val = (JCObject)classType.Get("UseSimpleDictionaryFormatWriteProperty");
+            retObjectUseSimpleDictionaryFormatWriteProperty = classType.Get("UseSimpleDictionaryFormatWriteProperty");
+            JCObject val = (JCObject)retObjectUseSimpleDictionaryFormatWriteProperty;
             return new PropertyInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUseSimpleDictionaryFormatWriteProperty != null ? retObjectUseSimpleDictionaryFormatWriteProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -545,16 +685,20 @@ public class JsonFormatGeneratorStatics extends NetObject  {
 
     public final static NetType[] getSerInfoCtorArgs() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSerInfoCtorArgs = null;
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classType.Get("SerInfoCtorArgs");
+            retObjectSerInfoCtorArgs = classType.Get("SerInfoCtorArgs");
+            JCObject resultingObjects = (JCObject)retObjectSerInfoCtorArgs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerInfoCtorArgs != null ? retObjectSerInfoCtorArgs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

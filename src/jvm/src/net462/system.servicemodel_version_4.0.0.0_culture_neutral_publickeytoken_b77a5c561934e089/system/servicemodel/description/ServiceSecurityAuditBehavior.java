@@ -169,7 +169,7 @@ public class ServiceSecurityAuditBehavior extends NetObject  {
      */
     @Deprecated 
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
     /**
@@ -178,7 +178,7 @@ public class ServiceSecurityAuditBehavior extends NetObject  {
      */
     @Deprecated 
     public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
 
@@ -187,9 +187,13 @@ public class ServiceSecurityAuditBehavior extends NetObject  {
     
     public boolean getSuppressAuditFailure() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuppressAuditFailure = null;
         try {
-            return (boolean)classInstance.Get("SuppressAuditFailure");
+            retObjectSuppressAuditFailure = classInstance.Get("SuppressAuditFailure");
+            return (boolean)retObjectSuppressAuditFailure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSuppressAuditFailure != null ? retObjectSuppressAuditFailure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +201,7 @@ public class ServiceSecurityAuditBehavior extends NetObject  {
 
     public void setSuppressAuditFailure(boolean SuppressAuditFailure) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SuppressAuditFailure", SuppressAuditFailure);
         } catch (JCNativeException jcne) {
@@ -207,10 +211,14 @@ public class ServiceSecurityAuditBehavior extends NetObject  {
 
     public AuditLevel getMessageAuthenticationAuditLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageAuthenticationAuditLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageAuthenticationAuditLevel");
+            retObjectMessageAuthenticationAuditLevel = classInstance.Get("MessageAuthenticationAuditLevel");
+            JCObject val = (JCObject)retObjectMessageAuthenticationAuditLevel;
             return new AuditLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageAuthenticationAuditLevel != null ? retObjectMessageAuthenticationAuditLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +226,7 @@ public class ServiceSecurityAuditBehavior extends NetObject  {
 
     public void setMessageAuthenticationAuditLevel(AuditLevel MessageAuthenticationAuditLevel) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageAuthenticationAuditLevel", MessageAuthenticationAuditLevel == null ? null : MessageAuthenticationAuditLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -228,10 +236,14 @@ public class ServiceSecurityAuditBehavior extends NetObject  {
 
     public AuditLevel getServiceAuthorizationAuditLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceAuthorizationAuditLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceAuthorizationAuditLevel");
+            retObjectServiceAuthorizationAuditLevel = classInstance.Get("ServiceAuthorizationAuditLevel");
+            JCObject val = (JCObject)retObjectServiceAuthorizationAuditLevel;
             return new AuditLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceAuthorizationAuditLevel != null ? retObjectServiceAuthorizationAuditLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +251,7 @@ public class ServiceSecurityAuditBehavior extends NetObject  {
 
     public void setServiceAuthorizationAuditLevel(AuditLevel ServiceAuthorizationAuditLevel) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServiceAuthorizationAuditLevel", ServiceAuthorizationAuditLevel == null ? null : ServiceAuthorizationAuditLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -249,10 +261,14 @@ public class ServiceSecurityAuditBehavior extends NetObject  {
 
     public AuditLogLocation getAuditLogLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuditLogLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AuditLogLocation");
+            retObjectAuditLogLocation = classInstance.Get("AuditLogLocation");
+            JCObject val = (JCObject)retObjectAuditLogLocation;
             return new AuditLogLocation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuditLogLocation != null ? retObjectAuditLogLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +276,7 @@ public class ServiceSecurityAuditBehavior extends NetObject  {
 
     public void setAuditLogLocation(AuditLogLocation AuditLogLocation) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AuditLogLocation", AuditLogLocation == null ? null : AuditLogLocation.getJCOInstance());
         } catch (JCNativeException jcne) {

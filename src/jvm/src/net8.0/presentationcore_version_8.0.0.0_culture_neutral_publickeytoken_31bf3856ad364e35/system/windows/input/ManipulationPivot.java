@@ -176,9 +176,19 @@ public class ManipulationPivot extends NetObject  {
     
     public double getRadius() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRadius = null;
         try {
-            return (double)classInstance.Get("Radius");
+            retObjectRadius = classInstance.Get("Radius");
+            return (double)retObjectRadius;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRadiusNumber = (java.lang.Number)retObjectRadius;
+                return retObjectRadiusNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectRadius != null ? retObjectRadius.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +196,7 @@ public class ManipulationPivot extends NetObject  {
 
     public void setRadius(double Radius) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Radius", Radius);
         } catch (JCNativeException jcne) {
@@ -196,10 +206,14 @@ public class ManipulationPivot extends NetObject  {
 
     public Point getCenter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCenter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Center");
+            retObjectCenter = classInstance.Get("Center");
+            JCObject val = (JCObject)retObjectCenter;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCenter != null ? retObjectCenter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +221,7 @@ public class ManipulationPivot extends NetObject  {
 
     public void setCenter(Point Center) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Center", Center == null ? null : Center.getJCOInstance());
         } catch (JCNativeException jcne) {

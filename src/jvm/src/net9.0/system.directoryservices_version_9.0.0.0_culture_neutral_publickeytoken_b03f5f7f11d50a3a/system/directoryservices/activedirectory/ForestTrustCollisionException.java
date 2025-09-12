@@ -183,7 +183,7 @@ public class ForestTrustCollisionException extends ActiveDirectoryOperationExcep
     
     public void GetObjectData(SerializationInfo serializationInfo, StreamingContext streamingContext) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.runtime.serialization.SerializationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", serializationInfo == null ? null : serializationInfo.getJCOInstance(), streamingContext == null ? null : streamingContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,10 +197,14 @@ public class ForestTrustCollisionException extends ActiveDirectoryOperationExcep
     
     public ForestTrustRelationshipCollisionCollection getCollisions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCollisions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Collisions");
+            retObjectCollisions = classInstance.Get("Collisions");
+            JCObject val = (JCObject)retObjectCollisions;
             return new ForestTrustRelationshipCollisionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCollisions != null ? retObjectCollisions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -143,7 +143,7 @@ public class IWebSocketCloseDetailsImplementation extends NetObject implements I
     
     public void SetOutputCloseStatus(WebSocketCloseStatus closeStatus, java.lang.String closeStatusDescription) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetOutputCloseStatus", closeStatus == null ? null : closeStatus.getJCOInstance(), closeStatusDescription);
         } catch (JCNativeException jcne) {
@@ -157,9 +157,13 @@ public class IWebSocketCloseDetailsImplementation extends NetObject implements I
     
     public java.lang.String getInputCloseStatusDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputCloseStatusDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("InputCloseStatusDescription");
+            retObjectInputCloseStatusDescription = classInstance.Get("InputCloseStatusDescription");
+            return (java.lang.String)retObjectInputCloseStatusDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInputCloseStatusDescription != null ? retObjectInputCloseStatusDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

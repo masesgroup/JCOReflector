@@ -170,9 +170,13 @@ public class RequestCachingSection extends ConfigurationSection  {
     
     public boolean getDisableAllCaching() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisableAllCaching = null;
         try {
-            return (boolean)classInstance.Get("DisableAllCaching");
+            retObjectDisableAllCaching = classInstance.Get("DisableAllCaching");
+            return (boolean)retObjectDisableAllCaching;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDisableAllCaching != null ? retObjectDisableAllCaching.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class RequestCachingSection extends ConfigurationSection  {
 
     public void setDisableAllCaching(boolean DisableAllCaching) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisableAllCaching", DisableAllCaching);
         } catch (JCNativeException jcne) {
@@ -190,9 +194,13 @@ public class RequestCachingSection extends ConfigurationSection  {
 
     public boolean getIsPrivateCache() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPrivateCache = null;
         try {
-            return (boolean)classInstance.Get("IsPrivateCache");
+            retObjectIsPrivateCache = classInstance.Get("IsPrivateCache");
+            return (boolean)retObjectIsPrivateCache;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPrivateCache != null ? retObjectIsPrivateCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class RequestCachingSection extends ConfigurationSection  {
 
     public void setIsPrivateCache(boolean IsPrivateCache) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsPrivateCache", IsPrivateCache);
         } catch (JCNativeException jcne) {
@@ -210,10 +218,14 @@ public class RequestCachingSection extends ConfigurationSection  {
 
     public RequestCacheLevel getDefaultPolicyLevel() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultPolicyLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultPolicyLevel");
+            retObjectDefaultPolicyLevel = classInstance.Get("DefaultPolicyLevel");
+            JCObject val = (JCObject)retObjectDefaultPolicyLevel;
             return new RequestCacheLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultPolicyLevel != null ? retObjectDefaultPolicyLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +233,7 @@ public class RequestCachingSection extends ConfigurationSection  {
 
     public void setDefaultPolicyLevel(RequestCacheLevel DefaultPolicyLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultPolicyLevel", DefaultPolicyLevel == null ? null : DefaultPolicyLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,10 +243,14 @@ public class RequestCachingSection extends ConfigurationSection  {
 
     public FtpCachePolicyElement getDefaultFtpCachePolicy() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultFtpCachePolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultFtpCachePolicy");
+            retObjectDefaultFtpCachePolicy = classInstance.Get("DefaultFtpCachePolicy");
+            JCObject val = (JCObject)retObjectDefaultFtpCachePolicy;
             return new FtpCachePolicyElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultFtpCachePolicy != null ? retObjectDefaultFtpCachePolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +258,14 @@ public class RequestCachingSection extends ConfigurationSection  {
 
     public HttpCachePolicyElement getDefaultHttpCachePolicy() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultHttpCachePolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultHttpCachePolicy");
+            retObjectDefaultHttpCachePolicy = classInstance.Get("DefaultHttpCachePolicy");
+            JCObject val = (JCObject)retObjectDefaultHttpCachePolicy;
             return new HttpCachePolicyElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultHttpCachePolicy != null ? retObjectDefaultHttpCachePolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +273,14 @@ public class RequestCachingSection extends ConfigurationSection  {
 
     public TimeSpan getUnspecifiedMaximumAge() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnspecifiedMaximumAge = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnspecifiedMaximumAge");
+            retObjectUnspecifiedMaximumAge = classInstance.Get("UnspecifiedMaximumAge");
+            JCObject val = (JCObject)retObjectUnspecifiedMaximumAge;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnspecifiedMaximumAge != null ? retObjectUnspecifiedMaximumAge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,7 +288,7 @@ public class RequestCachingSection extends ConfigurationSection  {
 
     public void setUnspecifiedMaximumAge(TimeSpan UnspecifiedMaximumAge) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnspecifiedMaximumAge", UnspecifiedMaximumAge == null ? null : UnspecifiedMaximumAge.getJCOInstance());
         } catch (JCNativeException jcne) {

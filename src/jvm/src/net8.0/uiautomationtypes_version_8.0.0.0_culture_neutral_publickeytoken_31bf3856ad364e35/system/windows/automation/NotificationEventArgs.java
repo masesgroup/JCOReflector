@@ -172,9 +172,13 @@ public class NotificationEventArgs extends AutomationEventArgs  {
     
     public java.lang.String getActivityId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityId = null;
         try {
-            return (java.lang.String)classInstance.Get("ActivityId");
+            retObjectActivityId = classInstance.Get("ActivityId");
+            return (java.lang.String)retObjectActivityId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectActivityId != null ? retObjectActivityId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class NotificationEventArgs extends AutomationEventArgs  {
 
     public void setActivityId(java.lang.String ActivityId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActivityId", ActivityId);
         } catch (JCNativeException jcne) {
@@ -192,9 +196,13 @@ public class NotificationEventArgs extends AutomationEventArgs  {
 
     public java.lang.String getDisplayString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayString = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayString");
+            retObjectDisplayString = classInstance.Get("DisplayString");
+            return (java.lang.String)retObjectDisplayString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayString != null ? retObjectDisplayString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +210,7 @@ public class NotificationEventArgs extends AutomationEventArgs  {
 
     public void setDisplayString(java.lang.String DisplayString) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayString", DisplayString);
         } catch (JCNativeException jcne) {
@@ -212,10 +220,14 @@ public class NotificationEventArgs extends AutomationEventArgs  {
 
     public AutomationNotificationKind getNotificationKind() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNotificationKind = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NotificationKind");
+            retObjectNotificationKind = classInstance.Get("NotificationKind");
+            JCObject val = (JCObject)retObjectNotificationKind;
             return new AutomationNotificationKind(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNotificationKind != null ? retObjectNotificationKind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +235,7 @@ public class NotificationEventArgs extends AutomationEventArgs  {
 
     public void setNotificationKind(AutomationNotificationKind NotificationKind) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NotificationKind", NotificationKind == null ? null : NotificationKind.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -233,10 +245,14 @@ public class NotificationEventArgs extends AutomationEventArgs  {
 
     public AutomationNotificationProcessing getNotificationProcessing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNotificationProcessing = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NotificationProcessing");
+            retObjectNotificationProcessing = classInstance.Get("NotificationProcessing");
+            JCObject val = (JCObject)retObjectNotificationProcessing;
             return new AutomationNotificationProcessing(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNotificationProcessing != null ? retObjectNotificationProcessing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +260,7 @@ public class NotificationEventArgs extends AutomationEventArgs  {
 
     public void setNotificationProcessing(AutomationNotificationProcessing NotificationProcessing) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NotificationProcessing", NotificationProcessing == null ? null : NotificationProcessing.getJCOInstance());
         } catch (JCNativeException jcne) {

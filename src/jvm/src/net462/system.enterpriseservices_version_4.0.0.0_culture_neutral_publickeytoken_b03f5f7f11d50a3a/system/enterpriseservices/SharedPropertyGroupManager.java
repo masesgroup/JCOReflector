@@ -164,10 +164,14 @@ public class SharedPropertyGroupManager extends NetObjectEnumerable  {
     
     public SharedPropertyGroup CreatePropertyGroup(java.lang.String name, JCORefOut<PropertyLockMode> dwIsoMode, JCORefOut<PropertyReleaseMode> dwRelMode, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> fExist) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePropertyGroup = null;
         try {
-            JCObject objCreatePropertyGroup = (JCObject)classInstance.Invoke("CreatePropertyGroup", name, dwIsoMode.getJCRefOut(), dwRelMode.getJCRefOut(), fExist.getJCRefOut());
+            retObjectCreatePropertyGroup = classInstance.Invoke("CreatePropertyGroup", name, dwIsoMode.getJCRefOut(), dwRelMode.getJCRefOut(), fExist.getJCRefOut());
+            JCObject objCreatePropertyGroup = (JCObject)retObjectCreatePropertyGroup;
             return new SharedPropertyGroup(objCreatePropertyGroup);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePropertyGroup != null ? retObjectCreatePropertyGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class SharedPropertyGroupManager extends NetObjectEnumerable  {
 
     public SharedPropertyGroup Group(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroup = null;
         try {
-            JCObject objGroup = (JCObject)classInstance.Invoke("Group", name);
+            retObjectGroup = classInstance.Invoke("Group", name);
+            JCObject objGroup = (JCObject)retObjectGroup;
             return new SharedPropertyGroup(objGroup);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroup != null ? retObjectGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

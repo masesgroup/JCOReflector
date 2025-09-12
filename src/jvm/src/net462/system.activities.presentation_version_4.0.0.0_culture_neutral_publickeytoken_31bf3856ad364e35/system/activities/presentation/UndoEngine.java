@@ -168,9 +168,13 @@ public class UndoEngine extends NetObject  {
     
     public boolean Redo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRedo = null;
         try {
-            return (boolean)classInstance.Invoke("Redo");
+            retObjectRedo = classInstance.Invoke("Redo");
+            return (boolean)retObjectRedo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRedo != null ? retObjectRedo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class UndoEngine extends NetObject  {
 
     public boolean Undo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUndo = null;
         try {
-            return (boolean)classInstance.Invoke("Undo");
+            retObjectUndo = classInstance.Invoke("Undo");
+            return (boolean)retObjectUndo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectUndo != null ? retObjectUndo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class UndoEngine extends NetObject  {
 
     public void AddUndoUnit(UndoUnit unit) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddUndoUnit", unit == null ? null : unit.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,9 +210,13 @@ public class UndoEngine extends NetObject  {
     
     public boolean getIsUndoRedoInProgress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsUndoRedoInProgress = null;
         try {
-            return (boolean)classInstance.Get("IsUndoRedoInProgress");
+            retObjectIsUndoRedoInProgress = classInstance.Get("IsUndoRedoInProgress");
+            return (boolean)retObjectIsUndoRedoInProgress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsUndoRedoInProgress != null ? retObjectIsUndoRedoInProgress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +224,7 @@ public class UndoEngine extends NetObject  {
 
     public void setIsUndoRedoInProgress(boolean IsUndoRedoInProgress) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsUndoRedoInProgress", IsUndoRedoInProgress);
         } catch (JCNativeException jcne) {
@@ -227,7 +239,7 @@ public class UndoEngine extends NetObject  {
 
     public void addUndoRedoBufferChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UndoRedoBufferChanged", handler);
         } catch (JCNativeException jcne) {
@@ -237,7 +249,7 @@ public class UndoEngine extends NetObject  {
 
     public void removeUndoRedoBufferChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UndoRedoBufferChanged", handler);
         } catch (JCNativeException jcne) {
@@ -247,7 +259,7 @@ public class UndoEngine extends NetObject  {
 
     public void addUndoUnitDiscarded(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UndoUnitDiscarded", handler);
         } catch (JCNativeException jcne) {
@@ -257,7 +269,7 @@ public class UndoEngine extends NetObject  {
 
     public void removeUndoUnitDiscarded(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UndoUnitDiscarded", handler);
         } catch (JCNativeException jcne) {

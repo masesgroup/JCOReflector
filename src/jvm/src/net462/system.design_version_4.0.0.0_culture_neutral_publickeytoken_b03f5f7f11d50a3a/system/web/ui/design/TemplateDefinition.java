@@ -202,9 +202,13 @@ public class TemplateDefinition extends DesignerObject  {
     
     public boolean getAllowEditing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowEditing = null;
         try {
-            return (boolean)classInstance.Get("AllowEditing");
+            retObjectAllowEditing = classInstance.Get("AllowEditing");
+            return (boolean)retObjectAllowEditing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowEditing != null ? retObjectAllowEditing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +216,13 @@ public class TemplateDefinition extends DesignerObject  {
 
     public boolean getServerControlsOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServerControlsOnly = null;
         try {
-            return (boolean)classInstance.Get("ServerControlsOnly");
+            retObjectServerControlsOnly = classInstance.Get("ServerControlsOnly");
+            return (boolean)retObjectServerControlsOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectServerControlsOnly != null ? retObjectServerControlsOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +230,13 @@ public class TemplateDefinition extends DesignerObject  {
 
     public boolean getSupportsDataBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsDataBinding = null;
         try {
-            return (boolean)classInstance.Get("SupportsDataBinding");
+            retObjectSupportsDataBinding = classInstance.Get("SupportsDataBinding");
+            return (boolean)retObjectSupportsDataBinding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsDataBinding != null ? retObjectSupportsDataBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +244,7 @@ public class TemplateDefinition extends DesignerObject  {
 
     public void setSupportsDataBinding(boolean SupportsDataBinding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SupportsDataBinding", SupportsDataBinding);
         } catch (JCNativeException jcne) {
@@ -242,10 +254,14 @@ public class TemplateDefinition extends DesignerObject  {
 
     public NetObject getTemplatedObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTemplatedObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TemplatedObject");
+            retObjectTemplatedObject = classInstance.Get("TemplatedObject");
+            JCObject val = (JCObject)retObjectTemplatedObject;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTemplatedObject != null ? retObjectTemplatedObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +269,13 @@ public class TemplateDefinition extends DesignerObject  {
 
     public java.lang.String getContent() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContent = null;
         try {
-            return (java.lang.String)classInstance.Get("Content");
+            retObjectContent = classInstance.Get("Content");
+            return (java.lang.String)retObjectContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContent != null ? retObjectContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +283,7 @@ public class TemplateDefinition extends DesignerObject  {
 
     public void setContent(java.lang.String Content) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.web.HttpException, system.NotSupportedException, system.web.HttpParseException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Content", Content);
         } catch (JCNativeException jcne) {
@@ -273,9 +293,13 @@ public class TemplateDefinition extends DesignerObject  {
 
     public java.lang.String getTemplatePropertyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTemplatePropertyName = null;
         try {
-            return (java.lang.String)classInstance.Get("TemplatePropertyName");
+            retObjectTemplatePropertyName = classInstance.Get("TemplatePropertyName");
+            return (java.lang.String)retObjectTemplatePropertyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTemplatePropertyName != null ? retObjectTemplatePropertyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,10 +307,14 @@ public class TemplateDefinition extends DesignerObject  {
 
     public Style getStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Style");
+            retObjectStyle = classInstance.Get("Style");
+            JCObject val = (JCObject)retObjectStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStyle != null ? retObjectStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

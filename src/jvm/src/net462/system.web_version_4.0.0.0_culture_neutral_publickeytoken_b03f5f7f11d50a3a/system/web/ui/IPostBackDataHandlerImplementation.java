@@ -143,9 +143,13 @@ public class IPostBackDataHandlerImplementation extends NetObject implements IPo
     
     public boolean LoadPostData(java.lang.String postDataKey, NameValueCollection postCollection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadPostData = null;
         try {
-            return (boolean)classInstance.Invoke("LoadPostData", postDataKey, postCollection == null ? null : postCollection.getJCOInstance());
+            retObjectLoadPostData = classInstance.Invoke("LoadPostData", postDataKey, postCollection == null ? null : postCollection.getJCOInstance());
+            return (boolean)retObjectLoadPostData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectLoadPostData != null ? retObjectLoadPostData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,7 +157,7 @@ public class IPostBackDataHandlerImplementation extends NetObject implements IPo
 
     public void RaisePostDataChangedEvent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RaisePostDataChangedEvent");
         } catch (JCNativeException jcne) {

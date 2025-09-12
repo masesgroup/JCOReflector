@@ -210,10 +210,14 @@ public class DataGridTextBoxColumn extends DataGridColumnStyle  {
     
     public IFormatProvider getFormatInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FormatInfo");
+            retObjectFormatInfo = classInstance.Get("FormatInfo");
+            JCObject val = (JCObject)retObjectFormatInfo;
             return new IFormatProviderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormatInfo != null ? retObjectFormatInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +225,7 @@ public class DataGridTextBoxColumn extends DataGridColumnStyle  {
 
     public void setFormatInfo(IFormatProvider FormatInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FormatInfo", FormatInfo == null ? null : FormatInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,9 +235,13 @@ public class DataGridTextBoxColumn extends DataGridColumnStyle  {
 
     public java.lang.String getFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormat = null;
         try {
-            return (java.lang.String)classInstance.Get("Format");
+            retObjectFormat = classInstance.Get("Format");
+            return (java.lang.String)retObjectFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFormat != null ? retObjectFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +249,7 @@ public class DataGridTextBoxColumn extends DataGridColumnStyle  {
 
     public void setFormat(java.lang.String Format) throws Throwable, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Format", Format);
         } catch (JCNativeException jcne) {
@@ -251,10 +259,14 @@ public class DataGridTextBoxColumn extends DataGridColumnStyle  {
 
     public TextBox getTextBox() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextBox = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextBox");
+            retObjectTextBox = classInstance.Get("TextBox");
+            JCObject val = (JCObject)retObjectTextBox;
             return new TextBox(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextBox != null ? retObjectTextBox.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

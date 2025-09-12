@@ -156,9 +156,13 @@ public class ParameterXPathQueryGenerator extends NetObject  {
     
     public static java.lang.String CreateFromDataContractSerializer(XName serviceContractName, java.lang.String operationName, java.lang.String parameterName, boolean isReply, NetType type, MemberInfo[] pathToMember, JCORefOut<XmlNamespaceManager> namespaces) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromDataContractSerializer = null;
         try {
-            return (java.lang.String)classType.Invoke("CreateFromDataContractSerializer", serviceContractName == null ? null : serviceContractName.getJCOInstance(), operationName, parameterName, isReply, type == null ? null : type.getJCOInstance(), toObjectFromArray(pathToMember), namespaces.getJCRefOut());
+            retObjectCreateFromDataContractSerializer = classType.Invoke("CreateFromDataContractSerializer", serviceContractName == null ? null : serviceContractName.getJCOInstance(), operationName, parameterName, isReply, type == null ? null : type.getJCOInstance(), toObjectFromArray(pathToMember), namespaces.getJCRefOut());
+            return (java.lang.String)retObjectCreateFromDataContractSerializer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCreateFromDataContractSerializer != null ? retObjectCreateFromDataContractSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -172,10 +172,14 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
     
     public IAsyncResult BeginWriteBodyContents(XmlDictionaryWriter writer, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginWriteBodyContents = null;
         try {
-            JCObject objBeginWriteBodyContents = (JCObject)classInstance.Invoke("BeginWriteBodyContents", writer == null ? null : writer.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginWriteBodyContents = classInstance.Invoke("BeginWriteBodyContents", writer == null ? null : writer.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginWriteBodyContents = (JCObject)retObjectBeginWriteBodyContents;
             return new IAsyncResultImplementation(objBeginWriteBodyContents);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginWriteBodyContents != null ? retObjectBeginWriteBodyContents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public IAsyncResult BeginWriteMessage(XmlDictionaryWriter writer, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginWriteMessage = null;
         try {
-            JCObject objBeginWriteMessage = (JCObject)classInstance.Invoke("BeginWriteMessage", writer == null ? null : writer.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginWriteMessage = classInstance.Invoke("BeginWriteMessage", writer == null ? null : writer.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginWriteMessage = (JCObject)retObjectBeginWriteMessage;
             return new IAsyncResultImplementation(objBeginWriteMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginWriteMessage != null ? retObjectBeginWriteMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +202,14 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public static Message CreateMessage(MessageVersion version, MessageFault fault, java.lang.String action) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMessage = null;
         try {
-            JCObject objCreateMessage = (JCObject)classType.Invoke("CreateMessage", version == null ? null : version.getJCOInstance(), fault == null ? null : fault.getJCOInstance(), action);
+            retObjectCreateMessage = classType.Invoke("CreateMessage", version == null ? null : version.getJCOInstance(), fault == null ? null : fault.getJCOInstance(), action);
+            JCObject objCreateMessage = (JCObject)retObjectCreateMessage;
             return new Message(objCreateMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMessage != null ? retObjectCreateMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +217,14 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public static Message CreateMessage(MessageVersion version, FaultCode faultCode, java.lang.String reason, NetObject detail, java.lang.String action) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMessage = null;
         try {
-            JCObject objCreateMessage = (JCObject)classType.Invoke("CreateMessage", version == null ? null : version.getJCOInstance(), faultCode == null ? null : faultCode.getJCOInstance(), reason, detail == null ? null : detail.getJCOInstance(), action);
+            retObjectCreateMessage = classType.Invoke("CreateMessage", version == null ? null : version.getJCOInstance(), faultCode == null ? null : faultCode.getJCOInstance(), reason, detail == null ? null : detail.getJCOInstance(), action);
+            JCObject objCreateMessage = (JCObject)retObjectCreateMessage;
             return new Message(objCreateMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMessage != null ? retObjectCreateMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +232,14 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public static Message CreateMessage(MessageVersion version, FaultCode faultCode, java.lang.String reason, java.lang.String action) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMessage = null;
         try {
-            JCObject objCreateMessage = (JCObject)classType.Invoke("CreateMessage", version == null ? null : version.getJCOInstance(), faultCode == null ? null : faultCode.getJCOInstance(), reason, action);
+            retObjectCreateMessage = classType.Invoke("CreateMessage", version == null ? null : version.getJCOInstance(), faultCode == null ? null : faultCode.getJCOInstance(), reason, action);
+            JCObject objCreateMessage = (JCObject)retObjectCreateMessage;
             return new Message(objCreateMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMessage != null ? retObjectCreateMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +247,14 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public static Message CreateMessage(MessageVersion version, java.lang.String action) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMessage = null;
         try {
-            JCObject objCreateMessage = (JCObject)classType.Invoke("CreateMessage", version == null ? null : version.getJCOInstance(), action);
+            retObjectCreateMessage = classType.Invoke("CreateMessage", version == null ? null : version.getJCOInstance(), action);
+            JCObject objCreateMessage = (JCObject)retObjectCreateMessage;
             return new Message(objCreateMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMessage != null ? retObjectCreateMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +262,14 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public static Message CreateMessage(MessageVersion version, java.lang.String action, NetObject body) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMessage = null;
         try {
-            JCObject objCreateMessage = (JCObject)classType.Invoke("CreateMessage", version == null ? null : version.getJCOInstance(), action, body == null ? null : body.getJCOInstance());
+            retObjectCreateMessage = classType.Invoke("CreateMessage", version == null ? null : version.getJCOInstance(), action, body == null ? null : body.getJCOInstance());
+            JCObject objCreateMessage = (JCObject)retObjectCreateMessage;
             return new Message(objCreateMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMessage != null ? retObjectCreateMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +277,14 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public static Message CreateMessage(MessageVersion version, java.lang.String action, NetObject body, XmlObjectSerializer serializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMessage = null;
         try {
-            JCObject objCreateMessage = (JCObject)classType.Invoke("CreateMessage", version == null ? null : version.getJCOInstance(), action, body == null ? null : body.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance());
+            retObjectCreateMessage = classType.Invoke("CreateMessage", version == null ? null : version.getJCOInstance(), action, body == null ? null : body.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance());
+            JCObject objCreateMessage = (JCObject)retObjectCreateMessage;
             return new Message(objCreateMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMessage != null ? retObjectCreateMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +292,14 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public static Message CreateMessage(MessageVersion version, java.lang.String action, BodyWriter body) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMessage = null;
         try {
-            JCObject objCreateMessage = (JCObject)classType.Invoke("CreateMessage", version == null ? null : version.getJCOInstance(), action, body == null ? null : body.getJCOInstance());
+            retObjectCreateMessage = classType.Invoke("CreateMessage", version == null ? null : version.getJCOInstance(), action, body == null ? null : body.getJCOInstance());
+            JCObject objCreateMessage = (JCObject)retObjectCreateMessage;
             return new Message(objCreateMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMessage != null ? retObjectCreateMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,10 +307,14 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public static Message CreateMessage(MessageVersion version, java.lang.String action, XmlDictionaryReader body) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMessage = null;
         try {
-            JCObject objCreateMessage = (JCObject)classType.Invoke("CreateMessage", version == null ? null : version.getJCOInstance(), action, body == null ? null : body.getJCOInstance());
+            retObjectCreateMessage = classType.Invoke("CreateMessage", version == null ? null : version.getJCOInstance(), action, body == null ? null : body.getJCOInstance());
+            JCObject objCreateMessage = (JCObject)retObjectCreateMessage;
             return new Message(objCreateMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMessage != null ? retObjectCreateMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,10 +322,14 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public static Message CreateMessage(MessageVersion version, java.lang.String action, XmlReader body) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMessage = null;
         try {
-            JCObject objCreateMessage = (JCObject)classType.Invoke("CreateMessage", version == null ? null : version.getJCOInstance(), action, body == null ? null : body.getJCOInstance());
+            retObjectCreateMessage = classType.Invoke("CreateMessage", version == null ? null : version.getJCOInstance(), action, body == null ? null : body.getJCOInstance());
+            JCObject objCreateMessage = (JCObject)retObjectCreateMessage;
             return new Message(objCreateMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMessage != null ? retObjectCreateMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,10 +337,14 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public static Message CreateMessage(XmlDictionaryReader envelopeReader, int maxSizeOfHeaders, MessageVersion version) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMessage = null;
         try {
-            JCObject objCreateMessage = (JCObject)classType.Invoke("CreateMessage", envelopeReader == null ? null : envelopeReader.getJCOInstance(), maxSizeOfHeaders, version == null ? null : version.getJCOInstance());
+            retObjectCreateMessage = classType.Invoke("CreateMessage", envelopeReader == null ? null : envelopeReader.getJCOInstance(), maxSizeOfHeaders, version == null ? null : version.getJCOInstance());
+            JCObject objCreateMessage = (JCObject)retObjectCreateMessage;
             return new Message(objCreateMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMessage != null ? retObjectCreateMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,10 +352,14 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public static Message CreateMessage(XmlReader envelopeReader, int maxSizeOfHeaders, MessageVersion version) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMessage = null;
         try {
-            JCObject objCreateMessage = (JCObject)classType.Invoke("CreateMessage", envelopeReader == null ? null : envelopeReader.getJCOInstance(), maxSizeOfHeaders, version == null ? null : version.getJCOInstance());
+            retObjectCreateMessage = classType.Invoke("CreateMessage", envelopeReader == null ? null : envelopeReader.getJCOInstance(), maxSizeOfHeaders, version == null ? null : version.getJCOInstance());
+            JCObject objCreateMessage = (JCObject)retObjectCreateMessage;
             return new Message(objCreateMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMessage != null ? retObjectCreateMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +367,14 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public MessageBuffer CreateBufferedCopy(int maxBufferSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBufferedCopy = null;
         try {
-            JCObject objCreateBufferedCopy = (JCObject)classInstance.Invoke("CreateBufferedCopy", maxBufferSize);
+            retObjectCreateBufferedCopy = classInstance.Invoke("CreateBufferedCopy", maxBufferSize);
+            JCObject objCreateBufferedCopy = (JCObject)retObjectCreateBufferedCopy;
             return new MessageBuffer(objCreateBufferedCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBufferedCopy != null ? retObjectCreateBufferedCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,9 +382,13 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public java.lang.String GetBodyAttribute(java.lang.String localName, java.lang.String ns) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBodyAttribute = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetBodyAttribute", localName, ns);
+            retObjectGetBodyAttribute = classInstance.Invoke("GetBodyAttribute", localName, ns);
+            return (java.lang.String)retObjectGetBodyAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetBodyAttribute != null ? retObjectGetBodyAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,10 +396,14 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public XmlDictionaryReader GetReaderAtBodyContents() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReaderAtBodyContents = null;
         try {
-            JCObject objGetReaderAtBodyContents = (JCObject)classInstance.Invoke("GetReaderAtBodyContents");
+            retObjectGetReaderAtBodyContents = classInstance.Invoke("GetReaderAtBodyContents");
+            JCObject objGetReaderAtBodyContents = (JCObject)retObjectGetReaderAtBodyContents;
             return new XmlDictionaryReader(objGetReaderAtBodyContents);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReaderAtBodyContents != null ? retObjectGetReaderAtBodyContents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,7 +411,7 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public void Close() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -357,7 +421,7 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public void EndWriteBodyContents(IAsyncResult result) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndWriteBodyContents", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -367,7 +431,7 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public void EndWriteMessage(IAsyncResult result) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndWriteMessage", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -377,7 +441,7 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public void WriteBody(XmlDictionaryWriter writer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBody", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -387,7 +451,7 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public void WriteBody(XmlWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBody", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -397,7 +461,7 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public void WriteBodyContents(XmlDictionaryWriter writer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBodyContents", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -407,7 +471,7 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public void WriteMessage(XmlDictionaryWriter writer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteMessage", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -417,7 +481,7 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public void WriteMessage(XmlWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteMessage", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -427,7 +491,7 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public void WriteStartBody(XmlDictionaryWriter writer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartBody", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -437,7 +501,7 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public void WriteStartBody(XmlWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartBody", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -447,7 +511,7 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public void WriteStartEnvelope(XmlDictionaryWriter writer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartEnvelope", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -461,13 +525,13 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
      */
     @Deprecated 
     public void Dispose() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -483,9 +547,13 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
     
     public boolean getIsEmpty() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmpty = null;
         try {
-            return (boolean)classInstance.Get("IsEmpty");
+            retObjectIsEmpty = classInstance.Get("IsEmpty");
+            return (boolean)retObjectIsEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEmpty != null ? retObjectIsEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -493,9 +561,13 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public boolean getIsFault() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFault = null;
         try {
-            return (boolean)classInstance.Get("IsFault");
+            retObjectIsFault = classInstance.Get("IsFault");
+            return (boolean)retObjectIsFault;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFault != null ? retObjectIsFault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -503,10 +575,14 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public MessageHeaders getHeaders() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Headers");
+            retObjectHeaders = classInstance.Get("Headers");
+            JCObject val = (JCObject)retObjectHeaders;
             return new MessageHeaders(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaders != null ? retObjectHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -514,10 +590,14 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public MessageProperties getProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject val = (JCObject)retObjectProperties;
             return new MessageProperties(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -525,10 +605,14 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public MessageState getState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("State");
+            retObjectState = classInstance.Get("State");
+            JCObject val = (JCObject)retObjectState;
             return new MessageState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectState != null ? retObjectState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -536,10 +620,14 @@ public class Message extends NetObject implements system.IDisposable, AutoClosea
 
     public MessageVersion getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            JCObject val = (JCObject)retObjectVersion;
             return new MessageVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -170,10 +170,14 @@ public class StateMachineAttribute extends Attribute  {
     
     public NetType getStateMachineType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStateMachineType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StateMachineType");
+            retObjectStateMachineType = classInstance.Get("StateMachineType");
+            JCObject val = (JCObject)retObjectStateMachineType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStateMachineType != null ? retObjectStateMachineType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class StateMachineAttribute extends Attribute  {
 
     public void setStateMachineType(NetType StateMachineType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StateMachineType", StateMachineType == null ? null : StateMachineType.getJCOInstance());
         } catch (JCNativeException jcne) {

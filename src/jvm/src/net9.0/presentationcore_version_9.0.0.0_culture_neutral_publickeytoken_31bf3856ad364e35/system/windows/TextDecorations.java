@@ -158,10 +158,14 @@ public class TextDecorations extends NetObject  {
     
     public static TextDecorationCollection getBaseline() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBaseline = null;
         try {
-            JCObject val = (JCObject)classType.Get("Baseline");
+            retObjectBaseline = classType.Get("Baseline");
+            JCObject val = (JCObject)retObjectBaseline;
             return new TextDecorationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseline != null ? retObjectBaseline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class TextDecorations extends NetObject  {
 
     public static TextDecorationCollection getOverLine() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOverLine = null;
         try {
-            JCObject val = (JCObject)classType.Get("OverLine");
+            retObjectOverLine = classType.Get("OverLine");
+            JCObject val = (JCObject)retObjectOverLine;
             return new TextDecorationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOverLine != null ? retObjectOverLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class TextDecorations extends NetObject  {
 
     public static TextDecorationCollection getStrikethrough() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStrikethrough = null;
         try {
-            JCObject val = (JCObject)classType.Get("Strikethrough");
+            retObjectStrikethrough = classType.Get("Strikethrough");
+            JCObject val = (JCObject)retObjectStrikethrough;
             return new TextDecorationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStrikethrough != null ? retObjectStrikethrough.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class TextDecorations extends NetObject  {
 
     public static TextDecorationCollection getUnderline() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnderline = null;
         try {
-            JCObject val = (JCObject)classType.Get("Underline");
+            retObjectUnderline = classType.Get("Underline");
+            JCObject val = (JCObject)retObjectUnderline;
             return new TextDecorationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnderline != null ? retObjectUnderline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

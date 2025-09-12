@@ -167,10 +167,14 @@ public class ContainerControlDesigner extends ControlDesigner  {
     
     public IDictionary GetDesignTimeCssAttributes() throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.NotImplementedException, system.threading.ThreadAbortException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDesignTimeCssAttributes = null;
         try {
-            JCObject objGetDesignTimeCssAttributes = (JCObject)classInstance.Invoke("GetDesignTimeCssAttributes");
+            retObjectGetDesignTimeCssAttributes = classInstance.Invoke("GetDesignTimeCssAttributes");
+            JCObject objGetDesignTimeCssAttributes = (JCObject)retObjectGetDesignTimeCssAttributes;
             return new IDictionaryImplementation(objGetDesignTimeCssAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDesignTimeCssAttributes != null ? retObjectGetDesignTimeCssAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class ContainerControlDesigner extends ControlDesigner  {
 
     public java.lang.String GetDesignTimeHtml(DesignerRegionCollection regions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDesignTimeHtml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetDesignTimeHtml", regions == null ? null : regions.getJCOInstance());
+            retObjectGetDesignTimeHtml = classInstance.Invoke("GetDesignTimeHtml", regions == null ? null : regions.getJCOInstance());
+            return (java.lang.String)retObjectGetDesignTimeHtml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDesignTimeHtml != null ? retObjectGetDesignTimeHtml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +196,13 @@ public class ContainerControlDesigner extends ControlDesigner  {
 
     public java.lang.String GetEditableDesignerRegionContent(EditableDesignerRegion region) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEditableDesignerRegionContent = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetEditableDesignerRegionContent", region == null ? null : region.getJCOInstance());
+            retObjectGetEditableDesignerRegionContent = classInstance.Invoke("GetEditableDesignerRegionContent", region == null ? null : region.getJCOInstance());
+            return (java.lang.String)retObjectGetEditableDesignerRegionContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetEditableDesignerRegionContent != null ? retObjectGetEditableDesignerRegionContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +210,13 @@ public class ContainerControlDesigner extends ControlDesigner  {
 
     public java.lang.String GetPersistenceContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPersistenceContent = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetPersistenceContent");
+            retObjectGetPersistenceContent = classInstance.Invoke("GetPersistenceContent");
+            return (java.lang.String)retObjectGetPersistenceContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPersistenceContent != null ? retObjectGetPersistenceContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +224,7 @@ public class ContainerControlDesigner extends ControlDesigner  {
 
     public void SetEditableDesignerRegionContent(EditableDesignerRegion region, java.lang.String content) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetEditableDesignerRegionContent", region == null ? null : region.getJCOInstance(), content);
         } catch (JCNativeException jcne) {
@@ -222,9 +238,13 @@ public class ContainerControlDesigner extends ControlDesigner  {
     
     public java.lang.String getFrameCaption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrameCaption = null;
         try {
-            return (java.lang.String)classInstance.Get("FrameCaption");
+            retObjectFrameCaption = classInstance.Get("FrameCaption");
+            return (java.lang.String)retObjectFrameCaption;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFrameCaption != null ? retObjectFrameCaption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +252,14 @@ public class ContainerControlDesigner extends ControlDesigner  {
 
     public Style getFrameStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrameStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FrameStyle");
+            retObjectFrameStyle = classInstance.Get("FrameStyle");
+            JCObject val = (JCObject)retObjectFrameStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFrameStyle != null ? retObjectFrameStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

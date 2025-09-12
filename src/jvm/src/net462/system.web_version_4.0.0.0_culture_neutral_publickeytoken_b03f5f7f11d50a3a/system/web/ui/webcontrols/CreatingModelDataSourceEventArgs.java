@@ -167,10 +167,14 @@ public class CreatingModelDataSourceEventArgs extends EventArgs  {
     
     public ModelDataSource getModelDataSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModelDataSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ModelDataSource");
+            retObjectModelDataSource = classInstance.Get("ModelDataSource");
+            JCObject val = (JCObject)retObjectModelDataSource;
             return new ModelDataSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModelDataSource != null ? retObjectModelDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class CreatingModelDataSourceEventArgs extends EventArgs  {
 
     public void setModelDataSource(ModelDataSource ModelDataSource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ModelDataSource", ModelDataSource == null ? null : ModelDataSource.getJCOInstance());
         } catch (JCNativeException jcne) {

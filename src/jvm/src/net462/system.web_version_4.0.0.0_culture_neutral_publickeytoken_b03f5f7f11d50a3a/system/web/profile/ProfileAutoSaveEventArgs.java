@@ -171,9 +171,13 @@ public class ProfileAutoSaveEventArgs extends EventArgs  {
     
     public boolean getContinueWithProfileAutoSave() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWithProfileAutoSave = null;
         try {
-            return (boolean)classInstance.Get("ContinueWithProfileAutoSave");
+            retObjectContinueWithProfileAutoSave = classInstance.Get("ContinueWithProfileAutoSave");
+            return (boolean)retObjectContinueWithProfileAutoSave;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectContinueWithProfileAutoSave != null ? retObjectContinueWithProfileAutoSave.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class ProfileAutoSaveEventArgs extends EventArgs  {
 
     public void setContinueWithProfileAutoSave(boolean ContinueWithProfileAutoSave) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContinueWithProfileAutoSave", ContinueWithProfileAutoSave);
         } catch (JCNativeException jcne) {
@@ -191,10 +195,14 @@ public class ProfileAutoSaveEventArgs extends EventArgs  {
 
     public HttpContext getContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Context");
+            retObjectContext = classInstance.Get("Context");
+            JCObject val = (JCObject)retObjectContext;
             return new HttpContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContext != null ? retObjectContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

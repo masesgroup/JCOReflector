@@ -174,9 +174,13 @@ public class SslServerAuthenticationOptions extends NetObject  {
     
     public boolean getAllowRenegotiation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowRenegotiation = null;
         try {
-            return (boolean)classInstance.Get("AllowRenegotiation");
+            retObjectAllowRenegotiation = classInstance.Get("AllowRenegotiation");
+            return (boolean)retObjectAllowRenegotiation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowRenegotiation != null ? retObjectAllowRenegotiation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,7 +188,7 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public void setAllowRenegotiation(boolean AllowRenegotiation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowRenegotiation", AllowRenegotiation);
         } catch (JCNativeException jcne) {
@@ -194,9 +198,13 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public boolean getAllowTlsResume() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowTlsResume = null;
         try {
-            return (boolean)classInstance.Get("AllowTlsResume");
+            retObjectAllowTlsResume = classInstance.Get("AllowTlsResume");
+            return (boolean)retObjectAllowTlsResume;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowTlsResume != null ? retObjectAllowTlsResume.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +212,7 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public void setAllowTlsResume(boolean AllowTlsResume) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowTlsResume", AllowTlsResume);
         } catch (JCNativeException jcne) {
@@ -214,9 +222,13 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public boolean getClientCertificateRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientCertificateRequired = null;
         try {
-            return (boolean)classInstance.Get("ClientCertificateRequired");
+            retObjectClientCertificateRequired = classInstance.Get("ClientCertificateRequired");
+            return (boolean)retObjectClientCertificateRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectClientCertificateRequired != null ? retObjectClientCertificateRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +236,7 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public void setClientCertificateRequired(boolean ClientCertificateRequired) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientCertificateRequired", ClientCertificateRequired);
         } catch (JCNativeException jcne) {
@@ -234,10 +246,14 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public CipherSuitesPolicy getCipherSuitesPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCipherSuitesPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CipherSuitesPolicy");
+            retObjectCipherSuitesPolicy = classInstance.Get("CipherSuitesPolicy");
+            JCObject val = (JCObject)retObjectCipherSuitesPolicy;
             return new CipherSuitesPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCipherSuitesPolicy != null ? retObjectCipherSuitesPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +261,7 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public void setCipherSuitesPolicy(CipherSuitesPolicy CipherSuitesPolicy) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CipherSuitesPolicy", CipherSuitesPolicy == null ? null : CipherSuitesPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -255,10 +271,14 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public EncryptionPolicy getEncryptionPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptionPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EncryptionPolicy");
+            retObjectEncryptionPolicy = classInstance.Get("EncryptionPolicy");
+            JCObject val = (JCObject)retObjectEncryptionPolicy;
             return new EncryptionPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncryptionPolicy != null ? retObjectEncryptionPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +286,7 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public void setEncryptionPolicy(EncryptionPolicy EncryptionPolicy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EncryptionPolicy", EncryptionPolicy == null ? null : EncryptionPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -276,9 +296,13 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public RemoteCertificateValidationCallback getRemoteCertificateValidationCallback() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoteCertificateValidationCallback = null;
         try {
-            return (RemoteCertificateValidationCallback)classInstance.Get("RemoteCertificateValidationCallback");
+            retObjectRemoteCertificateValidationCallback = classInstance.Get("RemoteCertificateValidationCallback");
+            return (RemoteCertificateValidationCallback)retObjectRemoteCertificateValidationCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into RemoteCertificateValidationCallback", retObjectRemoteCertificateValidationCallback != null ? retObjectRemoteCertificateValidationCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +310,7 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public void setRemoteCertificateValidationCallback(RemoteCertificateValidationCallback RemoteCertificateValidationCallback) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RemoteCertificateValidationCallback", RemoteCertificateValidationCallback);
         } catch (JCNativeException jcne) {
@@ -296,9 +320,13 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public ServerCertificateSelectionCallback getServerCertificateSelectionCallback() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServerCertificateSelectionCallback = null;
         try {
-            return (ServerCertificateSelectionCallback)classInstance.Get("ServerCertificateSelectionCallback");
+            retObjectServerCertificateSelectionCallback = classInstance.Get("ServerCertificateSelectionCallback");
+            return (ServerCertificateSelectionCallback)retObjectServerCertificateSelectionCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into ServerCertificateSelectionCallback", retObjectServerCertificateSelectionCallback != null ? retObjectServerCertificateSelectionCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,7 +334,7 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public void setServerCertificateSelectionCallback(ServerCertificateSelectionCallback ServerCertificateSelectionCallback) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServerCertificateSelectionCallback", ServerCertificateSelectionCallback);
         } catch (JCNativeException jcne) {
@@ -316,10 +344,14 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public SslStreamCertificateContext getServerCertificateContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServerCertificateContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServerCertificateContext");
+            retObjectServerCertificateContext = classInstance.Get("ServerCertificateContext");
+            JCObject val = (JCObject)retObjectServerCertificateContext;
             return new SslStreamCertificateContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServerCertificateContext != null ? retObjectServerCertificateContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,7 +359,7 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public void setServerCertificateContext(SslStreamCertificateContext ServerCertificateContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServerCertificateContext", ServerCertificateContext == null ? null : ServerCertificateContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -337,10 +369,14 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public SslProtocols getEnabledSslProtocols() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnabledSslProtocols = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EnabledSslProtocols");
+            retObjectEnabledSslProtocols = classInstance.Get("EnabledSslProtocols");
+            JCObject val = (JCObject)retObjectEnabledSslProtocols;
             return new SslProtocols(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnabledSslProtocols != null ? retObjectEnabledSslProtocols.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,7 +384,7 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public void setEnabledSslProtocols(SslProtocols EnabledSslProtocols) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnabledSslProtocols", EnabledSslProtocols == null ? null : EnabledSslProtocols.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -358,10 +394,14 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public X509Certificate getServerCertificate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServerCertificate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServerCertificate");
+            retObjectServerCertificate = classInstance.Get("ServerCertificate");
+            JCObject val = (JCObject)retObjectServerCertificate;
             return new X509Certificate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServerCertificate != null ? retObjectServerCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,7 +409,7 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public void setServerCertificate(X509Certificate ServerCertificate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServerCertificate", ServerCertificate == null ? null : ServerCertificate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -379,10 +419,14 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public X509ChainPolicy getCertificateChainPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificateChainPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CertificateChainPolicy");
+            retObjectCertificateChainPolicy = classInstance.Get("CertificateChainPolicy");
+            JCObject val = (JCObject)retObjectCertificateChainPolicy;
             return new X509ChainPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCertificateChainPolicy != null ? retObjectCertificateChainPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -390,7 +434,7 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public void setCertificateChainPolicy(X509ChainPolicy CertificateChainPolicy) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CertificateChainPolicy", CertificateChainPolicy == null ? null : CertificateChainPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -400,10 +444,14 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public X509RevocationMode getCertificateRevocationCheckMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificateRevocationCheckMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CertificateRevocationCheckMode");
+            retObjectCertificateRevocationCheckMode = classInstance.Get("CertificateRevocationCheckMode");
+            JCObject val = (JCObject)retObjectCertificateRevocationCheckMode;
             return new X509RevocationMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCertificateRevocationCheckMode != null ? retObjectCertificateRevocationCheckMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,7 +459,7 @@ public class SslServerAuthenticationOptions extends NetObject  {
 
     public void setCertificateRevocationCheckMode(X509RevocationMode CertificateRevocationCheckMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CertificateRevocationCheckMode", CertificateRevocationCheckMode == null ? null : CertificateRevocationCheckMode.getJCOInstance());
         } catch (JCNativeException jcne) {

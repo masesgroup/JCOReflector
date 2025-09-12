@@ -176,7 +176,7 @@ public class DynamicActivity extends Activity implements system.componentmodel.I
      */
     @Deprecated 
     public AttributeCollection GetAttributes() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -185,7 +185,7 @@ public class DynamicActivity extends Activity implements system.componentmodel.I
      */
     @Deprecated 
     public EventDescriptor GetDefaultEvent() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -194,7 +194,7 @@ public class DynamicActivity extends Activity implements system.componentmodel.I
      */
     @Deprecated 
     public EventDescriptorCollection GetEvents() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -203,7 +203,7 @@ public class DynamicActivity extends Activity implements system.componentmodel.I
      */
     @Deprecated 
     public EventDescriptorCollection GetEvents(Attribute[] attributes) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -212,7 +212,7 @@ public class DynamicActivity extends Activity implements system.componentmodel.I
      */
     @Deprecated 
     public PropertyDescriptor GetDefaultProperty() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -221,7 +221,7 @@ public class DynamicActivity extends Activity implements system.componentmodel.I
      */
     @Deprecated 
     public PropertyDescriptorCollection GetProperties() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -230,7 +230,7 @@ public class DynamicActivity extends Activity implements system.componentmodel.I
      */
     @Deprecated 
     public PropertyDescriptorCollection GetProperties(Attribute[] attributes) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -239,7 +239,7 @@ public class DynamicActivity extends Activity implements system.componentmodel.I
      */
     @Deprecated 
     public TypeConverter GetConverter() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -248,7 +248,7 @@ public class DynamicActivity extends Activity implements system.componentmodel.I
      */
     @Deprecated 
     public NetObject GetEditor(NetType editorBaseType) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -257,7 +257,7 @@ public class DynamicActivity extends Activity implements system.componentmodel.I
      */
     @Deprecated 
     public NetObject GetPropertyOwner(PropertyDescriptor pd) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -266,7 +266,7 @@ public class DynamicActivity extends Activity implements system.componentmodel.I
      */
     @Deprecated 
     public java.lang.String GetClassName() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -275,7 +275,7 @@ public class DynamicActivity extends Activity implements system.componentmodel.I
      */
     @Deprecated 
     public java.lang.String GetComponentName() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
 
@@ -284,9 +284,13 @@ public class DynamicActivity extends Activity implements system.componentmodel.I
     
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,7 +298,7 @@ public class DynamicActivity extends Activity implements system.componentmodel.I
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -304,10 +308,14 @@ public class DynamicActivity extends Activity implements system.componentmodel.I
 
     public Version getImplementationVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImplementationVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImplementationVersion");
+            retObjectImplementationVersion = classInstance.Get("ImplementationVersion");
+            JCObject val = (JCObject)retObjectImplementationVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImplementationVersion != null ? retObjectImplementationVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +323,7 @@ public class DynamicActivity extends Activity implements system.componentmodel.I
 
     public void setImplementationVersion(Version ImplementationVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImplementationVersion", ImplementationVersion == null ? null : ImplementationVersion.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -170,10 +170,14 @@ public class NegotiateAuthenticationServerOptions extends NetObject  {
     
     public NetworkCredential getCredential() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCredential = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Credential");
+            retObjectCredential = classInstance.Get("Credential");
+            JCObject val = (JCObject)retObjectCredential;
             return new NetworkCredential(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCredential != null ? retObjectCredential.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class NegotiateAuthenticationServerOptions extends NetObject  {
 
     public void setCredential(NetworkCredential Credential) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Credential", Credential == null ? null : Credential.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -191,10 +195,14 @@ public class NegotiateAuthenticationServerOptions extends NetObject  {
 
     public ProtectionLevel getRequiredProtectionLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiredProtectionLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RequiredProtectionLevel");
+            retObjectRequiredProtectionLevel = classInstance.Get("RequiredProtectionLevel");
+            JCObject val = (JCObject)retObjectRequiredProtectionLevel;
             return new ProtectionLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequiredProtectionLevel != null ? retObjectRequiredProtectionLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +210,7 @@ public class NegotiateAuthenticationServerOptions extends NetObject  {
 
     public void setRequiredProtectionLevel(ProtectionLevel RequiredProtectionLevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequiredProtectionLevel", RequiredProtectionLevel == null ? null : RequiredProtectionLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,10 +220,14 @@ public class NegotiateAuthenticationServerOptions extends NetObject  {
 
     public ChannelBinding getBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Binding");
+            retObjectBinding = classInstance.Get("Binding");
+            JCObject val = (JCObject)retObjectBinding;
             return new ChannelBinding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBinding != null ? retObjectBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +235,7 @@ public class NegotiateAuthenticationServerOptions extends NetObject  {
 
     public void setBinding(ChannelBinding Binding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Binding", Binding == null ? null : Binding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -233,10 +245,14 @@ public class NegotiateAuthenticationServerOptions extends NetObject  {
 
     public ExtendedProtectionPolicy getPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Policy");
+            retObjectPolicy = classInstance.Get("Policy");
+            JCObject val = (JCObject)retObjectPolicy;
             return new ExtendedProtectionPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPolicy != null ? retObjectPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +260,7 @@ public class NegotiateAuthenticationServerOptions extends NetObject  {
 
     public void setPolicy(ExtendedProtectionPolicy Policy) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Policy", Policy == null ? null : Policy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -254,10 +270,14 @@ public class NegotiateAuthenticationServerOptions extends NetObject  {
 
     public TokenImpersonationLevel getRequiredImpersonationLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiredImpersonationLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RequiredImpersonationLevel");
+            retObjectRequiredImpersonationLevel = classInstance.Get("RequiredImpersonationLevel");
+            JCObject val = (JCObject)retObjectRequiredImpersonationLevel;
             return new TokenImpersonationLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequiredImpersonationLevel != null ? retObjectRequiredImpersonationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +285,7 @@ public class NegotiateAuthenticationServerOptions extends NetObject  {
 
     public void setRequiredImpersonationLevel(TokenImpersonationLevel RequiredImpersonationLevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequiredImpersonationLevel", RequiredImpersonationLevel == null ? null : RequiredImpersonationLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -275,9 +295,13 @@ public class NegotiateAuthenticationServerOptions extends NetObject  {
 
     public java.lang.String getPackage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPackage = null;
         try {
-            return (java.lang.String)classInstance.Get("Package");
+            retObjectPackage = classInstance.Get("Package");
+            return (java.lang.String)retObjectPackage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPackage != null ? retObjectPackage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +309,7 @@ public class NegotiateAuthenticationServerOptions extends NetObject  {
 
     public void setPackage(java.lang.String Package) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Package", Package);
         } catch (JCNativeException jcne) {

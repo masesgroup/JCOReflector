@@ -144,9 +144,13 @@ public class IChannelReceiverImplementation extends NetObject implements IChanne
     
     public java.lang.String Parse(java.lang.String url, JCORefOut objectURI) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Parse", url, objectURI.getJCRefOut());
+            retObjectParse = classInstance.Invoke("Parse", url, objectURI.getJCRefOut());
+            return (java.lang.String)retObjectParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,10 +158,12 @@ public class IChannelReceiverImplementation extends NetObject implements IChanne
 
     public java.lang.String[] GetUrlsForUri(java.lang.String objectURI) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUrlsForUri = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetUrlsForUri", objectURI);
+            retObjectGetUrlsForUri = classInstance.Invoke("GetUrlsForUri", objectURI);
+            JCObject resultingObjects = (JCObject)retObjectGetUrlsForUri;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -166,6 +172,8 @@ public class IChannelReceiverImplementation extends NetObject implements IChanne
 				resultingArray[indexGetUrlsForUri] = (java.lang.String)resultingArrayList.get(indexGetUrlsForUri);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetUrlsForUri != null ? retObjectGetUrlsForUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,7 +181,7 @@ public class IChannelReceiverImplementation extends NetObject implements IChanne
 
     public void StartListening(NetObject data) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartListening", data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -183,7 +191,7 @@ public class IChannelReceiverImplementation extends NetObject implements IChanne
 
     public void StopListening(NetObject data) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StopListening", data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,9 +205,19 @@ public class IChannelReceiverImplementation extends NetObject implements IChanne
     
     public int getChannelPriority() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChannelPriority = null;
         try {
-            return (int)classInstance.Get("ChannelPriority");
+            retObjectChannelPriority = classInstance.Get("ChannelPriority");
+            return (int)retObjectChannelPriority;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectChannelPriorityNumber = (java.lang.Number)retObjectChannelPriority;
+                return retObjectChannelPriorityNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectChannelPriority != null ? retObjectChannelPriority.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +225,14 @@ public class IChannelReceiverImplementation extends NetObject implements IChanne
 
     public NetObject getChannelData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChannelData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ChannelData");
+            retObjectChannelData = classInstance.Get("ChannelData");
+            JCObject val = (JCObject)retObjectChannelData;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChannelData != null ? retObjectChannelData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +240,13 @@ public class IChannelReceiverImplementation extends NetObject implements IChanne
 
     public java.lang.String getChannelName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChannelName = null;
         try {
-            return (java.lang.String)classInstance.Get("ChannelName");
+            retObjectChannelName = classInstance.Get("ChannelName");
+            return (java.lang.String)retObjectChannelName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectChannelName != null ? retObjectChannelName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

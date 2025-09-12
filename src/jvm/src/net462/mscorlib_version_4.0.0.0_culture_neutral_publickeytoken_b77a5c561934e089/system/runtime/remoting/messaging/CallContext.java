@@ -156,10 +156,14 @@ public class CallContext extends NetObject  {
     
     public static NetObject GetData(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetData = null;
         try {
-            JCObject objGetData = (JCObject)classType.Invoke("GetData", name);
+            retObjectGetData = classType.Invoke("GetData", name);
+            JCObject objGetData = (JCObject)retObjectGetData;
             return new NetObject(objGetData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetData != null ? retObjectGetData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class CallContext extends NetObject  {
 
     public static NetObject LogicalGetData(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLogicalGetData = null;
         try {
-            JCObject objLogicalGetData = (JCObject)classType.Invoke("LogicalGetData", name);
+            retObjectLogicalGetData = classType.Invoke("LogicalGetData", name);
+            JCObject objLogicalGetData = (JCObject)retObjectLogicalGetData;
             return new NetObject(objLogicalGetData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogicalGetData != null ? retObjectLogicalGetData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,16 +186,20 @@ public class CallContext extends NetObject  {
 
     public static Header[] GetHeaders() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHeaders = null;
         try {
             ArrayList<Header> resultingArrayList = new ArrayList<Header>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetHeaders");
+            retObjectGetHeaders = classType.Invoke("GetHeaders");
+            JCObject resultingObjects = (JCObject)retObjectGetHeaders;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Header(resultingObject));
             }
             Header[] resultingArray = new Header[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHeaders != null ? retObjectGetHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +207,7 @@ public class CallContext extends NetObject  {
 
     public static void FreeNamedDataSlot(java.lang.String name) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FreeNamedDataSlot", name);
         } catch (JCNativeException jcne) {
@@ -205,7 +217,7 @@ public class CallContext extends NetObject  {
 
     public static void LogicalSetData(java.lang.String name, NetObject data) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("LogicalSetData", name, data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -215,7 +227,7 @@ public class CallContext extends NetObject  {
 
     public static void SetData(java.lang.String name, NetObject data) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetData", name, data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,7 +237,7 @@ public class CallContext extends NetObject  {
 
     public static void SetHeaders(Header[] headers) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetHeaders", (java.lang.Object)toObjectFromArray(headers));
         } catch (JCNativeException jcne) {
@@ -239,10 +251,14 @@ public class CallContext extends NetObject  {
     
     public static NetObject getHostContext() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHostContext = null;
         try {
-            JCObject val = (JCObject)classType.Get("HostContext");
+            retObjectHostContext = classType.Get("HostContext");
+            JCObject val = (JCObject)retObjectHostContext;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHostContext != null ? retObjectHostContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +266,7 @@ public class CallContext extends NetObject  {
 
     public static void setHostContext(NetObject HostContext) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("HostContext", HostContext == null ? null : HostContext.getJCOInstance());
         } catch (JCNativeException jcne) {

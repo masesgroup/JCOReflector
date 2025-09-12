@@ -178,10 +178,14 @@ public class EntityDescriptor extends MetadataBase  {
     
     public EntityId getEntityId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntityId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EntityId");
+            retObjectEntityId = classInstance.Get("EntityId");
+            JCObject val = (JCObject)retObjectEntityId;
             return new EntityId(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntityId != null ? retObjectEntityId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +193,7 @@ public class EntityDescriptor extends MetadataBase  {
 
     public void setEntityId(EntityId EntityId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EntityId", EntityId == null ? null : EntityId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,10 +203,14 @@ public class EntityDescriptor extends MetadataBase  {
 
     public Organization getOrganization() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrganization = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Organization");
+            retObjectOrganization = classInstance.Get("Organization");
+            JCObject val = (JCObject)retObjectOrganization;
             return new Organization(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrganization != null ? retObjectOrganization.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +218,7 @@ public class EntityDescriptor extends MetadataBase  {
 
     public void setOrganization(Organization Organization) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Organization", Organization == null ? null : Organization.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,9 +228,13 @@ public class EntityDescriptor extends MetadataBase  {
 
     public java.lang.String getFederationId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFederationId = null;
         try {
-            return (java.lang.String)classInstance.Get("FederationId");
+            retObjectFederationId = classInstance.Get("FederationId");
+            return (java.lang.String)retObjectFederationId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFederationId != null ? retObjectFederationId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +242,7 @@ public class EntityDescriptor extends MetadataBase  {
 
     public void setFederationId(java.lang.String FederationId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FederationId", FederationId);
         } catch (JCNativeException jcne) {

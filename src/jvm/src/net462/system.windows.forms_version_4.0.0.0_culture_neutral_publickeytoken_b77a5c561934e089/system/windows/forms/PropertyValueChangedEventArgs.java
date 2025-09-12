@@ -171,10 +171,14 @@ public class PropertyValueChangedEventArgs extends EventArgs  {
     
     public NetObject getOldValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OldValue");
+            retObjectOldValue = classInstance.Get("OldValue");
+            JCObject val = (JCObject)retObjectOldValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOldValue != null ? retObjectOldValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class PropertyValueChangedEventArgs extends EventArgs  {
 
     public GridItem getChangedItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangedItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ChangedItem");
+            retObjectChangedItem = classInstance.Get("ChangedItem");
+            JCObject val = (JCObject)retObjectChangedItem;
             return new GridItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChangedItem != null ? retObjectChangedItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

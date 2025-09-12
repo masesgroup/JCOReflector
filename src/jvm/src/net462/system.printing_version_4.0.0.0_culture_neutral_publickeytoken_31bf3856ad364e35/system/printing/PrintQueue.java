@@ -257,10 +257,14 @@ public class PrintQueue extends PrintSystemObject  {
     
     public MemoryStream GetPrintCapabilitiesAsXml() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrintCapabilitiesAsXml = null;
         try {
-            JCObject objGetPrintCapabilitiesAsXml = (JCObject)classInstance.Invoke("GetPrintCapabilitiesAsXml");
+            retObjectGetPrintCapabilitiesAsXml = classInstance.Invoke("GetPrintCapabilitiesAsXml");
+            JCObject objGetPrintCapabilitiesAsXml = (JCObject)retObjectGetPrintCapabilitiesAsXml;
             return new MemoryStream(objGetPrintCapabilitiesAsXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrintCapabilitiesAsXml != null ? retObjectGetPrintCapabilitiesAsXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +272,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public MemoryStream GetPrintCapabilitiesAsXml(PrintTicket printTicket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrintCapabilitiesAsXml = null;
         try {
-            JCObject objGetPrintCapabilitiesAsXml = (JCObject)classInstance.Invoke("GetPrintCapabilitiesAsXml", printTicket == null ? null : printTicket.getJCOInstance());
+            retObjectGetPrintCapabilitiesAsXml = classInstance.Invoke("GetPrintCapabilitiesAsXml", printTicket == null ? null : printTicket.getJCOInstance());
+            JCObject objGetPrintCapabilitiesAsXml = (JCObject)retObjectGetPrintCapabilitiesAsXml;
             return new MemoryStream(objGetPrintCapabilitiesAsXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrintCapabilitiesAsXml != null ? retObjectGetPrintCapabilitiesAsXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +287,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public PrintCapabilities GetPrintCapabilities() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException, system.ObjectDisposedException, system.OverflowException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrintCapabilities = null;
         try {
-            JCObject objGetPrintCapabilities = (JCObject)classInstance.Invoke("GetPrintCapabilities");
+            retObjectGetPrintCapabilities = classInstance.Invoke("GetPrintCapabilities");
+            JCObject objGetPrintCapabilities = (JCObject)retObjectGetPrintCapabilities;
             return new PrintCapabilities(objGetPrintCapabilities);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrintCapabilities != null ? retObjectGetPrintCapabilities.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +302,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public PrintCapabilities GetPrintCapabilities(PrintTicket printTicket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException, system.ObjectDisposedException, system.OverflowException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrintCapabilities = null;
         try {
-            JCObject objGetPrintCapabilities = (JCObject)classInstance.Invoke("GetPrintCapabilities", printTicket == null ? null : printTicket.getJCOInstance());
+            retObjectGetPrintCapabilities = classInstance.Invoke("GetPrintCapabilities", printTicket == null ? null : printTicket.getJCOInstance());
+            JCObject objGetPrintCapabilities = (JCObject)retObjectGetPrintCapabilities;
             return new PrintCapabilities(objGetPrintCapabilities);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrintCapabilities != null ? retObjectGetPrintCapabilities.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +317,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public PrintJobInfoCollection GetPrintJobInfoCollection() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrintJobInfoCollection = null;
         try {
-            JCObject objGetPrintJobInfoCollection = (JCObject)classInstance.Invoke("GetPrintJobInfoCollection");
+            retObjectGetPrintJobInfoCollection = classInstance.Invoke("GetPrintJobInfoCollection");
+            JCObject objGetPrintJobInfoCollection = (JCObject)retObjectGetPrintJobInfoCollection;
             return new PrintJobInfoCollection(objGetPrintJobInfoCollection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrintJobInfoCollection != null ? retObjectGetPrintJobInfoCollection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,10 +332,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public PrintSystemJobInfo AddJob() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException, system.xml.XmlException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddJob = null;
         try {
-            JCObject objAddJob = (JCObject)classInstance.Invoke("AddJob");
+            retObjectAddJob = classInstance.Invoke("AddJob");
+            JCObject objAddJob = (JCObject)retObjectAddJob;
             return new PrintSystemJobInfo(objAddJob);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddJob != null ? retObjectAddJob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +347,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public PrintSystemJobInfo AddJob(java.lang.String jobName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException, system.xml.XmlException, system.FormatException, system.reflection.TargetParameterCountException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddJob = null;
         try {
-            JCObject objAddJob = (JCObject)classInstance.Invoke("AddJob", jobName);
+            retObjectAddJob = classInstance.Invoke("AddJob", jobName);
+            JCObject objAddJob = (JCObject)retObjectAddJob;
             return new PrintSystemJobInfo(objAddJob);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddJob != null ? retObjectAddJob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,10 +362,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public PrintSystemJobInfo AddJob(java.lang.String jobName, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException, system.xml.XmlException, system.FormatException, system.reflection.TargetParameterCountException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddJob = null;
         try {
-            JCObject objAddJob = (JCObject)classInstance.Invoke("AddJob", jobName, printTicket == null ? null : printTicket.getJCOInstance());
+            retObjectAddJob = classInstance.Invoke("AddJob", jobName, printTicket == null ? null : printTicket.getJCOInstance());
+            JCObject objAddJob = (JCObject)retObjectAddJob;
             return new PrintSystemJobInfo(objAddJob);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddJob != null ? retObjectAddJob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,10 +377,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public PrintSystemJobInfo AddJob(java.lang.String jobName, java.lang.String documentPath, boolean fastCopy) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.xml.XmlException, system.FormatException, system.reflection.TargetParameterCountException, system.io.PathTooLongException, system.io.IOException, system.io.EndOfStreamException, system.threading.SemaphoreFullException, system.io.FileFormatException, system.UnauthorizedAccessException, system.windows.xps.XpsPackagingException, system.io.InvalidDataException, system.collections.generic.KeyNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddJob = null;
         try {
-            JCObject objAddJob = (JCObject)classInstance.Invoke("AddJob", jobName, documentPath, fastCopy);
+            retObjectAddJob = classInstance.Invoke("AddJob", jobName, documentPath, fastCopy);
+            JCObject objAddJob = (JCObject)retObjectAddJob;
             return new PrintSystemJobInfo(objAddJob);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddJob != null ? retObjectAddJob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,10 +392,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public PrintSystemJobInfo AddJob(java.lang.String jobName, java.lang.String documentPath, boolean fastCopy, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException, system.xml.XmlException, system.FormatException, system.reflection.TargetParameterCountException, system.io.PathTooLongException, system.io.IOException, system.io.EndOfStreamException, system.threading.SemaphoreFullException, system.io.FileFormatException, system.UnauthorizedAccessException, system.windows.xps.XpsPackagingException, system.io.InvalidDataException, system.collections.generic.KeyNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddJob = null;
         try {
-            JCObject objAddJob = (JCObject)classInstance.Invoke("AddJob", jobName, documentPath, fastCopy, printTicket == null ? null : printTicket.getJCOInstance());
+            retObjectAddJob = classInstance.Invoke("AddJob", jobName, documentPath, fastCopy, printTicket == null ? null : printTicket.getJCOInstance());
+            JCObject objAddJob = (JCObject)retObjectAddJob;
             return new PrintSystemJobInfo(objAddJob);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddJob != null ? retObjectAddJob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,10 +407,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public PrintSystemJobInfo GetJob(int jobId) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetJob = null;
         try {
-            JCObject objGetJob = (JCObject)classInstance.Invoke("GetJob", jobId);
+            retObjectGetJob = classInstance.Invoke("GetJob", jobId);
+            JCObject objGetJob = (JCObject)retObjectGetJob;
             return new PrintSystemJobInfo(objGetJob);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetJob != null ? retObjectGetJob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,10 +422,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public ValidationResult MergeAndValidatePrintTicket(PrintTicket basePrintTicket, PrintTicket deltaPrintTicket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMergeAndValidatePrintTicket = null;
         try {
-            JCObject objMergeAndValidatePrintTicket = (JCObject)classInstance.Invoke("MergeAndValidatePrintTicket", basePrintTicket == null ? null : basePrintTicket.getJCOInstance(), deltaPrintTicket == null ? null : deltaPrintTicket.getJCOInstance());
+            retObjectMergeAndValidatePrintTicket = classInstance.Invoke("MergeAndValidatePrintTicket", basePrintTicket == null ? null : basePrintTicket.getJCOInstance(), deltaPrintTicket == null ? null : deltaPrintTicket.getJCOInstance());
+            JCObject objMergeAndValidatePrintTicket = (JCObject)retObjectMergeAndValidatePrintTicket;
             return new ValidationResult(objMergeAndValidatePrintTicket);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMergeAndValidatePrintTicket != null ? retObjectMergeAndValidatePrintTicket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,10 +437,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public ValidationResult MergeAndValidatePrintTicket(PrintTicket basePrintTicket, PrintTicket deltaPrintTicket, PrintTicketScope scope) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMergeAndValidatePrintTicket = null;
         try {
-            JCObject objMergeAndValidatePrintTicket = (JCObject)classInstance.Invoke("MergeAndValidatePrintTicket", basePrintTicket == null ? null : basePrintTicket.getJCOInstance(), deltaPrintTicket == null ? null : deltaPrintTicket.getJCOInstance(), scope == null ? null : scope.getJCOInstance());
+            retObjectMergeAndValidatePrintTicket = classInstance.Invoke("MergeAndValidatePrintTicket", basePrintTicket == null ? null : basePrintTicket.getJCOInstance(), deltaPrintTicket == null ? null : deltaPrintTicket.getJCOInstance(), scope == null ? null : scope.getJCOInstance());
+            JCObject objMergeAndValidatePrintTicket = (JCObject)retObjectMergeAndValidatePrintTicket;
             return new ValidationResult(objMergeAndValidatePrintTicket);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMergeAndValidatePrintTicket != null ? retObjectMergeAndValidatePrintTicket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,10 +452,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public static XpsDocumentWriter CreateXpsDocumentWriter(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> width, JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> height) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.MulticastNotSupportedException, system.windows.controls.PrintDialogException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateXpsDocumentWriter = null;
         try {
-            JCObject objCreateXpsDocumentWriter = (JCObject)classType.Invoke("CreateXpsDocumentWriter", width.getJCRefOut(), height.getJCRefOut());
+            retObjectCreateXpsDocumentWriter = classType.Invoke("CreateXpsDocumentWriter", width.getJCRefOut(), height.getJCRefOut());
+            JCObject objCreateXpsDocumentWriter = (JCObject)retObjectCreateXpsDocumentWriter;
             return new XpsDocumentWriter(objCreateXpsDocumentWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateXpsDocumentWriter != null ? retObjectCreateXpsDocumentWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,10 +467,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public static XpsDocumentWriter CreateXpsDocumentWriter(JCORefOut<PrintDocumentImageableArea> documentImageableArea) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.printing.PrintQueueException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.MulticastNotSupportedException, system.windows.controls.PrintDialogException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateXpsDocumentWriter = null;
         try {
-            JCObject objCreateXpsDocumentWriter = (JCObject)classType.Invoke("CreateXpsDocumentWriter", documentImageableArea.getJCRefOut());
+            retObjectCreateXpsDocumentWriter = classType.Invoke("CreateXpsDocumentWriter", documentImageableArea.getJCRefOut());
+            JCObject objCreateXpsDocumentWriter = (JCObject)retObjectCreateXpsDocumentWriter;
             return new XpsDocumentWriter(objCreateXpsDocumentWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateXpsDocumentWriter != null ? retObjectCreateXpsDocumentWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,10 +482,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public static XpsDocumentWriter CreateXpsDocumentWriter(JCORefOut<PrintDocumentImageableArea> documentImageableArea, JCORefOut<PageRangeSelection> pageRangeSelection, JCORefOut<PageRange> pageRange) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.printing.PrintQueueException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.MulticastNotSupportedException, system.windows.controls.PrintDialogException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateXpsDocumentWriter = null;
         try {
-            JCObject objCreateXpsDocumentWriter = (JCObject)classType.Invoke("CreateXpsDocumentWriter", documentImageableArea.getJCRefOut(), pageRangeSelection.getJCRefOut(), pageRange.getJCRefOut());
+            retObjectCreateXpsDocumentWriter = classType.Invoke("CreateXpsDocumentWriter", documentImageableArea.getJCRefOut(), pageRangeSelection.getJCRefOut(), pageRange.getJCRefOut());
+            JCObject objCreateXpsDocumentWriter = (JCObject)retObjectCreateXpsDocumentWriter;
             return new XpsDocumentWriter(objCreateXpsDocumentWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateXpsDocumentWriter != null ? retObjectCreateXpsDocumentWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,10 +497,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public static XpsDocumentWriter CreateXpsDocumentWriter(PrintQueue printQueue) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateXpsDocumentWriter = null;
         try {
-            JCObject objCreateXpsDocumentWriter = (JCObject)classType.Invoke("CreateXpsDocumentWriter", printQueue == null ? null : printQueue.getJCOInstance());
+            retObjectCreateXpsDocumentWriter = classType.Invoke("CreateXpsDocumentWriter", printQueue == null ? null : printQueue.getJCOInstance());
+            JCObject objCreateXpsDocumentWriter = (JCObject)retObjectCreateXpsDocumentWriter;
             return new XpsDocumentWriter(objCreateXpsDocumentWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateXpsDocumentWriter != null ? retObjectCreateXpsDocumentWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,10 +512,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public static XpsDocumentWriter CreateXpsDocumentWriter(java.lang.String jobDescription, JCORefOut<PrintDocumentImageableArea> documentImageableArea) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.MulticastNotSupportedException, system.windows.controls.PrintDialogException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateXpsDocumentWriter = null;
         try {
-            JCObject objCreateXpsDocumentWriter = (JCObject)classType.Invoke("CreateXpsDocumentWriter", jobDescription, documentImageableArea.getJCRefOut());
+            retObjectCreateXpsDocumentWriter = classType.Invoke("CreateXpsDocumentWriter", jobDescription, documentImageableArea.getJCRefOut());
+            JCObject objCreateXpsDocumentWriter = (JCObject)retObjectCreateXpsDocumentWriter;
             return new XpsDocumentWriter(objCreateXpsDocumentWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateXpsDocumentWriter != null ? retObjectCreateXpsDocumentWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -455,10 +527,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public static XpsDocumentWriter CreateXpsDocumentWriter(java.lang.String jobDescription, JCORefOut<PrintDocumentImageableArea> documentImageableArea, JCORefOut<PageRangeSelection> pageRangeSelection, JCORefOut<PageRange> pageRange) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.MulticastNotSupportedException, system.windows.controls.PrintDialogException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateXpsDocumentWriter = null;
         try {
-            JCObject objCreateXpsDocumentWriter = (JCObject)classType.Invoke("CreateXpsDocumentWriter", jobDescription, documentImageableArea.getJCRefOut(), pageRangeSelection.getJCRefOut(), pageRange.getJCRefOut());
+            retObjectCreateXpsDocumentWriter = classType.Invoke("CreateXpsDocumentWriter", jobDescription, documentImageableArea.getJCRefOut(), pageRangeSelection.getJCRefOut(), pageRange.getJCRefOut());
+            JCObject objCreateXpsDocumentWriter = (JCObject)retObjectCreateXpsDocumentWriter;
             return new XpsDocumentWriter(objCreateXpsDocumentWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateXpsDocumentWriter != null ? retObjectCreateXpsDocumentWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -466,7 +542,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void Commit() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.printing.PrintCommitAttributesException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Commit");
         } catch (JCNativeException jcne) {
@@ -476,7 +552,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void Pause() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Pause");
         } catch (JCNativeException jcne) {
@@ -486,7 +562,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void Purge() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Purge");
         } catch (JCNativeException jcne) {
@@ -496,7 +572,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void Refresh() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Refresh");
         } catch (JCNativeException jcne) {
@@ -506,7 +582,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void Resume() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Resume");
         } catch (JCNativeException jcne) {
@@ -520,9 +596,13 @@ public class PrintQueue extends PrintSystemObject  {
     
     public boolean getHasPaperProblem() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasPaperProblem = null;
         try {
-            return (boolean)classInstance.Get("HasPaperProblem");
+            retObjectHasPaperProblem = classInstance.Get("HasPaperProblem");
+            return (boolean)retObjectHasPaperProblem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasPaperProblem != null ? retObjectHasPaperProblem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -530,9 +610,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getHasToner() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasToner = null;
         try {
-            return (boolean)classInstance.Get("HasToner");
+            retObjectHasToner = classInstance.Get("HasToner");
+            return (boolean)retObjectHasToner;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasToner != null ? retObjectHasToner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -540,9 +624,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getInPartialTrust() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInPartialTrust = null;
         try {
-            return (boolean)classInstance.Get("InPartialTrust");
+            retObjectInPartialTrust = classInstance.Get("InPartialTrust");
+            return (boolean)retObjectInPartialTrust;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInPartialTrust != null ? retObjectInPartialTrust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -550,7 +638,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void setInPartialTrust(boolean InPartialTrust) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InPartialTrust", InPartialTrust);
         } catch (JCNativeException jcne) {
@@ -560,9 +648,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsBidiEnabled() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBidiEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsBidiEnabled");
+            retObjectIsBidiEnabled = classInstance.Get("IsBidiEnabled");
+            return (boolean)retObjectIsBidiEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBidiEnabled != null ? retObjectIsBidiEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -570,9 +662,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsBusy() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBusy = null;
         try {
-            return (boolean)classInstance.Get("IsBusy");
+            retObjectIsBusy = classInstance.Get("IsBusy");
+            return (boolean)retObjectIsBusy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBusy != null ? retObjectIsBusy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -580,9 +676,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsDevQueryEnabled() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDevQueryEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsDevQueryEnabled");
+            retObjectIsDevQueryEnabled = classInstance.Get("IsDevQueryEnabled");
+            return (boolean)retObjectIsDevQueryEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDevQueryEnabled != null ? retObjectIsDevQueryEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -590,9 +690,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsDirect() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDirect = null;
         try {
-            return (boolean)classInstance.Get("IsDirect");
+            retObjectIsDirect = classInstance.Get("IsDirect");
+            return (boolean)retObjectIsDirect;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDirect != null ? retObjectIsDirect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -600,9 +704,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsDoorOpened() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDoorOpened = null;
         try {
-            return (boolean)classInstance.Get("IsDoorOpened");
+            retObjectIsDoorOpened = classInstance.Get("IsDoorOpened");
+            return (boolean)retObjectIsDoorOpened;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDoorOpened != null ? retObjectIsDoorOpened.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -610,9 +718,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsHidden() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsHidden = null;
         try {
-            return (boolean)classInstance.Get("IsHidden");
+            retObjectIsHidden = classInstance.Get("IsHidden");
+            return (boolean)retObjectIsHidden;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsHidden != null ? retObjectIsHidden.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -620,9 +732,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsInError() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInError = null;
         try {
-            return (boolean)classInstance.Get("IsInError");
+            retObjectIsInError = classInstance.Get("IsInError");
+            return (boolean)retObjectIsInError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInError != null ? retObjectIsInError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -630,9 +746,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsInitializing() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInitializing = null;
         try {
-            return (boolean)classInstance.Get("IsInitializing");
+            retObjectIsInitializing = classInstance.Get("IsInitializing");
+            return (boolean)retObjectIsInitializing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInitializing != null ? retObjectIsInitializing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -640,9 +760,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsIOActive() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsIOActive = null;
         try {
-            return (boolean)classInstance.Get("IsIOActive");
+            retObjectIsIOActive = classInstance.Get("IsIOActive");
+            return (boolean)retObjectIsIOActive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsIOActive != null ? retObjectIsIOActive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -650,9 +774,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsManualFeedRequired() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsManualFeedRequired = null;
         try {
-            return (boolean)classInstance.Get("IsManualFeedRequired");
+            retObjectIsManualFeedRequired = classInstance.Get("IsManualFeedRequired");
+            return (boolean)retObjectIsManualFeedRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsManualFeedRequired != null ? retObjectIsManualFeedRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -660,9 +788,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsNotAvailable() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNotAvailable = null;
         try {
-            return (boolean)classInstance.Get("IsNotAvailable");
+            retObjectIsNotAvailable = classInstance.Get("IsNotAvailable");
+            return (boolean)retObjectIsNotAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNotAvailable != null ? retObjectIsNotAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -670,9 +802,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsOffline() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOffline = null;
         try {
-            return (boolean)classInstance.Get("IsOffline");
+            retObjectIsOffline = classInstance.Get("IsOffline");
+            return (boolean)retObjectIsOffline;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOffline != null ? retObjectIsOffline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -680,9 +816,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsOutOfMemory() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOutOfMemory = null;
         try {
-            return (boolean)classInstance.Get("IsOutOfMemory");
+            retObjectIsOutOfMemory = classInstance.Get("IsOutOfMemory");
+            return (boolean)retObjectIsOutOfMemory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOutOfMemory != null ? retObjectIsOutOfMemory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -690,9 +830,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsOutOfPaper() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOutOfPaper = null;
         try {
-            return (boolean)classInstance.Get("IsOutOfPaper");
+            retObjectIsOutOfPaper = classInstance.Get("IsOutOfPaper");
+            return (boolean)retObjectIsOutOfPaper;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOutOfPaper != null ? retObjectIsOutOfPaper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -700,9 +844,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsOutputBinFull() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOutputBinFull = null;
         try {
-            return (boolean)classInstance.Get("IsOutputBinFull");
+            retObjectIsOutputBinFull = classInstance.Get("IsOutputBinFull");
+            return (boolean)retObjectIsOutputBinFull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOutputBinFull != null ? retObjectIsOutputBinFull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -710,9 +858,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsPaperJammed() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPaperJammed = null;
         try {
-            return (boolean)classInstance.Get("IsPaperJammed");
+            retObjectIsPaperJammed = classInstance.Get("IsPaperJammed");
+            return (boolean)retObjectIsPaperJammed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPaperJammed != null ? retObjectIsPaperJammed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -720,9 +872,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsPaused() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPaused = null;
         try {
-            return (boolean)classInstance.Get("IsPaused");
+            retObjectIsPaused = classInstance.Get("IsPaused");
+            return (boolean)retObjectIsPaused;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPaused != null ? retObjectIsPaused.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -730,9 +886,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsPendingDeletion() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPendingDeletion = null;
         try {
-            return (boolean)classInstance.Get("IsPendingDeletion");
+            retObjectIsPendingDeletion = classInstance.Get("IsPendingDeletion");
+            return (boolean)retObjectIsPendingDeletion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPendingDeletion != null ? retObjectIsPendingDeletion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -740,9 +900,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsPowerSaveOn() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPowerSaveOn = null;
         try {
-            return (boolean)classInstance.Get("IsPowerSaveOn");
+            retObjectIsPowerSaveOn = classInstance.Get("IsPowerSaveOn");
+            return (boolean)retObjectIsPowerSaveOn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPowerSaveOn != null ? retObjectIsPowerSaveOn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -750,9 +914,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsPrinting() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPrinting = null;
         try {
-            return (boolean)classInstance.Get("IsPrinting");
+            retObjectIsPrinting = classInstance.Get("IsPrinting");
+            return (boolean)retObjectIsPrinting;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPrinting != null ? retObjectIsPrinting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -760,9 +928,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsProcessing() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsProcessing = null;
         try {
-            return (boolean)classInstance.Get("IsProcessing");
+            retObjectIsProcessing = classInstance.Get("IsProcessing");
+            return (boolean)retObjectIsProcessing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsProcessing != null ? retObjectIsProcessing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -770,9 +942,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsPublished() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPublished = null;
         try {
-            return (boolean)classInstance.Get("IsPublished");
+            retObjectIsPublished = classInstance.Get("IsPublished");
+            return (boolean)retObjectIsPublished;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPublished != null ? retObjectIsPublished.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -780,9 +956,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsQueued() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsQueued = null;
         try {
-            return (boolean)classInstance.Get("IsQueued");
+            retObjectIsQueued = classInstance.Get("IsQueued");
+            return (boolean)retObjectIsQueued;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsQueued != null ? retObjectIsQueued.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -790,9 +970,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsRawOnlyEnabled() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRawOnlyEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsRawOnlyEnabled");
+            retObjectIsRawOnlyEnabled = classInstance.Get("IsRawOnlyEnabled");
+            return (boolean)retObjectIsRawOnlyEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsRawOnlyEnabled != null ? retObjectIsRawOnlyEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -800,9 +984,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsServerUnknown() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsServerUnknown = null;
         try {
-            return (boolean)classInstance.Get("IsServerUnknown");
+            retObjectIsServerUnknown = classInstance.Get("IsServerUnknown");
+            return (boolean)retObjectIsServerUnknown;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsServerUnknown != null ? retObjectIsServerUnknown.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -810,9 +998,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsShared() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsShared = null;
         try {
-            return (boolean)classInstance.Get("IsShared");
+            retObjectIsShared = classInstance.Get("IsShared");
+            return (boolean)retObjectIsShared;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsShared != null ? retObjectIsShared.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -820,9 +1012,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsTonerLow() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTonerLow = null;
         try {
-            return (boolean)classInstance.Get("IsTonerLow");
+            retObjectIsTonerLow = classInstance.Get("IsTonerLow");
+            return (boolean)retObjectIsTonerLow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTonerLow != null ? retObjectIsTonerLow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -830,9 +1026,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsWaiting() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsWaiting = null;
         try {
-            return (boolean)classInstance.Get("IsWaiting");
+            retObjectIsWaiting = classInstance.Get("IsWaiting");
+            return (boolean)retObjectIsWaiting;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsWaiting != null ? retObjectIsWaiting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -840,9 +1040,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsWarmingUp() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsWarmingUp = null;
         try {
-            return (boolean)classInstance.Get("IsWarmingUp");
+            retObjectIsWarmingUp = classInstance.Get("IsWarmingUp");
+            return (boolean)retObjectIsWarmingUp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsWarmingUp != null ? retObjectIsWarmingUp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -850,9 +1054,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getIsXpsDevice() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.IndexOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsXpsDevice = null;
         try {
-            return (boolean)classInstance.Get("IsXpsDevice");
+            retObjectIsXpsDevice = classInstance.Get("IsXpsDevice");
+            return (boolean)retObjectIsXpsDevice;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsXpsDevice != null ? retObjectIsXpsDevice.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -860,7 +1068,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void setIsXpsDevice(boolean IsXpsDevice) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsXpsDevice", IsXpsDevice);
         } catch (JCNativeException jcne) {
@@ -870,9 +1078,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getKeepPrintedJobs() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeepPrintedJobs = null;
         try {
-            return (boolean)classInstance.Get("KeepPrintedJobs");
+            retObjectKeepPrintedJobs = classInstance.Get("KeepPrintedJobs");
+            return (boolean)retObjectKeepPrintedJobs;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectKeepPrintedJobs != null ? retObjectKeepPrintedJobs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -880,9 +1092,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getNeedUserIntervention() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNeedUserIntervention = null;
         try {
-            return (boolean)classInstance.Get("NeedUserIntervention");
+            retObjectNeedUserIntervention = classInstance.Get("NeedUserIntervention");
+            return (boolean)retObjectNeedUserIntervention;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNeedUserIntervention != null ? retObjectNeedUserIntervention.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -890,9 +1106,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getPagePunt() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPagePunt = null;
         try {
-            return (boolean)classInstance.Get("PagePunt");
+            retObjectPagePunt = classInstance.Get("PagePunt");
+            return (boolean)retObjectPagePunt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPagePunt != null ? retObjectPagePunt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -900,9 +1120,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getPrintingIsCancelled() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrintingIsCancelled = null;
         try {
-            return (boolean)classInstance.Get("PrintingIsCancelled");
+            retObjectPrintingIsCancelled = classInstance.Get("PrintingIsCancelled");
+            return (boolean)retObjectPrintingIsCancelled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPrintingIsCancelled != null ? retObjectPrintingIsCancelled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -910,7 +1134,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void setPrintingIsCancelled(boolean PrintingIsCancelled) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrintingIsCancelled", PrintingIsCancelled);
         } catch (JCNativeException jcne) {
@@ -920,9 +1144,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public boolean getScheduleCompletedJobsFirst() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScheduleCompletedJobsFirst = null;
         try {
-            return (boolean)classInstance.Get("ScheduleCompletedJobsFirst");
+            retObjectScheduleCompletedJobsFirst = classInstance.Get("ScheduleCompletedJobsFirst");
+            return (boolean)retObjectScheduleCompletedJobsFirst;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectScheduleCompletedJobsFirst != null ? retObjectScheduleCompletedJobsFirst.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -930,9 +1158,19 @@ public class PrintQueue extends PrintSystemObject  {
 
     public int getAveragePagesPerMinute() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAveragePagesPerMinute = null;
         try {
-            return (int)classInstance.Get("AveragePagesPerMinute");
+            retObjectAveragePagesPerMinute = classInstance.Get("AveragePagesPerMinute");
+            return (int)retObjectAveragePagesPerMinute;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAveragePagesPerMinuteNumber = (java.lang.Number)retObjectAveragePagesPerMinute;
+                return retObjectAveragePagesPerMinuteNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAveragePagesPerMinute != null ? retObjectAveragePagesPerMinute.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -940,9 +1178,19 @@ public class PrintQueue extends PrintSystemObject  {
 
     public int getClientPrintSchemaVersion() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientPrintSchemaVersion = null;
         try {
-            return (int)classInstance.Get("ClientPrintSchemaVersion");
+            retObjectClientPrintSchemaVersion = classInstance.Get("ClientPrintSchemaVersion");
+            return (int)retObjectClientPrintSchemaVersion;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectClientPrintSchemaVersionNumber = (java.lang.Number)retObjectClientPrintSchemaVersion;
+                return retObjectClientPrintSchemaVersionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectClientPrintSchemaVersion != null ? retObjectClientPrintSchemaVersion.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -950,9 +1198,19 @@ public class PrintQueue extends PrintSystemObject  {
 
     public int getDefaultPriority() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultPriority = null;
         try {
-            return (int)classInstance.Get("DefaultPriority");
+            retObjectDefaultPriority = classInstance.Get("DefaultPriority");
+            return (int)retObjectDefaultPriority;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDefaultPriorityNumber = (java.lang.Number)retObjectDefaultPriority;
+                return retObjectDefaultPriorityNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDefaultPriority != null ? retObjectDefaultPriority.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -960,7 +1218,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void setDefaultPriority(int DefaultPriority) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultPriority", DefaultPriority);
         } catch (JCNativeException jcne) {
@@ -970,9 +1228,19 @@ public class PrintQueue extends PrintSystemObject  {
 
     public static int getMaxPrintSchemaVersion() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxPrintSchemaVersion = null;
         try {
-            return (int)classType.Get("MaxPrintSchemaVersion");
+            retObjectMaxPrintSchemaVersion = classType.Get("MaxPrintSchemaVersion");
+            return (int)retObjectMaxPrintSchemaVersion;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxPrintSchemaVersionNumber = (java.lang.Number)retObjectMaxPrintSchemaVersion;
+                return retObjectMaxPrintSchemaVersionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxPrintSchemaVersion != null ? retObjectMaxPrintSchemaVersion.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -980,9 +1248,19 @@ public class PrintQueue extends PrintSystemObject  {
 
     public int getNumberOfJobs() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberOfJobs = null;
         try {
-            return (int)classInstance.Get("NumberOfJobs");
+            retObjectNumberOfJobs = classInstance.Get("NumberOfJobs");
+            return (int)retObjectNumberOfJobs;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNumberOfJobsNumber = (java.lang.Number)retObjectNumberOfJobs;
+                return retObjectNumberOfJobsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNumberOfJobs != null ? retObjectNumberOfJobs.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -990,7 +1268,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void setNumberOfJobs(int NumberOfJobs) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NumberOfJobs", NumberOfJobs);
         } catch (JCNativeException jcne) {
@@ -1000,9 +1278,19 @@ public class PrintQueue extends PrintSystemObject  {
 
     public int getPriority() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPriority = null;
         try {
-            return (int)classInstance.Get("Priority");
+            retObjectPriority = classInstance.Get("Priority");
+            return (int)retObjectPriority;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPriorityNumber = (java.lang.Number)retObjectPriority;
+                return retObjectPriorityNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPriority != null ? retObjectPriority.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1010,7 +1298,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void setPriority(int Priority) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Priority", Priority);
         } catch (JCNativeException jcne) {
@@ -1020,9 +1308,19 @@ public class PrintQueue extends PrintSystemObject  {
 
     public int getStartTimeOfDay() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartTimeOfDay = null;
         try {
-            return (int)classInstance.Get("StartTimeOfDay");
+            retObjectStartTimeOfDay = classInstance.Get("StartTimeOfDay");
+            return (int)retObjectStartTimeOfDay;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStartTimeOfDayNumber = (java.lang.Number)retObjectStartTimeOfDay;
+                return retObjectStartTimeOfDayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStartTimeOfDay != null ? retObjectStartTimeOfDay.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1030,7 +1328,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void setStartTimeOfDay(int StartTimeOfDay) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StartTimeOfDay", StartTimeOfDay);
         } catch (JCNativeException jcne) {
@@ -1040,9 +1338,19 @@ public class PrintQueue extends PrintSystemObject  {
 
     public int getUntilTimeOfDay() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUntilTimeOfDay = null;
         try {
-            return (int)classInstance.Get("UntilTimeOfDay");
+            retObjectUntilTimeOfDay = classInstance.Get("UntilTimeOfDay");
+            return (int)retObjectUntilTimeOfDay;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUntilTimeOfDayNumber = (java.lang.Number)retObjectUntilTimeOfDay;
+                return retObjectUntilTimeOfDayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectUntilTimeOfDay != null ? retObjectUntilTimeOfDay.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1050,7 +1358,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void setUntilTimeOfDay(int UntilTimeOfDay) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UntilTimeOfDay", UntilTimeOfDay);
         } catch (JCNativeException jcne) {
@@ -1060,10 +1368,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public PrintDriver getQueueDriver() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQueueDriver = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("QueueDriver");
+            retObjectQueueDriver = classInstance.Get("QueueDriver");
+            JCObject val = (JCObject)retObjectQueueDriver;
             return new PrintDriver(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQueueDriver != null ? retObjectQueueDriver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1071,7 +1383,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void setQueueDriver(PrintDriver QueueDriver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QueueDriver", QueueDriver == null ? null : QueueDriver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1081,10 +1393,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public PrintJobSettings getCurrentJobSettings() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException, system.xml.XmlException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentJobSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentJobSettings");
+            retObjectCurrentJobSettings = classInstance.Get("CurrentJobSettings");
+            JCObject val = (JCObject)retObjectCurrentJobSettings;
             return new PrintJobSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentJobSettings != null ? retObjectCurrentJobSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1092,10 +1408,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public PrintPort getQueuePort() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQueuePort = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("QueuePort");
+            retObjectQueuePort = classInstance.Get("QueuePort");
+            JCObject val = (JCObject)retObjectQueuePort;
             return new PrintPort(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQueuePort != null ? retObjectQueuePort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1103,7 +1423,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void setQueuePort(PrintPort QueuePort) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QueuePort", QueuePort == null ? null : QueuePort.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1113,10 +1433,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public PrintProcessor getQueuePrintProcessor() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQueuePrintProcessor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("QueuePrintProcessor");
+            retObjectQueuePrintProcessor = classInstance.Get("QueuePrintProcessor");
+            JCObject val = (JCObject)retObjectQueuePrintProcessor;
             return new PrintProcessor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQueuePrintProcessor != null ? retObjectQueuePrintProcessor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1124,7 +1448,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void setQueuePrintProcessor(PrintProcessor QueuePrintProcessor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QueuePrintProcessor", QueuePrintProcessor == null ? null : QueuePrintProcessor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1134,10 +1458,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public PrintQueueAttributes getQueueAttributes() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQueueAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("QueueAttributes");
+            retObjectQueueAttributes = classInstance.Get("QueueAttributes");
+            JCObject val = (JCObject)retObjectQueueAttributes;
             return new PrintQueueAttributes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQueueAttributes != null ? retObjectQueueAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1145,10 +1473,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public PrintQueueStatus getQueueStatus() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQueueStatus = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("QueueStatus");
+            retObjectQueueStatus = classInstance.Get("QueueStatus");
+            JCObject val = (JCObject)retObjectQueueStatus;
             return new PrintQueueStatus(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQueueStatus != null ? retObjectQueueStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1156,10 +1488,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public PrintServer getHostingPrintServer() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHostingPrintServer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HostingPrintServer");
+            retObjectHostingPrintServer = classInstance.Get("HostingPrintServer");
+            JCObject val = (JCObject)retObjectHostingPrintServer;
             return new PrintServer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHostingPrintServer != null ? retObjectHostingPrintServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1167,7 +1503,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void setHostingPrintServer(PrintServer HostingPrintServer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HostingPrintServer", HostingPrintServer == null ? null : HostingPrintServer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1177,10 +1513,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public PrintTicket getDefaultPrintTicket() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException, system.xml.XmlException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultPrintTicket = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultPrintTicket");
+            retObjectDefaultPrintTicket = classInstance.Get("DefaultPrintTicket");
+            JCObject val = (JCObject)retObjectDefaultPrintTicket;
             return new PrintTicket(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultPrintTicket != null ? retObjectDefaultPrintTicket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1188,7 +1528,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void setDefaultPrintTicket(PrintTicket DefaultPrintTicket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultPrintTicket", DefaultPrintTicket == null ? null : DefaultPrintTicket.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1198,10 +1538,14 @@ public class PrintQueue extends PrintSystemObject  {
 
     public PrintTicket getUserPrintTicket() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException, system.xml.XmlException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserPrintTicket = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserPrintTicket");
+            retObjectUserPrintTicket = classInstance.Get("UserPrintTicket");
+            JCObject val = (JCObject)retObjectUserPrintTicket;
             return new PrintTicket(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserPrintTicket != null ? retObjectUserPrintTicket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1209,7 +1553,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void setUserPrintTicket(PrintTicket UserPrintTicket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserPrintTicket", UserPrintTicket == null ? null : UserPrintTicket.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1219,9 +1563,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public java.lang.String getComment() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComment = null;
         try {
-            return (java.lang.String)classInstance.Get("Comment");
+            retObjectComment = classInstance.Get("Comment");
+            return (java.lang.String)retObjectComment;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectComment != null ? retObjectComment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1229,7 +1577,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void setComment(java.lang.String Comment) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Comment", Comment);
         } catch (JCNativeException jcne) {
@@ -1239,9 +1587,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public java.lang.String getDescription() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1249,7 +1601,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void setDescription(java.lang.String Description) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
@@ -1259,9 +1611,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public java.lang.String getFullName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFullName = null;
         try {
-            return (java.lang.String)classInstance.Get("FullName");
+            retObjectFullName = classInstance.Get("FullName");
+            return (java.lang.String)retObjectFullName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFullName != null ? retObjectFullName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1269,9 +1625,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public java.lang.String getLocation() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocation = null;
         try {
-            return (java.lang.String)classInstance.Get("Location");
+            retObjectLocation = classInstance.Get("Location");
+            return (java.lang.String)retObjectLocation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLocation != null ? retObjectLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1279,7 +1639,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void setLocation(java.lang.String Location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Location", Location);
         } catch (JCNativeException jcne) {
@@ -1289,9 +1649,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public java.lang.String getSeparatorFile() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeparatorFile = null;
         try {
-            return (java.lang.String)classInstance.Get("SeparatorFile");
+            retObjectSeparatorFile = classInstance.Get("SeparatorFile");
+            return (java.lang.String)retObjectSeparatorFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSeparatorFile != null ? retObjectSeparatorFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1299,7 +1663,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void setSeparatorFile(java.lang.String SeparatorFile) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SeparatorFile", SeparatorFile);
         } catch (JCNativeException jcne) {
@@ -1309,9 +1673,13 @@ public class PrintQueue extends PrintSystemObject  {
 
     public java.lang.String getShareName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShareName = null;
         try {
-            return (java.lang.String)classInstance.Get("ShareName");
+            retObjectShareName = classInstance.Get("ShareName");
+            return (java.lang.String)retObjectShareName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectShareName != null ? retObjectShareName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1319,7 +1687,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     public void setShareName(java.lang.String ShareName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShareName", ShareName);
         } catch (JCNativeException jcne) {

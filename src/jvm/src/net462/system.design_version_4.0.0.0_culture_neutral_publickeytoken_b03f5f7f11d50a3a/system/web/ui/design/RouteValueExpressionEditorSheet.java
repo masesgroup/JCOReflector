@@ -168,9 +168,13 @@ public class RouteValueExpressionEditorSheet extends ExpressionEditorSheet  {
     
     public java.lang.String GetExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExpression = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetExpression");
+            retObjectGetExpression = classInstance.Invoke("GetExpression");
+            return (java.lang.String)retObjectGetExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetExpression != null ? retObjectGetExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class RouteValueExpressionEditorSheet extends ExpressionEditorSheet  {
     
     public java.lang.String getRouteValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRouteValue = null;
         try {
-            return (java.lang.String)classInstance.Get("RouteValue");
+            retObjectRouteValue = classInstance.Get("RouteValue");
+            return (java.lang.String)retObjectRouteValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRouteValue != null ? retObjectRouteValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class RouteValueExpressionEditorSheet extends ExpressionEditorSheet  {
 
     public void setRouteValue(java.lang.String RouteValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RouteValue", RouteValue);
         } catch (JCNativeException jcne) {

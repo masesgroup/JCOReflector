@@ -143,10 +143,14 @@ public class IDataGridViewEditingCellImplementation extends NetObject implements
     
     public NetObject GetEditingCellFormattedValue(DataGridViewDataErrorContexts context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEditingCellFormattedValue = null;
         try {
-            JCObject objGetEditingCellFormattedValue = (JCObject)classInstance.Invoke("GetEditingCellFormattedValue", context == null ? null : context.getJCOInstance());
+            retObjectGetEditingCellFormattedValue = classInstance.Invoke("GetEditingCellFormattedValue", context == null ? null : context.getJCOInstance());
+            JCObject objGetEditingCellFormattedValue = (JCObject)retObjectGetEditingCellFormattedValue;
             return new NetObject(objGetEditingCellFormattedValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEditingCellFormattedValue != null ? retObjectGetEditingCellFormattedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,7 +158,7 @@ public class IDataGridViewEditingCellImplementation extends NetObject implements
 
     public void PrepareEditingCellForEdit(boolean selectAll) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PrepareEditingCellForEdit", selectAll);
         } catch (JCNativeException jcne) {
@@ -168,9 +172,13 @@ public class IDataGridViewEditingCellImplementation extends NetObject implements
     
     public boolean getEditingCellValueChanged() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditingCellValueChanged = null;
         try {
-            return (boolean)classInstance.Get("EditingCellValueChanged");
+            retObjectEditingCellValueChanged = classInstance.Get("EditingCellValueChanged");
+            return (boolean)retObjectEditingCellValueChanged;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEditingCellValueChanged != null ? retObjectEditingCellValueChanged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +186,7 @@ public class IDataGridViewEditingCellImplementation extends NetObject implements
 
     public void setEditingCellValueChanged(boolean EditingCellValueChanged) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EditingCellValueChanged", EditingCellValueChanged);
         } catch (JCNativeException jcne) {
@@ -188,10 +196,14 @@ public class IDataGridViewEditingCellImplementation extends NetObject implements
 
     public NetObject getEditingCellFormattedValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditingCellFormattedValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditingCellFormattedValue");
+            retObjectEditingCellFormattedValue = classInstance.Get("EditingCellFormattedValue");
+            JCObject val = (JCObject)retObjectEditingCellFormattedValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditingCellFormattedValue != null ? retObjectEditingCellFormattedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +211,7 @@ public class IDataGridViewEditingCellImplementation extends NetObject implements
 
     public void setEditingCellFormattedValue(NetObject EditingCellFormattedValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EditingCellFormattedValue", EditingCellFormattedValue == null ? null : EditingCellFormattedValue.getJCOInstance());
         } catch (JCNativeException jcne) {

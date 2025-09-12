@@ -159,10 +159,14 @@ public class SecurityTokenManager extends NetObject  {
     
     public SecurityTokenAuthenticator CreateSecurityTokenAuthenticator(SecurityTokenRequirement tokenRequirement, JCORefOut<SecurityTokenResolver> outOfBandTokenResolver) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSecurityTokenAuthenticator = null;
         try {
-            JCObject objCreateSecurityTokenAuthenticator = (JCObject)classInstance.Invoke("CreateSecurityTokenAuthenticator", tokenRequirement == null ? null : tokenRequirement.getJCOInstance(), outOfBandTokenResolver.getJCRefOut());
+            retObjectCreateSecurityTokenAuthenticator = classInstance.Invoke("CreateSecurityTokenAuthenticator", tokenRequirement == null ? null : tokenRequirement.getJCOInstance(), outOfBandTokenResolver.getJCRefOut());
+            JCObject objCreateSecurityTokenAuthenticator = (JCObject)retObjectCreateSecurityTokenAuthenticator;
             return new SecurityTokenAuthenticator(objCreateSecurityTokenAuthenticator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSecurityTokenAuthenticator != null ? retObjectCreateSecurityTokenAuthenticator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class SecurityTokenManager extends NetObject  {
 
     public SecurityTokenProvider CreateSecurityTokenProvider(SecurityTokenRequirement tokenRequirement) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSecurityTokenProvider = null;
         try {
-            JCObject objCreateSecurityTokenProvider = (JCObject)classInstance.Invoke("CreateSecurityTokenProvider", tokenRequirement == null ? null : tokenRequirement.getJCOInstance());
+            retObjectCreateSecurityTokenProvider = classInstance.Invoke("CreateSecurityTokenProvider", tokenRequirement == null ? null : tokenRequirement.getJCOInstance());
+            JCObject objCreateSecurityTokenProvider = (JCObject)retObjectCreateSecurityTokenProvider;
             return new SecurityTokenProvider(objCreateSecurityTokenProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSecurityTokenProvider != null ? retObjectCreateSecurityTokenProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class SecurityTokenManager extends NetObject  {
 
     public SecurityTokenSerializer CreateSecurityTokenSerializer(SecurityTokenVersion version) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSecurityTokenSerializer = null;
         try {
-            JCObject objCreateSecurityTokenSerializer = (JCObject)classInstance.Invoke("CreateSecurityTokenSerializer", version == null ? null : version.getJCOInstance());
+            retObjectCreateSecurityTokenSerializer = classInstance.Invoke("CreateSecurityTokenSerializer", version == null ? null : version.getJCOInstance());
+            JCObject objCreateSecurityTokenSerializer = (JCObject)retObjectCreateSecurityTokenSerializer;
             return new SecurityTokenSerializer(objCreateSecurityTokenSerializer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSecurityTokenSerializer != null ? retObjectCreateSecurityTokenSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

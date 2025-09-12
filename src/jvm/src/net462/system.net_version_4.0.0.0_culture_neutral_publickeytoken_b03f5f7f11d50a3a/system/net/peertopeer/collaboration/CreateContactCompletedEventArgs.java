@@ -161,10 +161,14 @@ public class CreateContactCompletedEventArgs extends AsyncCompletedEventArgs  {
     
     public PeerContact getPeerContact() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeerContact = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PeerContact");
+            retObjectPeerContact = classInstance.Get("PeerContact");
+            JCObject val = (JCObject)retObjectPeerContact;
             return new PeerContact(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeerContact != null ? retObjectPeerContact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

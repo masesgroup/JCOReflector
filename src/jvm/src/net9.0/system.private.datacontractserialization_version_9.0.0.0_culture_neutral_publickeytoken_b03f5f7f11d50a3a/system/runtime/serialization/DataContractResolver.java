@@ -155,9 +155,13 @@ public class DataContractResolver extends NetObject  {
     
     public boolean TryResolveType(NetType type, NetType declaredType, DataContractResolver knownTypeResolver, JCORefOut<XmlDictionaryString> typeName, JCORefOut<XmlDictionaryString> typeNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryResolveType = null;
         try {
-            return (boolean)classInstance.Invoke("TryResolveType", type == null ? null : type.getJCOInstance(), declaredType == null ? null : declaredType.getJCOInstance(), knownTypeResolver == null ? null : knownTypeResolver.getJCOInstance(), typeName.getJCRefOut(), typeNamespace.getJCRefOut());
+            retObjectTryResolveType = classInstance.Invoke("TryResolveType", type == null ? null : type.getJCOInstance(), declaredType == null ? null : declaredType.getJCOInstance(), knownTypeResolver == null ? null : knownTypeResolver.getJCOInstance(), typeName.getJCRefOut(), typeNamespace.getJCRefOut());
+            return (boolean)retObjectTryResolveType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryResolveType != null ? retObjectTryResolveType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,10 +169,14 @@ public class DataContractResolver extends NetObject  {
 
     public NetType ResolveName(java.lang.String typeName, java.lang.String typeNamespace, NetType declaredType, DataContractResolver knownTypeResolver) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveName = null;
         try {
-            JCObject objResolveName = (JCObject)classInstance.Invoke("ResolveName", typeName, typeNamespace, declaredType == null ? null : declaredType.getJCOInstance(), knownTypeResolver == null ? null : knownTypeResolver.getJCOInstance());
+            retObjectResolveName = classInstance.Invoke("ResolveName", typeName, typeNamespace, declaredType == null ? null : declaredType.getJCOInstance(), knownTypeResolver == null ? null : knownTypeResolver.getJCOInstance());
+            JCObject objResolveName = (JCObject)retObjectResolveName;
             return new NetType(objResolveName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveName != null ? retObjectResolveName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

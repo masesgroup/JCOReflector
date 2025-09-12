@@ -144,10 +144,14 @@ public class ICompensatableActivityImplementation extends NetObject implements I
     
     public ActivityExecutionStatus Compensate(ActivityExecutionContext executionContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompensate = null;
         try {
-            JCObject objCompensate = (JCObject)classInstance.Invoke("Compensate", executionContext == null ? null : executionContext.getJCOInstance());
+            retObjectCompensate = classInstance.Invoke("Compensate", executionContext == null ? null : executionContext.getJCOInstance());
+            JCObject objCompensate = (JCObject)retObjectCompensate;
             return new ActivityExecutionStatus(objCompensate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompensate != null ? retObjectCompensate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

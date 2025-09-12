@@ -163,10 +163,14 @@ public class SaveFileDialog extends FileDialog  {
     
     public Stream OpenFile() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenFile = null;
         try {
-            JCObject objOpenFile = (JCObject)classInstance.Invoke("OpenFile");
+            retObjectOpenFile = classInstance.Invoke("OpenFile");
+            JCObject objOpenFile = (JCObject)retObjectOpenFile;
             return new Stream(objOpenFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenFile != null ? retObjectOpenFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +178,7 @@ public class SaveFileDialog extends FileDialog  {
 
     public void Reset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -188,9 +192,13 @@ public class SaveFileDialog extends FileDialog  {
     
     public boolean getCreatePrompt() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePrompt = null;
         try {
-            return (boolean)classInstance.Get("CreatePrompt");
+            retObjectCreatePrompt = classInstance.Get("CreatePrompt");
+            return (boolean)retObjectCreatePrompt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCreatePrompt != null ? retObjectCreatePrompt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class SaveFileDialog extends FileDialog  {
 
     public void setCreatePrompt(boolean CreatePrompt) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CreatePrompt", CreatePrompt);
         } catch (JCNativeException jcne) {
@@ -208,9 +216,13 @@ public class SaveFileDialog extends FileDialog  {
 
     public boolean getCreateTestFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateTestFile = null;
         try {
-            return (boolean)classInstance.Get("CreateTestFile");
+            retObjectCreateTestFile = classInstance.Get("CreateTestFile");
+            return (boolean)retObjectCreateTestFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCreateTestFile != null ? retObjectCreateTestFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class SaveFileDialog extends FileDialog  {
 
     public void setCreateTestFile(boolean CreateTestFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CreateTestFile", CreateTestFile);
         } catch (JCNativeException jcne) {
@@ -228,9 +240,13 @@ public class SaveFileDialog extends FileDialog  {
 
     public boolean getOverwritePrompt() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverwritePrompt = null;
         try {
-            return (boolean)classInstance.Get("OverwritePrompt");
+            retObjectOverwritePrompt = classInstance.Get("OverwritePrompt");
+            return (boolean)retObjectOverwritePrompt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOverwritePrompt != null ? retObjectOverwritePrompt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +254,7 @@ public class SaveFileDialog extends FileDialog  {
 
     public void setOverwritePrompt(boolean OverwritePrompt) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OverwritePrompt", OverwritePrompt);
         } catch (JCNativeException jcne) {

@@ -171,10 +171,14 @@ public class PropertyTabChangedEventArgs extends EventArgs  {
     
     public PropertyTab getNewTab() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewTab = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewTab");
+            retObjectNewTab = classInstance.Get("NewTab");
+            JCObject val = (JCObject)retObjectNewTab;
             return new PropertyTab(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewTab != null ? retObjectNewTab.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class PropertyTabChangedEventArgs extends EventArgs  {
 
     public PropertyTab getOldTab() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldTab = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OldTab");
+            retObjectOldTab = classInstance.Get("OldTab");
+            JCObject val = (JCObject)retObjectOldTab;
             return new PropertyTab(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOldTab != null ? retObjectOldTab.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

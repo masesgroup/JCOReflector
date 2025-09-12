@@ -157,10 +157,14 @@ public class MetadataExporter extends NetObject  {
     
     public MetadataSet GetGeneratedMetadata() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGeneratedMetadata = null;
         try {
-            JCObject objGetGeneratedMetadata = (JCObject)classInstance.Invoke("GetGeneratedMetadata");
+            retObjectGetGeneratedMetadata = classInstance.Invoke("GetGeneratedMetadata");
+            JCObject objGetGeneratedMetadata = (JCObject)retObjectGetGeneratedMetadata;
             return new MetadataSet(objGetGeneratedMetadata);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGeneratedMetadata != null ? retObjectGetGeneratedMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class MetadataExporter extends NetObject  {
 
     public void ExportContract(ContractDescription contract) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExportContract", contract == null ? null : contract.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -178,7 +182,7 @@ public class MetadataExporter extends NetObject  {
 
     public void ExportEndpoint(ServiceEndpoint endpoint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExportEndpoint", endpoint == null ? null : endpoint.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -192,10 +196,14 @@ public class MetadataExporter extends NetObject  {
     
     public PolicyVersion getPolicyVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPolicyVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PolicyVersion");
+            retObjectPolicyVersion = classInstance.Get("PolicyVersion");
+            JCObject val = (JCObject)retObjectPolicyVersion;
             return new PolicyVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPolicyVersion != null ? retObjectPolicyVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +211,7 @@ public class MetadataExporter extends NetObject  {
 
     public void setPolicyVersion(PolicyVersion PolicyVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PolicyVersion", PolicyVersion == null ? null : PolicyVersion.getJCOInstance());
         } catch (JCNativeException jcne) {

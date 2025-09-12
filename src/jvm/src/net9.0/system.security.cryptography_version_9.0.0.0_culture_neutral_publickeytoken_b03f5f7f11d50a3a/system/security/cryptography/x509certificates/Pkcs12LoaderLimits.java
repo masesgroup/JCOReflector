@@ -172,7 +172,7 @@ public class Pkcs12LoaderLimits extends NetObject  {
     
     public void MakeReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MakeReadOnly");
         } catch (JCNativeException jcne) {
@@ -186,9 +186,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
     
     public boolean getIgnoreEncryptedAuthSafes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoreEncryptedAuthSafes = null;
         try {
-            return (boolean)classInstance.Get("IgnoreEncryptedAuthSafes");
+            retObjectIgnoreEncryptedAuthSafes = classInstance.Get("IgnoreEncryptedAuthSafes");
+            return (boolean)retObjectIgnoreEncryptedAuthSafes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreEncryptedAuthSafes != null ? retObjectIgnoreEncryptedAuthSafes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +200,7 @@ public class Pkcs12LoaderLimits extends NetObject  {
 
     public void setIgnoreEncryptedAuthSafes(boolean IgnoreEncryptedAuthSafes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnoreEncryptedAuthSafes", IgnoreEncryptedAuthSafes);
         } catch (JCNativeException jcne) {
@@ -206,9 +210,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
 
     public boolean getIgnorePrivateKeys() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnorePrivateKeys = null;
         try {
-            return (boolean)classInstance.Get("IgnorePrivateKeys");
+            retObjectIgnorePrivateKeys = classInstance.Get("IgnorePrivateKeys");
+            return (boolean)retObjectIgnorePrivateKeys;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnorePrivateKeys != null ? retObjectIgnorePrivateKeys.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +224,7 @@ public class Pkcs12LoaderLimits extends NetObject  {
 
     public void setIgnorePrivateKeys(boolean IgnorePrivateKeys) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnorePrivateKeys", IgnorePrivateKeys);
         } catch (JCNativeException jcne) {
@@ -226,9 +234,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
 
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +248,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
 
     public boolean getPreserveCertificateAlias() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreserveCertificateAlias = null;
         try {
-            return (boolean)classInstance.Get("PreserveCertificateAlias");
+            retObjectPreserveCertificateAlias = classInstance.Get("PreserveCertificateAlias");
+            return (boolean)retObjectPreserveCertificateAlias;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPreserveCertificateAlias != null ? retObjectPreserveCertificateAlias.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +262,7 @@ public class Pkcs12LoaderLimits extends NetObject  {
 
     public void setPreserveCertificateAlias(boolean PreserveCertificateAlias) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreserveCertificateAlias", PreserveCertificateAlias);
         } catch (JCNativeException jcne) {
@@ -256,9 +272,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
 
     public boolean getPreserveKeyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreserveKeyName = null;
         try {
-            return (boolean)classInstance.Get("PreserveKeyName");
+            retObjectPreserveKeyName = classInstance.Get("PreserveKeyName");
+            return (boolean)retObjectPreserveKeyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPreserveKeyName != null ? retObjectPreserveKeyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +286,7 @@ public class Pkcs12LoaderLimits extends NetObject  {
 
     public void setPreserveKeyName(boolean PreserveKeyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreserveKeyName", PreserveKeyName);
         } catch (JCNativeException jcne) {
@@ -276,9 +296,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
 
     public boolean getPreserveStorageProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreserveStorageProvider = null;
         try {
-            return (boolean)classInstance.Get("PreserveStorageProvider");
+            retObjectPreserveStorageProvider = classInstance.Get("PreserveStorageProvider");
+            return (boolean)retObjectPreserveStorageProvider;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPreserveStorageProvider != null ? retObjectPreserveStorageProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +310,7 @@ public class Pkcs12LoaderLimits extends NetObject  {
 
     public void setPreserveStorageProvider(boolean PreserveStorageProvider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreserveStorageProvider", PreserveStorageProvider);
         } catch (JCNativeException jcne) {
@@ -296,9 +320,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
 
     public boolean getPreserveUnknownAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreserveUnknownAttributes = null;
         try {
-            return (boolean)classInstance.Get("PreserveUnknownAttributes");
+            retObjectPreserveUnknownAttributes = classInstance.Get("PreserveUnknownAttributes");
+            return (boolean)retObjectPreserveUnknownAttributes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPreserveUnknownAttributes != null ? retObjectPreserveUnknownAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,7 +334,7 @@ public class Pkcs12LoaderLimits extends NetObject  {
 
     public void setPreserveUnknownAttributes(boolean PreserveUnknownAttributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreserveUnknownAttributes", PreserveUnknownAttributes);
         } catch (JCNativeException jcne) {
@@ -316,10 +344,14 @@ public class Pkcs12LoaderLimits extends NetObject  {
 
     public static Pkcs12LoaderLimits getDangerousNoLimits() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDangerousNoLimits = null;
         try {
-            JCObject val = (JCObject)classType.Get("DangerousNoLimits");
+            retObjectDangerousNoLimits = classType.Get("DangerousNoLimits");
+            JCObject val = (JCObject)retObjectDangerousNoLimits;
             return new Pkcs12LoaderLimits(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDangerousNoLimits != null ? retObjectDangerousNoLimits.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,10 +359,14 @@ public class Pkcs12LoaderLimits extends NetObject  {
 
     public static Pkcs12LoaderLimits getDefaults() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaults = null;
         try {
-            JCObject val = (JCObject)classType.Get("Defaults");
+            retObjectDefaults = classType.Get("Defaults");
+            JCObject val = (JCObject)retObjectDefaults;
             return new Pkcs12LoaderLimits(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaults != null ? retObjectDefaults.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

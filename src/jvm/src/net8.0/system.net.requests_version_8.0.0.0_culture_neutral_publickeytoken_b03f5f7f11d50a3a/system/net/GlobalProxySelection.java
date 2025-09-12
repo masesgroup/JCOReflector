@@ -163,10 +163,14 @@ public class GlobalProxySelection extends NetObject  {
     
     public static IWebProxy GetEmptyWebProxy() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEmptyWebProxy = null;
         try {
-            JCObject objGetEmptyWebProxy = (JCObject)classType.Invoke("GetEmptyWebProxy");
+            retObjectGetEmptyWebProxy = classType.Invoke("GetEmptyWebProxy");
+            JCObject objGetEmptyWebProxy = (JCObject)retObjectGetEmptyWebProxy;
             return new IWebProxyImplementation(objGetEmptyWebProxy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEmptyWebProxy != null ? retObjectGetEmptyWebProxy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class GlobalProxySelection extends NetObject  {
     
     public static IWebProxy getSelect() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelect = null;
         try {
-            JCObject val = (JCObject)classType.Get("Select");
+            retObjectSelect = classType.Get("Select");
+            JCObject val = (JCObject)retObjectSelect;
             return new IWebProxyImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class GlobalProxySelection extends NetObject  {
 
     public static void setSelect(IWebProxy Select) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("Select", Select == null ? null : Select.getJCOInstance());
         } catch (JCNativeException jcne) {

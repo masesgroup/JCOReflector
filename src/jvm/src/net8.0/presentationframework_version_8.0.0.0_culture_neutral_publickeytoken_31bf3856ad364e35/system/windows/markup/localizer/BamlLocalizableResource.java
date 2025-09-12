@@ -176,9 +176,13 @@ public class BamlLocalizableResource extends NetObject  {
     
     public boolean getModifiable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModifiable = null;
         try {
-            return (boolean)classInstance.Get("Modifiable");
+            retObjectModifiable = classInstance.Get("Modifiable");
+            return (boolean)retObjectModifiable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectModifiable != null ? retObjectModifiable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class BamlLocalizableResource extends NetObject  {
 
     public void setModifiable(boolean Modifiable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Modifiable", Modifiable);
         } catch (JCNativeException jcne) {
@@ -196,9 +200,13 @@ public class BamlLocalizableResource extends NetObject  {
 
     public boolean getReadable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadable = null;
         try {
-            return (boolean)classInstance.Get("Readable");
+            retObjectReadable = classInstance.Get("Readable");
+            return (boolean)retObjectReadable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReadable != null ? retObjectReadable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +214,7 @@ public class BamlLocalizableResource extends NetObject  {
 
     public void setReadable(boolean Readable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Readable", Readable);
         } catch (JCNativeException jcne) {
@@ -216,9 +224,13 @@ public class BamlLocalizableResource extends NetObject  {
 
     public java.lang.String getComments() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComments = null;
         try {
-            return (java.lang.String)classInstance.Get("Comments");
+            retObjectComments = classInstance.Get("Comments");
+            return (java.lang.String)retObjectComments;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectComments != null ? retObjectComments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +238,7 @@ public class BamlLocalizableResource extends NetObject  {
 
     public void setComments(java.lang.String Comments) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Comments", Comments);
         } catch (JCNativeException jcne) {
@@ -236,9 +248,13 @@ public class BamlLocalizableResource extends NetObject  {
 
     public java.lang.String getContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContent = null;
         try {
-            return (java.lang.String)classInstance.Get("Content");
+            retObjectContent = classInstance.Get("Content");
+            return (java.lang.String)retObjectContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContent != null ? retObjectContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +262,7 @@ public class BamlLocalizableResource extends NetObject  {
 
     public void setContent(java.lang.String Content) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Content", Content);
         } catch (JCNativeException jcne) {
@@ -256,10 +272,14 @@ public class BamlLocalizableResource extends NetObject  {
 
     public LocalizationCategory getCategory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Category");
+            retObjectCategory = classInstance.Get("Category");
+            JCObject val = (JCObject)retObjectCategory;
             return new LocalizationCategory(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCategory != null ? retObjectCategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +287,7 @@ public class BamlLocalizableResource extends NetObject  {
 
     public void setCategory(LocalizationCategory Category) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Category", Category == null ? null : Category.getJCOInstance());
         } catch (JCNativeException jcne) {

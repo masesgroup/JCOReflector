@@ -165,9 +165,13 @@ public class ActivityPropertyReference extends NetObject  {
     
     public java.lang.String getSourceProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceProperty = null;
         try {
-            return (java.lang.String)classInstance.Get("SourceProperty");
+            retObjectSourceProperty = classInstance.Get("SourceProperty");
+            return (java.lang.String)retObjectSourceProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourceProperty != null ? retObjectSourceProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class ActivityPropertyReference extends NetObject  {
 
     public void setSourceProperty(java.lang.String SourceProperty) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceProperty", SourceProperty);
         } catch (JCNativeException jcne) {
@@ -185,9 +189,13 @@ public class ActivityPropertyReference extends NetObject  {
 
     public java.lang.String getTargetProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetProperty = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetProperty");
+            retObjectTargetProperty = classInstance.Get("TargetProperty");
+            return (java.lang.String)retObjectTargetProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetProperty != null ? retObjectTargetProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class ActivityPropertyReference extends NetObject  {
 
     public void setTargetProperty(java.lang.String TargetProperty) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetProperty", TargetProperty);
         } catch (JCNativeException jcne) {

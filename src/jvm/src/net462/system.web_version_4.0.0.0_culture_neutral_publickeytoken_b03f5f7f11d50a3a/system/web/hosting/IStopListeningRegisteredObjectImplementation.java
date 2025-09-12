@@ -144,7 +144,7 @@ public class IStopListeningRegisteredObjectImplementation extends NetObject impl
     
     public void Stop(boolean immediate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Stop", immediate);
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class IStopListeningRegisteredObjectImplementation extends NetObject impl
 
     public void StopListening() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StopListening");
         } catch (JCNativeException jcne) {

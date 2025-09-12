@@ -145,10 +145,14 @@ public class ISerializerFactoryImplementation extends NetObject implements ISeri
     
     public SerializerWriter CreateSerializerWriter(Stream stream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSerializerWriter = null;
         try {
-            JCObject objCreateSerializerWriter = (JCObject)classInstance.Invoke("CreateSerializerWriter", stream == null ? null : stream.getJCOInstance());
+            retObjectCreateSerializerWriter = classInstance.Invoke("CreateSerializerWriter", stream == null ? null : stream.getJCOInstance());
+            JCObject objCreateSerializerWriter = (JCObject)retObjectCreateSerializerWriter;
             return new SerializerWriter(objCreateSerializerWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSerializerWriter != null ? retObjectCreateSerializerWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,9 +164,13 @@ public class ISerializerFactoryImplementation extends NetObject implements ISeri
     
     public java.lang.String getDefaultFileExtension() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultFileExtension = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultFileExtension");
+            retObjectDefaultFileExtension = classInstance.Get("DefaultFileExtension");
+            return (java.lang.String)retObjectDefaultFileExtension;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultFileExtension != null ? retObjectDefaultFileExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +178,13 @@ public class ISerializerFactoryImplementation extends NetObject implements ISeri
 
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            retObjectDisplayName = classInstance.Get("DisplayName");
+            return (java.lang.String)retObjectDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayName != null ? retObjectDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +192,13 @@ public class ISerializerFactoryImplementation extends NetObject implements ISeri
 
     public java.lang.String getManufacturerName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManufacturerName = null;
         try {
-            return (java.lang.String)classInstance.Get("ManufacturerName");
+            retObjectManufacturerName = classInstance.Get("ManufacturerName");
+            return (java.lang.String)retObjectManufacturerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectManufacturerName != null ? retObjectManufacturerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +206,14 @@ public class ISerializerFactoryImplementation extends NetObject implements ISeri
 
     public Uri getManufacturerWebsite() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManufacturerWebsite = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ManufacturerWebsite");
+            retObjectManufacturerWebsite = classInstance.Get("ManufacturerWebsite");
+            JCObject val = (JCObject)retObjectManufacturerWebsite;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectManufacturerWebsite != null ? retObjectManufacturerWebsite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

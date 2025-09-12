@@ -144,10 +144,14 @@ public class IDesignerVerbProviderImplementation extends NetObject implements ID
     
     public ActivityDesignerVerbCollection GetVerbs(ActivityDesigner activityDesigner) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetVerbs = null;
         try {
-            JCObject objGetVerbs = (JCObject)classInstance.Invoke("GetVerbs", activityDesigner == null ? null : activityDesigner.getJCOInstance());
+            retObjectGetVerbs = classInstance.Invoke("GetVerbs", activityDesigner == null ? null : activityDesigner.getJCOInstance());
+            JCObject objGetVerbs = (JCObject)retObjectGetVerbs;
             return new ActivityDesignerVerbCollection(objGetVerbs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetVerbs != null ? retObjectGetVerbs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

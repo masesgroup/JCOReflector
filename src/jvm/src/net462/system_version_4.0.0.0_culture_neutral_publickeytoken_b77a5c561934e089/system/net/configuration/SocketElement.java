@@ -167,9 +167,13 @@ public class SocketElement extends ConfigurationElement  {
     
     public boolean getAlwaysUseCompletionPortsForAccept() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlwaysUseCompletionPortsForAccept = null;
         try {
-            return (boolean)classInstance.Get("AlwaysUseCompletionPortsForAccept");
+            retObjectAlwaysUseCompletionPortsForAccept = classInstance.Get("AlwaysUseCompletionPortsForAccept");
+            return (boolean)retObjectAlwaysUseCompletionPortsForAccept;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAlwaysUseCompletionPortsForAccept != null ? retObjectAlwaysUseCompletionPortsForAccept.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class SocketElement extends ConfigurationElement  {
 
     public void setAlwaysUseCompletionPortsForAccept(boolean AlwaysUseCompletionPortsForAccept) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlwaysUseCompletionPortsForAccept", AlwaysUseCompletionPortsForAccept);
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class SocketElement extends ConfigurationElement  {
 
     public boolean getAlwaysUseCompletionPortsForConnect() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlwaysUseCompletionPortsForConnect = null;
         try {
-            return (boolean)classInstance.Get("AlwaysUseCompletionPortsForConnect");
+            retObjectAlwaysUseCompletionPortsForConnect = classInstance.Get("AlwaysUseCompletionPortsForConnect");
+            return (boolean)retObjectAlwaysUseCompletionPortsForConnect;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAlwaysUseCompletionPortsForConnect != null ? retObjectAlwaysUseCompletionPortsForConnect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class SocketElement extends ConfigurationElement  {
 
     public void setAlwaysUseCompletionPortsForConnect(boolean AlwaysUseCompletionPortsForConnect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlwaysUseCompletionPortsForConnect", AlwaysUseCompletionPortsForConnect);
         } catch (JCNativeException jcne) {
@@ -207,10 +215,14 @@ public class SocketElement extends ConfigurationElement  {
 
     public IPProtectionLevel getIPProtectionLevel() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIPProtectionLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IPProtectionLevel");
+            retObjectIPProtectionLevel = classInstance.Get("IPProtectionLevel");
+            JCObject val = (JCObject)retObjectIPProtectionLevel;
             return new IPProtectionLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIPProtectionLevel != null ? retObjectIPProtectionLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class SocketElement extends ConfigurationElement  {
 
     public void setIPProtectionLevel(IPProtectionLevel IPProtectionLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IPProtectionLevel", IPProtectionLevel == null ? null : IPProtectionLevel.getJCOInstance());
         } catch (JCNativeException jcne) {

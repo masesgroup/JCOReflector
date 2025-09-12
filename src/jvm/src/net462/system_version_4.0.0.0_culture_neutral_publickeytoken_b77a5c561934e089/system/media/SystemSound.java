@@ -155,7 +155,7 @@ public class SystemSound extends NetObject  {
     
     public void Play() throws Throwable, system.security.SecurityException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Play");
         } catch (JCNativeException jcne) {

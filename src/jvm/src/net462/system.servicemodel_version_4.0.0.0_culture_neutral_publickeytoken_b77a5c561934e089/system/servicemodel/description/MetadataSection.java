@@ -175,10 +175,14 @@ public class MetadataSection extends NetObject  {
     
     public static MetadataSection CreateFromPolicy(XmlElement policy, java.lang.String identifier) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromPolicy = null;
         try {
-            JCObject objCreateFromPolicy = (JCObject)classType.Invoke("CreateFromPolicy", policy == null ? null : policy.getJCOInstance(), identifier);
+            retObjectCreateFromPolicy = classType.Invoke("CreateFromPolicy", policy == null ? null : policy.getJCOInstance(), identifier);
+            JCObject objCreateFromPolicy = (JCObject)retObjectCreateFromPolicy;
             return new MetadataSection(objCreateFromPolicy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromPolicy != null ? retObjectCreateFromPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +190,14 @@ public class MetadataSection extends NetObject  {
 
     public static MetadataSection CreateFromSchema(XmlSchema schema) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromSchema = null;
         try {
-            JCObject objCreateFromSchema = (JCObject)classType.Invoke("CreateFromSchema", schema == null ? null : schema.getJCOInstance());
+            retObjectCreateFromSchema = classType.Invoke("CreateFromSchema", schema == null ? null : schema.getJCOInstance());
+            JCObject objCreateFromSchema = (JCObject)retObjectCreateFromSchema;
             return new MetadataSection(objCreateFromSchema);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromSchema != null ? retObjectCreateFromSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +205,14 @@ public class MetadataSection extends NetObject  {
 
     public static MetadataSection CreateFromServiceDescription(ServiceDescription serviceDescription) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromServiceDescription = null;
         try {
-            JCObject objCreateFromServiceDescription = (JCObject)classType.Invoke("CreateFromServiceDescription", serviceDescription == null ? null : serviceDescription.getJCOInstance());
+            retObjectCreateFromServiceDescription = classType.Invoke("CreateFromServiceDescription", serviceDescription == null ? null : serviceDescription.getJCOInstance());
+            JCObject objCreateFromServiceDescription = (JCObject)retObjectCreateFromServiceDescription;
             return new MetadataSection(objCreateFromServiceDescription);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromServiceDescription != null ? retObjectCreateFromServiceDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +224,14 @@ public class MetadataSection extends NetObject  {
     
     public NetObject getMetadata() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadata = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Metadata");
+            retObjectMetadata = classInstance.Get("Metadata");
+            JCObject val = (JCObject)retObjectMetadata;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMetadata != null ? retObjectMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +239,7 @@ public class MetadataSection extends NetObject  {
 
     public void setMetadata(NetObject Metadata) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Metadata", Metadata == null ? null : Metadata.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -233,9 +249,13 @@ public class MetadataSection extends NetObject  {
 
     public java.lang.String getDialect() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDialect = null;
         try {
-            return (java.lang.String)classInstance.Get("Dialect");
+            retObjectDialect = classInstance.Get("Dialect");
+            return (java.lang.String)retObjectDialect;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDialect != null ? retObjectDialect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +263,7 @@ public class MetadataSection extends NetObject  {
 
     public void setDialect(java.lang.String Dialect) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Dialect", Dialect);
         } catch (JCNativeException jcne) {
@@ -253,9 +273,13 @@ public class MetadataSection extends NetObject  {
 
     public java.lang.String getIdentifier() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdentifier = null;
         try {
-            return (java.lang.String)classInstance.Get("Identifier");
+            retObjectIdentifier = classInstance.Get("Identifier");
+            return (java.lang.String)retObjectIdentifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIdentifier != null ? retObjectIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +287,7 @@ public class MetadataSection extends NetObject  {
 
     public void setIdentifier(java.lang.String Identifier) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Identifier", Identifier);
         } catch (JCNativeException jcne) {
@@ -273,9 +297,13 @@ public class MetadataSection extends NetObject  {
 
     public static java.lang.String getMetadataExchangeDialect() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMetadataExchangeDialect = null;
         try {
-            return (java.lang.String)classType.Get("MetadataExchangeDialect");
+            retObjectMetadataExchangeDialect = classType.Get("MetadataExchangeDialect");
+            return (java.lang.String)retObjectMetadataExchangeDialect;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMetadataExchangeDialect != null ? retObjectMetadataExchangeDialect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,9 +311,13 @@ public class MetadataSection extends NetObject  {
 
     public static java.lang.String getPolicyDialect() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPolicyDialect = null;
         try {
-            return (java.lang.String)classType.Get("PolicyDialect");
+            retObjectPolicyDialect = classType.Get("PolicyDialect");
+            return (java.lang.String)retObjectPolicyDialect;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPolicyDialect != null ? retObjectPolicyDialect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,9 +325,13 @@ public class MetadataSection extends NetObject  {
 
     public static java.lang.String getServiceDescriptionDialect() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectServiceDescriptionDialect = null;
         try {
-            return (java.lang.String)classType.Get("ServiceDescriptionDialect");
+            retObjectServiceDescriptionDialect = classType.Get("ServiceDescriptionDialect");
+            return (java.lang.String)retObjectServiceDescriptionDialect;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectServiceDescriptionDialect != null ? retObjectServiceDescriptionDialect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,9 +339,13 @@ public class MetadataSection extends NetObject  {
 
     public static java.lang.String getXmlSchemaDialect() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXmlSchemaDialect = null;
         try {
-            return (java.lang.String)classType.Get("XmlSchemaDialect");
+            retObjectXmlSchemaDialect = classType.Get("XmlSchemaDialect");
+            return (java.lang.String)retObjectXmlSchemaDialect;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlSchemaDialect != null ? retObjectXmlSchemaDialect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

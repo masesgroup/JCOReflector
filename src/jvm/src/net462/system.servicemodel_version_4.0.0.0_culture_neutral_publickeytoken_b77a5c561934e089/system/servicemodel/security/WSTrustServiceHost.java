@@ -183,10 +183,14 @@ public class WSTrustServiceHost extends ServiceHost  {
     
     public SecurityTokenServiceConfiguration getSecurityTokenServiceConfiguration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityTokenServiceConfiguration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityTokenServiceConfiguration");
+            retObjectSecurityTokenServiceConfiguration = classInstance.Get("SecurityTokenServiceConfiguration");
+            JCObject val = (JCObject)retObjectSecurityTokenServiceConfiguration;
             return new SecurityTokenServiceConfiguration(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityTokenServiceConfiguration != null ? retObjectSecurityTokenServiceConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +198,14 @@ public class WSTrustServiceHost extends ServiceHost  {
 
     public WSTrustServiceContract getServiceContract() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceContract = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceContract");
+            retObjectServiceContract = classInstance.Get("ServiceContract");
+            JCObject val = (JCObject)retObjectServiceContract;
             return new WSTrustServiceContract(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceContract != null ? retObjectServiceContract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

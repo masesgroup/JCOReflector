@@ -163,7 +163,7 @@ public class PassportAuthenticationModule extends NetObject  {
     
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class PassportAuthenticationModule extends NetObject  {
 
     public void Init(HttpApplication app) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.IndexOutOfRangeException, system.web.HttpRequestValidationException, system.runtime.interopservices.COMException, system.PlatformNotSupportedException, system.reflection.TargetParameterCountException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.UriFormatException, system.security.SecurityException, system.io.FileNotFoundException, system.reflection.AmbiguousMatchException, system.web.HttpUnhandledException, system.ApplicationException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Init", app == null ? null : app.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -192,7 +192,7 @@ public class PassportAuthenticationModule extends NetObject  {
 
     public void addAuthenticate(PassportAuthenticationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Authenticate", handler);
         } catch (JCNativeException jcne) {
@@ -202,7 +202,7 @@ public class PassportAuthenticationModule extends NetObject  {
 
     public void removeAuthenticate(PassportAuthenticationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Authenticate", handler);
         } catch (JCNativeException jcne) {

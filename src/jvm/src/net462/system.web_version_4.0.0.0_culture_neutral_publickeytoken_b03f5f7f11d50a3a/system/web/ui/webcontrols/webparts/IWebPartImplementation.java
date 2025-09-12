@@ -146,9 +146,13 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
     
     public java.lang.String getCatalogIconImageUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCatalogIconImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("CatalogIconImageUrl");
+            retObjectCatalogIconImageUrl = classInstance.Get("CatalogIconImageUrl");
+            return (java.lang.String)retObjectCatalogIconImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCatalogIconImageUrl != null ? retObjectCatalogIconImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,7 +160,7 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
 
     public void setCatalogIconImageUrl(java.lang.String CatalogIconImageUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CatalogIconImageUrl", CatalogIconImageUrl);
         } catch (JCNativeException jcne) {
@@ -166,9 +170,13 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
 
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +184,7 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
 
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
@@ -186,9 +194,13 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
 
     public java.lang.String getSubtitle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubtitle = null;
         try {
-            return (java.lang.String)classInstance.Get("Subtitle");
+            retObjectSubtitle = classInstance.Get("Subtitle");
+            return (java.lang.String)retObjectSubtitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSubtitle != null ? retObjectSubtitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +208,13 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
 
     public java.lang.String getTitle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("Title");
+            retObjectTitle = classInstance.Get("Title");
+            return (java.lang.String)retObjectTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTitle != null ? retObjectTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +222,7 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
 
     public void setTitle(java.lang.String Title) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Title", Title);
         } catch (JCNativeException jcne) {
@@ -216,9 +232,13 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
 
     public java.lang.String getTitleIconImageUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitleIconImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("TitleIconImageUrl");
+            retObjectTitleIconImageUrl = classInstance.Get("TitleIconImageUrl");
+            return (java.lang.String)retObjectTitleIconImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTitleIconImageUrl != null ? retObjectTitleIconImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +246,7 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
 
     public void setTitleIconImageUrl(java.lang.String TitleIconImageUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TitleIconImageUrl", TitleIconImageUrl);
         } catch (JCNativeException jcne) {
@@ -236,9 +256,13 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
 
     public java.lang.String getTitleUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitleUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("TitleUrl");
+            retObjectTitleUrl = classInstance.Get("TitleUrl");
+            return (java.lang.String)retObjectTitleUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTitleUrl != null ? retObjectTitleUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +270,7 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
 
     public void setTitleUrl(java.lang.String TitleUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TitleUrl", TitleUrl);
         } catch (JCNativeException jcne) {

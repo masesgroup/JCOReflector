@@ -170,10 +170,14 @@ public class DataProtectionPermissionAttribute extends CodeAccessSecurityAttribu
     
     public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePermission = null;
         try {
-            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
+            retObjectCreatePermission = classInstance.Invoke("CreatePermission");
+            JCObject objCreatePermission = (JCObject)retObjectCreatePermission;
             return new IPermissionImplementation(objCreatePermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePermission != null ? retObjectCreatePermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +189,13 @@ public class DataProtectionPermissionAttribute extends CodeAccessSecurityAttribu
     
     public boolean getProtectData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtectData = null;
         try {
-            return (boolean)classInstance.Get("ProtectData");
+            retObjectProtectData = classInstance.Get("ProtectData");
+            return (boolean)retObjectProtectData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectProtectData != null ? retObjectProtectData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class DataProtectionPermissionAttribute extends CodeAccessSecurityAttribu
 
     public void setProtectData(boolean ProtectData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProtectData", ProtectData);
         } catch (JCNativeException jcne) {
@@ -205,9 +213,13 @@ public class DataProtectionPermissionAttribute extends CodeAccessSecurityAttribu
 
     public boolean getProtectMemory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtectMemory = null;
         try {
-            return (boolean)classInstance.Get("ProtectMemory");
+            retObjectProtectMemory = classInstance.Get("ProtectMemory");
+            return (boolean)retObjectProtectMemory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectProtectMemory != null ? retObjectProtectMemory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class DataProtectionPermissionAttribute extends CodeAccessSecurityAttribu
 
     public void setProtectMemory(boolean ProtectMemory) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProtectMemory", ProtectMemory);
         } catch (JCNativeException jcne) {
@@ -225,9 +237,13 @@ public class DataProtectionPermissionAttribute extends CodeAccessSecurityAttribu
 
     public boolean getUnprotectData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnprotectData = null;
         try {
-            return (boolean)classInstance.Get("UnprotectData");
+            retObjectUnprotectData = classInstance.Get("UnprotectData");
+            return (boolean)retObjectUnprotectData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUnprotectData != null ? retObjectUnprotectData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +251,7 @@ public class DataProtectionPermissionAttribute extends CodeAccessSecurityAttribu
 
     public void setUnprotectData(boolean UnprotectData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnprotectData", UnprotectData);
         } catch (JCNativeException jcne) {
@@ -245,9 +261,13 @@ public class DataProtectionPermissionAttribute extends CodeAccessSecurityAttribu
 
     public boolean getUnprotectMemory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnprotectMemory = null;
         try {
-            return (boolean)classInstance.Get("UnprotectMemory");
+            retObjectUnprotectMemory = classInstance.Get("UnprotectMemory");
+            return (boolean)retObjectUnprotectMemory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUnprotectMemory != null ? retObjectUnprotectMemory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +275,7 @@ public class DataProtectionPermissionAttribute extends CodeAccessSecurityAttribu
 
     public void setUnprotectMemory(boolean UnprotectMemory) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnprotectMemory", UnprotectMemory);
         } catch (JCNativeException jcne) {
@@ -265,10 +285,14 @@ public class DataProtectionPermissionAttribute extends CodeAccessSecurityAttribu
 
     public DataProtectionPermissionFlags getFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Flags");
+            retObjectFlags = classInstance.Get("Flags");
+            JCObject val = (JCObject)retObjectFlags;
             return new DataProtectionPermissionFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlags != null ? retObjectFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +300,7 @@ public class DataProtectionPermissionAttribute extends CodeAccessSecurityAttribu
 
     public void setFlags(DataProtectionPermissionFlags Flags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Flags", Flags == null ? null : Flags.getJCOInstance());
         } catch (JCNativeException jcne) {

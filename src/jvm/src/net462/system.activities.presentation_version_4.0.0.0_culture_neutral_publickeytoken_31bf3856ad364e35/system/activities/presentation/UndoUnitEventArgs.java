@@ -167,10 +167,14 @@ public class UndoUnitEventArgs extends EventArgs  {
     
     public UndoUnit getUndoUnit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUndoUnit = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UndoUnit");
+            retObjectUndoUnit = classInstance.Get("UndoUnit");
+            JCObject val = (JCObject)retObjectUndoUnit;
             return new UndoUnit(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUndoUnit != null ? retObjectUndoUnit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class UndoUnitEventArgs extends EventArgs  {
 
     public void setUndoUnit(UndoUnit UndoUnit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UndoUnit", UndoUnit == null ? null : UndoUnit.getJCOInstance());
         } catch (JCNativeException jcne) {

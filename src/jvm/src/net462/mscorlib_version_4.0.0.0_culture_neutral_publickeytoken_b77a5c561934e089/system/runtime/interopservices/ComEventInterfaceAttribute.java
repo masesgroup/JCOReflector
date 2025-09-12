@@ -170,10 +170,14 @@ public class ComEventInterfaceAttribute extends Attribute  {
     
     public NetType getEventProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventProvider");
+            retObjectEventProvider = classInstance.Get("EventProvider");
+            JCObject val = (JCObject)retObjectEventProvider;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventProvider != null ? retObjectEventProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class ComEventInterfaceAttribute extends Attribute  {
 
     public NetType getSourceInterface() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceInterface = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceInterface");
+            retObjectSourceInterface = classInstance.Get("SourceInterface");
+            JCObject val = (JCObject)retObjectSourceInterface;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceInterface != null ? retObjectSourceInterface.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

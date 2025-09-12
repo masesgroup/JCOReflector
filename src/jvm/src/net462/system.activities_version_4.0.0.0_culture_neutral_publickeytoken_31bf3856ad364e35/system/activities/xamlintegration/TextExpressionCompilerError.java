@@ -159,9 +159,13 @@ public class TextExpressionCompilerError extends NetObject  {
     
     public boolean getIsWarning() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsWarning = null;
         try {
-            return (boolean)classInstance.Get("IsWarning");
+            retObjectIsWarning = classInstance.Get("IsWarning");
+            return (boolean)retObjectIsWarning;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsWarning != null ? retObjectIsWarning.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +173,7 @@ public class TextExpressionCompilerError extends NetObject  {
 
     public void setIsWarning(boolean IsWarning) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsWarning", IsWarning);
         } catch (JCNativeException jcne) {
@@ -179,9 +183,19 @@ public class TextExpressionCompilerError extends NetObject  {
 
     public int getSourceLineNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceLineNumber = null;
         try {
-            return (int)classInstance.Get("SourceLineNumber");
+            retObjectSourceLineNumber = classInstance.Get("SourceLineNumber");
+            return (int)retObjectSourceLineNumber;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSourceLineNumberNumber = (java.lang.Number)retObjectSourceLineNumber;
+                return retObjectSourceLineNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSourceLineNumber != null ? retObjectSourceLineNumber.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +203,7 @@ public class TextExpressionCompilerError extends NetObject  {
 
     public void setSourceLineNumber(int SourceLineNumber) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceLineNumber", SourceLineNumber);
         } catch (JCNativeException jcne) {
@@ -199,9 +213,13 @@ public class TextExpressionCompilerError extends NetObject  {
 
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            retObjectMessage = classInstance.Get("Message");
+            return (java.lang.String)retObjectMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessage != null ? retObjectMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +227,7 @@ public class TextExpressionCompilerError extends NetObject  {
 
     public void setMessage(java.lang.String Message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Message", Message);
         } catch (JCNativeException jcne) {
@@ -219,9 +237,13 @@ public class TextExpressionCompilerError extends NetObject  {
 
     public java.lang.String getNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumber = null;
         try {
-            return (java.lang.String)classInstance.Get("Number");
+            retObjectNumber = classInstance.Get("Number");
+            return (java.lang.String)retObjectNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNumber != null ? retObjectNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +251,7 @@ public class TextExpressionCompilerError extends NetObject  {
 
     public void setNumber(java.lang.String Number) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Number", Number);
         } catch (JCNativeException jcne) {

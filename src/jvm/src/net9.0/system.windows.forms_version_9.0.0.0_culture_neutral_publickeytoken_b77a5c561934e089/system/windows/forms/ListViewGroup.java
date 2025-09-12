@@ -202,7 +202,7 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 
@@ -211,9 +211,19 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
     
     public int getTitleImageIndex() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitleImageIndex = null;
         try {
-            return (int)classInstance.Get("TitleImageIndex");
+            retObjectTitleImageIndex = classInstance.Get("TitleImageIndex");
+            return (int)retObjectTitleImageIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTitleImageIndexNumber = (java.lang.Number)retObjectTitleImageIndex;
+                return retObjectTitleImageIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTitleImageIndex != null ? retObjectTitleImageIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +231,7 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public void setTitleImageIndex(int TitleImageIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TitleImageIndex", TitleImageIndex);
         } catch (JCNativeException jcne) {
@@ -231,10 +241,14 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public NetObject getTag() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTag = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Tag");
+            retObjectTag = classInstance.Get("Tag");
+            JCObject val = (JCObject)retObjectTag;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTag != null ? retObjectTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +256,7 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public void setTag(NetObject Tag) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Tag", Tag == null ? null : Tag.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,9 +266,13 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public java.lang.String getFooter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFooter = null;
         try {
-            return (java.lang.String)classInstance.Get("Footer");
+            retObjectFooter = classInstance.Get("Footer");
+            return (java.lang.String)retObjectFooter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFooter != null ? retObjectFooter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +280,7 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public void setFooter(java.lang.String Footer) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Footer", Footer);
         } catch (JCNativeException jcne) {
@@ -272,9 +290,13 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public java.lang.String getHeader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeader = null;
         try {
-            return (java.lang.String)classInstance.Get("Header");
+            retObjectHeader = classInstance.Get("Header");
+            return (java.lang.String)retObjectHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHeader != null ? retObjectHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +304,7 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public void setHeader(java.lang.String Header) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Header", Header);
         } catch (JCNativeException jcne) {
@@ -292,9 +314,13 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +328,7 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -312,9 +338,13 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public java.lang.String getSubtitle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubtitle = null;
         try {
-            return (java.lang.String)classInstance.Get("Subtitle");
+            retObjectSubtitle = classInstance.Get("Subtitle");
+            return (java.lang.String)retObjectSubtitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSubtitle != null ? retObjectSubtitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +352,7 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public void setSubtitle(java.lang.String Subtitle) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Subtitle", Subtitle);
         } catch (JCNativeException jcne) {
@@ -332,9 +362,13 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public java.lang.String getTaskLink() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTaskLink = null;
         try {
-            return (java.lang.String)classInstance.Get("TaskLink");
+            retObjectTaskLink = classInstance.Get("TaskLink");
+            return (java.lang.String)retObjectTaskLink;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTaskLink != null ? retObjectTaskLink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +376,7 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public void setTaskLink(java.lang.String TaskLink) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TaskLink", TaskLink);
         } catch (JCNativeException jcne) {
@@ -352,9 +386,13 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public java.lang.String getTitleImageKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitleImageKey = null;
         try {
-            return (java.lang.String)classInstance.Get("TitleImageKey");
+            retObjectTitleImageKey = classInstance.Get("TitleImageKey");
+            return (java.lang.String)retObjectTitleImageKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTitleImageKey != null ? retObjectTitleImageKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +400,7 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public void setTitleImageKey(java.lang.String TitleImageKey) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TitleImageKey", TitleImageKey);
         } catch (JCNativeException jcne) {
@@ -372,10 +410,14 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public HorizontalAlignment getFooterAlignment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFooterAlignment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FooterAlignment");
+            retObjectFooterAlignment = classInstance.Get("FooterAlignment");
+            JCObject val = (JCObject)retObjectFooterAlignment;
             return new HorizontalAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFooterAlignment != null ? retObjectFooterAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,7 +425,7 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public void setFooterAlignment(HorizontalAlignment FooterAlignment) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FooterAlignment", FooterAlignment == null ? null : FooterAlignment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -393,10 +435,14 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public HorizontalAlignment getHeaderAlignment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderAlignment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderAlignment");
+            retObjectHeaderAlignment = classInstance.Get("HeaderAlignment");
+            JCObject val = (JCObject)retObjectHeaderAlignment;
             return new HorizontalAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderAlignment != null ? retObjectHeaderAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -404,7 +450,7 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public void setHeaderAlignment(HorizontalAlignment HeaderAlignment) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderAlignment", HeaderAlignment == null ? null : HeaderAlignment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -414,10 +460,14 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public ListView getListView() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectListView = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ListView");
+            retObjectListView = classInstance.Get("ListView");
+            JCObject val = (JCObject)retObjectListView;
             return new ListView(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListView != null ? retObjectListView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -425,7 +475,7 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public void setListView(ListView ListView) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ListView", ListView == null ? null : ListView.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -435,10 +485,14 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public ListViewGroupCollapsedState getCollapsedState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCollapsedState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CollapsedState");
+            retObjectCollapsedState = classInstance.Get("CollapsedState");
+            JCObject val = (JCObject)retObjectCollapsedState;
             return new ListViewGroupCollapsedState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCollapsedState != null ? retObjectCollapsedState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -446,7 +500,7 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
 
     public void setCollapsedState(ListViewGroupCollapsedState CollapsedState) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CollapsedState", CollapsedState == null ? null : CollapsedState.getJCOInstance());
         } catch (JCNativeException jcne) {

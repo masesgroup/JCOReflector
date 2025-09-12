@@ -158,7 +158,7 @@ public class ComVariant extends ValueType implements AutoCloseable {
     
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -169,7 +169,7 @@ public class ComVariant extends ValueType implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -185,10 +185,14 @@ public class ComVariant extends ValueType implements AutoCloseable {
     
     public static ComVariant getNull() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNull = null;
         try {
-            JCObject val = (JCObject)classType.Get("Null");
+            retObjectNull = classType.Get("Null");
+            JCObject val = (JCObject)retObjectNull;
             return new ComVariant(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNull != null ? retObjectNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +200,14 @@ public class ComVariant extends ValueType implements AutoCloseable {
 
     public VarEnum getVarType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVarType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VarType");
+            retObjectVarType = classInstance.Get("VarType");
+            JCObject val = (JCObject)retObjectVarType;
             return new VarEnum(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVarType != null ? retObjectVarType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +215,7 @@ public class ComVariant extends ValueType implements AutoCloseable {
 
     public void setVarType(VarEnum VarType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VarType", VarType == null ? null : VarType.getJCOInstance());
         } catch (JCNativeException jcne) {

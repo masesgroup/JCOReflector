@@ -170,10 +170,14 @@ public class HierarchicalDataBoundControlDesigner extends BaseDataBoundControlDe
     
     public DesignerHierarchicalDataSourceView getDesignerView() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesignerView = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DesignerView");
+            retObjectDesignerView = classInstance.Get("DesignerView");
+            JCObject val = (JCObject)retObjectDesignerView;
             return new DesignerHierarchicalDataSourceView(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerView != null ? retObjectDesignerView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class HierarchicalDataBoundControlDesigner extends BaseDataBoundControlDe
 
     public IHierarchicalDataSourceDesigner getDataSourceDesigner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSourceDesigner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSourceDesigner");
+            retObjectDataSourceDesigner = classInstance.Get("DataSourceDesigner");
+            JCObject val = (JCObject)retObjectDataSourceDesigner;
             return new IHierarchicalDataSourceDesignerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataSourceDesigner != null ? retObjectDataSourceDesigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

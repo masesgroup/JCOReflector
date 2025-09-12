@@ -145,9 +145,13 @@ public class IDesignerDataSchemaImplementation extends NetObject implements IDes
     
     public boolean SupportsSchemaClass(DesignerDataSchemaClass schemaClass) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsSchemaClass = null;
         try {
-            return (boolean)classInstance.Invoke("SupportsSchemaClass", schemaClass == null ? null : schemaClass.getJCOInstance());
+            retObjectSupportsSchemaClass = classInstance.Invoke("SupportsSchemaClass", schemaClass == null ? null : schemaClass.getJCOInstance());
+            return (boolean)retObjectSupportsSchemaClass;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSupportsSchemaClass != null ? retObjectSupportsSchemaClass.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,10 +159,14 @@ public class IDesignerDataSchemaImplementation extends NetObject implements IDes
 
     public ICollection GetSchemaItems(DesignerDataSchemaClass schemaClass) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSchemaItems = null;
         try {
-            JCObject objGetSchemaItems = (JCObject)classInstance.Invoke("GetSchemaItems", schemaClass == null ? null : schemaClass.getJCOInstance());
+            retObjectGetSchemaItems = classInstance.Invoke("GetSchemaItems", schemaClass == null ? null : schemaClass.getJCOInstance());
+            JCObject objGetSchemaItems = (JCObject)retObjectGetSchemaItems;
             return new ICollectionImplementation(objGetSchemaItems);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSchemaItems != null ? retObjectGetSchemaItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

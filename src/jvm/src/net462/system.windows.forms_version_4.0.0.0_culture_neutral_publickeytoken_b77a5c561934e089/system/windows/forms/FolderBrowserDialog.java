@@ -163,7 +163,7 @@ public class FolderBrowserDialog extends CommonDialog  {
     
     public void Reset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -177,9 +177,13 @@ public class FolderBrowserDialog extends CommonDialog  {
     
     public boolean getShowNewFolderButton() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowNewFolderButton = null;
         try {
-            return (boolean)classInstance.Get("ShowNewFolderButton");
+            retObjectShowNewFolderButton = classInstance.Get("ShowNewFolderButton");
+            return (boolean)retObjectShowNewFolderButton;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowNewFolderButton != null ? retObjectShowNewFolderButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class FolderBrowserDialog extends CommonDialog  {
 
     public void setShowNewFolderButton(boolean ShowNewFolderButton) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowNewFolderButton", ShowNewFolderButton);
         } catch (JCNativeException jcne) {
@@ -197,9 +201,13 @@ public class FolderBrowserDialog extends CommonDialog  {
 
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +215,7 @@ public class FolderBrowserDialog extends CommonDialog  {
 
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
@@ -217,9 +225,13 @@ public class FolderBrowserDialog extends CommonDialog  {
 
     public java.lang.String getSelectedPath() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedPath = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectedPath");
+            retObjectSelectedPath = classInstance.Get("SelectedPath");
+            return (java.lang.String)retObjectSelectedPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectedPath != null ? retObjectSelectedPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +239,7 @@ public class FolderBrowserDialog extends CommonDialog  {
 
     public void setSelectedPath(java.lang.String SelectedPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedPath", SelectedPath);
         } catch (JCNativeException jcne) {
@@ -242,7 +254,7 @@ public class FolderBrowserDialog extends CommonDialog  {
 
     public void addHelpRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("HelpRequest", handler);
         } catch (JCNativeException jcne) {
@@ -252,7 +264,7 @@ public class FolderBrowserDialog extends CommonDialog  {
 
     public void removeHelpRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("HelpRequest", handler);
         } catch (JCNativeException jcne) {

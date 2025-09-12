@@ -154,9 +154,13 @@ public class MemberRelationshipService extends NetObject  {
     
     public boolean SupportsRelationship(MemberRelationship source, MemberRelationship relationship) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsRelationship = null;
         try {
-            return (boolean)classInstance.Invoke("SupportsRelationship", source == null ? null : source.getJCOInstance(), relationship == null ? null : relationship.getJCOInstance());
+            retObjectSupportsRelationship = classInstance.Invoke("SupportsRelationship", source == null ? null : source.getJCOInstance(), relationship == null ? null : relationship.getJCOInstance());
+            return (boolean)retObjectSupportsRelationship;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSupportsRelationship != null ? retObjectSupportsRelationship.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -159,10 +159,14 @@ public class Extensions extends NetObject  {
     
     public static NetObject XPathEvaluate(XNode node, java.lang.String expression, IXmlNamespaceResolver resolver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.xpath.XPathException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXPathEvaluate = null;
         try {
-            JCObject objXPathEvaluate = (JCObject)classType.Invoke("XPathEvaluate", node == null ? null : node.getJCOInstance(), expression, resolver == null ? null : resolver.getJCOInstance());
+            retObjectXPathEvaluate = classType.Invoke("XPathEvaluate", node == null ? null : node.getJCOInstance(), expression, resolver == null ? null : resolver.getJCOInstance());
+            JCObject objXPathEvaluate = (JCObject)retObjectXPathEvaluate;
             return new NetObject(objXPathEvaluate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXPathEvaluate != null ? retObjectXPathEvaluate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class Extensions extends NetObject  {
 
     public static NetObject XPathEvaluate(XNode node, java.lang.String expression) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.xml.xpath.XPathException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXPathEvaluate = null;
         try {
-            JCObject objXPathEvaluate = (JCObject)classType.Invoke("XPathEvaluate", node == null ? null : node.getJCOInstance(), expression);
+            retObjectXPathEvaluate = classType.Invoke("XPathEvaluate", node == null ? null : node.getJCOInstance(), expression);
+            JCObject objXPathEvaluate = (JCObject)retObjectXPathEvaluate;
             return new NetObject(objXPathEvaluate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXPathEvaluate != null ? retObjectXPathEvaluate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class Extensions extends NetObject  {
 
     public static XElement XPathSelectElement(XNode node, java.lang.String expression, IXmlNamespaceResolver resolver) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.xml.xpath.XPathException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXPathSelectElement = null;
         try {
-            JCObject objXPathSelectElement = (JCObject)classType.Invoke("XPathSelectElement", node == null ? null : node.getJCOInstance(), expression, resolver == null ? null : resolver.getJCOInstance());
+            retObjectXPathSelectElement = classType.Invoke("XPathSelectElement", node == null ? null : node.getJCOInstance(), expression, resolver == null ? null : resolver.getJCOInstance());
+            JCObject objXPathSelectElement = (JCObject)retObjectXPathSelectElement;
             return new XElement(objXPathSelectElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXPathSelectElement != null ? retObjectXPathSelectElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class Extensions extends NetObject  {
 
     public static XElement XPathSelectElement(XNode node, java.lang.String expression) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.xml.xpath.XPathException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXPathSelectElement = null;
         try {
-            JCObject objXPathSelectElement = (JCObject)classType.Invoke("XPathSelectElement", node == null ? null : node.getJCOInstance(), expression);
+            retObjectXPathSelectElement = classType.Invoke("XPathSelectElement", node == null ? null : node.getJCOInstance(), expression);
+            JCObject objXPathSelectElement = (JCObject)retObjectXPathSelectElement;
             return new XElement(objXPathSelectElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXPathSelectElement != null ? retObjectXPathSelectElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class Extensions extends NetObject  {
 
     public static XPathNavigator CreateNavigator(XNode node, XmlNameTable nameTable) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateNavigator = null;
         try {
-            JCObject objCreateNavigator = (JCObject)classType.Invoke("CreateNavigator", node == null ? null : node.getJCOInstance(), nameTable == null ? null : nameTable.getJCOInstance());
+            retObjectCreateNavigator = classType.Invoke("CreateNavigator", node == null ? null : node.getJCOInstance(), nameTable == null ? null : nameTable.getJCOInstance());
+            JCObject objCreateNavigator = (JCObject)retObjectCreateNavigator;
             return new XPathNavigator(objCreateNavigator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateNavigator != null ? retObjectCreateNavigator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +234,14 @@ public class Extensions extends NetObject  {
 
     public static XPathNavigator CreateNavigator(XNode node) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateNavigator = null;
         try {
-            JCObject objCreateNavigator = (JCObject)classType.Invoke("CreateNavigator", node == null ? null : node.getJCOInstance());
+            retObjectCreateNavigator = classType.Invoke("CreateNavigator", node == null ? null : node.getJCOInstance());
+            JCObject objCreateNavigator = (JCObject)retObjectCreateNavigator;
             return new XPathNavigator(objCreateNavigator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateNavigator != null ? retObjectCreateNavigator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

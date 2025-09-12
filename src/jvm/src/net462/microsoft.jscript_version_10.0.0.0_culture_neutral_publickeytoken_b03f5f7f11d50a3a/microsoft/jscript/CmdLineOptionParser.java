@@ -161,9 +161,13 @@ public class CmdLineOptionParser extends NetObject  {
     
     public static boolean IsSimpleOption(java.lang.String option, java.lang.String prefix) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSimpleOption = null;
         try {
-            return (boolean)classType.Invoke("IsSimpleOption", option, prefix);
+            retObjectIsSimpleOption = classType.Invoke("IsSimpleOption", option, prefix);
+            return (boolean)retObjectIsSimpleOption;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSimpleOption != null ? retObjectIsSimpleOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class CmdLineOptionParser extends NetObject  {
 
     public static NetObject IsBooleanOption(java.lang.String option, java.lang.String prefix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsBooleanOption = null;
         try {
-            JCObject objIsBooleanOption = (JCObject)classType.Invoke("IsBooleanOption", option, prefix);
+            retObjectIsBooleanOption = classType.Invoke("IsBooleanOption", option, prefix);
+            JCObject objIsBooleanOption = (JCObject)retObjectIsBooleanOption;
             return new NetObject(objIsBooleanOption);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsBooleanOption != null ? retObjectIsBooleanOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class CmdLineOptionParser extends NetObject  {
 
     public static NetObject IsBooleanOption(java.lang.String option, java.lang.String shortPrefix, java.lang.String longPrefix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsBooleanOption = null;
         try {
-            JCObject objIsBooleanOption = (JCObject)classType.Invoke("IsBooleanOption", option, shortPrefix, longPrefix);
+            retObjectIsBooleanOption = classType.Invoke("IsBooleanOption", option, shortPrefix, longPrefix);
+            JCObject objIsBooleanOption = (JCObject)retObjectIsBooleanOption;
             return new NetObject(objIsBooleanOption);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsBooleanOption != null ? retObjectIsBooleanOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +205,13 @@ public class CmdLineOptionParser extends NetObject  {
 
     public static java.lang.String IsArgumentOption(java.lang.String option, java.lang.String prefix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsArgumentOption = null;
         try {
-            return (java.lang.String)classType.Invoke("IsArgumentOption", option, prefix);
+            retObjectIsArgumentOption = classType.Invoke("IsArgumentOption", option, prefix);
+            return (java.lang.String)retObjectIsArgumentOption;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectIsArgumentOption != null ? retObjectIsArgumentOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +219,13 @@ public class CmdLineOptionParser extends NetObject  {
 
     public static java.lang.String IsArgumentOption(java.lang.String option, java.lang.String shortPrefix, java.lang.String longPrefix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsArgumentOption = null;
         try {
-            return (java.lang.String)classType.Invoke("IsArgumentOption", option, shortPrefix, longPrefix);
+            retObjectIsArgumentOption = classType.Invoke("IsArgumentOption", option, shortPrefix, longPrefix);
+            return (java.lang.String)retObjectIsArgumentOption;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectIsArgumentOption != null ? retObjectIsArgumentOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

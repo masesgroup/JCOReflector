@@ -202,10 +202,14 @@ public class WorkflowInstanceRecord extends TrackingRecord  {
     
     public WorkflowIdentity getWorkflowDefinitionIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowDefinitionIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowDefinitionIdentity");
+            retObjectWorkflowDefinitionIdentity = classInstance.Get("WorkflowDefinitionIdentity");
+            JCObject val = (JCObject)retObjectWorkflowDefinitionIdentity;
             return new WorkflowIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowDefinitionIdentity != null ? retObjectWorkflowDefinitionIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +217,7 @@ public class WorkflowInstanceRecord extends TrackingRecord  {
 
     public void setWorkflowDefinitionIdentity(WorkflowIdentity WorkflowDefinitionIdentity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WorkflowDefinitionIdentity", WorkflowDefinitionIdentity == null ? null : WorkflowDefinitionIdentity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -223,9 +227,13 @@ public class WorkflowInstanceRecord extends TrackingRecord  {
 
     public java.lang.String getActivityDefinitionId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityDefinitionId = null;
         try {
-            return (java.lang.String)classInstance.Get("ActivityDefinitionId");
+            retObjectActivityDefinitionId = classInstance.Get("ActivityDefinitionId");
+            return (java.lang.String)retObjectActivityDefinitionId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectActivityDefinitionId != null ? retObjectActivityDefinitionId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +241,7 @@ public class WorkflowInstanceRecord extends TrackingRecord  {
 
     public void setActivityDefinitionId(java.lang.String ActivityDefinitionId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActivityDefinitionId", ActivityDefinitionId);
         } catch (JCNativeException jcne) {
@@ -243,9 +251,13 @@ public class WorkflowInstanceRecord extends TrackingRecord  {
 
     public java.lang.String getState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectState = null;
         try {
-            return (java.lang.String)classInstance.Get("State");
+            retObjectState = classInstance.Get("State");
+            return (java.lang.String)retObjectState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectState != null ? retObjectState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +265,7 @@ public class WorkflowInstanceRecord extends TrackingRecord  {
 
     public void setState(java.lang.String State) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("State", State);
         } catch (JCNativeException jcne) {

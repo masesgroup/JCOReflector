@@ -170,10 +170,14 @@ public class SqlCredential extends NetObject  {
     
     public SecureString getPassword() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPassword = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Password");
+            retObjectPassword = classInstance.Get("Password");
+            JCObject val = (JCObject)retObjectPassword;
             return new SecureString(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPassword != null ? retObjectPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class SqlCredential extends NetObject  {
 
     public java.lang.String getUserId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserId = null;
         try {
-            return (java.lang.String)classInstance.Get("UserId");
+            retObjectUserId = classInstance.Get("UserId");
+            return (java.lang.String)retObjectUserId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserId != null ? retObjectUserId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

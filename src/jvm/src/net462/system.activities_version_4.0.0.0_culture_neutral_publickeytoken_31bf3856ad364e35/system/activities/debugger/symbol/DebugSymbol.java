@@ -153,10 +153,14 @@ public class DebugSymbol extends NetObject  {
     
     public static NetObject GetSymbol(NetObject instance) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSymbol = null;
         try {
-            JCObject objGetSymbol = (JCObject)classType.Invoke("GetSymbol", instance == null ? null : instance.getJCOInstance());
+            retObjectGetSymbol = classType.Invoke("GetSymbol", instance == null ? null : instance.getJCOInstance());
+            JCObject objGetSymbol = (JCObject)retObjectGetSymbol;
             return new NetObject(objGetSymbol);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSymbol != null ? retObjectGetSymbol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,7 +168,7 @@ public class DebugSymbol extends NetObject  {
 
     public static void SetSymbol(NetObject instance, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetSymbol", instance == null ? null : instance.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

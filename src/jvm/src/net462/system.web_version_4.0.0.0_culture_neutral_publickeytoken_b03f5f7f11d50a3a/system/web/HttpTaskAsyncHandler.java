@@ -158,10 +158,14 @@ public class HttpTaskAsyncHandler extends NetObject  {
     
     public Task ProcessRequestAsync(HttpContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessRequestAsync = null;
         try {
-            JCObject objProcessRequestAsync = (JCObject)classInstance.Invoke("ProcessRequestAsync", context == null ? null : context.getJCOInstance());
+            retObjectProcessRequestAsync = classInstance.Invoke("ProcessRequestAsync", context == null ? null : context.getJCOInstance());
+            JCObject objProcessRequestAsync = (JCObject)retObjectProcessRequestAsync;
             return new Task(objProcessRequestAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessRequestAsync != null ? retObjectProcessRequestAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +173,7 @@ public class HttpTaskAsyncHandler extends NetObject  {
 
     public void ProcessRequest(HttpContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ProcessRequest", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -183,7 +187,7 @@ public class HttpTaskAsyncHandler extends NetObject  {
      */
     @Deprecated 
     public IAsyncResult BeginProcessRequest(HttpContext context, AsyncCallback cb, NetObject extraData) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpAsyncHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpAsyncHandler to obtain the full interface.");
     }
 
     /**
@@ -192,7 +196,7 @@ public class HttpTaskAsyncHandler extends NetObject  {
      */
     @Deprecated 
     public void EndProcessRequest(IAsyncResult result) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpAsyncHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpAsyncHandler to obtain the full interface.");
     }
 
 
@@ -201,9 +205,13 @@ public class HttpTaskAsyncHandler extends NetObject  {
     
     public boolean getIsReusable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReusable = null;
         try {
-            return (boolean)classInstance.Get("IsReusable");
+            retObjectIsReusable = classInstance.Get("IsReusable");
+            return (boolean)retObjectIsReusable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReusable != null ? retObjectIsReusable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

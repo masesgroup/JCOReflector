@@ -41,12 +41,6 @@ public class HelloNETSocketServer {
     public static String data = null;
 
     public static void StartListening(boolean asyncMode, String address, int port) {
-        // Data buffer for incoming data.
-        byte[] bytes = new byte[1024];
-        IPAddress ipAddress = null;
-
-        // Establish the local endpoint for the socket.
-        // Dns.GetHostName returns the name of the host running the application.
         try {
             IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
             IPAddress[] ipAddresses = ipHostInfo.getAddressList();
@@ -55,6 +49,17 @@ public class HelloNETSocketServer {
             for (IPAddress ipAddressAvailable : ipAddresses) {
                 System.out.println(ipAddressAvailable);
             }
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+
+        // Data buffer for incoming data.
+        byte[] bytes = new byte[1024];
+        IPAddress ipAddress = null;
+
+        // Establish the local endpoint for the socket.
+        // Dns.GetHostName returns the name of the host running the application.
+        try {
             // parse ip address
             ipAddress = IPAddress.Parse(address);
             IPEndPoint localEndPoint = new IPEndPoint(ipAddress, port);

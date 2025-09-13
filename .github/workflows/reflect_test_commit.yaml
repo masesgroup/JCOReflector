@@ -47,18 +47,21 @@ jobs:
       run_job: ${{ steps.check_files.outputs.run_job || steps.force_execution.outputs.run_job }}
     runs-on: ubuntu-22.04
     steps:
-      - id: force_execution
-        if: ${{ inputs.GeneratePR == true || inputs.ForceExecution == true }}
-        run: echo "run_job=true" >> $GITHUB_OUTPUT
+      - name: Force check on true
+        id: force_execute
+        if: ${{ github.event_name != 'push' }}
+        run: echo "run_build_windows=true" >> $GITHUB_OUTPUT
         
-      - id: get_changed_files
-        if: ${{ inputs.GeneratePR == false && inputs.ForceExecution == false }}
+      - name: Create modified file list
+        if: ${{ github.event_name == 'push' }}
+        id: get_changed_files
         uses: masesgroup/retrieve-changed-files@v3
         with:
           format: 'csv'
 
-      - id: check_files
-        if: ${{ inputs.GeneratePR == false && inputs.ForceExecution == false }}
+      - name: Check modified file list
+        if: ${{ github.event_name == 'push' }}
+        id: check_files
         run: |
           mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.get_changed_files.outputs.added_modified }}')
           for added_modified_file in "${added_modified_files[@]}"; do

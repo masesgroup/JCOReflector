@@ -44,7 +44,7 @@ jobs:
     if: ${{ github.repository_owner == 'masesgroup' || (github.repository_owner != 'masesgroup' && github.ref_name != 'master') }} #do not execute on master outside main repo
     name: Check changed files
     outputs:
-      run_job: ${{ steps.check_files.outputs.run_job || steps.force_execution.outputs.run_job }}
+      run_job: ${{ steps.check_files.outputs.run_job || steps.force_execute.outputs.run_job }}
     runs-on: ubuntu-22.04
     steps:
       - name: Force check on true

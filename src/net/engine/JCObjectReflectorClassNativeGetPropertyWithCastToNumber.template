@@ -6,9 +6,9 @@
             retObjectPROPERTY_NAME = PROPERTY_OBJECT.Get("PROPERTY_NAME"PROPERTY_INVOKE_PARAMETERS);
             return (PROPERTY_OUTPUTTYPE)retObjectPROPERTY_NAME;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPROPERTY_NAME_ToString = retObjectPROPERTY_NAME == null ? "null" : retObjectPROPERTY_NAME.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.String retObjectPROPERTY_NAME_ToString = retObjectPROPERTY_NAME == null ? "null" : retObjectPROPERTY_NAME.toString();
                 java.lang.Number retObjectPROPERTY_NAMENumber = (java.lang.Number)retObjectPROPERTY_NAME;
                 return retObjectPROPERTY_NAMENumber.PROPERTY_OUTPUTTYPEValue();
             } catch (java.lang.ClassCastException cceInner) {

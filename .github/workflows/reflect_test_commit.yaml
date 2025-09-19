@@ -50,7 +50,7 @@ jobs:
       - name: Force check on true
         id: force_execute
         if: ${{ github.event_name != 'push' }}
-        run: echo "run_build_windows=true" >> $GITHUB_OUTPUT
+        run: echo "run_job=true" >> $GITHUB_OUTPUT
         
       - name: Create modified file list
         if: ${{ github.event_name == 'push' }}

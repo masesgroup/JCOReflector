@@ -52,6 +52,15 @@ public class HelloNETSocket {
                     x++;
                 }
             }
+            for (int xs = -10; xs < 10; xs++) {
+                java.lang.Integer integer = new java.lang.Integer(xs);
+                int castedInteger = (int)integer;
+                System.out.println(castedInteger);
+            }
+
+            java.lang.Integer integer = new java.lang.Integer(0);
+            int castedInteger = (int)integer;
+
             // create the server thread
             Thread threadServer = new Thread(new ThreadStart() {
                 public void Invoke() {

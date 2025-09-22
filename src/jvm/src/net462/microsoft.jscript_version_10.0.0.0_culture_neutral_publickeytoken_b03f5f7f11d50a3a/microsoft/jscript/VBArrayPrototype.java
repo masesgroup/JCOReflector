@@ -165,12 +165,13 @@ public class VBArrayPrototype extends JSObject  {
             retObjectdimensions = classType.Invoke("dimensions", thisob == null ? null : thisob.getJCOInstance());
             return (int)retObjectdimensions;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectdimensions_ToString = retObjectdimensions == null ? "null" : retObjectdimensions.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectdimensionsNumber = (java.lang.Number)retObjectdimensions;
                 return retObjectdimensionsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectdimensions != null ? retObjectdimensions.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectdimensions != null ? retObjectdimensions.getClass() : "null", retObjectdimensions_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -185,12 +186,13 @@ public class VBArrayPrototype extends JSObject  {
             retObjectlbound = classType.Invoke("lbound", thisob == null ? null : thisob.getJCOInstance(), dimension == null ? null : dimension.getJCOInstance());
             return (int)retObjectlbound;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectlbound_ToString = retObjectlbound == null ? "null" : retObjectlbound.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectlboundNumber = (java.lang.Number)retObjectlbound;
                 return retObjectlboundNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectlbound != null ? retObjectlbound.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectlbound != null ? retObjectlbound.getClass() : "null", retObjectlbound_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -205,12 +207,13 @@ public class VBArrayPrototype extends JSObject  {
             retObjectubound = classType.Invoke("ubound", thisob == null ? null : thisob.getJCOInstance(), dimension == null ? null : dimension.getJCOInstance());
             return (int)retObjectubound;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectubound_ToString = retObjectubound == null ? "null" : retObjectubound.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectuboundNumber = (java.lang.Number)retObjectubound;
                 return retObjectuboundNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectubound != null ? retObjectubound.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectubound != null ? retObjectubound.getClass() : "null", retObjectubound_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

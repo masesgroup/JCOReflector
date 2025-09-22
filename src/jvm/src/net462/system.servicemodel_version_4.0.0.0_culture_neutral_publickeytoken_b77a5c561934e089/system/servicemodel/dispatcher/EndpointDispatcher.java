@@ -203,12 +203,13 @@ public class EndpointDispatcher extends NetObject  {
             retObjectFilterPriority = classInstance.Get("FilterPriority");
             return (int)retObjectFilterPriority;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFilterPriority_ToString = retObjectFilterPriority == null ? "null" : retObjectFilterPriority.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFilterPriorityNumber = (java.lang.Number)retObjectFilterPriority;
                 return retObjectFilterPriorityNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFilterPriority != null ? retObjectFilterPriority.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFilterPriority != null ? retObjectFilterPriority.getClass() : "null", retObjectFilterPriority_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

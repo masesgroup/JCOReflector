@@ -259,12 +259,13 @@ public class RelativeSource extends MarkupExtension implements system.componentm
             retObjectAncestorLevel = classInstance.Get("AncestorLevel");
             return (int)retObjectAncestorLevel;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAncestorLevel_ToString = retObjectAncestorLevel == null ? "null" : retObjectAncestorLevel.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAncestorLevelNumber = (java.lang.Number)retObjectAncestorLevel;
                 return retObjectAncestorLevelNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAncestorLevel != null ? retObjectAncestorLevel.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAncestorLevel != null ? retObjectAncestorLevel.getClass() : "null", retObjectAncestorLevel_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

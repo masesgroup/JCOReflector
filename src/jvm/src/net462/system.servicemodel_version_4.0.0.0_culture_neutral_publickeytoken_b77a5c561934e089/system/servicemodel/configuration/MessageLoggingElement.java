@@ -293,12 +293,13 @@ public class MessageLoggingElement extends ConfigurationElement  {
             retObjectMaxMessagesToLog = classInstance.Get("MaxMessagesToLog");
             return (int)retObjectMaxMessagesToLog;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxMessagesToLog_ToString = retObjectMaxMessagesToLog == null ? "null" : retObjectMaxMessagesToLog.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxMessagesToLogNumber = (java.lang.Number)retObjectMaxMessagesToLog;
                 return retObjectMaxMessagesToLogNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxMessagesToLog != null ? retObjectMaxMessagesToLog.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxMessagesToLog != null ? retObjectMaxMessagesToLog.getClass() : "null", retObjectMaxMessagesToLog_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -323,12 +324,13 @@ public class MessageLoggingElement extends ConfigurationElement  {
             retObjectMaxSizeOfMessageToLog = classInstance.Get("MaxSizeOfMessageToLog");
             return (int)retObjectMaxSizeOfMessageToLog;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxSizeOfMessageToLog_ToString = retObjectMaxSizeOfMessageToLog == null ? "null" : retObjectMaxSizeOfMessageToLog.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxSizeOfMessageToLogNumber = (java.lang.Number)retObjectMaxSizeOfMessageToLog;
                 return retObjectMaxSizeOfMessageToLogNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxSizeOfMessageToLog != null ? retObjectMaxSizeOfMessageToLog.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxSizeOfMessageToLog != null ? retObjectMaxSizeOfMessageToLog.getClass() : "null", retObjectMaxSizeOfMessageToLog_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -247,12 +247,13 @@ public class DispatcherSynchronizationBehavior extends NetObject implements syst
             retObjectMaxPendingReceives = classInstance.Get("MaxPendingReceives");
             return (int)retObjectMaxPendingReceives;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxPendingReceives_ToString = retObjectMaxPendingReceives == null ? "null" : retObjectMaxPendingReceives.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxPendingReceivesNumber = (java.lang.Number)retObjectMaxPendingReceives;
                 return retObjectMaxPendingReceivesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxPendingReceives != null ? retObjectMaxPendingReceives.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxPendingReceives != null ? retObjectMaxPendingReceives.getClass() : "null", retObjectMaxPendingReceives_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

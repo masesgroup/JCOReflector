@@ -197,12 +197,13 @@ public class BitVector32 extends ValueType  {
             retObjectCreateMask = classType.Invoke("CreateMask");
             return (int)retObjectCreateMask;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCreateMask_ToString = retObjectCreateMask == null ? "null" : retObjectCreateMask.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCreateMaskNumber = (java.lang.Number)retObjectCreateMask;
                 return retObjectCreateMaskNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCreateMask != null ? retObjectCreateMask.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCreateMask != null ? retObjectCreateMask.getClass() : "null", retObjectCreateMask_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -217,12 +218,13 @@ public class BitVector32 extends ValueType  {
             retObjectCreateMask = classType.Invoke("CreateMask", previous);
             return (int)retObjectCreateMask;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCreateMask_ToString = retObjectCreateMask == null ? "null" : retObjectCreateMask.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCreateMaskNumber = (java.lang.Number)retObjectCreateMask;
                 return retObjectCreateMaskNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCreateMask != null ? retObjectCreateMask.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCreateMask != null ? retObjectCreateMask.getClass() : "null", retObjectCreateMask_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -255,12 +257,13 @@ public class BitVector32 extends ValueType  {
             retObjectData = classInstance.Get("Data");
             return (int)retObjectData;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectData_ToString = retObjectData == null ? "null" : retObjectData.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDataNumber = (java.lang.Number)retObjectData;
                 return retObjectDataNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectData != null ? retObjectData.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectData != null ? retObjectData.getClass() : "null", retObjectData_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

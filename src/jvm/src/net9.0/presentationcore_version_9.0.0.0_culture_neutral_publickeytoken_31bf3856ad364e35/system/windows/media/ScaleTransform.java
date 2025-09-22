@@ -224,12 +224,13 @@ public class ScaleTransform extends Transform  {
             retObjectCenterX = classInstance.Get("CenterX");
             return (double)retObjectCenterX;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCenterX_ToString = retObjectCenterX == null ? "null" : retObjectCenterX.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCenterXNumber = (java.lang.Number)retObjectCenterX;
                 return retObjectCenterXNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectCenterX != null ? retObjectCenterX.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCenterX != null ? retObjectCenterX.getClass() : "null", retObjectCenterX_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -254,12 +255,13 @@ public class ScaleTransform extends Transform  {
             retObjectCenterY = classInstance.Get("CenterY");
             return (double)retObjectCenterY;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCenterY_ToString = retObjectCenterY == null ? "null" : retObjectCenterY.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCenterYNumber = (java.lang.Number)retObjectCenterY;
                 return retObjectCenterYNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectCenterY != null ? retObjectCenterY.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCenterY != null ? retObjectCenterY.getClass() : "null", retObjectCenterY_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -284,12 +286,13 @@ public class ScaleTransform extends Transform  {
             retObjectScaleX = classInstance.Get("ScaleX");
             return (double)retObjectScaleX;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScaleX_ToString = retObjectScaleX == null ? "null" : retObjectScaleX.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectScaleXNumber = (java.lang.Number)retObjectScaleX;
                 return retObjectScaleXNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectScaleX != null ? retObjectScaleX.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectScaleX != null ? retObjectScaleX.getClass() : "null", retObjectScaleX_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -314,12 +317,13 @@ public class ScaleTransform extends Transform  {
             retObjectScaleY = classInstance.Get("ScaleY");
             return (double)retObjectScaleY;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScaleY_ToString = retObjectScaleY == null ? "null" : retObjectScaleY.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectScaleYNumber = (java.lang.Number)retObjectScaleY;
                 return retObjectScaleYNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectScaleY != null ? retObjectScaleY.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectScaleY != null ? retObjectScaleY.getClass() : "null", retObjectScaleY_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -237,12 +237,13 @@ public class LocalServiceSecuritySettings extends NetObject  {
             retObjectMaxCachedCookies = classInstance.Get("MaxCachedCookies");
             return (int)retObjectMaxCachedCookies;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxCachedCookies_ToString = retObjectMaxCachedCookies == null ? "null" : retObjectMaxCachedCookies.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxCachedCookiesNumber = (java.lang.Number)retObjectMaxCachedCookies;
                 return retObjectMaxCachedCookiesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxCachedCookies != null ? retObjectMaxCachedCookies.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxCachedCookies != null ? retObjectMaxCachedCookies.getClass() : "null", retObjectMaxCachedCookies_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -267,12 +268,13 @@ public class LocalServiceSecuritySettings extends NetObject  {
             retObjectMaxPendingSessions = classInstance.Get("MaxPendingSessions");
             return (int)retObjectMaxPendingSessions;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxPendingSessions_ToString = retObjectMaxPendingSessions == null ? "null" : retObjectMaxPendingSessions.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxPendingSessionsNumber = (java.lang.Number)retObjectMaxPendingSessions;
                 return retObjectMaxPendingSessionsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxPendingSessions != null ? retObjectMaxPendingSessions.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxPendingSessions != null ? retObjectMaxPendingSessions.getClass() : "null", retObjectMaxPendingSessions_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -297,12 +299,13 @@ public class LocalServiceSecuritySettings extends NetObject  {
             retObjectMaxStatefulNegotiations = classInstance.Get("MaxStatefulNegotiations");
             return (int)retObjectMaxStatefulNegotiations;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxStatefulNegotiations_ToString = retObjectMaxStatefulNegotiations == null ? "null" : retObjectMaxStatefulNegotiations.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxStatefulNegotiationsNumber = (java.lang.Number)retObjectMaxStatefulNegotiations;
                 return retObjectMaxStatefulNegotiationsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxStatefulNegotiations != null ? retObjectMaxStatefulNegotiations.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxStatefulNegotiations != null ? retObjectMaxStatefulNegotiations.getClass() : "null", retObjectMaxStatefulNegotiations_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -327,12 +330,13 @@ public class LocalServiceSecuritySettings extends NetObject  {
             retObjectReplayCacheSize = classInstance.Get("ReplayCacheSize");
             return (int)retObjectReplayCacheSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReplayCacheSize_ToString = retObjectReplayCacheSize == null ? "null" : retObjectReplayCacheSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReplayCacheSizeNumber = (java.lang.Number)retObjectReplayCacheSize;
                 return retObjectReplayCacheSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReplayCacheSize != null ? retObjectReplayCacheSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReplayCacheSize != null ? retObjectReplayCacheSize.getClass() : "null", retObjectReplayCacheSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -172,12 +172,13 @@ public class Line extends Shape  {
             retObjectX1 = classInstance.Get("X1");
             return (double)retObjectX1;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectX1_ToString = retObjectX1 == null ? "null" : retObjectX1.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectX1Number = (java.lang.Number)retObjectX1;
                 return retObjectX1Number.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectX1 != null ? retObjectX1.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectX1 != null ? retObjectX1.getClass() : "null", retObjectX1_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,12 +203,13 @@ public class Line extends Shape  {
             retObjectX2 = classInstance.Get("X2");
             return (double)retObjectX2;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectX2_ToString = retObjectX2 == null ? "null" : retObjectX2.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectX2Number = (java.lang.Number)retObjectX2;
                 return retObjectX2Number.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectX2 != null ? retObjectX2.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectX2 != null ? retObjectX2.getClass() : "null", retObjectX2_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -232,12 +234,13 @@ public class Line extends Shape  {
             retObjectY1 = classInstance.Get("Y1");
             return (double)retObjectY1;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectY1_ToString = retObjectY1 == null ? "null" : retObjectY1.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectY1Number = (java.lang.Number)retObjectY1;
                 return retObjectY1Number.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectY1 != null ? retObjectY1.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectY1 != null ? retObjectY1.getClass() : "null", retObjectY1_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -262,12 +265,13 @@ public class Line extends Shape  {
             retObjectY2 = classInstance.Get("Y2");
             return (double)retObjectY2;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectY2_ToString = retObjectY2 == null ? "null" : retObjectY2.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectY2Number = (java.lang.Number)retObjectY2;
                 return retObjectY2Number.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectY2 != null ? retObjectY2.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectY2 != null ? retObjectY2.getClass() : "null", retObjectY2_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

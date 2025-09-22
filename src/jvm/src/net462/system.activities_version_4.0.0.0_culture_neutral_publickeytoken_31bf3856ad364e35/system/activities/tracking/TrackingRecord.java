@@ -166,12 +166,13 @@ public class TrackingRecord extends NetObject  {
             retObjectRecordNumber = classInstance.Get("RecordNumber");
             return (long)retObjectRecordNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRecordNumber_ToString = retObjectRecordNumber == null ? "null" : retObjectRecordNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRecordNumberNumber = (java.lang.Number)retObjectRecordNumber;
                 return retObjectRecordNumberNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectRecordNumber != null ? retObjectRecordNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectRecordNumber != null ? retObjectRecordNumber.getClass() : "null", retObjectRecordNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

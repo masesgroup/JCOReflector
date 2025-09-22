@@ -243,12 +243,13 @@ public class PreviewKeyDownEventArgs extends EventArgs  {
             retObjectKeyValue = classInstance.Get("KeyValue");
             return (int)retObjectKeyValue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKeyValue_ToString = retObjectKeyValue == null ? "null" : retObjectKeyValue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectKeyValueNumber = (java.lang.Number)retObjectKeyValue;
                 return retObjectKeyValueNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectKeyValue != null ? retObjectKeyValue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeyValue != null ? retObjectKeyValue.getClass() : "null", retObjectKeyValue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

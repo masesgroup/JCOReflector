@@ -166,12 +166,13 @@ public class ProgressEventArgs extends ManagementEventArgs  {
             retObjectCurrent = classInstance.Get("Current");
             return (int)retObjectCurrent;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCurrent_ToString = retObjectCurrent == null ? "null" : retObjectCurrent.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCurrentNumber = (java.lang.Number)retObjectCurrent;
                 return retObjectCurrentNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCurrent != null ? retObjectCurrent.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrent != null ? retObjectCurrent.getClass() : "null", retObjectCurrent_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -186,12 +187,13 @@ public class ProgressEventArgs extends ManagementEventArgs  {
             retObjectUpperBound = classInstance.Get("UpperBound");
             return (int)retObjectUpperBound;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUpperBound_ToString = retObjectUpperBound == null ? "null" : retObjectUpperBound.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectUpperBoundNumber = (java.lang.Number)retObjectUpperBound;
                 return retObjectUpperBoundNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectUpperBound != null ? retObjectUpperBound.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUpperBound != null ? retObjectUpperBound.getClass() : "null", retObjectUpperBound_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

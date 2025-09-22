@@ -369,12 +369,13 @@ public class HttpClientHandler extends HttpMessageHandler  {
             retObjectMaxAutomaticRedirections = classInstance.Get("MaxAutomaticRedirections");
             return (int)retObjectMaxAutomaticRedirections;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxAutomaticRedirections_ToString = retObjectMaxAutomaticRedirections == null ? "null" : retObjectMaxAutomaticRedirections.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxAutomaticRedirectionsNumber = (java.lang.Number)retObjectMaxAutomaticRedirections;
                 return retObjectMaxAutomaticRedirectionsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxAutomaticRedirections != null ? retObjectMaxAutomaticRedirections.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxAutomaticRedirections != null ? retObjectMaxAutomaticRedirections.getClass() : "null", retObjectMaxAutomaticRedirections_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -399,12 +400,13 @@ public class HttpClientHandler extends HttpMessageHandler  {
             retObjectMaxConnectionsPerServer = classInstance.Get("MaxConnectionsPerServer");
             return (int)retObjectMaxConnectionsPerServer;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxConnectionsPerServer_ToString = retObjectMaxConnectionsPerServer == null ? "null" : retObjectMaxConnectionsPerServer.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxConnectionsPerServerNumber = (java.lang.Number)retObjectMaxConnectionsPerServer;
                 return retObjectMaxConnectionsPerServerNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxConnectionsPerServer != null ? retObjectMaxConnectionsPerServer.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxConnectionsPerServer != null ? retObjectMaxConnectionsPerServer.getClass() : "null", retObjectMaxConnectionsPerServer_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -429,12 +431,13 @@ public class HttpClientHandler extends HttpMessageHandler  {
             retObjectMaxResponseHeadersLength = classInstance.Get("MaxResponseHeadersLength");
             return (int)retObjectMaxResponseHeadersLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxResponseHeadersLength_ToString = retObjectMaxResponseHeadersLength == null ? "null" : retObjectMaxResponseHeadersLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxResponseHeadersLengthNumber = (java.lang.Number)retObjectMaxResponseHeadersLength;
                 return retObjectMaxResponseHeadersLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxResponseHeadersLength != null ? retObjectMaxResponseHeadersLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxResponseHeadersLength != null ? retObjectMaxResponseHeadersLength.getClass() : "null", retObjectMaxResponseHeadersLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -459,12 +462,13 @@ public class HttpClientHandler extends HttpMessageHandler  {
             retObjectMaxRequestContentBufferSize = classInstance.Get("MaxRequestContentBufferSize");
             return (long)retObjectMaxRequestContentBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxRequestContentBufferSize_ToString = retObjectMaxRequestContentBufferSize == null ? "null" : retObjectMaxRequestContentBufferSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxRequestContentBufferSizeNumber = (java.lang.Number)retObjectMaxRequestContentBufferSize;
                 return retObjectMaxRequestContentBufferSizeNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMaxRequestContentBufferSize != null ? retObjectMaxRequestContentBufferSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaxRequestContentBufferSize != null ? retObjectMaxRequestContentBufferSize.getClass() : "null", retObjectMaxRequestContentBufferSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

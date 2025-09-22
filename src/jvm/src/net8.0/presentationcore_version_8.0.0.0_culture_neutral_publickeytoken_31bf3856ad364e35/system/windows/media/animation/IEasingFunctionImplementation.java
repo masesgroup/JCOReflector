@@ -148,12 +148,13 @@ public class IEasingFunctionImplementation extends NetObject implements IEasingF
             retObjectEase = classInstance.Invoke("Ease", normalizedTime);
             return (double)retObjectEase;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEase_ToString = retObjectEase == null ? "null" : retObjectEase.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEaseNumber = (java.lang.Number)retObjectEase;
                 return retObjectEaseNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectEase != null ? retObjectEase.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectEase != null ? retObjectEase.getClass() : "null", retObjectEase_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

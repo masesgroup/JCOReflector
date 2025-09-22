@@ -184,12 +184,13 @@ public class Overlapped extends NetObject  {
             retObjectEventHandle = classInstance.Get("EventHandle");
             return (int)retObjectEventHandle;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEventHandle_ToString = retObjectEventHandle == null ? "null" : retObjectEventHandle.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEventHandleNumber = (java.lang.Number)retObjectEventHandle;
                 return retObjectEventHandleNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEventHandle != null ? retObjectEventHandle.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEventHandle != null ? retObjectEventHandle.getClass() : "null", retObjectEventHandle_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -214,12 +215,13 @@ public class Overlapped extends NetObject  {
             retObjectOffsetHigh = classInstance.Get("OffsetHigh");
             return (int)retObjectOffsetHigh;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffsetHigh_ToString = retObjectOffsetHigh == null ? "null" : retObjectOffsetHigh.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOffsetHighNumber = (java.lang.Number)retObjectOffsetHigh;
                 return retObjectOffsetHighNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOffsetHigh != null ? retObjectOffsetHigh.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOffsetHigh != null ? retObjectOffsetHigh.getClass() : "null", retObjectOffsetHigh_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -244,12 +246,13 @@ public class Overlapped extends NetObject  {
             retObjectOffsetLow = classInstance.Get("OffsetLow");
             return (int)retObjectOffsetLow;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffsetLow_ToString = retObjectOffsetLow == null ? "null" : retObjectOffsetLow.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOffsetLowNumber = (java.lang.Number)retObjectOffsetLow;
                 return retObjectOffsetLowNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOffsetLow != null ? retObjectOffsetLow.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOffsetLow != null ? retObjectOffsetLow.getClass() : "null", retObjectOffsetLow_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -165,12 +165,13 @@ public class TextChange extends NetObject  {
             retObjectAddedLength = classInstance.Get("AddedLength");
             return (int)retObjectAddedLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAddedLength_ToString = retObjectAddedLength == null ? "null" : retObjectAddedLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAddedLengthNumber = (java.lang.Number)retObjectAddedLength;
                 return retObjectAddedLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAddedLength != null ? retObjectAddedLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAddedLength != null ? retObjectAddedLength.getClass() : "null", retObjectAddedLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -195,12 +196,13 @@ public class TextChange extends NetObject  {
             retObjectOffset = classInstance.Get("Offset");
             return (int)retObjectOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffset_ToString = retObjectOffset == null ? "null" : retObjectOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOffsetNumber = (java.lang.Number)retObjectOffset;
                 return retObjectOffsetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null", retObjectOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -225,12 +227,13 @@ public class TextChange extends NetObject  {
             retObjectRemovedLength = classInstance.Get("RemovedLength");
             return (int)retObjectRemovedLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRemovedLength_ToString = retObjectRemovedLength == null ? "null" : retObjectRemovedLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRemovedLengthNumber = (java.lang.Number)retObjectRemovedLength;
                 return retObjectRemovedLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRemovedLength != null ? retObjectRemovedLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRemovedLength != null ? retObjectRemovedLength.getClass() : "null", retObjectRemovedLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

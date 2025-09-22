@@ -199,12 +199,13 @@ public class LingerOption extends NetObject  {
             retObjectLingerTime = classInstance.Get("LingerTime");
             return (int)retObjectLingerTime;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLingerTime_ToString = retObjectLingerTime == null ? "null" : retObjectLingerTime.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLingerTimeNumber = (java.lang.Number)retObjectLingerTime;
                 return retObjectLingerTimeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLingerTime != null ? retObjectLingerTime.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLingerTime != null ? retObjectLingerTime.getClass() : "null", retObjectLingerTime_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

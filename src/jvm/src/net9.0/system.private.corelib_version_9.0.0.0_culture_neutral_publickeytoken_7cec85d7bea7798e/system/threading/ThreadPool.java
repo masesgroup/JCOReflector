@@ -420,12 +420,13 @@ public class ThreadPool extends NetObject  {
             retObjectThreadCount = classType.Get("ThreadCount");
             return (int)retObjectThreadCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectThreadCount_ToString = retObjectThreadCount == null ? "null" : retObjectThreadCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectThreadCountNumber = (java.lang.Number)retObjectThreadCount;
                 return retObjectThreadCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectThreadCount != null ? retObjectThreadCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectThreadCount != null ? retObjectThreadCount.getClass() : "null", retObjectThreadCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -440,12 +441,13 @@ public class ThreadPool extends NetObject  {
             retObjectCompletedWorkItemCount = classType.Get("CompletedWorkItemCount");
             return (long)retObjectCompletedWorkItemCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompletedWorkItemCount_ToString = retObjectCompletedWorkItemCount == null ? "null" : retObjectCompletedWorkItemCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompletedWorkItemCountNumber = (java.lang.Number)retObjectCompletedWorkItemCount;
                 return retObjectCompletedWorkItemCountNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectCompletedWorkItemCount != null ? retObjectCompletedWorkItemCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectCompletedWorkItemCount != null ? retObjectCompletedWorkItemCount.getClass() : "null", retObjectCompletedWorkItemCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -460,12 +462,13 @@ public class ThreadPool extends NetObject  {
             retObjectPendingWorkItemCount = classType.Get("PendingWorkItemCount");
             return (long)retObjectPendingWorkItemCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPendingWorkItemCount_ToString = retObjectPendingWorkItemCount == null ? "null" : retObjectPendingWorkItemCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPendingWorkItemCountNumber = (java.lang.Number)retObjectPendingWorkItemCount;
                 return retObjectPendingWorkItemCountNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectPendingWorkItemCount != null ? retObjectPendingWorkItemCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectPendingWorkItemCount != null ? retObjectPendingWorkItemCount.getClass() : "null", retObjectPendingWorkItemCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

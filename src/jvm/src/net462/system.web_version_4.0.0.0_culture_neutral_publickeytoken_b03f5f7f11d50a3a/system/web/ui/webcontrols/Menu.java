@@ -366,12 +366,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
             retObjectDisappearAfter = classInstance.Get("DisappearAfter");
             return (int)retObjectDisappearAfter;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDisappearAfter_ToString = retObjectDisappearAfter == null ? "null" : retObjectDisappearAfter.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDisappearAfterNumber = (java.lang.Number)retObjectDisappearAfter;
                 return retObjectDisappearAfterNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDisappearAfter != null ? retObjectDisappearAfter.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDisappearAfter != null ? retObjectDisappearAfter.getClass() : "null", retObjectDisappearAfter_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -396,12 +397,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
             retObjectDynamicHorizontalOffset = classInstance.Get("DynamicHorizontalOffset");
             return (int)retObjectDynamicHorizontalOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDynamicHorizontalOffset_ToString = retObjectDynamicHorizontalOffset == null ? "null" : retObjectDynamicHorizontalOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDynamicHorizontalOffsetNumber = (java.lang.Number)retObjectDynamicHorizontalOffset;
                 return retObjectDynamicHorizontalOffsetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDynamicHorizontalOffset != null ? retObjectDynamicHorizontalOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDynamicHorizontalOffset != null ? retObjectDynamicHorizontalOffset.getClass() : "null", retObjectDynamicHorizontalOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -426,12 +428,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
             retObjectDynamicVerticalOffset = classInstance.Get("DynamicVerticalOffset");
             return (int)retObjectDynamicVerticalOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDynamicVerticalOffset_ToString = retObjectDynamicVerticalOffset == null ? "null" : retObjectDynamicVerticalOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDynamicVerticalOffsetNumber = (java.lang.Number)retObjectDynamicVerticalOffset;
                 return retObjectDynamicVerticalOffsetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDynamicVerticalOffset != null ? retObjectDynamicVerticalOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDynamicVerticalOffset != null ? retObjectDynamicVerticalOffset.getClass() : "null", retObjectDynamicVerticalOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -456,12 +459,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
             retObjectMaximumDynamicDisplayLevels = classInstance.Get("MaximumDynamicDisplayLevels");
             return (int)retObjectMaximumDynamicDisplayLevels;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumDynamicDisplayLevels_ToString = retObjectMaximumDynamicDisplayLevels == null ? "null" : retObjectMaximumDynamicDisplayLevels.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumDynamicDisplayLevelsNumber = (java.lang.Number)retObjectMaximumDynamicDisplayLevels;
                 return retObjectMaximumDynamicDisplayLevelsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumDynamicDisplayLevels != null ? retObjectMaximumDynamicDisplayLevels.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumDynamicDisplayLevels != null ? retObjectMaximumDynamicDisplayLevels.getClass() : "null", retObjectMaximumDynamicDisplayLevels_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -486,12 +490,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
             retObjectStaticDisplayLevels = classInstance.Get("StaticDisplayLevels");
             return (int)retObjectStaticDisplayLevels;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStaticDisplayLevels_ToString = retObjectStaticDisplayLevels == null ? "null" : retObjectStaticDisplayLevels.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStaticDisplayLevelsNumber = (java.lang.Number)retObjectStaticDisplayLevels;
                 return retObjectStaticDisplayLevelsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStaticDisplayLevels != null ? retObjectStaticDisplayLevels.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStaticDisplayLevels != null ? retObjectStaticDisplayLevels.getClass() : "null", retObjectStaticDisplayLevels_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

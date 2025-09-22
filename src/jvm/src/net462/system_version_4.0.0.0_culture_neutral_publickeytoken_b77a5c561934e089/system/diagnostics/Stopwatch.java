@@ -169,12 +169,13 @@ public class Stopwatch extends NetObject  {
             retObjectGetTimestamp = classType.Invoke("GetTimestamp");
             return (long)retObjectGetTimestamp;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTimestamp_ToString = retObjectGetTimestamp == null ? "null" : retObjectGetTimestamp.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTimestampNumber = (java.lang.Number)retObjectGetTimestamp;
                 return retObjectGetTimestampNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetTimestamp != null ? retObjectGetTimestamp.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetTimestamp != null ? retObjectGetTimestamp.getClass() : "null", retObjectGetTimestamp_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -262,12 +263,13 @@ public class Stopwatch extends NetObject  {
             retObjectElapsedMilliseconds = classInstance.Get("ElapsedMilliseconds");
             return (long)retObjectElapsedMilliseconds;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectElapsedMilliseconds_ToString = retObjectElapsedMilliseconds == null ? "null" : retObjectElapsedMilliseconds.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectElapsedMillisecondsNumber = (java.lang.Number)retObjectElapsedMilliseconds;
                 return retObjectElapsedMillisecondsNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectElapsedMilliseconds != null ? retObjectElapsedMilliseconds.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectElapsedMilliseconds != null ? retObjectElapsedMilliseconds.getClass() : "null", retObjectElapsedMilliseconds_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -282,12 +284,13 @@ public class Stopwatch extends NetObject  {
             retObjectElapsedTicks = classInstance.Get("ElapsedTicks");
             return (long)retObjectElapsedTicks;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectElapsedTicks_ToString = retObjectElapsedTicks == null ? "null" : retObjectElapsedTicks.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectElapsedTicksNumber = (java.lang.Number)retObjectElapsedTicks;
                 return retObjectElapsedTicksNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectElapsedTicks != null ? retObjectElapsedTicks.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectElapsedTicks != null ? retObjectElapsedTicks.getClass() : "null", retObjectElapsedTicks_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -479,12 +479,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
             retObjectGetNumericValue = classType.Invoke("GetNumericValue", value == null ? null : value.getJCOInstance());
             return (double)retObjectGetNumericValue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetNumericValue_ToString = retObjectGetNumericValue == null ? "null" : retObjectGetNumericValue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetNumericValueNumber = (java.lang.Number)retObjectGetNumericValue;
                 return retObjectGetNumericValueNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetNumericValue != null ? retObjectGetNumericValue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetNumericValue != null ? retObjectGetNumericValue.getClass() : "null", retObjectGetNumericValue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -499,12 +500,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
             retObjectCompareTo = classInstance.Invoke("CompareTo", other == null ? null : other.getJCOInstance());
             return (int)retObjectCompareTo;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
                 return retObjectCompareToNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -659,12 +661,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
             retObjectPlane = classInstance.Get("Plane");
             return (int)retObjectPlane;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPlane_ToString = retObjectPlane == null ? "null" : retObjectPlane.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPlaneNumber = (java.lang.Number)retObjectPlane;
                 return retObjectPlaneNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPlane != null ? retObjectPlane.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPlane != null ? retObjectPlane.getClass() : "null", retObjectPlane_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -679,12 +682,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
             retObjectUtf16SequenceLength = classInstance.Get("Utf16SequenceLength");
             return (int)retObjectUtf16SequenceLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUtf16SequenceLength_ToString = retObjectUtf16SequenceLength == null ? "null" : retObjectUtf16SequenceLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectUtf16SequenceLengthNumber = (java.lang.Number)retObjectUtf16SequenceLength;
                 return retObjectUtf16SequenceLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectUtf16SequenceLength != null ? retObjectUtf16SequenceLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUtf16SequenceLength != null ? retObjectUtf16SequenceLength.getClass() : "null", retObjectUtf16SequenceLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -699,12 +703,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
             retObjectUtf8SequenceLength = classInstance.Get("Utf8SequenceLength");
             return (int)retObjectUtf8SequenceLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUtf8SequenceLength_ToString = retObjectUtf8SequenceLength == null ? "null" : retObjectUtf8SequenceLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectUtf8SequenceLengthNumber = (java.lang.Number)retObjectUtf8SequenceLength;
                 return retObjectUtf8SequenceLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectUtf8SequenceLength != null ? retObjectUtf8SequenceLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUtf8SequenceLength != null ? retObjectUtf8SequenceLength.getClass() : "null", retObjectUtf8SequenceLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -719,12 +724,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
             retObjectValue = classInstance.Get("Value");
             return (int)retObjectValue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectValue_ToString = retObjectValue == null ? "null" : retObjectValue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectValueNumber = (java.lang.Number)retObjectValue;
                 return retObjectValueNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectValue != null ? retObjectValue.getClass() : "null", retObjectValue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

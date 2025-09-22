@@ -225,12 +225,13 @@ public class XPathItem extends NetObject  {
             retObjectValueAsDouble = classInstance.Get("ValueAsDouble");
             return (double)retObjectValueAsDouble;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectValueAsDouble_ToString = retObjectValueAsDouble == null ? "null" : retObjectValueAsDouble.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectValueAsDoubleNumber = (java.lang.Number)retObjectValueAsDouble;
                 return retObjectValueAsDoubleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectValueAsDouble != null ? retObjectValueAsDouble.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectValueAsDouble != null ? retObjectValueAsDouble.getClass() : "null", retObjectValueAsDouble_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -245,12 +246,13 @@ public class XPathItem extends NetObject  {
             retObjectValueAsInt = classInstance.Get("ValueAsInt");
             return (int)retObjectValueAsInt;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectValueAsInt_ToString = retObjectValueAsInt == null ? "null" : retObjectValueAsInt.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectValueAsIntNumber = (java.lang.Number)retObjectValueAsInt;
                 return retObjectValueAsIntNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectValueAsInt != null ? retObjectValueAsInt.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectValueAsInt != null ? retObjectValueAsInt.getClass() : "null", retObjectValueAsInt_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -265,12 +267,13 @@ public class XPathItem extends NetObject  {
             retObjectValueAsLong = classInstance.Get("ValueAsLong");
             return (long)retObjectValueAsLong;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectValueAsLong_ToString = retObjectValueAsLong == null ? "null" : retObjectValueAsLong.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectValueAsLongNumber = (java.lang.Number)retObjectValueAsLong;
                 return retObjectValueAsLongNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectValueAsLong != null ? retObjectValueAsLong.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectValueAsLong != null ? retObjectValueAsLong.getClass() : "null", retObjectValueAsLong_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

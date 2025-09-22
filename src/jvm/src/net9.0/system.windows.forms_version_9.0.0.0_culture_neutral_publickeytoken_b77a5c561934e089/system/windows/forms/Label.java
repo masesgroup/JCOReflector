@@ -295,12 +295,13 @@ public class Label extends Control  {
             retObjectImageIndex = classInstance.Get("ImageIndex");
             return (int)retObjectImageIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectImageIndex_ToString = retObjectImageIndex == null ? "null" : retObjectImageIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectImageIndexNumber = (java.lang.Number)retObjectImageIndex;
                 return retObjectImageIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectImageIndex != null ? retObjectImageIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectImageIndex != null ? retObjectImageIndex.getClass() : "null", retObjectImageIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -325,12 +326,13 @@ public class Label extends Control  {
             retObjectPreferredHeight = classInstance.Get("PreferredHeight");
             return (int)retObjectPreferredHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPreferredHeight_ToString = retObjectPreferredHeight == null ? "null" : retObjectPreferredHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPreferredHeightNumber = (java.lang.Number)retObjectPreferredHeight;
                 return retObjectPreferredHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPreferredHeight != null ? retObjectPreferredHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPreferredHeight != null ? retObjectPreferredHeight.getClass() : "null", retObjectPreferredHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -345,12 +347,13 @@ public class Label extends Control  {
             retObjectPreferredWidth = classInstance.Get("PreferredWidth");
             return (int)retObjectPreferredWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPreferredWidth_ToString = retObjectPreferredWidth == null ? "null" : retObjectPreferredWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPreferredWidthNumber = (java.lang.Number)retObjectPreferredWidth;
                 return retObjectPreferredWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPreferredWidth != null ? retObjectPreferredWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPreferredWidth != null ? retObjectPreferredWidth.getClass() : "null", retObjectPreferredWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

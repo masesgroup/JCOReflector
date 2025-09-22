@@ -192,12 +192,13 @@ public class PersonalizationAdministration extends NetObject  {
             retObjectGetCountOfInactiveUserState = classType.Invoke("GetCountOfInactiveUserState", userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
             return (int)retObjectGetCountOfInactiveUserState;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCountOfInactiveUserState_ToString = retObjectGetCountOfInactiveUserState == null ? "null" : retObjectGetCountOfInactiveUserState.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetCountOfInactiveUserStateNumber = (java.lang.Number)retObjectGetCountOfInactiveUserState;
                 return retObjectGetCountOfInactiveUserStateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCountOfInactiveUserState != null ? retObjectGetCountOfInactiveUserState.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCountOfInactiveUserState != null ? retObjectGetCountOfInactiveUserState.getClass() : "null", retObjectGetCountOfInactiveUserState_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -212,12 +213,13 @@ public class PersonalizationAdministration extends NetObject  {
             retObjectGetCountOfInactiveUserState = classType.Invoke("GetCountOfInactiveUserState", pathToMatch, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
             return (int)retObjectGetCountOfInactiveUserState;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCountOfInactiveUserState_ToString = retObjectGetCountOfInactiveUserState == null ? "null" : retObjectGetCountOfInactiveUserState.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetCountOfInactiveUserStateNumber = (java.lang.Number)retObjectGetCountOfInactiveUserState;
                 return retObjectGetCountOfInactiveUserStateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCountOfInactiveUserState != null ? retObjectGetCountOfInactiveUserState.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCountOfInactiveUserState != null ? retObjectGetCountOfInactiveUserState.getClass() : "null", retObjectGetCountOfInactiveUserState_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -232,12 +234,13 @@ public class PersonalizationAdministration extends NetObject  {
             retObjectGetCountOfState = classType.Invoke("GetCountOfState", scope == null ? null : scope.getJCOInstance());
             return (int)retObjectGetCountOfState;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCountOfState_ToString = retObjectGetCountOfState == null ? "null" : retObjectGetCountOfState.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetCountOfStateNumber = (java.lang.Number)retObjectGetCountOfState;
                 return retObjectGetCountOfStateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCountOfState != null ? retObjectGetCountOfState.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCountOfState != null ? retObjectGetCountOfState.getClass() : "null", retObjectGetCountOfState_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -252,12 +255,13 @@ public class PersonalizationAdministration extends NetObject  {
             retObjectGetCountOfState = classType.Invoke("GetCountOfState", scope == null ? null : scope.getJCOInstance(), pathToMatch);
             return (int)retObjectGetCountOfState;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCountOfState_ToString = retObjectGetCountOfState == null ? "null" : retObjectGetCountOfState.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetCountOfStateNumber = (java.lang.Number)retObjectGetCountOfState;
                 return retObjectGetCountOfStateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCountOfState != null ? retObjectGetCountOfState.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCountOfState != null ? retObjectGetCountOfState.getClass() : "null", retObjectGetCountOfState_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -272,12 +276,13 @@ public class PersonalizationAdministration extends NetObject  {
             retObjectGetCountOfUserState = classType.Invoke("GetCountOfUserState", usernameToMatch);
             return (int)retObjectGetCountOfUserState;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCountOfUserState_ToString = retObjectGetCountOfUserState == null ? "null" : retObjectGetCountOfUserState.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetCountOfUserStateNumber = (java.lang.Number)retObjectGetCountOfUserState;
                 return retObjectGetCountOfUserStateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCountOfUserState != null ? retObjectGetCountOfUserState.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCountOfUserState != null ? retObjectGetCountOfUserState.getClass() : "null", retObjectGetCountOfUserState_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -292,12 +297,13 @@ public class PersonalizationAdministration extends NetObject  {
             retObjectResetAllState = classType.Invoke("ResetAllState", scope == null ? null : scope.getJCOInstance());
             return (int)retObjectResetAllState;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetAllState_ToString = retObjectResetAllState == null ? "null" : retObjectResetAllState.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectResetAllStateNumber = (java.lang.Number)retObjectResetAllState;
                 return retObjectResetAllStateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectResetAllState != null ? retObjectResetAllState.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetAllState != null ? retObjectResetAllState.getClass() : "null", retObjectResetAllState_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -312,12 +318,13 @@ public class PersonalizationAdministration extends NetObject  {
             retObjectResetInactiveUserState = classType.Invoke("ResetInactiveUserState", userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
             return (int)retObjectResetInactiveUserState;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetInactiveUserState_ToString = retObjectResetInactiveUserState == null ? "null" : retObjectResetInactiveUserState.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectResetInactiveUserStateNumber = (java.lang.Number)retObjectResetInactiveUserState;
                 return retObjectResetInactiveUserStateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectResetInactiveUserState != null ? retObjectResetInactiveUserState.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetInactiveUserState != null ? retObjectResetInactiveUserState.getClass() : "null", retObjectResetInactiveUserState_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -332,12 +339,13 @@ public class PersonalizationAdministration extends NetObject  {
             retObjectResetInactiveUserState = classType.Invoke("ResetInactiveUserState", path, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
             return (int)retObjectResetInactiveUserState;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetInactiveUserState_ToString = retObjectResetInactiveUserState == null ? "null" : retObjectResetInactiveUserState.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectResetInactiveUserStateNumber = (java.lang.Number)retObjectResetInactiveUserState;
                 return retObjectResetInactiveUserStateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectResetInactiveUserState != null ? retObjectResetInactiveUserState.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetInactiveUserState != null ? retObjectResetInactiveUserState.getClass() : "null", retObjectResetInactiveUserState_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -352,12 +360,13 @@ public class PersonalizationAdministration extends NetObject  {
             retObjectResetSharedState = classType.Invoke("ResetSharedState", (java.lang.Object)paths);
             return (int)retObjectResetSharedState;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetSharedState_ToString = retObjectResetSharedState == null ? "null" : retObjectResetSharedState.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectResetSharedStateNumber = (java.lang.Number)retObjectResetSharedState;
                 return retObjectResetSharedStateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectResetSharedState != null ? retObjectResetSharedState.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetSharedState != null ? retObjectResetSharedState.getClass() : "null", retObjectResetSharedState_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -372,12 +381,13 @@ public class PersonalizationAdministration extends NetObject  {
             retObjectResetSharedState = classType.Invoke("ResetSharedState", (java.lang.Object)dupParam0.getJCRefOut());
             return (int)retObjectResetSharedState;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetSharedState_ToString = retObjectResetSharedState == null ? "null" : retObjectResetSharedState.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectResetSharedStateNumber = (java.lang.Number)retObjectResetSharedState;
                 return retObjectResetSharedStateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectResetSharedState != null ? retObjectResetSharedState.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetSharedState != null ? retObjectResetSharedState.getClass() : "null", retObjectResetSharedState_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -392,12 +402,13 @@ public class PersonalizationAdministration extends NetObject  {
             retObjectResetState = classType.Invoke("ResetState", data == null ? null : data.getJCOInstance());
             return (int)retObjectResetState;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetState_ToString = retObjectResetState == null ? "null" : retObjectResetState.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectResetStateNumber = (java.lang.Number)retObjectResetState;
                 return retObjectResetStateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectResetState != null ? retObjectResetState.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetState != null ? retObjectResetState.getClass() : "null", retObjectResetState_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -412,12 +423,13 @@ public class PersonalizationAdministration extends NetObject  {
             retObjectResetUserState = classType.Invoke("ResetUserState", path);
             return (int)retObjectResetUserState;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetUserState_ToString = retObjectResetUserState == null ? "null" : retObjectResetUserState.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectResetUserStateNumber = (java.lang.Number)retObjectResetUserState;
                 return retObjectResetUserStateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectResetUserState != null ? retObjectResetUserState.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetUserState != null ? retObjectResetUserState.getClass() : "null", retObjectResetUserState_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -432,12 +444,13 @@ public class PersonalizationAdministration extends NetObject  {
             retObjectResetUserState = classType.Invoke("ResetUserState", path, usernames);
             return (int)retObjectResetUserState;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetUserState_ToString = retObjectResetUserState == null ? "null" : retObjectResetUserState.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectResetUserStateNumber = (java.lang.Number)retObjectResetUserState;
                 return retObjectResetUserStateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectResetUserState != null ? retObjectResetUserState.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetUserState != null ? retObjectResetUserState.getClass() : "null", retObjectResetUserState_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -452,12 +465,13 @@ public class PersonalizationAdministration extends NetObject  {
             retObjectResetUserState = classType.Invoke("ResetUserState", dupParam0, dupParam1.getJCRefOut());
             return (int)retObjectResetUserState;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetUserState_ToString = retObjectResetUserState == null ? "null" : retObjectResetUserState.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectResetUserStateNumber = (java.lang.Number)retObjectResetUserState;
                 return retObjectResetUserStateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectResetUserState != null ? retObjectResetUserState.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetUserState != null ? retObjectResetUserState.getClass() : "null", retObjectResetUserState_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -472,12 +486,13 @@ public class PersonalizationAdministration extends NetObject  {
             retObjectResetUserState = classType.Invoke("ResetUserState", (java.lang.Object)usernames);
             return (int)retObjectResetUserState;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetUserState_ToString = retObjectResetUserState == null ? "null" : retObjectResetUserState.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectResetUserStateNumber = (java.lang.Number)retObjectResetUserState;
                 return retObjectResetUserStateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectResetUserState != null ? retObjectResetUserState.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetUserState != null ? retObjectResetUserState.getClass() : "null", retObjectResetUserState_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -492,12 +507,13 @@ public class PersonalizationAdministration extends NetObject  {
             retObjectResetUserState = classType.Invoke("ResetUserState", (java.lang.Object)dupParam0.getJCRefOut());
             return (int)retObjectResetUserState;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetUserState_ToString = retObjectResetUserState == null ? "null" : retObjectResetUserState.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectResetUserStateNumber = (java.lang.Number)retObjectResetUserState;
                 return retObjectResetUserStateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectResetUserState != null ? retObjectResetUserState.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetUserState != null ? retObjectResetUserState.getClass() : "null", retObjectResetUserState_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

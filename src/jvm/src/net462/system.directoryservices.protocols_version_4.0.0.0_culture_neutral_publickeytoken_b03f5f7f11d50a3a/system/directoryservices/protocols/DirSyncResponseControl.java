@@ -203,12 +203,13 @@ public class DirSyncResponseControl extends DirectoryControl  {
             retObjectResultSize = classInstance.Get("ResultSize");
             return (int)retObjectResultSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResultSize_ToString = retObjectResultSize == null ? "null" : retObjectResultSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectResultSizeNumber = (java.lang.Number)retObjectResultSize;
                 return retObjectResultSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectResultSize != null ? retObjectResultSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResultSize != null ? retObjectResultSize.getClass() : "null", retObjectResultSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

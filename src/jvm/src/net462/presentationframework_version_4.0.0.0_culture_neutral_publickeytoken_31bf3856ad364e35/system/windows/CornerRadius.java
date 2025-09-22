@@ -201,12 +201,13 @@ public class CornerRadius extends ValueType  {
             retObjectBottomLeft = classInstance.Get("BottomLeft");
             return (double)retObjectBottomLeft;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBottomLeft_ToString = retObjectBottomLeft == null ? "null" : retObjectBottomLeft.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBottomLeftNumber = (java.lang.Number)retObjectBottomLeft;
                 return retObjectBottomLeftNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectBottomLeft != null ? retObjectBottomLeft.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBottomLeft != null ? retObjectBottomLeft.getClass() : "null", retObjectBottomLeft_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -231,12 +232,13 @@ public class CornerRadius extends ValueType  {
             retObjectBottomRight = classInstance.Get("BottomRight");
             return (double)retObjectBottomRight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBottomRight_ToString = retObjectBottomRight == null ? "null" : retObjectBottomRight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBottomRightNumber = (java.lang.Number)retObjectBottomRight;
                 return retObjectBottomRightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectBottomRight != null ? retObjectBottomRight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBottomRight != null ? retObjectBottomRight.getClass() : "null", retObjectBottomRight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -261,12 +263,13 @@ public class CornerRadius extends ValueType  {
             retObjectTopLeft = classInstance.Get("TopLeft");
             return (double)retObjectTopLeft;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTopLeft_ToString = retObjectTopLeft == null ? "null" : retObjectTopLeft.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTopLeftNumber = (java.lang.Number)retObjectTopLeft;
                 return retObjectTopLeftNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectTopLeft != null ? retObjectTopLeft.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectTopLeft != null ? retObjectTopLeft.getClass() : "null", retObjectTopLeft_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -291,12 +294,13 @@ public class CornerRadius extends ValueType  {
             retObjectTopRight = classInstance.Get("TopRight");
             return (double)retObjectTopRight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTopRight_ToString = retObjectTopRight == null ? "null" : retObjectTopRight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTopRightNumber = (java.lang.Number)retObjectTopRight;
                 return retObjectTopRightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectTopRight != null ? retObjectTopRight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectTopRight != null ? retObjectTopRight.getClass() : "null", retObjectTopRight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

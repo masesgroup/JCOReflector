@@ -691,12 +691,13 @@ public class DataGrid extends Control  {
             retObjectCurrentRowIndex = classInstance.Get("CurrentRowIndex");
             return (int)retObjectCurrentRowIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCurrentRowIndex_ToString = retObjectCurrentRowIndex == null ? "null" : retObjectCurrentRowIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCurrentRowIndexNumber = (java.lang.Number)retObjectCurrentRowIndex;
                 return retObjectCurrentRowIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCurrentRowIndex != null ? retObjectCurrentRowIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentRowIndex != null ? retObjectCurrentRowIndex.getClass() : "null", retObjectCurrentRowIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -721,12 +722,13 @@ public class DataGrid extends Control  {
             retObjectFirstVisibleColumn = classInstance.Get("FirstVisibleColumn");
             return (int)retObjectFirstVisibleColumn;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFirstVisibleColumn_ToString = retObjectFirstVisibleColumn == null ? "null" : retObjectFirstVisibleColumn.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFirstVisibleColumnNumber = (java.lang.Number)retObjectFirstVisibleColumn;
                 return retObjectFirstVisibleColumnNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFirstVisibleColumn != null ? retObjectFirstVisibleColumn.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFirstVisibleColumn != null ? retObjectFirstVisibleColumn.getClass() : "null", retObjectFirstVisibleColumn_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -741,12 +743,13 @@ public class DataGrid extends Control  {
             retObjectPreferredColumnWidth = classInstance.Get("PreferredColumnWidth");
             return (int)retObjectPreferredColumnWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPreferredColumnWidth_ToString = retObjectPreferredColumnWidth == null ? "null" : retObjectPreferredColumnWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPreferredColumnWidthNumber = (java.lang.Number)retObjectPreferredColumnWidth;
                 return retObjectPreferredColumnWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPreferredColumnWidth != null ? retObjectPreferredColumnWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPreferredColumnWidth != null ? retObjectPreferredColumnWidth.getClass() : "null", retObjectPreferredColumnWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -771,12 +774,13 @@ public class DataGrid extends Control  {
             retObjectPreferredRowHeight = classInstance.Get("PreferredRowHeight");
             return (int)retObjectPreferredRowHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPreferredRowHeight_ToString = retObjectPreferredRowHeight == null ? "null" : retObjectPreferredRowHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPreferredRowHeightNumber = (java.lang.Number)retObjectPreferredRowHeight;
                 return retObjectPreferredRowHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPreferredRowHeight != null ? retObjectPreferredRowHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPreferredRowHeight != null ? retObjectPreferredRowHeight.getClass() : "null", retObjectPreferredRowHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -801,12 +805,13 @@ public class DataGrid extends Control  {
             retObjectRowHeaderWidth = classInstance.Get("RowHeaderWidth");
             return (int)retObjectRowHeaderWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowHeaderWidth_ToString = retObjectRowHeaderWidth == null ? "null" : retObjectRowHeaderWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRowHeaderWidthNumber = (java.lang.Number)retObjectRowHeaderWidth;
                 return retObjectRowHeaderWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRowHeaderWidth != null ? retObjectRowHeaderWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowHeaderWidth != null ? retObjectRowHeaderWidth.getClass() : "null", retObjectRowHeaderWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -831,12 +836,13 @@ public class DataGrid extends Control  {
             retObjectVisibleColumnCount = classInstance.Get("VisibleColumnCount");
             return (int)retObjectVisibleColumnCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVisibleColumnCount_ToString = retObjectVisibleColumnCount == null ? "null" : retObjectVisibleColumnCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVisibleColumnCountNumber = (java.lang.Number)retObjectVisibleColumnCount;
                 return retObjectVisibleColumnCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVisibleColumnCount != null ? retObjectVisibleColumnCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVisibleColumnCount != null ? retObjectVisibleColumnCount.getClass() : "null", retObjectVisibleColumnCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -851,12 +857,13 @@ public class DataGrid extends Control  {
             retObjectVisibleRowCount = classInstance.Get("VisibleRowCount");
             return (int)retObjectVisibleRowCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVisibleRowCount_ToString = retObjectVisibleRowCount == null ? "null" : retObjectVisibleRowCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVisibleRowCountNumber = (java.lang.Number)retObjectVisibleRowCount;
                 return retObjectVisibleRowCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVisibleRowCount != null ? retObjectVisibleRowCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVisibleRowCount != null ? retObjectVisibleRowCount.getClass() : "null", retObjectVisibleRowCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

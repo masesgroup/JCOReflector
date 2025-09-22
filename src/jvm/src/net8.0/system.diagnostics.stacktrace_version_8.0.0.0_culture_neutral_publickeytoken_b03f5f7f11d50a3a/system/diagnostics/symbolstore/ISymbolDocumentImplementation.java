@@ -195,12 +195,13 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
             retObjectFindClosestLine = classInstance.Invoke("FindClosestLine", line);
             return (int)retObjectFindClosestLine;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFindClosestLine_ToString = retObjectFindClosestLine == null ? "null" : retObjectFindClosestLine.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindClosestLineNumber = (java.lang.Number)retObjectFindClosestLine;
                 return retObjectFindClosestLineNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindClosestLine != null ? retObjectFindClosestLine.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindClosestLine != null ? retObjectFindClosestLine.getClass() : "null", retObjectFindClosestLine_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -233,12 +234,13 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
             retObjectSourceLength = classInstance.Get("SourceLength");
             return (int)retObjectSourceLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSourceLength_ToString = retObjectSourceLength == null ? "null" : retObjectSourceLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSourceLengthNumber = (java.lang.Number)retObjectSourceLength;
                 return retObjectSourceLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSourceLength != null ? retObjectSourceLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSourceLength != null ? retObjectSourceLength.getClass() : "null", retObjectSourceLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

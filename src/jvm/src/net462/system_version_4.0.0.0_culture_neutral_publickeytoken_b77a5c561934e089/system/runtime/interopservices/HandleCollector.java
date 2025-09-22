@@ -205,12 +205,13 @@ public class HandleCollector extends NetObject  {
             retObjectCount = classInstance.Get("Count");
             return (int)retObjectCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
                 return retObjectCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -225,12 +226,13 @@ public class HandleCollector extends NetObject  {
             retObjectInitialThreshold = classInstance.Get("InitialThreshold");
             return (int)retObjectInitialThreshold;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInitialThreshold_ToString = retObjectInitialThreshold == null ? "null" : retObjectInitialThreshold.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInitialThresholdNumber = (java.lang.Number)retObjectInitialThreshold;
                 return retObjectInitialThresholdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectInitialThreshold != null ? retObjectInitialThreshold.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectInitialThreshold != null ? retObjectInitialThreshold.getClass() : "null", retObjectInitialThreshold_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -245,12 +247,13 @@ public class HandleCollector extends NetObject  {
             retObjectMaximumThreshold = classInstance.Get("MaximumThreshold");
             return (int)retObjectMaximumThreshold;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumThreshold_ToString = retObjectMaximumThreshold == null ? "null" : retObjectMaximumThreshold.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumThresholdNumber = (java.lang.Number)retObjectMaximumThreshold;
                 return retObjectMaximumThresholdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumThreshold != null ? retObjectMaximumThreshold.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumThreshold != null ? retObjectMaximumThreshold.getClass() : "null", retObjectMaximumThreshold_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

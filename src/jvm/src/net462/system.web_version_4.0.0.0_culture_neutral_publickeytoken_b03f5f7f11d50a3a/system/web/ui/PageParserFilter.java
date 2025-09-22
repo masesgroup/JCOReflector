@@ -331,12 +331,13 @@ public class PageParserFilter extends NetObject  {
             retObjectNumberOfControlsAllowed = classInstance.Get("NumberOfControlsAllowed");
             return (int)retObjectNumberOfControlsAllowed;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNumberOfControlsAllowed_ToString = retObjectNumberOfControlsAllowed == null ? "null" : retObjectNumberOfControlsAllowed.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNumberOfControlsAllowedNumber = (java.lang.Number)retObjectNumberOfControlsAllowed;
                 return retObjectNumberOfControlsAllowedNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNumberOfControlsAllowed != null ? retObjectNumberOfControlsAllowed.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumberOfControlsAllowed != null ? retObjectNumberOfControlsAllowed.getClass() : "null", retObjectNumberOfControlsAllowed_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -351,12 +352,13 @@ public class PageParserFilter extends NetObject  {
             retObjectNumberOfDirectDependenciesAllowed = classInstance.Get("NumberOfDirectDependenciesAllowed");
             return (int)retObjectNumberOfDirectDependenciesAllowed;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNumberOfDirectDependenciesAllowed_ToString = retObjectNumberOfDirectDependenciesAllowed == null ? "null" : retObjectNumberOfDirectDependenciesAllowed.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNumberOfDirectDependenciesAllowedNumber = (java.lang.Number)retObjectNumberOfDirectDependenciesAllowed;
                 return retObjectNumberOfDirectDependenciesAllowedNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNumberOfDirectDependenciesAllowed != null ? retObjectNumberOfDirectDependenciesAllowed.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumberOfDirectDependenciesAllowed != null ? retObjectNumberOfDirectDependenciesAllowed.getClass() : "null", retObjectNumberOfDirectDependenciesAllowed_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -371,12 +373,13 @@ public class PageParserFilter extends NetObject  {
             retObjectTotalNumberOfDependenciesAllowed = classInstance.Get("TotalNumberOfDependenciesAllowed");
             return (int)retObjectTotalNumberOfDependenciesAllowed;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTotalNumberOfDependenciesAllowed_ToString = retObjectTotalNumberOfDependenciesAllowed == null ? "null" : retObjectTotalNumberOfDependenciesAllowed.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTotalNumberOfDependenciesAllowedNumber = (java.lang.Number)retObjectTotalNumberOfDependenciesAllowed;
                 return retObjectTotalNumberOfDependenciesAllowedNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTotalNumberOfDependenciesAllowed != null ? retObjectTotalNumberOfDependenciesAllowed.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTotalNumberOfDependenciesAllowed != null ? retObjectTotalNumberOfDependenciesAllowed.getClass() : "null", retObjectTotalNumberOfDependenciesAllowed_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

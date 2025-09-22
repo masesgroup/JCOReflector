@@ -183,12 +183,13 @@ public class Block extends TextElement  {
             retObjectGetLineHeight = classType.Invoke("GetLineHeight", element == null ? null : element.getJCOInstance());
             return (double)retObjectGetLineHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLineHeight_ToString = retObjectGetLineHeight == null ? "null" : retObjectGetLineHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetLineHeightNumber = (java.lang.Number)retObjectGetLineHeight;
                 return retObjectGetLineHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetLineHeight != null ? retObjectGetLineHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetLineHeight != null ? retObjectGetLineHeight.getClass() : "null", retObjectGetLineHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -349,12 +350,13 @@ public class Block extends TextElement  {
             retObjectLineHeight = classInstance.Get("LineHeight");
             return (double)retObjectLineHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLineHeight_ToString = retObjectLineHeight == null ? "null" : retObjectLineHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLineHeightNumber = (java.lang.Number)retObjectLineHeight;
                 return retObjectLineHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectLineHeight != null ? retObjectLineHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLineHeight != null ? retObjectLineHeight.getClass() : "null", retObjectLineHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

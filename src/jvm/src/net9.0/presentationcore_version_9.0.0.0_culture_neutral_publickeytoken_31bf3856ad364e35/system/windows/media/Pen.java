@@ -217,12 +217,13 @@ public class Pen extends Animatable  {
             retObjectMiterLimit = classInstance.Get("MiterLimit");
             return (double)retObjectMiterLimit;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMiterLimit_ToString = retObjectMiterLimit == null ? "null" : retObjectMiterLimit.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMiterLimitNumber = (java.lang.Number)retObjectMiterLimit;
                 return retObjectMiterLimitNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMiterLimit != null ? retObjectMiterLimit.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMiterLimit != null ? retObjectMiterLimit.getClass() : "null", retObjectMiterLimit_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -247,12 +248,13 @@ public class Pen extends Animatable  {
             retObjectThickness = classInstance.Get("Thickness");
             return (double)retObjectThickness;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectThickness_ToString = retObjectThickness == null ? "null" : retObjectThickness.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectThicknessNumber = (java.lang.Number)retObjectThickness;
                 return retObjectThicknessNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectThickness != null ? retObjectThickness.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectThickness != null ? retObjectThickness.getClass() : "null", retObjectThickness_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

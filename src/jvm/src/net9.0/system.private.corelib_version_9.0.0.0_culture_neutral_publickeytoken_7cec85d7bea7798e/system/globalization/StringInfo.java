@@ -178,12 +178,13 @@ public class StringInfo extends NetObject  {
             retObjectGetNextTextElementLength = classType.Invoke("GetNextTextElementLength", str, index);
             return (int)retObjectGetNextTextElementLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetNextTextElementLength_ToString = retObjectGetNextTextElementLength == null ? "null" : retObjectGetNextTextElementLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetNextTextElementLengthNumber = (java.lang.Number)retObjectGetNextTextElementLength;
                 return retObjectGetNextTextElementLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetNextTextElementLength != null ? retObjectGetNextTextElementLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNextTextElementLength != null ? retObjectGetNextTextElementLength.getClass() : "null", retObjectGetNextTextElementLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -198,12 +199,13 @@ public class StringInfo extends NetObject  {
             retObjectGetNextTextElementLength = classType.Invoke("GetNextTextElementLength", str);
             return (int)retObjectGetNextTextElementLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetNextTextElementLength_ToString = retObjectGetNextTextElementLength == null ? "null" : retObjectGetNextTextElementLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetNextTextElementLengthNumber = (java.lang.Number)retObjectGetNextTextElementLength;
                 return retObjectGetNextTextElementLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetNextTextElementLength != null ? retObjectGetNextTextElementLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNextTextElementLength != null ? retObjectGetNextTextElementLength.getClass() : "null", retObjectGetNextTextElementLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -331,12 +333,13 @@ public class StringInfo extends NetObject  {
             retObjectLengthInTextElements = classInstance.Get("LengthInTextElements");
             return (int)retObjectLengthInTextElements;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLengthInTextElements_ToString = retObjectLengthInTextElements == null ? "null" : retObjectLengthInTextElements.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLengthInTextElementsNumber = (java.lang.Number)retObjectLengthInTextElements;
                 return retObjectLengthInTextElementsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLengthInTextElements != null ? retObjectLengthInTextElements.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLengthInTextElements != null ? retObjectLengthInTextElements.getClass() : "null", retObjectLengthInTextElements_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

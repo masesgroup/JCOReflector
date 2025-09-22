@@ -344,12 +344,13 @@ public class HttpListenerResponse extends NetObject implements system.IDisposabl
             retObjectStatusCode = classInstance.Get("StatusCode");
             return (int)retObjectStatusCode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStatusCode_ToString = retObjectStatusCode == null ? "null" : retObjectStatusCode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStatusCodeNumber = (java.lang.Number)retObjectStatusCode;
                 return retObjectStatusCodeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStatusCode != null ? retObjectStatusCode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStatusCode != null ? retObjectStatusCode.getClass() : "null", retObjectStatusCode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -374,12 +375,13 @@ public class HttpListenerResponse extends NetObject implements system.IDisposabl
             retObjectContentLength64 = classInstance.Get("ContentLength64");
             return (long)retObjectContentLength64;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectContentLength64_ToString = retObjectContentLength64 == null ? "null" : retObjectContentLength64.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectContentLength64Number = (java.lang.Number)retObjectContentLength64;
                 return retObjectContentLength64Number.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectContentLength64 != null ? retObjectContentLength64.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectContentLength64 != null ? retObjectContentLength64.getClass() : "null", retObjectContentLength64_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

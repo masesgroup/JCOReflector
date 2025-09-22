@@ -240,12 +240,13 @@ public class Version extends NetObject implements system.IFormattable {
             retObjectCompareTo = classInstance.Invoke("CompareTo", version == null ? null : version.getJCOInstance());
             return (int)retObjectCompareTo;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
                 return retObjectCompareToNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -260,12 +261,13 @@ public class Version extends NetObject implements system.IFormattable {
             retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
             return (int)retObjectCompareTo;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
                 return retObjectCompareToNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -337,12 +339,13 @@ public class Version extends NetObject implements system.IFormattable {
             retObjectMajorRevision = classInstance.Get("MajorRevision");
             return (short)retObjectMajorRevision;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMajorRevision_ToString = retObjectMajorRevision == null ? "null" : retObjectMajorRevision.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMajorRevisionNumber = (java.lang.Number)retObjectMajorRevision;
                 return retObjectMajorRevisionNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectMajorRevision != null ? retObjectMajorRevision.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectMajorRevision != null ? retObjectMajorRevision.getClass() : "null", retObjectMajorRevision_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -357,12 +360,13 @@ public class Version extends NetObject implements system.IFormattable {
             retObjectMinorRevision = classInstance.Get("MinorRevision");
             return (short)retObjectMinorRevision;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinorRevision_ToString = retObjectMinorRevision == null ? "null" : retObjectMinorRevision.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinorRevisionNumber = (java.lang.Number)retObjectMinorRevision;
                 return retObjectMinorRevisionNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectMinorRevision != null ? retObjectMinorRevision.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectMinorRevision != null ? retObjectMinorRevision.getClass() : "null", retObjectMinorRevision_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -377,12 +381,13 @@ public class Version extends NetObject implements system.IFormattable {
             retObjectBuild = classInstance.Get("Build");
             return (int)retObjectBuild;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBuild_ToString = retObjectBuild == null ? "null" : retObjectBuild.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBuildNumber = (java.lang.Number)retObjectBuild;
                 return retObjectBuildNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBuild != null ? retObjectBuild.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBuild != null ? retObjectBuild.getClass() : "null", retObjectBuild_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -397,12 +402,13 @@ public class Version extends NetObject implements system.IFormattable {
             retObjectMajor = classInstance.Get("Major");
             return (int)retObjectMajor;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMajor_ToString = retObjectMajor == null ? "null" : retObjectMajor.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMajorNumber = (java.lang.Number)retObjectMajor;
                 return retObjectMajorNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMajor != null ? retObjectMajor.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMajor != null ? retObjectMajor.getClass() : "null", retObjectMajor_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -417,12 +423,13 @@ public class Version extends NetObject implements system.IFormattable {
             retObjectMinor = classInstance.Get("Minor");
             return (int)retObjectMinor;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinor_ToString = retObjectMinor == null ? "null" : retObjectMinor.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinorNumber = (java.lang.Number)retObjectMinor;
                 return retObjectMinorNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinor != null ? retObjectMinor.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinor != null ? retObjectMinor.getClass() : "null", retObjectMinor_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -437,12 +444,13 @@ public class Version extends NetObject implements system.IFormattable {
             retObjectRevision = classInstance.Get("Revision");
             return (int)retObjectRevision;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRevision_ToString = retObjectRevision == null ? "null" : retObjectRevision.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRevisionNumber = (java.lang.Number)retObjectRevision;
                 return retObjectRevisionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRevision != null ? retObjectRevision.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRevision != null ? retObjectRevision.getClass() : "null", retObjectRevision_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

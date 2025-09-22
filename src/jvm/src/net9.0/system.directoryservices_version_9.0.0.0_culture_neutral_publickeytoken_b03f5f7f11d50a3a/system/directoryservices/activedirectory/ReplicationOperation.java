@@ -167,12 +167,13 @@ public class ReplicationOperation extends NetObject  {
             retObjectOperationNumber = classInstance.Get("OperationNumber");
             return (int)retObjectOperationNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOperationNumber_ToString = retObjectOperationNumber == null ? "null" : retObjectOperationNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOperationNumberNumber = (java.lang.Number)retObjectOperationNumber;
                 return retObjectOperationNumberNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOperationNumber != null ? retObjectOperationNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOperationNumber != null ? retObjectOperationNumber.getClass() : "null", retObjectOperationNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -187,12 +188,13 @@ public class ReplicationOperation extends NetObject  {
             retObjectPriority = classInstance.Get("Priority");
             return (int)retObjectPriority;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPriority_ToString = retObjectPriority == null ? "null" : retObjectPriority.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPriorityNumber = (java.lang.Number)retObjectPriority;
                 return retObjectPriorityNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPriority != null ? retObjectPriority.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPriority != null ? retObjectPriority.getClass() : "null", retObjectPriority_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

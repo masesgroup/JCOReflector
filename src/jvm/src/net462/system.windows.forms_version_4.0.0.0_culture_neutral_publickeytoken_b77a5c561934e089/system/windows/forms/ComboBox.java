@@ -183,12 +183,13 @@ public class ComboBox extends ListControl  {
             retObjectFindString = classInstance.Invoke("FindString", s);
             return (int)retObjectFindString;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFindString_ToString = retObjectFindString == null ? "null" : retObjectFindString.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindStringNumber = (java.lang.Number)retObjectFindString;
                 return retObjectFindStringNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindString != null ? retObjectFindString.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindString != null ? retObjectFindString.getClass() : "null", retObjectFindString_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -203,12 +204,13 @@ public class ComboBox extends ListControl  {
             retObjectFindString = classInstance.Invoke("FindString", s, startIndex);
             return (int)retObjectFindString;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFindString_ToString = retObjectFindString == null ? "null" : retObjectFindString.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindStringNumber = (java.lang.Number)retObjectFindString;
                 return retObjectFindStringNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindString != null ? retObjectFindString.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindString != null ? retObjectFindString.getClass() : "null", retObjectFindString_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -223,12 +225,13 @@ public class ComboBox extends ListControl  {
             retObjectFindStringExact = classInstance.Invoke("FindStringExact", s);
             return (int)retObjectFindStringExact;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFindStringExact_ToString = retObjectFindStringExact == null ? "null" : retObjectFindStringExact.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindStringExactNumber = (java.lang.Number)retObjectFindStringExact;
                 return retObjectFindStringExactNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindStringExact != null ? retObjectFindStringExact.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindStringExact != null ? retObjectFindStringExact.getClass() : "null", retObjectFindStringExact_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -243,12 +246,13 @@ public class ComboBox extends ListControl  {
             retObjectFindStringExact = classInstance.Invoke("FindStringExact", s, startIndex);
             return (int)retObjectFindStringExact;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFindStringExact_ToString = retObjectFindStringExact == null ? "null" : retObjectFindStringExact.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindStringExactNumber = (java.lang.Number)retObjectFindStringExact;
                 return retObjectFindStringExactNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindStringExact != null ? retObjectFindStringExact.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindStringExact != null ? retObjectFindStringExact.getClass() : "null", retObjectFindStringExact_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -263,12 +267,13 @@ public class ComboBox extends ListControl  {
             retObjectGetItemHeight = classInstance.Invoke("GetItemHeight", index);
             return (int)retObjectGetItemHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetItemHeight_ToString = retObjectGetItemHeight == null ? "null" : retObjectGetItemHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetItemHeightNumber = (java.lang.Number)retObjectGetItemHeight;
                 return retObjectGetItemHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetItemHeight != null ? retObjectGetItemHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetItemHeight != null ? retObjectGetItemHeight.getClass() : "null", retObjectGetItemHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -409,12 +414,13 @@ public class ComboBox extends ListControl  {
             retObjectDropDownHeight = classInstance.Get("DropDownHeight");
             return (int)retObjectDropDownHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDropDownHeight_ToString = retObjectDropDownHeight == null ? "null" : retObjectDropDownHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDropDownHeightNumber = (java.lang.Number)retObjectDropDownHeight;
                 return retObjectDropDownHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDropDownHeight != null ? retObjectDropDownHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDropDownHeight != null ? retObjectDropDownHeight.getClass() : "null", retObjectDropDownHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -439,12 +445,13 @@ public class ComboBox extends ListControl  {
             retObjectDropDownWidth = classInstance.Get("DropDownWidth");
             return (int)retObjectDropDownWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDropDownWidth_ToString = retObjectDropDownWidth == null ? "null" : retObjectDropDownWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDropDownWidthNumber = (java.lang.Number)retObjectDropDownWidth;
                 return retObjectDropDownWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDropDownWidth != null ? retObjectDropDownWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDropDownWidth != null ? retObjectDropDownWidth.getClass() : "null", retObjectDropDownWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -469,12 +476,13 @@ public class ComboBox extends ListControl  {
             retObjectItemHeight = classInstance.Get("ItemHeight");
             return (int)retObjectItemHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectItemHeight_ToString = retObjectItemHeight == null ? "null" : retObjectItemHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectItemHeightNumber = (java.lang.Number)retObjectItemHeight;
                 return retObjectItemHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectItemHeight != null ? retObjectItemHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectItemHeight != null ? retObjectItemHeight.getClass() : "null", retObjectItemHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -499,12 +507,13 @@ public class ComboBox extends ListControl  {
             retObjectMaxDropDownItems = classInstance.Get("MaxDropDownItems");
             return (int)retObjectMaxDropDownItems;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxDropDownItems_ToString = retObjectMaxDropDownItems == null ? "null" : retObjectMaxDropDownItems.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxDropDownItemsNumber = (java.lang.Number)retObjectMaxDropDownItems;
                 return retObjectMaxDropDownItemsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxDropDownItems != null ? retObjectMaxDropDownItems.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxDropDownItems != null ? retObjectMaxDropDownItems.getClass() : "null", retObjectMaxDropDownItems_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -529,12 +538,13 @@ public class ComboBox extends ListControl  {
             retObjectMaxLength = classInstance.Get("MaxLength");
             return (int)retObjectMaxLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxLength_ToString = retObjectMaxLength == null ? "null" : retObjectMaxLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxLengthNumber = (java.lang.Number)retObjectMaxLength;
                 return retObjectMaxLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null", retObjectMaxLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -559,12 +569,13 @@ public class ComboBox extends ListControl  {
             retObjectPreferredHeight = classInstance.Get("PreferredHeight");
             return (int)retObjectPreferredHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPreferredHeight_ToString = retObjectPreferredHeight == null ? "null" : retObjectPreferredHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPreferredHeightNumber = (java.lang.Number)retObjectPreferredHeight;
                 return retObjectPreferredHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPreferredHeight != null ? retObjectPreferredHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPreferredHeight != null ? retObjectPreferredHeight.getClass() : "null", retObjectPreferredHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -579,12 +590,13 @@ public class ComboBox extends ListControl  {
             retObjectSelectionLength = classInstance.Get("SelectionLength");
             return (int)retObjectSelectionLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectionLength_ToString = retObjectSelectionLength == null ? "null" : retObjectSelectionLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSelectionLengthNumber = (java.lang.Number)retObjectSelectionLength;
                 return retObjectSelectionLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSelectionLength != null ? retObjectSelectionLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectionLength != null ? retObjectSelectionLength.getClass() : "null", retObjectSelectionLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -609,12 +621,13 @@ public class ComboBox extends ListControl  {
             retObjectSelectionStart = classInstance.Get("SelectionStart");
             return (int)retObjectSelectionStart;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectionStart_ToString = retObjectSelectionStart == null ? "null" : retObjectSelectionStart.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSelectionStartNumber = (java.lang.Number)retObjectSelectionStart;
                 return retObjectSelectionStartNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSelectionStart != null ? retObjectSelectionStart.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectionStart != null ? retObjectSelectionStart.getClass() : "null", retObjectSelectionStart_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

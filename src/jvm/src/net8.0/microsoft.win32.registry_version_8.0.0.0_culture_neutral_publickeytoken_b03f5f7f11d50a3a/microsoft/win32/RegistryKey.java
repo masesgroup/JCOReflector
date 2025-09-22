@@ -701,12 +701,13 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
             retObjectSubKeyCount = classInstance.Get("SubKeyCount");
             return (int)retObjectSubKeyCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSubKeyCount_ToString = retObjectSubKeyCount == null ? "null" : retObjectSubKeyCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSubKeyCountNumber = (java.lang.Number)retObjectSubKeyCount;
                 return retObjectSubKeyCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSubKeyCount != null ? retObjectSubKeyCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSubKeyCount != null ? retObjectSubKeyCount.getClass() : "null", retObjectSubKeyCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -721,12 +722,13 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
             retObjectValueCount = classInstance.Get("ValueCount");
             return (int)retObjectValueCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectValueCount_ToString = retObjectValueCount == null ? "null" : retObjectValueCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectValueCountNumber = (java.lang.Number)retObjectValueCount;
                 return retObjectValueCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectValueCount != null ? retObjectValueCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectValueCount != null ? retObjectValueCount.getClass() : "null", retObjectValueCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

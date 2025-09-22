@@ -205,12 +205,13 @@ public class XsltLibrary extends NetObject  {
             retObjectRegisterDecimalFormatter = classInstance.Invoke("RegisterDecimalFormatter", formatPicture, infinitySymbol, nanSymbol, characters);
             return (double)retObjectRegisterDecimalFormatter;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRegisterDecimalFormatter_ToString = retObjectRegisterDecimalFormatter == null ? "null" : retObjectRegisterDecimalFormatter.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRegisterDecimalFormatterNumber = (java.lang.Number)retObjectRegisterDecimalFormatter;
                 return retObjectRegisterDecimalFormatterNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectRegisterDecimalFormatter != null ? retObjectRegisterDecimalFormatter.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRegisterDecimalFormatter != null ? retObjectRegisterDecimalFormatter.getClass() : "null", retObjectRegisterDecimalFormatter_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -225,12 +226,13 @@ public class XsltLibrary extends NetObject  {
             retObjectCheckScriptNamespace = classInstance.Invoke("CheckScriptNamespace", nsUri);
             return (int)retObjectCheckScriptNamespace;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCheckScriptNamespace_ToString = retObjectCheckScriptNamespace == null ? "null" : retObjectCheckScriptNamespace.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCheckScriptNamespaceNumber = (java.lang.Number)retObjectCheckScriptNamespace;
                 return retObjectCheckScriptNamespaceNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCheckScriptNamespace != null ? retObjectCheckScriptNamespace.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCheckScriptNamespace != null ? retObjectCheckScriptNamespace.getClass() : "null", retObjectCheckScriptNamespace_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -245,12 +247,13 @@ public class XsltLibrary extends NetObject  {
             retObjectLangToLcid = classInstance.Invoke("LangToLcid", lang, forwardCompatibility);
             return (int)retObjectLangToLcid;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLangToLcid_ToString = retObjectLangToLcid == null ? "null" : retObjectLangToLcid.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLangToLcidNumber = (java.lang.Number)retObjectLangToLcid;
                 return retObjectLangToLcidNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLangToLcid != null ? retObjectLangToLcid.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLangToLcid != null ? retObjectLangToLcid.getClass() : "null", retObjectLangToLcid_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -265,12 +268,13 @@ public class XsltLibrary extends NetObject  {
             retObjectRegisterDecimalFormat = classInstance.Invoke("RegisterDecimalFormat", name == null ? null : name.getJCOInstance(), infinitySymbol, nanSymbol, characters);
             return (int)retObjectRegisterDecimalFormat;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRegisterDecimalFormat_ToString = retObjectRegisterDecimalFormat == null ? "null" : retObjectRegisterDecimalFormat.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRegisterDecimalFormatNumber = (java.lang.Number)retObjectRegisterDecimalFormat;
                 return retObjectRegisterDecimalFormatNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRegisterDecimalFormat != null ? retObjectRegisterDecimalFormat.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRegisterDecimalFormat != null ? retObjectRegisterDecimalFormat.getClass() : "null", retObjectRegisterDecimalFormat_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

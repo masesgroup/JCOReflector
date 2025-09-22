@@ -277,12 +277,13 @@ public class PrintPreviewControl extends Control  {
             retObjectZoom = classInstance.Get("Zoom");
             return (double)retObjectZoom;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectZoom_ToString = retObjectZoom == null ? "null" : retObjectZoom.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectZoomNumber = (java.lang.Number)retObjectZoom;
                 return retObjectZoomNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectZoom != null ? retObjectZoom.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectZoom != null ? retObjectZoom.getClass() : "null", retObjectZoom_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -307,12 +308,13 @@ public class PrintPreviewControl extends Control  {
             retObjectColumns = classInstance.Get("Columns");
             return (int)retObjectColumns;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumns_ToString = retObjectColumns == null ? "null" : retObjectColumns.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectColumnsNumber = (java.lang.Number)retObjectColumns;
                 return retObjectColumnsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectColumns != null ? retObjectColumns.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumns != null ? retObjectColumns.getClass() : "null", retObjectColumns_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -337,12 +339,13 @@ public class PrintPreviewControl extends Control  {
             retObjectRows = classInstance.Get("Rows");
             return (int)retObjectRows;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRows_ToString = retObjectRows == null ? "null" : retObjectRows.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRowsNumber = (java.lang.Number)retObjectRows;
                 return retObjectRowsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRows != null ? retObjectRows.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRows != null ? retObjectRows.getClass() : "null", retObjectRows_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -367,12 +370,13 @@ public class PrintPreviewControl extends Control  {
             retObjectStartPage = classInstance.Get("StartPage");
             return (int)retObjectStartPage;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartPage_ToString = retObjectStartPage == null ? "null" : retObjectStartPage.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStartPageNumber = (java.lang.Number)retObjectStartPage;
                 return retObjectStartPageNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStartPage != null ? retObjectStartPage.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartPage != null ? retObjectStartPage.getClass() : "null", retObjectStartPage_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

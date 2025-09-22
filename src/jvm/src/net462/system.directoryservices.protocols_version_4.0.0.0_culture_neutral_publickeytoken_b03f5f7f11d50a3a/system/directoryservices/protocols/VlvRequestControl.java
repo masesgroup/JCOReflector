@@ -291,12 +291,13 @@ public class VlvRequestControl extends DirectoryControl  {
             retObjectAfterCount = classInstance.Get("AfterCount");
             return (int)retObjectAfterCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAfterCount_ToString = retObjectAfterCount == null ? "null" : retObjectAfterCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAfterCountNumber = (java.lang.Number)retObjectAfterCount;
                 return retObjectAfterCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAfterCount != null ? retObjectAfterCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAfterCount != null ? retObjectAfterCount.getClass() : "null", retObjectAfterCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -321,12 +322,13 @@ public class VlvRequestControl extends DirectoryControl  {
             retObjectBeforeCount = classInstance.Get("BeforeCount");
             return (int)retObjectBeforeCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBeforeCount_ToString = retObjectBeforeCount == null ? "null" : retObjectBeforeCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBeforeCountNumber = (java.lang.Number)retObjectBeforeCount;
                 return retObjectBeforeCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBeforeCount != null ? retObjectBeforeCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBeforeCount != null ? retObjectBeforeCount.getClass() : "null", retObjectBeforeCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -351,12 +353,13 @@ public class VlvRequestControl extends DirectoryControl  {
             retObjectEstimateCount = classInstance.Get("EstimateCount");
             return (int)retObjectEstimateCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEstimateCount_ToString = retObjectEstimateCount == null ? "null" : retObjectEstimateCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEstimateCountNumber = (java.lang.Number)retObjectEstimateCount;
                 return retObjectEstimateCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEstimateCount != null ? retObjectEstimateCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEstimateCount != null ? retObjectEstimateCount.getClass() : "null", retObjectEstimateCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -381,12 +384,13 @@ public class VlvRequestControl extends DirectoryControl  {
             retObjectOffset = classInstance.Get("Offset");
             return (int)retObjectOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffset_ToString = retObjectOffset == null ? "null" : retObjectOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOffsetNumber = (java.lang.Number)retObjectOffset;
                 return retObjectOffsetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null", retObjectOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

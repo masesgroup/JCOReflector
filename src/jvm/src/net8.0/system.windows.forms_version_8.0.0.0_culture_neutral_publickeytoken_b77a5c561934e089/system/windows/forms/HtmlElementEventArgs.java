@@ -259,12 +259,13 @@ public class HtmlElementEventArgs extends EventArgs  {
             retObjectKeyPressedCode = classInstance.Get("KeyPressedCode");
             return (int)retObjectKeyPressedCode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKeyPressedCode_ToString = retObjectKeyPressedCode == null ? "null" : retObjectKeyPressedCode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectKeyPressedCodeNumber = (java.lang.Number)retObjectKeyPressedCode;
                 return retObjectKeyPressedCodeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectKeyPressedCode != null ? retObjectKeyPressedCode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeyPressedCode != null ? retObjectKeyPressedCode.getClass() : "null", retObjectKeyPressedCode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

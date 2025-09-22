@@ -383,12 +383,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
             retObjectCount = classInstance.Get("Count");
             return (int)retObjectCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
                 return retObjectCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -403,12 +404,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
             retObjectCurrentPageIndex = classInstance.Get("CurrentPageIndex");
             return (int)retObjectCurrentPageIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCurrentPageIndex_ToString = retObjectCurrentPageIndex == null ? "null" : retObjectCurrentPageIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCurrentPageIndexNumber = (java.lang.Number)retObjectCurrentPageIndex;
                 return retObjectCurrentPageIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCurrentPageIndex != null ? retObjectCurrentPageIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentPageIndex != null ? retObjectCurrentPageIndex.getClass() : "null", retObjectCurrentPageIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -433,12 +435,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
             retObjectDataSourceCount = classInstance.Get("DataSourceCount");
             return (int)retObjectDataSourceCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDataSourceCount_ToString = retObjectDataSourceCount == null ? "null" : retObjectDataSourceCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDataSourceCountNumber = (java.lang.Number)retObjectDataSourceCount;
                 return retObjectDataSourceCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDataSourceCount != null ? retObjectDataSourceCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDataSourceCount != null ? retObjectDataSourceCount.getClass() : "null", retObjectDataSourceCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -453,12 +456,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
             retObjectFirstIndexInPage = classInstance.Get("FirstIndexInPage");
             return (int)retObjectFirstIndexInPage;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFirstIndexInPage_ToString = retObjectFirstIndexInPage == null ? "null" : retObjectFirstIndexInPage.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFirstIndexInPageNumber = (java.lang.Number)retObjectFirstIndexInPage;
                 return retObjectFirstIndexInPageNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFirstIndexInPage != null ? retObjectFirstIndexInPage.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFirstIndexInPage != null ? retObjectFirstIndexInPage.getClass() : "null", retObjectFirstIndexInPage_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -473,12 +477,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
             retObjectPageCount = classInstance.Get("PageCount");
             return (int)retObjectPageCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageCount_ToString = retObjectPageCount == null ? "null" : retObjectPageCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPageCountNumber = (java.lang.Number)retObjectPageCount;
                 return retObjectPageCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageCount != null ? retObjectPageCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageCount != null ? retObjectPageCount.getClass() : "null", retObjectPageCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -493,12 +498,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
             retObjectPageSize = classInstance.Get("PageSize");
             return (int)retObjectPageSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageSize_ToString = retObjectPageSize == null ? "null" : retObjectPageSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPageSizeNumber = (java.lang.Number)retObjectPageSize;
                 return retObjectPageSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageSize != null ? retObjectPageSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageSize != null ? retObjectPageSize.getClass() : "null", retObjectPageSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -523,12 +529,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
             retObjectVirtualCount = classInstance.Get("VirtualCount");
             return (int)retObjectVirtualCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVirtualCount_ToString = retObjectVirtualCount == null ? "null" : retObjectVirtualCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVirtualCountNumber = (java.lang.Number)retObjectVirtualCount;
                 return retObjectVirtualCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVirtualCount != null ? retObjectVirtualCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVirtualCount != null ? retObjectVirtualCount.getClass() : "null", retObjectVirtualCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

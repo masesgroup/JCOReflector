@@ -222,12 +222,13 @@ public class ObjectCache extends NetObjectEnumerable  {
             retObjectGetCount = classInstance.Invoke("GetCount", regionName);
             return (long)retObjectGetCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCount_ToString = retObjectGetCount == null ? "null" : retObjectGetCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetCountNumber = (java.lang.Number)retObjectGetCount;
                 return retObjectGetCountNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetCount != null ? retObjectGetCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetCount != null ? retObjectGetCount.getClass() : "null", retObjectGetCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

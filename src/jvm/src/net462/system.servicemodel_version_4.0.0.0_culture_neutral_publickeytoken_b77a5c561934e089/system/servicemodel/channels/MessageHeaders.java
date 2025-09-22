@@ -246,12 +246,13 @@ public class MessageHeaders extends NetObjectEnumerable  {
             retObjectFindHeader = classInstance.Invoke("FindHeader", name, ns);
             return (int)retObjectFindHeader;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFindHeader_ToString = retObjectFindHeader == null ? "null" : retObjectFindHeader.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindHeaderNumber = (java.lang.Number)retObjectFindHeader;
                 return retObjectFindHeaderNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindHeader != null ? retObjectFindHeader.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindHeader != null ? retObjectFindHeader.getClass() : "null", retObjectFindHeader_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -266,12 +267,13 @@ public class MessageHeaders extends NetObjectEnumerable  {
             retObjectFindHeader = classInstance.Invoke("FindHeader", name, ns, actors);
             return (int)retObjectFindHeader;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFindHeader_ToString = retObjectFindHeader == null ? "null" : retObjectFindHeader.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindHeaderNumber = (java.lang.Number)retObjectFindHeader;
                 return retObjectFindHeaderNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindHeader != null ? retObjectFindHeader.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindHeader != null ? retObjectFindHeader.getClass() : "null", retObjectFindHeader_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -286,12 +288,13 @@ public class MessageHeaders extends NetObjectEnumerable  {
             retObjectFindHeader = classInstance.Invoke("FindHeader", dupParam0, dupParam1, dupParam2.getJCRefOut());
             return (int)retObjectFindHeader;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFindHeader_ToString = retObjectFindHeader == null ? "null" : retObjectFindHeader.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindHeaderNumber = (java.lang.Number)retObjectFindHeader;
                 return retObjectFindHeaderNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindHeader != null ? retObjectFindHeader.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindHeader != null ? retObjectFindHeader.getClass() : "null", retObjectFindHeader_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -495,12 +498,13 @@ public class MessageHeaders extends NetObjectEnumerable  {
             retObjectCount = classInstance.Get("Count");
             return (int)retObjectCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
                 return retObjectCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

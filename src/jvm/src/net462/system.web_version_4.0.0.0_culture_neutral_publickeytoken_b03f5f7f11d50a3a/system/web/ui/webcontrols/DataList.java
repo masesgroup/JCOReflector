@@ -278,12 +278,13 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
             retObjectEditItemIndex = classInstance.Get("EditItemIndex");
             return (int)retObjectEditItemIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEditItemIndex_ToString = retObjectEditItemIndex == null ? "null" : retObjectEditItemIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEditItemIndexNumber = (java.lang.Number)retObjectEditItemIndex;
                 return retObjectEditItemIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEditItemIndex != null ? retObjectEditItemIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEditItemIndex != null ? retObjectEditItemIndex.getClass() : "null", retObjectEditItemIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -308,12 +309,13 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
             retObjectRepeatColumns = classInstance.Get("RepeatColumns");
             return (int)retObjectRepeatColumns;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRepeatColumns_ToString = retObjectRepeatColumns == null ? "null" : retObjectRepeatColumns.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRepeatColumnsNumber = (java.lang.Number)retObjectRepeatColumns;
                 return retObjectRepeatColumnsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRepeatColumns != null ? retObjectRepeatColumns.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRepeatColumns != null ? retObjectRepeatColumns.getClass() : "null", retObjectRepeatColumns_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -338,12 +340,13 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
             retObjectSelectedIndex = classInstance.Get("SelectedIndex");
             return (int)retObjectSelectedIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectedIndex_ToString = retObjectSelectedIndex == null ? "null" : retObjectSelectedIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSelectedIndexNumber = (java.lang.Number)retObjectSelectedIndex;
                 return retObjectSelectedIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSelectedIndex != null ? retObjectSelectedIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectedIndex != null ? retObjectSelectedIndex.getClass() : "null", retObjectSelectedIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

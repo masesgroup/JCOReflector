@@ -247,12 +247,13 @@ public class ServiceHostingEnvironmentSection extends ConfigurationSection  {
             retObjectMinFreeMemoryPercentageToActivateService = classInstance.Get("MinFreeMemoryPercentageToActivateService");
             return (int)retObjectMinFreeMemoryPercentageToActivateService;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinFreeMemoryPercentageToActivateService_ToString = retObjectMinFreeMemoryPercentageToActivateService == null ? "null" : retObjectMinFreeMemoryPercentageToActivateService.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinFreeMemoryPercentageToActivateServiceNumber = (java.lang.Number)retObjectMinFreeMemoryPercentageToActivateService;
                 return retObjectMinFreeMemoryPercentageToActivateServiceNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinFreeMemoryPercentageToActivateService != null ? retObjectMinFreeMemoryPercentageToActivateService.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinFreeMemoryPercentageToActivateService != null ? retObjectMinFreeMemoryPercentageToActivateService.getClass() : "null", retObjectMinFreeMemoryPercentageToActivateService_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

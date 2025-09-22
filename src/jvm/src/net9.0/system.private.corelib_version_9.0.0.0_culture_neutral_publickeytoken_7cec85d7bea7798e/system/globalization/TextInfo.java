@@ -305,12 +305,13 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
             retObjectANSICodePage = classInstance.Get("ANSICodePage");
             return (int)retObjectANSICodePage;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectANSICodePage_ToString = retObjectANSICodePage == null ? "null" : retObjectANSICodePage.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectANSICodePageNumber = (java.lang.Number)retObjectANSICodePage;
                 return retObjectANSICodePageNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectANSICodePage != null ? retObjectANSICodePage.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectANSICodePage != null ? retObjectANSICodePage.getClass() : "null", retObjectANSICodePage_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -325,12 +326,13 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
             retObjectEBCDICCodePage = classInstance.Get("EBCDICCodePage");
             return (int)retObjectEBCDICCodePage;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEBCDICCodePage_ToString = retObjectEBCDICCodePage == null ? "null" : retObjectEBCDICCodePage.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEBCDICCodePageNumber = (java.lang.Number)retObjectEBCDICCodePage;
                 return retObjectEBCDICCodePageNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEBCDICCodePage != null ? retObjectEBCDICCodePage.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEBCDICCodePage != null ? retObjectEBCDICCodePage.getClass() : "null", retObjectEBCDICCodePage_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -345,12 +347,13 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
             retObjectLCID = classInstance.Get("LCID");
             return (int)retObjectLCID;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLCID_ToString = retObjectLCID == null ? "null" : retObjectLCID.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLCIDNumber = (java.lang.Number)retObjectLCID;
                 return retObjectLCIDNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLCID != null ? retObjectLCID.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLCID != null ? retObjectLCID.getClass() : "null", retObjectLCID_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -365,12 +368,13 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
             retObjectMacCodePage = classInstance.Get("MacCodePage");
             return (int)retObjectMacCodePage;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMacCodePage_ToString = retObjectMacCodePage == null ? "null" : retObjectMacCodePage.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMacCodePageNumber = (java.lang.Number)retObjectMacCodePage;
                 return retObjectMacCodePageNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMacCodePage != null ? retObjectMacCodePage.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMacCodePage != null ? retObjectMacCodePage.getClass() : "null", retObjectMacCodePage_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -385,12 +389,13 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
             retObjectOEMCodePage = classInstance.Get("OEMCodePage");
             return (int)retObjectOEMCodePage;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOEMCodePage_ToString = retObjectOEMCodePage == null ? "null" : retObjectOEMCodePage.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOEMCodePageNumber = (java.lang.Number)retObjectOEMCodePage;
                 return retObjectOEMCodePageNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOEMCodePage != null ? retObjectOEMCodePage.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOEMCodePage != null ? retObjectOEMCodePage.getClass() : "null", retObjectOEMCodePage_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

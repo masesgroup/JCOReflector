@@ -219,12 +219,13 @@ public class EventLogEntry extends Component implements system.runtime.serializa
             retObjectCategoryNumber = classInstance.Get("CategoryNumber");
             return (short)retObjectCategoryNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCategoryNumber_ToString = retObjectCategoryNumber == null ? "null" : retObjectCategoryNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCategoryNumberNumber = (java.lang.Number)retObjectCategoryNumber;
                 return retObjectCategoryNumberNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectCategoryNumber != null ? retObjectCategoryNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectCategoryNumber != null ? retObjectCategoryNumber.getClass() : "null", retObjectCategoryNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -239,12 +240,13 @@ public class EventLogEntry extends Component implements system.runtime.serializa
             retObjectEventID = classInstance.Get("EventID");
             return (int)retObjectEventID;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEventID_ToString = retObjectEventID == null ? "null" : retObjectEventID.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEventIDNumber = (java.lang.Number)retObjectEventID;
                 return retObjectEventIDNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEventID != null ? retObjectEventID.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEventID != null ? retObjectEventID.getClass() : "null", retObjectEventID_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -259,12 +261,13 @@ public class EventLogEntry extends Component implements system.runtime.serializa
             retObjectIndex = classInstance.Get("Index");
             return (int)retObjectIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndex_ToString = retObjectIndex == null ? "null" : retObjectIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIndexNumber = (java.lang.Number)retObjectIndex;
                 return retObjectIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndex != null ? retObjectIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndex != null ? retObjectIndex.getClass() : "null", retObjectIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -279,12 +282,13 @@ public class EventLogEntry extends Component implements system.runtime.serializa
             retObjectInstanceId = classInstance.Get("InstanceId");
             return (long)retObjectInstanceId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInstanceId_ToString = retObjectInstanceId == null ? "null" : retObjectInstanceId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInstanceIdNumber = (java.lang.Number)retObjectInstanceId;
                 return retObjectInstanceIdNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectInstanceId != null ? retObjectInstanceId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectInstanceId != null ? retObjectInstanceId.getClass() : "null", retObjectInstanceId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

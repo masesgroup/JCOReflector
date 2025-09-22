@@ -246,12 +246,13 @@ public class SignatureHeader extends ValueType  {
             retObjectRawValue = classInstance.Get("RawValue");
             return (byte)retObjectRawValue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRawValue_ToString = retObjectRawValue == null ? "null" : retObjectRawValue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRawValueNumber = (java.lang.Number)retObjectRawValue;
                 return retObjectRawValueNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectRawValue != null ? retObjectRawValue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectRawValue != null ? retObjectRawValue.getClass() : "null", retObjectRawValue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

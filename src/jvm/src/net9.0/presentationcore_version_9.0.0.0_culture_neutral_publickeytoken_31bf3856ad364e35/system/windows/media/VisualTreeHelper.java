@@ -182,12 +182,13 @@ public class VisualTreeHelper extends NetObject  {
             retObjectGetOpacity = classType.Invoke("GetOpacity", reference == null ? null : reference.getJCOInstance());
             return (double)retObjectGetOpacity;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetOpacity_ToString = retObjectGetOpacity == null ? "null" : retObjectGetOpacity.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetOpacityNumber = (java.lang.Number)retObjectGetOpacity;
                 return retObjectGetOpacityNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetOpacity != null ? retObjectGetOpacity.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetOpacity != null ? retObjectGetOpacity.getClass() : "null", retObjectGetOpacity_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,12 +203,13 @@ public class VisualTreeHelper extends NetObject  {
             retObjectGetChildrenCount = classType.Invoke("GetChildrenCount", reference == null ? null : reference.getJCOInstance());
             return (int)retObjectGetChildrenCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetChildrenCount_ToString = retObjectGetChildrenCount == null ? "null" : retObjectGetChildrenCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetChildrenCountNumber = (java.lang.Number)retObjectGetChildrenCount;
                 return retObjectGetChildrenCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetChildrenCount != null ? retObjectGetChildrenCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetChildrenCount != null ? retObjectGetChildrenCount.getClass() : "null", retObjectGetChildrenCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

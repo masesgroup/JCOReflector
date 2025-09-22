@@ -270,12 +270,13 @@ public class PrintDialog extends NetObject  {
             retObjectPrintableAreaHeight = classInstance.Get("PrintableAreaHeight");
             return (double)retObjectPrintableAreaHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPrintableAreaHeight_ToString = retObjectPrintableAreaHeight == null ? "null" : retObjectPrintableAreaHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPrintableAreaHeightNumber = (java.lang.Number)retObjectPrintableAreaHeight;
                 return retObjectPrintableAreaHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectPrintableAreaHeight != null ? retObjectPrintableAreaHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPrintableAreaHeight != null ? retObjectPrintableAreaHeight.getClass() : "null", retObjectPrintableAreaHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -290,12 +291,13 @@ public class PrintDialog extends NetObject  {
             retObjectPrintableAreaWidth = classInstance.Get("PrintableAreaWidth");
             return (double)retObjectPrintableAreaWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPrintableAreaWidth_ToString = retObjectPrintableAreaWidth == null ? "null" : retObjectPrintableAreaWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPrintableAreaWidthNumber = (java.lang.Number)retObjectPrintableAreaWidth;
                 return retObjectPrintableAreaWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectPrintableAreaWidth != null ? retObjectPrintableAreaWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPrintableAreaWidth != null ? retObjectPrintableAreaWidth.getClass() : "null", retObjectPrintableAreaWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -274,12 +274,13 @@ public class HttpClient extends HttpMessageInvoker  {
             retObjectMaxResponseContentBufferSize = classInstance.Get("MaxResponseContentBufferSize");
             return (long)retObjectMaxResponseContentBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxResponseContentBufferSize_ToString = retObjectMaxResponseContentBufferSize == null ? "null" : retObjectMaxResponseContentBufferSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxResponseContentBufferSizeNumber = (java.lang.Number)retObjectMaxResponseContentBufferSize;
                 return retObjectMaxResponseContentBufferSizeNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMaxResponseContentBufferSize != null ? retObjectMaxResponseContentBufferSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaxResponseContentBufferSize != null ? retObjectMaxResponseContentBufferSize.getClass() : "null", retObjectMaxResponseContentBufferSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

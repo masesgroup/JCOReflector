@@ -213,12 +213,13 @@ public class Mouse extends NetObject  {
             retObjectGetIntermediatePoints = classType.Invoke("GetIntermediatePoints", relativeTo == null ? null : relativeTo.getJCOInstance(), toObjectFromArray(points));
             return (int)retObjectGetIntermediatePoints;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetIntermediatePoints_ToString = retObjectGetIntermediatePoints == null ? "null" : retObjectGetIntermediatePoints.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetIntermediatePointsNumber = (java.lang.Number)retObjectGetIntermediatePoints;
                 return retObjectGetIntermediatePointsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetIntermediatePoints != null ? retObjectGetIntermediatePoints.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetIntermediatePoints != null ? retObjectGetIntermediatePoints.getClass() : "null", retObjectGetIntermediatePoints_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

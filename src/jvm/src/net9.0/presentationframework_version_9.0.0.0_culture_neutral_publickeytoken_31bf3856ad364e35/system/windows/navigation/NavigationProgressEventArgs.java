@@ -167,12 +167,13 @@ public class NavigationProgressEventArgs extends EventArgs  {
             retObjectBytesRead = classInstance.Get("BytesRead");
             return (long)retObjectBytesRead;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBytesRead_ToString = retObjectBytesRead == null ? "null" : retObjectBytesRead.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBytesReadNumber = (java.lang.Number)retObjectBytesRead;
                 return retObjectBytesReadNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectBytesRead != null ? retObjectBytesRead.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectBytesRead != null ? retObjectBytesRead.getClass() : "null", retObjectBytesRead_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -187,12 +188,13 @@ public class NavigationProgressEventArgs extends EventArgs  {
             retObjectMaxBytes = classInstance.Get("MaxBytes");
             return (long)retObjectMaxBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxBytes_ToString = retObjectMaxBytes == null ? "null" : retObjectMaxBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxBytesNumber = (java.lang.Number)retObjectMaxBytes;
                 return retObjectMaxBytesNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMaxBytes != null ? retObjectMaxBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaxBytes != null ? retObjectMaxBytes.getClass() : "null", retObjectMaxBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

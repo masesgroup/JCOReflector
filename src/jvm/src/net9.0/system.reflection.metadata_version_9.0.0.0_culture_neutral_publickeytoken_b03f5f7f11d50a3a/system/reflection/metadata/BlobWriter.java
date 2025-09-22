@@ -274,12 +274,13 @@ public class BlobWriter extends ValueType  {
             retObjectWriteBytes = classInstance.Invoke("WriteBytes", source == null ? null : source.getJCOInstance(), byteCount);
             return (int)retObjectWriteBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWriteBytes_ToString = retObjectWriteBytes == null ? "null" : retObjectWriteBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWriteBytesNumber = (java.lang.Number)retObjectWriteBytes;
                 return retObjectWriteBytesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWriteBytes != null ? retObjectWriteBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWriteBytes != null ? retObjectWriteBytes.getClass() : "null", retObjectWriteBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -668,12 +669,13 @@ public class BlobWriter extends ValueType  {
             retObjectLength = classInstance.Get("Length");
             return (int)retObjectLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLength_ToString = retObjectLength == null ? "null" : retObjectLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLengthNumber = (java.lang.Number)retObjectLength;
                 return retObjectLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null", retObjectLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -688,12 +690,13 @@ public class BlobWriter extends ValueType  {
             retObjectOffset = classInstance.Get("Offset");
             return (int)retObjectOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffset_ToString = retObjectOffset == null ? "null" : retObjectOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOffsetNumber = (java.lang.Number)retObjectOffset;
                 return retObjectOffsetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null", retObjectOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -718,12 +721,13 @@ public class BlobWriter extends ValueType  {
             retObjectRemainingBytes = classInstance.Get("RemainingBytes");
             return (int)retObjectRemainingBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRemainingBytes_ToString = retObjectRemainingBytes == null ? "null" : retObjectRemainingBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRemainingBytesNumber = (java.lang.Number)retObjectRemainingBytes;
                 return retObjectRemainingBytesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRemainingBytes != null ? retObjectRemainingBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRemainingBytes != null ? retObjectRemainingBytes.getClass() : "null", retObjectRemainingBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

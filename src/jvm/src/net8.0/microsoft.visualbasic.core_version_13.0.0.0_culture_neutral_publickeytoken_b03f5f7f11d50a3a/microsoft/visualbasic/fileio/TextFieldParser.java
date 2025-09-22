@@ -482,12 +482,13 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
             retObjectErrorLineNumber = classInstance.Get("ErrorLineNumber");
             return (long)retObjectErrorLineNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectErrorLineNumber_ToString = retObjectErrorLineNumber == null ? "null" : retObjectErrorLineNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectErrorLineNumberNumber = (java.lang.Number)retObjectErrorLineNumber;
                 return retObjectErrorLineNumberNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectErrorLineNumber != null ? retObjectErrorLineNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectErrorLineNumber != null ? retObjectErrorLineNumber.getClass() : "null", retObjectErrorLineNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -502,12 +503,13 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
             retObjectLineNumber = classInstance.Get("LineNumber");
             return (long)retObjectLineNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLineNumber_ToString = retObjectLineNumber == null ? "null" : retObjectLineNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLineNumberNumber = (java.lang.Number)retObjectLineNumber;
                 return retObjectLineNumberNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null", retObjectLineNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

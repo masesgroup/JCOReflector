@@ -210,12 +210,13 @@ public class SecurityCallContext extends NetObject  {
             retObjectMinAuthenticationLevel = classInstance.Get("MinAuthenticationLevel");
             return (int)retObjectMinAuthenticationLevel;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinAuthenticationLevel_ToString = retObjectMinAuthenticationLevel == null ? "null" : retObjectMinAuthenticationLevel.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinAuthenticationLevelNumber = (java.lang.Number)retObjectMinAuthenticationLevel;
                 return retObjectMinAuthenticationLevelNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinAuthenticationLevel != null ? retObjectMinAuthenticationLevel.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinAuthenticationLevel != null ? retObjectMinAuthenticationLevel.getClass() : "null", retObjectMinAuthenticationLevel_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -230,12 +231,13 @@ public class SecurityCallContext extends NetObject  {
             retObjectNumCallers = classInstance.Get("NumCallers");
             return (int)retObjectNumCallers;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNumCallers_ToString = retObjectNumCallers == null ? "null" : retObjectNumCallers.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNumCallersNumber = (java.lang.Number)retObjectNumCallers;
                 return retObjectNumCallersNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNumCallers != null ? retObjectNumCallers.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumCallers != null ? retObjectNumCallers.getClass() : "null", retObjectNumCallers_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -667,12 +667,13 @@ public class MaskedTextProvider extends NetObject  {
             retObjectFindAssignedEditPositionFrom = classInstance.Invoke("FindAssignedEditPositionFrom", position, direction);
             return (int)retObjectFindAssignedEditPositionFrom;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFindAssignedEditPositionFrom_ToString = retObjectFindAssignedEditPositionFrom == null ? "null" : retObjectFindAssignedEditPositionFrom.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindAssignedEditPositionFromNumber = (java.lang.Number)retObjectFindAssignedEditPositionFrom;
                 return retObjectFindAssignedEditPositionFromNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindAssignedEditPositionFrom != null ? retObjectFindAssignedEditPositionFrom.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindAssignedEditPositionFrom != null ? retObjectFindAssignedEditPositionFrom.getClass() : "null", retObjectFindAssignedEditPositionFrom_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -687,12 +688,13 @@ public class MaskedTextProvider extends NetObject  {
             retObjectFindAssignedEditPositionInRange = classInstance.Invoke("FindAssignedEditPositionInRange", startPosition, endPosition, direction);
             return (int)retObjectFindAssignedEditPositionInRange;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFindAssignedEditPositionInRange_ToString = retObjectFindAssignedEditPositionInRange == null ? "null" : retObjectFindAssignedEditPositionInRange.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindAssignedEditPositionInRangeNumber = (java.lang.Number)retObjectFindAssignedEditPositionInRange;
                 return retObjectFindAssignedEditPositionInRangeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindAssignedEditPositionInRange != null ? retObjectFindAssignedEditPositionInRange.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindAssignedEditPositionInRange != null ? retObjectFindAssignedEditPositionInRange.getClass() : "null", retObjectFindAssignedEditPositionInRange_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -707,12 +709,13 @@ public class MaskedTextProvider extends NetObject  {
             retObjectFindEditPositionFrom = classInstance.Invoke("FindEditPositionFrom", position, direction);
             return (int)retObjectFindEditPositionFrom;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFindEditPositionFrom_ToString = retObjectFindEditPositionFrom == null ? "null" : retObjectFindEditPositionFrom.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindEditPositionFromNumber = (java.lang.Number)retObjectFindEditPositionFrom;
                 return retObjectFindEditPositionFromNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindEditPositionFrom != null ? retObjectFindEditPositionFrom.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindEditPositionFrom != null ? retObjectFindEditPositionFrom.getClass() : "null", retObjectFindEditPositionFrom_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -727,12 +730,13 @@ public class MaskedTextProvider extends NetObject  {
             retObjectFindEditPositionInRange = classInstance.Invoke("FindEditPositionInRange", startPosition, endPosition, direction);
             return (int)retObjectFindEditPositionInRange;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFindEditPositionInRange_ToString = retObjectFindEditPositionInRange == null ? "null" : retObjectFindEditPositionInRange.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindEditPositionInRangeNumber = (java.lang.Number)retObjectFindEditPositionInRange;
                 return retObjectFindEditPositionInRangeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindEditPositionInRange != null ? retObjectFindEditPositionInRange.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindEditPositionInRange != null ? retObjectFindEditPositionInRange.getClass() : "null", retObjectFindEditPositionInRange_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -747,12 +751,13 @@ public class MaskedTextProvider extends NetObject  {
             retObjectFindNonEditPositionFrom = classInstance.Invoke("FindNonEditPositionFrom", position, direction);
             return (int)retObjectFindNonEditPositionFrom;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFindNonEditPositionFrom_ToString = retObjectFindNonEditPositionFrom == null ? "null" : retObjectFindNonEditPositionFrom.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindNonEditPositionFromNumber = (java.lang.Number)retObjectFindNonEditPositionFrom;
                 return retObjectFindNonEditPositionFromNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindNonEditPositionFrom != null ? retObjectFindNonEditPositionFrom.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindNonEditPositionFrom != null ? retObjectFindNonEditPositionFrom.getClass() : "null", retObjectFindNonEditPositionFrom_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -767,12 +772,13 @@ public class MaskedTextProvider extends NetObject  {
             retObjectFindNonEditPositionInRange = classInstance.Invoke("FindNonEditPositionInRange", startPosition, endPosition, direction);
             return (int)retObjectFindNonEditPositionInRange;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFindNonEditPositionInRange_ToString = retObjectFindNonEditPositionInRange == null ? "null" : retObjectFindNonEditPositionInRange.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindNonEditPositionInRangeNumber = (java.lang.Number)retObjectFindNonEditPositionInRange;
                 return retObjectFindNonEditPositionInRangeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindNonEditPositionInRange != null ? retObjectFindNonEditPositionInRange.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindNonEditPositionInRange != null ? retObjectFindNonEditPositionInRange.getClass() : "null", retObjectFindNonEditPositionInRange_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -787,12 +793,13 @@ public class MaskedTextProvider extends NetObject  {
             retObjectFindUnassignedEditPositionFrom = classInstance.Invoke("FindUnassignedEditPositionFrom", position, direction);
             return (int)retObjectFindUnassignedEditPositionFrom;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFindUnassignedEditPositionFrom_ToString = retObjectFindUnassignedEditPositionFrom == null ? "null" : retObjectFindUnassignedEditPositionFrom.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindUnassignedEditPositionFromNumber = (java.lang.Number)retObjectFindUnassignedEditPositionFrom;
                 return retObjectFindUnassignedEditPositionFromNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindUnassignedEditPositionFrom != null ? retObjectFindUnassignedEditPositionFrom.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindUnassignedEditPositionFrom != null ? retObjectFindUnassignedEditPositionFrom.getClass() : "null", retObjectFindUnassignedEditPositionFrom_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -807,12 +814,13 @@ public class MaskedTextProvider extends NetObject  {
             retObjectFindUnassignedEditPositionInRange = classInstance.Invoke("FindUnassignedEditPositionInRange", startPosition, endPosition, direction);
             return (int)retObjectFindUnassignedEditPositionInRange;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFindUnassignedEditPositionInRange_ToString = retObjectFindUnassignedEditPositionInRange == null ? "null" : retObjectFindUnassignedEditPositionInRange.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindUnassignedEditPositionInRangeNumber = (java.lang.Number)retObjectFindUnassignedEditPositionInRange;
                 return retObjectFindUnassignedEditPositionInRangeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindUnassignedEditPositionInRange != null ? retObjectFindUnassignedEditPositionInRange.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindUnassignedEditPositionInRange != null ? retObjectFindUnassignedEditPositionInRange.getClass() : "null", retObjectFindUnassignedEditPositionInRange_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1226,12 +1234,13 @@ public class MaskedTextProvider extends NetObject  {
             retObjectAssignedEditPositionCount = classInstance.Get("AssignedEditPositionCount");
             return (int)retObjectAssignedEditPositionCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAssignedEditPositionCount_ToString = retObjectAssignedEditPositionCount == null ? "null" : retObjectAssignedEditPositionCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAssignedEditPositionCountNumber = (java.lang.Number)retObjectAssignedEditPositionCount;
                 return retObjectAssignedEditPositionCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAssignedEditPositionCount != null ? retObjectAssignedEditPositionCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAssignedEditPositionCount != null ? retObjectAssignedEditPositionCount.getClass() : "null", retObjectAssignedEditPositionCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1256,12 +1265,13 @@ public class MaskedTextProvider extends NetObject  {
             retObjectAvailableEditPositionCount = classInstance.Get("AvailableEditPositionCount");
             return (int)retObjectAvailableEditPositionCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAvailableEditPositionCount_ToString = retObjectAvailableEditPositionCount == null ? "null" : retObjectAvailableEditPositionCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAvailableEditPositionCountNumber = (java.lang.Number)retObjectAvailableEditPositionCount;
                 return retObjectAvailableEditPositionCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAvailableEditPositionCount != null ? retObjectAvailableEditPositionCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAvailableEditPositionCount != null ? retObjectAvailableEditPositionCount.getClass() : "null", retObjectAvailableEditPositionCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1276,12 +1286,13 @@ public class MaskedTextProvider extends NetObject  {
             retObjectEditPositionCount = classInstance.Get("EditPositionCount");
             return (int)retObjectEditPositionCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEditPositionCount_ToString = retObjectEditPositionCount == null ? "null" : retObjectEditPositionCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEditPositionCountNumber = (java.lang.Number)retObjectEditPositionCount;
                 return retObjectEditPositionCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEditPositionCount != null ? retObjectEditPositionCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEditPositionCount != null ? retObjectEditPositionCount.getClass() : "null", retObjectEditPositionCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1296,12 +1307,13 @@ public class MaskedTextProvider extends NetObject  {
             retObjectInvalidIndex = classType.Get("InvalidIndex");
             return (int)retObjectInvalidIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInvalidIndex_ToString = retObjectInvalidIndex == null ? "null" : retObjectInvalidIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInvalidIndexNumber = (java.lang.Number)retObjectInvalidIndex;
                 return retObjectInvalidIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectInvalidIndex != null ? retObjectInvalidIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectInvalidIndex != null ? retObjectInvalidIndex.getClass() : "null", retObjectInvalidIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1316,12 +1328,13 @@ public class MaskedTextProvider extends NetObject  {
             retObjectLastAssignedPosition = classInstance.Get("LastAssignedPosition");
             return (int)retObjectLastAssignedPosition;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLastAssignedPosition_ToString = retObjectLastAssignedPosition == null ? "null" : retObjectLastAssignedPosition.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLastAssignedPositionNumber = (java.lang.Number)retObjectLastAssignedPosition;
                 return retObjectLastAssignedPositionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLastAssignedPosition != null ? retObjectLastAssignedPosition.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLastAssignedPosition != null ? retObjectLastAssignedPosition.getClass() : "null", retObjectLastAssignedPosition_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1336,12 +1349,13 @@ public class MaskedTextProvider extends NetObject  {
             retObjectLength = classInstance.Get("Length");
             return (int)retObjectLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLength_ToString = retObjectLength == null ? "null" : retObjectLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLengthNumber = (java.lang.Number)retObjectLength;
                 return retObjectLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null", retObjectLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -617,12 +617,13 @@ public class Typography extends NetObject  {
             retObjectGetAnnotationAlternates = classType.Invoke("GetAnnotationAlternates", element == null ? null : element.getJCOInstance());
             return (int)retObjectGetAnnotationAlternates;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetAnnotationAlternates_ToString = retObjectGetAnnotationAlternates == null ? "null" : retObjectGetAnnotationAlternates.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetAnnotationAlternatesNumber = (java.lang.Number)retObjectGetAnnotationAlternates;
                 return retObjectGetAnnotationAlternatesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetAnnotationAlternates != null ? retObjectGetAnnotationAlternates.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetAnnotationAlternates != null ? retObjectGetAnnotationAlternates.getClass() : "null", retObjectGetAnnotationAlternates_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -637,12 +638,13 @@ public class Typography extends NetObject  {
             retObjectGetContextualSwashes = classType.Invoke("GetContextualSwashes", element == null ? null : element.getJCOInstance());
             return (int)retObjectGetContextualSwashes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetContextualSwashes_ToString = retObjectGetContextualSwashes == null ? "null" : retObjectGetContextualSwashes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetContextualSwashesNumber = (java.lang.Number)retObjectGetContextualSwashes;
                 return retObjectGetContextualSwashesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetContextualSwashes != null ? retObjectGetContextualSwashes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetContextualSwashes != null ? retObjectGetContextualSwashes.getClass() : "null", retObjectGetContextualSwashes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -657,12 +659,13 @@ public class Typography extends NetObject  {
             retObjectGetStandardSwashes = classType.Invoke("GetStandardSwashes", element == null ? null : element.getJCOInstance());
             return (int)retObjectGetStandardSwashes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetStandardSwashes_ToString = retObjectGetStandardSwashes == null ? "null" : retObjectGetStandardSwashes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetStandardSwashesNumber = (java.lang.Number)retObjectGetStandardSwashes;
                 return retObjectGetStandardSwashesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetStandardSwashes != null ? retObjectGetStandardSwashes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetStandardSwashes != null ? retObjectGetStandardSwashes.getClass() : "null", retObjectGetStandardSwashes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -677,12 +680,13 @@ public class Typography extends NetObject  {
             retObjectGetStylisticAlternates = classType.Invoke("GetStylisticAlternates", element == null ? null : element.getJCOInstance());
             return (int)retObjectGetStylisticAlternates;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetStylisticAlternates_ToString = retObjectGetStylisticAlternates == null ? "null" : retObjectGetStylisticAlternates.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetStylisticAlternatesNumber = (java.lang.Number)retObjectGetStylisticAlternates;
                 return retObjectGetStylisticAlternatesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetStylisticAlternates != null ? retObjectGetStylisticAlternates.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetStylisticAlternates != null ? retObjectGetStylisticAlternates.getClass() : "null", retObjectGetStylisticAlternates_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2004,12 +2008,13 @@ public class Typography extends NetObject  {
             retObjectAnnotationAlternates = classInstance.Get("AnnotationAlternates");
             return (int)retObjectAnnotationAlternates;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAnnotationAlternates_ToString = retObjectAnnotationAlternates == null ? "null" : retObjectAnnotationAlternates.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAnnotationAlternatesNumber = (java.lang.Number)retObjectAnnotationAlternates;
                 return retObjectAnnotationAlternatesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAnnotationAlternates != null ? retObjectAnnotationAlternates.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAnnotationAlternates != null ? retObjectAnnotationAlternates.getClass() : "null", retObjectAnnotationAlternates_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2034,12 +2039,13 @@ public class Typography extends NetObject  {
             retObjectContextualSwashes = classInstance.Get("ContextualSwashes");
             return (int)retObjectContextualSwashes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectContextualSwashes_ToString = retObjectContextualSwashes == null ? "null" : retObjectContextualSwashes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectContextualSwashesNumber = (java.lang.Number)retObjectContextualSwashes;
                 return retObjectContextualSwashesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectContextualSwashes != null ? retObjectContextualSwashes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectContextualSwashes != null ? retObjectContextualSwashes.getClass() : "null", retObjectContextualSwashes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2064,12 +2070,13 @@ public class Typography extends NetObject  {
             retObjectStandardSwashes = classInstance.Get("StandardSwashes");
             return (int)retObjectStandardSwashes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStandardSwashes_ToString = retObjectStandardSwashes == null ? "null" : retObjectStandardSwashes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStandardSwashesNumber = (java.lang.Number)retObjectStandardSwashes;
                 return retObjectStandardSwashesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStandardSwashes != null ? retObjectStandardSwashes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStandardSwashes != null ? retObjectStandardSwashes.getClass() : "null", retObjectStandardSwashes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2094,12 +2101,13 @@ public class Typography extends NetObject  {
             retObjectStylisticAlternates = classInstance.Get("StylisticAlternates");
             return (int)retObjectStylisticAlternates;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStylisticAlternates_ToString = retObjectStylisticAlternates == null ? "null" : retObjectStylisticAlternates.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStylisticAlternatesNumber = (java.lang.Number)retObjectStylisticAlternates;
                 return retObjectStylisticAlternatesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStylisticAlternates != null ? retObjectStylisticAlternates.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStylisticAlternates != null ? retObjectStylisticAlternates.getClass() : "null", retObjectStylisticAlternates_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -238,12 +238,13 @@ public class SerialPort extends Component  {
             retObjectRead = classInstance.Invoke("Read", buffer, offset, count);
             return (int)retObjectRead;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRead_ToString = retObjectRead == null ? "null" : retObjectRead.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
                 return retObjectReadNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null", retObjectRead_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -258,12 +259,13 @@ public class SerialPort extends Component  {
             retObjectRead = classInstance.Invoke("Read", dupParam0.getJCRefOut(), dupParam1, dupParam2);
             return (int)retObjectRead;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRead_ToString = retObjectRead == null ? "null" : retObjectRead.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
                 return retObjectReadNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null", retObjectRead_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -278,12 +280,13 @@ public class SerialPort extends Component  {
             retObjectRead = classInstance.Invoke("Read", buffer, offset, count);
             return (int)retObjectRead;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRead_ToString = retObjectRead == null ? "null" : retObjectRead.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
                 return retObjectReadNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null", retObjectRead_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -298,12 +301,13 @@ public class SerialPort extends Component  {
             retObjectReadByte = classInstance.Invoke("ReadByte");
             return (int)retObjectReadByte;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadByte_ToString = retObjectReadByte == null ? "null" : retObjectReadByte.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadByteNumber = (java.lang.Number)retObjectReadByte;
                 return retObjectReadByteNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadByte != null ? retObjectReadByte.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadByte != null ? retObjectReadByte.getClass() : "null", retObjectReadByte_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -318,12 +322,13 @@ public class SerialPort extends Component  {
             retObjectReadChar = classInstance.Invoke("ReadChar");
             return (int)retObjectReadChar;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadChar_ToString = retObjectReadChar == null ? "null" : retObjectReadChar.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadCharNumber = (java.lang.Number)retObjectReadChar;
                 return retObjectReadCharNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadChar != null ? retObjectReadChar.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadChar != null ? retObjectReadChar.getClass() : "null", retObjectReadChar_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -649,12 +654,13 @@ public class SerialPort extends Component  {
             retObjectParityReplace = classInstance.Get("ParityReplace");
             return (byte)retObjectParityReplace;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectParityReplace_ToString = retObjectParityReplace == null ? "null" : retObjectParityReplace.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectParityReplaceNumber = (java.lang.Number)retObjectParityReplace;
                 return retObjectParityReplaceNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectParityReplace != null ? retObjectParityReplace.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectParityReplace != null ? retObjectParityReplace.getClass() : "null", retObjectParityReplace_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -679,12 +685,13 @@ public class SerialPort extends Component  {
             retObjectBaudRate = classInstance.Get("BaudRate");
             return (int)retObjectBaudRate;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBaudRate_ToString = retObjectBaudRate == null ? "null" : retObjectBaudRate.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBaudRateNumber = (java.lang.Number)retObjectBaudRate;
                 return retObjectBaudRateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBaudRate != null ? retObjectBaudRate.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBaudRate != null ? retObjectBaudRate.getClass() : "null", retObjectBaudRate_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -709,12 +716,13 @@ public class SerialPort extends Component  {
             retObjectBytesToRead = classInstance.Get("BytesToRead");
             return (int)retObjectBytesToRead;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBytesToRead_ToString = retObjectBytesToRead == null ? "null" : retObjectBytesToRead.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBytesToReadNumber = (java.lang.Number)retObjectBytesToRead;
                 return retObjectBytesToReadNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBytesToRead != null ? retObjectBytesToRead.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBytesToRead != null ? retObjectBytesToRead.getClass() : "null", retObjectBytesToRead_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -729,12 +737,13 @@ public class SerialPort extends Component  {
             retObjectBytesToWrite = classInstance.Get("BytesToWrite");
             return (int)retObjectBytesToWrite;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBytesToWrite_ToString = retObjectBytesToWrite == null ? "null" : retObjectBytesToWrite.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBytesToWriteNumber = (java.lang.Number)retObjectBytesToWrite;
                 return retObjectBytesToWriteNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBytesToWrite != null ? retObjectBytesToWrite.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBytesToWrite != null ? retObjectBytesToWrite.getClass() : "null", retObjectBytesToWrite_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -749,12 +758,13 @@ public class SerialPort extends Component  {
             retObjectDataBits = classInstance.Get("DataBits");
             return (int)retObjectDataBits;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDataBits_ToString = retObjectDataBits == null ? "null" : retObjectDataBits.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDataBitsNumber = (java.lang.Number)retObjectDataBits;
                 return retObjectDataBitsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDataBits != null ? retObjectDataBits.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDataBits != null ? retObjectDataBits.getClass() : "null", retObjectDataBits_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -779,12 +789,13 @@ public class SerialPort extends Component  {
             retObjectReadBufferSize = classInstance.Get("ReadBufferSize");
             return (int)retObjectReadBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadBufferSize_ToString = retObjectReadBufferSize == null ? "null" : retObjectReadBufferSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadBufferSizeNumber = (java.lang.Number)retObjectReadBufferSize;
                 return retObjectReadBufferSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadBufferSize != null ? retObjectReadBufferSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadBufferSize != null ? retObjectReadBufferSize.getClass() : "null", retObjectReadBufferSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -809,12 +820,13 @@ public class SerialPort extends Component  {
             retObjectReadTimeout = classInstance.Get("ReadTimeout");
             return (int)retObjectReadTimeout;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadTimeout_ToString = retObjectReadTimeout == null ? "null" : retObjectReadTimeout.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadTimeoutNumber = (java.lang.Number)retObjectReadTimeout;
                 return retObjectReadTimeoutNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadTimeout != null ? retObjectReadTimeout.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadTimeout != null ? retObjectReadTimeout.getClass() : "null", retObjectReadTimeout_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -839,12 +851,13 @@ public class SerialPort extends Component  {
             retObjectReceivedBytesThreshold = classInstance.Get("ReceivedBytesThreshold");
             return (int)retObjectReceivedBytesThreshold;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceivedBytesThreshold_ToString = retObjectReceivedBytesThreshold == null ? "null" : retObjectReceivedBytesThreshold.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReceivedBytesThresholdNumber = (java.lang.Number)retObjectReceivedBytesThreshold;
                 return retObjectReceivedBytesThresholdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReceivedBytesThreshold != null ? retObjectReceivedBytesThreshold.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceivedBytesThreshold != null ? retObjectReceivedBytesThreshold.getClass() : "null", retObjectReceivedBytesThreshold_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -869,12 +882,13 @@ public class SerialPort extends Component  {
             retObjectWriteBufferSize = classInstance.Get("WriteBufferSize");
             return (int)retObjectWriteBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWriteBufferSize_ToString = retObjectWriteBufferSize == null ? "null" : retObjectWriteBufferSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWriteBufferSizeNumber = (java.lang.Number)retObjectWriteBufferSize;
                 return retObjectWriteBufferSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWriteBufferSize != null ? retObjectWriteBufferSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWriteBufferSize != null ? retObjectWriteBufferSize.getClass() : "null", retObjectWriteBufferSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -899,12 +913,13 @@ public class SerialPort extends Component  {
             retObjectWriteTimeout = classInstance.Get("WriteTimeout");
             return (int)retObjectWriteTimeout;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWriteTimeout_ToString = retObjectWriteTimeout == null ? "null" : retObjectWriteTimeout.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWriteTimeoutNumber = (java.lang.Number)retObjectWriteTimeout;
                 return retObjectWriteTimeoutNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWriteTimeout != null ? retObjectWriteTimeout.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWriteTimeout != null ? retObjectWriteTimeout.getClass() : "null", retObjectWriteTimeout_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

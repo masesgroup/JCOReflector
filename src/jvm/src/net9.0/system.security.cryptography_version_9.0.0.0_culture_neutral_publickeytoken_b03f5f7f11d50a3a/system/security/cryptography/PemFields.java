@@ -167,12 +167,13 @@ public class PemFields extends ValueType  {
             retObjectDecodedDataLength = classInstance.Get("DecodedDataLength");
             return (int)retObjectDecodedDataLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDecodedDataLength_ToString = retObjectDecodedDataLength == null ? "null" : retObjectDecodedDataLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDecodedDataLengthNumber = (java.lang.Number)retObjectDecodedDataLength;
                 return retObjectDecodedDataLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDecodedDataLength != null ? retObjectDecodedDataLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDecodedDataLength != null ? retObjectDecodedDataLength.getClass() : "null", retObjectDecodedDataLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

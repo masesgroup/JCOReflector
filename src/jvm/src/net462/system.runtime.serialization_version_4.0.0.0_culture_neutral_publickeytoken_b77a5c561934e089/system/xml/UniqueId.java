@@ -260,12 +260,13 @@ public class UniqueId extends NetObject  {
             retObjectToCharArray = classInstance.Invoke("ToCharArray", chars, offset);
             return (int)retObjectToCharArray;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToCharArray_ToString = retObjectToCharArray == null ? "null" : retObjectToCharArray.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToCharArrayNumber = (java.lang.Number)retObjectToCharArray;
                 return retObjectToCharArrayNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectToCharArray != null ? retObjectToCharArray.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToCharArray != null ? retObjectToCharArray.getClass() : "null", retObjectToCharArray_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -280,12 +281,13 @@ public class UniqueId extends NetObject  {
             retObjectToCharArray = classInstance.Invoke("ToCharArray", dupParam0.getJCRefOut(), dupParam1);
             return (int)retObjectToCharArray;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToCharArray_ToString = retObjectToCharArray == null ? "null" : retObjectToCharArray.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToCharArrayNumber = (java.lang.Number)retObjectToCharArray;
                 return retObjectToCharArrayNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectToCharArray != null ? retObjectToCharArray.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToCharArray != null ? retObjectToCharArray.getClass() : "null", retObjectToCharArray_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -318,12 +320,13 @@ public class UniqueId extends NetObject  {
             retObjectCharArrayLength = classInstance.Get("CharArrayLength");
             return (int)retObjectCharArrayLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCharArrayLength_ToString = retObjectCharArrayLength == null ? "null" : retObjectCharArrayLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCharArrayLengthNumber = (java.lang.Number)retObjectCharArrayLength;
                 return retObjectCharArrayLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCharArrayLength != null ? retObjectCharArrayLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCharArrayLength != null ? retObjectCharArrayLength.getClass() : "null", retObjectCharArrayLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

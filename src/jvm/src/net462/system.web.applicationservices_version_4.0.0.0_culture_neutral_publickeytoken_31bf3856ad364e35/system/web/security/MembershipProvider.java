@@ -235,12 +235,13 @@ public class MembershipProvider extends ProviderBase  {
             retObjectGetNumberOfUsersOnline = classInstance.Invoke("GetNumberOfUsersOnline");
             return (int)retObjectGetNumberOfUsersOnline;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetNumberOfUsersOnline_ToString = retObjectGetNumberOfUsersOnline == null ? "null" : retObjectGetNumberOfUsersOnline.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetNumberOfUsersOnlineNumber = (java.lang.Number)retObjectGetNumberOfUsersOnline;
                 return retObjectGetNumberOfUsersOnlineNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetNumberOfUsersOnline != null ? retObjectGetNumberOfUsersOnline.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNumberOfUsersOnline != null ? retObjectGetNumberOfUsersOnline.getClass() : "null", retObjectGetNumberOfUsersOnline_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -457,12 +458,13 @@ public class MembershipProvider extends ProviderBase  {
             retObjectMaxInvalidPasswordAttempts = classInstance.Get("MaxInvalidPasswordAttempts");
             return (int)retObjectMaxInvalidPasswordAttempts;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxInvalidPasswordAttempts_ToString = retObjectMaxInvalidPasswordAttempts == null ? "null" : retObjectMaxInvalidPasswordAttempts.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxInvalidPasswordAttemptsNumber = (java.lang.Number)retObjectMaxInvalidPasswordAttempts;
                 return retObjectMaxInvalidPasswordAttemptsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxInvalidPasswordAttempts != null ? retObjectMaxInvalidPasswordAttempts.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxInvalidPasswordAttempts != null ? retObjectMaxInvalidPasswordAttempts.getClass() : "null", retObjectMaxInvalidPasswordAttempts_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -477,12 +479,13 @@ public class MembershipProvider extends ProviderBase  {
             retObjectMinRequiredNonAlphanumericCharacters = classInstance.Get("MinRequiredNonAlphanumericCharacters");
             return (int)retObjectMinRequiredNonAlphanumericCharacters;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinRequiredNonAlphanumericCharacters_ToString = retObjectMinRequiredNonAlphanumericCharacters == null ? "null" : retObjectMinRequiredNonAlphanumericCharacters.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinRequiredNonAlphanumericCharactersNumber = (java.lang.Number)retObjectMinRequiredNonAlphanumericCharacters;
                 return retObjectMinRequiredNonAlphanumericCharactersNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinRequiredNonAlphanumericCharacters != null ? retObjectMinRequiredNonAlphanumericCharacters.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinRequiredNonAlphanumericCharacters != null ? retObjectMinRequiredNonAlphanumericCharacters.getClass() : "null", retObjectMinRequiredNonAlphanumericCharacters_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -497,12 +500,13 @@ public class MembershipProvider extends ProviderBase  {
             retObjectMinRequiredPasswordLength = classInstance.Get("MinRequiredPasswordLength");
             return (int)retObjectMinRequiredPasswordLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinRequiredPasswordLength_ToString = retObjectMinRequiredPasswordLength == null ? "null" : retObjectMinRequiredPasswordLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinRequiredPasswordLengthNumber = (java.lang.Number)retObjectMinRequiredPasswordLength;
                 return retObjectMinRequiredPasswordLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinRequiredPasswordLength != null ? retObjectMinRequiredPasswordLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinRequiredPasswordLength != null ? retObjectMinRequiredPasswordLength.getClass() : "null", retObjectMinRequiredPasswordLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -517,12 +521,13 @@ public class MembershipProvider extends ProviderBase  {
             retObjectPasswordAttemptWindow = classInstance.Get("PasswordAttemptWindow");
             return (int)retObjectPasswordAttemptWindow;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPasswordAttemptWindow_ToString = retObjectPasswordAttemptWindow == null ? "null" : retObjectPasswordAttemptWindow.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPasswordAttemptWindowNumber = (java.lang.Number)retObjectPasswordAttemptWindow;
                 return retObjectPasswordAttemptWindowNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPasswordAttemptWindow != null ? retObjectPasswordAttemptWindow.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPasswordAttemptWindow != null ? retObjectPasswordAttemptWindow.getClass() : "null", retObjectPasswordAttemptWindow_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -165,12 +165,13 @@ public class PrintDocumentImageableArea extends NetObject  {
             retObjectExtentHeight = classInstance.Get("ExtentHeight");
             return (double)retObjectExtentHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExtentHeight_ToString = retObjectExtentHeight == null ? "null" : retObjectExtentHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExtentHeightNumber = (java.lang.Number)retObjectExtentHeight;
                 return retObjectExtentHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectExtentHeight != null ? retObjectExtentHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectExtentHeight != null ? retObjectExtentHeight.getClass() : "null", retObjectExtentHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -195,12 +196,13 @@ public class PrintDocumentImageableArea extends NetObject  {
             retObjectExtentWidth = classInstance.Get("ExtentWidth");
             return (double)retObjectExtentWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExtentWidth_ToString = retObjectExtentWidth == null ? "null" : retObjectExtentWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExtentWidthNumber = (java.lang.Number)retObjectExtentWidth;
                 return retObjectExtentWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectExtentWidth != null ? retObjectExtentWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectExtentWidth != null ? retObjectExtentWidth.getClass() : "null", retObjectExtentWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -225,12 +227,13 @@ public class PrintDocumentImageableArea extends NetObject  {
             retObjectMediaSizeHeight = classInstance.Get("MediaSizeHeight");
             return (double)retObjectMediaSizeHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMediaSizeHeight_ToString = retObjectMediaSizeHeight == null ? "null" : retObjectMediaSizeHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMediaSizeHeightNumber = (java.lang.Number)retObjectMediaSizeHeight;
                 return retObjectMediaSizeHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMediaSizeHeight != null ? retObjectMediaSizeHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMediaSizeHeight != null ? retObjectMediaSizeHeight.getClass() : "null", retObjectMediaSizeHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -255,12 +258,13 @@ public class PrintDocumentImageableArea extends NetObject  {
             retObjectMediaSizeWidth = classInstance.Get("MediaSizeWidth");
             return (double)retObjectMediaSizeWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMediaSizeWidth_ToString = retObjectMediaSizeWidth == null ? "null" : retObjectMediaSizeWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMediaSizeWidthNumber = (java.lang.Number)retObjectMediaSizeWidth;
                 return retObjectMediaSizeWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMediaSizeWidth != null ? retObjectMediaSizeWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMediaSizeWidth != null ? retObjectMediaSizeWidth.getClass() : "null", retObjectMediaSizeWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -285,12 +289,13 @@ public class PrintDocumentImageableArea extends NetObject  {
             retObjectOriginHeight = classInstance.Get("OriginHeight");
             return (double)retObjectOriginHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOriginHeight_ToString = retObjectOriginHeight == null ? "null" : retObjectOriginHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOriginHeightNumber = (java.lang.Number)retObjectOriginHeight;
                 return retObjectOriginHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOriginHeight != null ? retObjectOriginHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOriginHeight != null ? retObjectOriginHeight.getClass() : "null", retObjectOriginHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -315,12 +320,13 @@ public class PrintDocumentImageableArea extends NetObject  {
             retObjectOriginWidth = classInstance.Get("OriginWidth");
             return (double)retObjectOriginWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOriginWidth_ToString = retObjectOriginWidth == null ? "null" : retObjectOriginWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOriginWidthNumber = (java.lang.Number)retObjectOriginWidth;
                 return retObjectOriginWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOriginWidth != null ? retObjectOriginWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOriginWidth != null ? retObjectOriginWidth.getClass() : "null", retObjectOriginWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -166,12 +166,13 @@ public class BuildMessage extends NetObject  {
             retObjectHelpId = classInstance.Get("HelpId");
             return (int)retObjectHelpId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHelpId_ToString = retObjectHelpId == null ? "null" : retObjectHelpId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHelpIdNumber = (java.lang.Number)retObjectHelpId;
                 return retObjectHelpIdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHelpId != null ? retObjectHelpId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHelpId != null ? retObjectHelpId.getClass() : "null", retObjectHelpId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -420,12 +420,13 @@ public class CultureInfo extends NetObject  {
             retObjectKeyboardLayoutId = classInstance.Get("KeyboardLayoutId");
             return (int)retObjectKeyboardLayoutId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKeyboardLayoutId_ToString = retObjectKeyboardLayoutId == null ? "null" : retObjectKeyboardLayoutId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectKeyboardLayoutIdNumber = (java.lang.Number)retObjectKeyboardLayoutId;
                 return retObjectKeyboardLayoutIdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectKeyboardLayoutId != null ? retObjectKeyboardLayoutId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeyboardLayoutId != null ? retObjectKeyboardLayoutId.getClass() : "null", retObjectKeyboardLayoutId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -440,12 +441,13 @@ public class CultureInfo extends NetObject  {
             retObjectLCID = classInstance.Get("LCID");
             return (int)retObjectLCID;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLCID_ToString = retObjectLCID == null ? "null" : retObjectLCID.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLCIDNumber = (java.lang.Number)retObjectLCID;
                 return retObjectLCIDNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLCID != null ? retObjectLCID.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLCID != null ? retObjectLCID.getClass() : "null", retObjectLCID_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

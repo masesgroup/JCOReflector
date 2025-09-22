@@ -176,12 +176,13 @@ public class EdmItemCollection extends ItemCollection  {
             retObjectEdmVersion = classInstance.Get("EdmVersion");
             return (double)retObjectEdmVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEdmVersion_ToString = retObjectEdmVersion == null ? "null" : retObjectEdmVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEdmVersionNumber = (java.lang.Number)retObjectEdmVersion;
                 return retObjectEdmVersionNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectEdmVersion != null ? retObjectEdmVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectEdmVersion != null ? retObjectEdmVersion.getClass() : "null", retObjectEdmVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

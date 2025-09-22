@@ -210,12 +210,13 @@ public class LabelEditEventArgs extends EventArgs  {
             retObjectItem = classInstance.Get("Item");
             return (int)retObjectItem;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectItem_ToString = retObjectItem == null ? "null" : retObjectItem.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectItemNumber = (java.lang.Number)retObjectItem;
                 return retObjectItemNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectItem != null ? retObjectItem.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectItem != null ? retObjectItem.getClass() : "null", retObjectItem_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

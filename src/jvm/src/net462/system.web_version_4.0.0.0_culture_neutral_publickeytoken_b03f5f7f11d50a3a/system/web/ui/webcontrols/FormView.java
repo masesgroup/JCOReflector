@@ -363,12 +363,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
             retObjectCellPadding = classInstance.Get("CellPadding");
             return (int)retObjectCellPadding;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCellPadding_ToString = retObjectCellPadding == null ? "null" : retObjectCellPadding.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCellPaddingNumber = (java.lang.Number)retObjectCellPadding;
                 return retObjectCellPaddingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCellPadding != null ? retObjectCellPadding.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCellPadding != null ? retObjectCellPadding.getClass() : "null", retObjectCellPadding_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -393,12 +394,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
             retObjectCellSpacing = classInstance.Get("CellSpacing");
             return (int)retObjectCellSpacing;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCellSpacing_ToString = retObjectCellSpacing == null ? "null" : retObjectCellSpacing.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCellSpacingNumber = (java.lang.Number)retObjectCellSpacing;
                 return retObjectCellSpacingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCellSpacing != null ? retObjectCellSpacing.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCellSpacing != null ? retObjectCellSpacing.getClass() : "null", retObjectCellSpacing_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -423,12 +425,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
             retObjectDataItemCount = classInstance.Get("DataItemCount");
             return (int)retObjectDataItemCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDataItemCount_ToString = retObjectDataItemCount == null ? "null" : retObjectDataItemCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDataItemCountNumber = (java.lang.Number)retObjectDataItemCount;
                 return retObjectDataItemCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDataItemCount != null ? retObjectDataItemCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDataItemCount != null ? retObjectDataItemCount.getClass() : "null", retObjectDataItemCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -443,12 +446,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
             retObjectDataItemIndex = classInstance.Get("DataItemIndex");
             return (int)retObjectDataItemIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDataItemIndex_ToString = retObjectDataItemIndex == null ? "null" : retObjectDataItemIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDataItemIndexNumber = (java.lang.Number)retObjectDataItemIndex;
                 return retObjectDataItemIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDataItemIndex != null ? retObjectDataItemIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDataItemIndex != null ? retObjectDataItemIndex.getClass() : "null", retObjectDataItemIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -463,12 +467,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
             retObjectPageCount = classInstance.Get("PageCount");
             return (int)retObjectPageCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageCount_ToString = retObjectPageCount == null ? "null" : retObjectPageCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPageCountNumber = (java.lang.Number)retObjectPageCount;
                 return retObjectPageCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageCount != null ? retObjectPageCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageCount != null ? retObjectPageCount.getClass() : "null", retObjectPageCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -483,12 +488,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
             retObjectPageIndex = classInstance.Get("PageIndex");
             return (int)retObjectPageIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageIndex_ToString = retObjectPageIndex == null ? "null" : retObjectPageIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPageIndexNumber = (java.lang.Number)retObjectPageIndex;
                 return retObjectPageIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageIndex != null ? retObjectPageIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageIndex != null ? retObjectPageIndex.getClass() : "null", retObjectPageIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

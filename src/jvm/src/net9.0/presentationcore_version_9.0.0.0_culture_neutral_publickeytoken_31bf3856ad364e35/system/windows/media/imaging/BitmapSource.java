@@ -250,12 +250,13 @@ public class BitmapSource extends ImageSource  {
             retObjectDpiX = classInstance.Get("DpiX");
             return (double)retObjectDpiX;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDpiX_ToString = retObjectDpiX == null ? "null" : retObjectDpiX.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDpiXNumber = (java.lang.Number)retObjectDpiX;
                 return retObjectDpiXNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectDpiX != null ? retObjectDpiX.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDpiX != null ? retObjectDpiX.getClass() : "null", retObjectDpiX_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -270,12 +271,13 @@ public class BitmapSource extends ImageSource  {
             retObjectDpiY = classInstance.Get("DpiY");
             return (double)retObjectDpiY;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDpiY_ToString = retObjectDpiY == null ? "null" : retObjectDpiY.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDpiYNumber = (java.lang.Number)retObjectDpiY;
                 return retObjectDpiYNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectDpiY != null ? retObjectDpiY.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDpiY != null ? retObjectDpiY.getClass() : "null", retObjectDpiY_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -290,12 +292,13 @@ public class BitmapSource extends ImageSource  {
             retObjectPixelHeight = classInstance.Get("PixelHeight");
             return (int)retObjectPixelHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPixelHeight_ToString = retObjectPixelHeight == null ? "null" : retObjectPixelHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPixelHeightNumber = (java.lang.Number)retObjectPixelHeight;
                 return retObjectPixelHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPixelHeight != null ? retObjectPixelHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPixelHeight != null ? retObjectPixelHeight.getClass() : "null", retObjectPixelHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -310,12 +313,13 @@ public class BitmapSource extends ImageSource  {
             retObjectPixelWidth = classInstance.Get("PixelWidth");
             return (int)retObjectPixelWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPixelWidth_ToString = retObjectPixelWidth == null ? "null" : retObjectPixelWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPixelWidthNumber = (java.lang.Number)retObjectPixelWidth;
                 return retObjectPixelWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPixelWidth != null ? retObjectPixelWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPixelWidth != null ? retObjectPixelWidth.getClass() : "null", retObjectPixelWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

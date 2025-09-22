@@ -167,12 +167,13 @@ public class SecurityIdentity extends NetObject  {
             retObjectAuthenticationService = classInstance.Get("AuthenticationService");
             return (int)retObjectAuthenticationService;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAuthenticationService_ToString = retObjectAuthenticationService == null ? "null" : retObjectAuthenticationService.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAuthenticationServiceNumber = (java.lang.Number)retObjectAuthenticationService;
                 return retObjectAuthenticationServiceNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAuthenticationService != null ? retObjectAuthenticationService.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAuthenticationService != null ? retObjectAuthenticationService.getClass() : "null", retObjectAuthenticationService_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

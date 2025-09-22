@@ -598,12 +598,13 @@ public class XmlTextWriter extends XmlWriter  {
             retObjectIndentation = classInstance.Get("Indentation");
             return (int)retObjectIndentation;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndentation_ToString = retObjectIndentation == null ? "null" : retObjectIndentation.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIndentationNumber = (java.lang.Number)retObjectIndentation;
                 return retObjectIndentationNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndentation != null ? retObjectIndentation.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndentation != null ? retObjectIndentation.getClass() : "null", retObjectIndentation_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

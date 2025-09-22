@@ -195,12 +195,13 @@ public class PixelFormat extends ValueType  {
             retObjectBitsPerPixel = classInstance.Get("BitsPerPixel");
             return (int)retObjectBitsPerPixel;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBitsPerPixel_ToString = retObjectBitsPerPixel == null ? "null" : retObjectBitsPerPixel.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBitsPerPixelNumber = (java.lang.Number)retObjectBitsPerPixel;
                 return retObjectBitsPerPixelNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBitsPerPixel != null ? retObjectBitsPerPixel.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBitsPerPixel != null ? retObjectBitsPerPixel.getClass() : "null", retObjectBitsPerPixel_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

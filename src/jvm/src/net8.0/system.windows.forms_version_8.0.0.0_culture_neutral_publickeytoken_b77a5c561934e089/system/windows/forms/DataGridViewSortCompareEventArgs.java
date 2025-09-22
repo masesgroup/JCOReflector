@@ -177,12 +177,13 @@ public class DataGridViewSortCompareEventArgs extends HandledEventArgs  {
             retObjectRowIndex1 = classInstance.Get("RowIndex1");
             return (int)retObjectRowIndex1;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowIndex1_ToString = retObjectRowIndex1 == null ? "null" : retObjectRowIndex1.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRowIndex1Number = (java.lang.Number)retObjectRowIndex1;
                 return retObjectRowIndex1Number.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRowIndex1 != null ? retObjectRowIndex1.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowIndex1 != null ? retObjectRowIndex1.getClass() : "null", retObjectRowIndex1_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -197,12 +198,13 @@ public class DataGridViewSortCompareEventArgs extends HandledEventArgs  {
             retObjectRowIndex2 = classInstance.Get("RowIndex2");
             return (int)retObjectRowIndex2;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowIndex2_ToString = retObjectRowIndex2 == null ? "null" : retObjectRowIndex2.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRowIndex2Number = (java.lang.Number)retObjectRowIndex2;
                 return retObjectRowIndex2Number.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRowIndex2 != null ? retObjectRowIndex2.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowIndex2 != null ? retObjectRowIndex2.getClass() : "null", retObjectRowIndex2_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -217,12 +219,13 @@ public class DataGridViewSortCompareEventArgs extends HandledEventArgs  {
             retObjectSortResult = classInstance.Get("SortResult");
             return (int)retObjectSortResult;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSortResult_ToString = retObjectSortResult == null ? "null" : retObjectSortResult.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSortResultNumber = (java.lang.Number)retObjectSortResult;
                 return retObjectSortResultNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSortResult != null ? retObjectSortResult.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSortResult != null ? retObjectSortResult.getClass() : "null", retObjectSortResult_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

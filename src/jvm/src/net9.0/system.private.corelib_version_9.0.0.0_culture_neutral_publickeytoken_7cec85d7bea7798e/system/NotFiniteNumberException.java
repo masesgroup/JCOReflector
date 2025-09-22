@@ -222,12 +222,13 @@ public class NotFiniteNumberException extends ArithmeticException {
             retObjectOffendingNumber = classInstance.Get("OffendingNumber");
             return (double)retObjectOffendingNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffendingNumber_ToString = retObjectOffendingNumber == null ? "null" : retObjectOffendingNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOffendingNumberNumber = (java.lang.Number)retObjectOffendingNumber;
                 return retObjectOffendingNumberNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOffendingNumber != null ? retObjectOffendingNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOffendingNumber != null ? retObjectOffendingNumber.getClass() : "null", retObjectOffendingNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

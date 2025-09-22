@@ -176,12 +176,13 @@ public class CommandID extends NetObject  {
             retObjectID = classInstance.Get("ID");
             return (int)retObjectID;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectID_ToString = retObjectID == null ? "null" : retObjectID.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIDNumber = (java.lang.Number)retObjectID;
                 return retObjectIDNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectID != null ? retObjectID.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectID != null ? retObjectID.getClass() : "null", retObjectID_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

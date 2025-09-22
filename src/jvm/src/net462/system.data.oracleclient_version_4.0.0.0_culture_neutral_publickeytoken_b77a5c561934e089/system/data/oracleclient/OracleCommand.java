@@ -207,12 +207,13 @@ public class OracleCommand extends DbCommand  {
             retObjectExecuteNonQuery = classInstance.Invoke("ExecuteNonQuery");
             return (int)retObjectExecuteNonQuery;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExecuteNonQuery_ToString = retObjectExecuteNonQuery == null ? "null" : retObjectExecuteNonQuery.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExecuteNonQueryNumber = (java.lang.Number)retObjectExecuteNonQuery;
                 return retObjectExecuteNonQueryNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteNonQuery != null ? retObjectExecuteNonQuery.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExecuteNonQuery != null ? retObjectExecuteNonQuery.getClass() : "null", retObjectExecuteNonQuery_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -227,12 +228,13 @@ public class OracleCommand extends DbCommand  {
             retObjectExecuteOracleNonQuery = classInstance.Invoke("ExecuteOracleNonQuery", rowid.getJCRefOut());
             return (int)retObjectExecuteOracleNonQuery;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExecuteOracleNonQuery_ToString = retObjectExecuteOracleNonQuery == null ? "null" : retObjectExecuteOracleNonQuery.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExecuteOracleNonQueryNumber = (java.lang.Number)retObjectExecuteOracleNonQuery;
                 return retObjectExecuteOracleNonQueryNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteOracleNonQuery != null ? retObjectExecuteOracleNonQuery.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExecuteOracleNonQuery != null ? retObjectExecuteOracleNonQuery.getClass() : "null", retObjectExecuteOracleNonQuery_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

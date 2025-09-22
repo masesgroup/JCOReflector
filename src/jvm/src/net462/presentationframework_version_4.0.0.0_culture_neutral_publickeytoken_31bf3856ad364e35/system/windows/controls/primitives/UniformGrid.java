@@ -172,12 +172,13 @@ public class UniformGrid extends Panel  {
             retObjectColumns = classInstance.Get("Columns");
             return (int)retObjectColumns;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumns_ToString = retObjectColumns == null ? "null" : retObjectColumns.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectColumnsNumber = (java.lang.Number)retObjectColumns;
                 return retObjectColumnsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectColumns != null ? retObjectColumns.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumns != null ? retObjectColumns.getClass() : "null", retObjectColumns_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,12 +203,13 @@ public class UniformGrid extends Panel  {
             retObjectFirstColumn = classInstance.Get("FirstColumn");
             return (int)retObjectFirstColumn;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFirstColumn_ToString = retObjectFirstColumn == null ? "null" : retObjectFirstColumn.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFirstColumnNumber = (java.lang.Number)retObjectFirstColumn;
                 return retObjectFirstColumnNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFirstColumn != null ? retObjectFirstColumn.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFirstColumn != null ? retObjectFirstColumn.getClass() : "null", retObjectFirstColumn_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -232,12 +234,13 @@ public class UniformGrid extends Panel  {
             retObjectRows = classInstance.Get("Rows");
             return (int)retObjectRows;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRows_ToString = retObjectRows == null ? "null" : retObjectRows.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRowsNumber = (java.lang.Number)retObjectRows;
                 return retObjectRowsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRows != null ? retObjectRows.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRows != null ? retObjectRows.getClass() : "null", retObjectRows_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

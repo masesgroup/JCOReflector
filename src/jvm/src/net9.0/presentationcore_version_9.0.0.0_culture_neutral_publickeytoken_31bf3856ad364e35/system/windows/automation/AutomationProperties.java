@@ -220,12 +220,13 @@ public class AutomationProperties extends NetObject  {
             retObjectGetPositionInSet = classType.Invoke("GetPositionInSet", element == null ? null : element.getJCOInstance());
             return (int)retObjectGetPositionInSet;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetPositionInSet_ToString = retObjectGetPositionInSet == null ? "null" : retObjectGetPositionInSet.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetPositionInSetNumber = (java.lang.Number)retObjectGetPositionInSet;
                 return retObjectGetPositionInSetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetPositionInSet != null ? retObjectGetPositionInSet.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetPositionInSet != null ? retObjectGetPositionInSet.getClass() : "null", retObjectGetPositionInSet_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -240,12 +241,13 @@ public class AutomationProperties extends NetObject  {
             retObjectGetSizeOfSet = classType.Invoke("GetSizeOfSet", element == null ? null : element.getJCOInstance());
             return (int)retObjectGetSizeOfSet;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetSizeOfSet_ToString = retObjectGetSizeOfSet == null ? "null" : retObjectGetSizeOfSet.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetSizeOfSetNumber = (java.lang.Number)retObjectGetSizeOfSet;
                 return retObjectGetSizeOfSetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetSizeOfSet != null ? retObjectGetSizeOfSet.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetSizeOfSet != null ? retObjectGetSizeOfSet.getClass() : "null", retObjectGetSizeOfSet_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

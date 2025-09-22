@@ -260,12 +260,13 @@ public class EventLogConfiguration extends NetObject implements AutoCloseable {
             retObjectMaximumSizeInBytes = classInstance.Get("MaximumSizeInBytes");
             return (long)retObjectMaximumSizeInBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumSizeInBytes_ToString = retObjectMaximumSizeInBytes == null ? "null" : retObjectMaximumSizeInBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumSizeInBytesNumber = (java.lang.Number)retObjectMaximumSizeInBytes;
                 return retObjectMaximumSizeInBytesNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMaximumSizeInBytes != null ? retObjectMaximumSizeInBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaximumSizeInBytes != null ? retObjectMaximumSizeInBytes.getClass() : "null", retObjectMaximumSizeInBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

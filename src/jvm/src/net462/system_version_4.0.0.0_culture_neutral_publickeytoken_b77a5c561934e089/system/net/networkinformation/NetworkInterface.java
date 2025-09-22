@@ -308,12 +308,13 @@ public class NetworkInterface extends NetObject  {
             retObjectIPv6LoopbackInterfaceIndex = classType.Get("IPv6LoopbackInterfaceIndex");
             return (int)retObjectIPv6LoopbackInterfaceIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIPv6LoopbackInterfaceIndex_ToString = retObjectIPv6LoopbackInterfaceIndex == null ? "null" : retObjectIPv6LoopbackInterfaceIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIPv6LoopbackInterfaceIndexNumber = (java.lang.Number)retObjectIPv6LoopbackInterfaceIndex;
                 return retObjectIPv6LoopbackInterfaceIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIPv6LoopbackInterfaceIndex != null ? retObjectIPv6LoopbackInterfaceIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIPv6LoopbackInterfaceIndex != null ? retObjectIPv6LoopbackInterfaceIndex.getClass() : "null", retObjectIPv6LoopbackInterfaceIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -328,12 +329,13 @@ public class NetworkInterface extends NetObject  {
             retObjectLoopbackInterfaceIndex = classType.Get("LoopbackInterfaceIndex");
             return (int)retObjectLoopbackInterfaceIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLoopbackInterfaceIndex_ToString = retObjectLoopbackInterfaceIndex == null ? "null" : retObjectLoopbackInterfaceIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLoopbackInterfaceIndexNumber = (java.lang.Number)retObjectLoopbackInterfaceIndex;
                 return retObjectLoopbackInterfaceIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLoopbackInterfaceIndex != null ? retObjectLoopbackInterfaceIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLoopbackInterfaceIndex != null ? retObjectLoopbackInterfaceIndex.getClass() : "null", retObjectLoopbackInterfaceIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -348,12 +350,13 @@ public class NetworkInterface extends NetObject  {
             retObjectSpeed = classInstance.Get("Speed");
             return (long)retObjectSpeed;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSpeed_ToString = retObjectSpeed == null ? "null" : retObjectSpeed.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSpeedNumber = (java.lang.Number)retObjectSpeed;
                 return retObjectSpeedNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectSpeed != null ? retObjectSpeed.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSpeed != null ? retObjectSpeed.getClass() : "null", retObjectSpeed_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

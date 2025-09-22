@@ -176,12 +176,13 @@ public class ComCompatibleVersionAttribute extends Attribute  {
             retObjectBuildNumber = classInstance.Get("BuildNumber");
             return (int)retObjectBuildNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBuildNumber_ToString = retObjectBuildNumber == null ? "null" : retObjectBuildNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBuildNumberNumber = (java.lang.Number)retObjectBuildNumber;
                 return retObjectBuildNumberNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBuildNumber != null ? retObjectBuildNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBuildNumber != null ? retObjectBuildNumber.getClass() : "null", retObjectBuildNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -196,12 +197,13 @@ public class ComCompatibleVersionAttribute extends Attribute  {
             retObjectMajorVersion = classInstance.Get("MajorVersion");
             return (int)retObjectMajorVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMajorVersion_ToString = retObjectMajorVersion == null ? "null" : retObjectMajorVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMajorVersionNumber = (java.lang.Number)retObjectMajorVersion;
                 return retObjectMajorVersionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMajorVersion != null ? retObjectMajorVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMajorVersion != null ? retObjectMajorVersion.getClass() : "null", retObjectMajorVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -216,12 +218,13 @@ public class ComCompatibleVersionAttribute extends Attribute  {
             retObjectMinorVersion = classInstance.Get("MinorVersion");
             return (int)retObjectMinorVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinorVersion_ToString = retObjectMinorVersion == null ? "null" : retObjectMinorVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinorVersionNumber = (java.lang.Number)retObjectMinorVersion;
                 return retObjectMinorVersionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinorVersion != null ? retObjectMinorVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinorVersion != null ? retObjectMinorVersion.getClass() : "null", retObjectMinorVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -236,12 +239,13 @@ public class ComCompatibleVersionAttribute extends Attribute  {
             retObjectRevisionNumber = classInstance.Get("RevisionNumber");
             return (int)retObjectRevisionNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRevisionNumber_ToString = retObjectRevisionNumber == null ? "null" : retObjectRevisionNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRevisionNumberNumber = (java.lang.Number)retObjectRevisionNumber;
                 return retObjectRevisionNumberNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRevisionNumber != null ? retObjectRevisionNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRevisionNumber != null ? retObjectRevisionNumber.getClass() : "null", retObjectRevisionNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

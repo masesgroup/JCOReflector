@@ -201,12 +201,13 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
             retObjectHorizontalScrollPercent = classInstance.Get("HorizontalScrollPercent");
             return (double)retObjectHorizontalScrollPercent;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHorizontalScrollPercent_ToString = retObjectHorizontalScrollPercent == null ? "null" : retObjectHorizontalScrollPercent.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHorizontalScrollPercentNumber = (java.lang.Number)retObjectHorizontalScrollPercent;
                 return retObjectHorizontalScrollPercentNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectHorizontalScrollPercent != null ? retObjectHorizontalScrollPercent.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectHorizontalScrollPercent != null ? retObjectHorizontalScrollPercent.getClass() : "null", retObjectHorizontalScrollPercent_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -221,12 +222,13 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
             retObjectHorizontalViewSize = classInstance.Get("HorizontalViewSize");
             return (double)retObjectHorizontalViewSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHorizontalViewSize_ToString = retObjectHorizontalViewSize == null ? "null" : retObjectHorizontalViewSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHorizontalViewSizeNumber = (java.lang.Number)retObjectHorizontalViewSize;
                 return retObjectHorizontalViewSizeNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectHorizontalViewSize != null ? retObjectHorizontalViewSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectHorizontalViewSize != null ? retObjectHorizontalViewSize.getClass() : "null", retObjectHorizontalViewSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -241,12 +243,13 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
             retObjectVerticalScrollPercent = classInstance.Get("VerticalScrollPercent");
             return (double)retObjectVerticalScrollPercent;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVerticalScrollPercent_ToString = retObjectVerticalScrollPercent == null ? "null" : retObjectVerticalScrollPercent.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVerticalScrollPercentNumber = (java.lang.Number)retObjectVerticalScrollPercent;
                 return retObjectVerticalScrollPercentNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectVerticalScrollPercent != null ? retObjectVerticalScrollPercent.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVerticalScrollPercent != null ? retObjectVerticalScrollPercent.getClass() : "null", retObjectVerticalScrollPercent_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -261,12 +264,13 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
             retObjectVerticalViewSize = classInstance.Get("VerticalViewSize");
             return (double)retObjectVerticalViewSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVerticalViewSize_ToString = retObjectVerticalViewSize == null ? "null" : retObjectVerticalViewSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVerticalViewSizeNumber = (java.lang.Number)retObjectVerticalViewSize;
                 return retObjectVerticalViewSizeNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectVerticalViewSize != null ? retObjectVerticalViewSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVerticalViewSize != null ? retObjectVerticalViewSize.getClass() : "null", retObjectVerticalViewSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

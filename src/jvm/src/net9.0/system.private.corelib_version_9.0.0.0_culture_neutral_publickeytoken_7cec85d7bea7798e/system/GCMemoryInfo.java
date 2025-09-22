@@ -194,12 +194,13 @@ public class GCMemoryInfo extends ValueType  {
             retObjectPauseTimePercentage = classInstance.Get("PauseTimePercentage");
             return (double)retObjectPauseTimePercentage;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPauseTimePercentage_ToString = retObjectPauseTimePercentage == null ? "null" : retObjectPauseTimePercentage.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPauseTimePercentageNumber = (java.lang.Number)retObjectPauseTimePercentage;
                 return retObjectPauseTimePercentageNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectPauseTimePercentage != null ? retObjectPauseTimePercentage.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPauseTimePercentage != null ? retObjectPauseTimePercentage.getClass() : "null", retObjectPauseTimePercentage_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -214,12 +215,13 @@ public class GCMemoryInfo extends ValueType  {
             retObjectGeneration = classInstance.Get("Generation");
             return (int)retObjectGeneration;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGeneration_ToString = retObjectGeneration == null ? "null" : retObjectGeneration.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGenerationNumber = (java.lang.Number)retObjectGeneration;
                 return retObjectGenerationNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGeneration != null ? retObjectGeneration.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGeneration != null ? retObjectGeneration.getClass() : "null", retObjectGeneration_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -234,12 +236,13 @@ public class GCMemoryInfo extends ValueType  {
             retObjectFinalizationPendingCount = classInstance.Get("FinalizationPendingCount");
             return (long)retObjectFinalizationPendingCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFinalizationPendingCount_ToString = retObjectFinalizationPendingCount == null ? "null" : retObjectFinalizationPendingCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFinalizationPendingCountNumber = (java.lang.Number)retObjectFinalizationPendingCount;
                 return retObjectFinalizationPendingCountNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectFinalizationPendingCount != null ? retObjectFinalizationPendingCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectFinalizationPendingCount != null ? retObjectFinalizationPendingCount.getClass() : "null", retObjectFinalizationPendingCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -254,12 +257,13 @@ public class GCMemoryInfo extends ValueType  {
             retObjectFragmentedBytes = classInstance.Get("FragmentedBytes");
             return (long)retObjectFragmentedBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFragmentedBytes_ToString = retObjectFragmentedBytes == null ? "null" : retObjectFragmentedBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFragmentedBytesNumber = (java.lang.Number)retObjectFragmentedBytes;
                 return retObjectFragmentedBytesNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectFragmentedBytes != null ? retObjectFragmentedBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectFragmentedBytes != null ? retObjectFragmentedBytes.getClass() : "null", retObjectFragmentedBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -274,12 +278,13 @@ public class GCMemoryInfo extends ValueType  {
             retObjectHeapSizeBytes = classInstance.Get("HeapSizeBytes");
             return (long)retObjectHeapSizeBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHeapSizeBytes_ToString = retObjectHeapSizeBytes == null ? "null" : retObjectHeapSizeBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHeapSizeBytesNumber = (java.lang.Number)retObjectHeapSizeBytes;
                 return retObjectHeapSizeBytesNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectHeapSizeBytes != null ? retObjectHeapSizeBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectHeapSizeBytes != null ? retObjectHeapSizeBytes.getClass() : "null", retObjectHeapSizeBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -294,12 +299,13 @@ public class GCMemoryInfo extends ValueType  {
             retObjectHighMemoryLoadThresholdBytes = classInstance.Get("HighMemoryLoadThresholdBytes");
             return (long)retObjectHighMemoryLoadThresholdBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHighMemoryLoadThresholdBytes_ToString = retObjectHighMemoryLoadThresholdBytes == null ? "null" : retObjectHighMemoryLoadThresholdBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHighMemoryLoadThresholdBytesNumber = (java.lang.Number)retObjectHighMemoryLoadThresholdBytes;
                 return retObjectHighMemoryLoadThresholdBytesNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectHighMemoryLoadThresholdBytes != null ? retObjectHighMemoryLoadThresholdBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectHighMemoryLoadThresholdBytes != null ? retObjectHighMemoryLoadThresholdBytes.getClass() : "null", retObjectHighMemoryLoadThresholdBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -314,12 +320,13 @@ public class GCMemoryInfo extends ValueType  {
             retObjectIndex = classInstance.Get("Index");
             return (long)retObjectIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndex_ToString = retObjectIndex == null ? "null" : retObjectIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIndexNumber = (java.lang.Number)retObjectIndex;
                 return retObjectIndexNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectIndex != null ? retObjectIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectIndex != null ? retObjectIndex.getClass() : "null", retObjectIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -334,12 +341,13 @@ public class GCMemoryInfo extends ValueType  {
             retObjectMemoryLoadBytes = classInstance.Get("MemoryLoadBytes");
             return (long)retObjectMemoryLoadBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMemoryLoadBytes_ToString = retObjectMemoryLoadBytes == null ? "null" : retObjectMemoryLoadBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMemoryLoadBytesNumber = (java.lang.Number)retObjectMemoryLoadBytes;
                 return retObjectMemoryLoadBytesNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMemoryLoadBytes != null ? retObjectMemoryLoadBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMemoryLoadBytes != null ? retObjectMemoryLoadBytes.getClass() : "null", retObjectMemoryLoadBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -354,12 +362,13 @@ public class GCMemoryInfo extends ValueType  {
             retObjectPinnedObjectsCount = classInstance.Get("PinnedObjectsCount");
             return (long)retObjectPinnedObjectsCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPinnedObjectsCount_ToString = retObjectPinnedObjectsCount == null ? "null" : retObjectPinnedObjectsCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPinnedObjectsCountNumber = (java.lang.Number)retObjectPinnedObjectsCount;
                 return retObjectPinnedObjectsCountNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectPinnedObjectsCount != null ? retObjectPinnedObjectsCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectPinnedObjectsCount != null ? retObjectPinnedObjectsCount.getClass() : "null", retObjectPinnedObjectsCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -374,12 +383,13 @@ public class GCMemoryInfo extends ValueType  {
             retObjectPromotedBytes = classInstance.Get("PromotedBytes");
             return (long)retObjectPromotedBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPromotedBytes_ToString = retObjectPromotedBytes == null ? "null" : retObjectPromotedBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPromotedBytesNumber = (java.lang.Number)retObjectPromotedBytes;
                 return retObjectPromotedBytesNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectPromotedBytes != null ? retObjectPromotedBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectPromotedBytes != null ? retObjectPromotedBytes.getClass() : "null", retObjectPromotedBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -394,12 +404,13 @@ public class GCMemoryInfo extends ValueType  {
             retObjectTotalAvailableMemoryBytes = classInstance.Get("TotalAvailableMemoryBytes");
             return (long)retObjectTotalAvailableMemoryBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTotalAvailableMemoryBytes_ToString = retObjectTotalAvailableMemoryBytes == null ? "null" : retObjectTotalAvailableMemoryBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTotalAvailableMemoryBytesNumber = (java.lang.Number)retObjectTotalAvailableMemoryBytes;
                 return retObjectTotalAvailableMemoryBytesNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTotalAvailableMemoryBytes != null ? retObjectTotalAvailableMemoryBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectTotalAvailableMemoryBytes != null ? retObjectTotalAvailableMemoryBytes.getClass() : "null", retObjectTotalAvailableMemoryBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -414,12 +425,13 @@ public class GCMemoryInfo extends ValueType  {
             retObjectTotalCommittedBytes = classInstance.Get("TotalCommittedBytes");
             return (long)retObjectTotalCommittedBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTotalCommittedBytes_ToString = retObjectTotalCommittedBytes == null ? "null" : retObjectTotalCommittedBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTotalCommittedBytesNumber = (java.lang.Number)retObjectTotalCommittedBytes;
                 return retObjectTotalCommittedBytesNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTotalCommittedBytes != null ? retObjectTotalCommittedBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectTotalCommittedBytes != null ? retObjectTotalCommittedBytes.getClass() : "null", retObjectTotalCommittedBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

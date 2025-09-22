@@ -160,12 +160,13 @@ public class IPv6InterfaceProperties extends NetObject  {
             retObjectGetScopeId = classInstance.Invoke("GetScopeId", scopeLevel == null ? null : scopeLevel.getJCOInstance());
             return (long)retObjectGetScopeId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetScopeId_ToString = retObjectGetScopeId == null ? "null" : retObjectGetScopeId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetScopeIdNumber = (java.lang.Number)retObjectGetScopeId;
                 return retObjectGetScopeIdNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetScopeId != null ? retObjectGetScopeId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetScopeId != null ? retObjectGetScopeId.getClass() : "null", retObjectGetScopeId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -184,12 +185,13 @@ public class IPv6InterfaceProperties extends NetObject  {
             retObjectIndex = classInstance.Get("Index");
             return (int)retObjectIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndex_ToString = retObjectIndex == null ? "null" : retObjectIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIndexNumber = (java.lang.Number)retObjectIndex;
                 return retObjectIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndex != null ? retObjectIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndex != null ? retObjectIndex.getClass() : "null", retObjectIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -204,12 +206,13 @@ public class IPv6InterfaceProperties extends NetObject  {
             retObjectMtu = classInstance.Get("Mtu");
             return (int)retObjectMtu;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMtu_ToString = retObjectMtu == null ? "null" : retObjectMtu.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMtuNumber = (java.lang.Number)retObjectMtu;
                 return retObjectMtuNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMtu != null ? retObjectMtu.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMtu != null ? retObjectMtu.getClass() : "null", retObjectMtu_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

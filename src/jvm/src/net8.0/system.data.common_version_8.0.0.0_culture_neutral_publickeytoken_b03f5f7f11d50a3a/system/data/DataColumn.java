@@ -322,12 +322,13 @@ public class DataColumn extends MarshalByValueComponent  {
             retObjectMaxLength = classInstance.Get("MaxLength");
             return (int)retObjectMaxLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxLength_ToString = retObjectMaxLength == null ? "null" : retObjectMaxLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxLengthNumber = (java.lang.Number)retObjectMaxLength;
                 return retObjectMaxLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null", retObjectMaxLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -352,12 +353,13 @@ public class DataColumn extends MarshalByValueComponent  {
             retObjectOrdinal = classInstance.Get("Ordinal");
             return (int)retObjectOrdinal;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOrdinal_ToString = retObjectOrdinal == null ? "null" : retObjectOrdinal.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOrdinalNumber = (java.lang.Number)retObjectOrdinal;
                 return retObjectOrdinalNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOrdinal != null ? retObjectOrdinal.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOrdinal != null ? retObjectOrdinal.getClass() : "null", retObjectOrdinal_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -372,12 +374,13 @@ public class DataColumn extends MarshalByValueComponent  {
             retObjectAutoIncrementSeed = classInstance.Get("AutoIncrementSeed");
             return (long)retObjectAutoIncrementSeed;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAutoIncrementSeed_ToString = retObjectAutoIncrementSeed == null ? "null" : retObjectAutoIncrementSeed.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAutoIncrementSeedNumber = (java.lang.Number)retObjectAutoIncrementSeed;
                 return retObjectAutoIncrementSeedNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectAutoIncrementSeed != null ? retObjectAutoIncrementSeed.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectAutoIncrementSeed != null ? retObjectAutoIncrementSeed.getClass() : "null", retObjectAutoIncrementSeed_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -402,12 +405,13 @@ public class DataColumn extends MarshalByValueComponent  {
             retObjectAutoIncrementStep = classInstance.Get("AutoIncrementStep");
             return (long)retObjectAutoIncrementStep;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAutoIncrementStep_ToString = retObjectAutoIncrementStep == null ? "null" : retObjectAutoIncrementStep.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAutoIncrementStepNumber = (java.lang.Number)retObjectAutoIncrementStep;
                 return retObjectAutoIncrementStepNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectAutoIncrementStep != null ? retObjectAutoIncrementStep.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectAutoIncrementStep != null ? retObjectAutoIncrementStep.getClass() : "null", retObjectAutoIncrementStep_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

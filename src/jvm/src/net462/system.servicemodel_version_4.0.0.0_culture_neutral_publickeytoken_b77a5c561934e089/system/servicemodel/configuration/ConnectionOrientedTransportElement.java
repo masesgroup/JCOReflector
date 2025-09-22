@@ -189,12 +189,13 @@ public class ConnectionOrientedTransportElement extends TransportElement  {
             retObjectConnectionBufferSize = classInstance.Get("ConnectionBufferSize");
             return (int)retObjectConnectionBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConnectionBufferSize_ToString = retObjectConnectionBufferSize == null ? "null" : retObjectConnectionBufferSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectConnectionBufferSizeNumber = (java.lang.Number)retObjectConnectionBufferSize;
                 return retObjectConnectionBufferSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectConnectionBufferSize != null ? retObjectConnectionBufferSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectConnectionBufferSize != null ? retObjectConnectionBufferSize.getClass() : "null", retObjectConnectionBufferSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -219,12 +220,13 @@ public class ConnectionOrientedTransportElement extends TransportElement  {
             retObjectMaxBufferSize = classInstance.Get("MaxBufferSize");
             return (int)retObjectMaxBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxBufferSize_ToString = retObjectMaxBufferSize == null ? "null" : retObjectMaxBufferSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxBufferSizeNumber = (java.lang.Number)retObjectMaxBufferSize;
                 return retObjectMaxBufferSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxBufferSize != null ? retObjectMaxBufferSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxBufferSize != null ? retObjectMaxBufferSize.getClass() : "null", retObjectMaxBufferSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -249,12 +251,13 @@ public class ConnectionOrientedTransportElement extends TransportElement  {
             retObjectMaxPendingAccepts = classInstance.Get("MaxPendingAccepts");
             return (int)retObjectMaxPendingAccepts;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxPendingAccepts_ToString = retObjectMaxPendingAccepts == null ? "null" : retObjectMaxPendingAccepts.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxPendingAcceptsNumber = (java.lang.Number)retObjectMaxPendingAccepts;
                 return retObjectMaxPendingAcceptsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxPendingAccepts != null ? retObjectMaxPendingAccepts.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxPendingAccepts != null ? retObjectMaxPendingAccepts.getClass() : "null", retObjectMaxPendingAccepts_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -279,12 +282,13 @@ public class ConnectionOrientedTransportElement extends TransportElement  {
             retObjectMaxPendingConnections = classInstance.Get("MaxPendingConnections");
             return (int)retObjectMaxPendingConnections;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxPendingConnections_ToString = retObjectMaxPendingConnections == null ? "null" : retObjectMaxPendingConnections.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxPendingConnectionsNumber = (java.lang.Number)retObjectMaxPendingConnections;
                 return retObjectMaxPendingConnectionsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxPendingConnections != null ? retObjectMaxPendingConnections.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxPendingConnections != null ? retObjectMaxPendingConnections.getClass() : "null", retObjectMaxPendingConnections_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

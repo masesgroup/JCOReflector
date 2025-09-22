@@ -174,12 +174,13 @@ public class DataGridViewTextBoxColumn extends DataGridViewColumn  {
             retObjectMaxInputLength = classInstance.Get("MaxInputLength");
             return (int)retObjectMaxInputLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxInputLength_ToString = retObjectMaxInputLength == null ? "null" : retObjectMaxInputLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxInputLengthNumber = (java.lang.Number)retObjectMaxInputLength;
                 return retObjectMaxInputLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxInputLength != null ? retObjectMaxInputLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxInputLength != null ? retObjectMaxInputLength.getClass() : "null", retObjectMaxInputLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

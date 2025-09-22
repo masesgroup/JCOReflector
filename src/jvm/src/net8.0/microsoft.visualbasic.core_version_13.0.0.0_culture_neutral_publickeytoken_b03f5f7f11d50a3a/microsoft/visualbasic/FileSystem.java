@@ -186,12 +186,13 @@ public class FileSystem extends NetObject  {
             retObjectFreeFile = classType.Invoke("FreeFile");
             return (int)retObjectFreeFile;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFreeFile_ToString = retObjectFreeFile == null ? "null" : retObjectFreeFile.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFreeFileNumber = (java.lang.Number)retObjectFreeFile;
                 return retObjectFreeFileNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFreeFile != null ? retObjectFreeFile.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFreeFile != null ? retObjectFreeFile.getClass() : "null", retObjectFreeFile_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -206,12 +207,13 @@ public class FileSystem extends NetObject  {
             retObjectFileLen = classType.Invoke("FileLen", PathName);
             return (long)retObjectFileLen;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFileLen_ToString = retObjectFileLen == null ? "null" : retObjectFileLen.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFileLenNumber = (java.lang.Number)retObjectFileLen;
                 return retObjectFileLenNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectFileLen != null ? retObjectFileLen.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectFileLen != null ? retObjectFileLen.getClass() : "null", retObjectFileLen_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -226,12 +228,13 @@ public class FileSystem extends NetObject  {
             retObjectLoc = classType.Invoke("Loc", FileNumber);
             return (long)retObjectLoc;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLoc_ToString = retObjectLoc == null ? "null" : retObjectLoc.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLocNumber = (java.lang.Number)retObjectLoc;
                 return retObjectLocNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectLoc != null ? retObjectLoc.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectLoc != null ? retObjectLoc.getClass() : "null", retObjectLoc_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -246,12 +249,13 @@ public class FileSystem extends NetObject  {
             retObjectLOF = classType.Invoke("LOF", FileNumber);
             return (long)retObjectLOF;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLOF_ToString = retObjectLOF == null ? "null" : retObjectLOF.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLOFNumber = (java.lang.Number)retObjectLOF;
                 return retObjectLOFNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectLOF != null ? retObjectLOF.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectLOF != null ? retObjectLOF.getClass() : "null", retObjectLOF_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -266,12 +270,13 @@ public class FileSystem extends NetObject  {
             retObjectSeek = classType.Invoke("Seek", FileNumber);
             return (long)retObjectSeek;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSeek_ToString = retObjectSeek == null ? "null" : retObjectSeek.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSeekNumber = (java.lang.Number)retObjectSeek;
                 return retObjectSeekNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectSeek != null ? retObjectSeek.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSeek != null ? retObjectSeek.getClass() : "null", retObjectSeek_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

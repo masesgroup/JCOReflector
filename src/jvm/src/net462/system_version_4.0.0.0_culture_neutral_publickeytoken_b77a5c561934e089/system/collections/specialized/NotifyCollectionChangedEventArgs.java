@@ -279,12 +279,13 @@ public class NotifyCollectionChangedEventArgs extends EventArgs  {
             retObjectNewStartingIndex = classInstance.Get("NewStartingIndex");
             return (int)retObjectNewStartingIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNewStartingIndex_ToString = retObjectNewStartingIndex == null ? "null" : retObjectNewStartingIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNewStartingIndexNumber = (java.lang.Number)retObjectNewStartingIndex;
                 return retObjectNewStartingIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNewStartingIndex != null ? retObjectNewStartingIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNewStartingIndex != null ? retObjectNewStartingIndex.getClass() : "null", retObjectNewStartingIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -299,12 +300,13 @@ public class NotifyCollectionChangedEventArgs extends EventArgs  {
             retObjectOldStartingIndex = classInstance.Get("OldStartingIndex");
             return (int)retObjectOldStartingIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOldStartingIndex_ToString = retObjectOldStartingIndex == null ? "null" : retObjectOldStartingIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOldStartingIndexNumber = (java.lang.Number)retObjectOldStartingIndex;
                 return retObjectOldStartingIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOldStartingIndex != null ? retObjectOldStartingIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOldStartingIndex != null ? retObjectOldStartingIndex.getClass() : "null", retObjectOldStartingIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

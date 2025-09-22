@@ -167,12 +167,13 @@ public class CoffHeader extends NetObject  {
             retObjectNumberOfSections = classInstance.Get("NumberOfSections");
             return (short)retObjectNumberOfSections;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNumberOfSections_ToString = retObjectNumberOfSections == null ? "null" : retObjectNumberOfSections.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNumberOfSectionsNumber = (java.lang.Number)retObjectNumberOfSections;
                 return retObjectNumberOfSectionsNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectNumberOfSections != null ? retObjectNumberOfSections.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectNumberOfSections != null ? retObjectNumberOfSections.getClass() : "null", retObjectNumberOfSections_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -187,12 +188,13 @@ public class CoffHeader extends NetObject  {
             retObjectSizeOfOptionalHeader = classInstance.Get("SizeOfOptionalHeader");
             return (short)retObjectSizeOfOptionalHeader;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSizeOfOptionalHeader_ToString = retObjectSizeOfOptionalHeader == null ? "null" : retObjectSizeOfOptionalHeader.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSizeOfOptionalHeaderNumber = (java.lang.Number)retObjectSizeOfOptionalHeader;
                 return retObjectSizeOfOptionalHeaderNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectSizeOfOptionalHeader != null ? retObjectSizeOfOptionalHeader.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectSizeOfOptionalHeader != null ? retObjectSizeOfOptionalHeader.getClass() : "null", retObjectSizeOfOptionalHeader_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -207,12 +209,13 @@ public class CoffHeader extends NetObject  {
             retObjectNumberOfSymbols = classInstance.Get("NumberOfSymbols");
             return (int)retObjectNumberOfSymbols;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNumberOfSymbols_ToString = retObjectNumberOfSymbols == null ? "null" : retObjectNumberOfSymbols.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNumberOfSymbolsNumber = (java.lang.Number)retObjectNumberOfSymbols;
                 return retObjectNumberOfSymbolsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNumberOfSymbols != null ? retObjectNumberOfSymbols.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumberOfSymbols != null ? retObjectNumberOfSymbols.getClass() : "null", retObjectNumberOfSymbols_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -227,12 +230,13 @@ public class CoffHeader extends NetObject  {
             retObjectPointerToSymbolTable = classInstance.Get("PointerToSymbolTable");
             return (int)retObjectPointerToSymbolTable;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPointerToSymbolTable_ToString = retObjectPointerToSymbolTable == null ? "null" : retObjectPointerToSymbolTable.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPointerToSymbolTableNumber = (java.lang.Number)retObjectPointerToSymbolTable;
                 return retObjectPointerToSymbolTableNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPointerToSymbolTable != null ? retObjectPointerToSymbolTable.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPointerToSymbolTable != null ? retObjectPointerToSymbolTable.getClass() : "null", retObjectPointerToSymbolTable_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -247,12 +251,13 @@ public class CoffHeader extends NetObject  {
             retObjectTimeDateStamp = classInstance.Get("TimeDateStamp");
             return (int)retObjectTimeDateStamp;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTimeDateStamp_ToString = retObjectTimeDateStamp == null ? "null" : retObjectTimeDateStamp.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTimeDateStampNumber = (java.lang.Number)retObjectTimeDateStamp;
                 return retObjectTimeDateStampNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTimeDateStamp != null ? retObjectTimeDateStamp.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTimeDateStamp != null ? retObjectTimeDateStamp.getClass() : "null", retObjectTimeDateStamp_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

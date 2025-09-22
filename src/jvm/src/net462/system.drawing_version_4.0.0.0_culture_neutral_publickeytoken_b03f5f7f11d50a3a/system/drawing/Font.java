@@ -517,12 +517,13 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
             retObjectGdiCharSet = classInstance.Get("GdiCharSet");
             return (byte)retObjectGdiCharSet;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGdiCharSet_ToString = retObjectGdiCharSet == null ? "null" : retObjectGdiCharSet.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGdiCharSetNumber = (java.lang.Number)retObjectGdiCharSet;
                 return retObjectGdiCharSetNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectGdiCharSet != null ? retObjectGdiCharSet.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectGdiCharSet != null ? retObjectGdiCharSet.getClass() : "null", retObjectGdiCharSet_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -537,12 +538,13 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
             retObjectHeight = classInstance.Get("Height");
             return (int)retObjectHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHeight_ToString = retObjectHeight == null ? "null" : retObjectHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHeightNumber = (java.lang.Number)retObjectHeight;
                 return retObjectHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null", retObjectHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

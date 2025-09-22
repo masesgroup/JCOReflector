@@ -196,12 +196,13 @@ public class MulticastOption extends NetObject  {
             retObjectInterfaceIndex = classInstance.Get("InterfaceIndex");
             return (int)retObjectInterfaceIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInterfaceIndex_ToString = retObjectInterfaceIndex == null ? "null" : retObjectInterfaceIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInterfaceIndexNumber = (java.lang.Number)retObjectInterfaceIndex;
                 return retObjectInterfaceIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectInterfaceIndex != null ? retObjectInterfaceIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectInterfaceIndex != null ? retObjectInterfaceIndex.getClass() : "null", retObjectInterfaceIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

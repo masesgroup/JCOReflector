@@ -186,12 +186,13 @@ public class SoapFieldAttribute extends SoapAttribute  {
             retObjectOrder = classInstance.Get("Order");
             return (int)retObjectOrder;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOrder_ToString = retObjectOrder == null ? "null" : retObjectOrder.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOrderNumber = (java.lang.Number)retObjectOrder;
                 return retObjectOrderNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOrder != null ? retObjectOrder.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOrder != null ? retObjectOrder.getClass() : "null", retObjectOrder_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -478,12 +478,13 @@ public class ToolTip extends Component  {
             retObjectAutomaticDelay = classInstance.Get("AutomaticDelay");
             return (int)retObjectAutomaticDelay;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAutomaticDelay_ToString = retObjectAutomaticDelay == null ? "null" : retObjectAutomaticDelay.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAutomaticDelayNumber = (java.lang.Number)retObjectAutomaticDelay;
                 return retObjectAutomaticDelayNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAutomaticDelay != null ? retObjectAutomaticDelay.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAutomaticDelay != null ? retObjectAutomaticDelay.getClass() : "null", retObjectAutomaticDelay_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -508,12 +509,13 @@ public class ToolTip extends Component  {
             retObjectAutoPopDelay = classInstance.Get("AutoPopDelay");
             return (int)retObjectAutoPopDelay;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAutoPopDelay_ToString = retObjectAutoPopDelay == null ? "null" : retObjectAutoPopDelay.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAutoPopDelayNumber = (java.lang.Number)retObjectAutoPopDelay;
                 return retObjectAutoPopDelayNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAutoPopDelay != null ? retObjectAutoPopDelay.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAutoPopDelay != null ? retObjectAutoPopDelay.getClass() : "null", retObjectAutoPopDelay_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -538,12 +540,13 @@ public class ToolTip extends Component  {
             retObjectInitialDelay = classInstance.Get("InitialDelay");
             return (int)retObjectInitialDelay;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInitialDelay_ToString = retObjectInitialDelay == null ? "null" : retObjectInitialDelay.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInitialDelayNumber = (java.lang.Number)retObjectInitialDelay;
                 return retObjectInitialDelayNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectInitialDelay != null ? retObjectInitialDelay.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectInitialDelay != null ? retObjectInitialDelay.getClass() : "null", retObjectInitialDelay_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -568,12 +571,13 @@ public class ToolTip extends Component  {
             retObjectReshowDelay = classInstance.Get("ReshowDelay");
             return (int)retObjectReshowDelay;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReshowDelay_ToString = retObjectReshowDelay == null ? "null" : retObjectReshowDelay.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReshowDelayNumber = (java.lang.Number)retObjectReshowDelay;
                 return retObjectReshowDelayNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReshowDelay != null ? retObjectReshowDelay.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReshowDelay != null ? retObjectReshowDelay.getClass() : "null", retObjectReshowDelay_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

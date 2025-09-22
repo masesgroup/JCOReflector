@@ -199,12 +199,13 @@ public class SqlEnclaveAttestationParameters extends NetObject  {
             retObjectProtocol = classInstance.Get("Protocol");
             return (int)retObjectProtocol;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectProtocol_ToString = retObjectProtocol == null ? "null" : retObjectProtocol.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectProtocolNumber = (java.lang.Number)retObjectProtocol;
                 return retObjectProtocolNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectProtocol != null ? retObjectProtocol.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectProtocol != null ? retObjectProtocol.getClass() : "null", retObjectProtocol_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

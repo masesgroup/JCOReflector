@@ -256,12 +256,13 @@ public class CodeTypeReference extends CodeObject  {
             retObjectArrayRank = classInstance.Get("ArrayRank");
             return (int)retObjectArrayRank;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectArrayRank_ToString = retObjectArrayRank == null ? "null" : retObjectArrayRank.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectArrayRankNumber = (java.lang.Number)retObjectArrayRank;
                 return retObjectArrayRankNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectArrayRank != null ? retObjectArrayRank.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectArrayRank != null ? retObjectArrayRank.getClass() : "null", retObjectArrayRank_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

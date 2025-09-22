@@ -171,12 +171,13 @@ public class BrotliCompressionOptions extends NetObject  {
             retObjectQuality = classInstance.Get("Quality");
             return (int)retObjectQuality;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectQuality_ToString = retObjectQuality == null ? "null" : retObjectQuality.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectQualityNumber = (java.lang.Number)retObjectQuality;
                 return retObjectQualityNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectQuality != null ? retObjectQuality.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectQuality != null ? retObjectQuality.getClass() : "null", retObjectQuality_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

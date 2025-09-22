@@ -398,12 +398,13 @@ public class PagesSection extends ConfigurationSection  {
             retObjectMaxPageStateFieldLength = classInstance.Get("MaxPageStateFieldLength");
             return (int)retObjectMaxPageStateFieldLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxPageStateFieldLength_ToString = retObjectMaxPageStateFieldLength == null ? "null" : retObjectMaxPageStateFieldLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxPageStateFieldLengthNumber = (java.lang.Number)retObjectMaxPageStateFieldLength;
                 return retObjectMaxPageStateFieldLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxPageStateFieldLength != null ? retObjectMaxPageStateFieldLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxPageStateFieldLength != null ? retObjectMaxPageStateFieldLength.getClass() : "null", retObjectMaxPageStateFieldLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

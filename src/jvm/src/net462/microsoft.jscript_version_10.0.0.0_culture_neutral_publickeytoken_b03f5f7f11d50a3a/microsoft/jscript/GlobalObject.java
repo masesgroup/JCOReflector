@@ -202,12 +202,13 @@ public class GlobalObject extends NetObject  {
             retObjectparseFloat = classType.Invoke("parseFloat", string == null ? null : string.getJCOInstance());
             return (double)retObjectparseFloat;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectparseFloat_ToString = retObjectparseFloat == null ? "null" : retObjectparseFloat.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectparseFloatNumber = (java.lang.Number)retObjectparseFloat;
                 return retObjectparseFloatNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectparseFloat != null ? retObjectparseFloat.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectparseFloat != null ? retObjectparseFloat.getClass() : "null", retObjectparseFloat_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -222,12 +223,13 @@ public class GlobalObject extends NetObject  {
             retObjectparseInt = classType.Invoke("parseInt", string == null ? null : string.getJCOInstance(), radix == null ? null : radix.getJCOInstance());
             return (double)retObjectparseInt;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectparseInt_ToString = retObjectparseInt == null ? "null" : retObjectparseInt.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectparseIntNumber = (java.lang.Number)retObjectparseInt;
                 return retObjectparseIntNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectparseInt != null ? retObjectparseInt.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectparseInt != null ? retObjectparseInt.getClass() : "null", retObjectparseInt_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -242,12 +244,13 @@ public class GlobalObject extends NetObject  {
             retObjectScriptEngineBuildVersion = classType.Invoke("ScriptEngineBuildVersion");
             return (int)retObjectScriptEngineBuildVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScriptEngineBuildVersion_ToString = retObjectScriptEngineBuildVersion == null ? "null" : retObjectScriptEngineBuildVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectScriptEngineBuildVersionNumber = (java.lang.Number)retObjectScriptEngineBuildVersion;
                 return retObjectScriptEngineBuildVersionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectScriptEngineBuildVersion != null ? retObjectScriptEngineBuildVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectScriptEngineBuildVersion != null ? retObjectScriptEngineBuildVersion.getClass() : "null", retObjectScriptEngineBuildVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -262,12 +265,13 @@ public class GlobalObject extends NetObject  {
             retObjectScriptEngineMajorVersion = classType.Invoke("ScriptEngineMajorVersion");
             return (int)retObjectScriptEngineMajorVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScriptEngineMajorVersion_ToString = retObjectScriptEngineMajorVersion == null ? "null" : retObjectScriptEngineMajorVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectScriptEngineMajorVersionNumber = (java.lang.Number)retObjectScriptEngineMajorVersion;
                 return retObjectScriptEngineMajorVersionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectScriptEngineMajorVersion != null ? retObjectScriptEngineMajorVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectScriptEngineMajorVersion != null ? retObjectScriptEngineMajorVersion.getClass() : "null", retObjectScriptEngineMajorVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -282,12 +286,13 @@ public class GlobalObject extends NetObject  {
             retObjectScriptEngineMinorVersion = classType.Invoke("ScriptEngineMinorVersion");
             return (int)retObjectScriptEngineMinorVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScriptEngineMinorVersion_ToString = retObjectScriptEngineMinorVersion == null ? "null" : retObjectScriptEngineMinorVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectScriptEngineMinorVersionNumber = (java.lang.Number)retObjectScriptEngineMinorVersion;
                 return retObjectScriptEngineMinorVersionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectScriptEngineMinorVersion != null ? retObjectScriptEngineMinorVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectScriptEngineMinorVersion != null ? retObjectScriptEngineMinorVersion.getClass() : "null", retObjectScriptEngineMinorVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

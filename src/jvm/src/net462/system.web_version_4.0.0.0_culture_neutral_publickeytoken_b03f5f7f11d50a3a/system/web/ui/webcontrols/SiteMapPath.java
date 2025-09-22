@@ -236,12 +236,13 @@ public class SiteMapPath extends CompositeControl  {
             retObjectParentLevelsDisplayed = classInstance.Get("ParentLevelsDisplayed");
             return (int)retObjectParentLevelsDisplayed;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectParentLevelsDisplayed_ToString = retObjectParentLevelsDisplayed == null ? "null" : retObjectParentLevelsDisplayed.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectParentLevelsDisplayedNumber = (java.lang.Number)retObjectParentLevelsDisplayed;
                 return retObjectParentLevelsDisplayedNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectParentLevelsDisplayed != null ? retObjectParentLevelsDisplayed.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectParentLevelsDisplayed != null ? retObjectParentLevelsDisplayed.getClass() : "null", retObjectParentLevelsDisplayed_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

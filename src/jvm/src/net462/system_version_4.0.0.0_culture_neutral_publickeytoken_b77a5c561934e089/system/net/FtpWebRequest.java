@@ -376,12 +376,13 @@ public class FtpWebRequest extends WebRequest  {
             retObjectReadWriteTimeout = classInstance.Get("ReadWriteTimeout");
             return (int)retObjectReadWriteTimeout;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadWriteTimeout_ToString = retObjectReadWriteTimeout == null ? "null" : retObjectReadWriteTimeout.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadWriteTimeoutNumber = (java.lang.Number)retObjectReadWriteTimeout;
                 return retObjectReadWriteTimeoutNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadWriteTimeout != null ? retObjectReadWriteTimeout.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadWriteTimeout != null ? retObjectReadWriteTimeout.getClass() : "null", retObjectReadWriteTimeout_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -406,12 +407,13 @@ public class FtpWebRequest extends WebRequest  {
             retObjectContentOffset = classInstance.Get("ContentOffset");
             return (long)retObjectContentOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectContentOffset_ToString = retObjectContentOffset == null ? "null" : retObjectContentOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectContentOffsetNumber = (java.lang.Number)retObjectContentOffset;
                 return retObjectContentOffsetNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectContentOffset != null ? retObjectContentOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectContentOffset != null ? retObjectContentOffset.getClass() : "null", retObjectContentOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

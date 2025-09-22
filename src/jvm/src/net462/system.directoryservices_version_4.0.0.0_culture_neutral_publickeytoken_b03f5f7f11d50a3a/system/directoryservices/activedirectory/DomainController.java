@@ -484,12 +484,13 @@ public class DomainController extends DirectoryServer  {
             retObjectHighestCommittedUsn = classInstance.Get("HighestCommittedUsn");
             return (long)retObjectHighestCommittedUsn;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHighestCommittedUsn_ToString = retObjectHighestCommittedUsn == null ? "null" : retObjectHighestCommittedUsn.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHighestCommittedUsnNumber = (java.lang.Number)retObjectHighestCommittedUsn;
                 return retObjectHighestCommittedUsnNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectHighestCommittedUsn != null ? retObjectHighestCommittedUsn.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectHighestCommittedUsn != null ? retObjectHighestCommittedUsn.getClass() : "null", retObjectHighestCommittedUsn_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

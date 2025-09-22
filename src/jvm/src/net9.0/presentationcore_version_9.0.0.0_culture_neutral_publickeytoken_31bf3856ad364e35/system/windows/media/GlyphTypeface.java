@@ -264,12 +264,13 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
             retObjectBaseline = classInstance.Get("Baseline");
             return (double)retObjectBaseline;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBaseline_ToString = retObjectBaseline == null ? "null" : retObjectBaseline.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBaselineNumber = (java.lang.Number)retObjectBaseline;
                 return retObjectBaselineNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectBaseline != null ? retObjectBaseline.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBaseline != null ? retObjectBaseline.getClass() : "null", retObjectBaseline_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -284,12 +285,13 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
             retObjectCapsHeight = classInstance.Get("CapsHeight");
             return (double)retObjectCapsHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCapsHeight_ToString = retObjectCapsHeight == null ? "null" : retObjectCapsHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCapsHeightNumber = (java.lang.Number)retObjectCapsHeight;
                 return retObjectCapsHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectCapsHeight != null ? retObjectCapsHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCapsHeight != null ? retObjectCapsHeight.getClass() : "null", retObjectCapsHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -304,12 +306,13 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
             retObjectHeight = classInstance.Get("Height");
             return (double)retObjectHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHeight_ToString = retObjectHeight == null ? "null" : retObjectHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHeightNumber = (java.lang.Number)retObjectHeight;
                 return retObjectHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null", retObjectHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -324,12 +327,13 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
             retObjectStrikethroughPosition = classInstance.Get("StrikethroughPosition");
             return (double)retObjectStrikethroughPosition;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStrikethroughPosition_ToString = retObjectStrikethroughPosition == null ? "null" : retObjectStrikethroughPosition.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStrikethroughPositionNumber = (java.lang.Number)retObjectStrikethroughPosition;
                 return retObjectStrikethroughPositionNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectStrikethroughPosition != null ? retObjectStrikethroughPosition.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStrikethroughPosition != null ? retObjectStrikethroughPosition.getClass() : "null", retObjectStrikethroughPosition_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -344,12 +348,13 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
             retObjectStrikethroughThickness = classInstance.Get("StrikethroughThickness");
             return (double)retObjectStrikethroughThickness;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStrikethroughThickness_ToString = retObjectStrikethroughThickness == null ? "null" : retObjectStrikethroughThickness.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStrikethroughThicknessNumber = (java.lang.Number)retObjectStrikethroughThickness;
                 return retObjectStrikethroughThicknessNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectStrikethroughThickness != null ? retObjectStrikethroughThickness.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStrikethroughThickness != null ? retObjectStrikethroughThickness.getClass() : "null", retObjectStrikethroughThickness_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -364,12 +369,13 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
             retObjectUnderlinePosition = classInstance.Get("UnderlinePosition");
             return (double)retObjectUnderlinePosition;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUnderlinePosition_ToString = retObjectUnderlinePosition == null ? "null" : retObjectUnderlinePosition.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectUnderlinePositionNumber = (java.lang.Number)retObjectUnderlinePosition;
                 return retObjectUnderlinePositionNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectUnderlinePosition != null ? retObjectUnderlinePosition.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectUnderlinePosition != null ? retObjectUnderlinePosition.getClass() : "null", retObjectUnderlinePosition_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -384,12 +390,13 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
             retObjectUnderlineThickness = classInstance.Get("UnderlineThickness");
             return (double)retObjectUnderlineThickness;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUnderlineThickness_ToString = retObjectUnderlineThickness == null ? "null" : retObjectUnderlineThickness.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectUnderlineThicknessNumber = (java.lang.Number)retObjectUnderlineThickness;
                 return retObjectUnderlineThicknessNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectUnderlineThickness != null ? retObjectUnderlineThickness.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectUnderlineThickness != null ? retObjectUnderlineThickness.getClass() : "null", retObjectUnderlineThickness_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -404,12 +411,13 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
             retObjectVersion = classInstance.Get("Version");
             return (double)retObjectVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVersion_ToString = retObjectVersion == null ? "null" : retObjectVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVersionNumber = (java.lang.Number)retObjectVersion;
                 return retObjectVersionNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVersion != null ? retObjectVersion.getClass() : "null", retObjectVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -424,12 +432,13 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
             retObjectXHeight = classInstance.Get("XHeight");
             return (double)retObjectXHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectXHeight_ToString = retObjectXHeight == null ? "null" : retObjectXHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectXHeightNumber = (java.lang.Number)retObjectXHeight;
                 return retObjectXHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectXHeight != null ? retObjectXHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectXHeight != null ? retObjectXHeight.getClass() : "null", retObjectXHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -444,12 +453,13 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
             retObjectGlyphCount = classInstance.Get("GlyphCount");
             return (int)retObjectGlyphCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGlyphCount_ToString = retObjectGlyphCount == null ? "null" : retObjectGlyphCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGlyphCountNumber = (java.lang.Number)retObjectGlyphCount;
                 return retObjectGlyphCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGlyphCount != null ? retObjectGlyphCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGlyphCount != null ? retObjectGlyphCount.getClass() : "null", retObjectGlyphCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

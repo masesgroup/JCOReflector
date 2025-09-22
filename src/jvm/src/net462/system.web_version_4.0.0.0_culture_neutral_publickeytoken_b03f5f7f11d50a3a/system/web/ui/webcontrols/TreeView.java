@@ -468,12 +468,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
             retObjectExpandDepth = classInstance.Get("ExpandDepth");
             return (int)retObjectExpandDepth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExpandDepth_ToString = retObjectExpandDepth == null ? "null" : retObjectExpandDepth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExpandDepthNumber = (java.lang.Number)retObjectExpandDepth;
                 return retObjectExpandDepthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExpandDepth != null ? retObjectExpandDepth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExpandDepth != null ? retObjectExpandDepth.getClass() : "null", retObjectExpandDepth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -498,12 +499,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
             retObjectMaxDataBindDepth = classInstance.Get("MaxDataBindDepth");
             return (int)retObjectMaxDataBindDepth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxDataBindDepth_ToString = retObjectMaxDataBindDepth == null ? "null" : retObjectMaxDataBindDepth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxDataBindDepthNumber = (java.lang.Number)retObjectMaxDataBindDepth;
                 return retObjectMaxDataBindDepthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxDataBindDepth != null ? retObjectMaxDataBindDepth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxDataBindDepth != null ? retObjectMaxDataBindDepth.getClass() : "null", retObjectMaxDataBindDepth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -528,12 +530,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
             retObjectNodeIndent = classInstance.Get("NodeIndent");
             return (int)retObjectNodeIndent;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNodeIndent_ToString = retObjectNodeIndent == null ? "null" : retObjectNodeIndent.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNodeIndentNumber = (java.lang.Number)retObjectNodeIndent;
                 return retObjectNodeIndentNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNodeIndent != null ? retObjectNodeIndent.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNodeIndent != null ? retObjectNodeIndent.getClass() : "null", retObjectNodeIndent_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

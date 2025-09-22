@@ -239,12 +239,13 @@ public class _TypeImplementation extends NetObject implements _Type {
             retObjectGetArrayRank = classInstance.Invoke("GetArrayRank");
             return (int)retObjectGetArrayRank;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetArrayRank_ToString = retObjectGetArrayRank == null ? "null" : retObjectGetArrayRank.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetArrayRankNumber = (java.lang.Number)retObjectGetArrayRank;
                 return retObjectGetArrayRankNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetArrayRank != null ? retObjectGetArrayRank.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetArrayRank != null ? retObjectGetArrayRank.getClass() : "null", retObjectGetArrayRank_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

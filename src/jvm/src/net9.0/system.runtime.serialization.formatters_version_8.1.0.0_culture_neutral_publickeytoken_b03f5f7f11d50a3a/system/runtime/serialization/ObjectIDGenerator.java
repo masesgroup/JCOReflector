@@ -167,12 +167,13 @@ public class ObjectIDGenerator extends NetObject  {
             retObjectGetId = classInstance.Invoke("GetId", obj == null ? null : obj.getJCOInstance(), firstTime.getJCRefOut());
             return (long)retObjectGetId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetId_ToString = retObjectGetId == null ? "null" : retObjectGetId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetIdNumber = (java.lang.Number)retObjectGetId;
                 return retObjectGetIdNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetId != null ? retObjectGetId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetId != null ? retObjectGetId.getClass() : "null", retObjectGetId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -187,12 +188,13 @@ public class ObjectIDGenerator extends NetObject  {
             retObjectHasId = classInstance.Invoke("HasId", obj == null ? null : obj.getJCOInstance(), firstTime.getJCRefOut());
             return (long)retObjectHasId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHasId_ToString = retObjectHasId == null ? "null" : retObjectHasId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHasIdNumber = (java.lang.Number)retObjectHasId;
                 return retObjectHasIdNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectHasId != null ? retObjectHasId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectHasId != null ? retObjectHasId.getClass() : "null", retObjectHasId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

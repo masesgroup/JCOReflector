@@ -551,12 +551,13 @@ public class Forest extends NetObject implements AutoCloseable {
             retObjectForestModeLevel = classInstance.Get("ForestModeLevel");
             return (int)retObjectForestModeLevel;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectForestModeLevel_ToString = retObjectForestModeLevel == null ? "null" : retObjectForestModeLevel.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectForestModeLevelNumber = (java.lang.Number)retObjectForestModeLevel;
                 return retObjectForestModeLevelNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectForestModeLevel != null ? retObjectForestModeLevel.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectForestModeLevel != null ? retObjectForestModeLevel.getClass() : "null", retObjectForestModeLevel_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

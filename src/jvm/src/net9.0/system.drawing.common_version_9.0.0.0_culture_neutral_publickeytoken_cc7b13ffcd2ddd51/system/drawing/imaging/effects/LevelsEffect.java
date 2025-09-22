@@ -176,12 +176,13 @@ public class LevelsEffect extends Effect  {
             retObjectHighlight = classInstance.Get("Highlight");
             return (int)retObjectHighlight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHighlight_ToString = retObjectHighlight == null ? "null" : retObjectHighlight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHighlightNumber = (java.lang.Number)retObjectHighlight;
                 return retObjectHighlightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHighlight != null ? retObjectHighlight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHighlight != null ? retObjectHighlight.getClass() : "null", retObjectHighlight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -196,12 +197,13 @@ public class LevelsEffect extends Effect  {
             retObjectMidtone = classInstance.Get("Midtone");
             return (int)retObjectMidtone;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMidtone_ToString = retObjectMidtone == null ? "null" : retObjectMidtone.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMidtoneNumber = (java.lang.Number)retObjectMidtone;
                 return retObjectMidtoneNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMidtone != null ? retObjectMidtone.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMidtone != null ? retObjectMidtone.getClass() : "null", retObjectMidtone_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -216,12 +218,13 @@ public class LevelsEffect extends Effect  {
             retObjectShadow = classInstance.Get("Shadow");
             return (int)retObjectShadow;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectShadow_ToString = retObjectShadow == null ? "null" : retObjectShadow.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectShadowNumber = (java.lang.Number)retObjectShadow;
                 return retObjectShadowNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectShadow != null ? retObjectShadow.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectShadow != null ? retObjectShadow.getClass() : "null", retObjectShadow_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

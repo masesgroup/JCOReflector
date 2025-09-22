@@ -208,12 +208,13 @@ public class Splitter extends Control  {
             retObjectMinExtra = classInstance.Get("MinExtra");
             return (int)retObjectMinExtra;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinExtra_ToString = retObjectMinExtra == null ? "null" : retObjectMinExtra.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinExtraNumber = (java.lang.Number)retObjectMinExtra;
                 return retObjectMinExtraNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinExtra != null ? retObjectMinExtra.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinExtra != null ? retObjectMinExtra.getClass() : "null", retObjectMinExtra_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -238,12 +239,13 @@ public class Splitter extends Control  {
             retObjectMinSize = classInstance.Get("MinSize");
             return (int)retObjectMinSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinSize_ToString = retObjectMinSize == null ? "null" : retObjectMinSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinSizeNumber = (java.lang.Number)retObjectMinSize;
                 return retObjectMinSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinSize != null ? retObjectMinSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinSize != null ? retObjectMinSize.getClass() : "null", retObjectMinSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -268,12 +270,13 @@ public class Splitter extends Control  {
             retObjectSplitPosition = classInstance.Get("SplitPosition");
             return (int)retObjectSplitPosition;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSplitPosition_ToString = retObjectSplitPosition == null ? "null" : retObjectSplitPosition.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSplitPositionNumber = (java.lang.Number)retObjectSplitPosition;
                 return retObjectSplitPositionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSplitPosition != null ? retObjectSplitPosition.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSplitPosition != null ? retObjectSplitPosition.getClass() : "null", retObjectSplitPosition_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

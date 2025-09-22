@@ -367,12 +367,13 @@ public class OdbcConnection extends DbConnection implements system.ICloneable {
             retObjectConnectionTimeout = classInstance.Get("ConnectionTimeout");
             return (int)retObjectConnectionTimeout;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConnectionTimeout_ToString = retObjectConnectionTimeout == null ? "null" : retObjectConnectionTimeout.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectConnectionTimeoutNumber = (java.lang.Number)retObjectConnectionTimeout;
                 return retObjectConnectionTimeoutNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectConnectionTimeout != null ? retObjectConnectionTimeout.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectConnectionTimeout != null ? retObjectConnectionTimeout.getClass() : "null", retObjectConnectionTimeout_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

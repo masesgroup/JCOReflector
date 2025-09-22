@@ -360,12 +360,13 @@ public class LdapSessionOptions extends NetObject  {
             retObjectPingLimit = classInstance.Get("PingLimit");
             return (int)retObjectPingLimit;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPingLimit_ToString = retObjectPingLimit == null ? "null" : retObjectPingLimit.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPingLimitNumber = (java.lang.Number)retObjectPingLimit;
                 return retObjectPingLimitNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPingLimit != null ? retObjectPingLimit.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPingLimit != null ? retObjectPingLimit.getClass() : "null", retObjectPingLimit_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -390,12 +391,13 @@ public class LdapSessionOptions extends NetObject  {
             retObjectProtocolVersion = classInstance.Get("ProtocolVersion");
             return (int)retObjectProtocolVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectProtocolVersion_ToString = retObjectProtocolVersion == null ? "null" : retObjectProtocolVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectProtocolVersionNumber = (java.lang.Number)retObjectProtocolVersion;
                 return retObjectProtocolVersionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectProtocolVersion != null ? retObjectProtocolVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectProtocolVersion != null ? retObjectProtocolVersion.getClass() : "null", retObjectProtocolVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -420,12 +422,13 @@ public class LdapSessionOptions extends NetObject  {
             retObjectReferralHopLimit = classInstance.Get("ReferralHopLimit");
             return (int)retObjectReferralHopLimit;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReferralHopLimit_ToString = retObjectReferralHopLimit == null ? "null" : retObjectReferralHopLimit.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReferralHopLimitNumber = (java.lang.Number)retObjectReferralHopLimit;
                 return retObjectReferralHopLimitNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReferralHopLimit != null ? retObjectReferralHopLimit.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReferralHopLimit != null ? retObjectReferralHopLimit.getClass() : "null", retObjectReferralHopLimit_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -450,12 +453,13 @@ public class LdapSessionOptions extends NetObject  {
             retObjectSspiFlag = classInstance.Get("SspiFlag");
             return (int)retObjectSspiFlag;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSspiFlag_ToString = retObjectSspiFlag == null ? "null" : retObjectSspiFlag.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSspiFlagNumber = (java.lang.Number)retObjectSspiFlag;
                 return retObjectSspiFlagNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSspiFlag != null ? retObjectSspiFlag.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSspiFlag != null ? retObjectSspiFlag.getClass() : "null", retObjectSspiFlag_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

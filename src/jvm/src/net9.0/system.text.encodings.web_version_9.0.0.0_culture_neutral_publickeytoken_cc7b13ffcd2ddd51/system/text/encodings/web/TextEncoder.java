@@ -233,12 +233,13 @@ public class TextEncoder extends NetObject  {
             retObjectMaxOutputCharactersPerInputCharacter = classInstance.Get("MaxOutputCharactersPerInputCharacter");
             return (int)retObjectMaxOutputCharactersPerInputCharacter;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxOutputCharactersPerInputCharacter_ToString = retObjectMaxOutputCharactersPerInputCharacter == null ? "null" : retObjectMaxOutputCharactersPerInputCharacter.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxOutputCharactersPerInputCharacterNumber = (java.lang.Number)retObjectMaxOutputCharactersPerInputCharacter;
                 return retObjectMaxOutputCharactersPerInputCharacterNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxOutputCharactersPerInputCharacter != null ? retObjectMaxOutputCharactersPerInputCharacter.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxOutputCharactersPerInputCharacter != null ? retObjectMaxOutputCharactersPerInputCharacter.getClass() : "null", retObjectMaxOutputCharactersPerInputCharacter_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

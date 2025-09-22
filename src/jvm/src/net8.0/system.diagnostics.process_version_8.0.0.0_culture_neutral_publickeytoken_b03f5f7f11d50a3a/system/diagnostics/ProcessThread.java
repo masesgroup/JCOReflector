@@ -205,12 +205,13 @@ public class ProcessThread extends Component  {
             retObjectBasePriority = classInstance.Get("BasePriority");
             return (int)retObjectBasePriority;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBasePriority_ToString = retObjectBasePriority == null ? "null" : retObjectBasePriority.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBasePriorityNumber = (java.lang.Number)retObjectBasePriority;
                 return retObjectBasePriorityNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBasePriority != null ? retObjectBasePriority.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBasePriority != null ? retObjectBasePriority.getClass() : "null", retObjectBasePriority_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -225,12 +226,13 @@ public class ProcessThread extends Component  {
             retObjectCurrentPriority = classInstance.Get("CurrentPriority");
             return (int)retObjectCurrentPriority;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCurrentPriority_ToString = retObjectCurrentPriority == null ? "null" : retObjectCurrentPriority.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCurrentPriorityNumber = (java.lang.Number)retObjectCurrentPriority;
                 return retObjectCurrentPriorityNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCurrentPriority != null ? retObjectCurrentPriority.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentPriority != null ? retObjectCurrentPriority.getClass() : "null", retObjectCurrentPriority_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -245,12 +247,13 @@ public class ProcessThread extends Component  {
             retObjectId = classInstance.Get("Id");
             return (int)retObjectId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectId_ToString = retObjectId == null ? "null" : retObjectId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIdNumber = (java.lang.Number)retObjectId;
                 return retObjectIdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectId != null ? retObjectId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectId != null ? retObjectId.getClass() : "null", retObjectId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

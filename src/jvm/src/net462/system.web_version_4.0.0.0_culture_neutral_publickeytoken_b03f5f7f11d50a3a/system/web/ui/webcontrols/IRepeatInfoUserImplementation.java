@@ -223,12 +223,13 @@ public class IRepeatInfoUserImplementation extends NetObject implements IRepeatI
             retObjectRepeatedItemCount = classInstance.Get("RepeatedItemCount");
             return (int)retObjectRepeatedItemCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRepeatedItemCount_ToString = retObjectRepeatedItemCount == null ? "null" : retObjectRepeatedItemCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRepeatedItemCountNumber = (java.lang.Number)retObjectRepeatedItemCount;
                 return retObjectRepeatedItemCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRepeatedItemCount != null ? retObjectRepeatedItemCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRepeatedItemCount != null ? retObjectRepeatedItemCount.getClass() : "null", retObjectRepeatedItemCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

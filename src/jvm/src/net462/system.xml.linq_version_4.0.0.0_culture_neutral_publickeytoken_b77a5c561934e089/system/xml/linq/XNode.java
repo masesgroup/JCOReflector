@@ -209,12 +209,13 @@ public class XNode extends XObject  {
             retObjectCompareDocumentOrder = classType.Invoke("CompareDocumentOrder", n1 == null ? null : n1.getJCOInstance(), n2 == null ? null : n2.getJCOInstance());
             return (int)retObjectCompareDocumentOrder;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareDocumentOrder_ToString = retObjectCompareDocumentOrder == null ? "null" : retObjectCompareDocumentOrder.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareDocumentOrderNumber = (java.lang.Number)retObjectCompareDocumentOrder;
                 return retObjectCompareDocumentOrderNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareDocumentOrder != null ? retObjectCompareDocumentOrder.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareDocumentOrder != null ? retObjectCompareDocumentOrder.getClass() : "null", retObjectCompareDocumentOrder_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

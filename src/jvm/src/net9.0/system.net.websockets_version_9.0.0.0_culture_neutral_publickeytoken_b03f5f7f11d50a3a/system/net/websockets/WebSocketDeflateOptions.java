@@ -219,12 +219,13 @@ public class WebSocketDeflateOptions extends NetObject  {
             retObjectClientMaxWindowBits = classInstance.Get("ClientMaxWindowBits");
             return (int)retObjectClientMaxWindowBits;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectClientMaxWindowBits_ToString = retObjectClientMaxWindowBits == null ? "null" : retObjectClientMaxWindowBits.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectClientMaxWindowBitsNumber = (java.lang.Number)retObjectClientMaxWindowBits;
                 return retObjectClientMaxWindowBitsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectClientMaxWindowBits != null ? retObjectClientMaxWindowBits.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectClientMaxWindowBits != null ? retObjectClientMaxWindowBits.getClass() : "null", retObjectClientMaxWindowBits_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -249,12 +250,13 @@ public class WebSocketDeflateOptions extends NetObject  {
             retObjectServerMaxWindowBits = classInstance.Get("ServerMaxWindowBits");
             return (int)retObjectServerMaxWindowBits;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectServerMaxWindowBits_ToString = retObjectServerMaxWindowBits == null ? "null" : retObjectServerMaxWindowBits.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectServerMaxWindowBitsNumber = (java.lang.Number)retObjectServerMaxWindowBits;
                 return retObjectServerMaxWindowBitsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectServerMaxWindowBits != null ? retObjectServerMaxWindowBits.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectServerMaxWindowBits != null ? retObjectServerMaxWindowBits.getClass() : "null", retObjectServerMaxWindowBits_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

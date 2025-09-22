@@ -176,12 +176,13 @@ public class NetworkProgressChangedEventArgs extends ProgressChangedEventArgs  {
             retObjectProcessedBytes = classInstance.Get("ProcessedBytes");
             return (int)retObjectProcessedBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectProcessedBytes_ToString = retObjectProcessedBytes == null ? "null" : retObjectProcessedBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectProcessedBytesNumber = (java.lang.Number)retObjectProcessedBytes;
                 return retObjectProcessedBytesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectProcessedBytes != null ? retObjectProcessedBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectProcessedBytes != null ? retObjectProcessedBytes.getClass() : "null", retObjectProcessedBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -196,12 +197,13 @@ public class NetworkProgressChangedEventArgs extends ProgressChangedEventArgs  {
             retObjectTotalBytes = classInstance.Get("TotalBytes");
             return (int)retObjectTotalBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTotalBytes_ToString = retObjectTotalBytes == null ? "null" : retObjectTotalBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTotalBytesNumber = (java.lang.Number)retObjectTotalBytes;
                 return retObjectTotalBytesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTotalBytes != null ? retObjectTotalBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTotalBytes != null ? retObjectTotalBytes.getClass() : "null", retObjectTotalBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

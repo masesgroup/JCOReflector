@@ -204,12 +204,13 @@ public class DataGridViewColumnCollection extends BaseCollection  {
             retObjectAdd = classInstance.Invoke("Add", columnName, headerText);
             return (int)retObjectAdd;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAdd_ToString = retObjectAdd == null ? "null" : retObjectAdd.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAddNumber = (java.lang.Number)retObjectAdd;
                 return retObjectAddNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -224,12 +225,13 @@ public class DataGridViewColumnCollection extends BaseCollection  {
             retObjectAdd = classInstance.Invoke("Add", dataGridViewColumn == null ? null : dataGridViewColumn.getJCOInstance());
             return (int)retObjectAdd;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAdd_ToString = retObjectAdd == null ? "null" : retObjectAdd.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAddNumber = (java.lang.Number)retObjectAdd;
                 return retObjectAddNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -244,12 +246,13 @@ public class DataGridViewColumnCollection extends BaseCollection  {
             retObjectGetColumnCount = classInstance.Invoke("GetColumnCount", includeFilter == null ? null : includeFilter.getJCOInstance());
             return (int)retObjectGetColumnCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetColumnCount_ToString = retObjectGetColumnCount == null ? "null" : retObjectGetColumnCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetColumnCountNumber = (java.lang.Number)retObjectGetColumnCount;
                 return retObjectGetColumnCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetColumnCount != null ? retObjectGetColumnCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetColumnCount != null ? retObjectGetColumnCount.getClass() : "null", retObjectGetColumnCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -264,12 +267,13 @@ public class DataGridViewColumnCollection extends BaseCollection  {
             retObjectGetColumnsWidth = classInstance.Invoke("GetColumnsWidth", includeFilter == null ? null : includeFilter.getJCOInstance());
             return (int)retObjectGetColumnsWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetColumnsWidth_ToString = retObjectGetColumnsWidth == null ? "null" : retObjectGetColumnsWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetColumnsWidthNumber = (java.lang.Number)retObjectGetColumnsWidth;
                 return retObjectGetColumnsWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetColumnsWidth != null ? retObjectGetColumnsWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetColumnsWidth != null ? retObjectGetColumnsWidth.getClass() : "null", retObjectGetColumnsWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -284,12 +288,13 @@ public class DataGridViewColumnCollection extends BaseCollection  {
             retObjectIndexOf = classInstance.Invoke("IndexOf", dataGridViewColumn == null ? null : dataGridViewColumn.getJCOInstance());
             return (int)retObjectIndexOf;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
                 return retObjectIndexOfNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -392,12 +392,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
             retObjectCurrentReadCount = classInstance.Get("CurrentReadCount");
             return (int)retObjectCurrentReadCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCurrentReadCount_ToString = retObjectCurrentReadCount == null ? "null" : retObjectCurrentReadCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCurrentReadCountNumber = (java.lang.Number)retObjectCurrentReadCount;
                 return retObjectCurrentReadCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCurrentReadCount != null ? retObjectCurrentReadCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentReadCount != null ? retObjectCurrentReadCount.getClass() : "null", retObjectCurrentReadCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -412,12 +413,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
             retObjectRecursiveReadCount = classInstance.Get("RecursiveReadCount");
             return (int)retObjectRecursiveReadCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRecursiveReadCount_ToString = retObjectRecursiveReadCount == null ? "null" : retObjectRecursiveReadCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRecursiveReadCountNumber = (java.lang.Number)retObjectRecursiveReadCount;
                 return retObjectRecursiveReadCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRecursiveReadCount != null ? retObjectRecursiveReadCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRecursiveReadCount != null ? retObjectRecursiveReadCount.getClass() : "null", retObjectRecursiveReadCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -432,12 +434,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
             retObjectRecursiveUpgradeCount = classInstance.Get("RecursiveUpgradeCount");
             return (int)retObjectRecursiveUpgradeCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRecursiveUpgradeCount_ToString = retObjectRecursiveUpgradeCount == null ? "null" : retObjectRecursiveUpgradeCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRecursiveUpgradeCountNumber = (java.lang.Number)retObjectRecursiveUpgradeCount;
                 return retObjectRecursiveUpgradeCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRecursiveUpgradeCount != null ? retObjectRecursiveUpgradeCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRecursiveUpgradeCount != null ? retObjectRecursiveUpgradeCount.getClass() : "null", retObjectRecursiveUpgradeCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -452,12 +455,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
             retObjectRecursiveWriteCount = classInstance.Get("RecursiveWriteCount");
             return (int)retObjectRecursiveWriteCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRecursiveWriteCount_ToString = retObjectRecursiveWriteCount == null ? "null" : retObjectRecursiveWriteCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRecursiveWriteCountNumber = (java.lang.Number)retObjectRecursiveWriteCount;
                 return retObjectRecursiveWriteCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRecursiveWriteCount != null ? retObjectRecursiveWriteCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRecursiveWriteCount != null ? retObjectRecursiveWriteCount.getClass() : "null", retObjectRecursiveWriteCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -472,12 +476,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
             retObjectWaitingReadCount = classInstance.Get("WaitingReadCount");
             return (int)retObjectWaitingReadCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitingReadCount_ToString = retObjectWaitingReadCount == null ? "null" : retObjectWaitingReadCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWaitingReadCountNumber = (java.lang.Number)retObjectWaitingReadCount;
                 return retObjectWaitingReadCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWaitingReadCount != null ? retObjectWaitingReadCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitingReadCount != null ? retObjectWaitingReadCount.getClass() : "null", retObjectWaitingReadCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -492,12 +497,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
             retObjectWaitingUpgradeCount = classInstance.Get("WaitingUpgradeCount");
             return (int)retObjectWaitingUpgradeCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitingUpgradeCount_ToString = retObjectWaitingUpgradeCount == null ? "null" : retObjectWaitingUpgradeCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWaitingUpgradeCountNumber = (java.lang.Number)retObjectWaitingUpgradeCount;
                 return retObjectWaitingUpgradeCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWaitingUpgradeCount != null ? retObjectWaitingUpgradeCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitingUpgradeCount != null ? retObjectWaitingUpgradeCount.getClass() : "null", retObjectWaitingUpgradeCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -512,12 +518,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
             retObjectWaitingWriteCount = classInstance.Get("WaitingWriteCount");
             return (int)retObjectWaitingWriteCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitingWriteCount_ToString = retObjectWaitingWriteCount == null ? "null" : retObjectWaitingWriteCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWaitingWriteCountNumber = (java.lang.Number)retObjectWaitingWriteCount;
                 return retObjectWaitingWriteCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWaitingWriteCount != null ? retObjectWaitingWriteCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitingWriteCount != null ? retObjectWaitingWriteCount.getClass() : "null", retObjectWaitingWriteCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

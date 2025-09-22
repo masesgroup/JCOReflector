@@ -458,12 +458,13 @@ public class DependencyProperty extends NetObject  {
             retObjectGlobalIndex = classInstance.Get("GlobalIndex");
             return (int)retObjectGlobalIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGlobalIndex_ToString = retObjectGlobalIndex == null ? "null" : retObjectGlobalIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGlobalIndexNumber = (java.lang.Number)retObjectGlobalIndex;
                 return retObjectGlobalIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGlobalIndex != null ? retObjectGlobalIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGlobalIndex != null ? retObjectGlobalIndex.getClass() : "null", retObjectGlobalIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

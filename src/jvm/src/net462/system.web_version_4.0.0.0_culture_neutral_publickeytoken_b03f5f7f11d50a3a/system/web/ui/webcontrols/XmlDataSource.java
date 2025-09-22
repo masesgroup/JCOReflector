@@ -257,12 +257,13 @@ public class XmlDataSource extends HierarchicalDataSourceControl  {
             retObjectCacheDuration = classInstance.Get("CacheDuration");
             return (int)retObjectCacheDuration;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCacheDuration_ToString = retObjectCacheDuration == null ? "null" : retObjectCacheDuration.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCacheDurationNumber = (java.lang.Number)retObjectCacheDuration;
                 return retObjectCacheDurationNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCacheDuration != null ? retObjectCacheDuration.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCacheDuration != null ? retObjectCacheDuration.getClass() : "null", retObjectCacheDuration_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

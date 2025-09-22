@@ -179,12 +179,13 @@ public class Color extends ValueType  {
             retObjectToArgb = classInstance.Invoke("ToArgb");
             return (int)retObjectToArgb;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToArgb_ToString = retObjectToArgb == null ? "null" : retObjectToArgb.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToArgbNumber = (java.lang.Number)retObjectToArgb;
                 return retObjectToArgbNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectToArgb != null ? retObjectToArgb.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToArgb != null ? retObjectToArgb.getClass() : "null", retObjectToArgb_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -409,12 +410,13 @@ public class Color extends ValueType  {
             retObjectA = classInstance.Get("A");
             return (byte)retObjectA;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectA_ToString = retObjectA == null ? "null" : retObjectA.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectANumber = (java.lang.Number)retObjectA;
                 return retObjectANumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectA != null ? retObjectA.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectA != null ? retObjectA.getClass() : "null", retObjectA_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -429,12 +431,13 @@ public class Color extends ValueType  {
             retObjectB = classInstance.Get("B");
             return (byte)retObjectB;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectB_ToString = retObjectB == null ? "null" : retObjectB.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBNumber = (java.lang.Number)retObjectB;
                 return retObjectBNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectB != null ? retObjectB.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectB != null ? retObjectB.getClass() : "null", retObjectB_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -449,12 +452,13 @@ public class Color extends ValueType  {
             retObjectG = classInstance.Get("G");
             return (byte)retObjectG;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectG_ToString = retObjectG == null ? "null" : retObjectG.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGNumber = (java.lang.Number)retObjectG;
                 return retObjectGNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectG != null ? retObjectG.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectG != null ? retObjectG.getClass() : "null", retObjectG_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -469,12 +473,13 @@ public class Color extends ValueType  {
             retObjectR = classInstance.Get("R");
             return (byte)retObjectR;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectR_ToString = retObjectR == null ? "null" : retObjectR.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRNumber = (java.lang.Number)retObjectR;
                 return retObjectRNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectR != null ? retObjectR.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectR != null ? retObjectR.getClass() : "null", retObjectR_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

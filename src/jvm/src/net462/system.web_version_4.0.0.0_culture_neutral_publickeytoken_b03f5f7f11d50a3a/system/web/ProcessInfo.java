@@ -195,12 +195,13 @@ public class ProcessInfo extends NetObject  {
             retObjectPeakMemoryUsed = classInstance.Get("PeakMemoryUsed");
             return (int)retObjectPeakMemoryUsed;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPeakMemoryUsed_ToString = retObjectPeakMemoryUsed == null ? "null" : retObjectPeakMemoryUsed.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPeakMemoryUsedNumber = (java.lang.Number)retObjectPeakMemoryUsed;
                 return retObjectPeakMemoryUsedNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPeakMemoryUsed != null ? retObjectPeakMemoryUsed.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPeakMemoryUsed != null ? retObjectPeakMemoryUsed.getClass() : "null", retObjectPeakMemoryUsed_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -215,12 +216,13 @@ public class ProcessInfo extends NetObject  {
             retObjectProcessID = classInstance.Get("ProcessID");
             return (int)retObjectProcessID;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectProcessID_ToString = retObjectProcessID == null ? "null" : retObjectProcessID.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectProcessIDNumber = (java.lang.Number)retObjectProcessID;
                 return retObjectProcessIDNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectProcessID != null ? retObjectProcessID.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectProcessID != null ? retObjectProcessID.getClass() : "null", retObjectProcessID_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -235,12 +237,13 @@ public class ProcessInfo extends NetObject  {
             retObjectRequestCount = classInstance.Get("RequestCount");
             return (int)retObjectRequestCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRequestCount_ToString = retObjectRequestCount == null ? "null" : retObjectRequestCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRequestCountNumber = (java.lang.Number)retObjectRequestCount;
                 return retObjectRequestCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRequestCount != null ? retObjectRequestCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRequestCount != null ? retObjectRequestCount.getClass() : "null", retObjectRequestCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -204,12 +204,13 @@ public class StringLengthAttribute extends ValidationAttribute  {
             retObjectMaximumLength = classInstance.Get("MaximumLength");
             return (int)retObjectMaximumLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumLength_ToString = retObjectMaximumLength == null ? "null" : retObjectMaximumLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumLengthNumber = (java.lang.Number)retObjectMaximumLength;
                 return retObjectMaximumLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumLength != null ? retObjectMaximumLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumLength != null ? retObjectMaximumLength.getClass() : "null", retObjectMaximumLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -234,12 +235,13 @@ public class StringLengthAttribute extends ValidationAttribute  {
             retObjectMinimumLength = classInstance.Get("MinimumLength");
             return (int)retObjectMinimumLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumLength_ToString = retObjectMinimumLength == null ? "null" : retObjectMinimumLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinimumLengthNumber = (java.lang.Number)retObjectMinimumLength;
                 return retObjectMinimumLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinimumLength != null ? retObjectMinimumLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimumLength != null ? retObjectMinimumLength.getClass() : "null", retObjectMinimumLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

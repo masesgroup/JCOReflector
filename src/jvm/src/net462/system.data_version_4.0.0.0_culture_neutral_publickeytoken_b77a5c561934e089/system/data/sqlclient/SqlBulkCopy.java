@@ -476,12 +476,13 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
             retObjectBatchSize = classInstance.Get("BatchSize");
             return (int)retObjectBatchSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBatchSize_ToString = retObjectBatchSize == null ? "null" : retObjectBatchSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBatchSizeNumber = (java.lang.Number)retObjectBatchSize;
                 return retObjectBatchSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBatchSize != null ? retObjectBatchSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBatchSize != null ? retObjectBatchSize.getClass() : "null", retObjectBatchSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -506,12 +507,13 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
             retObjectBulkCopyTimeout = classInstance.Get("BulkCopyTimeout");
             return (int)retObjectBulkCopyTimeout;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBulkCopyTimeout_ToString = retObjectBulkCopyTimeout == null ? "null" : retObjectBulkCopyTimeout.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBulkCopyTimeoutNumber = (java.lang.Number)retObjectBulkCopyTimeout;
                 return retObjectBulkCopyTimeoutNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBulkCopyTimeout != null ? retObjectBulkCopyTimeout.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBulkCopyTimeout != null ? retObjectBulkCopyTimeout.getClass() : "null", retObjectBulkCopyTimeout_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -536,12 +538,13 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
             retObjectNotifyAfter = classInstance.Get("NotifyAfter");
             return (int)retObjectNotifyAfter;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNotifyAfter_ToString = retObjectNotifyAfter == null ? "null" : retObjectNotifyAfter.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNotifyAfterNumber = (java.lang.Number)retObjectNotifyAfter;
                 return retObjectNotifyAfterNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNotifyAfter != null ? retObjectNotifyAfter.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNotifyAfter != null ? retObjectNotifyAfter.getClass() : "null", retObjectNotifyAfter_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

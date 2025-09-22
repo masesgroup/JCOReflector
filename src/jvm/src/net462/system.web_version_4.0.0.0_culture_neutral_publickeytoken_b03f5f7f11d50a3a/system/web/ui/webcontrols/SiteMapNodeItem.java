@@ -180,12 +180,13 @@ public class SiteMapNodeItem extends WebControl implements system.web.ui.INaming
             retObjectItemIndex = classInstance.Get("ItemIndex");
             return (int)retObjectItemIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectItemIndex_ToString = retObjectItemIndex == null ? "null" : retObjectItemIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectItemIndexNumber = (java.lang.Number)retObjectItemIndex;
                 return retObjectItemIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectItemIndex != null ? retObjectItemIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectItemIndex != null ? retObjectItemIndex.getClass() : "null", retObjectItemIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

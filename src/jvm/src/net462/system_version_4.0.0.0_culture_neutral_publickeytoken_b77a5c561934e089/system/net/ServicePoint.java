@@ -256,12 +256,13 @@ public class ServicePoint extends NetObject  {
             retObjectConnectionLeaseTimeout = classInstance.Get("ConnectionLeaseTimeout");
             return (int)retObjectConnectionLeaseTimeout;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConnectionLeaseTimeout_ToString = retObjectConnectionLeaseTimeout == null ? "null" : retObjectConnectionLeaseTimeout.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectConnectionLeaseTimeoutNumber = (java.lang.Number)retObjectConnectionLeaseTimeout;
                 return retObjectConnectionLeaseTimeoutNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectConnectionLeaseTimeout != null ? retObjectConnectionLeaseTimeout.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectConnectionLeaseTimeout != null ? retObjectConnectionLeaseTimeout.getClass() : "null", retObjectConnectionLeaseTimeout_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -286,12 +287,13 @@ public class ServicePoint extends NetObject  {
             retObjectConnectionLimit = classInstance.Get("ConnectionLimit");
             return (int)retObjectConnectionLimit;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConnectionLimit_ToString = retObjectConnectionLimit == null ? "null" : retObjectConnectionLimit.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectConnectionLimitNumber = (java.lang.Number)retObjectConnectionLimit;
                 return retObjectConnectionLimitNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectConnectionLimit != null ? retObjectConnectionLimit.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectConnectionLimit != null ? retObjectConnectionLimit.getClass() : "null", retObjectConnectionLimit_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -316,12 +318,13 @@ public class ServicePoint extends NetObject  {
             retObjectCurrentConnections = classInstance.Get("CurrentConnections");
             return (int)retObjectCurrentConnections;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCurrentConnections_ToString = retObjectCurrentConnections == null ? "null" : retObjectCurrentConnections.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCurrentConnectionsNumber = (java.lang.Number)retObjectCurrentConnections;
                 return retObjectCurrentConnectionsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCurrentConnections != null ? retObjectCurrentConnections.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentConnections != null ? retObjectCurrentConnections.getClass() : "null", retObjectCurrentConnections_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -336,12 +339,13 @@ public class ServicePoint extends NetObject  {
             retObjectMaxIdleTime = classInstance.Get("MaxIdleTime");
             return (int)retObjectMaxIdleTime;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxIdleTime_ToString = retObjectMaxIdleTime == null ? "null" : retObjectMaxIdleTime.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxIdleTimeNumber = (java.lang.Number)retObjectMaxIdleTime;
                 return retObjectMaxIdleTimeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxIdleTime != null ? retObjectMaxIdleTime.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxIdleTime != null ? retObjectMaxIdleTime.getClass() : "null", retObjectMaxIdleTime_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -366,12 +370,13 @@ public class ServicePoint extends NetObject  {
             retObjectReceiveBufferSize = classInstance.Get("ReceiveBufferSize");
             return (int)retObjectReceiveBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceiveBufferSize_ToString = retObjectReceiveBufferSize == null ? "null" : retObjectReceiveBufferSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReceiveBufferSizeNumber = (java.lang.Number)retObjectReceiveBufferSize;
                 return retObjectReceiveBufferSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReceiveBufferSize != null ? retObjectReceiveBufferSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveBufferSize != null ? retObjectReceiveBufferSize.getClass() : "null", retObjectReceiveBufferSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

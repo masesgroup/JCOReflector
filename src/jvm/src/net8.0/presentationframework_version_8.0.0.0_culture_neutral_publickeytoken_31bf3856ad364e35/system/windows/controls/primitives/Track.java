@@ -172,12 +172,13 @@ public class Track extends FrameworkElement  {
             retObjectValueFromDistance = classInstance.Invoke("ValueFromDistance", horizontal, vertical);
             return (double)retObjectValueFromDistance;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectValueFromDistance_ToString = retObjectValueFromDistance == null ? "null" : retObjectValueFromDistance.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectValueFromDistanceNumber = (java.lang.Number)retObjectValueFromDistance;
                 return retObjectValueFromDistanceNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectValueFromDistance != null ? retObjectValueFromDistance.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectValueFromDistance != null ? retObjectValueFromDistance.getClass() : "null", retObjectValueFromDistance_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -192,12 +193,13 @@ public class Track extends FrameworkElement  {
             retObjectValueFromPoint = classInstance.Invoke("ValueFromPoint", pt == null ? null : pt.getJCOInstance());
             return (double)retObjectValueFromPoint;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectValueFromPoint_ToString = retObjectValueFromPoint == null ? "null" : retObjectValueFromPoint.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectValueFromPointNumber = (java.lang.Number)retObjectValueFromPoint;
                 return retObjectValueFromPointNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectValueFromPoint != null ? retObjectValueFromPoint.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectValueFromPoint != null ? retObjectValueFromPoint.getClass() : "null", retObjectValueFromPoint_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -240,12 +242,13 @@ public class Track extends FrameworkElement  {
             retObjectMaximum = classInstance.Get("Maximum");
             return (double)retObjectMaximum;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximum_ToString = retObjectMaximum == null ? "null" : retObjectMaximum.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumNumber = (java.lang.Number)retObjectMaximum;
                 return retObjectMaximumNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMaximum != null ? retObjectMaximum.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaximum != null ? retObjectMaximum.getClass() : "null", retObjectMaximum_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -270,12 +273,13 @@ public class Track extends FrameworkElement  {
             retObjectMinimum = classInstance.Get("Minimum");
             return (double)retObjectMinimum;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimum_ToString = retObjectMinimum == null ? "null" : retObjectMinimum.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinimumNumber = (java.lang.Number)retObjectMinimum;
                 return retObjectMinimumNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMinimum != null ? retObjectMinimum.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinimum != null ? retObjectMinimum.getClass() : "null", retObjectMinimum_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -300,12 +304,13 @@ public class Track extends FrameworkElement  {
             retObjectValue = classInstance.Get("Value");
             return (double)retObjectValue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectValue_ToString = retObjectValue == null ? "null" : retObjectValue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectValueNumber = (java.lang.Number)retObjectValue;
                 return retObjectValueNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectValue != null ? retObjectValue.getClass() : "null", retObjectValue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -330,12 +335,13 @@ public class Track extends FrameworkElement  {
             retObjectViewportSize = classInstance.Get("ViewportSize");
             return (double)retObjectViewportSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectViewportSize_ToString = retObjectViewportSize == null ? "null" : retObjectViewportSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectViewportSizeNumber = (java.lang.Number)retObjectViewportSize;
                 return retObjectViewportSizeNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectViewportSize != null ? retObjectViewportSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectViewportSize != null ? retObjectViewportSize.getClass() : "null", retObjectViewportSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -219,12 +219,13 @@ public class MemoryCache extends ObjectCache implements AutoCloseable {
             retObjectGetCount = classInstance.Invoke("GetCount", regionName);
             return (long)retObjectGetCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCount_ToString = retObjectGetCount == null ? "null" : retObjectGetCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetCountNumber = (java.lang.Number)retObjectGetCount;
                 return retObjectGetCountNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetCount != null ? retObjectGetCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetCount != null ? retObjectGetCount.getClass() : "null", retObjectGetCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -239,12 +240,13 @@ public class MemoryCache extends ObjectCache implements AutoCloseable {
             retObjectGetLastSize = classInstance.Invoke("GetLastSize", regionName);
             return (long)retObjectGetLastSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLastSize_ToString = retObjectGetLastSize == null ? "null" : retObjectGetLastSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetLastSizeNumber = (java.lang.Number)retObjectGetLastSize;
                 return retObjectGetLastSizeNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetLastSize != null ? retObjectGetLastSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetLastSize != null ? retObjectGetLastSize.getClass() : "null", retObjectGetLastSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -259,12 +261,13 @@ public class MemoryCache extends ObjectCache implements AutoCloseable {
             retObjectTrim = classInstance.Invoke("Trim", percent);
             return (long)retObjectTrim;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTrim_ToString = retObjectTrim == null ? "null" : retObjectTrim.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTrimNumber = (java.lang.Number)retObjectTrim;
                 return retObjectTrimNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTrim != null ? retObjectTrim.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectTrim != null ? retObjectTrim.getClass() : "null", retObjectTrim_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -441,12 +444,13 @@ public class MemoryCache extends ObjectCache implements AutoCloseable {
             retObjectCacheMemoryLimit = classInstance.Get("CacheMemoryLimit");
             return (long)retObjectCacheMemoryLimit;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCacheMemoryLimit_ToString = retObjectCacheMemoryLimit == null ? "null" : retObjectCacheMemoryLimit.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCacheMemoryLimitNumber = (java.lang.Number)retObjectCacheMemoryLimit;
                 return retObjectCacheMemoryLimitNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectCacheMemoryLimit != null ? retObjectCacheMemoryLimit.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectCacheMemoryLimit != null ? retObjectCacheMemoryLimit.getClass() : "null", retObjectCacheMemoryLimit_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -461,12 +465,13 @@ public class MemoryCache extends ObjectCache implements AutoCloseable {
             retObjectPhysicalMemoryLimit = classInstance.Get("PhysicalMemoryLimit");
             return (long)retObjectPhysicalMemoryLimit;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPhysicalMemoryLimit_ToString = retObjectPhysicalMemoryLimit == null ? "null" : retObjectPhysicalMemoryLimit.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPhysicalMemoryLimitNumber = (java.lang.Number)retObjectPhysicalMemoryLimit;
                 return retObjectPhysicalMemoryLimitNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectPhysicalMemoryLimit != null ? retObjectPhysicalMemoryLimit.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectPhysicalMemoryLimit != null ? retObjectPhysicalMemoryLimit.getClass() : "null", retObjectPhysicalMemoryLimit_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

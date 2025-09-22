@@ -811,12 +811,13 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
             retObjectBytesPending = classInstance.Get("BytesPending");
             return (int)retObjectBytesPending;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBytesPending_ToString = retObjectBytesPending == null ? "null" : retObjectBytesPending.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBytesPendingNumber = (java.lang.Number)retObjectBytesPending;
                 return retObjectBytesPendingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBytesPending != null ? retObjectBytesPending.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBytesPending != null ? retObjectBytesPending.getClass() : "null", retObjectBytesPending_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -841,12 +842,13 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
             retObjectCurrentDepth = classInstance.Get("CurrentDepth");
             return (int)retObjectCurrentDepth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCurrentDepth_ToString = retObjectCurrentDepth == null ? "null" : retObjectCurrentDepth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCurrentDepthNumber = (java.lang.Number)retObjectCurrentDepth;
                 return retObjectCurrentDepthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCurrentDepth != null ? retObjectCurrentDepth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentDepth != null ? retObjectCurrentDepth.getClass() : "null", retObjectCurrentDepth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -861,12 +863,13 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
             retObjectBytesCommitted = classInstance.Get("BytesCommitted");
             return (long)retObjectBytesCommitted;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBytesCommitted_ToString = retObjectBytesCommitted == null ? "null" : retObjectBytesCommitted.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBytesCommittedNumber = (java.lang.Number)retObjectBytesCommitted;
                 return retObjectBytesCommittedNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectBytesCommitted != null ? retObjectBytesCommitted.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectBytesCommitted != null ? retObjectBytesCommitted.getClass() : "null", retObjectBytesCommitted_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -187,12 +187,13 @@ public class TintEffect extends Effect  {
             retObjectAmount = classInstance.Get("Amount");
             return (int)retObjectAmount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAmount_ToString = retObjectAmount == null ? "null" : retObjectAmount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAmountNumber = (java.lang.Number)retObjectAmount;
                 return retObjectAmountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAmount != null ? retObjectAmount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAmount != null ? retObjectAmount.getClass() : "null", retObjectAmount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -207,12 +208,13 @@ public class TintEffect extends Effect  {
             retObjectHue = classInstance.Get("Hue");
             return (int)retObjectHue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHue_ToString = retObjectHue == null ? "null" : retObjectHue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHueNumber = (java.lang.Number)retObjectHue;
                 return retObjectHueNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHue != null ? retObjectHue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHue != null ? retObjectHue.getClass() : "null", retObjectHue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

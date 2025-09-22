@@ -248,12 +248,13 @@ public class IPNetwork extends ValueType implements system.IFormattable {
             retObjectPrefixLength = classInstance.Get("PrefixLength");
             return (int)retObjectPrefixLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPrefixLength_ToString = retObjectPrefixLength == null ? "null" : retObjectPrefixLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPrefixLengthNumber = (java.lang.Number)retObjectPrefixLength;
                 return retObjectPrefixLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPrefixLength != null ? retObjectPrefixLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPrefixLength != null ? retObjectPrefixLength.getClass() : "null", retObjectPrefixLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

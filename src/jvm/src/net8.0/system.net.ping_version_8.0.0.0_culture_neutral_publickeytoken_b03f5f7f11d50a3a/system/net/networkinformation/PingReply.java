@@ -191,12 +191,13 @@ public class PingReply extends NetObject  {
             retObjectRoundtripTime = classInstance.Get("RoundtripTime");
             return (long)retObjectRoundtripTime;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRoundtripTime_ToString = retObjectRoundtripTime == null ? "null" : retObjectRoundtripTime.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRoundtripTimeNumber = (java.lang.Number)retObjectRoundtripTime;
                 return retObjectRoundtripTimeNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectRoundtripTime != null ? retObjectRoundtripTime.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectRoundtripTime != null ? retObjectRoundtripTime.getClass() : "null", retObjectRoundtripTime_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

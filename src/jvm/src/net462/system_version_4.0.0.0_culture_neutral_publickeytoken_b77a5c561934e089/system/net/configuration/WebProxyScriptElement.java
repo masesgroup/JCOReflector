@@ -173,12 +173,13 @@ public class WebProxyScriptElement extends ConfigurationElement  {
             retObjectAutoConfigUrlRetryInterval = classInstance.Get("AutoConfigUrlRetryInterval");
             return (int)retObjectAutoConfigUrlRetryInterval;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAutoConfigUrlRetryInterval_ToString = retObjectAutoConfigUrlRetryInterval == null ? "null" : retObjectAutoConfigUrlRetryInterval.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAutoConfigUrlRetryIntervalNumber = (java.lang.Number)retObjectAutoConfigUrlRetryInterval;
                 return retObjectAutoConfigUrlRetryIntervalNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAutoConfigUrlRetryInterval != null ? retObjectAutoConfigUrlRetryInterval.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAutoConfigUrlRetryInterval != null ? retObjectAutoConfigUrlRetryInterval.getClass() : "null", retObjectAutoConfigUrlRetryInterval_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

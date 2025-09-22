@@ -162,12 +162,13 @@ public class Int16AnimationBase extends AnimationTimeline  {
             retObjectGetCurrentValue = classInstance.Invoke("GetCurrentValue", defaultOriginValue, defaultDestinationValue, animationClock == null ? null : animationClock.getJCOInstance());
             return (short)retObjectGetCurrentValue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCurrentValue_ToString = retObjectGetCurrentValue == null ? "null" : retObjectGetCurrentValue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetCurrentValueNumber = (java.lang.Number)retObjectGetCurrentValue;
                 return retObjectGetCurrentValueNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectGetCurrentValue != null ? retObjectGetCurrentValue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectGetCurrentValue != null ? retObjectGetCurrentValue.getClass() : "null", retObjectGetCurrentValue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

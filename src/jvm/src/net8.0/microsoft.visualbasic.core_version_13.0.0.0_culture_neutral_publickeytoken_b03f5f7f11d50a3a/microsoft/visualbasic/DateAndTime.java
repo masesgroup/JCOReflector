@@ -165,12 +165,13 @@ public class DateAndTime extends NetObject  {
             retObjectDatePart = classType.Invoke("DatePart", Interval == null ? null : Interval.getJCOInstance(), DateValue == null ? null : DateValue.getJCOInstance(), FirstDayOfWeekValue == null ? null : FirstDayOfWeekValue.getJCOInstance(), FirstWeekOfYearValue == null ? null : FirstWeekOfYearValue.getJCOInstance());
             return (int)retObjectDatePart;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDatePart_ToString = retObjectDatePart == null ? "null" : retObjectDatePart.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDatePartNumber = (java.lang.Number)retObjectDatePart;
                 return retObjectDatePartNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDatePart != null ? retObjectDatePart.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDatePart != null ? retObjectDatePart.getClass() : "null", retObjectDatePart_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -185,12 +186,13 @@ public class DateAndTime extends NetObject  {
             retObjectDatePart = classType.Invoke("DatePart", Interval, DateValue == null ? null : DateValue.getJCOInstance(), DayOfWeek == null ? null : DayOfWeek.getJCOInstance(), WeekOfYear == null ? null : WeekOfYear.getJCOInstance());
             return (int)retObjectDatePart;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDatePart_ToString = retObjectDatePart == null ? "null" : retObjectDatePart.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDatePartNumber = (java.lang.Number)retObjectDatePart;
                 return retObjectDatePartNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDatePart != null ? retObjectDatePart.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDatePart != null ? retObjectDatePart.getClass() : "null", retObjectDatePart_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -205,12 +207,13 @@ public class DateAndTime extends NetObject  {
             retObjectDay = classType.Invoke("Day", DateValue == null ? null : DateValue.getJCOInstance());
             return (int)retObjectDay;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDay_ToString = retObjectDay == null ? "null" : retObjectDay.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDayNumber = (java.lang.Number)retObjectDay;
                 return retObjectDayNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDay != null ? retObjectDay.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDay != null ? retObjectDay.getClass() : "null", retObjectDay_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -225,12 +228,13 @@ public class DateAndTime extends NetObject  {
             retObjectHour = classType.Invoke("Hour", TimeValue == null ? null : TimeValue.getJCOInstance());
             return (int)retObjectHour;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHour_ToString = retObjectHour == null ? "null" : retObjectHour.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHourNumber = (java.lang.Number)retObjectHour;
                 return retObjectHourNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHour != null ? retObjectHour.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHour != null ? retObjectHour.getClass() : "null", retObjectHour_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -245,12 +249,13 @@ public class DateAndTime extends NetObject  {
             retObjectMinute = classType.Invoke("Minute", TimeValue == null ? null : TimeValue.getJCOInstance());
             return (int)retObjectMinute;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinute_ToString = retObjectMinute == null ? "null" : retObjectMinute.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinuteNumber = (java.lang.Number)retObjectMinute;
                 return retObjectMinuteNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinute != null ? retObjectMinute.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinute != null ? retObjectMinute.getClass() : "null", retObjectMinute_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -265,12 +270,13 @@ public class DateAndTime extends NetObject  {
             retObjectMonth = classType.Invoke("Month", DateValue == null ? null : DateValue.getJCOInstance());
             return (int)retObjectMonth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMonth_ToString = retObjectMonth == null ? "null" : retObjectMonth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMonthNumber = (java.lang.Number)retObjectMonth;
                 return retObjectMonthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMonth != null ? retObjectMonth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMonth != null ? retObjectMonth.getClass() : "null", retObjectMonth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -285,12 +291,13 @@ public class DateAndTime extends NetObject  {
             retObjectSecond = classType.Invoke("Second", TimeValue == null ? null : TimeValue.getJCOInstance());
             return (int)retObjectSecond;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSecond_ToString = retObjectSecond == null ? "null" : retObjectSecond.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSecondNumber = (java.lang.Number)retObjectSecond;
                 return retObjectSecondNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSecond != null ? retObjectSecond.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSecond != null ? retObjectSecond.getClass() : "null", retObjectSecond_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -305,12 +312,13 @@ public class DateAndTime extends NetObject  {
             retObjectWeekday = classType.Invoke("Weekday", DateValue == null ? null : DateValue.getJCOInstance(), DayOfWeek == null ? null : DayOfWeek.getJCOInstance());
             return (int)retObjectWeekday;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWeekday_ToString = retObjectWeekday == null ? "null" : retObjectWeekday.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWeekdayNumber = (java.lang.Number)retObjectWeekday;
                 return retObjectWeekdayNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWeekday != null ? retObjectWeekday.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWeekday != null ? retObjectWeekday.getClass() : "null", retObjectWeekday_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -325,12 +333,13 @@ public class DateAndTime extends NetObject  {
             retObjectYear = classType.Invoke("Year", DateValue == null ? null : DateValue.getJCOInstance());
             return (int)retObjectYear;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectYear_ToString = retObjectYear == null ? "null" : retObjectYear.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectYearNumber = (java.lang.Number)retObjectYear;
                 return retObjectYearNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectYear != null ? retObjectYear.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectYear != null ? retObjectYear.getClass() : "null", retObjectYear_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -345,12 +354,13 @@ public class DateAndTime extends NetObject  {
             retObjectDateDiff = classType.Invoke("DateDiff", Interval == null ? null : Interval.getJCOInstance(), Date1 == null ? null : Date1.getJCOInstance(), Date2 == null ? null : Date2.getJCOInstance(), DayOfWeek == null ? null : DayOfWeek.getJCOInstance(), WeekOfYear == null ? null : WeekOfYear.getJCOInstance());
             return (long)retObjectDateDiff;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDateDiff_ToString = retObjectDateDiff == null ? "null" : retObjectDateDiff.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDateDiffNumber = (java.lang.Number)retObjectDateDiff;
                 return retObjectDateDiffNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectDateDiff != null ? retObjectDateDiff.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectDateDiff != null ? retObjectDateDiff.getClass() : "null", retObjectDateDiff_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -365,12 +375,13 @@ public class DateAndTime extends NetObject  {
             retObjectDateDiff = classType.Invoke("DateDiff", Interval, Date1 == null ? null : Date1.getJCOInstance(), Date2 == null ? null : Date2.getJCOInstance(), DayOfWeek == null ? null : DayOfWeek.getJCOInstance(), WeekOfYear == null ? null : WeekOfYear.getJCOInstance());
             return (long)retObjectDateDiff;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDateDiff_ToString = retObjectDateDiff == null ? "null" : retObjectDateDiff.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDateDiffNumber = (java.lang.Number)retObjectDateDiff;
                 return retObjectDateDiffNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectDateDiff != null ? retObjectDateDiff.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectDateDiff != null ? retObjectDateDiff.getClass() : "null", retObjectDateDiff_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -507,12 +518,13 @@ public class DateAndTime extends NetObject  {
             retObjectTimer = classType.Get("Timer");
             return (double)retObjectTimer;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTimer_ToString = retObjectTimer == null ? "null" : retObjectTimer.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTimerNumber = (java.lang.Number)retObjectTimer;
                 return retObjectTimerNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectTimer != null ? retObjectTimer.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectTimer != null ? retObjectTimer.getClass() : "null", retObjectTimer_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

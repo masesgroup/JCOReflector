@@ -299,12 +299,13 @@ public class Geometry extends Animatable implements system.IFormattable {
             retObjectGetArea = classInstance.Invoke("GetArea");
             return (double)retObjectGetArea;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetArea_ToString = retObjectGetArea == null ? "null" : retObjectGetArea.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetAreaNumber = (java.lang.Number)retObjectGetArea;
                 return retObjectGetAreaNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetArea != null ? retObjectGetArea.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetArea != null ? retObjectGetArea.getClass() : "null", retObjectGetArea_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -319,12 +320,13 @@ public class Geometry extends Animatable implements system.IFormattable {
             retObjectGetArea = classInstance.Invoke("GetArea", tolerance, type == null ? null : type.getJCOInstance());
             return (double)retObjectGetArea;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetArea_ToString = retObjectGetArea == null ? "null" : retObjectGetArea.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetAreaNumber = (java.lang.Number)retObjectGetArea;
                 return retObjectGetAreaNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetArea != null ? retObjectGetArea.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetArea != null ? retObjectGetArea.getClass() : "null", retObjectGetArea_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -621,12 +623,13 @@ public class Geometry extends Animatable implements system.IFormattable {
             retObjectStandardFlatteningTolerance = classType.Get("StandardFlatteningTolerance");
             return (double)retObjectStandardFlatteningTolerance;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStandardFlatteningTolerance_ToString = retObjectStandardFlatteningTolerance == null ? "null" : retObjectStandardFlatteningTolerance.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStandardFlatteningToleranceNumber = (java.lang.Number)retObjectStandardFlatteningTolerance;
                 return retObjectStandardFlatteningToleranceNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectStandardFlatteningTolerance != null ? retObjectStandardFlatteningTolerance.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStandardFlatteningTolerance != null ? retObjectStandardFlatteningTolerance.getClass() : "null", retObjectStandardFlatteningTolerance_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

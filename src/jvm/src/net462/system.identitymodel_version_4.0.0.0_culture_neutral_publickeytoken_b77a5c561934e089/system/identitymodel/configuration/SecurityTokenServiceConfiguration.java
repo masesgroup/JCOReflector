@@ -278,12 +278,13 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
             retObjectDefaultMaxSymmetricKeySizeInBits = classInstance.Get("DefaultMaxSymmetricKeySizeInBits");
             return (int)retObjectDefaultMaxSymmetricKeySizeInBits;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDefaultMaxSymmetricKeySizeInBits_ToString = retObjectDefaultMaxSymmetricKeySizeInBits == null ? "null" : retObjectDefaultMaxSymmetricKeySizeInBits.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDefaultMaxSymmetricKeySizeInBitsNumber = (java.lang.Number)retObjectDefaultMaxSymmetricKeySizeInBits;
                 return retObjectDefaultMaxSymmetricKeySizeInBitsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDefaultMaxSymmetricKeySizeInBits != null ? retObjectDefaultMaxSymmetricKeySizeInBits.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDefaultMaxSymmetricKeySizeInBits != null ? retObjectDefaultMaxSymmetricKeySizeInBits.getClass() : "null", retObjectDefaultMaxSymmetricKeySizeInBits_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -308,12 +309,13 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
             retObjectDefaultSymmetricKeySizeInBits = classInstance.Get("DefaultSymmetricKeySizeInBits");
             return (int)retObjectDefaultSymmetricKeySizeInBits;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDefaultSymmetricKeySizeInBits_ToString = retObjectDefaultSymmetricKeySizeInBits == null ? "null" : retObjectDefaultSymmetricKeySizeInBits.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDefaultSymmetricKeySizeInBitsNumber = (java.lang.Number)retObjectDefaultSymmetricKeySizeInBits;
                 return retObjectDefaultSymmetricKeySizeInBitsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDefaultSymmetricKeySizeInBits != null ? retObjectDefaultSymmetricKeySizeInBits.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDefaultSymmetricKeySizeInBits != null ? retObjectDefaultSymmetricKeySizeInBits.getClass() : "null", retObjectDefaultSymmetricKeySizeInBits_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

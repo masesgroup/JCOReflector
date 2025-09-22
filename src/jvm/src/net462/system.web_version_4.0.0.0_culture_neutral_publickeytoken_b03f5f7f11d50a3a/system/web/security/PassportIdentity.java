@@ -253,12 +253,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
             retObjectCryptPutHost = classType.Invoke("CryptPutHost", strHost);
             return (int)retObjectCryptPutHost;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCryptPutHost_ToString = retObjectCryptPutHost == null ? "null" : retObjectCryptPutHost.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCryptPutHostNumber = (java.lang.Number)retObjectCryptPutHost;
                 return retObjectCryptPutHostNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCryptPutHost != null ? retObjectCryptPutHost.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCryptPutHost != null ? retObjectCryptPutHost.getClass() : "null", retObjectCryptPutHost_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -273,12 +274,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
             retObjectCryptPutSite = classType.Invoke("CryptPutSite", strSite);
             return (int)retObjectCryptPutSite;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCryptPutSite_ToString = retObjectCryptPutSite == null ? "null" : retObjectCryptPutSite.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCryptPutSiteNumber = (java.lang.Number)retObjectCryptPutSite;
                 return retObjectCryptPutSiteNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCryptPutSite != null ? retObjectCryptPutSite.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCryptPutSite != null ? retObjectCryptPutSite.getClass() : "null", retObjectCryptPutSite_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -293,12 +295,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
             retObjectLoginUser = classInstance.Invoke("LoginUser");
             return (int)retObjectLoginUser;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLoginUser_ToString = retObjectLoginUser == null ? "null" : retObjectLoginUser.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLoginUserNumber = (java.lang.Number)retObjectLoginUser;
                 return retObjectLoginUserNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLoginUser != null ? retObjectLoginUser.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLoginUser != null ? retObjectLoginUser.getClass() : "null", retObjectLoginUser_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -313,12 +316,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
             retObjectLoginUser = classInstance.Invoke("LoginUser", strReturnUrl);
             return (int)retObjectLoginUser;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLoginUser_ToString = retObjectLoginUser == null ? "null" : retObjectLoginUser.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLoginUserNumber = (java.lang.Number)retObjectLoginUser;
                 return retObjectLoginUserNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLoginUser != null ? retObjectLoginUser.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLoginUser != null ? retObjectLoginUser.getClass() : "null", retObjectLoginUser_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -333,12 +337,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
             retObjectLoginUser = classInstance.Invoke("LoginUser", szRetURL, iTimeWindow, fForceLogin, szCOBrandArgs, iLangID, strNameSpace, iKPP, fUseSecureAuth, oExtraParams == null ? null : oExtraParams.getJCOInstance());
             return (int)retObjectLoginUser;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLoginUser_ToString = retObjectLoginUser == null ? "null" : retObjectLoginUser.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLoginUserNumber = (java.lang.Number)retObjectLoginUser;
                 return retObjectLoginUserNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLoginUser != null ? retObjectLoginUser.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLoginUser != null ? retObjectLoginUser.getClass() : "null", retObjectLoginUser_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -353,12 +358,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
             retObjectLoginUser = classInstance.Invoke("LoginUser", szRetURL, iTimeWindow, fForceLogin, szCOBrandArgs, iLangID, strNameSpace, iKPP, iUseSecureAuth, oExtraParams == null ? null : oExtraParams.getJCOInstance());
             return (int)retObjectLoginUser;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLoginUser_ToString = retObjectLoginUser == null ? "null" : retObjectLoginUser.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLoginUserNumber = (java.lang.Number)retObjectLoginUser;
                 return retObjectLoginUserNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLoginUser != null ? retObjectLoginUser.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLoginUser != null ? retObjectLoginUser.getClass() : "null", retObjectLoginUser_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -913,12 +919,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
             retObjectError = classInstance.Get("Error");
             return (int)retObjectError;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectError_ToString = retObjectError == null ? "null" : retObjectError.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectErrorNumber = (java.lang.Number)retObjectError;
                 return retObjectErrorNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectError != null ? retObjectError.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectError != null ? retObjectError.getClass() : "null", retObjectError_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -933,12 +940,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
             retObjectTicketAge = classInstance.Get("TicketAge");
             return (int)retObjectTicketAge;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTicketAge_ToString = retObjectTicketAge == null ? "null" : retObjectTicketAge.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTicketAgeNumber = (java.lang.Number)retObjectTicketAge;
                 return retObjectTicketAgeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTicketAge != null ? retObjectTicketAge.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTicketAge != null ? retObjectTicketAge.getClass() : "null", retObjectTicketAge_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -953,12 +961,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
             retObjectTimeSinceSignIn = classInstance.Get("TimeSinceSignIn");
             return (int)retObjectTimeSinceSignIn;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTimeSinceSignIn_ToString = retObjectTimeSinceSignIn == null ? "null" : retObjectTimeSinceSignIn.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTimeSinceSignInNumber = (java.lang.Number)retObjectTimeSinceSignIn;
                 return retObjectTimeSinceSignInNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTimeSinceSignIn != null ? retObjectTimeSinceSignIn.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTimeSinceSignIn != null ? retObjectTimeSinceSignIn.getClass() : "null", retObjectTimeSinceSignIn_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

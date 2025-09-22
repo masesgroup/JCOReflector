@@ -165,12 +165,13 @@ public class DynamicDocumentPaginator extends DocumentPaginator  {
             retObjectGetPageNumber = classInstance.Invoke("GetPageNumber", contentPosition == null ? null : contentPosition.getJCOInstance());
             return (int)retObjectGetPageNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetPageNumber_ToString = retObjectGetPageNumber == null ? "null" : retObjectGetPageNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetPageNumberNumber = (java.lang.Number)retObjectGetPageNumber;
                 return retObjectGetPageNumberNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetPageNumber != null ? retObjectGetPageNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetPageNumber != null ? retObjectGetPageNumber.getClass() : "null", retObjectGetPageNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

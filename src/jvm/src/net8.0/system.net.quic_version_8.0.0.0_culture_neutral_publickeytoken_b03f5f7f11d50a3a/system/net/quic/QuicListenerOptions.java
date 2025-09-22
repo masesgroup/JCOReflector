@@ -172,12 +172,13 @@ public class QuicListenerOptions extends NetObject  {
             retObjectListenBacklog = classInstance.Get("ListenBacklog");
             return (int)retObjectListenBacklog;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectListenBacklog_ToString = retObjectListenBacklog == null ? "null" : retObjectListenBacklog.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectListenBacklogNumber = (java.lang.Number)retObjectListenBacklog;
                 return retObjectListenBacklogNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectListenBacklog != null ? retObjectListenBacklog.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectListenBacklog != null ? retObjectListenBacklog.getClass() : "null", retObjectListenBacklog_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

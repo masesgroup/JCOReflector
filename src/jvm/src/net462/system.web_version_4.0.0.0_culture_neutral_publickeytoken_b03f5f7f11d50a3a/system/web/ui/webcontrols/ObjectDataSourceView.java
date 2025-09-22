@@ -186,12 +186,13 @@ public class ObjectDataSourceView extends DataSourceView  {
             retObjectDelete = classInstance.Invoke("Delete", keys == null ? null : keys.getJCOInstance(), oldValues == null ? null : oldValues.getJCOInstance());
             return (int)retObjectDelete;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDelete_ToString = retObjectDelete == null ? "null" : retObjectDelete.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDeleteNumber = (java.lang.Number)retObjectDelete;
                 return retObjectDeleteNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDelete != null ? retObjectDelete.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDelete != null ? retObjectDelete.getClass() : "null", retObjectDelete_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -206,12 +207,13 @@ public class ObjectDataSourceView extends DataSourceView  {
             retObjectInsert = classInstance.Invoke("Insert", values == null ? null : values.getJCOInstance());
             return (int)retObjectInsert;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInsert_ToString = retObjectInsert == null ? "null" : retObjectInsert.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInsertNumber = (java.lang.Number)retObjectInsert;
                 return retObjectInsertNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectInsert != null ? retObjectInsert.getClass() : "null", retObjectInsert_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -226,12 +228,13 @@ public class ObjectDataSourceView extends DataSourceView  {
             retObjectUpdate = classInstance.Invoke("Update", keys == null ? null : keys.getJCOInstance(), values == null ? null : values.getJCOInstance(), oldValues == null ? null : oldValues.getJCOInstance());
             return (int)retObjectUpdate;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUpdate_ToString = retObjectUpdate == null ? "null" : retObjectUpdate.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectUpdateNumber = (java.lang.Number)retObjectUpdate;
                 return retObjectUpdateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectUpdate != null ? retObjectUpdate.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUpdate != null ? retObjectUpdate.getClass() : "null", retObjectUpdate_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

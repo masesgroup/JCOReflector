@@ -201,12 +201,13 @@ public class GroupStyle extends NetObject  {
             retObjectAlternationCount = classInstance.Get("AlternationCount");
             return (int)retObjectAlternationCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAlternationCount_ToString = retObjectAlternationCount == null ? "null" : retObjectAlternationCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAlternationCountNumber = (java.lang.Number)retObjectAlternationCount;
                 return retObjectAlternationCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAlternationCount != null ? retObjectAlternationCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAlternationCount != null ? retObjectAlternationCount.getClass() : "null", retObjectAlternationCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

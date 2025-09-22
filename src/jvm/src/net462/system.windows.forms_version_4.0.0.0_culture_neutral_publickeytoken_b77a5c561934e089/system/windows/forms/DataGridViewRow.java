@@ -192,12 +192,13 @@ public class DataGridViewRow extends DataGridViewBand  {
             retObjectGetPreferredHeight = classInstance.Invoke("GetPreferredHeight", rowIndex, autoSizeRowMode == null ? null : autoSizeRowMode.getJCOInstance(), fixedWidth);
             return (int)retObjectGetPreferredHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetPreferredHeight_ToString = retObjectGetPreferredHeight == null ? "null" : retObjectGetPreferredHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetPreferredHeightNumber = (java.lang.Number)retObjectGetPreferredHeight;
                 return retObjectGetPreferredHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetPreferredHeight != null ? retObjectGetPreferredHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetPreferredHeight != null ? retObjectGetPreferredHeight.getClass() : "null", retObjectGetPreferredHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -324,12 +325,13 @@ public class DataGridViewRow extends DataGridViewBand  {
             retObjectDividerHeight = classInstance.Get("DividerHeight");
             return (int)retObjectDividerHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDividerHeight_ToString = retObjectDividerHeight == null ? "null" : retObjectDividerHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDividerHeightNumber = (java.lang.Number)retObjectDividerHeight;
                 return retObjectDividerHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDividerHeight != null ? retObjectDividerHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDividerHeight != null ? retObjectDividerHeight.getClass() : "null", retObjectDividerHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -354,12 +356,13 @@ public class DataGridViewRow extends DataGridViewBand  {
             retObjectHeight = classInstance.Get("Height");
             return (int)retObjectHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHeight_ToString = retObjectHeight == null ? "null" : retObjectHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHeightNumber = (java.lang.Number)retObjectHeight;
                 return retObjectHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null", retObjectHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -384,12 +387,13 @@ public class DataGridViewRow extends DataGridViewBand  {
             retObjectMinimumHeight = classInstance.Get("MinimumHeight");
             return (int)retObjectMinimumHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumHeight_ToString = retObjectMinimumHeight == null ? "null" : retObjectMinimumHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinimumHeightNumber = (java.lang.Number)retObjectMinimumHeight;
                 return retObjectMinimumHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinimumHeight != null ? retObjectMinimumHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimumHeight != null ? retObjectMinimumHeight.getClass() : "null", retObjectMinimumHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

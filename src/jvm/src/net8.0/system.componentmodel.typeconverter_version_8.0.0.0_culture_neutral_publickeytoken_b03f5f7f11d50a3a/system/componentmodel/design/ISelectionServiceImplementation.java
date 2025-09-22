@@ -205,12 +205,13 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
             retObjectSelectionCount = classInstance.Get("SelectionCount");
             return (int)retObjectSelectionCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectionCount_ToString = retObjectSelectionCount == null ? "null" : retObjectSelectionCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSelectionCountNumber = (java.lang.Number)retObjectSelectionCount;
                 return retObjectSelectionCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSelectionCount != null ? retObjectSelectionCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectionCount != null ? retObjectSelectionCount.getClass() : "null", retObjectSelectionCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

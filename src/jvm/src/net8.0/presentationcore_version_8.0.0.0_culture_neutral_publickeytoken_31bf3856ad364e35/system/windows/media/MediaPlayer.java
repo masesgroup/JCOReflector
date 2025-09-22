@@ -331,12 +331,13 @@ public class MediaPlayer extends Animatable  {
             retObjectBalance = classInstance.Get("Balance");
             return (double)retObjectBalance;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBalance_ToString = retObjectBalance == null ? "null" : retObjectBalance.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBalanceNumber = (java.lang.Number)retObjectBalance;
                 return retObjectBalanceNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectBalance != null ? retObjectBalance.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBalance != null ? retObjectBalance.getClass() : "null", retObjectBalance_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -361,12 +362,13 @@ public class MediaPlayer extends Animatable  {
             retObjectBufferingProgress = classInstance.Get("BufferingProgress");
             return (double)retObjectBufferingProgress;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBufferingProgress_ToString = retObjectBufferingProgress == null ? "null" : retObjectBufferingProgress.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBufferingProgressNumber = (java.lang.Number)retObjectBufferingProgress;
                 return retObjectBufferingProgressNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectBufferingProgress != null ? retObjectBufferingProgress.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBufferingProgress != null ? retObjectBufferingProgress.getClass() : "null", retObjectBufferingProgress_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -381,12 +383,13 @@ public class MediaPlayer extends Animatable  {
             retObjectDownloadProgress = classInstance.Get("DownloadProgress");
             return (double)retObjectDownloadProgress;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDownloadProgress_ToString = retObjectDownloadProgress == null ? "null" : retObjectDownloadProgress.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDownloadProgressNumber = (java.lang.Number)retObjectDownloadProgress;
                 return retObjectDownloadProgressNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectDownloadProgress != null ? retObjectDownloadProgress.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDownloadProgress != null ? retObjectDownloadProgress.getClass() : "null", retObjectDownloadProgress_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -401,12 +404,13 @@ public class MediaPlayer extends Animatable  {
             retObjectSpeedRatio = classInstance.Get("SpeedRatio");
             return (double)retObjectSpeedRatio;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSpeedRatio_ToString = retObjectSpeedRatio == null ? "null" : retObjectSpeedRatio.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSpeedRatioNumber = (java.lang.Number)retObjectSpeedRatio;
                 return retObjectSpeedRatioNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectSpeedRatio != null ? retObjectSpeedRatio.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSpeedRatio != null ? retObjectSpeedRatio.getClass() : "null", retObjectSpeedRatio_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -431,12 +435,13 @@ public class MediaPlayer extends Animatable  {
             retObjectVolume = classInstance.Get("Volume");
             return (double)retObjectVolume;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVolume_ToString = retObjectVolume == null ? "null" : retObjectVolume.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVolumeNumber = (java.lang.Number)retObjectVolume;
                 return retObjectVolumeNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectVolume != null ? retObjectVolume.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVolume != null ? retObjectVolume.getClass() : "null", retObjectVolume_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -461,12 +466,13 @@ public class MediaPlayer extends Animatable  {
             retObjectNaturalVideoHeight = classInstance.Get("NaturalVideoHeight");
             return (int)retObjectNaturalVideoHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNaturalVideoHeight_ToString = retObjectNaturalVideoHeight == null ? "null" : retObjectNaturalVideoHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNaturalVideoHeightNumber = (java.lang.Number)retObjectNaturalVideoHeight;
                 return retObjectNaturalVideoHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNaturalVideoHeight != null ? retObjectNaturalVideoHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNaturalVideoHeight != null ? retObjectNaturalVideoHeight.getClass() : "null", retObjectNaturalVideoHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -481,12 +487,13 @@ public class MediaPlayer extends Animatable  {
             retObjectNaturalVideoWidth = classInstance.Get("NaturalVideoWidth");
             return (int)retObjectNaturalVideoWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNaturalVideoWidth_ToString = retObjectNaturalVideoWidth == null ? "null" : retObjectNaturalVideoWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNaturalVideoWidthNumber = (java.lang.Number)retObjectNaturalVideoWidth;
                 return retObjectNaturalVideoWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNaturalVideoWidth != null ? retObjectNaturalVideoWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNaturalVideoWidth != null ? retObjectNaturalVideoWidth.getClass() : "null", retObjectNaturalVideoWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

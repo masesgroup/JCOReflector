@@ -158,12 +158,13 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
             retObjectIsDirty = classInstance.Invoke("IsDirty");
             return (int)retObjectIsDirty;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIsDirty_ToString = retObjectIsDirty == null ? "null" : retObjectIsDirty.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIsDirtyNumber = (java.lang.Number)retObjectIsDirty;
                 return retObjectIsDirtyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIsDirty != null ? retObjectIsDirty.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIsDirty != null ? retObjectIsDirty.getClass() : "null", retObjectIsDirty_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -178,12 +179,13 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
             retObjectIsEqual = classInstance.Invoke("IsEqual", pmkOtherMoniker == null ? null : pmkOtherMoniker.getJCOInstance());
             return (int)retObjectIsEqual;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIsEqual_ToString = retObjectIsEqual == null ? "null" : retObjectIsEqual.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIsEqualNumber = (java.lang.Number)retObjectIsEqual;
                 return retObjectIsEqualNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIsEqual != null ? retObjectIsEqual.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIsEqual != null ? retObjectIsEqual.getClass() : "null", retObjectIsEqual_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -198,12 +200,13 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
             retObjectIsRunning = classInstance.Invoke("IsRunning", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), pmkNewlyRunning == null ? null : pmkNewlyRunning.getJCOInstance());
             return (int)retObjectIsRunning;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIsRunning_ToString = retObjectIsRunning == null ? "null" : retObjectIsRunning.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIsRunningNumber = (java.lang.Number)retObjectIsRunning;
                 return retObjectIsRunningNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIsRunning != null ? retObjectIsRunning.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIsRunning != null ? retObjectIsRunning.getClass() : "null", retObjectIsRunning_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -218,12 +221,13 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
             retObjectIsSystemMoniker = classInstance.Invoke("IsSystemMoniker", pdwMksys.getJCRefOut());
             return (int)retObjectIsSystemMoniker;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIsSystemMoniker_ToString = retObjectIsSystemMoniker == null ? "null" : retObjectIsSystemMoniker.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIsSystemMonikerNumber = (java.lang.Number)retObjectIsSystemMoniker;
                 return retObjectIsSystemMonikerNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIsSystemMoniker != null ? retObjectIsSystemMoniker.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIsSystemMoniker != null ? retObjectIsSystemMoniker.getClass() : "null", retObjectIsSystemMoniker_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

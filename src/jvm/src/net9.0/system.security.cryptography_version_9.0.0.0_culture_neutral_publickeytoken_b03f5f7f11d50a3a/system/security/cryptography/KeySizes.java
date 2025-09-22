@@ -175,12 +175,13 @@ public class KeySizes extends NetObject  {
             retObjectMaxSize = classInstance.Get("MaxSize");
             return (int)retObjectMaxSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxSize_ToString = retObjectMaxSize == null ? "null" : retObjectMaxSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxSizeNumber = (java.lang.Number)retObjectMaxSize;
                 return retObjectMaxSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxSize != null ? retObjectMaxSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxSize != null ? retObjectMaxSize.getClass() : "null", retObjectMaxSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -195,12 +196,13 @@ public class KeySizes extends NetObject  {
             retObjectMinSize = classInstance.Get("MinSize");
             return (int)retObjectMinSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinSize_ToString = retObjectMinSize == null ? "null" : retObjectMinSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinSizeNumber = (java.lang.Number)retObjectMinSize;
                 return retObjectMinSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinSize != null ? retObjectMinSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinSize != null ? retObjectMinSize.getClass() : "null", retObjectMinSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -215,12 +217,13 @@ public class KeySizes extends NetObject  {
             retObjectSkipSize = classInstance.Get("SkipSize");
             return (int)retObjectSkipSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSkipSize_ToString = retObjectSkipSize == null ? "null" : retObjectSkipSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSkipSizeNumber = (java.lang.Number)retObjectSkipSize;
                 return retObjectSkipSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSkipSize != null ? retObjectSkipSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSkipSize != null ? retObjectSkipSize.getClass() : "null", retObjectSkipSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

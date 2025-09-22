@@ -363,12 +363,13 @@ public class ToolStripSplitButton extends ToolStripDropDownItem  {
             retObjectDropDownButtonWidth = classInstance.Get("DropDownButtonWidth");
             return (int)retObjectDropDownButtonWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDropDownButtonWidth_ToString = retObjectDropDownButtonWidth == null ? "null" : retObjectDropDownButtonWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDropDownButtonWidthNumber = (java.lang.Number)retObjectDropDownButtonWidth;
                 return retObjectDropDownButtonWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDropDownButtonWidth != null ? retObjectDropDownButtonWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDropDownButtonWidth != null ? retObjectDropDownButtonWidth.getClass() : "null", retObjectDropDownButtonWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -172,12 +172,13 @@ public class PEDirectoriesBuilder extends NetObject  {
             retObjectAddressOfEntryPoint = classInstance.Get("AddressOfEntryPoint");
             return (int)retObjectAddressOfEntryPoint;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAddressOfEntryPoint_ToString = retObjectAddressOfEntryPoint == null ? "null" : retObjectAddressOfEntryPoint.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAddressOfEntryPointNumber = (java.lang.Number)retObjectAddressOfEntryPoint;
                 return retObjectAddressOfEntryPointNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAddressOfEntryPoint != null ? retObjectAddressOfEntryPoint.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAddressOfEntryPoint != null ? retObjectAddressOfEntryPoint.getClass() : "null", retObjectAddressOfEntryPoint_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

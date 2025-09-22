@@ -221,12 +221,13 @@ public class ProgressBarRenderer extends NetObject  {
             retObjectChunkSpaceThickness = classType.Get("ChunkSpaceThickness");
             return (int)retObjectChunkSpaceThickness;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectChunkSpaceThickness_ToString = retObjectChunkSpaceThickness == null ? "null" : retObjectChunkSpaceThickness.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectChunkSpaceThicknessNumber = (java.lang.Number)retObjectChunkSpaceThickness;
                 return retObjectChunkSpaceThicknessNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectChunkSpaceThickness != null ? retObjectChunkSpaceThickness.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectChunkSpaceThickness != null ? retObjectChunkSpaceThickness.getClass() : "null", retObjectChunkSpaceThickness_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -241,12 +242,13 @@ public class ProgressBarRenderer extends NetObject  {
             retObjectChunkThickness = classType.Get("ChunkThickness");
             return (int)retObjectChunkThickness;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectChunkThickness_ToString = retObjectChunkThickness == null ? "null" : retObjectChunkThickness.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectChunkThicknessNumber = (java.lang.Number)retObjectChunkThickness;
                 return retObjectChunkThicknessNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectChunkThickness != null ? retObjectChunkThickness.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectChunkThickness != null ? retObjectChunkThickness.getClass() : "null", retObjectChunkThickness_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

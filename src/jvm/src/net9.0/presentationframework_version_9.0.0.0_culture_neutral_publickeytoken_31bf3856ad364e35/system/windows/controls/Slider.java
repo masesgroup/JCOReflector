@@ -283,12 +283,13 @@ public class Slider extends RangeBase  {
             retObjectSelectionEnd = classInstance.Get("SelectionEnd");
             return (double)retObjectSelectionEnd;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectionEnd_ToString = retObjectSelectionEnd == null ? "null" : retObjectSelectionEnd.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSelectionEndNumber = (java.lang.Number)retObjectSelectionEnd;
                 return retObjectSelectionEndNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectSelectionEnd != null ? retObjectSelectionEnd.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSelectionEnd != null ? retObjectSelectionEnd.getClass() : "null", retObjectSelectionEnd_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -313,12 +314,13 @@ public class Slider extends RangeBase  {
             retObjectSelectionStart = classInstance.Get("SelectionStart");
             return (double)retObjectSelectionStart;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectionStart_ToString = retObjectSelectionStart == null ? "null" : retObjectSelectionStart.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSelectionStartNumber = (java.lang.Number)retObjectSelectionStart;
                 return retObjectSelectionStartNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectSelectionStart != null ? retObjectSelectionStart.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSelectionStart != null ? retObjectSelectionStart.getClass() : "null", retObjectSelectionStart_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -343,12 +345,13 @@ public class Slider extends RangeBase  {
             retObjectTickFrequency = classInstance.Get("TickFrequency");
             return (double)retObjectTickFrequency;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTickFrequency_ToString = retObjectTickFrequency == null ? "null" : retObjectTickFrequency.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTickFrequencyNumber = (java.lang.Number)retObjectTickFrequency;
                 return retObjectTickFrequencyNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectTickFrequency != null ? retObjectTickFrequency.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectTickFrequency != null ? retObjectTickFrequency.getClass() : "null", retObjectTickFrequency_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -373,12 +376,13 @@ public class Slider extends RangeBase  {
             retObjectAutoToolTipPrecision = classInstance.Get("AutoToolTipPrecision");
             return (int)retObjectAutoToolTipPrecision;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAutoToolTipPrecision_ToString = retObjectAutoToolTipPrecision == null ? "null" : retObjectAutoToolTipPrecision.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAutoToolTipPrecisionNumber = (java.lang.Number)retObjectAutoToolTipPrecision;
                 return retObjectAutoToolTipPrecisionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAutoToolTipPrecision != null ? retObjectAutoToolTipPrecision.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAutoToolTipPrecision != null ? retObjectAutoToolTipPrecision.getClass() : "null", retObjectAutoToolTipPrecision_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -403,12 +407,13 @@ public class Slider extends RangeBase  {
             retObjectDelay = classInstance.Get("Delay");
             return (int)retObjectDelay;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDelay_ToString = retObjectDelay == null ? "null" : retObjectDelay.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDelayNumber = (java.lang.Number)retObjectDelay;
                 return retObjectDelayNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDelay != null ? retObjectDelay.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDelay != null ? retObjectDelay.getClass() : "null", retObjectDelay_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -433,12 +438,13 @@ public class Slider extends RangeBase  {
             retObjectInterval = classInstance.Get("Interval");
             return (int)retObjectInterval;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInterval_ToString = retObjectInterval == null ? "null" : retObjectInterval.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIntervalNumber = (java.lang.Number)retObjectInterval;
                 return retObjectIntervalNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectInterval != null ? retObjectInterval.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectInterval != null ? retObjectInterval.getClass() : "null", retObjectInterval_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

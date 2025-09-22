@@ -188,12 +188,13 @@ public class RenderCapability extends NetObject  {
             retObjectMaxPixelShaderInstructionSlots = classType.Invoke("MaxPixelShaderInstructionSlots", majorVersionRequested, minorVersionRequested);
             return (int)retObjectMaxPixelShaderInstructionSlots;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxPixelShaderInstructionSlots_ToString = retObjectMaxPixelShaderInstructionSlots == null ? "null" : retObjectMaxPixelShaderInstructionSlots.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxPixelShaderInstructionSlotsNumber = (java.lang.Number)retObjectMaxPixelShaderInstructionSlots;
                 return retObjectMaxPixelShaderInstructionSlotsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxPixelShaderInstructionSlots != null ? retObjectMaxPixelShaderInstructionSlots.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxPixelShaderInstructionSlots != null ? retObjectMaxPixelShaderInstructionSlots.getClass() : "null", retObjectMaxPixelShaderInstructionSlots_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -226,12 +227,13 @@ public class RenderCapability extends NetObject  {
             retObjectTier = classType.Get("Tier");
             return (int)retObjectTier;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTier_ToString = retObjectTier == null ? "null" : retObjectTier.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTierNumber = (java.lang.Number)retObjectTier;
                 return retObjectTierNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTier != null ? retObjectTier.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTier != null ? retObjectTier.getClass() : "null", retObjectTier_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

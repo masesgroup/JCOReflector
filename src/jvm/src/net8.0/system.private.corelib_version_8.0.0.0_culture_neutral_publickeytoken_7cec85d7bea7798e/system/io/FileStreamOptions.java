@@ -175,12 +175,13 @@ public class FileStreamOptions extends NetObject  {
             retObjectBufferSize = classInstance.Get("BufferSize");
             return (int)retObjectBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBufferSize_ToString = retObjectBufferSize == null ? "null" : retObjectBufferSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBufferSizeNumber = (java.lang.Number)retObjectBufferSize;
                 return retObjectBufferSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBufferSize != null ? retObjectBufferSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBufferSize != null ? retObjectBufferSize.getClass() : "null", retObjectBufferSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -205,12 +206,13 @@ public class FileStreamOptions extends NetObject  {
             retObjectPreallocationSize = classInstance.Get("PreallocationSize");
             return (long)retObjectPreallocationSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPreallocationSize_ToString = retObjectPreallocationSize == null ? "null" : retObjectPreallocationSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPreallocationSizeNumber = (java.lang.Number)retObjectPreallocationSize;
                 return retObjectPreallocationSizeNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectPreallocationSize != null ? retObjectPreallocationSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectPreallocationSize != null ? retObjectPreallocationSize.getClass() : "null", retObjectPreallocationSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

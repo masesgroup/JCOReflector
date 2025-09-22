@@ -282,12 +282,13 @@ public class DataGridLength extends ValueType  {
             retObjectDesiredValue = classInstance.Get("DesiredValue");
             return (double)retObjectDesiredValue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDesiredValue_ToString = retObjectDesiredValue == null ? "null" : retObjectDesiredValue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDesiredValueNumber = (java.lang.Number)retObjectDesiredValue;
                 return retObjectDesiredValueNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectDesiredValue != null ? retObjectDesiredValue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDesiredValue != null ? retObjectDesiredValue.getClass() : "null", retObjectDesiredValue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -302,12 +303,13 @@ public class DataGridLength extends ValueType  {
             retObjectDisplayValue = classInstance.Get("DisplayValue");
             return (double)retObjectDisplayValue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDisplayValue_ToString = retObjectDisplayValue == null ? "null" : retObjectDisplayValue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDisplayValueNumber = (java.lang.Number)retObjectDisplayValue;
                 return retObjectDisplayValueNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectDisplayValue != null ? retObjectDisplayValue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDisplayValue != null ? retObjectDisplayValue.getClass() : "null", retObjectDisplayValue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -322,12 +324,13 @@ public class DataGridLength extends ValueType  {
             retObjectValue = classInstance.Get("Value");
             return (double)retObjectValue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectValue_ToString = retObjectValue == null ? "null" : retObjectValue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectValueNumber = (java.lang.Number)retObjectValue;
                 return retObjectValueNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectValue != null ? retObjectValue.getClass() : "null", retObjectValue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

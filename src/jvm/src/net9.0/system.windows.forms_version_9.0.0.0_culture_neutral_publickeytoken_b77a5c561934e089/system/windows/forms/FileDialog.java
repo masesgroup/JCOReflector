@@ -488,12 +488,13 @@ public class FileDialog extends CommonDialog  {
             retObjectFilterIndex = classInstance.Get("FilterIndex");
             return (int)retObjectFilterIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFilterIndex_ToString = retObjectFilterIndex == null ? "null" : retObjectFilterIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFilterIndexNumber = (java.lang.Number)retObjectFilterIndex;
                 return retObjectFilterIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFilterIndex != null ? retObjectFilterIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFilterIndex != null ? retObjectFilterIndex.getClass() : "null", retObjectFilterIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

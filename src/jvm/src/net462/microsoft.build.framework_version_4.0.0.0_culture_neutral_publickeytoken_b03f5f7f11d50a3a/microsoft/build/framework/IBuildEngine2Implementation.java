@@ -312,12 +312,13 @@ public class IBuildEngine2Implementation extends NetObject implements IBuildEngi
             retObjectColumnNumberOfTaskNode = classInstance.Get("ColumnNumberOfTaskNode");
             return (int)retObjectColumnNumberOfTaskNode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnNumberOfTaskNode_ToString = retObjectColumnNumberOfTaskNode == null ? "null" : retObjectColumnNumberOfTaskNode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectColumnNumberOfTaskNodeNumber = (java.lang.Number)retObjectColumnNumberOfTaskNode;
                 return retObjectColumnNumberOfTaskNodeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectColumnNumberOfTaskNode != null ? retObjectColumnNumberOfTaskNode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumnNumberOfTaskNode != null ? retObjectColumnNumberOfTaskNode.getClass() : "null", retObjectColumnNumberOfTaskNode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -332,12 +333,13 @@ public class IBuildEngine2Implementation extends NetObject implements IBuildEngi
             retObjectLineNumberOfTaskNode = classInstance.Get("LineNumberOfTaskNode");
             return (int)retObjectLineNumberOfTaskNode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLineNumberOfTaskNode_ToString = retObjectLineNumberOfTaskNode == null ? "null" : retObjectLineNumberOfTaskNode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLineNumberOfTaskNodeNumber = (java.lang.Number)retObjectLineNumberOfTaskNode;
                 return retObjectLineNumberOfTaskNodeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLineNumberOfTaskNode != null ? retObjectLineNumberOfTaskNode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLineNumberOfTaskNode != null ? retObjectLineNumberOfTaskNode.getClass() : "null", retObjectLineNumberOfTaskNode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

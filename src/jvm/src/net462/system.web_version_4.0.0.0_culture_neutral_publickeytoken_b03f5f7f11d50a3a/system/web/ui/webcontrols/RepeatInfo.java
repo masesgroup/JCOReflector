@@ -237,12 +237,13 @@ public class RepeatInfo extends NetObject  {
             retObjectRepeatColumns = classInstance.Get("RepeatColumns");
             return (int)retObjectRepeatColumns;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRepeatColumns_ToString = retObjectRepeatColumns == null ? "null" : retObjectRepeatColumns.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRepeatColumnsNumber = (java.lang.Number)retObjectRepeatColumns;
                 return retObjectRepeatColumnsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRepeatColumns != null ? retObjectRepeatColumns.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRepeatColumns != null ? retObjectRepeatColumns.getClass() : "null", retObjectRepeatColumns_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

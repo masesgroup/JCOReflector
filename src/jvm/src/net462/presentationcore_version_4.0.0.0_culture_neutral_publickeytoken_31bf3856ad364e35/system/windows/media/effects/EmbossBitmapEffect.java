@@ -203,12 +203,13 @@ public class EmbossBitmapEffect extends BitmapEffect  {
             retObjectLightAngle = classInstance.Get("LightAngle");
             return (double)retObjectLightAngle;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLightAngle_ToString = retObjectLightAngle == null ? "null" : retObjectLightAngle.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLightAngleNumber = (java.lang.Number)retObjectLightAngle;
                 return retObjectLightAngleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectLightAngle != null ? retObjectLightAngle.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLightAngle != null ? retObjectLightAngle.getClass() : "null", retObjectLightAngle_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -233,12 +234,13 @@ public class EmbossBitmapEffect extends BitmapEffect  {
             retObjectRelief = classInstance.Get("Relief");
             return (double)retObjectRelief;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRelief_ToString = retObjectRelief == null ? "null" : retObjectRelief.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReliefNumber = (java.lang.Number)retObjectRelief;
                 return retObjectReliefNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectRelief != null ? retObjectRelief.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRelief != null ? retObjectRelief.getClass() : "null", retObjectRelief_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -176,12 +176,13 @@ public class TextTabProperties extends NetObject  {
             retObjectLocation = classInstance.Get("Location");
             return (double)retObjectLocation;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLocation_ToString = retObjectLocation == null ? "null" : retObjectLocation.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLocationNumber = (java.lang.Number)retObjectLocation;
                 return retObjectLocationNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectLocation != null ? retObjectLocation.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLocation != null ? retObjectLocation.getClass() : "null", retObjectLocation_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -196,12 +197,13 @@ public class TextTabProperties extends NetObject  {
             retObjectAligningCharacter = classInstance.Get("AligningCharacter");
             return (int)retObjectAligningCharacter;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAligningCharacter_ToString = retObjectAligningCharacter == null ? "null" : retObjectAligningCharacter.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAligningCharacterNumber = (java.lang.Number)retObjectAligningCharacter;
                 return retObjectAligningCharacterNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAligningCharacter != null ? retObjectAligningCharacter.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAligningCharacter != null ? retObjectAligningCharacter.getClass() : "null", retObjectAligningCharacter_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -216,12 +218,13 @@ public class TextTabProperties extends NetObject  {
             retObjectTabLeader = classInstance.Get("TabLeader");
             return (int)retObjectTabLeader;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTabLeader_ToString = retObjectTabLeader == null ? "null" : retObjectTabLeader.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTabLeaderNumber = (java.lang.Number)retObjectTabLeader;
                 return retObjectTabLeaderNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTabLeader != null ? retObjectTabLeader.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTabLeader != null ? retObjectTabLeader.getClass() : "null", retObjectTabLeader_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

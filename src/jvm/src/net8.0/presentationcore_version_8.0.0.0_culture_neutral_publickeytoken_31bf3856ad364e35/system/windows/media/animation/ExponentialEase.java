@@ -172,12 +172,13 @@ public class ExponentialEase extends EasingFunctionBase  {
             retObjectExponent = classInstance.Get("Exponent");
             return (double)retObjectExponent;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExponent_ToString = retObjectExponent == null ? "null" : retObjectExponent.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExponentNumber = (java.lang.Number)retObjectExponent;
                 return retObjectExponentNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectExponent != null ? retObjectExponent.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectExponent != null ? retObjectExponent.getClass() : "null", retObjectExponent_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

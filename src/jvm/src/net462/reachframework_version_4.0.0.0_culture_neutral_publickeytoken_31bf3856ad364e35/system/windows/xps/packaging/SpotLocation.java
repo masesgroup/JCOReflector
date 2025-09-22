@@ -172,12 +172,13 @@ public class SpotLocation extends NetObject  {
             retObjectStartX = classInstance.Get("StartX");
             return (double)retObjectStartX;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartX_ToString = retObjectStartX == null ? "null" : retObjectStartX.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStartXNumber = (java.lang.Number)retObjectStartX;
                 return retObjectStartXNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectStartX != null ? retObjectStartX.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStartX != null ? retObjectStartX.getClass() : "null", retObjectStartX_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,12 +203,13 @@ public class SpotLocation extends NetObject  {
             retObjectStartY = classInstance.Get("StartY");
             return (double)retObjectStartY;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartY_ToString = retObjectStartY == null ? "null" : retObjectStartY.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStartYNumber = (java.lang.Number)retObjectStartY;
                 return retObjectStartYNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectStartY != null ? retObjectStartY.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStartY != null ? retObjectStartY.getClass() : "null", retObjectStartY_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

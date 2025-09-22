@@ -231,12 +231,13 @@ public class MetadataBuilder extends NetObject  {
             retObjectGetRowCount = classInstance.Invoke("GetRowCount", table == null ? null : table.getJCOInstance());
             return (int)retObjectGetRowCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetRowCount_ToString = retObjectGetRowCount == null ? "null" : retObjectGetRowCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetRowCountNumber = (java.lang.Number)retObjectGetRowCount;
                 return retObjectGetRowCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetRowCount != null ? retObjectGetRowCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetRowCount != null ? retObjectGetRowCount.getClass() : "null", retObjectGetRowCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

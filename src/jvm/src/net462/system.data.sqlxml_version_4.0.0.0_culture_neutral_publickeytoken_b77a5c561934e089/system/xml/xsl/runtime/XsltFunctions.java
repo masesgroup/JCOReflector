@@ -204,12 +204,13 @@ public class XsltFunctions extends NetObject  {
             retObjectMSStringCompare = classType.Invoke("MSStringCompare", s1, s2, lang, options);
             return (double)retObjectMSStringCompare;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMSStringCompare_ToString = retObjectMSStringCompare == null ? "null" : retObjectMSStringCompare.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMSStringCompareNumber = (java.lang.Number)retObjectMSStringCompare;
                 return retObjectMSStringCompareNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMSStringCompare != null ? retObjectMSStringCompare.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMSStringCompare != null ? retObjectMSStringCompare.getClass() : "null", retObjectMSStringCompare_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -224,12 +225,13 @@ public class XsltFunctions extends NetObject  {
             retObjectRound = classType.Invoke("Round", value);
             return (double)retObjectRound;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRound_ToString = retObjectRound == null ? "null" : retObjectRound.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRoundNumber = (java.lang.Number)retObjectRound;
                 return retObjectRoundNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectRound != null ? retObjectRound.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRound != null ? retObjectRound.getClass() : "null", retObjectRound_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

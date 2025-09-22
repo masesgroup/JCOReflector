@@ -366,12 +366,13 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
             retObjectAlphaDataDiscardLevel = classInstance.Get("AlphaDataDiscardLevel");
             return (byte)retObjectAlphaDataDiscardLevel;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAlphaDataDiscardLevel_ToString = retObjectAlphaDataDiscardLevel == null ? "null" : retObjectAlphaDataDiscardLevel.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAlphaDataDiscardLevelNumber = (java.lang.Number)retObjectAlphaDataDiscardLevel;
                 return retObjectAlphaDataDiscardLevelNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectAlphaDataDiscardLevel != null ? retObjectAlphaDataDiscardLevel.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectAlphaDataDiscardLevel != null ? retObjectAlphaDataDiscardLevel.getClass() : "null", retObjectAlphaDataDiscardLevel_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -396,12 +397,13 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
             retObjectAlphaQualityLevel = classInstance.Get("AlphaQualityLevel");
             return (byte)retObjectAlphaQualityLevel;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAlphaQualityLevel_ToString = retObjectAlphaQualityLevel == null ? "null" : retObjectAlphaQualityLevel.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAlphaQualityLevelNumber = (java.lang.Number)retObjectAlphaQualityLevel;
                 return retObjectAlphaQualityLevelNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectAlphaQualityLevel != null ? retObjectAlphaQualityLevel.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectAlphaQualityLevel != null ? retObjectAlphaQualityLevel.getClass() : "null", retObjectAlphaQualityLevel_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -426,12 +428,13 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
             retObjectImageDataDiscardLevel = classInstance.Get("ImageDataDiscardLevel");
             return (byte)retObjectImageDataDiscardLevel;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectImageDataDiscardLevel_ToString = retObjectImageDataDiscardLevel == null ? "null" : retObjectImageDataDiscardLevel.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectImageDataDiscardLevelNumber = (java.lang.Number)retObjectImageDataDiscardLevel;
                 return retObjectImageDataDiscardLevelNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectImageDataDiscardLevel != null ? retObjectImageDataDiscardLevel.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectImageDataDiscardLevel != null ? retObjectImageDataDiscardLevel.getClass() : "null", retObjectImageDataDiscardLevel_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -456,12 +459,13 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
             retObjectOverlapLevel = classInstance.Get("OverlapLevel");
             return (byte)retObjectOverlapLevel;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOverlapLevel_ToString = retObjectOverlapLevel == null ? "null" : retObjectOverlapLevel.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOverlapLevelNumber = (java.lang.Number)retObjectOverlapLevel;
                 return retObjectOverlapLevelNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectOverlapLevel != null ? retObjectOverlapLevel.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectOverlapLevel != null ? retObjectOverlapLevel.getClass() : "null", retObjectOverlapLevel_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -486,12 +490,13 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
             retObjectQualityLevel = classInstance.Get("QualityLevel");
             return (byte)retObjectQualityLevel;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectQualityLevel_ToString = retObjectQualityLevel == null ? "null" : retObjectQualityLevel.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectQualityLevelNumber = (java.lang.Number)retObjectQualityLevel;
                 return retObjectQualityLevelNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectQualityLevel != null ? retObjectQualityLevel.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectQualityLevel != null ? retObjectQualityLevel.getClass() : "null", retObjectQualityLevel_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -516,12 +521,13 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
             retObjectSubsamplingLevel = classInstance.Get("SubsamplingLevel");
             return (byte)retObjectSubsamplingLevel;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSubsamplingLevel_ToString = retObjectSubsamplingLevel == null ? "null" : retObjectSubsamplingLevel.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSubsamplingLevelNumber = (java.lang.Number)retObjectSubsamplingLevel;
                 return retObjectSubsamplingLevelNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectSubsamplingLevel != null ? retObjectSubsamplingLevel.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectSubsamplingLevel != null ? retObjectSubsamplingLevel.getClass() : "null", retObjectSubsamplingLevel_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -546,12 +552,13 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
             retObjectHorizontalTileSlices = classInstance.Get("HorizontalTileSlices");
             return (short)retObjectHorizontalTileSlices;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHorizontalTileSlices_ToString = retObjectHorizontalTileSlices == null ? "null" : retObjectHorizontalTileSlices.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHorizontalTileSlicesNumber = (java.lang.Number)retObjectHorizontalTileSlices;
                 return retObjectHorizontalTileSlicesNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectHorizontalTileSlices != null ? retObjectHorizontalTileSlices.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectHorizontalTileSlices != null ? retObjectHorizontalTileSlices.getClass() : "null", retObjectHorizontalTileSlices_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -576,12 +583,13 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
             retObjectVerticalTileSlices = classInstance.Get("VerticalTileSlices");
             return (short)retObjectVerticalTileSlices;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVerticalTileSlices_ToString = retObjectVerticalTileSlices == null ? "null" : retObjectVerticalTileSlices.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVerticalTileSlicesNumber = (java.lang.Number)retObjectVerticalTileSlices;
                 return retObjectVerticalTileSlicesNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectVerticalTileSlices != null ? retObjectVerticalTileSlices.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectVerticalTileSlices != null ? retObjectVerticalTileSlices.getClass() : "null", retObjectVerticalTileSlices_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

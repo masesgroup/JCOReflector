@@ -172,12 +172,13 @@ public class PowerEase extends EasingFunctionBase  {
             retObjectPower = classInstance.Get("Power");
             return (double)retObjectPower;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPower_ToString = retObjectPower == null ? "null" : retObjectPower.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPowerNumber = (java.lang.Number)retObjectPower;
                 return retObjectPowerNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectPower != null ? retObjectPower.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPower != null ? retObjectPower.getClass() : "null", retObjectPower_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

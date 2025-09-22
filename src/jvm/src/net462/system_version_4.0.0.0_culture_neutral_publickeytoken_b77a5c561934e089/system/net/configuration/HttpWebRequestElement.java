@@ -196,12 +196,13 @@ public class HttpWebRequestElement extends ConfigurationElement  {
             retObjectMaximumErrorResponseLength = classInstance.Get("MaximumErrorResponseLength");
             return (int)retObjectMaximumErrorResponseLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumErrorResponseLength_ToString = retObjectMaximumErrorResponseLength == null ? "null" : retObjectMaximumErrorResponseLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumErrorResponseLengthNumber = (java.lang.Number)retObjectMaximumErrorResponseLength;
                 return retObjectMaximumErrorResponseLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumErrorResponseLength != null ? retObjectMaximumErrorResponseLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumErrorResponseLength != null ? retObjectMaximumErrorResponseLength.getClass() : "null", retObjectMaximumErrorResponseLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -226,12 +227,13 @@ public class HttpWebRequestElement extends ConfigurationElement  {
             retObjectMaximumResponseHeadersLength = classInstance.Get("MaximumResponseHeadersLength");
             return (int)retObjectMaximumResponseHeadersLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumResponseHeadersLength_ToString = retObjectMaximumResponseHeadersLength == null ? "null" : retObjectMaximumResponseHeadersLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumResponseHeadersLengthNumber = (java.lang.Number)retObjectMaximumResponseHeadersLength;
                 return retObjectMaximumResponseHeadersLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumResponseHeadersLength != null ? retObjectMaximumResponseHeadersLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumResponseHeadersLength != null ? retObjectMaximumResponseHeadersLength.getClass() : "null", retObjectMaximumResponseHeadersLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -256,12 +258,13 @@ public class HttpWebRequestElement extends ConfigurationElement  {
             retObjectMaximumUnauthorizedUploadLength = classInstance.Get("MaximumUnauthorizedUploadLength");
             return (int)retObjectMaximumUnauthorizedUploadLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumUnauthorizedUploadLength_ToString = retObjectMaximumUnauthorizedUploadLength == null ? "null" : retObjectMaximumUnauthorizedUploadLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumUnauthorizedUploadLengthNumber = (java.lang.Number)retObjectMaximumUnauthorizedUploadLength;
                 return retObjectMaximumUnauthorizedUploadLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumUnauthorizedUploadLength != null ? retObjectMaximumUnauthorizedUploadLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumUnauthorizedUploadLength != null ? retObjectMaximumUnauthorizedUploadLength.getClass() : "null", retObjectMaximumUnauthorizedUploadLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

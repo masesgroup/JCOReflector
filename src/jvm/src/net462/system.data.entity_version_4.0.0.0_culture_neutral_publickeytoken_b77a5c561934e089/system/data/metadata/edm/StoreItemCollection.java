@@ -176,12 +176,13 @@ public class StoreItemCollection extends ItemCollection  {
             retObjectStoreSchemaVersion = classInstance.Get("StoreSchemaVersion");
             return (double)retObjectStoreSchemaVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStoreSchemaVersion_ToString = retObjectStoreSchemaVersion == null ? "null" : retObjectStoreSchemaVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStoreSchemaVersionNumber = (java.lang.Number)retObjectStoreSchemaVersion;
                 return retObjectStoreSchemaVersionNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectStoreSchemaVersion != null ? retObjectStoreSchemaVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStoreSchemaVersion != null ? retObjectStoreSchemaVersion.getClass() : "null", retObjectStoreSchemaVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

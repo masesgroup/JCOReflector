@@ -282,12 +282,13 @@ public class SoundPlayer extends Component implements system.runtime.serializati
             retObjectLoadTimeout = classInstance.Get("LoadTimeout");
             return (int)retObjectLoadTimeout;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLoadTimeout_ToString = retObjectLoadTimeout == null ? "null" : retObjectLoadTimeout.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLoadTimeoutNumber = (java.lang.Number)retObjectLoadTimeout;
                 return retObjectLoadTimeoutNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLoadTimeout != null ? retObjectLoadTimeout.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLoadTimeout != null ? retObjectLoadTimeout.getClass() : "null", retObjectLoadTimeout_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

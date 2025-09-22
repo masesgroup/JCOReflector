@@ -216,12 +216,13 @@ public class SoapEnvelopeProcessingElement extends ConfigurationElement  {
             retObjectReadTimeout = classInstance.Get("ReadTimeout");
             return (int)retObjectReadTimeout;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadTimeout_ToString = retObjectReadTimeout == null ? "null" : retObjectReadTimeout.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadTimeoutNumber = (java.lang.Number)retObjectReadTimeout;
                 return retObjectReadTimeoutNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadTimeout != null ? retObjectReadTimeout.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadTimeout != null ? retObjectReadTimeout.getClass() : "null", retObjectReadTimeout_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

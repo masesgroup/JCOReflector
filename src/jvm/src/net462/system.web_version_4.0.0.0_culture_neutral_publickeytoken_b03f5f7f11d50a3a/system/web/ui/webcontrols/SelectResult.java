@@ -175,12 +175,13 @@ public class SelectResult extends NetObject  {
             retObjectTotalRowCount = classInstance.Get("TotalRowCount");
             return (int)retObjectTotalRowCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTotalRowCount_ToString = retObjectTotalRowCount == null ? "null" : retObjectTotalRowCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTotalRowCountNumber = (java.lang.Number)retObjectTotalRowCount;
                 return retObjectTotalRowCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTotalRowCount != null ? retObjectTotalRowCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTotalRowCount != null ? retObjectTotalRowCount.getClass() : "null", retObjectTotalRowCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

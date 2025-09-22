@@ -225,12 +225,13 @@ public class TranslateTransform3D extends AffineTransform3D  {
             retObjectOffsetX = classInstance.Get("OffsetX");
             return (double)retObjectOffsetX;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffsetX_ToString = retObjectOffsetX == null ? "null" : retObjectOffsetX.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOffsetXNumber = (java.lang.Number)retObjectOffsetX;
                 return retObjectOffsetXNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOffsetX != null ? retObjectOffsetX.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOffsetX != null ? retObjectOffsetX.getClass() : "null", retObjectOffsetX_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -255,12 +256,13 @@ public class TranslateTransform3D extends AffineTransform3D  {
             retObjectOffsetY = classInstance.Get("OffsetY");
             return (double)retObjectOffsetY;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffsetY_ToString = retObjectOffsetY == null ? "null" : retObjectOffsetY.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOffsetYNumber = (java.lang.Number)retObjectOffsetY;
                 return retObjectOffsetYNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOffsetY != null ? retObjectOffsetY.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOffsetY != null ? retObjectOffsetY.getClass() : "null", retObjectOffsetY_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -285,12 +287,13 @@ public class TranslateTransform3D extends AffineTransform3D  {
             retObjectOffsetZ = classInstance.Get("OffsetZ");
             return (double)retObjectOffsetZ;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffsetZ_ToString = retObjectOffsetZ == null ? "null" : retObjectOffsetZ.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOffsetZNumber = (java.lang.Number)retObjectOffsetZ;
                 return retObjectOffsetZNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOffsetZ != null ? retObjectOffsetZ.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOffsetZ != null ? retObjectOffsetZ.getClass() : "null", retObjectOffsetZ_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

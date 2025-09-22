@@ -176,12 +176,13 @@ public class DpiScale extends ValueType  {
             retObjectDpiScaleX = classInstance.Get("DpiScaleX");
             return (double)retObjectDpiScaleX;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDpiScaleX_ToString = retObjectDpiScaleX == null ? "null" : retObjectDpiScaleX.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDpiScaleXNumber = (java.lang.Number)retObjectDpiScaleX;
                 return retObjectDpiScaleXNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectDpiScaleX != null ? retObjectDpiScaleX.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDpiScaleX != null ? retObjectDpiScaleX.getClass() : "null", retObjectDpiScaleX_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -196,12 +197,13 @@ public class DpiScale extends ValueType  {
             retObjectDpiScaleY = classInstance.Get("DpiScaleY");
             return (double)retObjectDpiScaleY;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDpiScaleY_ToString = retObjectDpiScaleY == null ? "null" : retObjectDpiScaleY.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDpiScaleYNumber = (java.lang.Number)retObjectDpiScaleY;
                 return retObjectDpiScaleYNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectDpiScaleY != null ? retObjectDpiScaleY.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDpiScaleY != null ? retObjectDpiScaleY.getClass() : "null", retObjectDpiScaleY_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -216,12 +218,13 @@ public class DpiScale extends ValueType  {
             retObjectPixelsPerDip = classInstance.Get("PixelsPerDip");
             return (double)retObjectPixelsPerDip;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPixelsPerDip_ToString = retObjectPixelsPerDip == null ? "null" : retObjectPixelsPerDip.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPixelsPerDipNumber = (java.lang.Number)retObjectPixelsPerDip;
                 return retObjectPixelsPerDipNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectPixelsPerDip != null ? retObjectPixelsPerDip.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPixelsPerDip != null ? retObjectPixelsPerDip.getClass() : "null", retObjectPixelsPerDip_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -236,12 +239,13 @@ public class DpiScale extends ValueType  {
             retObjectPixelsPerInchX = classInstance.Get("PixelsPerInchX");
             return (double)retObjectPixelsPerInchX;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPixelsPerInchX_ToString = retObjectPixelsPerInchX == null ? "null" : retObjectPixelsPerInchX.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPixelsPerInchXNumber = (java.lang.Number)retObjectPixelsPerInchX;
                 return retObjectPixelsPerInchXNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectPixelsPerInchX != null ? retObjectPixelsPerInchX.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPixelsPerInchX != null ? retObjectPixelsPerInchX.getClass() : "null", retObjectPixelsPerInchX_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -256,12 +260,13 @@ public class DpiScale extends ValueType  {
             retObjectPixelsPerInchY = classInstance.Get("PixelsPerInchY");
             return (double)retObjectPixelsPerInchY;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPixelsPerInchY_ToString = retObjectPixelsPerInchY == null ? "null" : retObjectPixelsPerInchY.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPixelsPerInchYNumber = (java.lang.Number)retObjectPixelsPerInchY;
                 return retObjectPixelsPerInchYNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectPixelsPerInchY != null ? retObjectPixelsPerInchY.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPixelsPerInchY != null ? retObjectPixelsPerInchY.getClass() : "null", retObjectPixelsPerInchY_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

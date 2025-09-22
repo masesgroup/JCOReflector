@@ -176,12 +176,13 @@ public class OutputMessageCollection extends NetObjectEnumerable  {
             retObjectErrorCount = classInstance.Get("ErrorCount");
             return (int)retObjectErrorCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectErrorCount_ToString = retObjectErrorCount == null ? "null" : retObjectErrorCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectErrorCountNumber = (java.lang.Number)retObjectErrorCount;
                 return retObjectErrorCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectErrorCount != null ? retObjectErrorCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectErrorCount != null ? retObjectErrorCount.getClass() : "null", retObjectErrorCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -196,12 +197,13 @@ public class OutputMessageCollection extends NetObjectEnumerable  {
             retObjectWarningCount = classInstance.Get("WarningCount");
             return (int)retObjectWarningCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWarningCount_ToString = retObjectWarningCount == null ? "null" : retObjectWarningCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWarningCountNumber = (java.lang.Number)retObjectWarningCount;
                 return retObjectWarningCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWarningCount != null ? retObjectWarningCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWarningCount != null ? retObjectWarningCount.getClass() : "null", retObjectWarningCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -387,12 +387,13 @@ public class CountdownEvent extends NetObject implements AutoCloseable {
             retObjectCurrentCount = classInstance.Get("CurrentCount");
             return (int)retObjectCurrentCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCurrentCount_ToString = retObjectCurrentCount == null ? "null" : retObjectCurrentCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCurrentCountNumber = (java.lang.Number)retObjectCurrentCount;
                 return retObjectCurrentCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCurrentCount != null ? retObjectCurrentCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentCount != null ? retObjectCurrentCount.getClass() : "null", retObjectCurrentCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -407,12 +408,13 @@ public class CountdownEvent extends NetObject implements AutoCloseable {
             retObjectInitialCount = classInstance.Get("InitialCount");
             return (int)retObjectInitialCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInitialCount_ToString = retObjectInitialCount == null ? "null" : retObjectInitialCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInitialCountNumber = (java.lang.Number)retObjectInitialCount;
                 return retObjectInitialCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectInitialCount != null ? retObjectInitialCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectInitialCount != null ? retObjectInitialCount.getClass() : "null", retObjectInitialCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

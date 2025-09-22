@@ -171,12 +171,13 @@ public class MetaHeader extends NetObject  {
             retObjectHeaderSize = classInstance.Get("HeaderSize");
             return (short)retObjectHeaderSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHeaderSize_ToString = retObjectHeaderSize == null ? "null" : retObjectHeaderSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHeaderSizeNumber = (java.lang.Number)retObjectHeaderSize;
                 return retObjectHeaderSizeNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectHeaderSize != null ? retObjectHeaderSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectHeaderSize != null ? retObjectHeaderSize.getClass() : "null", retObjectHeaderSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -201,12 +202,13 @@ public class MetaHeader extends NetObject  {
             retObjectNoObjects = classInstance.Get("NoObjects");
             return (short)retObjectNoObjects;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNoObjects_ToString = retObjectNoObjects == null ? "null" : retObjectNoObjects.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNoObjectsNumber = (java.lang.Number)retObjectNoObjects;
                 return retObjectNoObjectsNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectNoObjects != null ? retObjectNoObjects.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectNoObjects != null ? retObjectNoObjects.getClass() : "null", retObjectNoObjects_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -231,12 +233,13 @@ public class MetaHeader extends NetObject  {
             retObjectNoParameters = classInstance.Get("NoParameters");
             return (short)retObjectNoParameters;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNoParameters_ToString = retObjectNoParameters == null ? "null" : retObjectNoParameters.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNoParametersNumber = (java.lang.Number)retObjectNoParameters;
                 return retObjectNoParametersNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectNoParameters != null ? retObjectNoParameters.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectNoParameters != null ? retObjectNoParameters.getClass() : "null", retObjectNoParameters_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -261,12 +264,13 @@ public class MetaHeader extends NetObject  {
             retObjectType = classInstance.Get("Type");
             return (short)retObjectType;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectType_ToString = retObjectType == null ? "null" : retObjectType.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTypeNumber = (java.lang.Number)retObjectType;
                 return retObjectTypeNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectType != null ? retObjectType.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectType != null ? retObjectType.getClass() : "null", retObjectType_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -291,12 +295,13 @@ public class MetaHeader extends NetObject  {
             retObjectVersion = classInstance.Get("Version");
             return (short)retObjectVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVersion_ToString = retObjectVersion == null ? "null" : retObjectVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVersionNumber = (java.lang.Number)retObjectVersion;
                 return retObjectVersionNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectVersion != null ? retObjectVersion.getClass() : "null", retObjectVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -321,12 +326,13 @@ public class MetaHeader extends NetObject  {
             retObjectMaxRecord = classInstance.Get("MaxRecord");
             return (int)retObjectMaxRecord;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxRecord_ToString = retObjectMaxRecord == null ? "null" : retObjectMaxRecord.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxRecordNumber = (java.lang.Number)retObjectMaxRecord;
                 return retObjectMaxRecordNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxRecord != null ? retObjectMaxRecord.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxRecord != null ? retObjectMaxRecord.getClass() : "null", retObjectMaxRecord_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -351,12 +357,13 @@ public class MetaHeader extends NetObject  {
             retObjectSize = classInstance.Get("Size");
             return (int)retObjectSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSize_ToString = retObjectSize == null ? "null" : retObjectSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSizeNumber = (java.lang.Number)retObjectSize;
                 return retObjectSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSize != null ? retObjectSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSize != null ? retObjectSize.getClass() : "null", retObjectSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

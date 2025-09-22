@@ -177,12 +177,13 @@ public class IsolatedStorageSecurityState extends SecurityState  {
             retObjectQuota = classInstance.Get("Quota");
             return (long)retObjectQuota;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectQuota_ToString = retObjectQuota == null ? "null" : retObjectQuota.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectQuotaNumber = (java.lang.Number)retObjectQuota;
                 return retObjectQuotaNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectQuota != null ? retObjectQuota.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectQuota != null ? retObjectQuota.getClass() : "null", retObjectQuota_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -207,12 +208,13 @@ public class IsolatedStorageSecurityState extends SecurityState  {
             retObjectUsedSize = classInstance.Get("UsedSize");
             return (long)retObjectUsedSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUsedSize_ToString = retObjectUsedSize == null ? "null" : retObjectUsedSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectUsedSizeNumber = (java.lang.Number)retObjectUsedSize;
                 return retObjectUsedSizeNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectUsedSize != null ? retObjectUsedSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectUsedSize != null ? retObjectUsedSize.getClass() : "null", retObjectUsedSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

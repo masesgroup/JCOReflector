@@ -1200,12 +1200,13 @@ public class MessagePropertyFilter extends NetObject  {
             retObjectDefaultBodySize = classInstance.Get("DefaultBodySize");
             return (int)retObjectDefaultBodySize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDefaultBodySize_ToString = retObjectDefaultBodySize == null ? "null" : retObjectDefaultBodySize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDefaultBodySizeNumber = (java.lang.Number)retObjectDefaultBodySize;
                 return retObjectDefaultBodySizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDefaultBodySize != null ? retObjectDefaultBodySize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDefaultBodySize != null ? retObjectDefaultBodySize.getClass() : "null", retObjectDefaultBodySize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1230,12 +1231,13 @@ public class MessagePropertyFilter extends NetObject  {
             retObjectDefaultExtensionSize = classInstance.Get("DefaultExtensionSize");
             return (int)retObjectDefaultExtensionSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDefaultExtensionSize_ToString = retObjectDefaultExtensionSize == null ? "null" : retObjectDefaultExtensionSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDefaultExtensionSizeNumber = (java.lang.Number)retObjectDefaultExtensionSize;
                 return retObjectDefaultExtensionSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDefaultExtensionSize != null ? retObjectDefaultExtensionSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDefaultExtensionSize != null ? retObjectDefaultExtensionSize.getClass() : "null", retObjectDefaultExtensionSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1260,12 +1262,13 @@ public class MessagePropertyFilter extends NetObject  {
             retObjectDefaultLabelSize = classInstance.Get("DefaultLabelSize");
             return (int)retObjectDefaultLabelSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDefaultLabelSize_ToString = retObjectDefaultLabelSize == null ? "null" : retObjectDefaultLabelSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDefaultLabelSizeNumber = (java.lang.Number)retObjectDefaultLabelSize;
                 return retObjectDefaultLabelSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDefaultLabelSize != null ? retObjectDefaultLabelSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDefaultLabelSize != null ? retObjectDefaultLabelSize.getClass() : "null", retObjectDefaultLabelSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

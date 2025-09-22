@@ -207,12 +207,13 @@ public class Semaphore extends WaitHandle  {
             retObjectRelease = classInstance.Invoke("Release");
             return (int)retObjectRelease;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRelease_ToString = retObjectRelease == null ? "null" : retObjectRelease.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReleaseNumber = (java.lang.Number)retObjectRelease;
                 return retObjectReleaseNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRelease != null ? retObjectRelease.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRelease != null ? retObjectRelease.getClass() : "null", retObjectRelease_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -227,12 +228,13 @@ public class Semaphore extends WaitHandle  {
             retObjectRelease = classInstance.Invoke("Release", releaseCount);
             return (int)retObjectRelease;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRelease_ToString = retObjectRelease == null ? "null" : retObjectRelease.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReleaseNumber = (java.lang.Number)retObjectRelease;
                 return retObjectReleaseNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRelease != null ? retObjectRelease.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRelease != null ? retObjectRelease.getClass() : "null", retObjectRelease_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

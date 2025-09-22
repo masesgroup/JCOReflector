@@ -214,12 +214,13 @@ public class WebBaseEvent extends NetObject  {
             retObjectEventCode = classInstance.Get("EventCode");
             return (int)retObjectEventCode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEventCode_ToString = retObjectEventCode == null ? "null" : retObjectEventCode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEventCodeNumber = (java.lang.Number)retObjectEventCode;
                 return retObjectEventCodeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEventCode != null ? retObjectEventCode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEventCode != null ? retObjectEventCode.getClass() : "null", retObjectEventCode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -234,12 +235,13 @@ public class WebBaseEvent extends NetObject  {
             retObjectEventDetailCode = classInstance.Get("EventDetailCode");
             return (int)retObjectEventDetailCode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEventDetailCode_ToString = retObjectEventDetailCode == null ? "null" : retObjectEventDetailCode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEventDetailCodeNumber = (java.lang.Number)retObjectEventDetailCode;
                 return retObjectEventDetailCodeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEventDetailCode != null ? retObjectEventDetailCode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEventDetailCode != null ? retObjectEventDetailCode.getClass() : "null", retObjectEventDetailCode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -254,12 +256,13 @@ public class WebBaseEvent extends NetObject  {
             retObjectEventOccurrence = classInstance.Get("EventOccurrence");
             return (long)retObjectEventOccurrence;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEventOccurrence_ToString = retObjectEventOccurrence == null ? "null" : retObjectEventOccurrence.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEventOccurrenceNumber = (java.lang.Number)retObjectEventOccurrence;
                 return retObjectEventOccurrenceNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectEventOccurrence != null ? retObjectEventOccurrence.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectEventOccurrence != null ? retObjectEventOccurrence.getClass() : "null", retObjectEventOccurrence_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -274,12 +277,13 @@ public class WebBaseEvent extends NetObject  {
             retObjectEventSequence = classInstance.Get("EventSequence");
             return (long)retObjectEventSequence;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEventSequence_ToString = retObjectEventSequence == null ? "null" : retObjectEventSequence.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEventSequenceNumber = (java.lang.Number)retObjectEventSequence;
                 return retObjectEventSequenceNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectEventSequence != null ? retObjectEventSequence.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectEventSequence != null ? retObjectEventSequence.getClass() : "null", retObjectEventSequence_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

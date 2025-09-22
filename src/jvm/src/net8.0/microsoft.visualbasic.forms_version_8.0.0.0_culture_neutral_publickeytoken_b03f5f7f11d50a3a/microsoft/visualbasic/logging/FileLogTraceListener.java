@@ -340,12 +340,13 @@ public class FileLogTraceListener extends TraceListener  {
             retObjectMaxFileSize = classInstance.Get("MaxFileSize");
             return (long)retObjectMaxFileSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxFileSize_ToString = retObjectMaxFileSize == null ? "null" : retObjectMaxFileSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxFileSizeNumber = (java.lang.Number)retObjectMaxFileSize;
                 return retObjectMaxFileSizeNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMaxFileSize != null ? retObjectMaxFileSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaxFileSize != null ? retObjectMaxFileSize.getClass() : "null", retObjectMaxFileSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -370,12 +371,13 @@ public class FileLogTraceListener extends TraceListener  {
             retObjectReserveDiskSpace = classInstance.Get("ReserveDiskSpace");
             return (long)retObjectReserveDiskSpace;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReserveDiskSpace_ToString = retObjectReserveDiskSpace == null ? "null" : retObjectReserveDiskSpace.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReserveDiskSpaceNumber = (java.lang.Number)retObjectReserveDiskSpace;
                 return retObjectReserveDiskSpaceNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectReserveDiskSpace != null ? retObjectReserveDiskSpace.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectReserveDiskSpace != null ? retObjectReserveDiskSpace.getClass() : "null", retObjectReserveDiskSpace_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -229,12 +229,13 @@ public class DecoderFallbackBuffer extends NetObject  {
             retObjectRemaining = classInstance.Get("Remaining");
             return (int)retObjectRemaining;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRemaining_ToString = retObjectRemaining == null ? "null" : retObjectRemaining.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRemainingNumber = (java.lang.Number)retObjectRemaining;
                 return retObjectRemainingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRemaining != null ? retObjectRemaining.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRemaining != null ? retObjectRemaining.getClass() : "null", retObjectRemaining_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -212,12 +212,13 @@ public class MsmqPoisonMessageException extends PoisonMessageException {
             retObjectMessageLookupId = classInstance.Get("MessageLookupId");
             return (long)retObjectMessageLookupId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMessageLookupId_ToString = retObjectMessageLookupId == null ? "null" : retObjectMessageLookupId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMessageLookupIdNumber = (java.lang.Number)retObjectMessageLookupId;
                 return retObjectMessageLookupIdNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMessageLookupId != null ? retObjectMessageLookupId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMessageLookupId != null ? retObjectMessageLookupId.getClass() : "null", retObjectMessageLookupId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

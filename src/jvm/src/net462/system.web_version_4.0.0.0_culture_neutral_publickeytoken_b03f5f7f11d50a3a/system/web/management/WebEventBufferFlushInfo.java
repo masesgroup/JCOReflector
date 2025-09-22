@@ -168,12 +168,13 @@ public class WebEventBufferFlushInfo extends NetObject  {
             retObjectEventsDiscardedSinceLastNotification = classInstance.Get("EventsDiscardedSinceLastNotification");
             return (int)retObjectEventsDiscardedSinceLastNotification;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEventsDiscardedSinceLastNotification_ToString = retObjectEventsDiscardedSinceLastNotification == null ? "null" : retObjectEventsDiscardedSinceLastNotification.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEventsDiscardedSinceLastNotificationNumber = (java.lang.Number)retObjectEventsDiscardedSinceLastNotification;
                 return retObjectEventsDiscardedSinceLastNotificationNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEventsDiscardedSinceLastNotification != null ? retObjectEventsDiscardedSinceLastNotification.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEventsDiscardedSinceLastNotification != null ? retObjectEventsDiscardedSinceLastNotification.getClass() : "null", retObjectEventsDiscardedSinceLastNotification_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -188,12 +189,13 @@ public class WebEventBufferFlushInfo extends NetObject  {
             retObjectEventsInBuffer = classInstance.Get("EventsInBuffer");
             return (int)retObjectEventsInBuffer;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEventsInBuffer_ToString = retObjectEventsInBuffer == null ? "null" : retObjectEventsInBuffer.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEventsInBufferNumber = (java.lang.Number)retObjectEventsInBuffer;
                 return retObjectEventsInBufferNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEventsInBuffer != null ? retObjectEventsInBuffer.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEventsInBuffer != null ? retObjectEventsInBuffer.getClass() : "null", retObjectEventsInBuffer_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -208,12 +210,13 @@ public class WebEventBufferFlushInfo extends NetObject  {
             retObjectNotificationSequence = classInstance.Get("NotificationSequence");
             return (int)retObjectNotificationSequence;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNotificationSequence_ToString = retObjectNotificationSequence == null ? "null" : retObjectNotificationSequence.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNotificationSequenceNumber = (java.lang.Number)retObjectNotificationSequence;
                 return retObjectNotificationSequenceNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNotificationSequence != null ? retObjectNotificationSequence.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNotificationSequence != null ? retObjectNotificationSequence.getClass() : "null", retObjectNotificationSequence_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

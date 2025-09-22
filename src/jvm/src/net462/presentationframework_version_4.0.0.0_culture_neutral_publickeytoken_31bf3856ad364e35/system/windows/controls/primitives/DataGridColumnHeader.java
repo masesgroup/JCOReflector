@@ -214,12 +214,13 @@ public class DataGridColumnHeader extends ButtonBase  {
             retObjectDisplayIndex = classInstance.Get("DisplayIndex");
             return (int)retObjectDisplayIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDisplayIndex_ToString = retObjectDisplayIndex == null ? "null" : retObjectDisplayIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDisplayIndexNumber = (java.lang.Number)retObjectDisplayIndex;
                 return retObjectDisplayIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDisplayIndex != null ? retObjectDisplayIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDisplayIndex != null ? retObjectDisplayIndex.getClass() : "null", retObjectDisplayIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -170,12 +170,13 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
             retObjectIncrementManualFlowControlLimit = classInstance.Invoke("IncrementManualFlowControlLimit", incrementBy);
             return (int)retObjectIncrementManualFlowControlLimit;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIncrementManualFlowControlLimit_ToString = retObjectIncrementManualFlowControlLimit == null ? "null" : retObjectIncrementManualFlowControlLimit.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIncrementManualFlowControlLimitNumber = (java.lang.Number)retObjectIncrementManualFlowControlLimit;
                 return retObjectIncrementManualFlowControlLimitNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIncrementManualFlowControlLimit != null ? retObjectIncrementManualFlowControlLimit.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIncrementManualFlowControlLimit != null ? retObjectIncrementManualFlowControlLimit.getClass() : "null", retObjectIncrementManualFlowControlLimit_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -296,12 +297,13 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
             retObjectManualFlowControlLimit = classInstance.Get("ManualFlowControlLimit");
             return (int)retObjectManualFlowControlLimit;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectManualFlowControlLimit_ToString = retObjectManualFlowControlLimit == null ? "null" : retObjectManualFlowControlLimit.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectManualFlowControlLimitNumber = (java.lang.Number)retObjectManualFlowControlLimit;
                 return retObjectManualFlowControlLimitNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectManualFlowControlLimit != null ? retObjectManualFlowControlLimit.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectManualFlowControlLimit != null ? retObjectManualFlowControlLimit.getClass() : "null", retObjectManualFlowControlLimit_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

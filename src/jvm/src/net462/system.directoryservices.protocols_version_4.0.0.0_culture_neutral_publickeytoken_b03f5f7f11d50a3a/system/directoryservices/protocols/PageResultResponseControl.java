@@ -189,12 +189,13 @@ public class PageResultResponseControl extends DirectoryControl  {
             retObjectTotalCount = classInstance.Get("TotalCount");
             return (int)retObjectTotalCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTotalCount_ToString = retObjectTotalCount == null ? "null" : retObjectTotalCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTotalCountNumber = (java.lang.Number)retObjectTotalCount;
                 return retObjectTotalCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTotalCount != null ? retObjectTotalCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTotalCount != null ? retObjectTotalCount.getClass() : "null", retObjectTotalCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

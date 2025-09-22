@@ -180,12 +180,13 @@ public class GridViewRow extends TableRow implements system.web.ui.INamingContai
             retObjectDataItemIndex = classInstance.Get("DataItemIndex");
             return (int)retObjectDataItemIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDataItemIndex_ToString = retObjectDataItemIndex == null ? "null" : retObjectDataItemIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDataItemIndexNumber = (java.lang.Number)retObjectDataItemIndex;
                 return retObjectDataItemIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDataItemIndex != null ? retObjectDataItemIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDataItemIndex != null ? retObjectDataItemIndex.getClass() : "null", retObjectDataItemIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -200,12 +201,13 @@ public class GridViewRow extends TableRow implements system.web.ui.INamingContai
             retObjectRowIndex = classInstance.Get("RowIndex");
             return (int)retObjectRowIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowIndex_ToString = retObjectRowIndex == null ? "null" : retObjectRowIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRowIndexNumber = (java.lang.Number)retObjectRowIndex;
                 return retObjectRowIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRowIndex != null ? retObjectRowIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowIndex != null ? retObjectRowIndex.getClass() : "null", retObjectRowIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -234,12 +234,13 @@ public class TreeNodeBinding extends NetObject implements system.ICloneable {
             retObjectDepth = classInstance.Get("Depth");
             return (int)retObjectDepth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDepth_ToString = retObjectDepth == null ? "null" : retObjectDepth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDepthNumber = (java.lang.Number)retObjectDepth;
                 return retObjectDepthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDepth != null ? retObjectDepth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDepth != null ? retObjectDepth.getClass() : "null", retObjectDepth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

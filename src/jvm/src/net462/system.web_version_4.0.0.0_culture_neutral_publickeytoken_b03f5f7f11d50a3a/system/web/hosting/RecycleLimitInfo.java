@@ -200,12 +200,13 @@ public class RecycleLimitInfo extends NetObject  {
             retObjectCurrentPrivateBytes = classInstance.Get("CurrentPrivateBytes");
             return (long)retObjectCurrentPrivateBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCurrentPrivateBytes_ToString = retObjectCurrentPrivateBytes == null ? "null" : retObjectCurrentPrivateBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCurrentPrivateBytesNumber = (java.lang.Number)retObjectCurrentPrivateBytes;
                 return retObjectCurrentPrivateBytesNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectCurrentPrivateBytes != null ? retObjectCurrentPrivateBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectCurrentPrivateBytes != null ? retObjectCurrentPrivateBytes.getClass() : "null", retObjectCurrentPrivateBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -220,12 +221,13 @@ public class RecycleLimitInfo extends NetObject  {
             retObjectRecycleLimit = classInstance.Get("RecycleLimit");
             return (long)retObjectRecycleLimit;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRecycleLimit_ToString = retObjectRecycleLimit == null ? "null" : retObjectRecycleLimit.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRecycleLimitNumber = (java.lang.Number)retObjectRecycleLimit;
                 return retObjectRecycleLimitNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectRecycleLimit != null ? retObjectRecycleLimit.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectRecycleLimit != null ? retObjectRecycleLimit.getClass() : "null", retObjectRecycleLimit_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

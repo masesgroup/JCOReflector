@@ -181,12 +181,13 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
             retObjectTrim = classInstance.Invoke("Trim", percent);
             return (long)retObjectTrim;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTrim_ToString = retObjectTrim == null ? "null" : retObjectTrim.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTrimNumber = (java.lang.Number)retObjectTrim;
                 return retObjectTrimNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTrim != null ? retObjectTrim.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectTrim != null ? retObjectTrim.getClass() : "null", retObjectTrim_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -333,12 +334,13 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
             retObjectItemCount = classInstance.Get("ItemCount");
             return (long)retObjectItemCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectItemCount_ToString = retObjectItemCount == null ? "null" : retObjectItemCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectItemCountNumber = (java.lang.Number)retObjectItemCount;
                 return retObjectItemCountNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectItemCount != null ? retObjectItemCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectItemCount != null ? retObjectItemCount.getClass() : "null", retObjectItemCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -353,12 +355,13 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
             retObjectSizeInBytes = classInstance.Get("SizeInBytes");
             return (long)retObjectSizeInBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSizeInBytes_ToString = retObjectSizeInBytes == null ? "null" : retObjectSizeInBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSizeInBytesNumber = (java.lang.Number)retObjectSizeInBytes;
                 return retObjectSizeInBytesNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectSizeInBytes != null ? retObjectSizeInBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSizeInBytes != null ? retObjectSizeInBytes.getClass() : "null", retObjectSizeInBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

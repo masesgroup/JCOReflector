@@ -236,12 +236,13 @@ public class RemotingClientProxy extends Component  {
             retObjectProxyPort = classInstance.Get("ProxyPort");
             return (int)retObjectProxyPort;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectProxyPort_ToString = retObjectProxyPort == null ? "null" : retObjectProxyPort.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectProxyPortNumber = (java.lang.Number)retObjectProxyPort;
                 return retObjectProxyPortNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectProxyPort != null ? retObjectProxyPort.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectProxyPort != null ? retObjectProxyPort.getClass() : "null", retObjectProxyPort_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -266,12 +267,13 @@ public class RemotingClientProxy extends Component  {
             retObjectTimeout = classInstance.Get("Timeout");
             return (int)retObjectTimeout;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTimeout_ToString = retObjectTimeout == null ? "null" : retObjectTimeout.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTimeoutNumber = (java.lang.Number)retObjectTimeout;
                 return retObjectTimeoutNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTimeout != null ? retObjectTimeout.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTimeout != null ? retObjectTimeout.getClass() : "null", retObjectTimeout_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

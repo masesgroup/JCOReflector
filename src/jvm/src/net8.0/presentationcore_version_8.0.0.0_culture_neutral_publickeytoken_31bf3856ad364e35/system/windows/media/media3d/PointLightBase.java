@@ -196,12 +196,13 @@ public class PointLightBase extends Light  {
             retObjectConstantAttenuation = classInstance.Get("ConstantAttenuation");
             return (double)retObjectConstantAttenuation;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConstantAttenuation_ToString = retObjectConstantAttenuation == null ? "null" : retObjectConstantAttenuation.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectConstantAttenuationNumber = (java.lang.Number)retObjectConstantAttenuation;
                 return retObjectConstantAttenuationNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectConstantAttenuation != null ? retObjectConstantAttenuation.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectConstantAttenuation != null ? retObjectConstantAttenuation.getClass() : "null", retObjectConstantAttenuation_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -226,12 +227,13 @@ public class PointLightBase extends Light  {
             retObjectLinearAttenuation = classInstance.Get("LinearAttenuation");
             return (double)retObjectLinearAttenuation;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLinearAttenuation_ToString = retObjectLinearAttenuation == null ? "null" : retObjectLinearAttenuation.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLinearAttenuationNumber = (java.lang.Number)retObjectLinearAttenuation;
                 return retObjectLinearAttenuationNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectLinearAttenuation != null ? retObjectLinearAttenuation.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLinearAttenuation != null ? retObjectLinearAttenuation.getClass() : "null", retObjectLinearAttenuation_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -256,12 +258,13 @@ public class PointLightBase extends Light  {
             retObjectQuadraticAttenuation = classInstance.Get("QuadraticAttenuation");
             return (double)retObjectQuadraticAttenuation;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectQuadraticAttenuation_ToString = retObjectQuadraticAttenuation == null ? "null" : retObjectQuadraticAttenuation.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectQuadraticAttenuationNumber = (java.lang.Number)retObjectQuadraticAttenuation;
                 return retObjectQuadraticAttenuationNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectQuadraticAttenuation != null ? retObjectQuadraticAttenuation.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectQuadraticAttenuation != null ? retObjectQuadraticAttenuation.getClass() : "null", retObjectQuadraticAttenuation_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -286,12 +289,13 @@ public class PointLightBase extends Light  {
             retObjectRange = classInstance.Get("Range");
             return (double)retObjectRange;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRange_ToString = retObjectRange == null ? "null" : retObjectRange.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRangeNumber = (java.lang.Number)retObjectRange;
                 return retObjectRangeNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectRange != null ? retObjectRange.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRange != null ? retObjectRange.getClass() : "null", retObjectRange_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

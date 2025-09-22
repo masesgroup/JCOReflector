@@ -204,12 +204,13 @@ public class BevelBitmapEffect extends BitmapEffect  {
             retObjectBevelWidth = classInstance.Get("BevelWidth");
             return (double)retObjectBevelWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBevelWidth_ToString = retObjectBevelWidth == null ? "null" : retObjectBevelWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBevelWidthNumber = (java.lang.Number)retObjectBevelWidth;
                 return retObjectBevelWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectBevelWidth != null ? retObjectBevelWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBevelWidth != null ? retObjectBevelWidth.getClass() : "null", retObjectBevelWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -234,12 +235,13 @@ public class BevelBitmapEffect extends BitmapEffect  {
             retObjectLightAngle = classInstance.Get("LightAngle");
             return (double)retObjectLightAngle;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLightAngle_ToString = retObjectLightAngle == null ? "null" : retObjectLightAngle.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLightAngleNumber = (java.lang.Number)retObjectLightAngle;
                 return retObjectLightAngleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectLightAngle != null ? retObjectLightAngle.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLightAngle != null ? retObjectLightAngle.getClass() : "null", retObjectLightAngle_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -264,12 +266,13 @@ public class BevelBitmapEffect extends BitmapEffect  {
             retObjectRelief = classInstance.Get("Relief");
             return (double)retObjectRelief;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRelief_ToString = retObjectRelief == null ? "null" : retObjectRelief.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReliefNumber = (java.lang.Number)retObjectRelief;
                 return retObjectReliefNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectRelief != null ? retObjectRelief.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRelief != null ? retObjectRelief.getClass() : "null", retObjectRelief_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -294,12 +297,13 @@ public class BevelBitmapEffect extends BitmapEffect  {
             retObjectSmoothness = classInstance.Get("Smoothness");
             return (double)retObjectSmoothness;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSmoothness_ToString = retObjectSmoothness == null ? "null" : retObjectSmoothness.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSmoothnessNumber = (java.lang.Number)retObjectSmoothness;
                 return retObjectSmoothnessNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectSmoothness != null ? retObjectSmoothness.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSmoothness != null ? retObjectSmoothness.getClass() : "null", retObjectSmoothness_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

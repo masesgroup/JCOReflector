@@ -290,12 +290,13 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
             retObjectBytesTransferred = classInstance.Get("BytesTransferred");
             return (int)retObjectBytesTransferred;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBytesTransferred_ToString = retObjectBytesTransferred == null ? "null" : retObjectBytesTransferred.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBytesTransferredNumber = (java.lang.Number)retObjectBytesTransferred;
                 return retObjectBytesTransferredNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBytesTransferred != null ? retObjectBytesTransferred.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBytesTransferred != null ? retObjectBytesTransferred.getClass() : "null", retObjectBytesTransferred_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -310,12 +311,13 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
             retObjectCount = classInstance.Get("Count");
             return (int)retObjectCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
                 return retObjectCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -330,12 +332,13 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
             retObjectOffset = classInstance.Get("Offset");
             return (int)retObjectOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffset_ToString = retObjectOffset == null ? "null" : retObjectOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOffsetNumber = (java.lang.Number)retObjectOffset;
                 return retObjectOffsetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null", retObjectOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -350,12 +353,13 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
             retObjectSendPacketsSendSize = classInstance.Get("SendPacketsSendSize");
             return (int)retObjectSendPacketsSendSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSendPacketsSendSize_ToString = retObjectSendPacketsSendSize == null ? "null" : retObjectSendPacketsSendSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSendPacketsSendSizeNumber = (java.lang.Number)retObjectSendPacketsSendSize;
                 return retObjectSendPacketsSendSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSendPacketsSendSize != null ? retObjectSendPacketsSendSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendPacketsSendSize != null ? retObjectSendPacketsSendSize.getClass() : "null", retObjectSendPacketsSendSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

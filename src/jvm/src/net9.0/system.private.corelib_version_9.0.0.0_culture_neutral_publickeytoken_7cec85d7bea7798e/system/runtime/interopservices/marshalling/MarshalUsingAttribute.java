@@ -182,12 +182,13 @@ public class MarshalUsingAttribute extends Attribute  {
             retObjectConstantElementCount = classInstance.Get("ConstantElementCount");
             return (int)retObjectConstantElementCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConstantElementCount_ToString = retObjectConstantElementCount == null ? "null" : retObjectConstantElementCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectConstantElementCountNumber = (java.lang.Number)retObjectConstantElementCount;
                 return retObjectConstantElementCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectConstantElementCount != null ? retObjectConstantElementCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectConstantElementCount != null ? retObjectConstantElementCount.getClass() : "null", retObjectConstantElementCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -212,12 +213,13 @@ public class MarshalUsingAttribute extends Attribute  {
             retObjectElementIndirectionDepth = classInstance.Get("ElementIndirectionDepth");
             return (int)retObjectElementIndirectionDepth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectElementIndirectionDepth_ToString = retObjectElementIndirectionDepth == null ? "null" : retObjectElementIndirectionDepth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectElementIndirectionDepthNumber = (java.lang.Number)retObjectElementIndirectionDepth;
                 return retObjectElementIndirectionDepthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectElementIndirectionDepth != null ? retObjectElementIndirectionDepth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectElementIndirectionDepth != null ? retObjectElementIndirectionDepth.getClass() : "null", retObjectElementIndirectionDepth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

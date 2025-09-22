@@ -167,12 +167,13 @@ public class CodeViewDebugDirectoryData extends ValueType  {
             retObjectAge = classInstance.Get("Age");
             return (int)retObjectAge;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAge_ToString = retObjectAge == null ? "null" : retObjectAge.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAgeNumber = (java.lang.Number)retObjectAge;
                 return retObjectAgeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAge != null ? retObjectAge.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAge != null ? retObjectAge.getClass() : "null", retObjectAge_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

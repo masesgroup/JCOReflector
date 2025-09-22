@@ -225,12 +225,13 @@ public class OutputCacheProfile extends ConfigurationElement  {
             retObjectDuration = classInstance.Get("Duration");
             return (int)retObjectDuration;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDuration_ToString = retObjectDuration == null ? "null" : retObjectDuration.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDurationNumber = (java.lang.Number)retObjectDuration;
                 return retObjectDurationNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDuration != null ? retObjectDuration.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDuration != null ? retObjectDuration.getClass() : "null", retObjectDuration_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

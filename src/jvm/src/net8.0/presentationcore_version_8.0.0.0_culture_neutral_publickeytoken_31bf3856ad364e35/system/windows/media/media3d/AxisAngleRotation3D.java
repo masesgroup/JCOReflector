@@ -214,12 +214,13 @@ public class AxisAngleRotation3D extends Rotation3D  {
             retObjectAngle = classInstance.Get("Angle");
             return (double)retObjectAngle;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAngle_ToString = retObjectAngle == null ? "null" : retObjectAngle.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAngleNumber = (java.lang.Number)retObjectAngle;
                 return retObjectAngleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectAngle != null ? retObjectAngle.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectAngle != null ? retObjectAngle.getClass() : "null", retObjectAngle_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

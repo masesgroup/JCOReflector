@@ -331,12 +331,13 @@ public class EventSchemaTraceListener extends TextWriterTraceListener  {
             retObjectBufferSize = classInstance.Get("BufferSize");
             return (int)retObjectBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBufferSize_ToString = retObjectBufferSize == null ? "null" : retObjectBufferSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBufferSizeNumber = (java.lang.Number)retObjectBufferSize;
                 return retObjectBufferSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBufferSize != null ? retObjectBufferSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBufferSize != null ? retObjectBufferSize.getClass() : "null", retObjectBufferSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -351,12 +352,13 @@ public class EventSchemaTraceListener extends TextWriterTraceListener  {
             retObjectMaximumNumberOfFiles = classInstance.Get("MaximumNumberOfFiles");
             return (int)retObjectMaximumNumberOfFiles;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumNumberOfFiles_ToString = retObjectMaximumNumberOfFiles == null ? "null" : retObjectMaximumNumberOfFiles.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumNumberOfFilesNumber = (java.lang.Number)retObjectMaximumNumberOfFiles;
                 return retObjectMaximumNumberOfFilesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumNumberOfFiles != null ? retObjectMaximumNumberOfFiles.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumNumberOfFiles != null ? retObjectMaximumNumberOfFiles.getClass() : "null", retObjectMaximumNumberOfFiles_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -371,12 +373,13 @@ public class EventSchemaTraceListener extends TextWriterTraceListener  {
             retObjectMaximumFileSize = classInstance.Get("MaximumFileSize");
             return (long)retObjectMaximumFileSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumFileSize_ToString = retObjectMaximumFileSize == null ? "null" : retObjectMaximumFileSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumFileSizeNumber = (java.lang.Number)retObjectMaximumFileSize;
                 return retObjectMaximumFileSizeNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMaximumFileSize != null ? retObjectMaximumFileSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaximumFileSize != null ? retObjectMaximumFileSize.getClass() : "null", retObjectMaximumFileSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

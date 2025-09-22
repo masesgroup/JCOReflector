@@ -215,12 +215,13 @@ public class SpecularMaterial extends Material  {
             retObjectSpecularPower = classInstance.Get("SpecularPower");
             return (double)retObjectSpecularPower;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSpecularPower_ToString = retObjectSpecularPower == null ? "null" : retObjectSpecularPower.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSpecularPowerNumber = (java.lang.Number)retObjectSpecularPower;
                 return retObjectSpecularPowerNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectSpecularPower != null ? retObjectSpecularPower.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSpecularPower != null ? retObjectSpecularPower.getClass() : "null", retObjectSpecularPower_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

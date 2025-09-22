@@ -242,12 +242,13 @@ public class ConfigurationErrorsException extends ConfigurationException {
             retObjectGetLineNumber = classType.Invoke("GetLineNumber", node == null ? null : node.getJCOInstance());
             return (int)retObjectGetLineNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLineNumber_ToString = retObjectGetLineNumber == null ? "null" : retObjectGetLineNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetLineNumberNumber = (java.lang.Number)retObjectGetLineNumber;
                 return retObjectGetLineNumberNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetLineNumber != null ? retObjectGetLineNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetLineNumber != null ? retObjectGetLineNumber.getClass() : "null", retObjectGetLineNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -262,12 +263,13 @@ public class ConfigurationErrorsException extends ConfigurationException {
             retObjectGetLineNumber = classType.Invoke("GetLineNumber", reader == null ? null : reader.getJCOInstance());
             return (int)retObjectGetLineNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLineNumber_ToString = retObjectGetLineNumber == null ? "null" : retObjectGetLineNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetLineNumberNumber = (java.lang.Number)retObjectGetLineNumber;
                 return retObjectGetLineNumberNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetLineNumber != null ? retObjectGetLineNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetLineNumber != null ? retObjectGetLineNumber.getClass() : "null", retObjectGetLineNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -191,12 +191,13 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
             retObjectNodeId = classInstance.Get("NodeId");
             return (int)retObjectNodeId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNodeId_ToString = retObjectNodeId == null ? "null" : retObjectNodeId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNodeIdNumber = (java.lang.Number)retObjectNodeId;
                 return retObjectNodeIdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNodeId != null ? retObjectNodeId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNodeId != null ? retObjectNodeId.getClass() : "null", retObjectNodeId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

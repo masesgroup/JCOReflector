@@ -169,12 +169,13 @@ public class Console extends NetObject  {
             retObjectRead = classType.Invoke("Read");
             return (int)retObjectRead;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRead_ToString = retObjectRead == null ? "null" : retObjectRead.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
                 return retObjectReadNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null", retObjectRead_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -979,12 +980,13 @@ public class Console extends NetObject  {
             retObjectBufferHeight = classType.Get("BufferHeight");
             return (int)retObjectBufferHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBufferHeight_ToString = retObjectBufferHeight == null ? "null" : retObjectBufferHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBufferHeightNumber = (java.lang.Number)retObjectBufferHeight;
                 return retObjectBufferHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBufferHeight != null ? retObjectBufferHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBufferHeight != null ? retObjectBufferHeight.getClass() : "null", retObjectBufferHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1009,12 +1011,13 @@ public class Console extends NetObject  {
             retObjectBufferWidth = classType.Get("BufferWidth");
             return (int)retObjectBufferWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBufferWidth_ToString = retObjectBufferWidth == null ? "null" : retObjectBufferWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBufferWidthNumber = (java.lang.Number)retObjectBufferWidth;
                 return retObjectBufferWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBufferWidth != null ? retObjectBufferWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBufferWidth != null ? retObjectBufferWidth.getClass() : "null", retObjectBufferWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1039,12 +1042,13 @@ public class Console extends NetObject  {
             retObjectCursorLeft = classType.Get("CursorLeft");
             return (int)retObjectCursorLeft;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCursorLeft_ToString = retObjectCursorLeft == null ? "null" : retObjectCursorLeft.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCursorLeftNumber = (java.lang.Number)retObjectCursorLeft;
                 return retObjectCursorLeftNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCursorLeft != null ? retObjectCursorLeft.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCursorLeft != null ? retObjectCursorLeft.getClass() : "null", retObjectCursorLeft_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1069,12 +1073,13 @@ public class Console extends NetObject  {
             retObjectCursorSize = classType.Get("CursorSize");
             return (int)retObjectCursorSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCursorSize_ToString = retObjectCursorSize == null ? "null" : retObjectCursorSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCursorSizeNumber = (java.lang.Number)retObjectCursorSize;
                 return retObjectCursorSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCursorSize != null ? retObjectCursorSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCursorSize != null ? retObjectCursorSize.getClass() : "null", retObjectCursorSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1099,12 +1104,13 @@ public class Console extends NetObject  {
             retObjectCursorTop = classType.Get("CursorTop");
             return (int)retObjectCursorTop;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCursorTop_ToString = retObjectCursorTop == null ? "null" : retObjectCursorTop.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCursorTopNumber = (java.lang.Number)retObjectCursorTop;
                 return retObjectCursorTopNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCursorTop != null ? retObjectCursorTop.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCursorTop != null ? retObjectCursorTop.getClass() : "null", retObjectCursorTop_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1129,12 +1135,13 @@ public class Console extends NetObject  {
             retObjectLargestWindowHeight = classType.Get("LargestWindowHeight");
             return (int)retObjectLargestWindowHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLargestWindowHeight_ToString = retObjectLargestWindowHeight == null ? "null" : retObjectLargestWindowHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLargestWindowHeightNumber = (java.lang.Number)retObjectLargestWindowHeight;
                 return retObjectLargestWindowHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLargestWindowHeight != null ? retObjectLargestWindowHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLargestWindowHeight != null ? retObjectLargestWindowHeight.getClass() : "null", retObjectLargestWindowHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1149,12 +1156,13 @@ public class Console extends NetObject  {
             retObjectLargestWindowWidth = classType.Get("LargestWindowWidth");
             return (int)retObjectLargestWindowWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLargestWindowWidth_ToString = retObjectLargestWindowWidth == null ? "null" : retObjectLargestWindowWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLargestWindowWidthNumber = (java.lang.Number)retObjectLargestWindowWidth;
                 return retObjectLargestWindowWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLargestWindowWidth != null ? retObjectLargestWindowWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLargestWindowWidth != null ? retObjectLargestWindowWidth.getClass() : "null", retObjectLargestWindowWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1169,12 +1177,13 @@ public class Console extends NetObject  {
             retObjectWindowHeight = classType.Get("WindowHeight");
             return (int)retObjectWindowHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWindowHeight_ToString = retObjectWindowHeight == null ? "null" : retObjectWindowHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWindowHeightNumber = (java.lang.Number)retObjectWindowHeight;
                 return retObjectWindowHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWindowHeight != null ? retObjectWindowHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWindowHeight != null ? retObjectWindowHeight.getClass() : "null", retObjectWindowHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1199,12 +1208,13 @@ public class Console extends NetObject  {
             retObjectWindowLeft = classType.Get("WindowLeft");
             return (int)retObjectWindowLeft;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWindowLeft_ToString = retObjectWindowLeft == null ? "null" : retObjectWindowLeft.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWindowLeftNumber = (java.lang.Number)retObjectWindowLeft;
                 return retObjectWindowLeftNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWindowLeft != null ? retObjectWindowLeft.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWindowLeft != null ? retObjectWindowLeft.getClass() : "null", retObjectWindowLeft_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1229,12 +1239,13 @@ public class Console extends NetObject  {
             retObjectWindowTop = classType.Get("WindowTop");
             return (int)retObjectWindowTop;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWindowTop_ToString = retObjectWindowTop == null ? "null" : retObjectWindowTop.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWindowTopNumber = (java.lang.Number)retObjectWindowTop;
                 return retObjectWindowTopNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWindowTop != null ? retObjectWindowTop.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWindowTop != null ? retObjectWindowTop.getClass() : "null", retObjectWindowTop_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1259,12 +1270,13 @@ public class Console extends NetObject  {
             retObjectWindowWidth = classType.Get("WindowWidth");
             return (int)retObjectWindowWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWindowWidth_ToString = retObjectWindowWidth == null ? "null" : retObjectWindowWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWindowWidthNumber = (java.lang.Number)retObjectWindowWidth;
                 return retObjectWindowWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWindowWidth != null ? retObjectWindowWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWindowWidth != null ? retObjectWindowWidth.getClass() : "null", retObjectWindowWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

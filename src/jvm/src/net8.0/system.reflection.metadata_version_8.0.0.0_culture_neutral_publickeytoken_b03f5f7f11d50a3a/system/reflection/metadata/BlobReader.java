@@ -218,12 +218,13 @@ public class BlobReader extends ValueType  {
             retObjectReadByte = classInstance.Invoke("ReadByte");
             return (byte)retObjectReadByte;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadByte_ToString = retObjectReadByte == null ? "null" : retObjectReadByte.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadByteNumber = (java.lang.Number)retObjectReadByte;
                 return retObjectReadByteNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectReadByte != null ? retObjectReadByte.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectReadByte != null ? retObjectReadByte.getClass() : "null", retObjectReadByte_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -275,12 +276,13 @@ public class BlobReader extends ValueType  {
             retObjectReadDouble = classInstance.Invoke("ReadDouble");
             return (double)retObjectReadDouble;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadDouble_ToString = retObjectReadDouble == null ? "null" : retObjectReadDouble.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadDoubleNumber = (java.lang.Number)retObjectReadDouble;
                 return retObjectReadDoubleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectReadDouble != null ? retObjectReadDouble.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectReadDouble != null ? retObjectReadDouble.getClass() : "null", retObjectReadDouble_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -295,12 +297,13 @@ public class BlobReader extends ValueType  {
             retObjectReadInt16 = classInstance.Invoke("ReadInt16");
             return (short)retObjectReadInt16;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadInt16_ToString = retObjectReadInt16 == null ? "null" : retObjectReadInt16.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadInt16Number = (java.lang.Number)retObjectReadInt16;
                 return retObjectReadInt16Number.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectReadInt16 != null ? retObjectReadInt16.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectReadInt16 != null ? retObjectReadInt16.getClass() : "null", retObjectReadInt16_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -315,12 +318,13 @@ public class BlobReader extends ValueType  {
             retObjectIndexOf = classInstance.Invoke("IndexOf", value);
             return (int)retObjectIndexOf;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
                 return retObjectIndexOfNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -335,12 +339,13 @@ public class BlobReader extends ValueType  {
             retObjectReadCompressedInteger = classInstance.Invoke("ReadCompressedInteger");
             return (int)retObjectReadCompressedInteger;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadCompressedInteger_ToString = retObjectReadCompressedInteger == null ? "null" : retObjectReadCompressedInteger.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadCompressedIntegerNumber = (java.lang.Number)retObjectReadCompressedInteger;
                 return retObjectReadCompressedIntegerNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadCompressedInteger != null ? retObjectReadCompressedInteger.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadCompressedInteger != null ? retObjectReadCompressedInteger.getClass() : "null", retObjectReadCompressedInteger_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -355,12 +360,13 @@ public class BlobReader extends ValueType  {
             retObjectReadCompressedSignedInteger = classInstance.Invoke("ReadCompressedSignedInteger");
             return (int)retObjectReadCompressedSignedInteger;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadCompressedSignedInteger_ToString = retObjectReadCompressedSignedInteger == null ? "null" : retObjectReadCompressedSignedInteger.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadCompressedSignedIntegerNumber = (java.lang.Number)retObjectReadCompressedSignedInteger;
                 return retObjectReadCompressedSignedIntegerNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadCompressedSignedInteger != null ? retObjectReadCompressedSignedInteger.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadCompressedSignedInteger != null ? retObjectReadCompressedSignedInteger.getClass() : "null", retObjectReadCompressedSignedInteger_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -375,12 +381,13 @@ public class BlobReader extends ValueType  {
             retObjectReadInt32 = classInstance.Invoke("ReadInt32");
             return (int)retObjectReadInt32;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadInt32_ToString = retObjectReadInt32 == null ? "null" : retObjectReadInt32.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadInt32Number = (java.lang.Number)retObjectReadInt32;
                 return retObjectReadInt32Number.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadInt32 != null ? retObjectReadInt32.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadInt32 != null ? retObjectReadInt32.getClass() : "null", retObjectReadInt32_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -395,12 +402,13 @@ public class BlobReader extends ValueType  {
             retObjectReadInt64 = classInstance.Invoke("ReadInt64");
             return (long)retObjectReadInt64;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadInt64_ToString = retObjectReadInt64 == null ? "null" : retObjectReadInt64.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadInt64Number = (java.lang.Number)retObjectReadInt64;
                 return retObjectReadInt64Number.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectReadInt64 != null ? retObjectReadInt64.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectReadInt64 != null ? retObjectReadInt64.getClass() : "null", retObjectReadInt64_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -711,12 +719,13 @@ public class BlobReader extends ValueType  {
             retObjectLength = classInstance.Get("Length");
             return (int)retObjectLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLength_ToString = retObjectLength == null ? "null" : retObjectLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLengthNumber = (java.lang.Number)retObjectLength;
                 return retObjectLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null", retObjectLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -731,12 +740,13 @@ public class BlobReader extends ValueType  {
             retObjectOffset = classInstance.Get("Offset");
             return (int)retObjectOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffset_ToString = retObjectOffset == null ? "null" : retObjectOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOffsetNumber = (java.lang.Number)retObjectOffset;
                 return retObjectOffsetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null", retObjectOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -761,12 +771,13 @@ public class BlobReader extends ValueType  {
             retObjectRemainingBytes = classInstance.Get("RemainingBytes");
             return (int)retObjectRemainingBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRemainingBytes_ToString = retObjectRemainingBytes == null ? "null" : retObjectRemainingBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRemainingBytesNumber = (java.lang.Number)retObjectRemainingBytes;
                 return retObjectRemainingBytesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRemainingBytes != null ? retObjectRemainingBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRemainingBytes != null ? retObjectRemainingBytes.getClass() : "null", retObjectRemainingBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

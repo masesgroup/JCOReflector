@@ -244,12 +244,13 @@ public class ReliableSessionElement extends BindingElementExtensionElement  {
             retObjectMaxPendingChannels = classInstance.Get("MaxPendingChannels");
             return (int)retObjectMaxPendingChannels;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxPendingChannels_ToString = retObjectMaxPendingChannels == null ? "null" : retObjectMaxPendingChannels.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxPendingChannelsNumber = (java.lang.Number)retObjectMaxPendingChannels;
                 return retObjectMaxPendingChannelsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxPendingChannels != null ? retObjectMaxPendingChannels.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxPendingChannels != null ? retObjectMaxPendingChannels.getClass() : "null", retObjectMaxPendingChannels_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -274,12 +275,13 @@ public class ReliableSessionElement extends BindingElementExtensionElement  {
             retObjectMaxRetryCount = classInstance.Get("MaxRetryCount");
             return (int)retObjectMaxRetryCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxRetryCount_ToString = retObjectMaxRetryCount == null ? "null" : retObjectMaxRetryCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxRetryCountNumber = (java.lang.Number)retObjectMaxRetryCount;
                 return retObjectMaxRetryCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxRetryCount != null ? retObjectMaxRetryCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxRetryCount != null ? retObjectMaxRetryCount.getClass() : "null", retObjectMaxRetryCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -304,12 +306,13 @@ public class ReliableSessionElement extends BindingElementExtensionElement  {
             retObjectMaxTransferWindowSize = classInstance.Get("MaxTransferWindowSize");
             return (int)retObjectMaxTransferWindowSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxTransferWindowSize_ToString = retObjectMaxTransferWindowSize == null ? "null" : retObjectMaxTransferWindowSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxTransferWindowSizeNumber = (java.lang.Number)retObjectMaxTransferWindowSize;
                 return retObjectMaxTransferWindowSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxTransferWindowSize != null ? retObjectMaxTransferWindowSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxTransferWindowSize != null ? retObjectMaxTransferWindowSize.getClass() : "null", retObjectMaxTransferWindowSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

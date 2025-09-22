@@ -558,12 +558,13 @@ public class SqlConnection extends DbConnection implements system.ICloneable {
             retObjectPacketSize = classInstance.Get("PacketSize");
             return (int)retObjectPacketSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPacketSize_ToString = retObjectPacketSize == null ? "null" : retObjectPacketSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPacketSizeNumber = (java.lang.Number)retObjectPacketSize;
                 return retObjectPacketSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPacketSize != null ? retObjectPacketSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPacketSize != null ? retObjectPacketSize.getClass() : "null", retObjectPacketSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

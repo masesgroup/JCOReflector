@@ -220,12 +220,13 @@ public class ApplicationQueuingAttribute extends Attribute  {
             retObjectMaxListenerThreads = classInstance.Get("MaxListenerThreads");
             return (int)retObjectMaxListenerThreads;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxListenerThreads_ToString = retObjectMaxListenerThreads == null ? "null" : retObjectMaxListenerThreads.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxListenerThreadsNumber = (java.lang.Number)retObjectMaxListenerThreads;
                 return retObjectMaxListenerThreadsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxListenerThreads != null ? retObjectMaxListenerThreads.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxListenerThreads != null ? retObjectMaxListenerThreads.getClass() : "null", retObjectMaxListenerThreads_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

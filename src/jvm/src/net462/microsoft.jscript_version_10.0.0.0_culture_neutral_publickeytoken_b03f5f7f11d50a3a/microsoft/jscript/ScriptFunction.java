@@ -228,12 +228,13 @@ public class ScriptFunction extends JSObject  {
             retObjectlength = classInstance.Get("length");
             return (int)retObjectlength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectlength_ToString = retObjectlength == null ? "null" : retObjectlength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectlengthNumber = (java.lang.Number)retObjectlength;
                 return retObjectlengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectlength != null ? retObjectlength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectlength != null ? retObjectlength.getClass() : "null", retObjectlength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

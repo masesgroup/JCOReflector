@@ -1001,12 +1001,13 @@ public class MetadataReader extends NetObject  {
             retObjectMetadataLength = classInstance.Get("MetadataLength");
             return (int)retObjectMetadataLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMetadataLength_ToString = retObjectMetadataLength == null ? "null" : retObjectMetadataLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMetadataLengthNumber = (java.lang.Number)retObjectMetadataLength;
                 return retObjectMetadataLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMetadataLength != null ? retObjectMetadataLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMetadataLength != null ? retObjectMetadataLength.getClass() : "null", retObjectMetadataLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

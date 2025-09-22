@@ -176,12 +176,13 @@ public class ManipulationDelta extends NetObject  {
             retObjectRotation = classInstance.Get("Rotation");
             return (double)retObjectRotation;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRotation_ToString = retObjectRotation == null ? "null" : retObjectRotation.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRotationNumber = (java.lang.Number)retObjectRotation;
                 return retObjectRotationNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectRotation != null ? retObjectRotation.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRotation != null ? retObjectRotation.getClass() : "null", retObjectRotation_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -223,12 +223,13 @@ public class ObjectContext extends NetObject implements AutoCloseable {
             retObjectExecuteFunction = classInstance.Invoke("ExecuteFunction", functionName, toObjectFromArray(parameters));
             return (int)retObjectExecuteFunction;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExecuteFunction_ToString = retObjectExecuteFunction == null ? "null" : retObjectExecuteFunction.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExecuteFunctionNumber = (java.lang.Number)retObjectExecuteFunction;
                 return retObjectExecuteFunctionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteFunction != null ? retObjectExecuteFunction.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExecuteFunction != null ? retObjectExecuteFunction.getClass() : "null", retObjectExecuteFunction_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -243,12 +244,13 @@ public class ObjectContext extends NetObject implements AutoCloseable {
             retObjectExecuteStoreCommand = classInstance.Invoke("ExecuteStoreCommand", commandText, toObjectFromArray(parameters));
             return (int)retObjectExecuteStoreCommand;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExecuteStoreCommand_ToString = retObjectExecuteStoreCommand == null ? "null" : retObjectExecuteStoreCommand.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExecuteStoreCommandNumber = (java.lang.Number)retObjectExecuteStoreCommand;
                 return retObjectExecuteStoreCommandNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteStoreCommand != null ? retObjectExecuteStoreCommand.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExecuteStoreCommand != null ? retObjectExecuteStoreCommand.getClass() : "null", retObjectExecuteStoreCommand_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -263,12 +265,13 @@ public class ObjectContext extends NetObject implements AutoCloseable {
             retObjectSaveChanges = classInstance.Invoke("SaveChanges");
             return (int)retObjectSaveChanges;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSaveChanges_ToString = retObjectSaveChanges == null ? "null" : retObjectSaveChanges.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSaveChangesNumber = (java.lang.Number)retObjectSaveChanges;
                 return retObjectSaveChangesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSaveChanges != null ? retObjectSaveChanges.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSaveChanges != null ? retObjectSaveChanges.getClass() : "null", retObjectSaveChanges_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -283,12 +286,13 @@ public class ObjectContext extends NetObject implements AutoCloseable {
             retObjectSaveChanges = classInstance.Invoke("SaveChanges", acceptChangesDuringSave);
             return (int)retObjectSaveChanges;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSaveChanges_ToString = retObjectSaveChanges == null ? "null" : retObjectSaveChanges.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSaveChangesNumber = (java.lang.Number)retObjectSaveChanges;
                 return retObjectSaveChangesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSaveChanges != null ? retObjectSaveChanges.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSaveChanges != null ? retObjectSaveChanges.getClass() : "null", retObjectSaveChanges_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -303,12 +307,13 @@ public class ObjectContext extends NetObject implements AutoCloseable {
             retObjectSaveChanges = classInstance.Invoke("SaveChanges", options == null ? null : options.getJCOInstance());
             return (int)retObjectSaveChanges;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSaveChanges_ToString = retObjectSaveChanges == null ? "null" : retObjectSaveChanges.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSaveChangesNumber = (java.lang.Number)retObjectSaveChanges;
                 return retObjectSaveChangesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSaveChanges != null ? retObjectSaveChanges.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSaveChanges != null ? retObjectSaveChanges.getClass() : "null", retObjectSaveChanges_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

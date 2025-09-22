@@ -191,12 +191,13 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
             retObjectCompareEndpoints = classInstance.Invoke("CompareEndpoints", endpoint == null ? null : endpoint.getJCOInstance(), targetRange == null ? null : targetRange.getJCOInstance(), targetEndpoint == null ? null : targetEndpoint.getJCOInstance());
             return (int)retObjectCompareEndpoints;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareEndpoints_ToString = retObjectCompareEndpoints == null ? "null" : retObjectCompareEndpoints.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareEndpointsNumber = (java.lang.Number)retObjectCompareEndpoints;
                 return retObjectCompareEndpointsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareEndpoints != null ? retObjectCompareEndpoints.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareEndpoints != null ? retObjectCompareEndpoints.getClass() : "null", retObjectCompareEndpoints_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -211,12 +212,13 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
             retObjectMove = classInstance.Invoke("Move", unit == null ? null : unit.getJCOInstance(), count);
             return (int)retObjectMove;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMove_ToString = retObjectMove == null ? "null" : retObjectMove.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMoveNumber = (java.lang.Number)retObjectMove;
                 return retObjectMoveNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMove != null ? retObjectMove.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMove != null ? retObjectMove.getClass() : "null", retObjectMove_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -231,12 +233,13 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
             retObjectMoveEndpointByUnit = classInstance.Invoke("MoveEndpointByUnit", endpoint == null ? null : endpoint.getJCOInstance(), unit == null ? null : unit.getJCOInstance(), count);
             return (int)retObjectMoveEndpointByUnit;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMoveEndpointByUnit_ToString = retObjectMoveEndpointByUnit == null ? "null" : retObjectMoveEndpointByUnit.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMoveEndpointByUnitNumber = (java.lang.Number)retObjectMoveEndpointByUnit;
                 return retObjectMoveEndpointByUnitNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMoveEndpointByUnit != null ? retObjectMoveEndpointByUnit.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMoveEndpointByUnit != null ? retObjectMoveEndpointByUnit.getClass() : "null", retObjectMoveEndpointByUnit_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

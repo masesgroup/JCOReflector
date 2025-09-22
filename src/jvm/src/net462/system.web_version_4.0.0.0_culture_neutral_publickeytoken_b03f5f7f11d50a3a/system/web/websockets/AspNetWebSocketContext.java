@@ -209,12 +209,13 @@ public class AspNetWebSocketContext extends WebSocketContext  {
             retObjectConnectionCount = classType.Get("ConnectionCount");
             return (int)retObjectConnectionCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConnectionCount_ToString = retObjectConnectionCount == null ? "null" : retObjectConnectionCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectConnectionCountNumber = (java.lang.Number)retObjectConnectionCount;
                 return retObjectConnectionCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectConnectionCount != null ? retObjectConnectionCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectConnectionCount != null ? retObjectConnectionCount.getClass() : "null", retObjectConnectionCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

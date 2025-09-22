@@ -215,12 +215,13 @@ public class PerspectiveCamera extends ProjectionCamera  {
             retObjectFieldOfView = classInstance.Get("FieldOfView");
             return (double)retObjectFieldOfView;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFieldOfView_ToString = retObjectFieldOfView == null ? "null" : retObjectFieldOfView.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFieldOfViewNumber = (java.lang.Number)retObjectFieldOfView;
                 return retObjectFieldOfViewNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectFieldOfView != null ? retObjectFieldOfView.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFieldOfView != null ? retObjectFieldOfView.getClass() : "null", retObjectFieldOfView_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

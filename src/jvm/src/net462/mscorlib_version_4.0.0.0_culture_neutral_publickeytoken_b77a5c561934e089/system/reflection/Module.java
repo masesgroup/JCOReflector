@@ -698,12 +698,13 @@ public class Module extends NetObject  {
             retObjectMDStreamVersion = classInstance.Get("MDStreamVersion");
             return (int)retObjectMDStreamVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMDStreamVersion_ToString = retObjectMDStreamVersion == null ? "null" : retObjectMDStreamVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMDStreamVersionNumber = (java.lang.Number)retObjectMDStreamVersion;
                 return retObjectMDStreamVersionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMDStreamVersion != null ? retObjectMDStreamVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMDStreamVersion != null ? retObjectMDStreamVersion.getClass() : "null", retObjectMDStreamVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -718,12 +719,13 @@ public class Module extends NetObject  {
             retObjectMetadataToken = classInstance.Get("MetadataToken");
             return (int)retObjectMetadataToken;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMetadataToken_ToString = retObjectMetadataToken == null ? "null" : retObjectMetadataToken.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMetadataTokenNumber = (java.lang.Number)retObjectMetadataToken;
                 return retObjectMetadataTokenNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMetadataToken != null ? retObjectMetadataToken.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMetadataToken != null ? retObjectMetadataToken.getClass() : "null", retObjectMetadataToken_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -222,12 +222,13 @@ public class WorkflowRuntimeSection extends ConfigurationSection  {
             retObjectWorkflowDefinitionCacheCapacity = classInstance.Get("WorkflowDefinitionCacheCapacity");
             return (int)retObjectWorkflowDefinitionCacheCapacity;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWorkflowDefinitionCacheCapacity_ToString = retObjectWorkflowDefinitionCacheCapacity == null ? "null" : retObjectWorkflowDefinitionCacheCapacity.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWorkflowDefinitionCacheCapacityNumber = (java.lang.Number)retObjectWorkflowDefinitionCacheCapacity;
                 return retObjectWorkflowDefinitionCacheCapacityNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWorkflowDefinitionCacheCapacity != null ? retObjectWorkflowDefinitionCacheCapacity.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWorkflowDefinitionCacheCapacity != null ? retObjectWorkflowDefinitionCacheCapacity.getClass() : "null", retObjectWorkflowDefinitionCacheCapacity_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

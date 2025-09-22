@@ -167,12 +167,13 @@ public class BinaryPrimitives extends NetObject  {
             retObjectReverseEndianness = classType.Invoke("ReverseEndianness", value);
             return (byte)retObjectReverseEndianness;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReverseEndianness_ToString = retObjectReverseEndianness == null ? "null" : retObjectReverseEndianness.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReverseEndiannessNumber = (java.lang.Number)retObjectReverseEndianness;
                 return retObjectReverseEndiannessNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectReverseEndianness != null ? retObjectReverseEndianness.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectReverseEndianness != null ? retObjectReverseEndianness.getClass() : "null", retObjectReverseEndianness_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -187,12 +188,13 @@ public class BinaryPrimitives extends NetObject  {
             retObjectReverseEndianness = classType.Invoke("ReverseEndianness", value);
             return (short)retObjectReverseEndianness;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReverseEndianness_ToString = retObjectReverseEndianness == null ? "null" : retObjectReverseEndianness.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReverseEndiannessNumber = (java.lang.Number)retObjectReverseEndianness;
                 return retObjectReverseEndiannessNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectReverseEndianness != null ? retObjectReverseEndianness.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectReverseEndianness != null ? retObjectReverseEndianness.getClass() : "null", retObjectReverseEndianness_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -207,12 +209,13 @@ public class BinaryPrimitives extends NetObject  {
             retObjectReverseEndianness = classType.Invoke("ReverseEndianness", value);
             return (int)retObjectReverseEndianness;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReverseEndianness_ToString = retObjectReverseEndianness == null ? "null" : retObjectReverseEndianness.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReverseEndiannessNumber = (java.lang.Number)retObjectReverseEndianness;
                 return retObjectReverseEndiannessNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReverseEndianness != null ? retObjectReverseEndianness.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReverseEndianness != null ? retObjectReverseEndianness.getClass() : "null", retObjectReverseEndianness_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -227,12 +230,13 @@ public class BinaryPrimitives extends NetObject  {
             retObjectReverseEndianness = classType.Invoke("ReverseEndianness", value);
             return (long)retObjectReverseEndianness;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReverseEndianness_ToString = retObjectReverseEndianness == null ? "null" : retObjectReverseEndianness.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReverseEndiannessNumber = (java.lang.Number)retObjectReverseEndianness;
                 return retObjectReverseEndiannessNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectReverseEndianness != null ? retObjectReverseEndianness.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectReverseEndianness != null ? retObjectReverseEndianness.getClass() : "null", retObjectReverseEndianness_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

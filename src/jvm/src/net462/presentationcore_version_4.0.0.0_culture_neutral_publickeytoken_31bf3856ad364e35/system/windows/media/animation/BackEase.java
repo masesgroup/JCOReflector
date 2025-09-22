@@ -172,12 +172,13 @@ public class BackEase extends EasingFunctionBase  {
             retObjectAmplitude = classInstance.Get("Amplitude");
             return (double)retObjectAmplitude;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAmplitude_ToString = retObjectAmplitude == null ? "null" : retObjectAmplitude.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAmplitudeNumber = (java.lang.Number)retObjectAmplitude;
                 return retObjectAmplitudeNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectAmplitude != null ? retObjectAmplitude.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectAmplitude != null ? retObjectAmplitude.getClass() : "null", retObjectAmplitude_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

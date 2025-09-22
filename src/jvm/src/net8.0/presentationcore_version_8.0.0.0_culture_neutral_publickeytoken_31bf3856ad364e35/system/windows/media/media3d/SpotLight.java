@@ -216,12 +216,13 @@ public class SpotLight extends PointLightBase  {
             retObjectInnerConeAngle = classInstance.Get("InnerConeAngle");
             return (double)retObjectInnerConeAngle;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInnerConeAngle_ToString = retObjectInnerConeAngle == null ? "null" : retObjectInnerConeAngle.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInnerConeAngleNumber = (java.lang.Number)retObjectInnerConeAngle;
                 return retObjectInnerConeAngleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectInnerConeAngle != null ? retObjectInnerConeAngle.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectInnerConeAngle != null ? retObjectInnerConeAngle.getClass() : "null", retObjectInnerConeAngle_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -246,12 +247,13 @@ public class SpotLight extends PointLightBase  {
             retObjectOuterConeAngle = classInstance.Get("OuterConeAngle");
             return (double)retObjectOuterConeAngle;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOuterConeAngle_ToString = retObjectOuterConeAngle == null ? "null" : retObjectOuterConeAngle.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOuterConeAngleNumber = (java.lang.Number)retObjectOuterConeAngle;
                 return retObjectOuterConeAngleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOuterConeAngle != null ? retObjectOuterConeAngle.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOuterConeAngle != null ? retObjectOuterConeAngle.getClass() : "null", retObjectOuterConeAngle_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

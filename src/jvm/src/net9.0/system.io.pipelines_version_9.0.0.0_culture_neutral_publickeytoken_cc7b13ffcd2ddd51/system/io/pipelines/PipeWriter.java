@@ -256,12 +256,13 @@ public class PipeWriter extends NetObject  {
             retObjectUnflushedBytes = classInstance.Get("UnflushedBytes");
             return (long)retObjectUnflushedBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUnflushedBytes_ToString = retObjectUnflushedBytes == null ? "null" : retObjectUnflushedBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectUnflushedBytesNumber = (java.lang.Number)retObjectUnflushedBytes;
                 return retObjectUnflushedBytesNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectUnflushedBytes != null ? retObjectUnflushedBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectUnflushedBytes != null ? retObjectUnflushedBytes.getClass() : "null", retObjectUnflushedBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -218,12 +218,13 @@ public class StackFrame extends NetObject  {
             retObjectGetFileColumnNumber = classInstance.Invoke("GetFileColumnNumber");
             return (int)retObjectGetFileColumnNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetFileColumnNumber_ToString = retObjectGetFileColumnNumber == null ? "null" : retObjectGetFileColumnNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetFileColumnNumberNumber = (java.lang.Number)retObjectGetFileColumnNumber;
                 return retObjectGetFileColumnNumberNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetFileColumnNumber != null ? retObjectGetFileColumnNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetFileColumnNumber != null ? retObjectGetFileColumnNumber.getClass() : "null", retObjectGetFileColumnNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -238,12 +239,13 @@ public class StackFrame extends NetObject  {
             retObjectGetFileLineNumber = classInstance.Invoke("GetFileLineNumber");
             return (int)retObjectGetFileLineNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetFileLineNumber_ToString = retObjectGetFileLineNumber == null ? "null" : retObjectGetFileLineNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetFileLineNumberNumber = (java.lang.Number)retObjectGetFileLineNumber;
                 return retObjectGetFileLineNumberNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetFileLineNumber != null ? retObjectGetFileLineNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetFileLineNumber != null ? retObjectGetFileLineNumber.getClass() : "null", retObjectGetFileLineNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -258,12 +260,13 @@ public class StackFrame extends NetObject  {
             retObjectGetILOffset = classInstance.Invoke("GetILOffset");
             return (int)retObjectGetILOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetILOffset_ToString = retObjectGetILOffset == null ? "null" : retObjectGetILOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetILOffsetNumber = (java.lang.Number)retObjectGetILOffset;
                 return retObjectGetILOffsetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetILOffset != null ? retObjectGetILOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetILOffset != null ? retObjectGetILOffset.getClass() : "null", retObjectGetILOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -278,12 +281,13 @@ public class StackFrame extends NetObject  {
             retObjectGetNativeOffset = classInstance.Invoke("GetNativeOffset");
             return (int)retObjectGetNativeOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetNativeOffset_ToString = retObjectGetNativeOffset == null ? "null" : retObjectGetNativeOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetNativeOffsetNumber = (java.lang.Number)retObjectGetNativeOffset;
                 return retObjectGetNativeOffsetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetNativeOffset != null ? retObjectGetNativeOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNativeOffset != null ? retObjectGetNativeOffset.getClass() : "null", retObjectGetNativeOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

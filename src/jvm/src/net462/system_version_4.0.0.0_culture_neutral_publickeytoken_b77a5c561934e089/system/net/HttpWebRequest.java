@@ -599,12 +599,13 @@ public class HttpWebRequest extends WebRequest  {
             retObjectContinueTimeout = classInstance.Get("ContinueTimeout");
             return (int)retObjectContinueTimeout;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectContinueTimeout_ToString = retObjectContinueTimeout == null ? "null" : retObjectContinueTimeout.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectContinueTimeoutNumber = (java.lang.Number)retObjectContinueTimeout;
                 return retObjectContinueTimeoutNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectContinueTimeout != null ? retObjectContinueTimeout.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectContinueTimeout != null ? retObjectContinueTimeout.getClass() : "null", retObjectContinueTimeout_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -629,12 +630,13 @@ public class HttpWebRequest extends WebRequest  {
             retObjectDefaultMaximumErrorResponseLength = classType.Get("DefaultMaximumErrorResponseLength");
             return (int)retObjectDefaultMaximumErrorResponseLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDefaultMaximumErrorResponseLength_ToString = retObjectDefaultMaximumErrorResponseLength == null ? "null" : retObjectDefaultMaximumErrorResponseLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDefaultMaximumErrorResponseLengthNumber = (java.lang.Number)retObjectDefaultMaximumErrorResponseLength;
                 return retObjectDefaultMaximumErrorResponseLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDefaultMaximumErrorResponseLength != null ? retObjectDefaultMaximumErrorResponseLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDefaultMaximumErrorResponseLength != null ? retObjectDefaultMaximumErrorResponseLength.getClass() : "null", retObjectDefaultMaximumErrorResponseLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -659,12 +661,13 @@ public class HttpWebRequest extends WebRequest  {
             retObjectDefaultMaximumResponseHeadersLength = classType.Get("DefaultMaximumResponseHeadersLength");
             return (int)retObjectDefaultMaximumResponseHeadersLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDefaultMaximumResponseHeadersLength_ToString = retObjectDefaultMaximumResponseHeadersLength == null ? "null" : retObjectDefaultMaximumResponseHeadersLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDefaultMaximumResponseHeadersLengthNumber = (java.lang.Number)retObjectDefaultMaximumResponseHeadersLength;
                 return retObjectDefaultMaximumResponseHeadersLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDefaultMaximumResponseHeadersLength != null ? retObjectDefaultMaximumResponseHeadersLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDefaultMaximumResponseHeadersLength != null ? retObjectDefaultMaximumResponseHeadersLength.getClass() : "null", retObjectDefaultMaximumResponseHeadersLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -689,12 +692,13 @@ public class HttpWebRequest extends WebRequest  {
             retObjectMaximumAutomaticRedirections = classInstance.Get("MaximumAutomaticRedirections");
             return (int)retObjectMaximumAutomaticRedirections;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumAutomaticRedirections_ToString = retObjectMaximumAutomaticRedirections == null ? "null" : retObjectMaximumAutomaticRedirections.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumAutomaticRedirectionsNumber = (java.lang.Number)retObjectMaximumAutomaticRedirections;
                 return retObjectMaximumAutomaticRedirectionsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumAutomaticRedirections != null ? retObjectMaximumAutomaticRedirections.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumAutomaticRedirections != null ? retObjectMaximumAutomaticRedirections.getClass() : "null", retObjectMaximumAutomaticRedirections_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -719,12 +723,13 @@ public class HttpWebRequest extends WebRequest  {
             retObjectMaximumResponseHeadersLength = classInstance.Get("MaximumResponseHeadersLength");
             return (int)retObjectMaximumResponseHeadersLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumResponseHeadersLength_ToString = retObjectMaximumResponseHeadersLength == null ? "null" : retObjectMaximumResponseHeadersLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumResponseHeadersLengthNumber = (java.lang.Number)retObjectMaximumResponseHeadersLength;
                 return retObjectMaximumResponseHeadersLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumResponseHeadersLength != null ? retObjectMaximumResponseHeadersLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumResponseHeadersLength != null ? retObjectMaximumResponseHeadersLength.getClass() : "null", retObjectMaximumResponseHeadersLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -749,12 +754,13 @@ public class HttpWebRequest extends WebRequest  {
             retObjectReadWriteTimeout = classInstance.Get("ReadWriteTimeout");
             return (int)retObjectReadWriteTimeout;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadWriteTimeout_ToString = retObjectReadWriteTimeout == null ? "null" : retObjectReadWriteTimeout.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadWriteTimeoutNumber = (java.lang.Number)retObjectReadWriteTimeout;
                 return retObjectReadWriteTimeoutNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadWriteTimeout != null ? retObjectReadWriteTimeout.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadWriteTimeout != null ? retObjectReadWriteTimeout.getClass() : "null", retObjectReadWriteTimeout_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

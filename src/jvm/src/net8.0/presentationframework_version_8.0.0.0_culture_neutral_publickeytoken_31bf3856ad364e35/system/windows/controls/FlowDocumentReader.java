@@ -494,12 +494,13 @@ public class FlowDocumentReader extends Control implements system.windows.markup
             retObjectMaxZoom = classInstance.Get("MaxZoom");
             return (double)retObjectMaxZoom;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxZoom_ToString = retObjectMaxZoom == null ? "null" : retObjectMaxZoom.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxZoomNumber = (java.lang.Number)retObjectMaxZoom;
                 return retObjectMaxZoomNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMaxZoom != null ? retObjectMaxZoom.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaxZoom != null ? retObjectMaxZoom.getClass() : "null", retObjectMaxZoom_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -524,12 +525,13 @@ public class FlowDocumentReader extends Control implements system.windows.markup
             retObjectMinZoom = classInstance.Get("MinZoom");
             return (double)retObjectMinZoom;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinZoom_ToString = retObjectMinZoom == null ? "null" : retObjectMinZoom.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinZoomNumber = (java.lang.Number)retObjectMinZoom;
                 return retObjectMinZoomNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMinZoom != null ? retObjectMinZoom.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinZoom != null ? retObjectMinZoom.getClass() : "null", retObjectMinZoom_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -554,12 +556,13 @@ public class FlowDocumentReader extends Control implements system.windows.markup
             retObjectSelectionOpacity = classInstance.Get("SelectionOpacity");
             return (double)retObjectSelectionOpacity;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectionOpacity_ToString = retObjectSelectionOpacity == null ? "null" : retObjectSelectionOpacity.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSelectionOpacityNumber = (java.lang.Number)retObjectSelectionOpacity;
                 return retObjectSelectionOpacityNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectSelectionOpacity != null ? retObjectSelectionOpacity.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSelectionOpacity != null ? retObjectSelectionOpacity.getClass() : "null", retObjectSelectionOpacity_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -584,12 +587,13 @@ public class FlowDocumentReader extends Control implements system.windows.markup
             retObjectZoom = classInstance.Get("Zoom");
             return (double)retObjectZoom;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectZoom_ToString = retObjectZoom == null ? "null" : retObjectZoom.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectZoomNumber = (java.lang.Number)retObjectZoom;
                 return retObjectZoomNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectZoom != null ? retObjectZoom.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectZoom != null ? retObjectZoom.getClass() : "null", retObjectZoom_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -614,12 +618,13 @@ public class FlowDocumentReader extends Control implements system.windows.markup
             retObjectZoomIncrement = classInstance.Get("ZoomIncrement");
             return (double)retObjectZoomIncrement;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectZoomIncrement_ToString = retObjectZoomIncrement == null ? "null" : retObjectZoomIncrement.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectZoomIncrementNumber = (java.lang.Number)retObjectZoomIncrement;
                 return retObjectZoomIncrementNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectZoomIncrement != null ? retObjectZoomIncrement.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectZoomIncrement != null ? retObjectZoomIncrement.getClass() : "null", retObjectZoomIncrement_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -644,12 +649,13 @@ public class FlowDocumentReader extends Control implements system.windows.markup
             retObjectPageCount = classInstance.Get("PageCount");
             return (int)retObjectPageCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageCount_ToString = retObjectPageCount == null ? "null" : retObjectPageCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPageCountNumber = (java.lang.Number)retObjectPageCount;
                 return retObjectPageCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageCount != null ? retObjectPageCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageCount != null ? retObjectPageCount.getClass() : "null", retObjectPageCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -664,12 +670,13 @@ public class FlowDocumentReader extends Control implements system.windows.markup
             retObjectPageNumber = classInstance.Get("PageNumber");
             return (int)retObjectPageNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageNumber_ToString = retObjectPageNumber == null ? "null" : retObjectPageNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPageNumberNumber = (java.lang.Number)retObjectPageNumber;
                 return retObjectPageNumberNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageNumber != null ? retObjectPageNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageNumber != null ? retObjectPageNumber.getClass() : "null", retObjectPageNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -221,12 +221,13 @@ public class HttpCapabilitiesDefaultProvider extends HttpCapabilitiesProvider  {
             retObjectUserAgentCacheKeyLength = classInstance.Get("UserAgentCacheKeyLength");
             return (int)retObjectUserAgentCacheKeyLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUserAgentCacheKeyLength_ToString = retObjectUserAgentCacheKeyLength == null ? "null" : retObjectUserAgentCacheKeyLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectUserAgentCacheKeyLengthNumber = (java.lang.Number)retObjectUserAgentCacheKeyLength;
                 return retObjectUserAgentCacheKeyLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectUserAgentCacheKeyLength != null ? retObjectUserAgentCacheKeyLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUserAgentCacheKeyLength != null ? retObjectUserAgentCacheKeyLength.getClass() : "null", retObjectUserAgentCacheKeyLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -178,12 +178,13 @@ public class StorageMappingItemCollection extends MappingItemCollection  {
             retObjectMappingVersion = classInstance.Get("MappingVersion");
             return (double)retObjectMappingVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMappingVersion_ToString = retObjectMappingVersion == null ? "null" : retObjectMappingVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMappingVersionNumber = (java.lang.Number)retObjectMappingVersion;
                 return retObjectMappingVersionNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMappingVersion != null ? retObjectMappingVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMappingVersion != null ? retObjectMappingVersion.getClass() : "null", retObjectMappingVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

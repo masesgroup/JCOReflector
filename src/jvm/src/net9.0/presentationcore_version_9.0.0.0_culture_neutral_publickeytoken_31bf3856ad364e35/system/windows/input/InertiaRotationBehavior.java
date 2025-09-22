@@ -171,12 +171,13 @@ public class InertiaRotationBehavior extends NetObject  {
             retObjectDesiredDeceleration = classInstance.Get("DesiredDeceleration");
             return (double)retObjectDesiredDeceleration;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDesiredDeceleration_ToString = retObjectDesiredDeceleration == null ? "null" : retObjectDesiredDeceleration.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDesiredDecelerationNumber = (java.lang.Number)retObjectDesiredDeceleration;
                 return retObjectDesiredDecelerationNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectDesiredDeceleration != null ? retObjectDesiredDeceleration.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDesiredDeceleration != null ? retObjectDesiredDeceleration.getClass() : "null", retObjectDesiredDeceleration_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -201,12 +202,13 @@ public class InertiaRotationBehavior extends NetObject  {
             retObjectDesiredRotation = classInstance.Get("DesiredRotation");
             return (double)retObjectDesiredRotation;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDesiredRotation_ToString = retObjectDesiredRotation == null ? "null" : retObjectDesiredRotation.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDesiredRotationNumber = (java.lang.Number)retObjectDesiredRotation;
                 return retObjectDesiredRotationNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectDesiredRotation != null ? retObjectDesiredRotation.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDesiredRotation != null ? retObjectDesiredRotation.getClass() : "null", retObjectDesiredRotation_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -231,12 +233,13 @@ public class InertiaRotationBehavior extends NetObject  {
             retObjectInitialVelocity = classInstance.Get("InitialVelocity");
             return (double)retObjectInitialVelocity;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInitialVelocity_ToString = retObjectInitialVelocity == null ? "null" : retObjectInitialVelocity.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInitialVelocityNumber = (java.lang.Number)retObjectInitialVelocity;
                 return retObjectInitialVelocityNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectInitialVelocity != null ? retObjectInitialVelocity.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectInitialVelocity != null ? retObjectInitialVelocity.getClass() : "null", retObjectInitialVelocity_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

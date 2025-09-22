@@ -187,12 +187,13 @@ public class SequencePosition extends ValueType  {
             retObjectGetInteger = classInstance.Invoke("GetInteger");
             return (int)retObjectGetInteger;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetInteger_ToString = retObjectGetInteger == null ? "null" : retObjectGetInteger.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetIntegerNumber = (java.lang.Number)retObjectGetInteger;
                 return retObjectGetIntegerNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetInteger != null ? retObjectGetInteger.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetInteger != null ? retObjectGetInteger.getClass() : "null", retObjectGetInteger_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

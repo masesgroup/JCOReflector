@@ -213,12 +213,13 @@ public class Grid extends Panel  {
             retObjectGetColumn = classType.Invoke("GetColumn", element == null ? null : element.getJCOInstance());
             return (int)retObjectGetColumn;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetColumn_ToString = retObjectGetColumn == null ? "null" : retObjectGetColumn.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetColumnNumber = (java.lang.Number)retObjectGetColumn;
                 return retObjectGetColumnNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetColumn != null ? retObjectGetColumn.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetColumn != null ? retObjectGetColumn.getClass() : "null", retObjectGetColumn_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -233,12 +234,13 @@ public class Grid extends Panel  {
             retObjectGetColumnSpan = classType.Invoke("GetColumnSpan", element == null ? null : element.getJCOInstance());
             return (int)retObjectGetColumnSpan;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetColumnSpan_ToString = retObjectGetColumnSpan == null ? "null" : retObjectGetColumnSpan.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetColumnSpanNumber = (java.lang.Number)retObjectGetColumnSpan;
                 return retObjectGetColumnSpanNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetColumnSpan != null ? retObjectGetColumnSpan.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetColumnSpan != null ? retObjectGetColumnSpan.getClass() : "null", retObjectGetColumnSpan_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -253,12 +255,13 @@ public class Grid extends Panel  {
             retObjectGetRow = classType.Invoke("GetRow", element == null ? null : element.getJCOInstance());
             return (int)retObjectGetRow;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetRow_ToString = retObjectGetRow == null ? "null" : retObjectGetRow.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetRowNumber = (java.lang.Number)retObjectGetRow;
                 return retObjectGetRowNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetRow != null ? retObjectGetRow.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetRow != null ? retObjectGetRow.getClass() : "null", retObjectGetRow_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -273,12 +276,13 @@ public class Grid extends Panel  {
             retObjectGetRowSpan = classType.Invoke("GetRowSpan", element == null ? null : element.getJCOInstance());
             return (int)retObjectGetRowSpan;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetRowSpan_ToString = retObjectGetRowSpan == null ? "null" : retObjectGetRowSpan.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetRowSpanNumber = (java.lang.Number)retObjectGetRowSpan;
                 return retObjectGetRowSpanNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetRowSpan != null ? retObjectGetRowSpan.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetRowSpan != null ? retObjectGetRowSpan.getClass() : "null", retObjectGetRowSpan_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

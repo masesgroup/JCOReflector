@@ -712,12 +712,13 @@ public class ECDsa extends ECAlgorithm  {
             retObjectGetMaxSignatureSize = classInstance.Invoke("GetMaxSignatureSize", signatureFormat == null ? null : signatureFormat.getJCOInstance());
             return (int)retObjectGetMaxSignatureSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetMaxSignatureSize_ToString = retObjectGetMaxSignatureSize == null ? "null" : retObjectGetMaxSignatureSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetMaxSignatureSizeNumber = (java.lang.Number)retObjectGetMaxSignatureSize;
                 return retObjectGetMaxSignatureSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetMaxSignatureSize != null ? retObjectGetMaxSignatureSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetMaxSignatureSize != null ? retObjectGetMaxSignatureSize.getClass() : "null", retObjectGetMaxSignatureSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

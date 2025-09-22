@@ -318,12 +318,13 @@ public class ComboBox extends Selector  {
             retObjectMaxDropDownHeight = classInstance.Get("MaxDropDownHeight");
             return (double)retObjectMaxDropDownHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxDropDownHeight_ToString = retObjectMaxDropDownHeight == null ? "null" : retObjectMaxDropDownHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxDropDownHeightNumber = (java.lang.Number)retObjectMaxDropDownHeight;
                 return retObjectMaxDropDownHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMaxDropDownHeight != null ? retObjectMaxDropDownHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaxDropDownHeight != null ? retObjectMaxDropDownHeight.getClass() : "null", retObjectMaxDropDownHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

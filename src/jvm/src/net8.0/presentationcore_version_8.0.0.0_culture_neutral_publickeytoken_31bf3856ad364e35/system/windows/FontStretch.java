@@ -181,12 +181,13 @@ public class FontStretch extends ValueType implements system.IFormattable {
             retObjectCompare = classType.Invoke("Compare", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
             return (int)retObjectCompare;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompare_ToString = retObjectCompare == null ? "null" : retObjectCompare.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareNumber = (java.lang.Number)retObjectCompare;
                 return retObjectCompareNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompare != null ? retObjectCompare.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompare != null ? retObjectCompare.getClass() : "null", retObjectCompare_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -201,12 +202,13 @@ public class FontStretch extends ValueType implements system.IFormattable {
             retObjectToOpenTypeStretch = classInstance.Invoke("ToOpenTypeStretch");
             return (int)retObjectToOpenTypeStretch;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToOpenTypeStretch_ToString = retObjectToOpenTypeStretch == null ? "null" : retObjectToOpenTypeStretch.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToOpenTypeStretchNumber = (java.lang.Number)retObjectToOpenTypeStretch;
                 return retObjectToOpenTypeStretchNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectToOpenTypeStretch != null ? retObjectToOpenTypeStretch.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToOpenTypeStretch != null ? retObjectToOpenTypeStretch.getClass() : "null", retObjectToOpenTypeStretch_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

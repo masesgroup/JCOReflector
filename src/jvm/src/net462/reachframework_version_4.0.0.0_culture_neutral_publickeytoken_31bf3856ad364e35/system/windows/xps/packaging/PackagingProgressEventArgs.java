@@ -177,12 +177,13 @@ public class PackagingProgressEventArgs extends EventArgs  {
             retObjectNumberCompleted = classInstance.Get("NumberCompleted");
             return (int)retObjectNumberCompleted;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNumberCompleted_ToString = retObjectNumberCompleted == null ? "null" : retObjectNumberCompleted.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNumberCompletedNumber = (java.lang.Number)retObjectNumberCompleted;
                 return retObjectNumberCompletedNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNumberCompleted != null ? retObjectNumberCompleted.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumberCompleted != null ? retObjectNumberCompleted.getClass() : "null", retObjectNumberCompleted_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

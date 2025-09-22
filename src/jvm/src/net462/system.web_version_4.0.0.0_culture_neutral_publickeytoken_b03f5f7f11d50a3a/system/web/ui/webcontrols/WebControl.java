@@ -322,12 +322,13 @@ public class WebControl extends Control implements system.web.ui.IAttributeAcces
             retObjectTabIndex = classInstance.Get("TabIndex");
             return (short)retObjectTabIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTabIndex_ToString = retObjectTabIndex == null ? "null" : retObjectTabIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTabIndexNumber = (java.lang.Number)retObjectTabIndex;
                 return retObjectTabIndexNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectTabIndex != null ? retObjectTabIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectTabIndex != null ? retObjectTabIndex.getClass() : "null", retObjectTabIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

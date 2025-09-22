@@ -359,12 +359,13 @@ public class PasswordDeriveBytes extends DeriveBytes  {
             retObjectIterationCount = classInstance.Get("IterationCount");
             return (int)retObjectIterationCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIterationCount_ToString = retObjectIterationCount == null ? "null" : retObjectIterationCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIterationCountNumber = (java.lang.Number)retObjectIterationCount;
                 return retObjectIterationCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIterationCount != null ? retObjectIterationCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIterationCount != null ? retObjectIterationCount.getClass() : "null", retObjectIterationCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

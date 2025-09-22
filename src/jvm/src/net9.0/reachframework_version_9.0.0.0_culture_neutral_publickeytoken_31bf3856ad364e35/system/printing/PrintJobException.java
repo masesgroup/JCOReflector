@@ -232,12 +232,13 @@ public class PrintJobException extends PrintSystemException {
             retObjectJobId = classInstance.Get("JobId");
             return (int)retObjectJobId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectJobId_ToString = retObjectJobId == null ? "null" : retObjectJobId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectJobIdNumber = (java.lang.Number)retObjectJobId;
                 return retObjectJobIdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectJobId != null ? retObjectJobId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectJobId != null ? retObjectJobId.getClass() : "null", retObjectJobId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

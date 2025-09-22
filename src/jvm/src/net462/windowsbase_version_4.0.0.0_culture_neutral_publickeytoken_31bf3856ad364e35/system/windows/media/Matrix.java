@@ -502,12 +502,13 @@ public class Matrix extends ValueType implements system.IFormattable {
             retObjectDeterminant = classInstance.Get("Determinant");
             return (double)retObjectDeterminant;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeterminant_ToString = retObjectDeterminant == null ? "null" : retObjectDeterminant.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDeterminantNumber = (java.lang.Number)retObjectDeterminant;
                 return retObjectDeterminantNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectDeterminant != null ? retObjectDeterminant.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDeterminant != null ? retObjectDeterminant.getClass() : "null", retObjectDeterminant_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -522,12 +523,13 @@ public class Matrix extends ValueType implements system.IFormattable {
             retObjectM11 = classInstance.Get("M11");
             return (double)retObjectM11;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectM11_ToString = retObjectM11 == null ? "null" : retObjectM11.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectM11Number = (java.lang.Number)retObjectM11;
                 return retObjectM11Number.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectM11 != null ? retObjectM11.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectM11 != null ? retObjectM11.getClass() : "null", retObjectM11_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -552,12 +554,13 @@ public class Matrix extends ValueType implements system.IFormattable {
             retObjectM12 = classInstance.Get("M12");
             return (double)retObjectM12;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectM12_ToString = retObjectM12 == null ? "null" : retObjectM12.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectM12Number = (java.lang.Number)retObjectM12;
                 return retObjectM12Number.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectM12 != null ? retObjectM12.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectM12 != null ? retObjectM12.getClass() : "null", retObjectM12_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -582,12 +585,13 @@ public class Matrix extends ValueType implements system.IFormattable {
             retObjectM21 = classInstance.Get("M21");
             return (double)retObjectM21;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectM21_ToString = retObjectM21 == null ? "null" : retObjectM21.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectM21Number = (java.lang.Number)retObjectM21;
                 return retObjectM21Number.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectM21 != null ? retObjectM21.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectM21 != null ? retObjectM21.getClass() : "null", retObjectM21_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -612,12 +616,13 @@ public class Matrix extends ValueType implements system.IFormattable {
             retObjectM22 = classInstance.Get("M22");
             return (double)retObjectM22;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectM22_ToString = retObjectM22 == null ? "null" : retObjectM22.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectM22Number = (java.lang.Number)retObjectM22;
                 return retObjectM22Number.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectM22 != null ? retObjectM22.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectM22 != null ? retObjectM22.getClass() : "null", retObjectM22_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -642,12 +647,13 @@ public class Matrix extends ValueType implements system.IFormattable {
             retObjectOffsetX = classInstance.Get("OffsetX");
             return (double)retObjectOffsetX;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffsetX_ToString = retObjectOffsetX == null ? "null" : retObjectOffsetX.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOffsetXNumber = (java.lang.Number)retObjectOffsetX;
                 return retObjectOffsetXNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOffsetX != null ? retObjectOffsetX.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOffsetX != null ? retObjectOffsetX.getClass() : "null", retObjectOffsetX_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -672,12 +678,13 @@ public class Matrix extends ValueType implements system.IFormattable {
             retObjectOffsetY = classInstance.Get("OffsetY");
             return (double)retObjectOffsetY;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffsetY_ToString = retObjectOffsetY == null ? "null" : retObjectOffsetY.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOffsetYNumber = (java.lang.Number)retObjectOffsetY;
                 return retObjectOffsetYNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOffsetY != null ? retObjectOffsetY.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOffsetY != null ? retObjectOffsetY.getClass() : "null", retObjectOffsetY_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

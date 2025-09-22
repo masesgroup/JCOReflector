@@ -172,12 +172,13 @@ public class ToolBarOverflowPanel extends Panel  {
             retObjectWrapWidth = classInstance.Get("WrapWidth");
             return (double)retObjectWrapWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWrapWidth_ToString = retObjectWrapWidth == null ? "null" : retObjectWrapWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWrapWidthNumber = (java.lang.Number)retObjectWrapWidth;
                 return retObjectWrapWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectWrapWidth != null ? retObjectWrapWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectWrapWidth != null ? retObjectWrapWidth.getClass() : "null", retObjectWrapWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

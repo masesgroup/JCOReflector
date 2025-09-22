@@ -185,12 +185,13 @@ public class List extends Block  {
             retObjectMarkerOffset = classInstance.Get("MarkerOffset");
             return (double)retObjectMarkerOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMarkerOffset_ToString = retObjectMarkerOffset == null ? "null" : retObjectMarkerOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMarkerOffsetNumber = (java.lang.Number)retObjectMarkerOffset;
                 return retObjectMarkerOffsetNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMarkerOffset != null ? retObjectMarkerOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMarkerOffset != null ? retObjectMarkerOffset.getClass() : "null", retObjectMarkerOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -215,12 +216,13 @@ public class List extends Block  {
             retObjectStartIndex = classInstance.Get("StartIndex");
             return (int)retObjectStartIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartIndex_ToString = retObjectStartIndex == null ? "null" : retObjectStartIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStartIndexNumber = (java.lang.Number)retObjectStartIndex;
                 return retObjectStartIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStartIndex != null ? retObjectStartIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartIndex != null ? retObjectStartIndex.getClass() : "null", retObjectStartIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

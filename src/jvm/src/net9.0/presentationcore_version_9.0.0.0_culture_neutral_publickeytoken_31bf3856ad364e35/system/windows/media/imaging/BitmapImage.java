@@ -251,12 +251,13 @@ public class BitmapImage extends BitmapSource  {
             retObjectDecodePixelHeight = classInstance.Get("DecodePixelHeight");
             return (int)retObjectDecodePixelHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDecodePixelHeight_ToString = retObjectDecodePixelHeight == null ? "null" : retObjectDecodePixelHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDecodePixelHeightNumber = (java.lang.Number)retObjectDecodePixelHeight;
                 return retObjectDecodePixelHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDecodePixelHeight != null ? retObjectDecodePixelHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDecodePixelHeight != null ? retObjectDecodePixelHeight.getClass() : "null", retObjectDecodePixelHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -281,12 +282,13 @@ public class BitmapImage extends BitmapSource  {
             retObjectDecodePixelWidth = classInstance.Get("DecodePixelWidth");
             return (int)retObjectDecodePixelWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDecodePixelWidth_ToString = retObjectDecodePixelWidth == null ? "null" : retObjectDecodePixelWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDecodePixelWidthNumber = (java.lang.Number)retObjectDecodePixelWidth;
                 return retObjectDecodePixelWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDecodePixelWidth != null ? retObjectDecodePixelWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDecodePixelWidth != null ? retObjectDecodePixelWidth.getClass() : "null", retObjectDecodePixelWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

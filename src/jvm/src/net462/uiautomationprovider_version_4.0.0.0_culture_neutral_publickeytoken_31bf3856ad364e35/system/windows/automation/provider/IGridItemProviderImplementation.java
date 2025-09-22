@@ -154,12 +154,13 @@ public class IGridItemProviderImplementation extends NetObject implements IGridI
             retObjectColumn = classInstance.Get("Column");
             return (int)retObjectColumn;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumn_ToString = retObjectColumn == null ? "null" : retObjectColumn.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectColumnNumber = (java.lang.Number)retObjectColumn;
                 return retObjectColumnNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectColumn != null ? retObjectColumn.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumn != null ? retObjectColumn.getClass() : "null", retObjectColumn_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -174,12 +175,13 @@ public class IGridItemProviderImplementation extends NetObject implements IGridI
             retObjectColumnSpan = classInstance.Get("ColumnSpan");
             return (int)retObjectColumnSpan;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnSpan_ToString = retObjectColumnSpan == null ? "null" : retObjectColumnSpan.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectColumnSpanNumber = (java.lang.Number)retObjectColumnSpan;
                 return retObjectColumnSpanNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectColumnSpan != null ? retObjectColumnSpan.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumnSpan != null ? retObjectColumnSpan.getClass() : "null", retObjectColumnSpan_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -194,12 +196,13 @@ public class IGridItemProviderImplementation extends NetObject implements IGridI
             retObjectRow = classInstance.Get("Row");
             return (int)retObjectRow;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRow_ToString = retObjectRow == null ? "null" : retObjectRow.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRowNumber = (java.lang.Number)retObjectRow;
                 return retObjectRowNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRow != null ? retObjectRow.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRow != null ? retObjectRow.getClass() : "null", retObjectRow_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -214,12 +217,13 @@ public class IGridItemProviderImplementation extends NetObject implements IGridI
             retObjectRowSpan = classInstance.Get("RowSpan");
             return (int)retObjectRowSpan;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowSpan_ToString = retObjectRowSpan == null ? "null" : retObjectRowSpan.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRowSpanNumber = (java.lang.Number)retObjectRowSpan;
                 return retObjectRowSpanNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRowSpan != null ? retObjectRowSpan.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowSpan != null ? retObjectRowSpan.getClass() : "null", retObjectRowSpan_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

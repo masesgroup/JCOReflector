@@ -175,12 +175,13 @@ public class EventSourceCreationData extends NetObject  {
             retObjectCategoryCount = classInstance.Get("CategoryCount");
             return (int)retObjectCategoryCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCategoryCount_ToString = retObjectCategoryCount == null ? "null" : retObjectCategoryCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCategoryCountNumber = (java.lang.Number)retObjectCategoryCount;
                 return retObjectCategoryCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCategoryCount != null ? retObjectCategoryCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCategoryCount != null ? retObjectCategoryCount.getClass() : "null", retObjectCategoryCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

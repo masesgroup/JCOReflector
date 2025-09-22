@@ -919,12 +919,13 @@ public class ListView extends Control  {
             retObjectVirtualListSize = classInstance.Get("VirtualListSize");
             return (int)retObjectVirtualListSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVirtualListSize_ToString = retObjectVirtualListSize == null ? "null" : retObjectVirtualListSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVirtualListSizeNumber = (java.lang.Number)retObjectVirtualListSize;
                 return retObjectVirtualListSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVirtualListSize != null ? retObjectVirtualListSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVirtualListSize != null ? retObjectVirtualListSize.getClass() : "null", retObjectVirtualListSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

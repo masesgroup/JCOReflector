@@ -167,12 +167,13 @@ public class AttributeMetadata extends NetObject  {
             retObjectVersion = classInstance.Get("Version");
             return (int)retObjectVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVersion_ToString = retObjectVersion == null ? "null" : retObjectVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVersionNumber = (java.lang.Number)retObjectVersion;
                 return retObjectVersionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVersion != null ? retObjectVersion.getClass() : "null", retObjectVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -187,12 +188,13 @@ public class AttributeMetadata extends NetObject  {
             retObjectLocalChangeUsn = classInstance.Get("LocalChangeUsn");
             return (long)retObjectLocalChangeUsn;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLocalChangeUsn_ToString = retObjectLocalChangeUsn == null ? "null" : retObjectLocalChangeUsn.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLocalChangeUsnNumber = (java.lang.Number)retObjectLocalChangeUsn;
                 return retObjectLocalChangeUsnNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectLocalChangeUsn != null ? retObjectLocalChangeUsn.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectLocalChangeUsn != null ? retObjectLocalChangeUsn.getClass() : "null", retObjectLocalChangeUsn_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -207,12 +209,13 @@ public class AttributeMetadata extends NetObject  {
             retObjectOriginatingChangeUsn = classInstance.Get("OriginatingChangeUsn");
             return (long)retObjectOriginatingChangeUsn;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOriginatingChangeUsn_ToString = retObjectOriginatingChangeUsn == null ? "null" : retObjectOriginatingChangeUsn.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOriginatingChangeUsnNumber = (java.lang.Number)retObjectOriginatingChangeUsn;
                 return retObjectOriginatingChangeUsnNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectOriginatingChangeUsn != null ? retObjectOriginatingChangeUsn.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectOriginatingChangeUsn != null ? retObjectOriginatingChangeUsn.getClass() : "null", retObjectOriginatingChangeUsn_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

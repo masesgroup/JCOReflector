@@ -188,12 +188,13 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
             retObjectCopyData = classInstance.Invoke("CopyData", points.getJCRefOut(), types.getJCRefOut(), startIndex, endIndex);
             return (int)retObjectCopyData;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCopyData_ToString = retObjectCopyData == null ? "null" : retObjectCopyData.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCopyDataNumber = (java.lang.Number)retObjectCopyData;
                 return retObjectCopyDataNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCopyData != null ? retObjectCopyData.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCopyData != null ? retObjectCopyData.getClass() : "null", retObjectCopyData_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -208,12 +209,13 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
             retObjectEnumerate = classInstance.Invoke("Enumerate", points.getJCRefOut(), types.getJCRefOut());
             return (int)retObjectEnumerate;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEnumerate_ToString = retObjectEnumerate == null ? "null" : retObjectEnumerate.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEnumerateNumber = (java.lang.Number)retObjectEnumerate;
                 return retObjectEnumerateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEnumerate != null ? retObjectEnumerate.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEnumerate != null ? retObjectEnumerate.getClass() : "null", retObjectEnumerate_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -228,12 +230,13 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
             retObjectNextMarker = classInstance.Invoke("NextMarker", startIndex.getJCRefOut(), endIndex.getJCRefOut());
             return (int)retObjectNextMarker;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNextMarker_ToString = retObjectNextMarker == null ? "null" : retObjectNextMarker.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNextMarkerNumber = (java.lang.Number)retObjectNextMarker;
                 return retObjectNextMarkerNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNextMarker != null ? retObjectNextMarker.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNextMarker != null ? retObjectNextMarker.getClass() : "null", retObjectNextMarker_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -248,12 +251,13 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
             retObjectNextMarker = classInstance.Invoke("NextMarker", path == null ? null : path.getJCOInstance());
             return (int)retObjectNextMarker;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNextMarker_ToString = retObjectNextMarker == null ? "null" : retObjectNextMarker.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNextMarkerNumber = (java.lang.Number)retObjectNextMarker;
                 return retObjectNextMarkerNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNextMarker != null ? retObjectNextMarker.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNextMarker != null ? retObjectNextMarker.getClass() : "null", retObjectNextMarker_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -268,12 +272,13 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
             retObjectNextPathType = classInstance.Invoke("NextPathType", pathType.getJCRefOut(), startIndex.getJCRefOut(), endIndex.getJCRefOut());
             return (int)retObjectNextPathType;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNextPathType_ToString = retObjectNextPathType == null ? "null" : retObjectNextPathType.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNextPathTypeNumber = (java.lang.Number)retObjectNextPathType;
                 return retObjectNextPathTypeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNextPathType != null ? retObjectNextPathType.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNextPathType != null ? retObjectNextPathType.getClass() : "null", retObjectNextPathType_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -288,12 +293,13 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
             retObjectNextSubpath = classInstance.Invoke("NextSubpath", startIndex.getJCRefOut(), endIndex.getJCRefOut(), isClosed.getJCRefOut());
             return (int)retObjectNextSubpath;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNextSubpath_ToString = retObjectNextSubpath == null ? "null" : retObjectNextSubpath.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNextSubpathNumber = (java.lang.Number)retObjectNextSubpath;
                 return retObjectNextSubpathNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNextSubpath != null ? retObjectNextSubpath.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNextSubpath != null ? retObjectNextSubpath.getClass() : "null", retObjectNextSubpath_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -308,12 +314,13 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
             retObjectNextSubpath = classInstance.Invoke("NextSubpath", path == null ? null : path.getJCOInstance(), isClosed.getJCRefOut());
             return (int)retObjectNextSubpath;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNextSubpath_ToString = retObjectNextSubpath == null ? "null" : retObjectNextSubpath.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNextSubpathNumber = (java.lang.Number)retObjectNextSubpath;
                 return retObjectNextSubpathNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNextSubpath != null ? retObjectNextSubpath.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNextSubpath != null ? retObjectNextSubpath.getClass() : "null", retObjectNextSubpath_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -365,12 +372,13 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
             retObjectCount = classInstance.Get("Count");
             return (int)retObjectCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
                 return retObjectCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -385,12 +393,13 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
             retObjectSubpathCount = classInstance.Get("SubpathCount");
             return (int)retObjectSubpathCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSubpathCount_ToString = retObjectSubpathCount == null ? "null" : retObjectSubpathCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSubpathCountNumber = (java.lang.Number)retObjectSubpathCount;
                 return retObjectSubpathCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSubpathCount != null ? retObjectSubpathCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSubpathCount != null ? retObjectSubpathCount.getClass() : "null", retObjectSubpathCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

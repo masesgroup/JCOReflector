@@ -277,12 +277,13 @@ public class Thread extends CriticalFinalizerObject  {
             retObjectGetCurrentProcessorId = classType.Invoke("GetCurrentProcessorId");
             return (int)retObjectGetCurrentProcessorId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCurrentProcessorId_ToString = retObjectGetCurrentProcessorId == null ? "null" : retObjectGetCurrentProcessorId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetCurrentProcessorIdNumber = (java.lang.Number)retObjectGetCurrentProcessorId;
                 return retObjectGetCurrentProcessorIdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCurrentProcessorId != null ? retObjectGetCurrentProcessorId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCurrentProcessorId != null ? retObjectGetCurrentProcessorId.getClass() : "null", retObjectGetCurrentProcessorId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -297,12 +298,13 @@ public class Thread extends CriticalFinalizerObject  {
             retObjectGetDomainID = classType.Invoke("GetDomainID");
             return (int)retObjectGetDomainID;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetDomainID_ToString = retObjectGetDomainID == null ? "null" : retObjectGetDomainID.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetDomainIDNumber = (java.lang.Number)retObjectGetDomainID;
                 return retObjectGetDomainIDNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetDomainID != null ? retObjectGetDomainID.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetDomainID != null ? retObjectGetDomainID.getClass() : "null", retObjectGetDomainID_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -838,12 +840,13 @@ public class Thread extends CriticalFinalizerObject  {
             retObjectManagedThreadId = classInstance.Get("ManagedThreadId");
             return (int)retObjectManagedThreadId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectManagedThreadId_ToString = retObjectManagedThreadId == null ? "null" : retObjectManagedThreadId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectManagedThreadIdNumber = (java.lang.Number)retObjectManagedThreadId;
                 return retObjectManagedThreadIdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectManagedThreadId != null ? retObjectManagedThreadId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectManagedThreadId != null ? retObjectManagedThreadId.getClass() : "null", retObjectManagedThreadId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

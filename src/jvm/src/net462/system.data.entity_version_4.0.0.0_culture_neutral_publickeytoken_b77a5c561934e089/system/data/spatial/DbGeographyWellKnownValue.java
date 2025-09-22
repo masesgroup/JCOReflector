@@ -204,12 +204,13 @@ public class DbGeographyWellKnownValue extends NetObject  {
             retObjectCoordinateSystemId = classInstance.Get("CoordinateSystemId");
             return (int)retObjectCoordinateSystemId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCoordinateSystemId_ToString = retObjectCoordinateSystemId == null ? "null" : retObjectCoordinateSystemId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCoordinateSystemIdNumber = (java.lang.Number)retObjectCoordinateSystemId;
                 return retObjectCoordinateSystemIdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCoordinateSystemId != null ? retObjectCoordinateSystemId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCoordinateSystemId != null ? retObjectCoordinateSystemId.getClass() : "null", retObjectCoordinateSystemId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

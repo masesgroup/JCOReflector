@@ -372,12 +372,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
             retObjectCompare = classType.Invoke("Compare", uri1 == null ? null : uri1.getJCOInstance(), uri2 == null ? null : uri2.getJCOInstance(), partsToCompare == null ? null : partsToCompare.getJCOInstance(), compareFormat == null ? null : compareFormat.getJCOInstance(), comparisonType == null ? null : comparisonType.getJCOInstance());
             return (int)retObjectCompare;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompare_ToString = retObjectCompare == null ? "null" : retObjectCompare.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareNumber = (java.lang.Number)retObjectCompare;
                 return retObjectCompareNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompare != null ? retObjectCompare.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompare != null ? retObjectCompare.getClass() : "null", retObjectCompare_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -392,12 +393,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
             retObjectFromHex = classType.Invoke("FromHex", digit);
             return (int)retObjectFromHex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFromHex_ToString = retObjectFromHex == null ? "null" : retObjectFromHex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFromHexNumber = (java.lang.Number)retObjectFromHex;
                 return retObjectFromHexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFromHex != null ? retObjectFromHex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFromHex != null ? retObjectFromHex.getClass() : "null", retObjectFromHex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -637,12 +639,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
             retObjectPort = classInstance.Get("Port");
             return (int)retObjectPort;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPort_ToString = retObjectPort == null ? "null" : retObjectPort.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPortNumber = (java.lang.Number)retObjectPort;
                 return retObjectPortNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPort != null ? retObjectPort.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPort != null ? retObjectPort.getClass() : "null", retObjectPort_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

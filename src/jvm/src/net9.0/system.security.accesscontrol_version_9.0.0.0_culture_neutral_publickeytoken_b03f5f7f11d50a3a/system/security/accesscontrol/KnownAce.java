@@ -165,12 +165,13 @@ public class KnownAce extends GenericAce  {
             retObjectAccessMask = classInstance.Get("AccessMask");
             return (int)retObjectAccessMask;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAccessMask_ToString = retObjectAccessMask == null ? "null" : retObjectAccessMask.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAccessMaskNumber = (java.lang.Number)retObjectAccessMask;
                 return retObjectAccessMaskNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAccessMask != null ? retObjectAccessMask.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAccessMask != null ? retObjectAccessMask.getClass() : "null", retObjectAccessMask_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

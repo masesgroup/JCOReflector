@@ -556,12 +556,13 @@ public class Domain extends ActiveDirectoryPartition  {
             retObjectDomainModeLevel = classInstance.Get("DomainModeLevel");
             return (int)retObjectDomainModeLevel;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDomainModeLevel_ToString = retObjectDomainModeLevel == null ? "null" : retObjectDomainModeLevel.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDomainModeLevelNumber = (java.lang.Number)retObjectDomainModeLevel;
                 return retObjectDomainModeLevelNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDomainModeLevel != null ? retObjectDomainModeLevel.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDomainModeLevel != null ? retObjectDomainModeLevel.getClass() : "null", retObjectDomainModeLevel_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

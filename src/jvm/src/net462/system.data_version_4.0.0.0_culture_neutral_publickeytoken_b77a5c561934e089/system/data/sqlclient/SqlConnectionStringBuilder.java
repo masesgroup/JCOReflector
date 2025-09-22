@@ -590,12 +590,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
             retObjectConnectRetryCount = classInstance.Get("ConnectRetryCount");
             return (int)retObjectConnectRetryCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConnectRetryCount_ToString = retObjectConnectRetryCount == null ? "null" : retObjectConnectRetryCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectConnectRetryCountNumber = (java.lang.Number)retObjectConnectRetryCount;
                 return retObjectConnectRetryCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectConnectRetryCount != null ? retObjectConnectRetryCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectConnectRetryCount != null ? retObjectConnectRetryCount.getClass() : "null", retObjectConnectRetryCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -620,12 +621,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
             retObjectConnectRetryInterval = classInstance.Get("ConnectRetryInterval");
             return (int)retObjectConnectRetryInterval;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConnectRetryInterval_ToString = retObjectConnectRetryInterval == null ? "null" : retObjectConnectRetryInterval.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectConnectRetryIntervalNumber = (java.lang.Number)retObjectConnectRetryInterval;
                 return retObjectConnectRetryIntervalNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectConnectRetryInterval != null ? retObjectConnectRetryInterval.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectConnectRetryInterval != null ? retObjectConnectRetryInterval.getClass() : "null", retObjectConnectRetryInterval_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -650,12 +652,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
             retObjectConnectTimeout = classInstance.Get("ConnectTimeout");
             return (int)retObjectConnectTimeout;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConnectTimeout_ToString = retObjectConnectTimeout == null ? "null" : retObjectConnectTimeout.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectConnectTimeoutNumber = (java.lang.Number)retObjectConnectTimeout;
                 return retObjectConnectTimeoutNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectConnectTimeout != null ? retObjectConnectTimeout.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectConnectTimeout != null ? retObjectConnectTimeout.getClass() : "null", retObjectConnectTimeout_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -680,12 +683,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
             retObjectLoadBalanceTimeout = classInstance.Get("LoadBalanceTimeout");
             return (int)retObjectLoadBalanceTimeout;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLoadBalanceTimeout_ToString = retObjectLoadBalanceTimeout == null ? "null" : retObjectLoadBalanceTimeout.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLoadBalanceTimeoutNumber = (java.lang.Number)retObjectLoadBalanceTimeout;
                 return retObjectLoadBalanceTimeoutNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLoadBalanceTimeout != null ? retObjectLoadBalanceTimeout.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLoadBalanceTimeout != null ? retObjectLoadBalanceTimeout.getClass() : "null", retObjectLoadBalanceTimeout_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -710,12 +714,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
             retObjectMaxPoolSize = classInstance.Get("MaxPoolSize");
             return (int)retObjectMaxPoolSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxPoolSize_ToString = retObjectMaxPoolSize == null ? "null" : retObjectMaxPoolSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxPoolSizeNumber = (java.lang.Number)retObjectMaxPoolSize;
                 return retObjectMaxPoolSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxPoolSize != null ? retObjectMaxPoolSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxPoolSize != null ? retObjectMaxPoolSize.getClass() : "null", retObjectMaxPoolSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -740,12 +745,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
             retObjectMinPoolSize = classInstance.Get("MinPoolSize");
             return (int)retObjectMinPoolSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinPoolSize_ToString = retObjectMinPoolSize == null ? "null" : retObjectMinPoolSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinPoolSizeNumber = (java.lang.Number)retObjectMinPoolSize;
                 return retObjectMinPoolSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinPoolSize != null ? retObjectMinPoolSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinPoolSize != null ? retObjectMinPoolSize.getClass() : "null", retObjectMinPoolSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -770,12 +776,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
             retObjectPacketSize = classInstance.Get("PacketSize");
             return (int)retObjectPacketSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPacketSize_ToString = retObjectPacketSize == null ? "null" : retObjectPacketSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPacketSizeNumber = (java.lang.Number)retObjectPacketSize;
                 return retObjectPacketSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPacketSize != null ? retObjectPacketSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPacketSize != null ? retObjectPacketSize.getClass() : "null", retObjectPacketSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -648,12 +648,13 @@ public class DataGrid extends MultiSelector  {
             retObjectCellsPanelHorizontalOffset = classInstance.Get("CellsPanelHorizontalOffset");
             return (double)retObjectCellsPanelHorizontalOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCellsPanelHorizontalOffset_ToString = retObjectCellsPanelHorizontalOffset == null ? "null" : retObjectCellsPanelHorizontalOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCellsPanelHorizontalOffsetNumber = (java.lang.Number)retObjectCellsPanelHorizontalOffset;
                 return retObjectCellsPanelHorizontalOffsetNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectCellsPanelHorizontalOffset != null ? retObjectCellsPanelHorizontalOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCellsPanelHorizontalOffset != null ? retObjectCellsPanelHorizontalOffset.getClass() : "null", retObjectCellsPanelHorizontalOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -678,12 +679,13 @@ public class DataGrid extends MultiSelector  {
             retObjectColumnHeaderHeight = classInstance.Get("ColumnHeaderHeight");
             return (double)retObjectColumnHeaderHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnHeaderHeight_ToString = retObjectColumnHeaderHeight == null ? "null" : retObjectColumnHeaderHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectColumnHeaderHeightNumber = (java.lang.Number)retObjectColumnHeaderHeight;
                 return retObjectColumnHeaderHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectColumnHeaderHeight != null ? retObjectColumnHeaderHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectColumnHeaderHeight != null ? retObjectColumnHeaderHeight.getClass() : "null", retObjectColumnHeaderHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -708,12 +710,13 @@ public class DataGrid extends MultiSelector  {
             retObjectMaxColumnWidth = classInstance.Get("MaxColumnWidth");
             return (double)retObjectMaxColumnWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxColumnWidth_ToString = retObjectMaxColumnWidth == null ? "null" : retObjectMaxColumnWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxColumnWidthNumber = (java.lang.Number)retObjectMaxColumnWidth;
                 return retObjectMaxColumnWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMaxColumnWidth != null ? retObjectMaxColumnWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaxColumnWidth != null ? retObjectMaxColumnWidth.getClass() : "null", retObjectMaxColumnWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -738,12 +741,13 @@ public class DataGrid extends MultiSelector  {
             retObjectMinColumnWidth = classInstance.Get("MinColumnWidth");
             return (double)retObjectMinColumnWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinColumnWidth_ToString = retObjectMinColumnWidth == null ? "null" : retObjectMinColumnWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinColumnWidthNumber = (java.lang.Number)retObjectMinColumnWidth;
                 return retObjectMinColumnWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMinColumnWidth != null ? retObjectMinColumnWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinColumnWidth != null ? retObjectMinColumnWidth.getClass() : "null", retObjectMinColumnWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -768,12 +772,13 @@ public class DataGrid extends MultiSelector  {
             retObjectMinRowHeight = classInstance.Get("MinRowHeight");
             return (double)retObjectMinRowHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinRowHeight_ToString = retObjectMinRowHeight == null ? "null" : retObjectMinRowHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinRowHeightNumber = (java.lang.Number)retObjectMinRowHeight;
                 return retObjectMinRowHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMinRowHeight != null ? retObjectMinRowHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinRowHeight != null ? retObjectMinRowHeight.getClass() : "null", retObjectMinRowHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -798,12 +803,13 @@ public class DataGrid extends MultiSelector  {
             retObjectNonFrozenColumnsViewportHorizontalOffset = classInstance.Get("NonFrozenColumnsViewportHorizontalOffset");
             return (double)retObjectNonFrozenColumnsViewportHorizontalOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNonFrozenColumnsViewportHorizontalOffset_ToString = retObjectNonFrozenColumnsViewportHorizontalOffset == null ? "null" : retObjectNonFrozenColumnsViewportHorizontalOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNonFrozenColumnsViewportHorizontalOffsetNumber = (java.lang.Number)retObjectNonFrozenColumnsViewportHorizontalOffset;
                 return retObjectNonFrozenColumnsViewportHorizontalOffsetNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectNonFrozenColumnsViewportHorizontalOffset != null ? retObjectNonFrozenColumnsViewportHorizontalOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectNonFrozenColumnsViewportHorizontalOffset != null ? retObjectNonFrozenColumnsViewportHorizontalOffset.getClass() : "null", retObjectNonFrozenColumnsViewportHorizontalOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -828,12 +834,13 @@ public class DataGrid extends MultiSelector  {
             retObjectRowHeaderActualWidth = classInstance.Get("RowHeaderActualWidth");
             return (double)retObjectRowHeaderActualWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowHeaderActualWidth_ToString = retObjectRowHeaderActualWidth == null ? "null" : retObjectRowHeaderActualWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRowHeaderActualWidthNumber = (java.lang.Number)retObjectRowHeaderActualWidth;
                 return retObjectRowHeaderActualWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectRowHeaderActualWidth != null ? retObjectRowHeaderActualWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRowHeaderActualWidth != null ? retObjectRowHeaderActualWidth.getClass() : "null", retObjectRowHeaderActualWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -858,12 +865,13 @@ public class DataGrid extends MultiSelector  {
             retObjectRowHeaderWidth = classInstance.Get("RowHeaderWidth");
             return (double)retObjectRowHeaderWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowHeaderWidth_ToString = retObjectRowHeaderWidth == null ? "null" : retObjectRowHeaderWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRowHeaderWidthNumber = (java.lang.Number)retObjectRowHeaderWidth;
                 return retObjectRowHeaderWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectRowHeaderWidth != null ? retObjectRowHeaderWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRowHeaderWidth != null ? retObjectRowHeaderWidth.getClass() : "null", retObjectRowHeaderWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -888,12 +896,13 @@ public class DataGrid extends MultiSelector  {
             retObjectRowHeight = classInstance.Get("RowHeight");
             return (double)retObjectRowHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowHeight_ToString = retObjectRowHeight == null ? "null" : retObjectRowHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRowHeightNumber = (java.lang.Number)retObjectRowHeight;
                 return retObjectRowHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectRowHeight != null ? retObjectRowHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRowHeight != null ? retObjectRowHeight.getClass() : "null", retObjectRowHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -918,12 +927,13 @@ public class DataGrid extends MultiSelector  {
             retObjectFrozenColumnCount = classInstance.Get("FrozenColumnCount");
             return (int)retObjectFrozenColumnCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFrozenColumnCount_ToString = retObjectFrozenColumnCount == null ? "null" : retObjectFrozenColumnCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFrozenColumnCountNumber = (java.lang.Number)retObjectFrozenColumnCount;
                 return retObjectFrozenColumnCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFrozenColumnCount != null ? retObjectFrozenColumnCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFrozenColumnCount != null ? retObjectFrozenColumnCount.getClass() : "null", retObjectFrozenColumnCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

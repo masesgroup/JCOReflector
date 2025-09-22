@@ -181,12 +181,13 @@ public class PipeOptions extends NetObject  {
             retObjectMinimumSegmentSize = classInstance.Get("MinimumSegmentSize");
             return (int)retObjectMinimumSegmentSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumSegmentSize_ToString = retObjectMinimumSegmentSize == null ? "null" : retObjectMinimumSegmentSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinimumSegmentSizeNumber = (java.lang.Number)retObjectMinimumSegmentSize;
                 return retObjectMinimumSegmentSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinimumSegmentSize != null ? retObjectMinimumSegmentSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimumSegmentSize != null ? retObjectMinimumSegmentSize.getClass() : "null", retObjectMinimumSegmentSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -201,12 +202,13 @@ public class PipeOptions extends NetObject  {
             retObjectPauseWriterThreshold = classInstance.Get("PauseWriterThreshold");
             return (long)retObjectPauseWriterThreshold;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPauseWriterThreshold_ToString = retObjectPauseWriterThreshold == null ? "null" : retObjectPauseWriterThreshold.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPauseWriterThresholdNumber = (java.lang.Number)retObjectPauseWriterThreshold;
                 return retObjectPauseWriterThresholdNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectPauseWriterThreshold != null ? retObjectPauseWriterThreshold.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectPauseWriterThreshold != null ? retObjectPauseWriterThreshold.getClass() : "null", retObjectPauseWriterThreshold_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -221,12 +223,13 @@ public class PipeOptions extends NetObject  {
             retObjectResumeWriterThreshold = classInstance.Get("ResumeWriterThreshold");
             return (long)retObjectResumeWriterThreshold;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResumeWriterThreshold_ToString = retObjectResumeWriterThreshold == null ? "null" : retObjectResumeWriterThreshold.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectResumeWriterThresholdNumber = (java.lang.Number)retObjectResumeWriterThreshold;
                 return retObjectResumeWriterThresholdNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectResumeWriterThreshold != null ? retObjectResumeWriterThreshold.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectResumeWriterThreshold != null ? retObjectResumeWriterThreshold.getClass() : "null", retObjectResumeWriterThreshold_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -175,12 +175,13 @@ public class ArgIterator extends ValueType  {
             retObjectGetRemainingCount = classInstance.Invoke("GetRemainingCount");
             return (int)retObjectGetRemainingCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetRemainingCount_ToString = retObjectGetRemainingCount == null ? "null" : retObjectGetRemainingCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetRemainingCountNumber = (java.lang.Number)retObjectGetRemainingCount;
                 return retObjectGetRemainingCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetRemainingCount != null ? retObjectGetRemainingCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetRemainingCount != null ? retObjectGetRemainingCount.getClass() : "null", retObjectGetRemainingCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

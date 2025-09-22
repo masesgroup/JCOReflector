@@ -253,12 +253,13 @@ public class ToolBar extends HeaderedItemsControl  {
             retObjectBand = classInstance.Get("Band");
             return (int)retObjectBand;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBand_ToString = retObjectBand == null ? "null" : retObjectBand.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBandNumber = (java.lang.Number)retObjectBand;
                 return retObjectBandNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBand != null ? retObjectBand.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBand != null ? retObjectBand.getClass() : "null", retObjectBand_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -283,12 +284,13 @@ public class ToolBar extends HeaderedItemsControl  {
             retObjectBandIndex = classInstance.Get("BandIndex");
             return (int)retObjectBandIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBandIndex_ToString = retObjectBandIndex == null ? "null" : retObjectBandIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBandIndexNumber = (java.lang.Number)retObjectBandIndex;
                 return retObjectBandIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBandIndex != null ? retObjectBandIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBandIndex != null ? retObjectBandIndex.getClass() : "null", retObjectBandIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -199,12 +199,13 @@ public class LowPhysicalMemoryInfo extends NetObject  {
             retObjectCurrentPercentUsed = classInstance.Get("CurrentPercentUsed");
             return (int)retObjectCurrentPercentUsed;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCurrentPercentUsed_ToString = retObjectCurrentPercentUsed == null ? "null" : retObjectCurrentPercentUsed.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCurrentPercentUsedNumber = (java.lang.Number)retObjectCurrentPercentUsed;
                 return retObjectCurrentPercentUsedNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCurrentPercentUsed != null ? retObjectCurrentPercentUsed.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentPercentUsed != null ? retObjectCurrentPercentUsed.getClass() : "null", retObjectCurrentPercentUsed_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -219,12 +220,13 @@ public class LowPhysicalMemoryInfo extends NetObject  {
             retObjectPercentLimit = classInstance.Get("PercentLimit");
             return (int)retObjectPercentLimit;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPercentLimit_ToString = retObjectPercentLimit == null ? "null" : retObjectPercentLimit.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPercentLimitNumber = (java.lang.Number)retObjectPercentLimit;
                 return retObjectPercentLimitNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPercentLimit != null ? retObjectPercentLimit.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPercentLimit != null ? retObjectPercentLimit.getClass() : "null", retObjectPercentLimit_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

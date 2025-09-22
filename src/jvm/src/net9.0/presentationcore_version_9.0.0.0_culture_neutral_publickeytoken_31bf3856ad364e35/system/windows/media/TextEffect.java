@@ -216,12 +216,13 @@ public class TextEffect extends Animatable  {
             retObjectPositionCount = classInstance.Get("PositionCount");
             return (int)retObjectPositionCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPositionCount_ToString = retObjectPositionCount == null ? "null" : retObjectPositionCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPositionCountNumber = (java.lang.Number)retObjectPositionCount;
                 return retObjectPositionCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPositionCount != null ? retObjectPositionCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPositionCount != null ? retObjectPositionCount.getClass() : "null", retObjectPositionCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -246,12 +247,13 @@ public class TextEffect extends Animatable  {
             retObjectPositionStart = classInstance.Get("PositionStart");
             return (int)retObjectPositionStart;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPositionStart_ToString = retObjectPositionStart == null ? "null" : retObjectPositionStart.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPositionStartNumber = (java.lang.Number)retObjectPositionStart;
                 return retObjectPositionStartNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPositionStart != null ? retObjectPositionStart.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPositionStart != null ? retObjectPositionStart.getClass() : "null", retObjectPositionStart_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

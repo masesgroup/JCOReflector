@@ -283,12 +283,13 @@ public class SecurityContextSecurityTokenResolver extends SecurityTokenResolver 
             retObjectSecurityContextTokenCacheCapacity = classInstance.Get("SecurityContextTokenCacheCapacity");
             return (int)retObjectSecurityContextTokenCacheCapacity;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSecurityContextTokenCacheCapacity_ToString = retObjectSecurityContextTokenCacheCapacity == null ? "null" : retObjectSecurityContextTokenCacheCapacity.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSecurityContextTokenCacheCapacityNumber = (java.lang.Number)retObjectSecurityContextTokenCacheCapacity;
                 return retObjectSecurityContextTokenCacheCapacityNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSecurityContextTokenCacheCapacity != null ? retObjectSecurityContextTokenCacheCapacity.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSecurityContextTokenCacheCapacity != null ? retObjectSecurityContextTokenCacheCapacity.getClass() : "null", retObjectSecurityContextTokenCacheCapacity_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

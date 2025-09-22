@@ -181,12 +181,13 @@ public class ParserError extends NetObject  {
             retObjectLine = classInstance.Get("Line");
             return (int)retObjectLine;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLine_ToString = retObjectLine == null ? "null" : retObjectLine.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLineNumber = (java.lang.Number)retObjectLine;
                 return retObjectLineNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLine != null ? retObjectLine.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLine != null ? retObjectLine.getClass() : "null", retObjectLine_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

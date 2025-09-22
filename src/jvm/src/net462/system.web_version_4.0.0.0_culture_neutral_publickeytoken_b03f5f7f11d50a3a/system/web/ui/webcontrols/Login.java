@@ -279,12 +279,13 @@ public class Login extends CompositeControl  {
             retObjectBorderPadding = classInstance.Get("BorderPadding");
             return (int)retObjectBorderPadding;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBorderPadding_ToString = retObjectBorderPadding == null ? "null" : retObjectBorderPadding.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBorderPaddingNumber = (java.lang.Number)retObjectBorderPadding;
                 return retObjectBorderPaddingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBorderPadding != null ? retObjectBorderPadding.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBorderPadding != null ? retObjectBorderPadding.getClass() : "null", retObjectBorderPadding_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -283,12 +283,13 @@ public class SqlTrackingService extends TrackingService  {
             retObjectProfileChangeCheckInterval = classInstance.Get("ProfileChangeCheckInterval");
             return (double)retObjectProfileChangeCheckInterval;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectProfileChangeCheckInterval_ToString = retObjectProfileChangeCheckInterval == null ? "null" : retObjectProfileChangeCheckInterval.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectProfileChangeCheckIntervalNumber = (java.lang.Number)retObjectProfileChangeCheckInterval;
                 return retObjectProfileChangeCheckIntervalNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectProfileChangeCheckInterval != null ? retObjectProfileChangeCheckInterval.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectProfileChangeCheckInterval != null ? retObjectProfileChangeCheckInterval.getClass() : "null", retObjectProfileChangeCheckInterval_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

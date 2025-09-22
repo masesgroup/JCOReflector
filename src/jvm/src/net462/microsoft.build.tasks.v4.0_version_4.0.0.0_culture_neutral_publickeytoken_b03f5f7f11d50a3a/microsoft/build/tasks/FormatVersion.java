@@ -186,12 +186,13 @@ public class FormatVersion extends TaskExtension  {
             retObjectRevision = classInstance.Get("Revision");
             return (int)retObjectRevision;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRevision_ToString = retObjectRevision == null ? "null" : retObjectRevision.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRevisionNumber = (java.lang.Number)retObjectRevision;
                 return retObjectRevisionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRevision != null ? retObjectRevision.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRevision != null ? retObjectRevision.getClass() : "null", retObjectRevision_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

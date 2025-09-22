@@ -313,12 +313,13 @@ public class Task extends NetObject implements AutoCloseable {
             retObjectWaitAny = classType.Invoke("WaitAny", toObjectFromArray(tasks), millisecondsTimeout, cancellationToken == null ? null : cancellationToken.getJCOInstance());
             return (int)retObjectWaitAny;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
                 return retObjectWaitAnyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -333,12 +334,13 @@ public class Task extends NetObject implements AutoCloseable {
             retObjectWaitAny = classType.Invoke("WaitAny", toObjectFromArray(tasks), millisecondsTimeout);
             return (int)retObjectWaitAny;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
                 return retObjectWaitAnyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -353,12 +355,13 @@ public class Task extends NetObject implements AutoCloseable {
             retObjectWaitAny = classType.Invoke("WaitAny", toObjectFromArray(tasks), cancellationToken == null ? null : cancellationToken.getJCOInstance());
             return (int)retObjectWaitAny;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
                 return retObjectWaitAnyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -373,12 +376,13 @@ public class Task extends NetObject implements AutoCloseable {
             retObjectWaitAny = classType.Invoke("WaitAny", toObjectFromArray(tasks), timeout == null ? null : timeout.getJCOInstance());
             return (int)retObjectWaitAny;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
                 return retObjectWaitAnyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -393,12 +397,13 @@ public class Task extends NetObject implements AutoCloseable {
             retObjectWaitAny = classType.Invoke("WaitAny", (java.lang.Object)toObjectFromArray(tasks));
             return (int)retObjectWaitAny;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
                 return retObjectWaitAnyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -876,12 +881,13 @@ public class Task extends NetObject implements AutoCloseable {
             retObjectId = classInstance.Get("Id");
             return (int)retObjectId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectId_ToString = retObjectId == null ? "null" : retObjectId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIdNumber = (java.lang.Number)retObjectId;
                 return retObjectIdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectId != null ? retObjectId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectId != null ? retObjectId.getClass() : "null", retObjectId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

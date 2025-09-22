@@ -383,12 +383,13 @@ public class XmlReaderSettings extends NetObject  {
             retObjectLineNumberOffset = classInstance.Get("LineNumberOffset");
             return (int)retObjectLineNumberOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLineNumberOffset_ToString = retObjectLineNumberOffset == null ? "null" : retObjectLineNumberOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLineNumberOffsetNumber = (java.lang.Number)retObjectLineNumberOffset;
                 return retObjectLineNumberOffsetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLineNumberOffset != null ? retObjectLineNumberOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLineNumberOffset != null ? retObjectLineNumberOffset.getClass() : "null", retObjectLineNumberOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -413,12 +414,13 @@ public class XmlReaderSettings extends NetObject  {
             retObjectLinePositionOffset = classInstance.Get("LinePositionOffset");
             return (int)retObjectLinePositionOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLinePositionOffset_ToString = retObjectLinePositionOffset == null ? "null" : retObjectLinePositionOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLinePositionOffsetNumber = (java.lang.Number)retObjectLinePositionOffset;
                 return retObjectLinePositionOffsetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLinePositionOffset != null ? retObjectLinePositionOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLinePositionOffset != null ? retObjectLinePositionOffset.getClass() : "null", retObjectLinePositionOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -443,12 +445,13 @@ public class XmlReaderSettings extends NetObject  {
             retObjectMaxCharactersFromEntities = classInstance.Get("MaxCharactersFromEntities");
             return (long)retObjectMaxCharactersFromEntities;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxCharactersFromEntities_ToString = retObjectMaxCharactersFromEntities == null ? "null" : retObjectMaxCharactersFromEntities.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxCharactersFromEntitiesNumber = (java.lang.Number)retObjectMaxCharactersFromEntities;
                 return retObjectMaxCharactersFromEntitiesNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMaxCharactersFromEntities != null ? retObjectMaxCharactersFromEntities.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaxCharactersFromEntities != null ? retObjectMaxCharactersFromEntities.getClass() : "null", retObjectMaxCharactersFromEntities_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -473,12 +476,13 @@ public class XmlReaderSettings extends NetObject  {
             retObjectMaxCharactersInDocument = classInstance.Get("MaxCharactersInDocument");
             return (long)retObjectMaxCharactersInDocument;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxCharactersInDocument_ToString = retObjectMaxCharactersInDocument == null ? "null" : retObjectMaxCharactersInDocument.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxCharactersInDocumentNumber = (java.lang.Number)retObjectMaxCharactersInDocument;
                 return retObjectMaxCharactersInDocumentNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMaxCharactersInDocument != null ? retObjectMaxCharactersInDocument.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaxCharactersInDocument != null ? retObjectMaxCharactersInDocument.getClass() : "null", retObjectMaxCharactersInDocument_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

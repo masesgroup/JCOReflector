@@ -657,12 +657,13 @@ public class EventLog extends Component  {
             retObjectMinimumRetentionDays = classInstance.Get("MinimumRetentionDays");
             return (int)retObjectMinimumRetentionDays;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumRetentionDays_ToString = retObjectMinimumRetentionDays == null ? "null" : retObjectMinimumRetentionDays.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinimumRetentionDaysNumber = (java.lang.Number)retObjectMinimumRetentionDays;
                 return retObjectMinimumRetentionDaysNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinimumRetentionDays != null ? retObjectMinimumRetentionDays.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimumRetentionDays != null ? retObjectMinimumRetentionDays.getClass() : "null", retObjectMinimumRetentionDays_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -677,12 +678,13 @@ public class EventLog extends Component  {
             retObjectMaximumKilobytes = classInstance.Get("MaximumKilobytes");
             return (long)retObjectMaximumKilobytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumKilobytes_ToString = retObjectMaximumKilobytes == null ? "null" : retObjectMaximumKilobytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumKilobytesNumber = (java.lang.Number)retObjectMaximumKilobytes;
                 return retObjectMaximumKilobytesNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMaximumKilobytes != null ? retObjectMaximumKilobytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaximumKilobytes != null ? retObjectMaximumKilobytes.getClass() : "null", retObjectMaximumKilobytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

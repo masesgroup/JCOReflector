@@ -174,12 +174,13 @@ public class PackUriHelper extends NetObject  {
             retObjectComparePackUri = classType.Invoke("ComparePackUri", firstPackUri == null ? null : firstPackUri.getJCOInstance(), secondPackUri == null ? null : secondPackUri.getJCOInstance());
             return (int)retObjectComparePackUri;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectComparePackUri_ToString = retObjectComparePackUri == null ? "null" : retObjectComparePackUri.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectComparePackUriNumber = (java.lang.Number)retObjectComparePackUri;
                 return retObjectComparePackUriNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectComparePackUri != null ? retObjectComparePackUri.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectComparePackUri != null ? retObjectComparePackUri.getClass() : "null", retObjectComparePackUri_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -194,12 +195,13 @@ public class PackUriHelper extends NetObject  {
             retObjectComparePartUri = classType.Invoke("ComparePartUri", firstPartUri == null ? null : firstPartUri.getJCOInstance(), secondPartUri == null ? null : secondPartUri.getJCOInstance());
             return (int)retObjectComparePartUri;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectComparePartUri_ToString = retObjectComparePartUri == null ? "null" : retObjectComparePartUri.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectComparePartUriNumber = (java.lang.Number)retObjectComparePartUri;
                 return retObjectComparePartUriNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectComparePartUri != null ? retObjectComparePartUri.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectComparePartUri != null ? retObjectComparePartUri.getClass() : "null", retObjectComparePartUri_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -175,12 +175,13 @@ public class SqlProfileProvider extends ProfileProvider  {
             retObjectDeleteInactiveProfiles = classInstance.Invoke("DeleteInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
             return (int)retObjectDeleteInactiveProfiles;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeleteInactiveProfiles_ToString = retObjectDeleteInactiveProfiles == null ? "null" : retObjectDeleteInactiveProfiles.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDeleteInactiveProfilesNumber = (java.lang.Number)retObjectDeleteInactiveProfiles;
                 return retObjectDeleteInactiveProfilesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDeleteInactiveProfiles != null ? retObjectDeleteInactiveProfiles.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteInactiveProfiles != null ? retObjectDeleteInactiveProfiles.getClass() : "null", retObjectDeleteInactiveProfiles_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -195,12 +196,13 @@ public class SqlProfileProvider extends ProfileProvider  {
             retObjectDeleteProfiles = classInstance.Invoke("DeleteProfiles", (java.lang.Object)usernames);
             return (int)retObjectDeleteProfiles;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeleteProfiles_ToString = retObjectDeleteProfiles == null ? "null" : retObjectDeleteProfiles.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDeleteProfilesNumber = (java.lang.Number)retObjectDeleteProfiles;
                 return retObjectDeleteProfilesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null", retObjectDeleteProfiles_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -215,12 +217,13 @@ public class SqlProfileProvider extends ProfileProvider  {
             retObjectDeleteProfiles = classInstance.Invoke("DeleteProfiles", (java.lang.Object)dupParam0.getJCRefOut());
             return (int)retObjectDeleteProfiles;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeleteProfiles_ToString = retObjectDeleteProfiles == null ? "null" : retObjectDeleteProfiles.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDeleteProfilesNumber = (java.lang.Number)retObjectDeleteProfiles;
                 return retObjectDeleteProfilesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null", retObjectDeleteProfiles_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -235,12 +238,13 @@ public class SqlProfileProvider extends ProfileProvider  {
             retObjectDeleteProfiles = classInstance.Invoke("DeleteProfiles", profiles == null ? null : profiles.getJCOInstance());
             return (int)retObjectDeleteProfiles;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeleteProfiles_ToString = retObjectDeleteProfiles == null ? "null" : retObjectDeleteProfiles.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDeleteProfilesNumber = (java.lang.Number)retObjectDeleteProfiles;
                 return retObjectDeleteProfilesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null", retObjectDeleteProfiles_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -255,12 +259,13 @@ public class SqlProfileProvider extends ProfileProvider  {
             retObjectGetNumberOfInactiveProfiles = classInstance.Invoke("GetNumberOfInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
             return (int)retObjectGetNumberOfInactiveProfiles;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetNumberOfInactiveProfiles_ToString = retObjectGetNumberOfInactiveProfiles == null ? "null" : retObjectGetNumberOfInactiveProfiles.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetNumberOfInactiveProfilesNumber = (java.lang.Number)retObjectGetNumberOfInactiveProfiles;
                 return retObjectGetNumberOfInactiveProfilesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetNumberOfInactiveProfiles != null ? retObjectGetNumberOfInactiveProfiles.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNumberOfInactiveProfiles != null ? retObjectGetNumberOfInactiveProfiles.getClass() : "null", retObjectGetNumberOfInactiveProfiles_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

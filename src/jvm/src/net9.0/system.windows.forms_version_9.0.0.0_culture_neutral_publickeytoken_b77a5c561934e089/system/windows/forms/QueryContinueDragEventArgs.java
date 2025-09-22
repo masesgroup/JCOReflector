@@ -191,12 +191,13 @@ public class QueryContinueDragEventArgs extends EventArgs  {
             retObjectKeyState = classInstance.Get("KeyState");
             return (int)retObjectKeyState;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKeyState_ToString = retObjectKeyState == null ? "null" : retObjectKeyState.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectKeyStateNumber = (java.lang.Number)retObjectKeyState;
                 return retObjectKeyStateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectKeyState != null ? retObjectKeyState.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeyState != null ? retObjectKeyState.getClass() : "null", retObjectKeyState_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -231,12 +231,13 @@ public class SecurityKeyIdentifierClause extends NetObject  {
             retObjectDerivationLength = classInstance.Get("DerivationLength");
             return (int)retObjectDerivationLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDerivationLength_ToString = retObjectDerivationLength == null ? "null" : retObjectDerivationLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDerivationLengthNumber = (java.lang.Number)retObjectDerivationLength;
                 return retObjectDerivationLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDerivationLength != null ? retObjectDerivationLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDerivationLength != null ? retObjectDerivationLength.getClass() : "null", retObjectDerivationLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

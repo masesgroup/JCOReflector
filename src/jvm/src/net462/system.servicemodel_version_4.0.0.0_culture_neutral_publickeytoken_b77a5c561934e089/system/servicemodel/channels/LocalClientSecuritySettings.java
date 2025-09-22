@@ -262,12 +262,13 @@ public class LocalClientSecuritySettings extends NetObject  {
             retObjectCookieRenewalThresholdPercentage = classInstance.Get("CookieRenewalThresholdPercentage");
             return (int)retObjectCookieRenewalThresholdPercentage;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCookieRenewalThresholdPercentage_ToString = retObjectCookieRenewalThresholdPercentage == null ? "null" : retObjectCookieRenewalThresholdPercentage.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCookieRenewalThresholdPercentageNumber = (java.lang.Number)retObjectCookieRenewalThresholdPercentage;
                 return retObjectCookieRenewalThresholdPercentageNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCookieRenewalThresholdPercentage != null ? retObjectCookieRenewalThresholdPercentage.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCookieRenewalThresholdPercentage != null ? retObjectCookieRenewalThresholdPercentage.getClass() : "null", retObjectCookieRenewalThresholdPercentage_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -292,12 +293,13 @@ public class LocalClientSecuritySettings extends NetObject  {
             retObjectReplayCacheSize = classInstance.Get("ReplayCacheSize");
             return (int)retObjectReplayCacheSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReplayCacheSize_ToString = retObjectReplayCacheSize == null ? "null" : retObjectReplayCacheSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReplayCacheSizeNumber = (java.lang.Number)retObjectReplayCacheSize;
                 return retObjectReplayCacheSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReplayCacheSize != null ? retObjectReplayCacheSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReplayCacheSize != null ? retObjectReplayCacheSize.getClass() : "null", retObjectReplayCacheSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

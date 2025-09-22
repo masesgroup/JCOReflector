@@ -172,12 +172,13 @@ public class ApplicationContainerSettingsElement extends ServiceModelConfigurati
             retObjectSessionId = classInstance.Get("SessionId");
             return (int)retObjectSessionId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSessionId_ToString = retObjectSessionId == null ? "null" : retObjectSessionId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSessionIdNumber = (java.lang.Number)retObjectSessionId;
                 return retObjectSessionIdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSessionId != null ? retObjectSessionId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSessionId != null ? retObjectSessionId.getClass() : "null", retObjectSessionId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

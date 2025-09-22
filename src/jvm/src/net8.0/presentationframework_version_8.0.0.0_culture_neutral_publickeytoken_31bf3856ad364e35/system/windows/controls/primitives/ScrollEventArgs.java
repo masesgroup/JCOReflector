@@ -177,12 +177,13 @@ public class ScrollEventArgs extends RoutedEventArgs  {
             retObjectNewValue = classInstance.Get("NewValue");
             return (double)retObjectNewValue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNewValue_ToString = retObjectNewValue == null ? "null" : retObjectNewValue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNewValueNumber = (java.lang.Number)retObjectNewValue;
                 return retObjectNewValueNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectNewValue != null ? retObjectNewValue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectNewValue != null ? retObjectNewValue.getClass() : "null", retObjectNewValue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

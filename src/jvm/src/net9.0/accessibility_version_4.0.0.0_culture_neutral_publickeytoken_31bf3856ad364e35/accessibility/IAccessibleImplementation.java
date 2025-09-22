@@ -212,12 +212,13 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
             retObjectaccChildCount = classInstance.Get("accChildCount");
             return (int)retObjectaccChildCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectaccChildCount_ToString = retObjectaccChildCount == null ? "null" : retObjectaccChildCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectaccChildCountNumber = (java.lang.Number)retObjectaccChildCount;
                 return retObjectaccChildCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectaccChildCount != null ? retObjectaccChildCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectaccChildCount != null ? retObjectaccChildCount.getClass() : "null", retObjectaccChildCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

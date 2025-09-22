@@ -163,12 +163,13 @@ public class DatePrototype extends DateObject  {
             retObjectgetDate = classType.Invoke("getDate", thisob == null ? null : thisob.getJCOInstance());
             return (double)retObjectgetDate;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetDate_ToString = retObjectgetDate == null ? "null" : retObjectgetDate.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectgetDateNumber = (java.lang.Number)retObjectgetDate;
                 return retObjectgetDateNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectgetDate != null ? retObjectgetDate.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetDate != null ? retObjectgetDate.getClass() : "null", retObjectgetDate_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -183,12 +184,13 @@ public class DatePrototype extends DateObject  {
             retObjectgetDay = classType.Invoke("getDay", thisob == null ? null : thisob.getJCOInstance());
             return (double)retObjectgetDay;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetDay_ToString = retObjectgetDay == null ? "null" : retObjectgetDay.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectgetDayNumber = (java.lang.Number)retObjectgetDay;
                 return retObjectgetDayNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectgetDay != null ? retObjectgetDay.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetDay != null ? retObjectgetDay.getClass() : "null", retObjectgetDay_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -203,12 +205,13 @@ public class DatePrototype extends DateObject  {
             retObjectgetFullYear = classType.Invoke("getFullYear", thisob == null ? null : thisob.getJCOInstance());
             return (double)retObjectgetFullYear;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetFullYear_ToString = retObjectgetFullYear == null ? "null" : retObjectgetFullYear.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectgetFullYearNumber = (java.lang.Number)retObjectgetFullYear;
                 return retObjectgetFullYearNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectgetFullYear != null ? retObjectgetFullYear.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetFullYear != null ? retObjectgetFullYear.getClass() : "null", retObjectgetFullYear_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -223,12 +226,13 @@ public class DatePrototype extends DateObject  {
             retObjectgetHours = classType.Invoke("getHours", thisob == null ? null : thisob.getJCOInstance());
             return (double)retObjectgetHours;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetHours_ToString = retObjectgetHours == null ? "null" : retObjectgetHours.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectgetHoursNumber = (java.lang.Number)retObjectgetHours;
                 return retObjectgetHoursNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectgetHours != null ? retObjectgetHours.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetHours != null ? retObjectgetHours.getClass() : "null", retObjectgetHours_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -243,12 +247,13 @@ public class DatePrototype extends DateObject  {
             retObjectgetMilliseconds = classType.Invoke("getMilliseconds", thisob == null ? null : thisob.getJCOInstance());
             return (double)retObjectgetMilliseconds;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetMilliseconds_ToString = retObjectgetMilliseconds == null ? "null" : retObjectgetMilliseconds.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectgetMillisecondsNumber = (java.lang.Number)retObjectgetMilliseconds;
                 return retObjectgetMillisecondsNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectgetMilliseconds != null ? retObjectgetMilliseconds.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetMilliseconds != null ? retObjectgetMilliseconds.getClass() : "null", retObjectgetMilliseconds_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -263,12 +268,13 @@ public class DatePrototype extends DateObject  {
             retObjectgetMinutes = classType.Invoke("getMinutes", thisob == null ? null : thisob.getJCOInstance());
             return (double)retObjectgetMinutes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetMinutes_ToString = retObjectgetMinutes == null ? "null" : retObjectgetMinutes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectgetMinutesNumber = (java.lang.Number)retObjectgetMinutes;
                 return retObjectgetMinutesNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectgetMinutes != null ? retObjectgetMinutes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetMinutes != null ? retObjectgetMinutes.getClass() : "null", retObjectgetMinutes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -283,12 +289,13 @@ public class DatePrototype extends DateObject  {
             retObjectgetMonth = classType.Invoke("getMonth", thisob == null ? null : thisob.getJCOInstance());
             return (double)retObjectgetMonth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetMonth_ToString = retObjectgetMonth == null ? "null" : retObjectgetMonth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectgetMonthNumber = (java.lang.Number)retObjectgetMonth;
                 return retObjectgetMonthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectgetMonth != null ? retObjectgetMonth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetMonth != null ? retObjectgetMonth.getClass() : "null", retObjectgetMonth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -303,12 +310,13 @@ public class DatePrototype extends DateObject  {
             retObjectgetSeconds = classType.Invoke("getSeconds", thisob == null ? null : thisob.getJCOInstance());
             return (double)retObjectgetSeconds;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetSeconds_ToString = retObjectgetSeconds == null ? "null" : retObjectgetSeconds.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectgetSecondsNumber = (java.lang.Number)retObjectgetSeconds;
                 return retObjectgetSecondsNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectgetSeconds != null ? retObjectgetSeconds.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetSeconds != null ? retObjectgetSeconds.getClass() : "null", retObjectgetSeconds_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -323,12 +331,13 @@ public class DatePrototype extends DateObject  {
             retObjectgetTime = classType.Invoke("getTime", thisob == null ? null : thisob.getJCOInstance());
             return (double)retObjectgetTime;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetTime_ToString = retObjectgetTime == null ? "null" : retObjectgetTime.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectgetTimeNumber = (java.lang.Number)retObjectgetTime;
                 return retObjectgetTimeNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectgetTime != null ? retObjectgetTime.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetTime != null ? retObjectgetTime.getClass() : "null", retObjectgetTime_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -343,12 +352,13 @@ public class DatePrototype extends DateObject  {
             retObjectgetTimezoneOffset = classType.Invoke("getTimezoneOffset", thisob == null ? null : thisob.getJCOInstance());
             return (double)retObjectgetTimezoneOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetTimezoneOffset_ToString = retObjectgetTimezoneOffset == null ? "null" : retObjectgetTimezoneOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectgetTimezoneOffsetNumber = (java.lang.Number)retObjectgetTimezoneOffset;
                 return retObjectgetTimezoneOffsetNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectgetTimezoneOffset != null ? retObjectgetTimezoneOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetTimezoneOffset != null ? retObjectgetTimezoneOffset.getClass() : "null", retObjectgetTimezoneOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -363,12 +373,13 @@ public class DatePrototype extends DateObject  {
             retObjectgetUTCDate = classType.Invoke("getUTCDate", thisob == null ? null : thisob.getJCOInstance());
             return (double)retObjectgetUTCDate;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetUTCDate_ToString = retObjectgetUTCDate == null ? "null" : retObjectgetUTCDate.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectgetUTCDateNumber = (java.lang.Number)retObjectgetUTCDate;
                 return retObjectgetUTCDateNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectgetUTCDate != null ? retObjectgetUTCDate.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetUTCDate != null ? retObjectgetUTCDate.getClass() : "null", retObjectgetUTCDate_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -383,12 +394,13 @@ public class DatePrototype extends DateObject  {
             retObjectgetUTCDay = classType.Invoke("getUTCDay", thisob == null ? null : thisob.getJCOInstance());
             return (double)retObjectgetUTCDay;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetUTCDay_ToString = retObjectgetUTCDay == null ? "null" : retObjectgetUTCDay.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectgetUTCDayNumber = (java.lang.Number)retObjectgetUTCDay;
                 return retObjectgetUTCDayNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectgetUTCDay != null ? retObjectgetUTCDay.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetUTCDay != null ? retObjectgetUTCDay.getClass() : "null", retObjectgetUTCDay_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -403,12 +415,13 @@ public class DatePrototype extends DateObject  {
             retObjectgetUTCFullYear = classType.Invoke("getUTCFullYear", thisob == null ? null : thisob.getJCOInstance());
             return (double)retObjectgetUTCFullYear;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetUTCFullYear_ToString = retObjectgetUTCFullYear == null ? "null" : retObjectgetUTCFullYear.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectgetUTCFullYearNumber = (java.lang.Number)retObjectgetUTCFullYear;
                 return retObjectgetUTCFullYearNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectgetUTCFullYear != null ? retObjectgetUTCFullYear.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetUTCFullYear != null ? retObjectgetUTCFullYear.getClass() : "null", retObjectgetUTCFullYear_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -423,12 +436,13 @@ public class DatePrototype extends DateObject  {
             retObjectgetUTCHours = classType.Invoke("getUTCHours", thisob == null ? null : thisob.getJCOInstance());
             return (double)retObjectgetUTCHours;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetUTCHours_ToString = retObjectgetUTCHours == null ? "null" : retObjectgetUTCHours.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectgetUTCHoursNumber = (java.lang.Number)retObjectgetUTCHours;
                 return retObjectgetUTCHoursNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectgetUTCHours != null ? retObjectgetUTCHours.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetUTCHours != null ? retObjectgetUTCHours.getClass() : "null", retObjectgetUTCHours_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -443,12 +457,13 @@ public class DatePrototype extends DateObject  {
             retObjectgetUTCMilliseconds = classType.Invoke("getUTCMilliseconds", thisob == null ? null : thisob.getJCOInstance());
             return (double)retObjectgetUTCMilliseconds;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetUTCMilliseconds_ToString = retObjectgetUTCMilliseconds == null ? "null" : retObjectgetUTCMilliseconds.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectgetUTCMillisecondsNumber = (java.lang.Number)retObjectgetUTCMilliseconds;
                 return retObjectgetUTCMillisecondsNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectgetUTCMilliseconds != null ? retObjectgetUTCMilliseconds.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetUTCMilliseconds != null ? retObjectgetUTCMilliseconds.getClass() : "null", retObjectgetUTCMilliseconds_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -463,12 +478,13 @@ public class DatePrototype extends DateObject  {
             retObjectgetUTCMinutes = classType.Invoke("getUTCMinutes", thisob == null ? null : thisob.getJCOInstance());
             return (double)retObjectgetUTCMinutes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetUTCMinutes_ToString = retObjectgetUTCMinutes == null ? "null" : retObjectgetUTCMinutes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectgetUTCMinutesNumber = (java.lang.Number)retObjectgetUTCMinutes;
                 return retObjectgetUTCMinutesNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectgetUTCMinutes != null ? retObjectgetUTCMinutes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetUTCMinutes != null ? retObjectgetUTCMinutes.getClass() : "null", retObjectgetUTCMinutes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -483,12 +499,13 @@ public class DatePrototype extends DateObject  {
             retObjectgetUTCMonth = classType.Invoke("getUTCMonth", thisob == null ? null : thisob.getJCOInstance());
             return (double)retObjectgetUTCMonth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetUTCMonth_ToString = retObjectgetUTCMonth == null ? "null" : retObjectgetUTCMonth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectgetUTCMonthNumber = (java.lang.Number)retObjectgetUTCMonth;
                 return retObjectgetUTCMonthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectgetUTCMonth != null ? retObjectgetUTCMonth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetUTCMonth != null ? retObjectgetUTCMonth.getClass() : "null", retObjectgetUTCMonth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -503,12 +520,13 @@ public class DatePrototype extends DateObject  {
             retObjectgetUTCSeconds = classType.Invoke("getUTCSeconds", thisob == null ? null : thisob.getJCOInstance());
             return (double)retObjectgetUTCSeconds;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetUTCSeconds_ToString = retObjectgetUTCSeconds == null ? "null" : retObjectgetUTCSeconds.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectgetUTCSecondsNumber = (java.lang.Number)retObjectgetUTCSeconds;
                 return retObjectgetUTCSecondsNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectgetUTCSeconds != null ? retObjectgetUTCSeconds.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetUTCSeconds != null ? retObjectgetUTCSeconds.getClass() : "null", retObjectgetUTCSeconds_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -523,12 +541,13 @@ public class DatePrototype extends DateObject  {
             retObjectgetYear = classType.Invoke("getYear", thisob == null ? null : thisob.getJCOInstance());
             return (double)retObjectgetYear;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetYear_ToString = retObjectgetYear == null ? "null" : retObjectgetYear.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectgetYearNumber = (java.lang.Number)retObjectgetYear;
                 return retObjectgetYearNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectgetYear != null ? retObjectgetYear.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetYear != null ? retObjectgetYear.getClass() : "null", retObjectgetYear_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -543,12 +562,13 @@ public class DatePrototype extends DateObject  {
             retObjectsetDate = classType.Invoke("setDate", thisob == null ? null : thisob.getJCOInstance(), ddate);
             return (double)retObjectsetDate;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetDate_ToString = retObjectsetDate == null ? "null" : retObjectsetDate.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectsetDateNumber = (java.lang.Number)retObjectsetDate;
                 return retObjectsetDateNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectsetDate != null ? retObjectsetDate.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetDate != null ? retObjectsetDate.getClass() : "null", retObjectsetDate_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -563,12 +583,13 @@ public class DatePrototype extends DateObject  {
             retObjectsetFullYear = classType.Invoke("setFullYear", thisob == null ? null : thisob.getJCOInstance(), dyear, month == null ? null : month.getJCOInstance(), date == null ? null : date.getJCOInstance());
             return (double)retObjectsetFullYear;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetFullYear_ToString = retObjectsetFullYear == null ? "null" : retObjectsetFullYear.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectsetFullYearNumber = (java.lang.Number)retObjectsetFullYear;
                 return retObjectsetFullYearNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectsetFullYear != null ? retObjectsetFullYear.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetFullYear != null ? retObjectsetFullYear.getClass() : "null", retObjectsetFullYear_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -583,12 +604,13 @@ public class DatePrototype extends DateObject  {
             retObjectsetHours = classType.Invoke("setHours", thisob == null ? null : thisob.getJCOInstance(), dhour, min == null ? null : min.getJCOInstance(), sec == null ? null : sec.getJCOInstance(), msec == null ? null : msec.getJCOInstance());
             return (double)retObjectsetHours;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetHours_ToString = retObjectsetHours == null ? "null" : retObjectsetHours.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectsetHoursNumber = (java.lang.Number)retObjectsetHours;
                 return retObjectsetHoursNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectsetHours != null ? retObjectsetHours.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetHours != null ? retObjectsetHours.getClass() : "null", retObjectsetHours_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -603,12 +625,13 @@ public class DatePrototype extends DateObject  {
             retObjectsetMilliseconds = classType.Invoke("setMilliseconds", thisob == null ? null : thisob.getJCOInstance(), dmsec);
             return (double)retObjectsetMilliseconds;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetMilliseconds_ToString = retObjectsetMilliseconds == null ? "null" : retObjectsetMilliseconds.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectsetMillisecondsNumber = (java.lang.Number)retObjectsetMilliseconds;
                 return retObjectsetMillisecondsNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectsetMilliseconds != null ? retObjectsetMilliseconds.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetMilliseconds != null ? retObjectsetMilliseconds.getClass() : "null", retObjectsetMilliseconds_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -623,12 +646,13 @@ public class DatePrototype extends DateObject  {
             retObjectsetMinutes = classType.Invoke("setMinutes", thisob == null ? null : thisob.getJCOInstance(), dmin, sec == null ? null : sec.getJCOInstance(), msec == null ? null : msec.getJCOInstance());
             return (double)retObjectsetMinutes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetMinutes_ToString = retObjectsetMinutes == null ? "null" : retObjectsetMinutes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectsetMinutesNumber = (java.lang.Number)retObjectsetMinutes;
                 return retObjectsetMinutesNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectsetMinutes != null ? retObjectsetMinutes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetMinutes != null ? retObjectsetMinutes.getClass() : "null", retObjectsetMinutes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -643,12 +667,13 @@ public class DatePrototype extends DateObject  {
             retObjectsetMonth = classType.Invoke("setMonth", thisob == null ? null : thisob.getJCOInstance(), dmonth, date == null ? null : date.getJCOInstance());
             return (double)retObjectsetMonth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetMonth_ToString = retObjectsetMonth == null ? "null" : retObjectsetMonth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectsetMonthNumber = (java.lang.Number)retObjectsetMonth;
                 return retObjectsetMonthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectsetMonth != null ? retObjectsetMonth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetMonth != null ? retObjectsetMonth.getClass() : "null", retObjectsetMonth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -663,12 +688,13 @@ public class DatePrototype extends DateObject  {
             retObjectsetSeconds = classType.Invoke("setSeconds", thisob == null ? null : thisob.getJCOInstance(), dsec, msec == null ? null : msec.getJCOInstance());
             return (double)retObjectsetSeconds;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetSeconds_ToString = retObjectsetSeconds == null ? "null" : retObjectsetSeconds.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectsetSecondsNumber = (java.lang.Number)retObjectsetSeconds;
                 return retObjectsetSecondsNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectsetSeconds != null ? retObjectsetSeconds.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetSeconds != null ? retObjectsetSeconds.getClass() : "null", retObjectsetSeconds_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -683,12 +709,13 @@ public class DatePrototype extends DateObject  {
             retObjectsetTime = classType.Invoke("setTime", thisob == null ? null : thisob.getJCOInstance(), time);
             return (double)retObjectsetTime;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetTime_ToString = retObjectsetTime == null ? "null" : retObjectsetTime.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectsetTimeNumber = (java.lang.Number)retObjectsetTime;
                 return retObjectsetTimeNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectsetTime != null ? retObjectsetTime.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetTime != null ? retObjectsetTime.getClass() : "null", retObjectsetTime_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -703,12 +730,13 @@ public class DatePrototype extends DateObject  {
             retObjectsetUTCDate = classType.Invoke("setUTCDate", thisob == null ? null : thisob.getJCOInstance(), ddate);
             return (double)retObjectsetUTCDate;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetUTCDate_ToString = retObjectsetUTCDate == null ? "null" : retObjectsetUTCDate.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectsetUTCDateNumber = (java.lang.Number)retObjectsetUTCDate;
                 return retObjectsetUTCDateNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectsetUTCDate != null ? retObjectsetUTCDate.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetUTCDate != null ? retObjectsetUTCDate.getClass() : "null", retObjectsetUTCDate_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -723,12 +751,13 @@ public class DatePrototype extends DateObject  {
             retObjectsetUTCFullYear = classType.Invoke("setUTCFullYear", thisob == null ? null : thisob.getJCOInstance(), dyear, month == null ? null : month.getJCOInstance(), date == null ? null : date.getJCOInstance());
             return (double)retObjectsetUTCFullYear;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetUTCFullYear_ToString = retObjectsetUTCFullYear == null ? "null" : retObjectsetUTCFullYear.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectsetUTCFullYearNumber = (java.lang.Number)retObjectsetUTCFullYear;
                 return retObjectsetUTCFullYearNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectsetUTCFullYear != null ? retObjectsetUTCFullYear.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetUTCFullYear != null ? retObjectsetUTCFullYear.getClass() : "null", retObjectsetUTCFullYear_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -743,12 +772,13 @@ public class DatePrototype extends DateObject  {
             retObjectsetUTCHours = classType.Invoke("setUTCHours", thisob == null ? null : thisob.getJCOInstance(), dhour, min == null ? null : min.getJCOInstance(), sec == null ? null : sec.getJCOInstance(), msec == null ? null : msec.getJCOInstance());
             return (double)retObjectsetUTCHours;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetUTCHours_ToString = retObjectsetUTCHours == null ? "null" : retObjectsetUTCHours.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectsetUTCHoursNumber = (java.lang.Number)retObjectsetUTCHours;
                 return retObjectsetUTCHoursNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectsetUTCHours != null ? retObjectsetUTCHours.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetUTCHours != null ? retObjectsetUTCHours.getClass() : "null", retObjectsetUTCHours_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -763,12 +793,13 @@ public class DatePrototype extends DateObject  {
             retObjectsetUTCMilliseconds = classType.Invoke("setUTCMilliseconds", thisob == null ? null : thisob.getJCOInstance(), dmsec);
             return (double)retObjectsetUTCMilliseconds;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetUTCMilliseconds_ToString = retObjectsetUTCMilliseconds == null ? "null" : retObjectsetUTCMilliseconds.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectsetUTCMillisecondsNumber = (java.lang.Number)retObjectsetUTCMilliseconds;
                 return retObjectsetUTCMillisecondsNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectsetUTCMilliseconds != null ? retObjectsetUTCMilliseconds.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetUTCMilliseconds != null ? retObjectsetUTCMilliseconds.getClass() : "null", retObjectsetUTCMilliseconds_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -783,12 +814,13 @@ public class DatePrototype extends DateObject  {
             retObjectsetUTCMinutes = classType.Invoke("setUTCMinutes", thisob == null ? null : thisob.getJCOInstance(), dmin, sec == null ? null : sec.getJCOInstance(), msec == null ? null : msec.getJCOInstance());
             return (double)retObjectsetUTCMinutes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetUTCMinutes_ToString = retObjectsetUTCMinutes == null ? "null" : retObjectsetUTCMinutes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectsetUTCMinutesNumber = (java.lang.Number)retObjectsetUTCMinutes;
                 return retObjectsetUTCMinutesNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectsetUTCMinutes != null ? retObjectsetUTCMinutes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetUTCMinutes != null ? retObjectsetUTCMinutes.getClass() : "null", retObjectsetUTCMinutes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -803,12 +835,13 @@ public class DatePrototype extends DateObject  {
             retObjectsetUTCMonth = classType.Invoke("setUTCMonth", thisob == null ? null : thisob.getJCOInstance(), dmonth, date == null ? null : date.getJCOInstance());
             return (double)retObjectsetUTCMonth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetUTCMonth_ToString = retObjectsetUTCMonth == null ? "null" : retObjectsetUTCMonth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectsetUTCMonthNumber = (java.lang.Number)retObjectsetUTCMonth;
                 return retObjectsetUTCMonthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectsetUTCMonth != null ? retObjectsetUTCMonth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetUTCMonth != null ? retObjectsetUTCMonth.getClass() : "null", retObjectsetUTCMonth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -823,12 +856,13 @@ public class DatePrototype extends DateObject  {
             retObjectsetUTCSeconds = classType.Invoke("setUTCSeconds", thisob == null ? null : thisob.getJCOInstance(), dsec, msec == null ? null : msec.getJCOInstance());
             return (double)retObjectsetUTCSeconds;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetUTCSeconds_ToString = retObjectsetUTCSeconds == null ? "null" : retObjectsetUTCSeconds.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectsetUTCSecondsNumber = (java.lang.Number)retObjectsetUTCSeconds;
                 return retObjectsetUTCSecondsNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectsetUTCSeconds != null ? retObjectsetUTCSeconds.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetUTCSeconds != null ? retObjectsetUTCSeconds.getClass() : "null", retObjectsetUTCSeconds_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -843,12 +877,13 @@ public class DatePrototype extends DateObject  {
             retObjectsetYear = classType.Invoke("setYear", thisob == null ? null : thisob.getJCOInstance(), dyear);
             return (double)retObjectsetYear;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetYear_ToString = retObjectsetYear == null ? "null" : retObjectsetYear.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectsetYearNumber = (java.lang.Number)retObjectsetYear;
                 return retObjectsetYearNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectsetYear != null ? retObjectsetYear.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetYear != null ? retObjectsetYear.getClass() : "null", retObjectsetYear_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -863,12 +898,13 @@ public class DatePrototype extends DateObject  {
             retObjectvalueOf = classType.Invoke("valueOf", thisob == null ? null : thisob.getJCOInstance());
             return (double)retObjectvalueOf;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectvalueOf_ToString = retObjectvalueOf == null ? "null" : retObjectvalueOf.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectvalueOfNumber = (java.lang.Number)retObjectvalueOf;
                 return retObjectvalueOfNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectvalueOf != null ? retObjectvalueOf.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectvalueOf != null ? retObjectvalueOf.getClass() : "null", retObjectvalueOf_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

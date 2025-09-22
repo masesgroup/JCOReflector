@@ -212,12 +212,13 @@ public class BulletedList extends ListControl implements system.web.ui.IPostBack
             retObjectFirstBulletNumber = classInstance.Get("FirstBulletNumber");
             return (int)retObjectFirstBulletNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFirstBulletNumber_ToString = retObjectFirstBulletNumber == null ? "null" : retObjectFirstBulletNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFirstBulletNumberNumber = (java.lang.Number)retObjectFirstBulletNumber;
                 return retObjectFirstBulletNumberNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFirstBulletNumber != null ? retObjectFirstBulletNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFirstBulletNumber != null ? retObjectFirstBulletNumber.getClass() : "null", retObjectFirstBulletNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -197,12 +197,13 @@ public class ListBox extends ListControl  {
             retObjectFindString = classInstance.Invoke("FindString", s, startIndex);
             return (int)retObjectFindString;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFindString_ToString = retObjectFindString == null ? "null" : retObjectFindString.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindStringNumber = (java.lang.Number)retObjectFindString;
                 return retObjectFindStringNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindString != null ? retObjectFindString.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindString != null ? retObjectFindString.getClass() : "null", retObjectFindString_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -217,12 +218,13 @@ public class ListBox extends ListControl  {
             retObjectFindString = classInstance.Invoke("FindString", s);
             return (int)retObjectFindString;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFindString_ToString = retObjectFindString == null ? "null" : retObjectFindString.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindStringNumber = (java.lang.Number)retObjectFindString;
                 return retObjectFindStringNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindString != null ? retObjectFindString.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindString != null ? retObjectFindString.getClass() : "null", retObjectFindString_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -237,12 +239,13 @@ public class ListBox extends ListControl  {
             retObjectFindStringExact = classInstance.Invoke("FindStringExact", s, startIndex);
             return (int)retObjectFindStringExact;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFindStringExact_ToString = retObjectFindStringExact == null ? "null" : retObjectFindStringExact.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindStringExactNumber = (java.lang.Number)retObjectFindStringExact;
                 return retObjectFindStringExactNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindStringExact != null ? retObjectFindStringExact.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindStringExact != null ? retObjectFindStringExact.getClass() : "null", retObjectFindStringExact_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -257,12 +260,13 @@ public class ListBox extends ListControl  {
             retObjectFindStringExact = classInstance.Invoke("FindStringExact", s);
             return (int)retObjectFindStringExact;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFindStringExact_ToString = retObjectFindStringExact == null ? "null" : retObjectFindStringExact.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindStringExactNumber = (java.lang.Number)retObjectFindStringExact;
                 return retObjectFindStringExactNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindStringExact != null ? retObjectFindStringExact.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindStringExact != null ? retObjectFindStringExact.getClass() : "null", retObjectFindStringExact_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -277,12 +281,13 @@ public class ListBox extends ListControl  {
             retObjectGetItemHeight = classInstance.Invoke("GetItemHeight", index);
             return (int)retObjectGetItemHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetItemHeight_ToString = retObjectGetItemHeight == null ? "null" : retObjectGetItemHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetItemHeightNumber = (java.lang.Number)retObjectGetItemHeight;
                 return retObjectGetItemHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetItemHeight != null ? retObjectGetItemHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetItemHeight != null ? retObjectGetItemHeight.getClass() : "null", retObjectGetItemHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -297,12 +302,13 @@ public class ListBox extends ListControl  {
             retObjectIndexFromPoint = classInstance.Invoke("IndexFromPoint", x, y);
             return (int)retObjectIndexFromPoint;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexFromPoint_ToString = retObjectIndexFromPoint == null ? "null" : retObjectIndexFromPoint.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIndexFromPointNumber = (java.lang.Number)retObjectIndexFromPoint;
                 return retObjectIndexFromPointNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexFromPoint != null ? retObjectIndexFromPoint.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexFromPoint != null ? retObjectIndexFromPoint.getClass() : "null", retObjectIndexFromPoint_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -317,12 +323,13 @@ public class ListBox extends ListControl  {
             retObjectIndexFromPoint = classInstance.Invoke("IndexFromPoint", p == null ? null : p.getJCOInstance());
             return (int)retObjectIndexFromPoint;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexFromPoint_ToString = retObjectIndexFromPoint == null ? "null" : retObjectIndexFromPoint.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIndexFromPointNumber = (java.lang.Number)retObjectIndexFromPoint;
                 return retObjectIndexFromPointNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexFromPoint != null ? retObjectIndexFromPoint.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexFromPoint != null ? retObjectIndexFromPoint.getClass() : "null", retObjectIndexFromPoint_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -594,12 +601,13 @@ public class ListBox extends ListControl  {
             retObjectColumnWidth = classInstance.Get("ColumnWidth");
             return (int)retObjectColumnWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnWidth_ToString = retObjectColumnWidth == null ? "null" : retObjectColumnWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectColumnWidthNumber = (java.lang.Number)retObjectColumnWidth;
                 return retObjectColumnWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectColumnWidth != null ? retObjectColumnWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumnWidth != null ? retObjectColumnWidth.getClass() : "null", retObjectColumnWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -624,12 +632,13 @@ public class ListBox extends ListControl  {
             retObjectHorizontalExtent = classInstance.Get("HorizontalExtent");
             return (int)retObjectHorizontalExtent;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHorizontalExtent_ToString = retObjectHorizontalExtent == null ? "null" : retObjectHorizontalExtent.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHorizontalExtentNumber = (java.lang.Number)retObjectHorizontalExtent;
                 return retObjectHorizontalExtentNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHorizontalExtent != null ? retObjectHorizontalExtent.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHorizontalExtent != null ? retObjectHorizontalExtent.getClass() : "null", retObjectHorizontalExtent_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -654,12 +663,13 @@ public class ListBox extends ListControl  {
             retObjectItemHeight = classInstance.Get("ItemHeight");
             return (int)retObjectItemHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectItemHeight_ToString = retObjectItemHeight == null ? "null" : retObjectItemHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectItemHeightNumber = (java.lang.Number)retObjectItemHeight;
                 return retObjectItemHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectItemHeight != null ? retObjectItemHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectItemHeight != null ? retObjectItemHeight.getClass() : "null", retObjectItemHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -684,12 +694,13 @@ public class ListBox extends ListControl  {
             retObjectPreferredHeight = classInstance.Get("PreferredHeight");
             return (int)retObjectPreferredHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPreferredHeight_ToString = retObjectPreferredHeight == null ? "null" : retObjectPreferredHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPreferredHeightNumber = (java.lang.Number)retObjectPreferredHeight;
                 return retObjectPreferredHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPreferredHeight != null ? retObjectPreferredHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPreferredHeight != null ? retObjectPreferredHeight.getClass() : "null", retObjectPreferredHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -704,12 +715,13 @@ public class ListBox extends ListControl  {
             retObjectTopIndex = classInstance.Get("TopIndex");
             return (int)retObjectTopIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTopIndex_ToString = retObjectTopIndex == null ? "null" : retObjectTopIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTopIndexNumber = (java.lang.Number)retObjectTopIndex;
                 return retObjectTopIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTopIndex != null ? retObjectTopIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTopIndex != null ? retObjectTopIndex.getClass() : "null", retObjectTopIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

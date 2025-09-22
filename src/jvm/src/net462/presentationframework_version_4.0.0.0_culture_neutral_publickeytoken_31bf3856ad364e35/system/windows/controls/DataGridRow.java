@@ -177,12 +177,13 @@ public class DataGridRow extends Control  {
             retObjectGetIndex = classInstance.Invoke("GetIndex");
             return (int)retObjectGetIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetIndex_ToString = retObjectGetIndex == null ? "null" : retObjectGetIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetIndexNumber = (java.lang.Number)retObjectGetIndex;
                 return retObjectGetIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetIndex != null ? retObjectGetIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetIndex != null ? retObjectGetIndex.getClass() : "null", retObjectGetIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -288,12 +289,13 @@ public class DataGridRow extends Control  {
             retObjectAlternationIndex = classInstance.Get("AlternationIndex");
             return (int)retObjectAlternationIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAlternationIndex_ToString = retObjectAlternationIndex == null ? "null" : retObjectAlternationIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAlternationIndexNumber = (java.lang.Number)retObjectAlternationIndex;
                 return retObjectAlternationIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAlternationIndex != null ? retObjectAlternationIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAlternationIndex != null ? retObjectAlternationIndex.getClass() : "null", retObjectAlternationIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -337,12 +337,13 @@ public class ManualResetEventSlim extends NetObject implements AutoCloseable {
             retObjectSpinCount = classInstance.Get("SpinCount");
             return (int)retObjectSpinCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSpinCount_ToString = retObjectSpinCount == null ? "null" : retObjectSpinCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSpinCountNumber = (java.lang.Number)retObjectSpinCount;
                 return retObjectSpinCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSpinCount != null ? retObjectSpinCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSpinCount != null ? retObjectSpinCount.getClass() : "null", retObjectSpinCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

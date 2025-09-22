@@ -227,12 +227,13 @@ public class XmlArrayItemAttribute extends Attribute  {
             retObjectNestingLevel = classInstance.Get("NestingLevel");
             return (int)retObjectNestingLevel;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNestingLevel_ToString = retObjectNestingLevel == null ? "null" : retObjectNestingLevel.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNestingLevelNumber = (java.lang.Number)retObjectNestingLevel;
                 return retObjectNestingLevelNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNestingLevel != null ? retObjectNestingLevel.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNestingLevel != null ? retObjectNestingLevel.getClass() : "null", retObjectNestingLevel_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

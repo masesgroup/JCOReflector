@@ -165,12 +165,13 @@ public class EventLogStatus extends NetObject  {
             retObjectStatusCode = classInstance.Get("StatusCode");
             return (int)retObjectStatusCode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStatusCode_ToString = retObjectStatusCode == null ? "null" : retObjectStatusCode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStatusCodeNumber = (java.lang.Number)retObjectStatusCode;
                 return retObjectStatusCodeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStatusCode != null ? retObjectStatusCode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStatusCode != null ? retObjectStatusCode.getClass() : "null", retObjectStatusCode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

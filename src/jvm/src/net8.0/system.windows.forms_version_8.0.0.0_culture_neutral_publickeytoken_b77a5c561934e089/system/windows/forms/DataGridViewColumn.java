@@ -189,12 +189,13 @@ public class DataGridViewColumn extends DataGridViewBand  {
             retObjectGetPreferredWidth = classInstance.Invoke("GetPreferredWidth", autoSizeColumnMode == null ? null : autoSizeColumnMode.getJCOInstance(), fixedHeight);
             return (int)retObjectGetPreferredWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetPreferredWidth_ToString = retObjectGetPreferredWidth == null ? "null" : retObjectGetPreferredWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetPreferredWidthNumber = (java.lang.Number)retObjectGetPreferredWidth;
                 return retObjectGetPreferredWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetPreferredWidth != null ? retObjectGetPreferredWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetPreferredWidth != null ? retObjectGetPreferredWidth.getClass() : "null", retObjectGetPreferredWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -242,12 +243,13 @@ public class DataGridViewColumn extends DataGridViewBand  {
             retObjectDisplayIndex = classInstance.Get("DisplayIndex");
             return (int)retObjectDisplayIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDisplayIndex_ToString = retObjectDisplayIndex == null ? "null" : retObjectDisplayIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDisplayIndexNumber = (java.lang.Number)retObjectDisplayIndex;
                 return retObjectDisplayIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDisplayIndex != null ? retObjectDisplayIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDisplayIndex != null ? retObjectDisplayIndex.getClass() : "null", retObjectDisplayIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -272,12 +274,13 @@ public class DataGridViewColumn extends DataGridViewBand  {
             retObjectDividerWidth = classInstance.Get("DividerWidth");
             return (int)retObjectDividerWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDividerWidth_ToString = retObjectDividerWidth == null ? "null" : retObjectDividerWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDividerWidthNumber = (java.lang.Number)retObjectDividerWidth;
                 return retObjectDividerWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDividerWidth != null ? retObjectDividerWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDividerWidth != null ? retObjectDividerWidth.getClass() : "null", retObjectDividerWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -302,12 +305,13 @@ public class DataGridViewColumn extends DataGridViewBand  {
             retObjectMinimumWidth = classInstance.Get("MinimumWidth");
             return (int)retObjectMinimumWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumWidth_ToString = retObjectMinimumWidth == null ? "null" : retObjectMinimumWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinimumWidthNumber = (java.lang.Number)retObjectMinimumWidth;
                 return retObjectMinimumWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinimumWidth != null ? retObjectMinimumWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimumWidth != null ? retObjectMinimumWidth.getClass() : "null", retObjectMinimumWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -332,12 +336,13 @@ public class DataGridViewColumn extends DataGridViewBand  {
             retObjectWidth = classInstance.Get("Width");
             return (int)retObjectWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWidth_ToString = retObjectWidth == null ? "null" : retObjectWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWidthNumber = (java.lang.Number)retObjectWidth;
                 return retObjectWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWidth != null ? retObjectWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWidth != null ? retObjectWidth.getClass() : "null", retObjectWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

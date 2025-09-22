@@ -372,12 +372,13 @@ public class CompilationSection extends ConfigurationSection  {
             retObjectMaxBatchGeneratedFileSize = classInstance.Get("MaxBatchGeneratedFileSize");
             return (int)retObjectMaxBatchGeneratedFileSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxBatchGeneratedFileSize_ToString = retObjectMaxBatchGeneratedFileSize == null ? "null" : retObjectMaxBatchGeneratedFileSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxBatchGeneratedFileSizeNumber = (java.lang.Number)retObjectMaxBatchGeneratedFileSize;
                 return retObjectMaxBatchGeneratedFileSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxBatchGeneratedFileSize != null ? retObjectMaxBatchGeneratedFileSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxBatchGeneratedFileSize != null ? retObjectMaxBatchGeneratedFileSize.getClass() : "null", retObjectMaxBatchGeneratedFileSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -402,12 +403,13 @@ public class CompilationSection extends ConfigurationSection  {
             retObjectMaxBatchSize = classInstance.Get("MaxBatchSize");
             return (int)retObjectMaxBatchSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxBatchSize_ToString = retObjectMaxBatchSize == null ? "null" : retObjectMaxBatchSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxBatchSizeNumber = (java.lang.Number)retObjectMaxBatchSize;
                 return retObjectMaxBatchSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxBatchSize != null ? retObjectMaxBatchSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxBatchSize != null ? retObjectMaxBatchSize.getClass() : "null", retObjectMaxBatchSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -432,12 +434,13 @@ public class CompilationSection extends ConfigurationSection  {
             retObjectMaxConcurrentCompilations = classInstance.Get("MaxConcurrentCompilations");
             return (int)retObjectMaxConcurrentCompilations;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxConcurrentCompilations_ToString = retObjectMaxConcurrentCompilations == null ? "null" : retObjectMaxConcurrentCompilations.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxConcurrentCompilationsNumber = (java.lang.Number)retObjectMaxConcurrentCompilations;
                 return retObjectMaxConcurrentCompilationsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxConcurrentCompilations != null ? retObjectMaxConcurrentCompilations.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxConcurrentCompilations != null ? retObjectMaxConcurrentCompilations.getClass() : "null", retObjectMaxConcurrentCompilations_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -462,12 +465,13 @@ public class CompilationSection extends ConfigurationSection  {
             retObjectNumRecompilesBeforeAppRestart = classInstance.Get("NumRecompilesBeforeAppRestart");
             return (int)retObjectNumRecompilesBeforeAppRestart;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNumRecompilesBeforeAppRestart_ToString = retObjectNumRecompilesBeforeAppRestart == null ? "null" : retObjectNumRecompilesBeforeAppRestart.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNumRecompilesBeforeAppRestartNumber = (java.lang.Number)retObjectNumRecompilesBeforeAppRestart;
                 return retObjectNumRecompilesBeforeAppRestartNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNumRecompilesBeforeAppRestart != null ? retObjectNumRecompilesBeforeAppRestart.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumRecompilesBeforeAppRestart != null ? retObjectNumRecompilesBeforeAppRestart.getClass() : "null", retObjectNumRecompilesBeforeAppRestart_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

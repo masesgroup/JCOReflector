@@ -214,12 +214,13 @@ public class GenericSecurityDescriptor extends NetObject  {
             retObjectRevision = classType.Get("Revision");
             return (byte)retObjectRevision;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRevision_ToString = retObjectRevision == null ? "null" : retObjectRevision.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRevisionNumber = (java.lang.Number)retObjectRevision;
                 return retObjectRevisionNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectRevision != null ? retObjectRevision.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectRevision != null ? retObjectRevision.getClass() : "null", retObjectRevision_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -234,12 +235,13 @@ public class GenericSecurityDescriptor extends NetObject  {
             retObjectBinaryLength = classInstance.Get("BinaryLength");
             return (int)retObjectBinaryLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBinaryLength_ToString = retObjectBinaryLength == null ? "null" : retObjectBinaryLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBinaryLengthNumber = (java.lang.Number)retObjectBinaryLength;
                 return retObjectBinaryLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBinaryLength != null ? retObjectBinaryLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBinaryLength != null ? retObjectBinaryLength.getClass() : "null", retObjectBinaryLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

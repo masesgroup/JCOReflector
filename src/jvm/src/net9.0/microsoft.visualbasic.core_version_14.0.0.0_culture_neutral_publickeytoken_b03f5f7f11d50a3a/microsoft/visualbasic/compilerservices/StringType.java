@@ -208,12 +208,13 @@ public class StringType extends NetObject  {
             retObjectStrCmp = classType.Invoke("StrCmp", sLeft, sRight, TextCompare);
             return (int)retObjectStrCmp;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStrCmp_ToString = retObjectStrCmp == null ? "null" : retObjectStrCmp.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStrCmpNumber = (java.lang.Number)retObjectStrCmp;
                 return retObjectStrCmpNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStrCmp != null ? retObjectStrCmp.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStrCmp != null ? retObjectStrCmp.getClass() : "null", retObjectStrCmp_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

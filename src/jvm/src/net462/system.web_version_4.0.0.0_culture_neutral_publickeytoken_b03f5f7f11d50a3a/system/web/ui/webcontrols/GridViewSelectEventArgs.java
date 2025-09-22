@@ -176,12 +176,13 @@ public class GridViewSelectEventArgs extends CancelEventArgs  {
             retObjectNewSelectedIndex = classInstance.Get("NewSelectedIndex");
             return (int)retObjectNewSelectedIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNewSelectedIndex_ToString = retObjectNewSelectedIndex == null ? "null" : retObjectNewSelectedIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNewSelectedIndexNumber = (java.lang.Number)retObjectNewSelectedIndex;
                 return retObjectNewSelectedIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNewSelectedIndex != null ? retObjectNewSelectedIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNewSelectedIndex != null ? retObjectNewSelectedIndex.getClass() : "null", retObjectNewSelectedIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

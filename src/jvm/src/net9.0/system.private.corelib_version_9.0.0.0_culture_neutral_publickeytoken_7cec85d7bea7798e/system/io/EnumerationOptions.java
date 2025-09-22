@@ -246,12 +246,13 @@ public class EnumerationOptions extends NetObject  {
             retObjectBufferSize = classInstance.Get("BufferSize");
             return (int)retObjectBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBufferSize_ToString = retObjectBufferSize == null ? "null" : retObjectBufferSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBufferSizeNumber = (java.lang.Number)retObjectBufferSize;
                 return retObjectBufferSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBufferSize != null ? retObjectBufferSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBufferSize != null ? retObjectBufferSize.getClass() : "null", retObjectBufferSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -276,12 +277,13 @@ public class EnumerationOptions extends NetObject  {
             retObjectMaxRecursionDepth = classInstance.Get("MaxRecursionDepth");
             return (int)retObjectMaxRecursionDepth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxRecursionDepth_ToString = retObjectMaxRecursionDepth == null ? "null" : retObjectMaxRecursionDepth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxRecursionDepthNumber = (java.lang.Number)retObjectMaxRecursionDepth;
                 return retObjectMaxRecursionDepthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxRecursionDepth != null ? retObjectMaxRecursionDepth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxRecursionDepth != null ? retObjectMaxRecursionDepth.getClass() : "null", retObjectMaxRecursionDepth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

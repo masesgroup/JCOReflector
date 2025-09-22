@@ -219,12 +219,13 @@ public class HttpException extends ExternalException {
             retObjectGetHttpCode = classInstance.Invoke("GetHttpCode");
             return (int)retObjectGetHttpCode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetHttpCode_ToString = retObjectGetHttpCode == null ? "null" : retObjectGetHttpCode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetHttpCodeNumber = (java.lang.Number)retObjectGetHttpCode;
                 return retObjectGetHttpCodeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetHttpCode != null ? retObjectGetHttpCode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHttpCode != null ? retObjectGetHttpCode.getClass() : "null", retObjectGetHttpCode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -282,12 +283,13 @@ public class HttpException extends ExternalException {
             retObjectWebEventCode = classInstance.Get("WebEventCode");
             return (int)retObjectWebEventCode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWebEventCode_ToString = retObjectWebEventCode == null ? "null" : retObjectWebEventCode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWebEventCodeNumber = (java.lang.Number)retObjectWebEventCode;
                 return retObjectWebEventCodeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWebEventCode != null ? retObjectWebEventCode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWebEventCode != null ? retObjectWebEventCode.getClass() : "null", retObjectWebEventCode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

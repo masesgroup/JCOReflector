@@ -153,12 +153,13 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
             retObjectGetObject = classInstance.Invoke("GetObject", pmkObjectName == null ? null : pmkObjectName.getJCOInstance(), ppunkObject.getJCRefOut());
             return (int)retObjectGetObject;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetObject_ToString = retObjectGetObject == null ? "null" : retObjectGetObject.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetObjectNumber = (java.lang.Number)retObjectGetObject;
                 return retObjectGetObjectNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetObject != null ? retObjectGetObject.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetObject != null ? retObjectGetObject.getClass() : "null", retObjectGetObject_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -173,12 +174,13 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
             retObjectGetTimeOfLastChange = classInstance.Invoke("GetTimeOfLastChange", pmkObjectName == null ? null : pmkObjectName.getJCOInstance(), pfiletime.getJCRefOut());
             return (int)retObjectGetTimeOfLastChange;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTimeOfLastChange_ToString = retObjectGetTimeOfLastChange == null ? "null" : retObjectGetTimeOfLastChange.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTimeOfLastChangeNumber = (java.lang.Number)retObjectGetTimeOfLastChange;
                 return retObjectGetTimeOfLastChangeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTimeOfLastChange != null ? retObjectGetTimeOfLastChange.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTimeOfLastChange != null ? retObjectGetTimeOfLastChange.getClass() : "null", retObjectGetTimeOfLastChange_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -193,12 +195,13 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
             retObjectIsRunning = classInstance.Invoke("IsRunning", pmkObjectName == null ? null : pmkObjectName.getJCOInstance());
             return (int)retObjectIsRunning;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIsRunning_ToString = retObjectIsRunning == null ? "null" : retObjectIsRunning.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIsRunningNumber = (java.lang.Number)retObjectIsRunning;
                 return retObjectIsRunningNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIsRunning != null ? retObjectIsRunning.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIsRunning != null ? retObjectIsRunning.getClass() : "null", retObjectIsRunning_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -213,12 +216,13 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
             retObjectRegister = classInstance.Invoke("Register", grfFlags, punkObject == null ? null : punkObject.getJCOInstance(), pmkObjectName == null ? null : pmkObjectName.getJCOInstance());
             return (int)retObjectRegister;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRegister_ToString = retObjectRegister == null ? "null" : retObjectRegister.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRegisterNumber = (java.lang.Number)retObjectRegister;
                 return retObjectRegisterNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRegister != null ? retObjectRegister.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRegister != null ? retObjectRegister.getClass() : "null", retObjectRegister_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

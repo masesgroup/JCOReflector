@@ -285,12 +285,13 @@ public class Timer extends Component  {
             retObjectInterval = classInstance.Get("Interval");
             return (double)retObjectInterval;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInterval_ToString = retObjectInterval == null ? "null" : retObjectInterval.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIntervalNumber = (java.lang.Number)retObjectInterval;
                 return retObjectIntervalNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectInterval != null ? retObjectInterval.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectInterval != null ? retObjectInterval.getClass() : "null", retObjectInterval_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

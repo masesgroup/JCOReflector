@@ -175,12 +175,13 @@ public class CommonAce extends QualifiedAce  {
             retObjectMaxOpaqueLength = classType.Invoke("MaxOpaqueLength", isCallback);
             return (int)retObjectMaxOpaqueLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxOpaqueLength_ToString = retObjectMaxOpaqueLength == null ? "null" : retObjectMaxOpaqueLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxOpaqueLengthNumber = (java.lang.Number)retObjectMaxOpaqueLength;
                 return retObjectMaxOpaqueLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxOpaqueLength != null ? retObjectMaxOpaqueLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxOpaqueLength != null ? retObjectMaxOpaqueLength.getClass() : "null", retObjectMaxOpaqueLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

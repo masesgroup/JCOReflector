@@ -457,12 +457,13 @@ public class WebRequest extends MarshalByRefObject implements system.runtime.ser
             retObjectTimeout = classInstance.Get("Timeout");
             return (int)retObjectTimeout;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTimeout_ToString = retObjectTimeout == null ? "null" : retObjectTimeout.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTimeoutNumber = (java.lang.Number)retObjectTimeout;
                 return retObjectTimeoutNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTimeout != null ? retObjectTimeout.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTimeout != null ? retObjectTimeout.getClass() : "null", retObjectTimeout_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -487,12 +488,13 @@ public class WebRequest extends MarshalByRefObject implements system.runtime.ser
             retObjectContentLength = classInstance.Get("ContentLength");
             return (long)retObjectContentLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectContentLength_ToString = retObjectContentLength == null ? "null" : retObjectContentLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectContentLengthNumber = (java.lang.Number)retObjectContentLength;
                 return retObjectContentLengthNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectContentLength != null ? retObjectContentLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectContentLength != null ? retObjectContentLength.getClass() : "null", retObjectContentLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

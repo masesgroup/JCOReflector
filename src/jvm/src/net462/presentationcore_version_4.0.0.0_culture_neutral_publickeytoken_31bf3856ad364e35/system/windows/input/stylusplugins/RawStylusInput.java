@@ -201,12 +201,13 @@ public class RawStylusInput extends NetObject  {
             retObjectStylusDeviceId = classInstance.Get("StylusDeviceId");
             return (int)retObjectStylusDeviceId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStylusDeviceId_ToString = retObjectStylusDeviceId == null ? "null" : retObjectStylusDeviceId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStylusDeviceIdNumber = (java.lang.Number)retObjectStylusDeviceId;
                 return retObjectStylusDeviceIdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStylusDeviceId != null ? retObjectStylusDeviceId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStylusDeviceId != null ? retObjectStylusDeviceId.getClass() : "null", retObjectStylusDeviceId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -221,12 +222,13 @@ public class RawStylusInput extends NetObject  {
             retObjectTabletDeviceId = classInstance.Get("TabletDeviceId");
             return (int)retObjectTabletDeviceId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTabletDeviceId_ToString = retObjectTabletDeviceId == null ? "null" : retObjectTabletDeviceId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTabletDeviceIdNumber = (java.lang.Number)retObjectTabletDeviceId;
                 return retObjectTabletDeviceIdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTabletDeviceId != null ? retObjectTabletDeviceId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTabletDeviceId != null ? retObjectTabletDeviceId.getClass() : "null", retObjectTabletDeviceId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -241,12 +243,13 @@ public class RawStylusInput extends NetObject  {
             retObjectTimestamp = classInstance.Get("Timestamp");
             return (int)retObjectTimestamp;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTimestamp_ToString = retObjectTimestamp == null ? "null" : retObjectTimestamp.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTimestampNumber = (java.lang.Number)retObjectTimestamp;
                 return retObjectTimestampNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTimestamp != null ? retObjectTimestamp.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTimestamp != null ? retObjectTimestamp.getClass() : "null", retObjectTimestamp_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

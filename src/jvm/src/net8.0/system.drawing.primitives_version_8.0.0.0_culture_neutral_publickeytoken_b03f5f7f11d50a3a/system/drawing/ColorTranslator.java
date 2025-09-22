@@ -160,12 +160,13 @@ public class ColorTranslator extends NetObject  {
             retObjectToOle = classType.Invoke("ToOle", c == null ? null : c.getJCOInstance());
             return (int)retObjectToOle;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToOle_ToString = retObjectToOle == null ? "null" : retObjectToOle.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToOleNumber = (java.lang.Number)retObjectToOle;
                 return retObjectToOleNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectToOle != null ? retObjectToOle.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToOle != null ? retObjectToOle.getClass() : "null", retObjectToOle_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -180,12 +181,13 @@ public class ColorTranslator extends NetObject  {
             retObjectToWin32 = classType.Invoke("ToWin32", c == null ? null : c.getJCOInstance());
             return (int)retObjectToWin32;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToWin32_ToString = retObjectToWin32 == null ? "null" : retObjectToWin32.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToWin32Number = (java.lang.Number)retObjectToWin32;
                 return retObjectToWin32Number.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectToWin32 != null ? retObjectToWin32.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToWin32 != null ? retObjectToWin32.getClass() : "null", retObjectToWin32_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

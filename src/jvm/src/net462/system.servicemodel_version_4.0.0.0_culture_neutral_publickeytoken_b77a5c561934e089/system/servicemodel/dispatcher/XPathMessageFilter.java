@@ -363,12 +363,13 @@ public class XPathMessageFilter extends MessageFilter implements system.xml.seri
             retObjectNodeQuota = classInstance.Get("NodeQuota");
             return (int)retObjectNodeQuota;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNodeQuota_ToString = retObjectNodeQuota == null ? "null" : retObjectNodeQuota.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNodeQuotaNumber = (java.lang.Number)retObjectNodeQuota;
                 return retObjectNodeQuotaNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNodeQuota != null ? retObjectNodeQuota.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNodeQuota != null ? retObjectNodeQuota.getClass() : "null", retObjectNodeQuota_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -675,12 +675,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
             retObjectCellPadding = classInstance.Get("CellPadding");
             return (int)retObjectCellPadding;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCellPadding_ToString = retObjectCellPadding == null ? "null" : retObjectCellPadding.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCellPaddingNumber = (java.lang.Number)retObjectCellPadding;
                 return retObjectCellPaddingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCellPadding != null ? retObjectCellPadding.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCellPadding != null ? retObjectCellPadding.getClass() : "null", retObjectCellPadding_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -705,12 +706,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
             retObjectCellSpacing = classInstance.Get("CellSpacing");
             return (int)retObjectCellSpacing;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCellSpacing_ToString = retObjectCellSpacing == null ? "null" : retObjectCellSpacing.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCellSpacingNumber = (java.lang.Number)retObjectCellSpacing;
                 return retObjectCellSpacingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCellSpacing != null ? retObjectCellSpacing.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCellSpacing != null ? retObjectCellSpacing.getClass() : "null", retObjectCellSpacing_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -735,12 +737,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
             retObjectEditIndex = classInstance.Get("EditIndex");
             return (int)retObjectEditIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEditIndex_ToString = retObjectEditIndex == null ? "null" : retObjectEditIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEditIndexNumber = (java.lang.Number)retObjectEditIndex;
                 return retObjectEditIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEditIndex != null ? retObjectEditIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEditIndex != null ? retObjectEditIndex.getClass() : "null", retObjectEditIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -765,12 +768,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
             retObjectPageCount = classInstance.Get("PageCount");
             return (int)retObjectPageCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageCount_ToString = retObjectPageCount == null ? "null" : retObjectPageCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPageCountNumber = (java.lang.Number)retObjectPageCount;
                 return retObjectPageCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageCount != null ? retObjectPageCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageCount != null ? retObjectPageCount.getClass() : "null", retObjectPageCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -785,12 +789,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
             retObjectPageIndex = classInstance.Get("PageIndex");
             return (int)retObjectPageIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageIndex_ToString = retObjectPageIndex == null ? "null" : retObjectPageIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPageIndexNumber = (java.lang.Number)retObjectPageIndex;
                 return retObjectPageIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageIndex != null ? retObjectPageIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageIndex != null ? retObjectPageIndex.getClass() : "null", retObjectPageIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -815,12 +820,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
             retObjectPageSize = classInstance.Get("PageSize");
             return (int)retObjectPageSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageSize_ToString = retObjectPageSize == null ? "null" : retObjectPageSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPageSizeNumber = (java.lang.Number)retObjectPageSize;
                 return retObjectPageSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageSize != null ? retObjectPageSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageSize != null ? retObjectPageSize.getClass() : "null", retObjectPageSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -845,12 +851,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
             retObjectSelectedIndex = classInstance.Get("SelectedIndex");
             return (int)retObjectSelectedIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectedIndex_ToString = retObjectSelectedIndex == null ? "null" : retObjectSelectedIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSelectedIndexNumber = (java.lang.Number)retObjectSelectedIndex;
                 return retObjectSelectedIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSelectedIndex != null ? retObjectSelectedIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectedIndex != null ? retObjectSelectedIndex.getClass() : "null", retObjectSelectedIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -875,12 +882,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
             retObjectVirtualItemCount = classInstance.Get("VirtualItemCount");
             return (int)retObjectVirtualItemCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVirtualItemCount_ToString = retObjectVirtualItemCount == null ? "null" : retObjectVirtualItemCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVirtualItemCountNumber = (java.lang.Number)retObjectVirtualItemCount;
                 return retObjectVirtualItemCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVirtualItemCount != null ? retObjectVirtualItemCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVirtualItemCount != null ? retObjectVirtualItemCount.getClass() : "null", retObjectVirtualItemCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

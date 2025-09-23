@@ -201,12 +201,13 @@ public class PageRange extends ValueType  {
             retObjectPageFrom = classInstance.Get("PageFrom");
             return (int)retObjectPageFrom;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageFrom_ToString = retObjectPageFrom == null ? "null" : retObjectPageFrom.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPageFromNumber = (java.lang.Number)retObjectPageFrom;
                 return retObjectPageFromNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageFrom != null ? retObjectPageFrom.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageFrom != null ? retObjectPageFrom.getClass() : "null", retObjectPageFrom_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -231,12 +232,13 @@ public class PageRange extends ValueType  {
             retObjectPageTo = classInstance.Get("PageTo");
             return (int)retObjectPageTo;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageTo_ToString = retObjectPageTo == null ? "null" : retObjectPageTo.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPageToNumber = (java.lang.Number)retObjectPageTo;
                 return retObjectPageToNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageTo != null ? retObjectPageTo.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageTo != null ? retObjectPageTo.getClass() : "null", retObjectPageTo_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

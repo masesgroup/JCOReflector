@@ -234,12 +234,13 @@ public class StandardFormat extends ValueType  {
             retObjectPrecision = classInstance.Get("Precision");
             return (byte)retObjectPrecision;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPrecision_ToString = retObjectPrecision == null ? "null" : retObjectPrecision.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPrecisionNumber = (java.lang.Number)retObjectPrecision;
                 return retObjectPrecisionNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectPrecision != null ? retObjectPrecision.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectPrecision != null ? retObjectPrecision.getClass() : "null", retObjectPrecision_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

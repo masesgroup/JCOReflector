@@ -197,12 +197,13 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
             retObjectKeySpec = classInstance.Get("KeySpec");
             return (int)retObjectKeySpec;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKeySpec_ToString = retObjectKeySpec == null ? "null" : retObjectKeySpec.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectKeySpecNumber = (java.lang.Number)retObjectKeySpec;
                 return retObjectKeySpecNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectKeySpec != null ? retObjectKeySpec.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeySpec != null ? retObjectKeySpec.getClass() : "null", retObjectKeySpec_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -227,12 +228,13 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
             retObjectProviderType = classInstance.Get("ProviderType");
             return (int)retObjectProviderType;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectProviderType_ToString = retObjectProviderType == null ? "null" : retObjectProviderType.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectProviderTypeNumber = (java.lang.Number)retObjectProviderType;
                 return retObjectProviderTypeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectProviderType != null ? retObjectProviderType.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectProviderType != null ? retObjectProviderType.getClass() : "null", retObjectProviderType_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

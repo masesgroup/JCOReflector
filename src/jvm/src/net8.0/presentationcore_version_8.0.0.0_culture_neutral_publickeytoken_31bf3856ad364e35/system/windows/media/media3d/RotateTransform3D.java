@@ -236,12 +236,13 @@ public class RotateTransform3D extends AffineTransform3D  {
             retObjectCenterX = classInstance.Get("CenterX");
             return (double)retObjectCenterX;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCenterX_ToString = retObjectCenterX == null ? "null" : retObjectCenterX.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCenterXNumber = (java.lang.Number)retObjectCenterX;
                 return retObjectCenterXNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectCenterX != null ? retObjectCenterX.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCenterX != null ? retObjectCenterX.getClass() : "null", retObjectCenterX_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -266,12 +267,13 @@ public class RotateTransform3D extends AffineTransform3D  {
             retObjectCenterY = classInstance.Get("CenterY");
             return (double)retObjectCenterY;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCenterY_ToString = retObjectCenterY == null ? "null" : retObjectCenterY.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCenterYNumber = (java.lang.Number)retObjectCenterY;
                 return retObjectCenterYNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectCenterY != null ? retObjectCenterY.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCenterY != null ? retObjectCenterY.getClass() : "null", retObjectCenterY_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -296,12 +298,13 @@ public class RotateTransform3D extends AffineTransform3D  {
             retObjectCenterZ = classInstance.Get("CenterZ");
             return (double)retObjectCenterZ;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCenterZ_ToString = retObjectCenterZ == null ? "null" : retObjectCenterZ.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCenterZNumber = (java.lang.Number)retObjectCenterZ;
                 return retObjectCenterZNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectCenterZ != null ? retObjectCenterZ.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCenterZ != null ? retObjectCenterZ.getClass() : "null", retObjectCenterZ_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

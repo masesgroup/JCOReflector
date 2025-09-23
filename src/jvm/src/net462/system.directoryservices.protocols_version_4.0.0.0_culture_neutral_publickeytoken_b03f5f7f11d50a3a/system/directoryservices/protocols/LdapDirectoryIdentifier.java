@@ -254,12 +254,13 @@ public class LdapDirectoryIdentifier extends DirectoryIdentifier  {
             retObjectPortNumber = classInstance.Get("PortNumber");
             return (int)retObjectPortNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPortNumber_ToString = retObjectPortNumber == null ? "null" : retObjectPortNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPortNumberNumber = (java.lang.Number)retObjectPortNumber;
                 return retObjectPortNumberNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPortNumber != null ? retObjectPortNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPortNumber != null ? retObjectPortNumber.getClass() : "null", retObjectPortNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

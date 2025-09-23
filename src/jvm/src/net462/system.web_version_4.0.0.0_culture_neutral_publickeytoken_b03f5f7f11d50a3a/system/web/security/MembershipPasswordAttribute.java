@@ -186,12 +186,13 @@ public class MembershipPasswordAttribute extends ValidationAttribute  {
             retObjectMinRequiredNonAlphanumericCharacters = classInstance.Get("MinRequiredNonAlphanumericCharacters");
             return (int)retObjectMinRequiredNonAlphanumericCharacters;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinRequiredNonAlphanumericCharacters_ToString = retObjectMinRequiredNonAlphanumericCharacters == null ? "null" : retObjectMinRequiredNonAlphanumericCharacters.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinRequiredNonAlphanumericCharactersNumber = (java.lang.Number)retObjectMinRequiredNonAlphanumericCharacters;
                 return retObjectMinRequiredNonAlphanumericCharactersNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinRequiredNonAlphanumericCharacters != null ? retObjectMinRequiredNonAlphanumericCharacters.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinRequiredNonAlphanumericCharacters != null ? retObjectMinRequiredNonAlphanumericCharacters.getClass() : "null", retObjectMinRequiredNonAlphanumericCharacters_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -216,12 +217,13 @@ public class MembershipPasswordAttribute extends ValidationAttribute  {
             retObjectMinRequiredPasswordLength = classInstance.Get("MinRequiredPasswordLength");
             return (int)retObjectMinRequiredPasswordLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinRequiredPasswordLength_ToString = retObjectMinRequiredPasswordLength == null ? "null" : retObjectMinRequiredPasswordLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinRequiredPasswordLengthNumber = (java.lang.Number)retObjectMinRequiredPasswordLength;
                 return retObjectMinRequiredPasswordLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinRequiredPasswordLength != null ? retObjectMinRequiredPasswordLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinRequiredPasswordLength != null ? retObjectMinRequiredPasswordLength.getClass() : "null", retObjectMinRequiredPasswordLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

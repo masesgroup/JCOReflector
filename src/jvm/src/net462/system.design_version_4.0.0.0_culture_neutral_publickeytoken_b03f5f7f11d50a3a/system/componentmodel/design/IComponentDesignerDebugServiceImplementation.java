@@ -183,12 +183,13 @@ public class IComponentDesignerDebugServiceImplementation extends NetObject impl
             retObjectIndentLevel = classInstance.Get("IndentLevel");
             return (int)retObjectIndentLevel;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndentLevel_ToString = retObjectIndentLevel == null ? "null" : retObjectIndentLevel.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIndentLevelNumber = (java.lang.Number)retObjectIndentLevel;
                 return retObjectIndentLevelNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndentLevel != null ? retObjectIndentLevel.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndentLevel != null ? retObjectIndentLevel.getClass() : "null", retObjectIndentLevel_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

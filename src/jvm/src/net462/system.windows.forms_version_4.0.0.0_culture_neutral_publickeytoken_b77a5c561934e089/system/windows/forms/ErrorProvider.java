@@ -214,12 +214,13 @@ public class ErrorProvider extends Component implements system.componentmodel.IS
             retObjectGetIconPadding = classInstance.Invoke("GetIconPadding", control == null ? null : control.getJCOInstance());
             return (int)retObjectGetIconPadding;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetIconPadding_ToString = retObjectGetIconPadding == null ? "null" : retObjectGetIconPadding.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetIconPaddingNumber = (java.lang.Number)retObjectGetIconPadding;
                 return retObjectGetIconPaddingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetIconPadding != null ? retObjectGetIconPadding.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetIconPadding != null ? retObjectGetIconPadding.getClass() : "null", retObjectGetIconPadding_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -369,12 +370,13 @@ public class ErrorProvider extends Component implements system.componentmodel.IS
             retObjectBlinkRate = classInstance.Get("BlinkRate");
             return (int)retObjectBlinkRate;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBlinkRate_ToString = retObjectBlinkRate == null ? "null" : retObjectBlinkRate.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBlinkRateNumber = (java.lang.Number)retObjectBlinkRate;
                 return retObjectBlinkRateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBlinkRate != null ? retObjectBlinkRate.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBlinkRate != null ? retObjectBlinkRate.getClass() : "null", retObjectBlinkRate_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

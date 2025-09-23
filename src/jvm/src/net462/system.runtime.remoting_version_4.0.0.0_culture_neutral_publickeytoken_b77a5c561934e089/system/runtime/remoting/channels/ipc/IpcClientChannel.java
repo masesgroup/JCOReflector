@@ -250,12 +250,13 @@ public class IpcClientChannel extends NetObject  {
             retObjectChannelPriority = classInstance.Get("ChannelPriority");
             return (int)retObjectChannelPriority;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectChannelPriority_ToString = retObjectChannelPriority == null ? "null" : retObjectChannelPriority.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectChannelPriorityNumber = (java.lang.Number)retObjectChannelPriority;
                 return retObjectChannelPriorityNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectChannelPriority != null ? retObjectChannelPriority.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectChannelPriority != null ? retObjectChannelPriority.getClass() : "null", retObjectChannelPriority_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

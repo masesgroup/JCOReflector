@@ -186,12 +186,13 @@ public class IPv6MulticastOption extends NetObject  {
             retObjectInterfaceIndex = classInstance.Get("InterfaceIndex");
             return (long)retObjectInterfaceIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInterfaceIndex_ToString = retObjectInterfaceIndex == null ? "null" : retObjectInterfaceIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInterfaceIndexNumber = (java.lang.Number)retObjectInterfaceIndex;
                 return retObjectInterfaceIndexNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectInterfaceIndex != null ? retObjectInterfaceIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectInterfaceIndex != null ? retObjectInterfaceIndex.getClass() : "null", retObjectInterfaceIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -303,12 +303,13 @@ public class DateOnly extends ValueType  {
             retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
             return (int)retObjectCompareTo;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
                 return retObjectCompareToNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -323,12 +324,13 @@ public class DateOnly extends ValueType  {
             retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
             return (int)retObjectCompareTo;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
                 return retObjectCompareToNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -667,12 +669,13 @@ public class DateOnly extends ValueType  {
             retObjectDay = classInstance.Get("Day");
             return (int)retObjectDay;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDay_ToString = retObjectDay == null ? "null" : retObjectDay.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDayNumber = (java.lang.Number)retObjectDay;
                 return retObjectDayNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDay != null ? retObjectDay.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDay != null ? retObjectDay.getClass() : "null", retObjectDay_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -687,12 +690,13 @@ public class DateOnly extends ValueType  {
             retObjectDayNumber = classInstance.Get("DayNumber");
             return (int)retObjectDayNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDayNumber_ToString = retObjectDayNumber == null ? "null" : retObjectDayNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDayNumberNumber = (java.lang.Number)retObjectDayNumber;
                 return retObjectDayNumberNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDayNumber != null ? retObjectDayNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDayNumber != null ? retObjectDayNumber.getClass() : "null", retObjectDayNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -707,12 +711,13 @@ public class DateOnly extends ValueType  {
             retObjectDayOfYear = classInstance.Get("DayOfYear");
             return (int)retObjectDayOfYear;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDayOfYear_ToString = retObjectDayOfYear == null ? "null" : retObjectDayOfYear.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDayOfYearNumber = (java.lang.Number)retObjectDayOfYear;
                 return retObjectDayOfYearNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDayOfYear != null ? retObjectDayOfYear.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDayOfYear != null ? retObjectDayOfYear.getClass() : "null", retObjectDayOfYear_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -727,12 +732,13 @@ public class DateOnly extends ValueType  {
             retObjectMonth = classInstance.Get("Month");
             return (int)retObjectMonth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMonth_ToString = retObjectMonth == null ? "null" : retObjectMonth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMonthNumber = (java.lang.Number)retObjectMonth;
                 return retObjectMonthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMonth != null ? retObjectMonth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMonth != null ? retObjectMonth.getClass() : "null", retObjectMonth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -747,12 +753,13 @@ public class DateOnly extends ValueType  {
             retObjectYear = classInstance.Get("Year");
             return (int)retObjectYear;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectYear_ToString = retObjectYear == null ? "null" : retObjectYear.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectYearNumber = (java.lang.Number)retObjectYear;
                 return retObjectYearNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectYear != null ? retObjectYear.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectYear != null ? retObjectYear.getClass() : "null", retObjectYear_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

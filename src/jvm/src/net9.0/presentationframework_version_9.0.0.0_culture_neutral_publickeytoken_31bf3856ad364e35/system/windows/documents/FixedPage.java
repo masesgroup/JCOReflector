@@ -175,12 +175,13 @@ public class FixedPage extends FrameworkElement implements system.windows.markup
             retObjectGetBottom = classType.Invoke("GetBottom", element == null ? null : element.getJCOInstance());
             return (double)retObjectGetBottom;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetBottom_ToString = retObjectGetBottom == null ? "null" : retObjectGetBottom.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetBottomNumber = (java.lang.Number)retObjectGetBottom;
                 return retObjectGetBottomNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetBottom != null ? retObjectGetBottom.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetBottom != null ? retObjectGetBottom.getClass() : "null", retObjectGetBottom_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -195,12 +196,13 @@ public class FixedPage extends FrameworkElement implements system.windows.markup
             retObjectGetLeft = classType.Invoke("GetLeft", element == null ? null : element.getJCOInstance());
             return (double)retObjectGetLeft;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLeft_ToString = retObjectGetLeft == null ? "null" : retObjectGetLeft.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetLeftNumber = (java.lang.Number)retObjectGetLeft;
                 return retObjectGetLeftNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetLeft != null ? retObjectGetLeft.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetLeft != null ? retObjectGetLeft.getClass() : "null", retObjectGetLeft_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -215,12 +217,13 @@ public class FixedPage extends FrameworkElement implements system.windows.markup
             retObjectGetRight = classType.Invoke("GetRight", element == null ? null : element.getJCOInstance());
             return (double)retObjectGetRight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetRight_ToString = retObjectGetRight == null ? "null" : retObjectGetRight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetRightNumber = (java.lang.Number)retObjectGetRight;
                 return retObjectGetRightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetRight != null ? retObjectGetRight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetRight != null ? retObjectGetRight.getClass() : "null", retObjectGetRight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -235,12 +238,13 @@ public class FixedPage extends FrameworkElement implements system.windows.markup
             retObjectGetTop = classType.Invoke("GetTop", element == null ? null : element.getJCOInstance());
             return (double)retObjectGetTop;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTop_ToString = retObjectGetTop == null ? "null" : retObjectGetTop.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTopNumber = (java.lang.Number)retObjectGetTop;
                 return retObjectGetTopNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetTop != null ? retObjectGetTop.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetTop != null ? retObjectGetTop.getClass() : "null", retObjectGetTop_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

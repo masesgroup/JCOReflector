@@ -2138,12 +2138,13 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
             retObjectTextContrast = classInstance.Get("TextContrast");
             return (int)retObjectTextContrast;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTextContrast_ToString = retObjectTextContrast == null ? "null" : retObjectTextContrast.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTextContrastNumber = (java.lang.Number)retObjectTextContrast;
                 return retObjectTextContrastNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTextContrast != null ? retObjectTextContrast.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTextContrast != null ? retObjectTextContrast.getClass() : "null", retObjectTextContrast_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -177,12 +177,13 @@ public class BoundedChannelOptions extends ChannelOptions  {
             retObjectCapacity = classInstance.Get("Capacity");
             return (int)retObjectCapacity;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCapacity_ToString = retObjectCapacity == null ? "null" : retObjectCapacity.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCapacityNumber = (java.lang.Number)retObjectCapacity;
                 return retObjectCapacityNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCapacity != null ? retObjectCapacity.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCapacity != null ? retObjectCapacity.getClass() : "null", retObjectCapacity_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

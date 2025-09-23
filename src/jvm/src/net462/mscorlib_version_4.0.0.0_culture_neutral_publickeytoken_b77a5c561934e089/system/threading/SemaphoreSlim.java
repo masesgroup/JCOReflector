@@ -241,12 +241,13 @@ public class SemaphoreSlim extends NetObject implements AutoCloseable {
             retObjectRelease = classInstance.Invoke("Release");
             return (int)retObjectRelease;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRelease_ToString = retObjectRelease == null ? "null" : retObjectRelease.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReleaseNumber = (java.lang.Number)retObjectRelease;
                 return retObjectReleaseNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRelease != null ? retObjectRelease.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRelease != null ? retObjectRelease.getClass() : "null", retObjectRelease_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -261,12 +262,13 @@ public class SemaphoreSlim extends NetObject implements AutoCloseable {
             retObjectRelease = classInstance.Invoke("Release", releaseCount);
             return (int)retObjectRelease;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRelease_ToString = retObjectRelease == null ? "null" : retObjectRelease.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReleaseNumber = (java.lang.Number)retObjectRelease;
                 return retObjectReleaseNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRelease != null ? retObjectRelease.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRelease != null ? retObjectRelease.getClass() : "null", retObjectRelease_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -358,12 +360,13 @@ public class SemaphoreSlim extends NetObject implements AutoCloseable {
             retObjectCurrentCount = classInstance.Get("CurrentCount");
             return (int)retObjectCurrentCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCurrentCount_ToString = retObjectCurrentCount == null ? "null" : retObjectCurrentCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCurrentCountNumber = (java.lang.Number)retObjectCurrentCount;
                 return retObjectCurrentCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCurrentCount != null ? retObjectCurrentCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentCount != null ? retObjectCurrentCount.getClass() : "null", retObjectCurrentCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

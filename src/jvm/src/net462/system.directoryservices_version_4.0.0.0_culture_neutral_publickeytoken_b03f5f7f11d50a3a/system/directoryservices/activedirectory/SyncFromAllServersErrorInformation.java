@@ -166,12 +166,13 @@ public class SyncFromAllServersErrorInformation extends NetObject  {
             retObjectErrorCode = classInstance.Get("ErrorCode");
             return (int)retObjectErrorCode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectErrorCode_ToString = retObjectErrorCode == null ? "null" : retObjectErrorCode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectErrorCodeNumber = (java.lang.Number)retObjectErrorCode;
                 return retObjectErrorCodeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectErrorCode != null ? retObjectErrorCode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectErrorCode != null ? retObjectErrorCode.getClass() : "null", retObjectErrorCode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -198,12 +198,13 @@ public class SqlDataSource extends DataSourceControl  {
             retObjectDelete = classInstance.Invoke("Delete");
             return (int)retObjectDelete;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDelete_ToString = retObjectDelete == null ? "null" : retObjectDelete.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDeleteNumber = (java.lang.Number)retObjectDelete;
                 return retObjectDeleteNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDelete != null ? retObjectDelete.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDelete != null ? retObjectDelete.getClass() : "null", retObjectDelete_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -218,12 +219,13 @@ public class SqlDataSource extends DataSourceControl  {
             retObjectInsert = classInstance.Invoke("Insert");
             return (int)retObjectInsert;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInsert_ToString = retObjectInsert == null ? "null" : retObjectInsert.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInsertNumber = (java.lang.Number)retObjectInsert;
                 return retObjectInsertNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectInsert != null ? retObjectInsert.getClass() : "null", retObjectInsert_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -238,12 +240,13 @@ public class SqlDataSource extends DataSourceControl  {
             retObjectUpdate = classInstance.Invoke("Update");
             return (int)retObjectUpdate;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUpdate_ToString = retObjectUpdate == null ? "null" : retObjectUpdate.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectUpdateNumber = (java.lang.Number)retObjectUpdate;
                 return retObjectUpdateNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectUpdate != null ? retObjectUpdate.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUpdate != null ? retObjectUpdate.getClass() : "null", retObjectUpdate_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -325,12 +328,13 @@ public class SqlDataSource extends DataSourceControl  {
             retObjectCacheDuration = classInstance.Get("CacheDuration");
             return (int)retObjectCacheDuration;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCacheDuration_ToString = retObjectCacheDuration == null ? "null" : retObjectCacheDuration.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCacheDurationNumber = (java.lang.Number)retObjectCacheDuration;
                 return retObjectCacheDurationNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCacheDuration != null ? retObjectCacheDuration.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCacheDuration != null ? retObjectCacheDuration.getClass() : "null", retObjectCacheDuration_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

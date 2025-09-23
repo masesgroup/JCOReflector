@@ -332,12 +332,13 @@ public class Context extends NetObject  {
             retObjectContextID = classInstance.Get("ContextID");
             return (int)retObjectContextID;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectContextID_ToString = retObjectContextID == null ? "null" : retObjectContextID.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectContextIDNumber = (java.lang.Number)retObjectContextID;
                 return retObjectContextIDNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectContextID != null ? retObjectContextID.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectContextID != null ? retObjectContextID.getClass() : "null", retObjectContextID_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

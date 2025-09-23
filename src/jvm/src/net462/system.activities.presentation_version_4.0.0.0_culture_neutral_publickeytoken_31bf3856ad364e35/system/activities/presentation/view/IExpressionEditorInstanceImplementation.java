@@ -569,12 +569,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
             retObjectMaxLines = classInstance.Get("MaxLines");
             return (int)retObjectMaxLines;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxLines_ToString = retObjectMaxLines == null ? "null" : retObjectMaxLines.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxLinesNumber = (java.lang.Number)retObjectMaxLines;
                 return retObjectMaxLinesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxLines != null ? retObjectMaxLines.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxLines != null ? retObjectMaxLines.getClass() : "null", retObjectMaxLines_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -599,12 +600,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
             retObjectMinLines = classInstance.Get("MinLines");
             return (int)retObjectMinLines;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinLines_ToString = retObjectMinLines == null ? "null" : retObjectMinLines.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinLinesNumber = (java.lang.Number)retObjectMinLines;
                 return retObjectMinLinesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinLines != null ? retObjectMinLines.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinLines != null ? retObjectMinLines.getClass() : "null", retObjectMinLines_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

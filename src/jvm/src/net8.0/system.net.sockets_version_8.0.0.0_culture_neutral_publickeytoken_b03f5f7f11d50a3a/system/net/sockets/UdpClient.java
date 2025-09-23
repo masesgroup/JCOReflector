@@ -270,12 +270,13 @@ public class UdpClient extends NetObject implements AutoCloseable {
             retObjectEndSend = classInstance.Invoke("EndSend", asyncResult == null ? null : asyncResult.getJCOInstance());
             return (int)retObjectEndSend;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndSend_ToString = retObjectEndSend == null ? "null" : retObjectEndSend.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEndSendNumber = (java.lang.Number)retObjectEndSend;
                 return retObjectEndSendNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEndSend != null ? retObjectEndSend.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndSend != null ? retObjectEndSend.getClass() : "null", retObjectEndSend_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -290,12 +291,13 @@ public class UdpClient extends NetObject implements AutoCloseable {
             retObjectSend = classInstance.Invoke("Send", dgram, bytes, endPoint == null ? null : endPoint.getJCOInstance());
             return (int)retObjectSend;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
                 return retObjectSendNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -310,12 +312,13 @@ public class UdpClient extends NetObject implements AutoCloseable {
             retObjectSend = classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
             return (int)retObjectSend;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
                 return retObjectSendNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -330,12 +333,13 @@ public class UdpClient extends NetObject implements AutoCloseable {
             retObjectSend = classInstance.Invoke("Send", dgram, bytes, hostname, port);
             return (int)retObjectSend;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
                 return retObjectSendNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -350,12 +354,13 @@ public class UdpClient extends NetObject implements AutoCloseable {
             retObjectSend = classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3);
             return (int)retObjectSend;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
                 return retObjectSendNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -370,12 +375,13 @@ public class UdpClient extends NetObject implements AutoCloseable {
             retObjectSend = classInstance.Invoke("Send", dgram, bytes);
             return (int)retObjectSend;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
                 return retObjectSendNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -390,12 +396,13 @@ public class UdpClient extends NetObject implements AutoCloseable {
             retObjectSend = classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1);
             return (int)retObjectSend;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
                 return retObjectSendNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -748,12 +755,13 @@ public class UdpClient extends NetObject implements AutoCloseable {
             retObjectTtl = classInstance.Get("Ttl");
             return (short)retObjectTtl;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTtl_ToString = retObjectTtl == null ? "null" : retObjectTtl.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTtlNumber = (java.lang.Number)retObjectTtl;
                 return retObjectTtlNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectTtl != null ? retObjectTtl.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectTtl != null ? retObjectTtl.getClass() : "null", retObjectTtl_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -778,12 +786,13 @@ public class UdpClient extends NetObject implements AutoCloseable {
             retObjectAvailable = classInstance.Get("Available");
             return (int)retObjectAvailable;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAvailable_ToString = retObjectAvailable == null ? "null" : retObjectAvailable.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAvailableNumber = (java.lang.Number)retObjectAvailable;
                 return retObjectAvailableNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAvailable != null ? retObjectAvailable.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAvailable != null ? retObjectAvailable.getClass() : "null", retObjectAvailable_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

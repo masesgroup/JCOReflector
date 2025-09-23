@@ -173,12 +173,13 @@ public class WrapPanel extends Panel  {
             retObjectItemHeight = classInstance.Get("ItemHeight");
             return (double)retObjectItemHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectItemHeight_ToString = retObjectItemHeight == null ? "null" : retObjectItemHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectItemHeightNumber = (java.lang.Number)retObjectItemHeight;
                 return retObjectItemHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectItemHeight != null ? retObjectItemHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectItemHeight != null ? retObjectItemHeight.getClass() : "null", retObjectItemHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -203,12 +204,13 @@ public class WrapPanel extends Panel  {
             retObjectItemWidth = classInstance.Get("ItemWidth");
             return (double)retObjectItemWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectItemWidth_ToString = retObjectItemWidth == null ? "null" : retObjectItemWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectItemWidthNumber = (java.lang.Number)retObjectItemWidth;
                 return retObjectItemWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectItemWidth != null ? retObjectItemWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectItemWidth != null ? retObjectItemWidth.getClass() : "null", retObjectItemWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

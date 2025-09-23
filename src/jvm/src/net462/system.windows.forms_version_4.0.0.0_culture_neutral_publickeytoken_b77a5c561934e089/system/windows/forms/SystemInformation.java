@@ -170,12 +170,13 @@ public class SystemInformation extends NetObject  {
             retObjectGetHorizontalScrollBarArrowWidthForDpi = classType.Invoke("GetHorizontalScrollBarArrowWidthForDpi", dpi);
             return (int)retObjectGetHorizontalScrollBarArrowWidthForDpi;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetHorizontalScrollBarArrowWidthForDpi_ToString = retObjectGetHorizontalScrollBarArrowWidthForDpi == null ? "null" : retObjectGetHorizontalScrollBarArrowWidthForDpi.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetHorizontalScrollBarArrowWidthForDpiNumber = (java.lang.Number)retObjectGetHorizontalScrollBarArrowWidthForDpi;
                 return retObjectGetHorizontalScrollBarArrowWidthForDpiNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetHorizontalScrollBarArrowWidthForDpi != null ? retObjectGetHorizontalScrollBarArrowWidthForDpi.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHorizontalScrollBarArrowWidthForDpi != null ? retObjectGetHorizontalScrollBarArrowWidthForDpi.getClass() : "null", retObjectGetHorizontalScrollBarArrowWidthForDpi_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -190,12 +191,13 @@ public class SystemInformation extends NetObject  {
             retObjectGetHorizontalScrollBarHeightForDpi = classType.Invoke("GetHorizontalScrollBarHeightForDpi", dpi);
             return (int)retObjectGetHorizontalScrollBarHeightForDpi;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetHorizontalScrollBarHeightForDpi_ToString = retObjectGetHorizontalScrollBarHeightForDpi == null ? "null" : retObjectGetHorizontalScrollBarHeightForDpi.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetHorizontalScrollBarHeightForDpiNumber = (java.lang.Number)retObjectGetHorizontalScrollBarHeightForDpi;
                 return retObjectGetHorizontalScrollBarHeightForDpiNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetHorizontalScrollBarHeightForDpi != null ? retObjectGetHorizontalScrollBarHeightForDpi.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHorizontalScrollBarHeightForDpi != null ? retObjectGetHorizontalScrollBarHeightForDpi.getClass() : "null", retObjectGetHorizontalScrollBarHeightForDpi_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -210,12 +212,13 @@ public class SystemInformation extends NetObject  {
             retObjectGetVerticalScrollBarWidthForDpi = classType.Invoke("GetVerticalScrollBarWidthForDpi", dpi);
             return (int)retObjectGetVerticalScrollBarWidthForDpi;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetVerticalScrollBarWidthForDpi_ToString = retObjectGetVerticalScrollBarWidthForDpi == null ? "null" : retObjectGetVerticalScrollBarWidthForDpi.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetVerticalScrollBarWidthForDpiNumber = (java.lang.Number)retObjectGetVerticalScrollBarWidthForDpi;
                 return retObjectGetVerticalScrollBarWidthForDpiNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetVerticalScrollBarWidthForDpi != null ? retObjectGetVerticalScrollBarWidthForDpi.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetVerticalScrollBarWidthForDpi != null ? retObjectGetVerticalScrollBarWidthForDpi.getClass() : "null", retObjectGetVerticalScrollBarWidthForDpi_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -230,12 +233,13 @@ public class SystemInformation extends NetObject  {
             retObjectVerticalScrollBarArrowHeightForDpi = classType.Invoke("VerticalScrollBarArrowHeightForDpi", dpi);
             return (int)retObjectVerticalScrollBarArrowHeightForDpi;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVerticalScrollBarArrowHeightForDpi_ToString = retObjectVerticalScrollBarArrowHeightForDpi == null ? "null" : retObjectVerticalScrollBarArrowHeightForDpi.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVerticalScrollBarArrowHeightForDpiNumber = (java.lang.Number)retObjectVerticalScrollBarArrowHeightForDpi;
                 return retObjectVerticalScrollBarArrowHeightForDpiNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVerticalScrollBarArrowHeightForDpi != null ? retObjectVerticalScrollBarArrowHeightForDpi.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVerticalScrollBarArrowHeightForDpi != null ? retObjectVerticalScrollBarArrowHeightForDpi.getClass() : "null", retObjectVerticalScrollBarArrowHeightForDpi_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -774,12 +778,13 @@ public class SystemInformation extends NetObject  {
             retObjectActiveWindowTrackingDelay = classType.Get("ActiveWindowTrackingDelay");
             return (int)retObjectActiveWindowTrackingDelay;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectActiveWindowTrackingDelay_ToString = retObjectActiveWindowTrackingDelay == null ? "null" : retObjectActiveWindowTrackingDelay.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectActiveWindowTrackingDelayNumber = (java.lang.Number)retObjectActiveWindowTrackingDelay;
                 return retObjectActiveWindowTrackingDelayNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectActiveWindowTrackingDelay != null ? retObjectActiveWindowTrackingDelay.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectActiveWindowTrackingDelay != null ? retObjectActiveWindowTrackingDelay.getClass() : "null", retObjectActiveWindowTrackingDelay_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -794,12 +799,13 @@ public class SystemInformation extends NetObject  {
             retObjectBorderMultiplierFactor = classType.Get("BorderMultiplierFactor");
             return (int)retObjectBorderMultiplierFactor;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBorderMultiplierFactor_ToString = retObjectBorderMultiplierFactor == null ? "null" : retObjectBorderMultiplierFactor.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBorderMultiplierFactorNumber = (java.lang.Number)retObjectBorderMultiplierFactor;
                 return retObjectBorderMultiplierFactorNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBorderMultiplierFactor != null ? retObjectBorderMultiplierFactor.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBorderMultiplierFactor != null ? retObjectBorderMultiplierFactor.getClass() : "null", retObjectBorderMultiplierFactor_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -814,12 +820,13 @@ public class SystemInformation extends NetObject  {
             retObjectCaptionHeight = classType.Get("CaptionHeight");
             return (int)retObjectCaptionHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCaptionHeight_ToString = retObjectCaptionHeight == null ? "null" : retObjectCaptionHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCaptionHeightNumber = (java.lang.Number)retObjectCaptionHeight;
                 return retObjectCaptionHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCaptionHeight != null ? retObjectCaptionHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCaptionHeight != null ? retObjectCaptionHeight.getClass() : "null", retObjectCaptionHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -834,12 +841,13 @@ public class SystemInformation extends NetObject  {
             retObjectCaretBlinkTime = classType.Get("CaretBlinkTime");
             return (int)retObjectCaretBlinkTime;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCaretBlinkTime_ToString = retObjectCaretBlinkTime == null ? "null" : retObjectCaretBlinkTime.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCaretBlinkTimeNumber = (java.lang.Number)retObjectCaretBlinkTime;
                 return retObjectCaretBlinkTimeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCaretBlinkTime != null ? retObjectCaretBlinkTime.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCaretBlinkTime != null ? retObjectCaretBlinkTime.getClass() : "null", retObjectCaretBlinkTime_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -854,12 +862,13 @@ public class SystemInformation extends NetObject  {
             retObjectCaretWidth = classType.Get("CaretWidth");
             return (int)retObjectCaretWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCaretWidth_ToString = retObjectCaretWidth == null ? "null" : retObjectCaretWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCaretWidthNumber = (java.lang.Number)retObjectCaretWidth;
                 return retObjectCaretWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCaretWidth != null ? retObjectCaretWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCaretWidth != null ? retObjectCaretWidth.getClass() : "null", retObjectCaretWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -874,12 +883,13 @@ public class SystemInformation extends NetObject  {
             retObjectDoubleClickTime = classType.Get("DoubleClickTime");
             return (int)retObjectDoubleClickTime;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDoubleClickTime_ToString = retObjectDoubleClickTime == null ? "null" : retObjectDoubleClickTime.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDoubleClickTimeNumber = (java.lang.Number)retObjectDoubleClickTime;
                 return retObjectDoubleClickTimeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDoubleClickTime != null ? retObjectDoubleClickTime.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDoubleClickTime != null ? retObjectDoubleClickTime.getClass() : "null", retObjectDoubleClickTime_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -894,12 +904,13 @@ public class SystemInformation extends NetObject  {
             retObjectFontSmoothingContrast = classType.Get("FontSmoothingContrast");
             return (int)retObjectFontSmoothingContrast;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFontSmoothingContrast_ToString = retObjectFontSmoothingContrast == null ? "null" : retObjectFontSmoothingContrast.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFontSmoothingContrastNumber = (java.lang.Number)retObjectFontSmoothingContrast;
                 return retObjectFontSmoothingContrastNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFontSmoothingContrast != null ? retObjectFontSmoothingContrast.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFontSmoothingContrast != null ? retObjectFontSmoothingContrast.getClass() : "null", retObjectFontSmoothingContrast_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -914,12 +925,13 @@ public class SystemInformation extends NetObject  {
             retObjectFontSmoothingType = classType.Get("FontSmoothingType");
             return (int)retObjectFontSmoothingType;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFontSmoothingType_ToString = retObjectFontSmoothingType == null ? "null" : retObjectFontSmoothingType.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFontSmoothingTypeNumber = (java.lang.Number)retObjectFontSmoothingType;
                 return retObjectFontSmoothingTypeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFontSmoothingType != null ? retObjectFontSmoothingType.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFontSmoothingType != null ? retObjectFontSmoothingType.getClass() : "null", retObjectFontSmoothingType_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -934,12 +946,13 @@ public class SystemInformation extends NetObject  {
             retObjectHorizontalFocusThickness = classType.Get("HorizontalFocusThickness");
             return (int)retObjectHorizontalFocusThickness;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHorizontalFocusThickness_ToString = retObjectHorizontalFocusThickness == null ? "null" : retObjectHorizontalFocusThickness.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHorizontalFocusThicknessNumber = (java.lang.Number)retObjectHorizontalFocusThickness;
                 return retObjectHorizontalFocusThicknessNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHorizontalFocusThickness != null ? retObjectHorizontalFocusThickness.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHorizontalFocusThickness != null ? retObjectHorizontalFocusThickness.getClass() : "null", retObjectHorizontalFocusThickness_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -954,12 +967,13 @@ public class SystemInformation extends NetObject  {
             retObjectHorizontalResizeBorderThickness = classType.Get("HorizontalResizeBorderThickness");
             return (int)retObjectHorizontalResizeBorderThickness;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHorizontalResizeBorderThickness_ToString = retObjectHorizontalResizeBorderThickness == null ? "null" : retObjectHorizontalResizeBorderThickness.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHorizontalResizeBorderThicknessNumber = (java.lang.Number)retObjectHorizontalResizeBorderThickness;
                 return retObjectHorizontalResizeBorderThicknessNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHorizontalResizeBorderThickness != null ? retObjectHorizontalResizeBorderThickness.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHorizontalResizeBorderThickness != null ? retObjectHorizontalResizeBorderThickness.getClass() : "null", retObjectHorizontalResizeBorderThickness_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -974,12 +988,13 @@ public class SystemInformation extends NetObject  {
             retObjectHorizontalScrollBarArrowWidth = classType.Get("HorizontalScrollBarArrowWidth");
             return (int)retObjectHorizontalScrollBarArrowWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHorizontalScrollBarArrowWidth_ToString = retObjectHorizontalScrollBarArrowWidth == null ? "null" : retObjectHorizontalScrollBarArrowWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHorizontalScrollBarArrowWidthNumber = (java.lang.Number)retObjectHorizontalScrollBarArrowWidth;
                 return retObjectHorizontalScrollBarArrowWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHorizontalScrollBarArrowWidth != null ? retObjectHorizontalScrollBarArrowWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHorizontalScrollBarArrowWidth != null ? retObjectHorizontalScrollBarArrowWidth.getClass() : "null", retObjectHorizontalScrollBarArrowWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -994,12 +1009,13 @@ public class SystemInformation extends NetObject  {
             retObjectHorizontalScrollBarHeight = classType.Get("HorizontalScrollBarHeight");
             return (int)retObjectHorizontalScrollBarHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHorizontalScrollBarHeight_ToString = retObjectHorizontalScrollBarHeight == null ? "null" : retObjectHorizontalScrollBarHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHorizontalScrollBarHeightNumber = (java.lang.Number)retObjectHorizontalScrollBarHeight;
                 return retObjectHorizontalScrollBarHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHorizontalScrollBarHeight != null ? retObjectHorizontalScrollBarHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHorizontalScrollBarHeight != null ? retObjectHorizontalScrollBarHeight.getClass() : "null", retObjectHorizontalScrollBarHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1014,12 +1030,13 @@ public class SystemInformation extends NetObject  {
             retObjectHorizontalScrollBarThumbWidth = classType.Get("HorizontalScrollBarThumbWidth");
             return (int)retObjectHorizontalScrollBarThumbWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHorizontalScrollBarThumbWidth_ToString = retObjectHorizontalScrollBarThumbWidth == null ? "null" : retObjectHorizontalScrollBarThumbWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHorizontalScrollBarThumbWidthNumber = (java.lang.Number)retObjectHorizontalScrollBarThumbWidth;
                 return retObjectHorizontalScrollBarThumbWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHorizontalScrollBarThumbWidth != null ? retObjectHorizontalScrollBarThumbWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHorizontalScrollBarThumbWidth != null ? retObjectHorizontalScrollBarThumbWidth.getClass() : "null", retObjectHorizontalScrollBarThumbWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1034,12 +1051,13 @@ public class SystemInformation extends NetObject  {
             retObjectIconHorizontalSpacing = classType.Get("IconHorizontalSpacing");
             return (int)retObjectIconHorizontalSpacing;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIconHorizontalSpacing_ToString = retObjectIconHorizontalSpacing == null ? "null" : retObjectIconHorizontalSpacing.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIconHorizontalSpacingNumber = (java.lang.Number)retObjectIconHorizontalSpacing;
                 return retObjectIconHorizontalSpacingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIconHorizontalSpacing != null ? retObjectIconHorizontalSpacing.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIconHorizontalSpacing != null ? retObjectIconHorizontalSpacing.getClass() : "null", retObjectIconHorizontalSpacing_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1054,12 +1072,13 @@ public class SystemInformation extends NetObject  {
             retObjectIconVerticalSpacing = classType.Get("IconVerticalSpacing");
             return (int)retObjectIconVerticalSpacing;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIconVerticalSpacing_ToString = retObjectIconVerticalSpacing == null ? "null" : retObjectIconVerticalSpacing.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIconVerticalSpacingNumber = (java.lang.Number)retObjectIconVerticalSpacing;
                 return retObjectIconVerticalSpacingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIconVerticalSpacing != null ? retObjectIconVerticalSpacing.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIconVerticalSpacing != null ? retObjectIconVerticalSpacing.getClass() : "null", retObjectIconVerticalSpacing_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1074,12 +1093,13 @@ public class SystemInformation extends NetObject  {
             retObjectKanjiWindowHeight = classType.Get("KanjiWindowHeight");
             return (int)retObjectKanjiWindowHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKanjiWindowHeight_ToString = retObjectKanjiWindowHeight == null ? "null" : retObjectKanjiWindowHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectKanjiWindowHeightNumber = (java.lang.Number)retObjectKanjiWindowHeight;
                 return retObjectKanjiWindowHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectKanjiWindowHeight != null ? retObjectKanjiWindowHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKanjiWindowHeight != null ? retObjectKanjiWindowHeight.getClass() : "null", retObjectKanjiWindowHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1094,12 +1114,13 @@ public class SystemInformation extends NetObject  {
             retObjectKeyboardDelay = classType.Get("KeyboardDelay");
             return (int)retObjectKeyboardDelay;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKeyboardDelay_ToString = retObjectKeyboardDelay == null ? "null" : retObjectKeyboardDelay.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectKeyboardDelayNumber = (java.lang.Number)retObjectKeyboardDelay;
                 return retObjectKeyboardDelayNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectKeyboardDelay != null ? retObjectKeyboardDelay.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeyboardDelay != null ? retObjectKeyboardDelay.getClass() : "null", retObjectKeyboardDelay_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1114,12 +1135,13 @@ public class SystemInformation extends NetObject  {
             retObjectKeyboardSpeed = classType.Get("KeyboardSpeed");
             return (int)retObjectKeyboardSpeed;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKeyboardSpeed_ToString = retObjectKeyboardSpeed == null ? "null" : retObjectKeyboardSpeed.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectKeyboardSpeedNumber = (java.lang.Number)retObjectKeyboardSpeed;
                 return retObjectKeyboardSpeedNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectKeyboardSpeed != null ? retObjectKeyboardSpeed.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeyboardSpeed != null ? retObjectKeyboardSpeed.getClass() : "null", retObjectKeyboardSpeed_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1134,12 +1156,13 @@ public class SystemInformation extends NetObject  {
             retObjectMenuHeight = classType.Get("MenuHeight");
             return (int)retObjectMenuHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMenuHeight_ToString = retObjectMenuHeight == null ? "null" : retObjectMenuHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMenuHeightNumber = (java.lang.Number)retObjectMenuHeight;
                 return retObjectMenuHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMenuHeight != null ? retObjectMenuHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMenuHeight != null ? retObjectMenuHeight.getClass() : "null", retObjectMenuHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1154,12 +1177,13 @@ public class SystemInformation extends NetObject  {
             retObjectMenuShowDelay = classType.Get("MenuShowDelay");
             return (int)retObjectMenuShowDelay;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMenuShowDelay_ToString = retObjectMenuShowDelay == null ? "null" : retObjectMenuShowDelay.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMenuShowDelayNumber = (java.lang.Number)retObjectMenuShowDelay;
                 return retObjectMenuShowDelayNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMenuShowDelay != null ? retObjectMenuShowDelay.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMenuShowDelay != null ? retObjectMenuShowDelay.getClass() : "null", retObjectMenuShowDelay_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1174,12 +1198,13 @@ public class SystemInformation extends NetObject  {
             retObjectMonitorCount = classType.Get("MonitorCount");
             return (int)retObjectMonitorCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMonitorCount_ToString = retObjectMonitorCount == null ? "null" : retObjectMonitorCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMonitorCountNumber = (java.lang.Number)retObjectMonitorCount;
                 return retObjectMonitorCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMonitorCount != null ? retObjectMonitorCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMonitorCount != null ? retObjectMonitorCount.getClass() : "null", retObjectMonitorCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1194,12 +1219,13 @@ public class SystemInformation extends NetObject  {
             retObjectMouseButtons = classType.Get("MouseButtons");
             return (int)retObjectMouseButtons;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMouseButtons_ToString = retObjectMouseButtons == null ? "null" : retObjectMouseButtons.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMouseButtonsNumber = (java.lang.Number)retObjectMouseButtons;
                 return retObjectMouseButtonsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMouseButtons != null ? retObjectMouseButtons.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMouseButtons != null ? retObjectMouseButtons.getClass() : "null", retObjectMouseButtons_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1214,12 +1240,13 @@ public class SystemInformation extends NetObject  {
             retObjectMouseHoverTime = classType.Get("MouseHoverTime");
             return (int)retObjectMouseHoverTime;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMouseHoverTime_ToString = retObjectMouseHoverTime == null ? "null" : retObjectMouseHoverTime.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMouseHoverTimeNumber = (java.lang.Number)retObjectMouseHoverTime;
                 return retObjectMouseHoverTimeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMouseHoverTime != null ? retObjectMouseHoverTime.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMouseHoverTime != null ? retObjectMouseHoverTime.getClass() : "null", retObjectMouseHoverTime_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1234,12 +1261,13 @@ public class SystemInformation extends NetObject  {
             retObjectMouseSpeed = classType.Get("MouseSpeed");
             return (int)retObjectMouseSpeed;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMouseSpeed_ToString = retObjectMouseSpeed == null ? "null" : retObjectMouseSpeed.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMouseSpeedNumber = (java.lang.Number)retObjectMouseSpeed;
                 return retObjectMouseSpeedNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMouseSpeed != null ? retObjectMouseSpeed.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMouseSpeed != null ? retObjectMouseSpeed.getClass() : "null", retObjectMouseSpeed_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1254,12 +1282,13 @@ public class SystemInformation extends NetObject  {
             retObjectMouseWheelScrollDelta = classType.Get("MouseWheelScrollDelta");
             return (int)retObjectMouseWheelScrollDelta;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMouseWheelScrollDelta_ToString = retObjectMouseWheelScrollDelta == null ? "null" : retObjectMouseWheelScrollDelta.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMouseWheelScrollDeltaNumber = (java.lang.Number)retObjectMouseWheelScrollDelta;
                 return retObjectMouseWheelScrollDeltaNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMouseWheelScrollDelta != null ? retObjectMouseWheelScrollDelta.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMouseWheelScrollDelta != null ? retObjectMouseWheelScrollDelta.getClass() : "null", retObjectMouseWheelScrollDelta_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1274,12 +1303,13 @@ public class SystemInformation extends NetObject  {
             retObjectMouseWheelScrollLines = classType.Get("MouseWheelScrollLines");
             return (int)retObjectMouseWheelScrollLines;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMouseWheelScrollLines_ToString = retObjectMouseWheelScrollLines == null ? "null" : retObjectMouseWheelScrollLines.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMouseWheelScrollLinesNumber = (java.lang.Number)retObjectMouseWheelScrollLines;
                 return retObjectMouseWheelScrollLinesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMouseWheelScrollLines != null ? retObjectMouseWheelScrollLines.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMouseWheelScrollLines != null ? retObjectMouseWheelScrollLines.getClass() : "null", retObjectMouseWheelScrollLines_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1294,12 +1324,13 @@ public class SystemInformation extends NetObject  {
             retObjectSizingBorderWidth = classType.Get("SizingBorderWidth");
             return (int)retObjectSizingBorderWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSizingBorderWidth_ToString = retObjectSizingBorderWidth == null ? "null" : retObjectSizingBorderWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSizingBorderWidthNumber = (java.lang.Number)retObjectSizingBorderWidth;
                 return retObjectSizingBorderWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSizingBorderWidth != null ? retObjectSizingBorderWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSizingBorderWidth != null ? retObjectSizingBorderWidth.getClass() : "null", retObjectSizingBorderWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1314,12 +1345,13 @@ public class SystemInformation extends NetObject  {
             retObjectToolWindowCaptionHeight = classType.Get("ToolWindowCaptionHeight");
             return (int)retObjectToolWindowCaptionHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToolWindowCaptionHeight_ToString = retObjectToolWindowCaptionHeight == null ? "null" : retObjectToolWindowCaptionHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToolWindowCaptionHeightNumber = (java.lang.Number)retObjectToolWindowCaptionHeight;
                 return retObjectToolWindowCaptionHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectToolWindowCaptionHeight != null ? retObjectToolWindowCaptionHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToolWindowCaptionHeight != null ? retObjectToolWindowCaptionHeight.getClass() : "null", retObjectToolWindowCaptionHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1334,12 +1366,13 @@ public class SystemInformation extends NetObject  {
             retObjectVerticalFocusThickness = classType.Get("VerticalFocusThickness");
             return (int)retObjectVerticalFocusThickness;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVerticalFocusThickness_ToString = retObjectVerticalFocusThickness == null ? "null" : retObjectVerticalFocusThickness.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVerticalFocusThicknessNumber = (java.lang.Number)retObjectVerticalFocusThickness;
                 return retObjectVerticalFocusThicknessNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVerticalFocusThickness != null ? retObjectVerticalFocusThickness.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVerticalFocusThickness != null ? retObjectVerticalFocusThickness.getClass() : "null", retObjectVerticalFocusThickness_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1354,12 +1387,13 @@ public class SystemInformation extends NetObject  {
             retObjectVerticalResizeBorderThickness = classType.Get("VerticalResizeBorderThickness");
             return (int)retObjectVerticalResizeBorderThickness;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVerticalResizeBorderThickness_ToString = retObjectVerticalResizeBorderThickness == null ? "null" : retObjectVerticalResizeBorderThickness.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVerticalResizeBorderThicknessNumber = (java.lang.Number)retObjectVerticalResizeBorderThickness;
                 return retObjectVerticalResizeBorderThicknessNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVerticalResizeBorderThickness != null ? retObjectVerticalResizeBorderThickness.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVerticalResizeBorderThickness != null ? retObjectVerticalResizeBorderThickness.getClass() : "null", retObjectVerticalResizeBorderThickness_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1374,12 +1408,13 @@ public class SystemInformation extends NetObject  {
             retObjectVerticalScrollBarArrowHeight = classType.Get("VerticalScrollBarArrowHeight");
             return (int)retObjectVerticalScrollBarArrowHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVerticalScrollBarArrowHeight_ToString = retObjectVerticalScrollBarArrowHeight == null ? "null" : retObjectVerticalScrollBarArrowHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVerticalScrollBarArrowHeightNumber = (java.lang.Number)retObjectVerticalScrollBarArrowHeight;
                 return retObjectVerticalScrollBarArrowHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVerticalScrollBarArrowHeight != null ? retObjectVerticalScrollBarArrowHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVerticalScrollBarArrowHeight != null ? retObjectVerticalScrollBarArrowHeight.getClass() : "null", retObjectVerticalScrollBarArrowHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1394,12 +1429,13 @@ public class SystemInformation extends NetObject  {
             retObjectVerticalScrollBarThumbHeight = classType.Get("VerticalScrollBarThumbHeight");
             return (int)retObjectVerticalScrollBarThumbHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVerticalScrollBarThumbHeight_ToString = retObjectVerticalScrollBarThumbHeight == null ? "null" : retObjectVerticalScrollBarThumbHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVerticalScrollBarThumbHeightNumber = (java.lang.Number)retObjectVerticalScrollBarThumbHeight;
                 return retObjectVerticalScrollBarThumbHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVerticalScrollBarThumbHeight != null ? retObjectVerticalScrollBarThumbHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVerticalScrollBarThumbHeight != null ? retObjectVerticalScrollBarThumbHeight.getClass() : "null", retObjectVerticalScrollBarThumbHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1414,12 +1450,13 @@ public class SystemInformation extends NetObject  {
             retObjectVerticalScrollBarWidth = classType.Get("VerticalScrollBarWidth");
             return (int)retObjectVerticalScrollBarWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVerticalScrollBarWidth_ToString = retObjectVerticalScrollBarWidth == null ? "null" : retObjectVerticalScrollBarWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVerticalScrollBarWidthNumber = (java.lang.Number)retObjectVerticalScrollBarWidth;
                 return retObjectVerticalScrollBarWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVerticalScrollBarWidth != null ? retObjectVerticalScrollBarWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVerticalScrollBarWidth != null ? retObjectVerticalScrollBarWidth.getClass() : "null", retObjectVerticalScrollBarWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

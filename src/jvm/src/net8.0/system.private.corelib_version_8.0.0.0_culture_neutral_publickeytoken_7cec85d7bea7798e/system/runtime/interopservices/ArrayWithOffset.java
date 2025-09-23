@@ -187,12 +187,13 @@ public class ArrayWithOffset extends ValueType  {
             retObjectGetOffset = classInstance.Invoke("GetOffset");
             return (int)retObjectGetOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetOffset_ToString = retObjectGetOffset == null ? "null" : retObjectGetOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetOffsetNumber = (java.lang.Number)retObjectGetOffset;
                 return retObjectGetOffsetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetOffset != null ? retObjectGetOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetOffset != null ? retObjectGetOffset.getClass() : "null", retObjectGetOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

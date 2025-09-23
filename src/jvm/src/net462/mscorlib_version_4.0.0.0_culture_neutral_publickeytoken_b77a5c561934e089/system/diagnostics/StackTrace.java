@@ -299,12 +299,13 @@ public class StackTrace extends NetObject  {
             retObjectFrameCount = classInstance.Get("FrameCount");
             return (int)retObjectFrameCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFrameCount_ToString = retObjectFrameCount == null ? "null" : retObjectFrameCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFrameCountNumber = (java.lang.Number)retObjectFrameCount;
                 return retObjectFrameCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFrameCount != null ? retObjectFrameCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFrameCount != null ? retObjectFrameCount.getClass() : "null", retObjectFrameCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

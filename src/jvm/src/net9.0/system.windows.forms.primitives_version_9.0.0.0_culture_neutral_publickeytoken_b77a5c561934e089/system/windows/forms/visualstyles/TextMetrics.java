@@ -336,12 +336,13 @@ public class TextMetrics extends ValueType  {
             retObjectAscent = classInstance.Get("Ascent");
             return (int)retObjectAscent;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAscent_ToString = retObjectAscent == null ? "null" : retObjectAscent.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAscentNumber = (java.lang.Number)retObjectAscent;
                 return retObjectAscentNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAscent != null ? retObjectAscent.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAscent != null ? retObjectAscent.getClass() : "null", retObjectAscent_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -366,12 +367,13 @@ public class TextMetrics extends ValueType  {
             retObjectAverageCharWidth = classInstance.Get("AverageCharWidth");
             return (int)retObjectAverageCharWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAverageCharWidth_ToString = retObjectAverageCharWidth == null ? "null" : retObjectAverageCharWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAverageCharWidthNumber = (java.lang.Number)retObjectAverageCharWidth;
                 return retObjectAverageCharWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAverageCharWidth != null ? retObjectAverageCharWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAverageCharWidth != null ? retObjectAverageCharWidth.getClass() : "null", retObjectAverageCharWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -396,12 +398,13 @@ public class TextMetrics extends ValueType  {
             retObjectDescent = classInstance.Get("Descent");
             return (int)retObjectDescent;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDescent_ToString = retObjectDescent == null ? "null" : retObjectDescent.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDescentNumber = (java.lang.Number)retObjectDescent;
                 return retObjectDescentNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDescent != null ? retObjectDescent.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDescent != null ? retObjectDescent.getClass() : "null", retObjectDescent_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -426,12 +429,13 @@ public class TextMetrics extends ValueType  {
             retObjectDigitizedAspectX = classInstance.Get("DigitizedAspectX");
             return (int)retObjectDigitizedAspectX;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDigitizedAspectX_ToString = retObjectDigitizedAspectX == null ? "null" : retObjectDigitizedAspectX.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDigitizedAspectXNumber = (java.lang.Number)retObjectDigitizedAspectX;
                 return retObjectDigitizedAspectXNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDigitizedAspectX != null ? retObjectDigitizedAspectX.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDigitizedAspectX != null ? retObjectDigitizedAspectX.getClass() : "null", retObjectDigitizedAspectX_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -456,12 +460,13 @@ public class TextMetrics extends ValueType  {
             retObjectDigitizedAspectY = classInstance.Get("DigitizedAspectY");
             return (int)retObjectDigitizedAspectY;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDigitizedAspectY_ToString = retObjectDigitizedAspectY == null ? "null" : retObjectDigitizedAspectY.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDigitizedAspectYNumber = (java.lang.Number)retObjectDigitizedAspectY;
                 return retObjectDigitizedAspectYNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDigitizedAspectY != null ? retObjectDigitizedAspectY.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDigitizedAspectY != null ? retObjectDigitizedAspectY.getClass() : "null", retObjectDigitizedAspectY_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -486,12 +491,13 @@ public class TextMetrics extends ValueType  {
             retObjectExternalLeading = classInstance.Get("ExternalLeading");
             return (int)retObjectExternalLeading;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExternalLeading_ToString = retObjectExternalLeading == null ? "null" : retObjectExternalLeading.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExternalLeadingNumber = (java.lang.Number)retObjectExternalLeading;
                 return retObjectExternalLeadingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExternalLeading != null ? retObjectExternalLeading.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExternalLeading != null ? retObjectExternalLeading.getClass() : "null", retObjectExternalLeading_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -516,12 +522,13 @@ public class TextMetrics extends ValueType  {
             retObjectHeight = classInstance.Get("Height");
             return (int)retObjectHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHeight_ToString = retObjectHeight == null ? "null" : retObjectHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHeightNumber = (java.lang.Number)retObjectHeight;
                 return retObjectHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null", retObjectHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -546,12 +553,13 @@ public class TextMetrics extends ValueType  {
             retObjectInternalLeading = classInstance.Get("InternalLeading");
             return (int)retObjectInternalLeading;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInternalLeading_ToString = retObjectInternalLeading == null ? "null" : retObjectInternalLeading.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInternalLeadingNumber = (java.lang.Number)retObjectInternalLeading;
                 return retObjectInternalLeadingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectInternalLeading != null ? retObjectInternalLeading.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectInternalLeading != null ? retObjectInternalLeading.getClass() : "null", retObjectInternalLeading_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -576,12 +584,13 @@ public class TextMetrics extends ValueType  {
             retObjectMaxCharWidth = classInstance.Get("MaxCharWidth");
             return (int)retObjectMaxCharWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxCharWidth_ToString = retObjectMaxCharWidth == null ? "null" : retObjectMaxCharWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxCharWidthNumber = (java.lang.Number)retObjectMaxCharWidth;
                 return retObjectMaxCharWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxCharWidth != null ? retObjectMaxCharWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxCharWidth != null ? retObjectMaxCharWidth.getClass() : "null", retObjectMaxCharWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -606,12 +615,13 @@ public class TextMetrics extends ValueType  {
             retObjectOverhang = classInstance.Get("Overhang");
             return (int)retObjectOverhang;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOverhang_ToString = retObjectOverhang == null ? "null" : retObjectOverhang.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOverhangNumber = (java.lang.Number)retObjectOverhang;
                 return retObjectOverhangNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOverhang != null ? retObjectOverhang.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOverhang != null ? retObjectOverhang.getClass() : "null", retObjectOverhang_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -636,12 +646,13 @@ public class TextMetrics extends ValueType  {
             retObjectWeight = classInstance.Get("Weight");
             return (int)retObjectWeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWeight_ToString = retObjectWeight == null ? "null" : retObjectWeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWeightNumber = (java.lang.Number)retObjectWeight;
                 return retObjectWeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWeight != null ? retObjectWeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWeight != null ? retObjectWeight.getClass() : "null", retObjectWeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

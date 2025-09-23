@@ -166,12 +166,13 @@ public class DownloadProgressChangedEventArgs extends ProgressChangedEventArgs  
             retObjectBytesReceived = classInstance.Get("BytesReceived");
             return (long)retObjectBytesReceived;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBytesReceived_ToString = retObjectBytesReceived == null ? "null" : retObjectBytesReceived.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBytesReceivedNumber = (java.lang.Number)retObjectBytesReceived;
                 return retObjectBytesReceivedNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectBytesReceived != null ? retObjectBytesReceived.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectBytesReceived != null ? retObjectBytesReceived.getClass() : "null", retObjectBytesReceived_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -186,12 +187,13 @@ public class DownloadProgressChangedEventArgs extends ProgressChangedEventArgs  
             retObjectTotalBytesToReceive = classInstance.Get("TotalBytesToReceive");
             return (long)retObjectTotalBytesToReceive;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTotalBytesToReceive_ToString = retObjectTotalBytesToReceive == null ? "null" : retObjectTotalBytesToReceive.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTotalBytesToReceiveNumber = (java.lang.Number)retObjectTotalBytesToReceive;
                 return retObjectTotalBytesToReceiveNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTotalBytesToReceive != null ? retObjectTotalBytesToReceive.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectTotalBytesToReceive != null ? retObjectTotalBytesToReceive.getClass() : "null", retObjectTotalBytesToReceive_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

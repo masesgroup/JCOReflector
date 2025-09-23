@@ -163,12 +163,13 @@ public class TypeName extends NetObject  {
             retObjectGetArrayRank = classInstance.Invoke("GetArrayRank");
             return (int)retObjectGetArrayRank;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetArrayRank_ToString = retObjectGetArrayRank == null ? "null" : retObjectGetArrayRank.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetArrayRankNumber = (java.lang.Number)retObjectGetArrayRank;
                 return retObjectGetArrayRankNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetArrayRank != null ? retObjectGetArrayRank.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetArrayRank != null ? retObjectGetArrayRank.getClass() : "null", retObjectGetArrayRank_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -183,12 +184,13 @@ public class TypeName extends NetObject  {
             retObjectGetNodeCount = classInstance.Invoke("GetNodeCount");
             return (int)retObjectGetNodeCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetNodeCount_ToString = retObjectGetNodeCount == null ? "null" : retObjectGetNodeCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetNodeCountNumber = (java.lang.Number)retObjectGetNodeCount;
                 return retObjectGetNodeCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetNodeCount != null ? retObjectGetNodeCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNodeCount != null ? retObjectGetNodeCount.getClass() : "null", retObjectGetNodeCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

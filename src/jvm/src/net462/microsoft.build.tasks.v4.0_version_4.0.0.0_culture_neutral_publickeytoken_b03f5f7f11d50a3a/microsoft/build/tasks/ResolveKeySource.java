@@ -234,12 +234,13 @@ public class ResolveKeySource extends TaskExtension  {
             retObjectAutoClosePasswordPromptShow = classInstance.Get("AutoClosePasswordPromptShow");
             return (int)retObjectAutoClosePasswordPromptShow;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAutoClosePasswordPromptShow_ToString = retObjectAutoClosePasswordPromptShow == null ? "null" : retObjectAutoClosePasswordPromptShow.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAutoClosePasswordPromptShowNumber = (java.lang.Number)retObjectAutoClosePasswordPromptShow;
                 return retObjectAutoClosePasswordPromptShowNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAutoClosePasswordPromptShow != null ? retObjectAutoClosePasswordPromptShow.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAutoClosePasswordPromptShow != null ? retObjectAutoClosePasswordPromptShow.getClass() : "null", retObjectAutoClosePasswordPromptShow_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -264,12 +265,13 @@ public class ResolveKeySource extends TaskExtension  {
             retObjectAutoClosePasswordPromptTimeout = classInstance.Get("AutoClosePasswordPromptTimeout");
             return (int)retObjectAutoClosePasswordPromptTimeout;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAutoClosePasswordPromptTimeout_ToString = retObjectAutoClosePasswordPromptTimeout == null ? "null" : retObjectAutoClosePasswordPromptTimeout.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAutoClosePasswordPromptTimeoutNumber = (java.lang.Number)retObjectAutoClosePasswordPromptTimeout;
                 return retObjectAutoClosePasswordPromptTimeoutNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAutoClosePasswordPromptTimeout != null ? retObjectAutoClosePasswordPromptTimeout.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAutoClosePasswordPromptTimeout != null ? retObjectAutoClosePasswordPromptTimeout.getClass() : "null", retObjectAutoClosePasswordPromptTimeout_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

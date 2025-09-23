@@ -175,12 +175,13 @@ public class WebEventFormatter extends NetObject  {
             retObjectIndentationLevel = classInstance.Get("IndentationLevel");
             return (int)retObjectIndentationLevel;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndentationLevel_ToString = retObjectIndentationLevel == null ? "null" : retObjectIndentationLevel.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIndentationLevelNumber = (java.lang.Number)retObjectIndentationLevel;
                 return retObjectIndentationLevelNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndentationLevel != null ? retObjectIndentationLevel.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndentationLevel != null ? retObjectIndentationLevel.getClass() : "null", retObjectIndentationLevel_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -205,12 +206,13 @@ public class WebEventFormatter extends NetObject  {
             retObjectTabSize = classInstance.Get("TabSize");
             return (int)retObjectTabSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTabSize_ToString = retObjectTabSize == null ? "null" : retObjectTabSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTabSizeNumber = (java.lang.Number)retObjectTabSize;
                 return retObjectTabSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTabSize != null ? retObjectTabSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTabSize != null ? retObjectTabSize.getClass() : "null", retObjectTabSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

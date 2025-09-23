@@ -225,12 +225,13 @@ public class VirtualizingPanel extends Panel  {
             retObjectGetItemOffset = classInstance.Invoke("GetItemOffset", child == null ? null : child.getJCOInstance());
             return (double)retObjectGetItemOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetItemOffset_ToString = retObjectGetItemOffset == null ? "null" : retObjectGetItemOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetItemOffsetNumber = (java.lang.Number)retObjectGetItemOffset;
                 return retObjectGetItemOffsetNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetItemOffset != null ? retObjectGetItemOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetItemOffset != null ? retObjectGetItemOffset.getClass() : "null", retObjectGetItemOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

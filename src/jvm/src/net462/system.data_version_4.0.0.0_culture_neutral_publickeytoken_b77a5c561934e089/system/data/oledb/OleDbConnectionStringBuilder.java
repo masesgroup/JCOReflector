@@ -260,12 +260,13 @@ public class OleDbConnectionStringBuilder extends DbConnectionStringBuilder  {
             retObjectOleDbServices = classInstance.Get("OleDbServices");
             return (int)retObjectOleDbServices;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOleDbServices_ToString = retObjectOleDbServices == null ? "null" : retObjectOleDbServices.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOleDbServicesNumber = (java.lang.Number)retObjectOleDbServices;
                 return retObjectOleDbServicesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOleDbServices != null ? retObjectOleDbServices.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOleDbServices != null ? retObjectOleDbServices.getClass() : "null", retObjectOleDbServices_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

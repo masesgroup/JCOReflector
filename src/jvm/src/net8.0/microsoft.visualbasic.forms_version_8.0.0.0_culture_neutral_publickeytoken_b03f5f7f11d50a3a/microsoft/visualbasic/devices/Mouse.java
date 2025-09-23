@@ -199,12 +199,13 @@ public class Mouse extends NetObject  {
             retObjectWheelScrollLines = classInstance.Get("WheelScrollLines");
             return (int)retObjectWheelScrollLines;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWheelScrollLines_ToString = retObjectWheelScrollLines == null ? "null" : retObjectWheelScrollLines.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWheelScrollLinesNumber = (java.lang.Number)retObjectWheelScrollLines;
                 return retObjectWheelScrollLinesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWheelScrollLines != null ? retObjectWheelScrollLines.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWheelScrollLines != null ? retObjectWheelScrollLines.getClass() : "null", retObjectWheelScrollLines_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

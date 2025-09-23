@@ -216,12 +216,13 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
             retObjectInitialHeight = classInstance.Get("InitialHeight");
             return (int)retObjectInitialHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInitialHeight_ToString = retObjectInitialHeight == null ? "null" : retObjectInitialHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInitialHeightNumber = (java.lang.Number)retObjectInitialHeight;
                 return retObjectInitialHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectInitialHeight != null ? retObjectInitialHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectInitialHeight != null ? retObjectInitialHeight.getClass() : "null", retObjectInitialHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -246,12 +247,13 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
             retObjectInitialWidth = classInstance.Get("InitialWidth");
             return (int)retObjectInitialWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInitialWidth_ToString = retObjectInitialWidth == null ? "null" : retObjectInitialWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInitialWidthNumber = (java.lang.Number)retObjectInitialWidth;
                 return retObjectInitialWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectInitialWidth != null ? retObjectInitialWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectInitialWidth != null ? retObjectInitialWidth.getClass() : "null", retObjectInitialWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

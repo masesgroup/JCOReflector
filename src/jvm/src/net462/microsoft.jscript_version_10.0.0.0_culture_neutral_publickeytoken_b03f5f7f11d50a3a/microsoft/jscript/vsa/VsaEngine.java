@@ -227,12 +227,13 @@ public class VsaEngine extends BaseVsaEngine  {
             retObjectGetItemCount = classInstance.Invoke("GetItemCount");
             return (int)retObjectGetItemCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetItemCount_ToString = retObjectGetItemCount == null ? "null" : retObjectGetItemCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetItemCountNumber = (java.lang.Number)retObjectGetItemCount;
                 return retObjectGetItemCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetItemCount != null ? retObjectGetItemCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetItemCount != null ? retObjectGetItemCount.getClass() : "null", retObjectGetItemCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

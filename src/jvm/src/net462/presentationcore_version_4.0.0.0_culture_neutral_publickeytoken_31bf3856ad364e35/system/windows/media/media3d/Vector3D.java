@@ -207,12 +207,13 @@ public class Vector3D extends ValueType implements system.IFormattable {
             retObjectAngleBetween = classType.Invoke("AngleBetween", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
             return (double)retObjectAngleBetween;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAngleBetween_ToString = retObjectAngleBetween == null ? "null" : retObjectAngleBetween.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAngleBetweenNumber = (java.lang.Number)retObjectAngleBetween;
                 return retObjectAngleBetweenNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectAngleBetween != null ? retObjectAngleBetween.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectAngleBetween != null ? retObjectAngleBetween.getClass() : "null", retObjectAngleBetween_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -227,12 +228,13 @@ public class Vector3D extends ValueType implements system.IFormattable {
             retObjectDotProduct = classType.Invoke("DotProduct", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
             return (double)retObjectDotProduct;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDotProduct_ToString = retObjectDotProduct == null ? "null" : retObjectDotProduct.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDotProductNumber = (java.lang.Number)retObjectDotProduct;
                 return retObjectDotProductNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectDotProduct != null ? retObjectDotProduct.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDotProduct != null ? retObjectDotProduct.getClass() : "null", retObjectDotProduct_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -444,12 +446,13 @@ public class Vector3D extends ValueType implements system.IFormattable {
             retObjectLength = classInstance.Get("Length");
             return (double)retObjectLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLength_ToString = retObjectLength == null ? "null" : retObjectLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLengthNumber = (java.lang.Number)retObjectLength;
                 return retObjectLengthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null", retObjectLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -464,12 +467,13 @@ public class Vector3D extends ValueType implements system.IFormattable {
             retObjectLengthSquared = classInstance.Get("LengthSquared");
             return (double)retObjectLengthSquared;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLengthSquared_ToString = retObjectLengthSquared == null ? "null" : retObjectLengthSquared.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLengthSquaredNumber = (java.lang.Number)retObjectLengthSquared;
                 return retObjectLengthSquaredNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectLengthSquared != null ? retObjectLengthSquared.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLengthSquared != null ? retObjectLengthSquared.getClass() : "null", retObjectLengthSquared_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -484,12 +488,13 @@ public class Vector3D extends ValueType implements system.IFormattable {
             retObjectX = classInstance.Get("X");
             return (double)retObjectX;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectX_ToString = retObjectX == null ? "null" : retObjectX.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectXNumber = (java.lang.Number)retObjectX;
                 return retObjectXNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectX != null ? retObjectX.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectX != null ? retObjectX.getClass() : "null", retObjectX_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -514,12 +519,13 @@ public class Vector3D extends ValueType implements system.IFormattable {
             retObjectY = classInstance.Get("Y");
             return (double)retObjectY;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectY_ToString = retObjectY == null ? "null" : retObjectY.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectYNumber = (java.lang.Number)retObjectY;
                 return retObjectYNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectY != null ? retObjectY.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectY != null ? retObjectY.getClass() : "null", retObjectY_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -544,12 +550,13 @@ public class Vector3D extends ValueType implements system.IFormattable {
             retObjectZ = classInstance.Get("Z");
             return (double)retObjectZ;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectZ_ToString = retObjectZ == null ? "null" : retObjectZ.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectZNumber = (java.lang.Number)retObjectZ;
                 return retObjectZNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectZ != null ? retObjectZ.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectZ != null ? retObjectZ.getClass() : "null", retObjectZ_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

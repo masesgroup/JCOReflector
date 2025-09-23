@@ -176,12 +176,13 @@ public class ListViewGroupEventArgs extends EventArgs  {
             retObjectGroupIndex = classInstance.Get("GroupIndex");
             return (int)retObjectGroupIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGroupIndex_ToString = retObjectGroupIndex == null ? "null" : retObjectGroupIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGroupIndexNumber = (java.lang.Number)retObjectGroupIndex;
                 return retObjectGroupIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGroupIndex != null ? retObjectGroupIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGroupIndex != null ? retObjectGroupIndex.getClass() : "null", retObjectGroupIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -160,12 +160,13 @@ public class Base64 extends NetObject  {
             retObjectGetMaxDecodedFromUtf8Length = classType.Invoke("GetMaxDecodedFromUtf8Length", length);
             return (int)retObjectGetMaxDecodedFromUtf8Length;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetMaxDecodedFromUtf8Length_ToString = retObjectGetMaxDecodedFromUtf8Length == null ? "null" : retObjectGetMaxDecodedFromUtf8Length.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetMaxDecodedFromUtf8LengthNumber = (java.lang.Number)retObjectGetMaxDecodedFromUtf8Length;
                 return retObjectGetMaxDecodedFromUtf8LengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetMaxDecodedFromUtf8Length != null ? retObjectGetMaxDecodedFromUtf8Length.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetMaxDecodedFromUtf8Length != null ? retObjectGetMaxDecodedFromUtf8Length.getClass() : "null", retObjectGetMaxDecodedFromUtf8Length_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -180,12 +181,13 @@ public class Base64 extends NetObject  {
             retObjectGetMaxEncodedToUtf8Length = classType.Invoke("GetMaxEncodedToUtf8Length", length);
             return (int)retObjectGetMaxEncodedToUtf8Length;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetMaxEncodedToUtf8Length_ToString = retObjectGetMaxEncodedToUtf8Length == null ? "null" : retObjectGetMaxEncodedToUtf8Length.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetMaxEncodedToUtf8LengthNumber = (java.lang.Number)retObjectGetMaxEncodedToUtf8Length;
                 return retObjectGetMaxEncodedToUtf8LengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetMaxEncodedToUtf8Length != null ? retObjectGetMaxEncodedToUtf8Length.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetMaxEncodedToUtf8Length != null ? retObjectGetMaxEncodedToUtf8Length.getClass() : "null", retObjectGetMaxEncodedToUtf8Length_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

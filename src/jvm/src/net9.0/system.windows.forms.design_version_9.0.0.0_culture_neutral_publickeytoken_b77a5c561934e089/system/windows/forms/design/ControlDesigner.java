@@ -198,12 +198,13 @@ public class ControlDesigner extends ComponentDesigner  {
             retObjectNumberOfInternalControlDesigners = classInstance.Invoke("NumberOfInternalControlDesigners");
             return (int)retObjectNumberOfInternalControlDesigners;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNumberOfInternalControlDesigners_ToString = retObjectNumberOfInternalControlDesigners == null ? "null" : retObjectNumberOfInternalControlDesigners.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNumberOfInternalControlDesignersNumber = (java.lang.Number)retObjectNumberOfInternalControlDesigners;
                 return retObjectNumberOfInternalControlDesignersNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNumberOfInternalControlDesigners != null ? retObjectNumberOfInternalControlDesigners.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumberOfInternalControlDesigners != null ? retObjectNumberOfInternalControlDesigners.getClass() : "null", retObjectNumberOfInternalControlDesigners_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

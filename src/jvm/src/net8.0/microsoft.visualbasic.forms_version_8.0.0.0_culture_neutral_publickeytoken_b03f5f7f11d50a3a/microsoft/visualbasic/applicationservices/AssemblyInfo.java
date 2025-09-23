@@ -177,12 +177,13 @@ public class AssemblyInfo extends NetObject  {
             retObjectWorkingSet = classInstance.Get("WorkingSet");
             return (long)retObjectWorkingSet;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWorkingSet_ToString = retObjectWorkingSet == null ? "null" : retObjectWorkingSet.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWorkingSetNumber = (java.lang.Number)retObjectWorkingSet;
                 return retObjectWorkingSetNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectWorkingSet != null ? retObjectWorkingSet.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectWorkingSet != null ? retObjectWorkingSet.getClass() : "null", retObjectWorkingSet_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

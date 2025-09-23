@@ -177,12 +177,13 @@ public class XsltConvert extends NetObject  {
             retObjectToDouble = classType.Invoke("ToDouble", value);
             return (double)retObjectToDouble;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToDouble_ToString = retObjectToDouble == null ? "null" : retObjectToDouble.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToDoubleNumber = (java.lang.Number)retObjectToDouble;
                 return retObjectToDoubleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null", retObjectToDouble_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -197,12 +198,13 @@ public class XsltConvert extends NetObject  {
             retObjectToDouble = classType.Invoke("ToDouble", value);
             return (double)retObjectToDouble;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToDouble_ToString = retObjectToDouble == null ? "null" : retObjectToDouble.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToDoubleNumber = (java.lang.Number)retObjectToDouble;
                 return retObjectToDoubleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null", retObjectToDouble_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -217,12 +219,13 @@ public class XsltConvert extends NetObject  {
             retObjectToDouble = classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance());
             return (double)retObjectToDouble;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToDouble_ToString = retObjectToDouble == null ? "null" : retObjectToDouble.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToDoubleNumber = (java.lang.Number)retObjectToDouble;
                 return retObjectToDoubleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null", retObjectToDouble_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -237,12 +240,13 @@ public class XsltConvert extends NetObject  {
             retObjectToDouble = classType.Invoke("ToDouble", value);
             return (double)retObjectToDouble;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToDouble_ToString = retObjectToDouble == null ? "null" : retObjectToDouble.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToDoubleNumber = (java.lang.Number)retObjectToDouble;
                 return retObjectToDoubleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null", retObjectToDouble_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -257,12 +261,13 @@ public class XsltConvert extends NetObject  {
             retObjectToDouble = classType.Invoke("ToDouble", item == null ? null : item.getJCOInstance());
             return (double)retObjectToDouble;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToDouble_ToString = retObjectToDouble == null ? "null" : retObjectToDouble.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToDoubleNumber = (java.lang.Number)retObjectToDouble;
                 return retObjectToDoubleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null", retObjectToDouble_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -277,12 +282,13 @@ public class XsltConvert extends NetObject  {
             retObjectToInt = classType.Invoke("ToInt", value);
             return (int)retObjectToInt;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToInt_ToString = retObjectToInt == null ? "null" : retObjectToInt.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToIntNumber = (java.lang.Number)retObjectToInt;
                 return retObjectToIntNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectToInt != null ? retObjectToInt.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToInt != null ? retObjectToInt.getClass() : "null", retObjectToInt_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -297,12 +303,13 @@ public class XsltConvert extends NetObject  {
             retObjectToLong = classType.Invoke("ToLong", value);
             return (long)retObjectToLong;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToLong_ToString = retObjectToLong == null ? "null" : retObjectToLong.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToLongNumber = (java.lang.Number)retObjectToLong;
                 return retObjectToLongNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectToLong != null ? retObjectToLong.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectToLong != null ? retObjectToLong.getClass() : "null", retObjectToLong_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

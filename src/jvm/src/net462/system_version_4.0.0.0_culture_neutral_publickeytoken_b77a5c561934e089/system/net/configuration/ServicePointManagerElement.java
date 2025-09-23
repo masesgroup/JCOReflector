@@ -293,12 +293,13 @@ public class ServicePointManagerElement extends ConfigurationElement  {
             retObjectDnsRefreshTimeout = classInstance.Get("DnsRefreshTimeout");
             return (int)retObjectDnsRefreshTimeout;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDnsRefreshTimeout_ToString = retObjectDnsRefreshTimeout == null ? "null" : retObjectDnsRefreshTimeout.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDnsRefreshTimeoutNumber = (java.lang.Number)retObjectDnsRefreshTimeout;
                 return retObjectDnsRefreshTimeoutNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDnsRefreshTimeout != null ? retObjectDnsRefreshTimeout.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDnsRefreshTimeout != null ? retObjectDnsRefreshTimeout.getClass() : "null", retObjectDnsRefreshTimeout_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

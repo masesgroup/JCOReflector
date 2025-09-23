@@ -177,12 +177,13 @@ public class MemoryCacheElement extends ConfigurationElement  {
             retObjectCacheMemoryLimitMegabytes = classInstance.Get("CacheMemoryLimitMegabytes");
             return (int)retObjectCacheMemoryLimitMegabytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCacheMemoryLimitMegabytes_ToString = retObjectCacheMemoryLimitMegabytes == null ? "null" : retObjectCacheMemoryLimitMegabytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCacheMemoryLimitMegabytesNumber = (java.lang.Number)retObjectCacheMemoryLimitMegabytes;
                 return retObjectCacheMemoryLimitMegabytesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCacheMemoryLimitMegabytes != null ? retObjectCacheMemoryLimitMegabytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCacheMemoryLimitMegabytes != null ? retObjectCacheMemoryLimitMegabytes.getClass() : "null", retObjectCacheMemoryLimitMegabytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -207,12 +208,13 @@ public class MemoryCacheElement extends ConfigurationElement  {
             retObjectPhysicalMemoryLimitPercentage = classInstance.Get("PhysicalMemoryLimitPercentage");
             return (int)retObjectPhysicalMemoryLimitPercentage;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPhysicalMemoryLimitPercentage_ToString = retObjectPhysicalMemoryLimitPercentage == null ? "null" : retObjectPhysicalMemoryLimitPercentage.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPhysicalMemoryLimitPercentageNumber = (java.lang.Number)retObjectPhysicalMemoryLimitPercentage;
                 return retObjectPhysicalMemoryLimitPercentageNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPhysicalMemoryLimitPercentage != null ? retObjectPhysicalMemoryLimitPercentage.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPhysicalMemoryLimitPercentage != null ? retObjectPhysicalMemoryLimitPercentage.getClass() : "null", retObjectPhysicalMemoryLimitPercentage_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -184,12 +184,13 @@ public class WSFederationHttpBindingElement extends WSHttpBindingBaseElement  {
             retObjectPrivacyNoticeVersion = classInstance.Get("PrivacyNoticeVersion");
             return (int)retObjectPrivacyNoticeVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPrivacyNoticeVersion_ToString = retObjectPrivacyNoticeVersion == null ? "null" : retObjectPrivacyNoticeVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPrivacyNoticeVersionNumber = (java.lang.Number)retObjectPrivacyNoticeVersion;
                 return retObjectPrivacyNoticeVersionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPrivacyNoticeVersion != null ? retObjectPrivacyNoticeVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPrivacyNoticeVersion != null ? retObjectPrivacyNoticeVersion.getClass() : "null", retObjectPrivacyNoticeVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

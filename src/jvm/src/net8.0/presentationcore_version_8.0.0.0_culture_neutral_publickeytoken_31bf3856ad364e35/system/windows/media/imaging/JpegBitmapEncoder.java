@@ -221,12 +221,13 @@ public class JpegBitmapEncoder extends BitmapEncoder  {
             retObjectQualityLevel = classInstance.Get("QualityLevel");
             return (int)retObjectQualityLevel;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectQualityLevel_ToString = retObjectQualityLevel == null ? "null" : retObjectQualityLevel.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectQualityLevelNumber = (java.lang.Number)retObjectQualityLevel;
                 return retObjectQualityLevelNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectQualityLevel != null ? retObjectQualityLevel.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectQualityLevel != null ? retObjectQualityLevel.getClass() : "null", retObjectQualityLevel_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

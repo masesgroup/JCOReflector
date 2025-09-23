@@ -216,12 +216,13 @@ public class Parameter extends ValueType  {
             retObjectSequenceNumber = classInstance.Get("SequenceNumber");
             return (int)retObjectSequenceNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSequenceNumber_ToString = retObjectSequenceNumber == null ? "null" : retObjectSequenceNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSequenceNumberNumber = (java.lang.Number)retObjectSequenceNumber;
                 return retObjectSequenceNumberNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSequenceNumber != null ? retObjectSequenceNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSequenceNumber != null ? retObjectSequenceNumber.getClass() : "null", retObjectSequenceNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

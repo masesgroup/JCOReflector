@@ -216,12 +216,13 @@ public class TextDecoration extends Animatable  {
             retObjectPenOffset = classInstance.Get("PenOffset");
             return (double)retObjectPenOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPenOffset_ToString = retObjectPenOffset == null ? "null" : retObjectPenOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPenOffsetNumber = (java.lang.Number)retObjectPenOffset;
                 return retObjectPenOffsetNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectPenOffset != null ? retObjectPenOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPenOffset != null ? retObjectPenOffset.getClass() : "null", retObjectPenOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

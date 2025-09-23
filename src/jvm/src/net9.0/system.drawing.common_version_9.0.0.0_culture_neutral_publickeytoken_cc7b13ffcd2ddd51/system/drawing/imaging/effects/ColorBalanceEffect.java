@@ -176,12 +176,13 @@ public class ColorBalanceEffect extends Effect  {
             retObjectCyanRed = classInstance.Get("CyanRed");
             return (int)retObjectCyanRed;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCyanRed_ToString = retObjectCyanRed == null ? "null" : retObjectCyanRed.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCyanRedNumber = (java.lang.Number)retObjectCyanRed;
                 return retObjectCyanRedNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCyanRed != null ? retObjectCyanRed.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCyanRed != null ? retObjectCyanRed.getClass() : "null", retObjectCyanRed_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -196,12 +197,13 @@ public class ColorBalanceEffect extends Effect  {
             retObjectMagentaGreen = classInstance.Get("MagentaGreen");
             return (int)retObjectMagentaGreen;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMagentaGreen_ToString = retObjectMagentaGreen == null ? "null" : retObjectMagentaGreen.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMagentaGreenNumber = (java.lang.Number)retObjectMagentaGreen;
                 return retObjectMagentaGreenNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMagentaGreen != null ? retObjectMagentaGreen.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMagentaGreen != null ? retObjectMagentaGreen.getClass() : "null", retObjectMagentaGreen_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -216,12 +218,13 @@ public class ColorBalanceEffect extends Effect  {
             retObjectYellowBlue = classInstance.Get("YellowBlue");
             return (int)retObjectYellowBlue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectYellowBlue_ToString = retObjectYellowBlue == null ? "null" : retObjectYellowBlue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectYellowBlueNumber = (java.lang.Number)retObjectYellowBlue;
                 return retObjectYellowBlueNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectYellowBlue != null ? retObjectYellowBlue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectYellowBlue != null ? retObjectYellowBlue.getClass() : "null", retObjectYellowBlue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

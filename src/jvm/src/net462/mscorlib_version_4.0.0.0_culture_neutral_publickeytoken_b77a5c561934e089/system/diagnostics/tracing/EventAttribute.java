@@ -183,12 +183,13 @@ public class EventAttribute extends Attribute  {
             retObjectVersion = classInstance.Get("Version");
             return (byte)retObjectVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVersion_ToString = retObjectVersion == null ? "null" : retObjectVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVersionNumber = (java.lang.Number)retObjectVersion;
                 return retObjectVersionNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectVersion != null ? retObjectVersion.getClass() : "null", retObjectVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -213,12 +214,13 @@ public class EventAttribute extends Attribute  {
             retObjectEventId = classInstance.Get("EventId");
             return (int)retObjectEventId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEventId_ToString = retObjectEventId == null ? "null" : retObjectEventId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEventIdNumber = (java.lang.Number)retObjectEventId;
                 return retObjectEventIdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEventId != null ? retObjectEventId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEventId != null ? retObjectEventId.getClass() : "null", retObjectEventId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

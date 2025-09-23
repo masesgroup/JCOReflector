@@ -392,12 +392,13 @@ public class Environment extends NetObject  {
             retObjectCurrentManagedThreadId = classType.Get("CurrentManagedThreadId");
             return (int)retObjectCurrentManagedThreadId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCurrentManagedThreadId_ToString = retObjectCurrentManagedThreadId == null ? "null" : retObjectCurrentManagedThreadId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCurrentManagedThreadIdNumber = (java.lang.Number)retObjectCurrentManagedThreadId;
                 return retObjectCurrentManagedThreadIdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCurrentManagedThreadId != null ? retObjectCurrentManagedThreadId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentManagedThreadId != null ? retObjectCurrentManagedThreadId.getClass() : "null", retObjectCurrentManagedThreadId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -412,12 +413,13 @@ public class Environment extends NetObject  {
             retObjectExitCode = classType.Get("ExitCode");
             return (int)retObjectExitCode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExitCode_ToString = retObjectExitCode == null ? "null" : retObjectExitCode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExitCodeNumber = (java.lang.Number)retObjectExitCode;
                 return retObjectExitCodeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExitCode != null ? retObjectExitCode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExitCode != null ? retObjectExitCode.getClass() : "null", retObjectExitCode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -442,12 +444,13 @@ public class Environment extends NetObject  {
             retObjectProcessorCount = classType.Get("ProcessorCount");
             return (int)retObjectProcessorCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectProcessorCount_ToString = retObjectProcessorCount == null ? "null" : retObjectProcessorCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectProcessorCountNumber = (java.lang.Number)retObjectProcessorCount;
                 return retObjectProcessorCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectProcessorCount != null ? retObjectProcessorCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectProcessorCount != null ? retObjectProcessorCount.getClass() : "null", retObjectProcessorCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -462,12 +465,13 @@ public class Environment extends NetObject  {
             retObjectSystemPageSize = classType.Get("SystemPageSize");
             return (int)retObjectSystemPageSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSystemPageSize_ToString = retObjectSystemPageSize == null ? "null" : retObjectSystemPageSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSystemPageSizeNumber = (java.lang.Number)retObjectSystemPageSize;
                 return retObjectSystemPageSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSystemPageSize != null ? retObjectSystemPageSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSystemPageSize != null ? retObjectSystemPageSize.getClass() : "null", retObjectSystemPageSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -482,12 +486,13 @@ public class Environment extends NetObject  {
             retObjectTickCount = classType.Get("TickCount");
             return (int)retObjectTickCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTickCount_ToString = retObjectTickCount == null ? "null" : retObjectTickCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTickCountNumber = (java.lang.Number)retObjectTickCount;
                 return retObjectTickCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTickCount != null ? retObjectTickCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTickCount != null ? retObjectTickCount.getClass() : "null", retObjectTickCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -502,12 +507,13 @@ public class Environment extends NetObject  {
             retObjectWorkingSet = classType.Get("WorkingSet");
             return (long)retObjectWorkingSet;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWorkingSet_ToString = retObjectWorkingSet == null ? "null" : retObjectWorkingSet.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWorkingSetNumber = (java.lang.Number)retObjectWorkingSet;
                 return retObjectWorkingSetNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectWorkingSet != null ? retObjectWorkingSet.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectWorkingSet != null ? retObjectWorkingSet.getClass() : "null", retObjectWorkingSet_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

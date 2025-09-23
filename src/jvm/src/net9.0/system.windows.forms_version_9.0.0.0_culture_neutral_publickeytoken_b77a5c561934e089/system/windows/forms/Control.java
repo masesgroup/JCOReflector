@@ -356,12 +356,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
             retObjectLogicalToDeviceUnits = classInstance.Invoke("LogicalToDeviceUnits", value);
             return (int)retObjectLogicalToDeviceUnits;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLogicalToDeviceUnits_ToString = retObjectLogicalToDeviceUnits == null ? "null" : retObjectLogicalToDeviceUnits.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLogicalToDeviceUnitsNumber = (java.lang.Number)retObjectLogicalToDeviceUnits;
                 return retObjectLogicalToDeviceUnitsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLogicalToDeviceUnits != null ? retObjectLogicalToDeviceUnits.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLogicalToDeviceUnits != null ? retObjectLogicalToDeviceUnits.getClass() : "null", retObjectLogicalToDeviceUnits_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1458,12 +1459,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
             retObjectBottom = classInstance.Get("Bottom");
             return (int)retObjectBottom;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBottom_ToString = retObjectBottom == null ? "null" : retObjectBottom.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBottomNumber = (java.lang.Number)retObjectBottom;
                 return retObjectBottomNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBottom != null ? retObjectBottom.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBottom != null ? retObjectBottom.getClass() : "null", retObjectBottom_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1478,12 +1480,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
             retObjectDeviceDpi = classInstance.Get("DeviceDpi");
             return (int)retObjectDeviceDpi;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeviceDpi_ToString = retObjectDeviceDpi == null ? "null" : retObjectDeviceDpi.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDeviceDpiNumber = (java.lang.Number)retObjectDeviceDpi;
                 return retObjectDeviceDpiNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDeviceDpi != null ? retObjectDeviceDpi.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeviceDpi != null ? retObjectDeviceDpi.getClass() : "null", retObjectDeviceDpi_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1498,12 +1501,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
             retObjectHeight = classInstance.Get("Height");
             return (int)retObjectHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHeight_ToString = retObjectHeight == null ? "null" : retObjectHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHeightNumber = (java.lang.Number)retObjectHeight;
                 return retObjectHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null", retObjectHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1528,12 +1532,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
             retObjectLeft = classInstance.Get("Left");
             return (int)retObjectLeft;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLeft_ToString = retObjectLeft == null ? "null" : retObjectLeft.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLeftNumber = (java.lang.Number)retObjectLeft;
                 return retObjectLeftNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLeft != null ? retObjectLeft.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLeft != null ? retObjectLeft.getClass() : "null", retObjectLeft_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1558,12 +1563,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
             retObjectRight = classInstance.Get("Right");
             return (int)retObjectRight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRight_ToString = retObjectRight == null ? "null" : retObjectRight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRightNumber = (java.lang.Number)retObjectRight;
                 return retObjectRightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRight != null ? retObjectRight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRight != null ? retObjectRight.getClass() : "null", retObjectRight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1578,12 +1584,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
             retObjectTabIndex = classInstance.Get("TabIndex");
             return (int)retObjectTabIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTabIndex_ToString = retObjectTabIndex == null ? "null" : retObjectTabIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTabIndexNumber = (java.lang.Number)retObjectTabIndex;
                 return retObjectTabIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTabIndex != null ? retObjectTabIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTabIndex != null ? retObjectTabIndex.getClass() : "null", retObjectTabIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1608,12 +1615,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
             retObjectTop = classInstance.Get("Top");
             return (int)retObjectTop;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTop_ToString = retObjectTop == null ? "null" : retObjectTop.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTopNumber = (java.lang.Number)retObjectTop;
                 return retObjectTopNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTop != null ? retObjectTop.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTop != null ? retObjectTop.getClass() : "null", retObjectTop_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1638,12 +1646,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
             retObjectWidth = classInstance.Get("Width");
             return (int)retObjectWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWidth_ToString = retObjectWidth == null ? "null" : retObjectWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWidthNumber = (java.lang.Number)retObjectWidth;
                 return retObjectWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWidth != null ? retObjectWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWidth != null ? retObjectWidth.getClass() : "null", retObjectWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -310,12 +310,13 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectColumnGap = classInstance.Get("ColumnGap");
             return (double)retObjectColumnGap;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnGap_ToString = retObjectColumnGap == null ? "null" : retObjectColumnGap.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectColumnGapNumber = (java.lang.Number)retObjectColumnGap;
                 return retObjectColumnGapNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectColumnGap != null ? retObjectColumnGap.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectColumnGap != null ? retObjectColumnGap.getClass() : "null", retObjectColumnGap_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -340,12 +341,13 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectColumnRuleWidth = classInstance.Get("ColumnRuleWidth");
             return (double)retObjectColumnRuleWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnRuleWidth_ToString = retObjectColumnRuleWidth == null ? "null" : retObjectColumnRuleWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectColumnRuleWidthNumber = (java.lang.Number)retObjectColumnRuleWidth;
                 return retObjectColumnRuleWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectColumnRuleWidth != null ? retObjectColumnRuleWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectColumnRuleWidth != null ? retObjectColumnRuleWidth.getClass() : "null", retObjectColumnRuleWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -370,12 +372,13 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectColumnWidth = classInstance.Get("ColumnWidth");
             return (double)retObjectColumnWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnWidth_ToString = retObjectColumnWidth == null ? "null" : retObjectColumnWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectColumnWidthNumber = (java.lang.Number)retObjectColumnWidth;
                 return retObjectColumnWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectColumnWidth != null ? retObjectColumnWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectColumnWidth != null ? retObjectColumnWidth.getClass() : "null", retObjectColumnWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -400,12 +403,13 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectFontSize = classInstance.Get("FontSize");
             return (double)retObjectFontSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFontSize_ToString = retObjectFontSize == null ? "null" : retObjectFontSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFontSizeNumber = (java.lang.Number)retObjectFontSize;
                 return retObjectFontSizeNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectFontSize != null ? retObjectFontSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFontSize != null ? retObjectFontSize.getClass() : "null", retObjectFontSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -430,12 +434,13 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectLineHeight = classInstance.Get("LineHeight");
             return (double)retObjectLineHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLineHeight_ToString = retObjectLineHeight == null ? "null" : retObjectLineHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLineHeightNumber = (java.lang.Number)retObjectLineHeight;
                 return retObjectLineHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectLineHeight != null ? retObjectLineHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLineHeight != null ? retObjectLineHeight.getClass() : "null", retObjectLineHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -460,12 +465,13 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectMaxPageHeight = classInstance.Get("MaxPageHeight");
             return (double)retObjectMaxPageHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxPageHeight_ToString = retObjectMaxPageHeight == null ? "null" : retObjectMaxPageHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxPageHeightNumber = (java.lang.Number)retObjectMaxPageHeight;
                 return retObjectMaxPageHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMaxPageHeight != null ? retObjectMaxPageHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaxPageHeight != null ? retObjectMaxPageHeight.getClass() : "null", retObjectMaxPageHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -490,12 +496,13 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectMaxPageWidth = classInstance.Get("MaxPageWidth");
             return (double)retObjectMaxPageWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxPageWidth_ToString = retObjectMaxPageWidth == null ? "null" : retObjectMaxPageWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxPageWidthNumber = (java.lang.Number)retObjectMaxPageWidth;
                 return retObjectMaxPageWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMaxPageWidth != null ? retObjectMaxPageWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaxPageWidth != null ? retObjectMaxPageWidth.getClass() : "null", retObjectMaxPageWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -520,12 +527,13 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectMinPageHeight = classInstance.Get("MinPageHeight");
             return (double)retObjectMinPageHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinPageHeight_ToString = retObjectMinPageHeight == null ? "null" : retObjectMinPageHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinPageHeightNumber = (java.lang.Number)retObjectMinPageHeight;
                 return retObjectMinPageHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMinPageHeight != null ? retObjectMinPageHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinPageHeight != null ? retObjectMinPageHeight.getClass() : "null", retObjectMinPageHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -550,12 +558,13 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectMinPageWidth = classInstance.Get("MinPageWidth");
             return (double)retObjectMinPageWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinPageWidth_ToString = retObjectMinPageWidth == null ? "null" : retObjectMinPageWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinPageWidthNumber = (java.lang.Number)retObjectMinPageWidth;
                 return retObjectMinPageWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMinPageWidth != null ? retObjectMinPageWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinPageWidth != null ? retObjectMinPageWidth.getClass() : "null", retObjectMinPageWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -580,12 +589,13 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectPageHeight = classInstance.Get("PageHeight");
             return (double)retObjectPageHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageHeight_ToString = retObjectPageHeight == null ? "null" : retObjectPageHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPageHeightNumber = (java.lang.Number)retObjectPageHeight;
                 return retObjectPageHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectPageHeight != null ? retObjectPageHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPageHeight != null ? retObjectPageHeight.getClass() : "null", retObjectPageHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -610,12 +620,13 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectPageWidth = classInstance.Get("PageWidth");
             return (double)retObjectPageWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageWidth_ToString = retObjectPageWidth == null ? "null" : retObjectPageWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPageWidthNumber = (java.lang.Number)retObjectPageWidth;
                 return retObjectPageWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectPageWidth != null ? retObjectPageWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPageWidth != null ? retObjectPageWidth.getClass() : "null", retObjectPageWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

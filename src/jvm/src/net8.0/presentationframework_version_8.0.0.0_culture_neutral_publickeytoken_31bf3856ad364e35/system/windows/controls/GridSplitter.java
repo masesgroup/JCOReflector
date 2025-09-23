@@ -199,12 +199,13 @@ public class GridSplitter extends Thumb  {
             retObjectDragIncrement = classInstance.Get("DragIncrement");
             return (double)retObjectDragIncrement;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDragIncrement_ToString = retObjectDragIncrement == null ? "null" : retObjectDragIncrement.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDragIncrementNumber = (java.lang.Number)retObjectDragIncrement;
                 return retObjectDragIncrementNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectDragIncrement != null ? retObjectDragIncrement.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDragIncrement != null ? retObjectDragIncrement.getClass() : "null", retObjectDragIncrement_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -229,12 +230,13 @@ public class GridSplitter extends Thumb  {
             retObjectKeyboardIncrement = classInstance.Get("KeyboardIncrement");
             return (double)retObjectKeyboardIncrement;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKeyboardIncrement_ToString = retObjectKeyboardIncrement == null ? "null" : retObjectKeyboardIncrement.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectKeyboardIncrementNumber = (java.lang.Number)retObjectKeyboardIncrement;
                 return retObjectKeyboardIncrementNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectKeyboardIncrement != null ? retObjectKeyboardIncrement.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectKeyboardIncrement != null ? retObjectKeyboardIncrement.getClass() : "null", retObjectKeyboardIncrement_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

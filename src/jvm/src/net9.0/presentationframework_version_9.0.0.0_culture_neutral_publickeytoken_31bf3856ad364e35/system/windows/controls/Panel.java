@@ -180,12 +180,13 @@ public class Panel extends FrameworkElement implements system.windows.markup.IAd
             retObjectGetZIndex = classType.Invoke("GetZIndex", element == null ? null : element.getJCOInstance());
             return (int)retObjectGetZIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetZIndex_ToString = retObjectGetZIndex == null ? "null" : retObjectGetZIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetZIndexNumber = (java.lang.Number)retObjectGetZIndex;
                 return retObjectGetZIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetZIndex != null ? retObjectGetZIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetZIndex != null ? retObjectGetZIndex.getClass() : "null", retObjectGetZIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

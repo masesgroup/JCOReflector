@@ -344,12 +344,13 @@ public class TimeOnly extends ValueType  {
             retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
             return (int)retObjectCompareTo;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
                 return retObjectCompareToNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -364,12 +365,13 @@ public class TimeOnly extends ValueType  {
             retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
             return (int)retObjectCompareTo;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
                 return retObjectCompareToNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -768,12 +770,13 @@ public class TimeOnly extends ValueType  {
             retObjectHour = classInstance.Get("Hour");
             return (int)retObjectHour;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHour_ToString = retObjectHour == null ? "null" : retObjectHour.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHourNumber = (java.lang.Number)retObjectHour;
                 return retObjectHourNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHour != null ? retObjectHour.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHour != null ? retObjectHour.getClass() : "null", retObjectHour_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -788,12 +791,13 @@ public class TimeOnly extends ValueType  {
             retObjectMicrosecond = classInstance.Get("Microsecond");
             return (int)retObjectMicrosecond;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMicrosecond_ToString = retObjectMicrosecond == null ? "null" : retObjectMicrosecond.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMicrosecondNumber = (java.lang.Number)retObjectMicrosecond;
                 return retObjectMicrosecondNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMicrosecond != null ? retObjectMicrosecond.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMicrosecond != null ? retObjectMicrosecond.getClass() : "null", retObjectMicrosecond_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -808,12 +812,13 @@ public class TimeOnly extends ValueType  {
             retObjectMillisecond = classInstance.Get("Millisecond");
             return (int)retObjectMillisecond;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMillisecond_ToString = retObjectMillisecond == null ? "null" : retObjectMillisecond.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMillisecondNumber = (java.lang.Number)retObjectMillisecond;
                 return retObjectMillisecondNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMillisecond != null ? retObjectMillisecond.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMillisecond != null ? retObjectMillisecond.getClass() : "null", retObjectMillisecond_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -828,12 +833,13 @@ public class TimeOnly extends ValueType  {
             retObjectMinute = classInstance.Get("Minute");
             return (int)retObjectMinute;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinute_ToString = retObjectMinute == null ? "null" : retObjectMinute.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinuteNumber = (java.lang.Number)retObjectMinute;
                 return retObjectMinuteNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinute != null ? retObjectMinute.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinute != null ? retObjectMinute.getClass() : "null", retObjectMinute_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -848,12 +854,13 @@ public class TimeOnly extends ValueType  {
             retObjectNanosecond = classInstance.Get("Nanosecond");
             return (int)retObjectNanosecond;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNanosecond_ToString = retObjectNanosecond == null ? "null" : retObjectNanosecond.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNanosecondNumber = (java.lang.Number)retObjectNanosecond;
                 return retObjectNanosecondNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNanosecond != null ? retObjectNanosecond.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNanosecond != null ? retObjectNanosecond.getClass() : "null", retObjectNanosecond_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -868,12 +875,13 @@ public class TimeOnly extends ValueType  {
             retObjectSecond = classInstance.Get("Second");
             return (int)retObjectSecond;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSecond_ToString = retObjectSecond == null ? "null" : retObjectSecond.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSecondNumber = (java.lang.Number)retObjectSecond;
                 return retObjectSecondNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSecond != null ? retObjectSecond.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSecond != null ? retObjectSecond.getClass() : "null", retObjectSecond_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -888,12 +896,13 @@ public class TimeOnly extends ValueType  {
             retObjectTicks = classInstance.Get("Ticks");
             return (long)retObjectTicks;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTicks_ToString = retObjectTicks == null ? "null" : retObjectTicks.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTicksNumber = (java.lang.Number)retObjectTicks;
                 return retObjectTicksNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTicks != null ? retObjectTicks.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectTicks != null ? retObjectTicks.getClass() : "null", retObjectTicks_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

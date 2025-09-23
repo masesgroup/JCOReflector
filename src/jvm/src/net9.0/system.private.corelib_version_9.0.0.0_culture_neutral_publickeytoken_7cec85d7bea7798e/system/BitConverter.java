@@ -521,12 +521,13 @@ public class BitConverter extends NetObject  {
             retObjectInt64BitsToDouble = classType.Invoke("Int64BitsToDouble", value);
             return (double)retObjectInt64BitsToDouble;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInt64BitsToDouble_ToString = retObjectInt64BitsToDouble == null ? "null" : retObjectInt64BitsToDouble.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInt64BitsToDoubleNumber = (java.lang.Number)retObjectInt64BitsToDouble;
                 return retObjectInt64BitsToDoubleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectInt64BitsToDouble != null ? retObjectInt64BitsToDouble.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectInt64BitsToDouble != null ? retObjectInt64BitsToDouble.getClass() : "null", retObjectInt64BitsToDouble_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -541,12 +542,13 @@ public class BitConverter extends NetObject  {
             retObjectToDouble = classType.Invoke("ToDouble", value, startIndex);
             return (double)retObjectToDouble;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToDouble_ToString = retObjectToDouble == null ? "null" : retObjectToDouble.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToDoubleNumber = (java.lang.Number)retObjectToDouble;
                 return retObjectToDoubleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null", retObjectToDouble_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -561,12 +563,13 @@ public class BitConverter extends NetObject  {
             retObjectToDouble = classType.Invoke("ToDouble", dupParam0.getJCRefOut(), dupParam1);
             return (double)retObjectToDouble;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToDouble_ToString = retObjectToDouble == null ? "null" : retObjectToDouble.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToDoubleNumber = (java.lang.Number)retObjectToDouble;
                 return retObjectToDoubleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null", retObjectToDouble_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -581,12 +584,13 @@ public class BitConverter extends NetObject  {
             retObjectUInt64BitsToDouble = classType.Invoke("UInt64BitsToDouble", value == null ? null : value.getJCOInstance());
             return (double)retObjectUInt64BitsToDouble;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUInt64BitsToDouble_ToString = retObjectUInt64BitsToDouble == null ? "null" : retObjectUInt64BitsToDouble.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectUInt64BitsToDoubleNumber = (java.lang.Number)retObjectUInt64BitsToDouble;
                 return retObjectUInt64BitsToDoubleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectUInt64BitsToDouble != null ? retObjectUInt64BitsToDouble.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectUInt64BitsToDouble != null ? retObjectUInt64BitsToDouble.getClass() : "null", retObjectUInt64BitsToDouble_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -601,12 +605,13 @@ public class BitConverter extends NetObject  {
             retObjectHalfToInt16Bits = classType.Invoke("HalfToInt16Bits", value == null ? null : value.getJCOInstance());
             return (short)retObjectHalfToInt16Bits;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHalfToInt16Bits_ToString = retObjectHalfToInt16Bits == null ? "null" : retObjectHalfToInt16Bits.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHalfToInt16BitsNumber = (java.lang.Number)retObjectHalfToInt16Bits;
                 return retObjectHalfToInt16BitsNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectHalfToInt16Bits != null ? retObjectHalfToInt16Bits.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectHalfToInt16Bits != null ? retObjectHalfToInt16Bits.getClass() : "null", retObjectHalfToInt16Bits_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -621,12 +626,13 @@ public class BitConverter extends NetObject  {
             retObjectToInt16 = classType.Invoke("ToInt16", value, startIndex);
             return (short)retObjectToInt16;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToInt16_ToString = retObjectToInt16 == null ? "null" : retObjectToInt16.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToInt16Number = (java.lang.Number)retObjectToInt16;
                 return retObjectToInt16Number.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectToInt16 != null ? retObjectToInt16.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectToInt16 != null ? retObjectToInt16.getClass() : "null", retObjectToInt16_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -641,12 +647,13 @@ public class BitConverter extends NetObject  {
             retObjectToInt16 = classType.Invoke("ToInt16", dupParam0.getJCRefOut(), dupParam1);
             return (short)retObjectToInt16;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToInt16_ToString = retObjectToInt16 == null ? "null" : retObjectToInt16.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToInt16Number = (java.lang.Number)retObjectToInt16;
                 return retObjectToInt16Number.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectToInt16 != null ? retObjectToInt16.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectToInt16 != null ? retObjectToInt16.getClass() : "null", retObjectToInt16_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -661,12 +668,13 @@ public class BitConverter extends NetObject  {
             retObjectSingleToInt32Bits = classType.Invoke("SingleToInt32Bits", value == null ? null : value.getJCOInstance());
             return (int)retObjectSingleToInt32Bits;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSingleToInt32Bits_ToString = retObjectSingleToInt32Bits == null ? "null" : retObjectSingleToInt32Bits.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSingleToInt32BitsNumber = (java.lang.Number)retObjectSingleToInt32Bits;
                 return retObjectSingleToInt32BitsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSingleToInt32Bits != null ? retObjectSingleToInt32Bits.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSingleToInt32Bits != null ? retObjectSingleToInt32Bits.getClass() : "null", retObjectSingleToInt32Bits_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -681,12 +689,13 @@ public class BitConverter extends NetObject  {
             retObjectToInt32 = classType.Invoke("ToInt32", value, startIndex);
             return (int)retObjectToInt32;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToInt32_ToString = retObjectToInt32 == null ? "null" : retObjectToInt32.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToInt32Number = (java.lang.Number)retObjectToInt32;
                 return retObjectToInt32Number.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectToInt32 != null ? retObjectToInt32.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToInt32 != null ? retObjectToInt32.getClass() : "null", retObjectToInt32_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -701,12 +710,13 @@ public class BitConverter extends NetObject  {
             retObjectToInt32 = classType.Invoke("ToInt32", dupParam0.getJCRefOut(), dupParam1);
             return (int)retObjectToInt32;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToInt32_ToString = retObjectToInt32 == null ? "null" : retObjectToInt32.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToInt32Number = (java.lang.Number)retObjectToInt32;
                 return retObjectToInt32Number.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectToInt32 != null ? retObjectToInt32.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToInt32 != null ? retObjectToInt32.getClass() : "null", retObjectToInt32_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -721,12 +731,13 @@ public class BitConverter extends NetObject  {
             retObjectDoubleToInt64Bits = classType.Invoke("DoubleToInt64Bits", value);
             return (long)retObjectDoubleToInt64Bits;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDoubleToInt64Bits_ToString = retObjectDoubleToInt64Bits == null ? "null" : retObjectDoubleToInt64Bits.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDoubleToInt64BitsNumber = (java.lang.Number)retObjectDoubleToInt64Bits;
                 return retObjectDoubleToInt64BitsNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectDoubleToInt64Bits != null ? retObjectDoubleToInt64Bits.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectDoubleToInt64Bits != null ? retObjectDoubleToInt64Bits.getClass() : "null", retObjectDoubleToInt64Bits_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -741,12 +752,13 @@ public class BitConverter extends NetObject  {
             retObjectToInt64 = classType.Invoke("ToInt64", value, startIndex);
             return (long)retObjectToInt64;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToInt64_ToString = retObjectToInt64 == null ? "null" : retObjectToInt64.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToInt64Number = (java.lang.Number)retObjectToInt64;
                 return retObjectToInt64Number.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectToInt64 != null ? retObjectToInt64.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectToInt64 != null ? retObjectToInt64.getClass() : "null", retObjectToInt64_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -761,12 +773,13 @@ public class BitConverter extends NetObject  {
             retObjectToInt64 = classType.Invoke("ToInt64", dupParam0.getJCRefOut(), dupParam1);
             return (long)retObjectToInt64;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToInt64_ToString = retObjectToInt64 == null ? "null" : retObjectToInt64.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToInt64Number = (java.lang.Number)retObjectToInt64;
                 return retObjectToInt64Number.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectToInt64 != null ? retObjectToInt64.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectToInt64 != null ? retObjectToInt64.getClass() : "null", retObjectToInt64_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

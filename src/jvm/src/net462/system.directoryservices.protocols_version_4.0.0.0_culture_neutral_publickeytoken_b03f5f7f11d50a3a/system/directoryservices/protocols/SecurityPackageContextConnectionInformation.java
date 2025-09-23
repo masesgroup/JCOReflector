@@ -168,12 +168,13 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
             retObjectCipherStrength = classInstance.Get("CipherStrength");
             return (int)retObjectCipherStrength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCipherStrength_ToString = retObjectCipherStrength == null ? "null" : retObjectCipherStrength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCipherStrengthNumber = (java.lang.Number)retObjectCipherStrength;
                 return retObjectCipherStrengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCipherStrength != null ? retObjectCipherStrength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCipherStrength != null ? retObjectCipherStrength.getClass() : "null", retObjectCipherStrength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -188,12 +189,13 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
             retObjectExchangeStrength = classInstance.Get("ExchangeStrength");
             return (int)retObjectExchangeStrength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExchangeStrength_ToString = retObjectExchangeStrength == null ? "null" : retObjectExchangeStrength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExchangeStrengthNumber = (java.lang.Number)retObjectExchangeStrength;
                 return retObjectExchangeStrengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExchangeStrength != null ? retObjectExchangeStrength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExchangeStrength != null ? retObjectExchangeStrength.getClass() : "null", retObjectExchangeStrength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -208,12 +210,13 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
             retObjectHashStrength = classInstance.Get("HashStrength");
             return (int)retObjectHashStrength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHashStrength_ToString = retObjectHashStrength == null ? "null" : retObjectHashStrength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHashStrengthNumber = (java.lang.Number)retObjectHashStrength;
                 return retObjectHashStrengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHashStrength != null ? retObjectHashStrength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHashStrength != null ? retObjectHashStrength.getClass() : "null", retObjectHashStrength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -228,12 +231,13 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
             retObjectKeyExchangeAlgorithm = classInstance.Get("KeyExchangeAlgorithm");
             return (int)retObjectKeyExchangeAlgorithm;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKeyExchangeAlgorithm_ToString = retObjectKeyExchangeAlgorithm == null ? "null" : retObjectKeyExchangeAlgorithm.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectKeyExchangeAlgorithmNumber = (java.lang.Number)retObjectKeyExchangeAlgorithm;
                 return retObjectKeyExchangeAlgorithmNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectKeyExchangeAlgorithm != null ? retObjectKeyExchangeAlgorithm.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeyExchangeAlgorithm != null ? retObjectKeyExchangeAlgorithm.getClass() : "null", retObjectKeyExchangeAlgorithm_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

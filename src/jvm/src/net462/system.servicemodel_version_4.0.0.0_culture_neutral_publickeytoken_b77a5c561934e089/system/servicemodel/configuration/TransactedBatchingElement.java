@@ -183,12 +183,13 @@ public class TransactedBatchingElement extends BehaviorExtensionElement  {
             retObjectMaxBatchSize = classInstance.Get("MaxBatchSize");
             return (int)retObjectMaxBatchSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxBatchSize_ToString = retObjectMaxBatchSize == null ? "null" : retObjectMaxBatchSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxBatchSizeNumber = (java.lang.Number)retObjectMaxBatchSize;
                 return retObjectMaxBatchSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxBatchSize != null ? retObjectMaxBatchSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxBatchSize != null ? retObjectMaxBatchSize.getClass() : "null", retObjectMaxBatchSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

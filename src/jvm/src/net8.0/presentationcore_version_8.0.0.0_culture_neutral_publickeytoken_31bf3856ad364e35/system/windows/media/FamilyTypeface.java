@@ -190,12 +190,13 @@ public class FamilyTypeface extends NetObject  {
             retObjectCapsHeight = classInstance.Get("CapsHeight");
             return (double)retObjectCapsHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCapsHeight_ToString = retObjectCapsHeight == null ? "null" : retObjectCapsHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCapsHeightNumber = (java.lang.Number)retObjectCapsHeight;
                 return retObjectCapsHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectCapsHeight != null ? retObjectCapsHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCapsHeight != null ? retObjectCapsHeight.getClass() : "null", retObjectCapsHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -220,12 +221,13 @@ public class FamilyTypeface extends NetObject  {
             retObjectStrikethroughPosition = classInstance.Get("StrikethroughPosition");
             return (double)retObjectStrikethroughPosition;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStrikethroughPosition_ToString = retObjectStrikethroughPosition == null ? "null" : retObjectStrikethroughPosition.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStrikethroughPositionNumber = (java.lang.Number)retObjectStrikethroughPosition;
                 return retObjectStrikethroughPositionNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectStrikethroughPosition != null ? retObjectStrikethroughPosition.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStrikethroughPosition != null ? retObjectStrikethroughPosition.getClass() : "null", retObjectStrikethroughPosition_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -250,12 +252,13 @@ public class FamilyTypeface extends NetObject  {
             retObjectStrikethroughThickness = classInstance.Get("StrikethroughThickness");
             return (double)retObjectStrikethroughThickness;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStrikethroughThickness_ToString = retObjectStrikethroughThickness == null ? "null" : retObjectStrikethroughThickness.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStrikethroughThicknessNumber = (java.lang.Number)retObjectStrikethroughThickness;
                 return retObjectStrikethroughThicknessNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectStrikethroughThickness != null ? retObjectStrikethroughThickness.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStrikethroughThickness != null ? retObjectStrikethroughThickness.getClass() : "null", retObjectStrikethroughThickness_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -280,12 +283,13 @@ public class FamilyTypeface extends NetObject  {
             retObjectUnderlinePosition = classInstance.Get("UnderlinePosition");
             return (double)retObjectUnderlinePosition;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUnderlinePosition_ToString = retObjectUnderlinePosition == null ? "null" : retObjectUnderlinePosition.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectUnderlinePositionNumber = (java.lang.Number)retObjectUnderlinePosition;
                 return retObjectUnderlinePositionNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectUnderlinePosition != null ? retObjectUnderlinePosition.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectUnderlinePosition != null ? retObjectUnderlinePosition.getClass() : "null", retObjectUnderlinePosition_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -310,12 +314,13 @@ public class FamilyTypeface extends NetObject  {
             retObjectUnderlineThickness = classInstance.Get("UnderlineThickness");
             return (double)retObjectUnderlineThickness;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUnderlineThickness_ToString = retObjectUnderlineThickness == null ? "null" : retObjectUnderlineThickness.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectUnderlineThicknessNumber = (java.lang.Number)retObjectUnderlineThickness;
                 return retObjectUnderlineThicknessNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectUnderlineThickness != null ? retObjectUnderlineThickness.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectUnderlineThickness != null ? retObjectUnderlineThickness.getClass() : "null", retObjectUnderlineThickness_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -340,12 +345,13 @@ public class FamilyTypeface extends NetObject  {
             retObjectXHeight = classInstance.Get("XHeight");
             return (double)retObjectXHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectXHeight_ToString = retObjectXHeight == null ? "null" : retObjectXHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectXHeightNumber = (java.lang.Number)retObjectXHeight;
                 return retObjectXHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectXHeight != null ? retObjectXHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectXHeight != null ? retObjectXHeight.getClass() : "null", retObjectXHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

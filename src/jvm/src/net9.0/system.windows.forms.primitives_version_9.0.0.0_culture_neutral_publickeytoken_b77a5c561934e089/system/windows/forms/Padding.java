@@ -232,12 +232,13 @@ public class Padding extends ValueType  {
             retObjectAll = classInstance.Get("All");
             return (int)retObjectAll;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAll_ToString = retObjectAll == null ? "null" : retObjectAll.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAllNumber = (java.lang.Number)retObjectAll;
                 return retObjectAllNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAll != null ? retObjectAll.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAll != null ? retObjectAll.getClass() : "null", retObjectAll_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -262,12 +263,13 @@ public class Padding extends ValueType  {
             retObjectBottom = classInstance.Get("Bottom");
             return (int)retObjectBottom;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBottom_ToString = retObjectBottom == null ? "null" : retObjectBottom.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBottomNumber = (java.lang.Number)retObjectBottom;
                 return retObjectBottomNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBottom != null ? retObjectBottom.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBottom != null ? retObjectBottom.getClass() : "null", retObjectBottom_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -292,12 +294,13 @@ public class Padding extends ValueType  {
             retObjectHorizontal = classInstance.Get("Horizontal");
             return (int)retObjectHorizontal;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHorizontal_ToString = retObjectHorizontal == null ? "null" : retObjectHorizontal.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHorizontalNumber = (java.lang.Number)retObjectHorizontal;
                 return retObjectHorizontalNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHorizontal != null ? retObjectHorizontal.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHorizontal != null ? retObjectHorizontal.getClass() : "null", retObjectHorizontal_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -312,12 +315,13 @@ public class Padding extends ValueType  {
             retObjectLeft = classInstance.Get("Left");
             return (int)retObjectLeft;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLeft_ToString = retObjectLeft == null ? "null" : retObjectLeft.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLeftNumber = (java.lang.Number)retObjectLeft;
                 return retObjectLeftNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLeft != null ? retObjectLeft.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLeft != null ? retObjectLeft.getClass() : "null", retObjectLeft_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -342,12 +346,13 @@ public class Padding extends ValueType  {
             retObjectRight = classInstance.Get("Right");
             return (int)retObjectRight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRight_ToString = retObjectRight == null ? "null" : retObjectRight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRightNumber = (java.lang.Number)retObjectRight;
                 return retObjectRightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRight != null ? retObjectRight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRight != null ? retObjectRight.getClass() : "null", retObjectRight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -372,12 +377,13 @@ public class Padding extends ValueType  {
             retObjectTop = classInstance.Get("Top");
             return (int)retObjectTop;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTop_ToString = retObjectTop == null ? "null" : retObjectTop.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTopNumber = (java.lang.Number)retObjectTop;
                 return retObjectTopNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTop != null ? retObjectTop.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTop != null ? retObjectTop.getClass() : "null", retObjectTop_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -402,12 +408,13 @@ public class Padding extends ValueType  {
             retObjectVertical = classInstance.Get("Vertical");
             return (int)retObjectVertical;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVertical_ToString = retObjectVertical == null ? "null" : retObjectVertical.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVerticalNumber = (java.lang.Number)retObjectVertical;
                 return retObjectVerticalNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVertical != null ? retObjectVertical.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVertical != null ? retObjectVertical.getClass() : "null", retObjectVertical_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

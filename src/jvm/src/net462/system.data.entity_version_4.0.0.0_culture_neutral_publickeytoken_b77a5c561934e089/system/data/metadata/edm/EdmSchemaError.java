@@ -167,12 +167,13 @@ public class EdmSchemaError extends EdmError  {
             retObjectColumn = classInstance.Get("Column");
             return (int)retObjectColumn;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumn_ToString = retObjectColumn == null ? "null" : retObjectColumn.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectColumnNumber = (java.lang.Number)retObjectColumn;
                 return retObjectColumnNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectColumn != null ? retObjectColumn.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumn != null ? retObjectColumn.getClass() : "null", retObjectColumn_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -187,12 +188,13 @@ public class EdmSchemaError extends EdmError  {
             retObjectErrorCode = classInstance.Get("ErrorCode");
             return (int)retObjectErrorCode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectErrorCode_ToString = retObjectErrorCode == null ? "null" : retObjectErrorCode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectErrorCodeNumber = (java.lang.Number)retObjectErrorCode;
                 return retObjectErrorCodeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectErrorCode != null ? retObjectErrorCode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectErrorCode != null ? retObjectErrorCode.getClass() : "null", retObjectErrorCode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -207,12 +209,13 @@ public class EdmSchemaError extends EdmError  {
             retObjectLine = classInstance.Get("Line");
             return (int)retObjectLine;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLine_ToString = retObjectLine == null ? "null" : retObjectLine.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLineNumber = (java.lang.Number)retObjectLine;
                 return retObjectLineNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLine != null ? retObjectLine.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLine != null ? retObjectLine.getClass() : "null", retObjectLine_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

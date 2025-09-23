@@ -196,12 +196,13 @@ public class ExecutionDataflowBlockOptions extends DataflowBlockOptions  {
             retObjectMaxDegreeOfParallelism = classInstance.Get("MaxDegreeOfParallelism");
             return (int)retObjectMaxDegreeOfParallelism;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxDegreeOfParallelism_ToString = retObjectMaxDegreeOfParallelism == null ? "null" : retObjectMaxDegreeOfParallelism.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxDegreeOfParallelismNumber = (java.lang.Number)retObjectMaxDegreeOfParallelism;
                 return retObjectMaxDegreeOfParallelismNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxDegreeOfParallelism != null ? retObjectMaxDegreeOfParallelism.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxDegreeOfParallelism != null ? retObjectMaxDegreeOfParallelism.getClass() : "null", retObjectMaxDegreeOfParallelism_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

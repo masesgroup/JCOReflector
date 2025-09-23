@@ -206,12 +206,13 @@ public class DirectoryEntryConfiguration extends NetObject  {
             retObjectPageSize = classInstance.Get("PageSize");
             return (int)retObjectPageSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageSize_ToString = retObjectPageSize == null ? "null" : retObjectPageSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPageSizeNumber = (java.lang.Number)retObjectPageSize;
                 return retObjectPageSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageSize != null ? retObjectPageSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageSize != null ? retObjectPageSize.getClass() : "null", retObjectPageSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -236,12 +237,13 @@ public class DirectoryEntryConfiguration extends NetObject  {
             retObjectPasswordPort = classInstance.Get("PasswordPort");
             return (int)retObjectPasswordPort;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPasswordPort_ToString = retObjectPasswordPort == null ? "null" : retObjectPasswordPort.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPasswordPortNumber = (java.lang.Number)retObjectPasswordPort;
                 return retObjectPasswordPortNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPasswordPort != null ? retObjectPasswordPort.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPasswordPort != null ? retObjectPasswordPort.getClass() : "null", retObjectPasswordPort_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

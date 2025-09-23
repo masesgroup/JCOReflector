@@ -197,12 +197,13 @@ public class SocketAddress extends NetObject  {
             retObjectGetMaximumAddressSize = classType.Invoke("GetMaximumAddressSize", addressFamily == null ? null : addressFamily.getJCOInstance());
             return (int)retObjectGetMaximumAddressSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetMaximumAddressSize_ToString = retObjectGetMaximumAddressSize == null ? "null" : retObjectGetMaximumAddressSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetMaximumAddressSizeNumber = (java.lang.Number)retObjectGetMaximumAddressSize;
                 return retObjectGetMaximumAddressSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetMaximumAddressSize != null ? retObjectGetMaximumAddressSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetMaximumAddressSize != null ? retObjectGetMaximumAddressSize.getClass() : "null", retObjectGetMaximumAddressSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -221,12 +222,13 @@ public class SocketAddress extends NetObject  {
             retObjectSize = classInstance.Get("Size");
             return (int)retObjectSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSize_ToString = retObjectSize == null ? "null" : retObjectSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSizeNumber = (java.lang.Number)retObjectSize;
                 return retObjectSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSize != null ? retObjectSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSize != null ? retObjectSize.getClass() : "null", retObjectSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -162,12 +162,13 @@ public class IAppDomainInfoImplementation extends NetObject implements IAppDomai
             retObjectGetSiteId = classInstance.Invoke("GetSiteId");
             return (int)retObjectGetSiteId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetSiteId_ToString = retObjectGetSiteId == null ? "null" : retObjectGetSiteId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetSiteIdNumber = (java.lang.Number)retObjectGetSiteId;
                 return retObjectGetSiteIdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetSiteId != null ? retObjectGetSiteId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetSiteId != null ? retObjectGetSiteId.getClass() : "null", retObjectGetSiteId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

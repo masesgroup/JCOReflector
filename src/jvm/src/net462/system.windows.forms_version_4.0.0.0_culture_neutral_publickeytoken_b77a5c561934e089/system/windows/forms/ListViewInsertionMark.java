@@ -164,12 +164,13 @@ public class ListViewInsertionMark extends NetObject  {
             retObjectNearestIndex = classInstance.Invoke("NearestIndex", pt == null ? null : pt.getJCOInstance());
             return (int)retObjectNearestIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNearestIndex_ToString = retObjectNearestIndex == null ? "null" : retObjectNearestIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNearestIndexNumber = (java.lang.Number)retObjectNearestIndex;
                 return retObjectNearestIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNearestIndex != null ? retObjectNearestIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNearestIndex != null ? retObjectNearestIndex.getClass() : "null", retObjectNearestIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -212,12 +213,13 @@ public class ListViewInsertionMark extends NetObject  {
             retObjectIndex = classInstance.Get("Index");
             return (int)retObjectIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndex_ToString = retObjectIndex == null ? "null" : retObjectIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIndexNumber = (java.lang.Number)retObjectIndex;
                 return retObjectIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndex != null ? retObjectIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndex != null ? retObjectIndex.getClass() : "null", retObjectIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

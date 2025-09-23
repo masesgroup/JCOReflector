@@ -175,12 +175,13 @@ public class CompositeDesignerAccessibleObject extends ActivityDesignerAccessibl
             retObjectGetChildCount = classInstance.Invoke("GetChildCount");
             return (int)retObjectGetChildCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetChildCount_ToString = retObjectGetChildCount == null ? "null" : retObjectGetChildCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetChildCountNumber = (java.lang.Number)retObjectGetChildCount;
                 return retObjectGetChildCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetChildCount != null ? retObjectGetChildCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetChildCount != null ? retObjectGetChildCount.getClass() : "null", retObjectGetChildCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

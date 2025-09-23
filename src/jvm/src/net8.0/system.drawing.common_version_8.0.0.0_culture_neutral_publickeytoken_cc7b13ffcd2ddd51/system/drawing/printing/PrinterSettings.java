@@ -398,12 +398,13 @@ public class PrinterSettings extends NetObject  {
             retObjectCopies = classInstance.Get("Copies");
             return (short)retObjectCopies;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCopies_ToString = retObjectCopies == null ? "null" : retObjectCopies.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCopiesNumber = (java.lang.Number)retObjectCopies;
                 return retObjectCopiesNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectCopies != null ? retObjectCopies.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectCopies != null ? retObjectCopies.getClass() : "null", retObjectCopies_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -428,12 +429,13 @@ public class PrinterSettings extends NetObject  {
             retObjectFromPage = classInstance.Get("FromPage");
             return (int)retObjectFromPage;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFromPage_ToString = retObjectFromPage == null ? "null" : retObjectFromPage.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFromPageNumber = (java.lang.Number)retObjectFromPage;
                 return retObjectFromPageNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFromPage != null ? retObjectFromPage.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFromPage != null ? retObjectFromPage.getClass() : "null", retObjectFromPage_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -458,12 +460,13 @@ public class PrinterSettings extends NetObject  {
             retObjectLandscapeAngle = classInstance.Get("LandscapeAngle");
             return (int)retObjectLandscapeAngle;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLandscapeAngle_ToString = retObjectLandscapeAngle == null ? "null" : retObjectLandscapeAngle.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLandscapeAngleNumber = (java.lang.Number)retObjectLandscapeAngle;
                 return retObjectLandscapeAngleNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLandscapeAngle != null ? retObjectLandscapeAngle.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLandscapeAngle != null ? retObjectLandscapeAngle.getClass() : "null", retObjectLandscapeAngle_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -478,12 +481,13 @@ public class PrinterSettings extends NetObject  {
             retObjectMaximumCopies = classInstance.Get("MaximumCopies");
             return (int)retObjectMaximumCopies;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumCopies_ToString = retObjectMaximumCopies == null ? "null" : retObjectMaximumCopies.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumCopiesNumber = (java.lang.Number)retObjectMaximumCopies;
                 return retObjectMaximumCopiesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumCopies != null ? retObjectMaximumCopies.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumCopies != null ? retObjectMaximumCopies.getClass() : "null", retObjectMaximumCopies_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -498,12 +502,13 @@ public class PrinterSettings extends NetObject  {
             retObjectMaximumPage = classInstance.Get("MaximumPage");
             return (int)retObjectMaximumPage;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumPage_ToString = retObjectMaximumPage == null ? "null" : retObjectMaximumPage.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumPageNumber = (java.lang.Number)retObjectMaximumPage;
                 return retObjectMaximumPageNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumPage != null ? retObjectMaximumPage.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumPage != null ? retObjectMaximumPage.getClass() : "null", retObjectMaximumPage_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -528,12 +533,13 @@ public class PrinterSettings extends NetObject  {
             retObjectMinimumPage = classInstance.Get("MinimumPage");
             return (int)retObjectMinimumPage;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumPage_ToString = retObjectMinimumPage == null ? "null" : retObjectMinimumPage.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinimumPageNumber = (java.lang.Number)retObjectMinimumPage;
                 return retObjectMinimumPageNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinimumPage != null ? retObjectMinimumPage.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimumPage != null ? retObjectMinimumPage.getClass() : "null", retObjectMinimumPage_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -558,12 +564,13 @@ public class PrinterSettings extends NetObject  {
             retObjectToPage = classInstance.Get("ToPage");
             return (int)retObjectToPage;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToPage_ToString = retObjectToPage == null ? "null" : retObjectToPage.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToPageNumber = (java.lang.Number)retObjectToPage;
                 return retObjectToPageNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectToPage != null ? retObjectToPage.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToPage != null ? retObjectToPage.getClass() : "null", retObjectToPage_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

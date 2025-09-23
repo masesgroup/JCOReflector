@@ -178,12 +178,13 @@ public class VisualTreeChangeEventArgs extends EventArgs  {
             retObjectChildIndex = classInstance.Get("ChildIndex");
             return (int)retObjectChildIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectChildIndex_ToString = retObjectChildIndex == null ? "null" : retObjectChildIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectChildIndexNumber = (java.lang.Number)retObjectChildIndex;
                 return retObjectChildIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectChildIndex != null ? retObjectChildIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectChildIndex != null ? retObjectChildIndex.getClass() : "null", retObjectChildIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

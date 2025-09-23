@@ -167,12 +167,13 @@ public class DownloadProgressChangedEventArgs extends ProgressChangedEventArgs  
             retObjectBytesDownloaded = classInstance.Get("BytesDownloaded");
             return (long)retObjectBytesDownloaded;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBytesDownloaded_ToString = retObjectBytesDownloaded == null ? "null" : retObjectBytesDownloaded.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBytesDownloadedNumber = (java.lang.Number)retObjectBytesDownloaded;
                 return retObjectBytesDownloadedNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectBytesDownloaded != null ? retObjectBytesDownloaded.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectBytesDownloaded != null ? retObjectBytesDownloaded.getClass() : "null", retObjectBytesDownloaded_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -187,12 +188,13 @@ public class DownloadProgressChangedEventArgs extends ProgressChangedEventArgs  
             retObjectTotalBytesToDownload = classInstance.Get("TotalBytesToDownload");
             return (long)retObjectTotalBytesToDownload;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTotalBytesToDownload_ToString = retObjectTotalBytesToDownload == null ? "null" : retObjectTotalBytesToDownload.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTotalBytesToDownloadNumber = (java.lang.Number)retObjectTotalBytesToDownload;
                 return retObjectTotalBytesToDownloadNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTotalBytesToDownload != null ? retObjectTotalBytesToDownload.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectTotalBytesToDownload != null ? retObjectTotalBytesToDownload.getClass() : "null", retObjectTotalBytesToDownload_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

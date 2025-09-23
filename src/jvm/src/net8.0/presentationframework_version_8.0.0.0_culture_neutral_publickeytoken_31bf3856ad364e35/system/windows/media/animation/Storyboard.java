@@ -220,12 +220,13 @@ public class Storyboard extends ParallelTimeline  {
             retObjectGetCurrentGlobalSpeed = classInstance.Invoke("GetCurrentGlobalSpeed");
             return (double)retObjectGetCurrentGlobalSpeed;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCurrentGlobalSpeed_ToString = retObjectGetCurrentGlobalSpeed == null ? "null" : retObjectGetCurrentGlobalSpeed.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetCurrentGlobalSpeedNumber = (java.lang.Number)retObjectGetCurrentGlobalSpeed;
                 return retObjectGetCurrentGlobalSpeedNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetCurrentGlobalSpeed != null ? retObjectGetCurrentGlobalSpeed.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetCurrentGlobalSpeed != null ? retObjectGetCurrentGlobalSpeed.getClass() : "null", retObjectGetCurrentGlobalSpeed_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -240,12 +241,13 @@ public class Storyboard extends ParallelTimeline  {
             retObjectGetCurrentProgress = classInstance.Invoke("GetCurrentProgress");
             return (double)retObjectGetCurrentProgress;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCurrentProgress_ToString = retObjectGetCurrentProgress == null ? "null" : retObjectGetCurrentProgress.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetCurrentProgressNumber = (java.lang.Number)retObjectGetCurrentProgress;
                 return retObjectGetCurrentProgressNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetCurrentProgress != null ? retObjectGetCurrentProgress.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetCurrentProgress != null ? retObjectGetCurrentProgress.getClass() : "null", retObjectGetCurrentProgress_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -260,12 +262,13 @@ public class Storyboard extends ParallelTimeline  {
             retObjectGetCurrentIteration = classInstance.Invoke("GetCurrentIteration");
             return (int)retObjectGetCurrentIteration;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCurrentIteration_ToString = retObjectGetCurrentIteration == null ? "null" : retObjectGetCurrentIteration.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetCurrentIterationNumber = (java.lang.Number)retObjectGetCurrentIteration;
                 return retObjectGetCurrentIterationNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCurrentIteration != null ? retObjectGetCurrentIteration.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCurrentIteration != null ? retObjectGetCurrentIteration.getClass() : "null", retObjectGetCurrentIteration_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -173,12 +173,13 @@ public class HttpListenerTimeoutsElement extends ConfigurationElement  {
             retObjectMinSendBytesPerSecond = classInstance.Get("MinSendBytesPerSecond");
             return (long)retObjectMinSendBytesPerSecond;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinSendBytesPerSecond_ToString = retObjectMinSendBytesPerSecond == null ? "null" : retObjectMinSendBytesPerSecond.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinSendBytesPerSecondNumber = (java.lang.Number)retObjectMinSendBytesPerSecond;
                 return retObjectMinSendBytesPerSecondNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMinSendBytesPerSecond != null ? retObjectMinSendBytesPerSecond.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMinSendBytesPerSecond != null ? retObjectMinSendBytesPerSecond.getClass() : "null", retObjectMinSendBytesPerSecond_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

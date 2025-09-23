@@ -166,12 +166,13 @@ public class TextLine extends NetObject implements AutoCloseable {
             retObjectGetDistanceFromCharacterHit = classInstance.Invoke("GetDistanceFromCharacterHit", characterHit == null ? null : characterHit.getJCOInstance());
             return (double)retObjectGetDistanceFromCharacterHit;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetDistanceFromCharacterHit_ToString = retObjectGetDistanceFromCharacterHit == null ? "null" : retObjectGetDistanceFromCharacterHit.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetDistanceFromCharacterHitNumber = (java.lang.Number)retObjectGetDistanceFromCharacterHit;
                 return retObjectGetDistanceFromCharacterHitNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetDistanceFromCharacterHit != null ? retObjectGetDistanceFromCharacterHit.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetDistanceFromCharacterHit != null ? retObjectGetDistanceFromCharacterHit.getClass() : "null", retObjectGetDistanceFromCharacterHit_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -355,12 +356,13 @@ public class TextLine extends NetObject implements AutoCloseable {
             retObjectBaseline = classInstance.Get("Baseline");
             return (double)retObjectBaseline;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBaseline_ToString = retObjectBaseline == null ? "null" : retObjectBaseline.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBaselineNumber = (java.lang.Number)retObjectBaseline;
                 return retObjectBaselineNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectBaseline != null ? retObjectBaseline.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBaseline != null ? retObjectBaseline.getClass() : "null", retObjectBaseline_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -375,12 +377,13 @@ public class TextLine extends NetObject implements AutoCloseable {
             retObjectExtent = classInstance.Get("Extent");
             return (double)retObjectExtent;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExtent_ToString = retObjectExtent == null ? "null" : retObjectExtent.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExtentNumber = (java.lang.Number)retObjectExtent;
                 return retObjectExtentNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectExtent != null ? retObjectExtent.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectExtent != null ? retObjectExtent.getClass() : "null", retObjectExtent_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -395,12 +398,13 @@ public class TextLine extends NetObject implements AutoCloseable {
             retObjectHeight = classInstance.Get("Height");
             return (double)retObjectHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHeight_ToString = retObjectHeight == null ? "null" : retObjectHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHeightNumber = (java.lang.Number)retObjectHeight;
                 return retObjectHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null", retObjectHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -415,12 +419,13 @@ public class TextLine extends NetObject implements AutoCloseable {
             retObjectMarkerBaseline = classInstance.Get("MarkerBaseline");
             return (double)retObjectMarkerBaseline;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMarkerBaseline_ToString = retObjectMarkerBaseline == null ? "null" : retObjectMarkerBaseline.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMarkerBaselineNumber = (java.lang.Number)retObjectMarkerBaseline;
                 return retObjectMarkerBaselineNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMarkerBaseline != null ? retObjectMarkerBaseline.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMarkerBaseline != null ? retObjectMarkerBaseline.getClass() : "null", retObjectMarkerBaseline_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -435,12 +440,13 @@ public class TextLine extends NetObject implements AutoCloseable {
             retObjectMarkerHeight = classInstance.Get("MarkerHeight");
             return (double)retObjectMarkerHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMarkerHeight_ToString = retObjectMarkerHeight == null ? "null" : retObjectMarkerHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMarkerHeightNumber = (java.lang.Number)retObjectMarkerHeight;
                 return retObjectMarkerHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMarkerHeight != null ? retObjectMarkerHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMarkerHeight != null ? retObjectMarkerHeight.getClass() : "null", retObjectMarkerHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -455,12 +461,13 @@ public class TextLine extends NetObject implements AutoCloseable {
             retObjectOverhangAfter = classInstance.Get("OverhangAfter");
             return (double)retObjectOverhangAfter;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOverhangAfter_ToString = retObjectOverhangAfter == null ? "null" : retObjectOverhangAfter.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOverhangAfterNumber = (java.lang.Number)retObjectOverhangAfter;
                 return retObjectOverhangAfterNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOverhangAfter != null ? retObjectOverhangAfter.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOverhangAfter != null ? retObjectOverhangAfter.getClass() : "null", retObjectOverhangAfter_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -475,12 +482,13 @@ public class TextLine extends NetObject implements AutoCloseable {
             retObjectOverhangLeading = classInstance.Get("OverhangLeading");
             return (double)retObjectOverhangLeading;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOverhangLeading_ToString = retObjectOverhangLeading == null ? "null" : retObjectOverhangLeading.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOverhangLeadingNumber = (java.lang.Number)retObjectOverhangLeading;
                 return retObjectOverhangLeadingNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOverhangLeading != null ? retObjectOverhangLeading.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOverhangLeading != null ? retObjectOverhangLeading.getClass() : "null", retObjectOverhangLeading_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -495,12 +503,13 @@ public class TextLine extends NetObject implements AutoCloseable {
             retObjectOverhangTrailing = classInstance.Get("OverhangTrailing");
             return (double)retObjectOverhangTrailing;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOverhangTrailing_ToString = retObjectOverhangTrailing == null ? "null" : retObjectOverhangTrailing.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOverhangTrailingNumber = (java.lang.Number)retObjectOverhangTrailing;
                 return retObjectOverhangTrailingNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOverhangTrailing != null ? retObjectOverhangTrailing.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOverhangTrailing != null ? retObjectOverhangTrailing.getClass() : "null", retObjectOverhangTrailing_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -515,12 +524,13 @@ public class TextLine extends NetObject implements AutoCloseable {
             retObjectPixelsPerDip = classInstance.Get("PixelsPerDip");
             return (double)retObjectPixelsPerDip;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPixelsPerDip_ToString = retObjectPixelsPerDip == null ? "null" : retObjectPixelsPerDip.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPixelsPerDipNumber = (java.lang.Number)retObjectPixelsPerDip;
                 return retObjectPixelsPerDipNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectPixelsPerDip != null ? retObjectPixelsPerDip.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPixelsPerDip != null ? retObjectPixelsPerDip.getClass() : "null", retObjectPixelsPerDip_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -545,12 +555,13 @@ public class TextLine extends NetObject implements AutoCloseable {
             retObjectStart = classInstance.Get("Start");
             return (double)retObjectStart;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStart_ToString = retObjectStart == null ? "null" : retObjectStart.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStartNumber = (java.lang.Number)retObjectStart;
                 return retObjectStartNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectStart != null ? retObjectStart.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStart != null ? retObjectStart.getClass() : "null", retObjectStart_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -565,12 +576,13 @@ public class TextLine extends NetObject implements AutoCloseable {
             retObjectTextBaseline = classInstance.Get("TextBaseline");
             return (double)retObjectTextBaseline;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTextBaseline_ToString = retObjectTextBaseline == null ? "null" : retObjectTextBaseline.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTextBaselineNumber = (java.lang.Number)retObjectTextBaseline;
                 return retObjectTextBaselineNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectTextBaseline != null ? retObjectTextBaseline.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectTextBaseline != null ? retObjectTextBaseline.getClass() : "null", retObjectTextBaseline_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -585,12 +597,13 @@ public class TextLine extends NetObject implements AutoCloseable {
             retObjectTextHeight = classInstance.Get("TextHeight");
             return (double)retObjectTextHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTextHeight_ToString = retObjectTextHeight == null ? "null" : retObjectTextHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTextHeightNumber = (java.lang.Number)retObjectTextHeight;
                 return retObjectTextHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectTextHeight != null ? retObjectTextHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectTextHeight != null ? retObjectTextHeight.getClass() : "null", retObjectTextHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -605,12 +618,13 @@ public class TextLine extends NetObject implements AutoCloseable {
             retObjectWidth = classInstance.Get("Width");
             return (double)retObjectWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWidth_ToString = retObjectWidth == null ? "null" : retObjectWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWidthNumber = (java.lang.Number)retObjectWidth;
                 return retObjectWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectWidth != null ? retObjectWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectWidth != null ? retObjectWidth.getClass() : "null", retObjectWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -625,12 +639,13 @@ public class TextLine extends NetObject implements AutoCloseable {
             retObjectWidthIncludingTrailingWhitespace = classInstance.Get("WidthIncludingTrailingWhitespace");
             return (double)retObjectWidthIncludingTrailingWhitespace;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWidthIncludingTrailingWhitespace_ToString = retObjectWidthIncludingTrailingWhitespace == null ? "null" : retObjectWidthIncludingTrailingWhitespace.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWidthIncludingTrailingWhitespaceNumber = (java.lang.Number)retObjectWidthIncludingTrailingWhitespace;
                 return retObjectWidthIncludingTrailingWhitespaceNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectWidthIncludingTrailingWhitespace != null ? retObjectWidthIncludingTrailingWhitespace.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectWidthIncludingTrailingWhitespace != null ? retObjectWidthIncludingTrailingWhitespace.getClass() : "null", retObjectWidthIncludingTrailingWhitespace_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -645,12 +660,13 @@ public class TextLine extends NetObject implements AutoCloseable {
             retObjectDependentLength = classInstance.Get("DependentLength");
             return (int)retObjectDependentLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDependentLength_ToString = retObjectDependentLength == null ? "null" : retObjectDependentLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDependentLengthNumber = (java.lang.Number)retObjectDependentLength;
                 return retObjectDependentLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDependentLength != null ? retObjectDependentLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDependentLength != null ? retObjectDependentLength.getClass() : "null", retObjectDependentLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -665,12 +681,13 @@ public class TextLine extends NetObject implements AutoCloseable {
             retObjectLength = classInstance.Get("Length");
             return (int)retObjectLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLength_ToString = retObjectLength == null ? "null" : retObjectLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLengthNumber = (java.lang.Number)retObjectLength;
                 return retObjectLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null", retObjectLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -685,12 +702,13 @@ public class TextLine extends NetObject implements AutoCloseable {
             retObjectNewlineLength = classInstance.Get("NewlineLength");
             return (int)retObjectNewlineLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNewlineLength_ToString = retObjectNewlineLength == null ? "null" : retObjectNewlineLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNewlineLengthNumber = (java.lang.Number)retObjectNewlineLength;
                 return retObjectNewlineLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNewlineLength != null ? retObjectNewlineLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNewlineLength != null ? retObjectNewlineLength.getClass() : "null", retObjectNewlineLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -705,12 +723,13 @@ public class TextLine extends NetObject implements AutoCloseable {
             retObjectTrailingWhitespaceLength = classInstance.Get("TrailingWhitespaceLength");
             return (int)retObjectTrailingWhitespaceLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTrailingWhitespaceLength_ToString = retObjectTrailingWhitespaceLength == null ? "null" : retObjectTrailingWhitespaceLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTrailingWhitespaceLengthNumber = (java.lang.Number)retObjectTrailingWhitespaceLength;
                 return retObjectTrailingWhitespaceLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTrailingWhitespaceLength != null ? retObjectTrailingWhitespaceLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTrailingWhitespaceLength != null ? retObjectTrailingWhitespaceLength.getClass() : "null", retObjectTrailingWhitespaceLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

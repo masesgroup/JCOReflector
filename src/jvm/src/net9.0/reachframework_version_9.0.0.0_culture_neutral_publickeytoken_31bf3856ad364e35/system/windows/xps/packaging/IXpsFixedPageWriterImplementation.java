@@ -325,12 +325,13 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
             retObjectPageNumber = classInstance.Get("PageNumber");
             return (int)retObjectPageNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageNumber_ToString = retObjectPageNumber == null ? "null" : retObjectPageNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPageNumberNumber = (java.lang.Number)retObjectPageNumber;
                 return retObjectPageNumberNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageNumber != null ? retObjectPageNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageNumber != null ? retObjectPageNumber.getClass() : "null", retObjectPageNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

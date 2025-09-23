@@ -204,12 +204,13 @@ public class DataGridRowClipboardEventArgs extends EventArgs  {
             retObjectEndColumnDisplayIndex = classInstance.Get("EndColumnDisplayIndex");
             return (int)retObjectEndColumnDisplayIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndColumnDisplayIndex_ToString = retObjectEndColumnDisplayIndex == null ? "null" : retObjectEndColumnDisplayIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEndColumnDisplayIndexNumber = (java.lang.Number)retObjectEndColumnDisplayIndex;
                 return retObjectEndColumnDisplayIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEndColumnDisplayIndex != null ? retObjectEndColumnDisplayIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndColumnDisplayIndex != null ? retObjectEndColumnDisplayIndex.getClass() : "null", retObjectEndColumnDisplayIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -224,12 +225,13 @@ public class DataGridRowClipboardEventArgs extends EventArgs  {
             retObjectStartColumnDisplayIndex = classInstance.Get("StartColumnDisplayIndex");
             return (int)retObjectStartColumnDisplayIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartColumnDisplayIndex_ToString = retObjectStartColumnDisplayIndex == null ? "null" : retObjectStartColumnDisplayIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStartColumnDisplayIndexNumber = (java.lang.Number)retObjectStartColumnDisplayIndex;
                 return retObjectStartColumnDisplayIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStartColumnDisplayIndex != null ? retObjectStartColumnDisplayIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartColumnDisplayIndex != null ? retObjectStartColumnDisplayIndex.getClass() : "null", retObjectStartColumnDisplayIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

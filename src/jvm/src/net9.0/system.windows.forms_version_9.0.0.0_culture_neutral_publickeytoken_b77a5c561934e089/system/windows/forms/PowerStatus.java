@@ -168,12 +168,13 @@ public class PowerStatus extends NetObject  {
             retObjectBatteryFullLifetime = classInstance.Get("BatteryFullLifetime");
             return (int)retObjectBatteryFullLifetime;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBatteryFullLifetime_ToString = retObjectBatteryFullLifetime == null ? "null" : retObjectBatteryFullLifetime.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBatteryFullLifetimeNumber = (java.lang.Number)retObjectBatteryFullLifetime;
                 return retObjectBatteryFullLifetimeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBatteryFullLifetime != null ? retObjectBatteryFullLifetime.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBatteryFullLifetime != null ? retObjectBatteryFullLifetime.getClass() : "null", retObjectBatteryFullLifetime_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -188,12 +189,13 @@ public class PowerStatus extends NetObject  {
             retObjectBatteryLifeRemaining = classInstance.Get("BatteryLifeRemaining");
             return (int)retObjectBatteryLifeRemaining;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBatteryLifeRemaining_ToString = retObjectBatteryLifeRemaining == null ? "null" : retObjectBatteryLifeRemaining.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBatteryLifeRemainingNumber = (java.lang.Number)retObjectBatteryLifeRemaining;
                 return retObjectBatteryLifeRemainingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBatteryLifeRemaining != null ? retObjectBatteryLifeRemaining.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBatteryLifeRemaining != null ? retObjectBatteryLifeRemaining.getClass() : "null", retObjectBatteryLifeRemaining_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

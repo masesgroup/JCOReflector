@@ -175,12 +175,13 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
             retObjectEndReceiveFromSource = classInstance.Invoke("EndReceiveFromSource", result == null ? null : result.getJCOInstance(), sourcePort.getJCRefOut());
             return (int)retObjectEndReceiveFromSource;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndReceiveFromSource_ToString = retObjectEndReceiveFromSource == null ? "null" : retObjectEndReceiveFromSource.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEndReceiveFromSourceNumber = (java.lang.Number)retObjectEndReceiveFromSource;
                 return retObjectEndReceiveFromSourceNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEndReceiveFromSource != null ? retObjectEndReceiveFromSource.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndReceiveFromSource != null ? retObjectEndReceiveFromSource.getClass() : "null", retObjectEndReceiveFromSource_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -317,12 +318,13 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
             retObjectReceiveBufferSize = classInstance.Get("ReceiveBufferSize");
             return (int)retObjectReceiveBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceiveBufferSize_ToString = retObjectReceiveBufferSize == null ? "null" : retObjectReceiveBufferSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReceiveBufferSizeNumber = (java.lang.Number)retObjectReceiveBufferSize;
                 return retObjectReceiveBufferSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReceiveBufferSize != null ? retObjectReceiveBufferSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveBufferSize != null ? retObjectReceiveBufferSize.getClass() : "null", retObjectReceiveBufferSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -347,12 +349,13 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
             retObjectSendBufferSize = classInstance.Get("SendBufferSize");
             return (int)retObjectSendBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSendBufferSize_ToString = retObjectSendBufferSize == null ? "null" : retObjectSendBufferSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSendBufferSizeNumber = (java.lang.Number)retObjectSendBufferSize;
                 return retObjectSendBufferSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSendBufferSize != null ? retObjectSendBufferSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendBufferSize != null ? retObjectSendBufferSize.getClass() : "null", retObjectSendBufferSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

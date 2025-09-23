@@ -197,12 +197,13 @@ public class BuildErrorEventArgs extends LazyFormattedBuildEventArgs  {
             retObjectColumnNumber = classInstance.Get("ColumnNumber");
             return (int)retObjectColumnNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnNumber_ToString = retObjectColumnNumber == null ? "null" : retObjectColumnNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectColumnNumberNumber = (java.lang.Number)retObjectColumnNumber;
                 return retObjectColumnNumberNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectColumnNumber != null ? retObjectColumnNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumnNumber != null ? retObjectColumnNumber.getClass() : "null", retObjectColumnNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -217,12 +218,13 @@ public class BuildErrorEventArgs extends LazyFormattedBuildEventArgs  {
             retObjectEndColumnNumber = classInstance.Get("EndColumnNumber");
             return (int)retObjectEndColumnNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndColumnNumber_ToString = retObjectEndColumnNumber == null ? "null" : retObjectEndColumnNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEndColumnNumberNumber = (java.lang.Number)retObjectEndColumnNumber;
                 return retObjectEndColumnNumberNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEndColumnNumber != null ? retObjectEndColumnNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndColumnNumber != null ? retObjectEndColumnNumber.getClass() : "null", retObjectEndColumnNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -237,12 +239,13 @@ public class BuildErrorEventArgs extends LazyFormattedBuildEventArgs  {
             retObjectEndLineNumber = classInstance.Get("EndLineNumber");
             return (int)retObjectEndLineNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndLineNumber_ToString = retObjectEndLineNumber == null ? "null" : retObjectEndLineNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEndLineNumberNumber = (java.lang.Number)retObjectEndLineNumber;
                 return retObjectEndLineNumberNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEndLineNumber != null ? retObjectEndLineNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndLineNumber != null ? retObjectEndLineNumber.getClass() : "null", retObjectEndLineNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -257,12 +260,13 @@ public class BuildErrorEventArgs extends LazyFormattedBuildEventArgs  {
             retObjectLineNumber = classInstance.Get("LineNumber");
             return (int)retObjectLineNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLineNumber_ToString = retObjectLineNumber == null ? "null" : retObjectLineNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLineNumberNumber = (java.lang.Number)retObjectLineNumber;
                 return retObjectLineNumberNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null", retObjectLineNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

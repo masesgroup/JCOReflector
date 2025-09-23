@@ -246,12 +246,13 @@ public class Page extends TemplateControl  {
             retObjectGetTypeHashCode = classInstance.Invoke("GetTypeHashCode");
             return (int)retObjectGetTypeHashCode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTypeHashCode_ToString = retObjectGetTypeHashCode == null ? "null" : retObjectGetTypeHashCode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTypeHashCodeNumber = (java.lang.Number)retObjectGetTypeHashCode;
                 return retObjectGetTypeHashCodeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTypeHashCode != null ? retObjectGetTypeHashCode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTypeHashCode != null ? retObjectGetTypeHashCode.getClass() : "null", retObjectGetTypeHashCode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -900,12 +901,13 @@ public class Page extends TemplateControl  {
             retObjectCodePage = classInstance.Get("CodePage");
             return (int)retObjectCodePage;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCodePage_ToString = retObjectCodePage == null ? "null" : retObjectCodePage.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCodePageNumber = (java.lang.Number)retObjectCodePage;
                 return retObjectCodePageNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCodePage != null ? retObjectCodePage.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCodePage != null ? retObjectCodePage.getClass() : "null", retObjectCodePage_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -930,12 +932,13 @@ public class Page extends TemplateControl  {
             retObjectLCID = classInstance.Get("LCID");
             return (int)retObjectLCID;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLCID_ToString = retObjectLCID == null ? "null" : retObjectLCID.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLCIDNumber = (java.lang.Number)retObjectLCID;
                 return retObjectLCIDNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLCID != null ? retObjectLCID.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLCID != null ? retObjectLCID.getClass() : "null", retObjectLCID_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -960,12 +963,13 @@ public class Page extends TemplateControl  {
             retObjectMaxPageStateFieldLength = classInstance.Get("MaxPageStateFieldLength");
             return (int)retObjectMaxPageStateFieldLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxPageStateFieldLength_ToString = retObjectMaxPageStateFieldLength == null ? "null" : retObjectMaxPageStateFieldLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxPageStateFieldLengthNumber = (java.lang.Number)retObjectMaxPageStateFieldLength;
                 return retObjectMaxPageStateFieldLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxPageStateFieldLength != null ? retObjectMaxPageStateFieldLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxPageStateFieldLength != null ? retObjectMaxPageStateFieldLength.getClass() : "null", retObjectMaxPageStateFieldLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

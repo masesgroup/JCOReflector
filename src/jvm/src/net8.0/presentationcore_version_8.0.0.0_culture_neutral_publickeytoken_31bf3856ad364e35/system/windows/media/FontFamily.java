@@ -195,12 +195,13 @@ public class FontFamily extends NetObject  {
             retObjectBaseline = classInstance.Get("Baseline");
             return (double)retObjectBaseline;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBaseline_ToString = retObjectBaseline == null ? "null" : retObjectBaseline.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBaselineNumber = (java.lang.Number)retObjectBaseline;
                 return retObjectBaselineNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectBaseline != null ? retObjectBaseline.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBaseline != null ? retObjectBaseline.getClass() : "null", retObjectBaseline_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -225,12 +226,13 @@ public class FontFamily extends NetObject  {
             retObjectLineSpacing = classInstance.Get("LineSpacing");
             return (double)retObjectLineSpacing;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLineSpacing_ToString = retObjectLineSpacing == null ? "null" : retObjectLineSpacing.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLineSpacingNumber = (java.lang.Number)retObjectLineSpacing;
                 return retObjectLineSpacingNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectLineSpacing != null ? retObjectLineSpacing.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLineSpacing != null ? retObjectLineSpacing.getClass() : "null", retObjectLineSpacing_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

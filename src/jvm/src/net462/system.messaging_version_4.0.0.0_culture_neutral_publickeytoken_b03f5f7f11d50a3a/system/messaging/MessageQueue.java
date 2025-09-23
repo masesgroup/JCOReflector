@@ -1522,12 +1522,13 @@ public class MessageQueue extends Component  {
             retObjectBasePriority = classInstance.Get("BasePriority");
             return (short)retObjectBasePriority;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBasePriority_ToString = retObjectBasePriority == null ? "null" : retObjectBasePriority.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBasePriorityNumber = (java.lang.Number)retObjectBasePriority;
                 return retObjectBasePriorityNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectBasePriority != null ? retObjectBasePriority.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectBasePriority != null ? retObjectBasePriority.getClass() : "null", retObjectBasePriority_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1552,12 +1553,13 @@ public class MessageQueue extends Component  {
             retObjectMaximumJournalSize = classInstance.Get("MaximumJournalSize");
             return (long)retObjectMaximumJournalSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumJournalSize_ToString = retObjectMaximumJournalSize == null ? "null" : retObjectMaximumJournalSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumJournalSizeNumber = (java.lang.Number)retObjectMaximumJournalSize;
                 return retObjectMaximumJournalSizeNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMaximumJournalSize != null ? retObjectMaximumJournalSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaximumJournalSize != null ? retObjectMaximumJournalSize.getClass() : "null", retObjectMaximumJournalSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1582,12 +1584,13 @@ public class MessageQueue extends Component  {
             retObjectMaximumQueueSize = classInstance.Get("MaximumQueueSize");
             return (long)retObjectMaximumQueueSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumQueueSize_ToString = retObjectMaximumQueueSize == null ? "null" : retObjectMaximumQueueSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumQueueSizeNumber = (java.lang.Number)retObjectMaximumQueueSize;
                 return retObjectMaximumQueueSizeNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMaximumQueueSize != null ? retObjectMaximumQueueSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaximumQueueSize != null ? retObjectMaximumQueueSize.getClass() : "null", retObjectMaximumQueueSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -389,12 +389,13 @@ public class InMemorySymmetricSecurityKey extends SymmetricSecurityKey  {
             retObjectGetIVSize = classInstance.Invoke("GetIVSize", algorithm);
             return (int)retObjectGetIVSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetIVSize_ToString = retObjectGetIVSize == null ? "null" : retObjectGetIVSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetIVSizeNumber = (java.lang.Number)retObjectGetIVSize;
                 return retObjectGetIVSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetIVSize != null ? retObjectGetIVSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetIVSize != null ? retObjectGetIVSize.getClass() : "null", retObjectGetIVSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

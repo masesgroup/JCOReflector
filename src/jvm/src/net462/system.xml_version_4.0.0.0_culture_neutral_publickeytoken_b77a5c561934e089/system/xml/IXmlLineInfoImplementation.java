@@ -166,12 +166,13 @@ public class IXmlLineInfoImplementation extends NetObject implements IXmlLineInf
             retObjectLineNumber = classInstance.Get("LineNumber");
             return (int)retObjectLineNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLineNumber_ToString = retObjectLineNumber == null ? "null" : retObjectLineNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLineNumberNumber = (java.lang.Number)retObjectLineNumber;
                 return retObjectLineNumberNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null", retObjectLineNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -186,12 +187,13 @@ public class IXmlLineInfoImplementation extends NetObject implements IXmlLineInf
             retObjectLinePosition = classInstance.Get("LinePosition");
             return (int)retObjectLinePosition;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLinePosition_ToString = retObjectLinePosition == null ? "null" : retObjectLinePosition.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLinePositionNumber = (java.lang.Number)retObjectLinePosition;
                 return retObjectLinePositionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLinePosition != null ? retObjectLinePosition.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLinePosition != null ? retObjectLinePosition.getClass() : "null", retObjectLinePosition_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

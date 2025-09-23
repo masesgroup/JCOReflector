@@ -166,12 +166,13 @@ public class PrinterUnitConvert extends NetObject  {
             retObjectConvert = classType.Invoke("Convert", value, fromUnit == null ? null : fromUnit.getJCOInstance(), toUnit == null ? null : toUnit.getJCOInstance());
             return (double)retObjectConvert;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConvert_ToString = retObjectConvert == null ? "null" : retObjectConvert.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectConvertNumber = (java.lang.Number)retObjectConvert;
                 return retObjectConvertNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectConvert != null ? retObjectConvert.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectConvert != null ? retObjectConvert.getClass() : "null", retObjectConvert_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -186,12 +187,13 @@ public class PrinterUnitConvert extends NetObject  {
             retObjectConvert = classType.Invoke("Convert", value, fromUnit == null ? null : fromUnit.getJCOInstance(), toUnit == null ? null : toUnit.getJCOInstance());
             return (int)retObjectConvert;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConvert_ToString = retObjectConvert == null ? "null" : retObjectConvert.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectConvertNumber = (java.lang.Number)retObjectConvert;
                 return retObjectConvertNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectConvert != null ? retObjectConvert.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectConvert != null ? retObjectConvert.getClass() : "null", retObjectConvert_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -197,12 +197,13 @@ public class ProfileSettings extends ConfigurationElement  {
             retObjectMaxLimit = classInstance.Get("MaxLimit");
             return (int)retObjectMaxLimit;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxLimit_ToString = retObjectMaxLimit == null ? "null" : retObjectMaxLimit.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxLimitNumber = (java.lang.Number)retObjectMaxLimit;
                 return retObjectMaxLimitNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxLimit != null ? retObjectMaxLimit.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxLimit != null ? retObjectMaxLimit.getClass() : "null", retObjectMaxLimit_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -227,12 +228,13 @@ public class ProfileSettings extends ConfigurationElement  {
             retObjectMinInstances = classInstance.Get("MinInstances");
             return (int)retObjectMinInstances;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinInstances_ToString = retObjectMinInstances == null ? "null" : retObjectMinInstances.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinInstancesNumber = (java.lang.Number)retObjectMinInstances;
                 return retObjectMinInstancesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinInstances != null ? retObjectMinInstances.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinInstances != null ? retObjectMinInstances.getClass() : "null", retObjectMinInstances_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

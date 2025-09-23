@@ -172,12 +172,13 @@ public class RepeatButton extends ButtonBase  {
             retObjectDelay = classInstance.Get("Delay");
             return (int)retObjectDelay;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDelay_ToString = retObjectDelay == null ? "null" : retObjectDelay.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDelayNumber = (java.lang.Number)retObjectDelay;
                 return retObjectDelayNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDelay != null ? retObjectDelay.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDelay != null ? retObjectDelay.getClass() : "null", retObjectDelay_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,12 +203,13 @@ public class RepeatButton extends ButtonBase  {
             retObjectInterval = classInstance.Get("Interval");
             return (int)retObjectInterval;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInterval_ToString = retObjectInterval == null ? "null" : retObjectInterval.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIntervalNumber = (java.lang.Number)retObjectInterval;
                 return retObjectIntervalNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectInterval != null ? retObjectInterval.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectInterval != null ? retObjectInterval.getClass() : "null", retObjectInterval_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

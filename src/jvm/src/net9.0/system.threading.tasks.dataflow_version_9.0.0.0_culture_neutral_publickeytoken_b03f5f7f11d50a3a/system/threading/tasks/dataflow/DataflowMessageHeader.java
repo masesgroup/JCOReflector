@@ -205,12 +205,13 @@ public class DataflowMessageHeader extends ValueType  {
             retObjectId = classInstance.Get("Id");
             return (long)retObjectId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectId_ToString = retObjectId == null ? "null" : retObjectId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIdNumber = (java.lang.Number)retObjectId;
                 return retObjectIdNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectId != null ? retObjectId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectId != null ? retObjectId.getClass() : "null", retObjectId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

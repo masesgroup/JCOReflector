@@ -213,12 +213,13 @@ public class JSObject extends NetObject implements AutoCloseable {
             retObjectGetPropertyAsDouble = classInstance.Invoke("GetPropertyAsDouble", propertyName);
             return (double)retObjectGetPropertyAsDouble;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetPropertyAsDouble_ToString = retObjectGetPropertyAsDouble == null ? "null" : retObjectGetPropertyAsDouble.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetPropertyAsDoubleNumber = (java.lang.Number)retObjectGetPropertyAsDouble;
                 return retObjectGetPropertyAsDoubleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetPropertyAsDouble != null ? retObjectGetPropertyAsDouble.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetPropertyAsDouble != null ? retObjectGetPropertyAsDouble.getClass() : "null", retObjectGetPropertyAsDouble_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -233,12 +234,13 @@ public class JSObject extends NetObject implements AutoCloseable {
             retObjectGetPropertyAsInt32 = classInstance.Invoke("GetPropertyAsInt32", propertyName);
             return (int)retObjectGetPropertyAsInt32;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetPropertyAsInt32_ToString = retObjectGetPropertyAsInt32 == null ? "null" : retObjectGetPropertyAsInt32.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetPropertyAsInt32Number = (java.lang.Number)retObjectGetPropertyAsInt32;
                 return retObjectGetPropertyAsInt32Number.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetPropertyAsInt32 != null ? retObjectGetPropertyAsInt32.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetPropertyAsInt32 != null ? retObjectGetPropertyAsInt32.getClass() : "null", retObjectGetPropertyAsInt32_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

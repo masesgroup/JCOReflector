@@ -176,12 +176,13 @@ public class EventDescriptor extends ValueType  {
             retObjectChannel = classInstance.Get("Channel");
             return (byte)retObjectChannel;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectChannel_ToString = retObjectChannel == null ? "null" : retObjectChannel.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectChannelNumber = (java.lang.Number)retObjectChannel;
                 return retObjectChannelNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectChannel != null ? retObjectChannel.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectChannel != null ? retObjectChannel.getClass() : "null", retObjectChannel_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -196,12 +197,13 @@ public class EventDescriptor extends ValueType  {
             retObjectLevel = classInstance.Get("Level");
             return (byte)retObjectLevel;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLevel_ToString = retObjectLevel == null ? "null" : retObjectLevel.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLevelNumber = (java.lang.Number)retObjectLevel;
                 return retObjectLevelNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectLevel != null ? retObjectLevel.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectLevel != null ? retObjectLevel.getClass() : "null", retObjectLevel_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -216,12 +218,13 @@ public class EventDescriptor extends ValueType  {
             retObjectOpcode = classInstance.Get("Opcode");
             return (byte)retObjectOpcode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOpcode_ToString = retObjectOpcode == null ? "null" : retObjectOpcode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOpcodeNumber = (java.lang.Number)retObjectOpcode;
                 return retObjectOpcodeNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectOpcode != null ? retObjectOpcode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectOpcode != null ? retObjectOpcode.getClass() : "null", retObjectOpcode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -236,12 +239,13 @@ public class EventDescriptor extends ValueType  {
             retObjectVersion = classInstance.Get("Version");
             return (byte)retObjectVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVersion_ToString = retObjectVersion == null ? "null" : retObjectVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVersionNumber = (java.lang.Number)retObjectVersion;
                 return retObjectVersionNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectVersion != null ? retObjectVersion.getClass() : "null", retObjectVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -256,12 +260,13 @@ public class EventDescriptor extends ValueType  {
             retObjectEventId = classInstance.Get("EventId");
             return (int)retObjectEventId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEventId_ToString = retObjectEventId == null ? "null" : retObjectEventId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEventIdNumber = (java.lang.Number)retObjectEventId;
                 return retObjectEventIdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEventId != null ? retObjectEventId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEventId != null ? retObjectEventId.getClass() : "null", retObjectEventId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -276,12 +281,13 @@ public class EventDescriptor extends ValueType  {
             retObjectTask = classInstance.Get("Task");
             return (int)retObjectTask;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTask_ToString = retObjectTask == null ? "null" : retObjectTask.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTaskNumber = (java.lang.Number)retObjectTask;
                 return retObjectTaskNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTask != null ? retObjectTask.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTask != null ? retObjectTask.getClass() : "null", retObjectTask_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -296,12 +302,13 @@ public class EventDescriptor extends ValueType  {
             retObjectKeywords = classInstance.Get("Keywords");
             return (long)retObjectKeywords;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKeywords_ToString = retObjectKeywords == null ? "null" : retObjectKeywords.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectKeywordsNumber = (java.lang.Number)retObjectKeywords;
                 return retObjectKeywordsNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectKeywords != null ? retObjectKeywords.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectKeywords != null ? retObjectKeywords.getClass() : "null", retObjectKeywords_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

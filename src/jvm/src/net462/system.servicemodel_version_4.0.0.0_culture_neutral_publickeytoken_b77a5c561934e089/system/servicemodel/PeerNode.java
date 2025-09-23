@@ -191,12 +191,13 @@ public class PeerNode extends NetObject  {
             retObjectPort = classInstance.Get("Port");
             return (int)retObjectPort;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPort_ToString = retObjectPort == null ? "null" : retObjectPort.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPortNumber = (java.lang.Number)retObjectPort;
                 return retObjectPortNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPort != null ? retObjectPort.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPort != null ? retObjectPort.getClass() : "null", retObjectPort_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -172,12 +172,13 @@ public class WindowsAuthenticationElement extends ConfigurationElement  {
             retObjectDefaultCredentialsHandleCacheSize = classInstance.Get("DefaultCredentialsHandleCacheSize");
             return (int)retObjectDefaultCredentialsHandleCacheSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDefaultCredentialsHandleCacheSize_ToString = retObjectDefaultCredentialsHandleCacheSize == null ? "null" : retObjectDefaultCredentialsHandleCacheSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDefaultCredentialsHandleCacheSizeNumber = (java.lang.Number)retObjectDefaultCredentialsHandleCacheSize;
                 return retObjectDefaultCredentialsHandleCacheSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDefaultCredentialsHandleCacheSize != null ? retObjectDefaultCredentialsHandleCacheSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDefaultCredentialsHandleCacheSize != null ? retObjectDefaultCredentialsHandleCacheSize.getClass() : "null", retObjectDefaultCredentialsHandleCacheSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

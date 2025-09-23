@@ -248,12 +248,13 @@ public class DataSourceSelectArguments extends NetObject  {
             retObjectMaximumRows = classInstance.Get("MaximumRows");
             return (int)retObjectMaximumRows;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumRows_ToString = retObjectMaximumRows == null ? "null" : retObjectMaximumRows.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumRowsNumber = (java.lang.Number)retObjectMaximumRows;
                 return retObjectMaximumRowsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumRows != null ? retObjectMaximumRows.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumRows != null ? retObjectMaximumRows.getClass() : "null", retObjectMaximumRows_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -278,12 +279,13 @@ public class DataSourceSelectArguments extends NetObject  {
             retObjectStartRowIndex = classInstance.Get("StartRowIndex");
             return (int)retObjectStartRowIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartRowIndex_ToString = retObjectStartRowIndex == null ? "null" : retObjectStartRowIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStartRowIndexNumber = (java.lang.Number)retObjectStartRowIndex;
                 return retObjectStartRowIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStartRowIndex != null ? retObjectStartRowIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartRowIndex != null ? retObjectStartRowIndex.getClass() : "null", retObjectStartRowIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -308,12 +310,13 @@ public class DataSourceSelectArguments extends NetObject  {
             retObjectTotalRowCount = classInstance.Get("TotalRowCount");
             return (int)retObjectTotalRowCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTotalRowCount_ToString = retObjectTotalRowCount == null ? "null" : retObjectTotalRowCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTotalRowCountNumber = (java.lang.Number)retObjectTotalRowCount;
                 return retObjectTotalRowCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTotalRowCount != null ? retObjectTotalRowCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTotalRowCount != null ? retObjectTotalRowCount.getClass() : "null", retObjectTotalRowCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

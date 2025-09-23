@@ -299,12 +299,13 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
             retObjectDigitSubstitutionLanguage = classInstance.Get("DigitSubstitutionLanguage");
             return (int)retObjectDigitSubstitutionLanguage;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDigitSubstitutionLanguage_ToString = retObjectDigitSubstitutionLanguage == null ? "null" : retObjectDigitSubstitutionLanguage.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDigitSubstitutionLanguageNumber = (java.lang.Number)retObjectDigitSubstitutionLanguage;
                 return retObjectDigitSubstitutionLanguageNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDigitSubstitutionLanguage != null ? retObjectDigitSubstitutionLanguage.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDigitSubstitutionLanguage != null ? retObjectDigitSubstitutionLanguage.getClass() : "null", retObjectDigitSubstitutionLanguage_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

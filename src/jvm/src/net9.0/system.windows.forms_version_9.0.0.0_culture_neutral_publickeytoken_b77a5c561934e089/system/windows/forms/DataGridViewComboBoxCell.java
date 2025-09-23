@@ -313,12 +313,13 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
             retObjectDropDownWidth = classInstance.Get("DropDownWidth");
             return (int)retObjectDropDownWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDropDownWidth_ToString = retObjectDropDownWidth == null ? "null" : retObjectDropDownWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDropDownWidthNumber = (java.lang.Number)retObjectDropDownWidth;
                 return retObjectDropDownWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDropDownWidth != null ? retObjectDropDownWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDropDownWidth != null ? retObjectDropDownWidth.getClass() : "null", retObjectDropDownWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -343,12 +344,13 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
             retObjectMaxDropDownItems = classInstance.Get("MaxDropDownItems");
             return (int)retObjectMaxDropDownItems;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxDropDownItems_ToString = retObjectMaxDropDownItems == null ? "null" : retObjectMaxDropDownItems.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxDropDownItemsNumber = (java.lang.Number)retObjectMaxDropDownItems;
                 return retObjectMaxDropDownItemsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxDropDownItems != null ? retObjectMaxDropDownItems.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxDropDownItems != null ? retObjectMaxDropDownItems.getClass() : "null", retObjectMaxDropDownItems_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

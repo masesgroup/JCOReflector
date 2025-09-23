@@ -209,12 +209,13 @@ public class RawSecurityDescriptor extends GenericSecurityDescriptor  {
             retObjectResourceManagerControl = classInstance.Get("ResourceManagerControl");
             return (byte)retObjectResourceManagerControl;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResourceManagerControl_ToString = retObjectResourceManagerControl == null ? "null" : retObjectResourceManagerControl.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectResourceManagerControlNumber = (java.lang.Number)retObjectResourceManagerControl;
                 return retObjectResourceManagerControlNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectResourceManagerControl != null ? retObjectResourceManagerControl.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectResourceManagerControl != null ? retObjectResourceManagerControl.getClass() : "null", retObjectResourceManagerControl_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

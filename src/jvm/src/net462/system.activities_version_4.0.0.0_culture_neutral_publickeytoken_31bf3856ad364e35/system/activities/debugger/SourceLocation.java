@@ -199,12 +199,13 @@ public class SourceLocation extends NetObject  {
             retObjectEndColumn = classInstance.Get("EndColumn");
             return (int)retObjectEndColumn;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndColumn_ToString = retObjectEndColumn == null ? "null" : retObjectEndColumn.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEndColumnNumber = (java.lang.Number)retObjectEndColumn;
                 return retObjectEndColumnNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEndColumn != null ? retObjectEndColumn.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndColumn != null ? retObjectEndColumn.getClass() : "null", retObjectEndColumn_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -219,12 +220,13 @@ public class SourceLocation extends NetObject  {
             retObjectEndLine = classInstance.Get("EndLine");
             return (int)retObjectEndLine;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndLine_ToString = retObjectEndLine == null ? "null" : retObjectEndLine.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEndLineNumber = (java.lang.Number)retObjectEndLine;
                 return retObjectEndLineNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEndLine != null ? retObjectEndLine.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndLine != null ? retObjectEndLine.getClass() : "null", retObjectEndLine_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -239,12 +241,13 @@ public class SourceLocation extends NetObject  {
             retObjectStartColumn = classInstance.Get("StartColumn");
             return (int)retObjectStartColumn;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartColumn_ToString = retObjectStartColumn == null ? "null" : retObjectStartColumn.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStartColumnNumber = (java.lang.Number)retObjectStartColumn;
                 return retObjectStartColumnNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStartColumn != null ? retObjectStartColumn.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartColumn != null ? retObjectStartColumn.getClass() : "null", retObjectStartColumn_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -259,12 +262,13 @@ public class SourceLocation extends NetObject  {
             retObjectStartLine = classInstance.Get("StartLine");
             return (int)retObjectStartLine;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartLine_ToString = retObjectStartLine == null ? "null" : retObjectStartLine.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStartLineNumber = (java.lang.Number)retObjectStartLine;
                 return retObjectStartLineNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStartLine != null ? retObjectStartLine.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartLine != null ? retObjectStartLine.getClass() : "null", retObjectStartLine_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

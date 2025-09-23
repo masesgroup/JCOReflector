@@ -288,12 +288,13 @@ public class MsmqBindingBase extends Binding  {
             retObjectMaxRetryCycles = classInstance.Get("MaxRetryCycles");
             return (int)retObjectMaxRetryCycles;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxRetryCycles_ToString = retObjectMaxRetryCycles == null ? "null" : retObjectMaxRetryCycles.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxRetryCyclesNumber = (java.lang.Number)retObjectMaxRetryCycles;
                 return retObjectMaxRetryCyclesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxRetryCycles != null ? retObjectMaxRetryCycles.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxRetryCycles != null ? retObjectMaxRetryCycles.getClass() : "null", retObjectMaxRetryCycles_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -318,12 +319,13 @@ public class MsmqBindingBase extends Binding  {
             retObjectReceiveRetryCount = classInstance.Get("ReceiveRetryCount");
             return (int)retObjectReceiveRetryCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceiveRetryCount_ToString = retObjectReceiveRetryCount == null ? "null" : retObjectReceiveRetryCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReceiveRetryCountNumber = (java.lang.Number)retObjectReceiveRetryCount;
                 return retObjectReceiveRetryCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReceiveRetryCount != null ? retObjectReceiveRetryCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveRetryCount != null ? retObjectReceiveRetryCount.getClass() : "null", retObjectReceiveRetryCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -348,12 +350,13 @@ public class MsmqBindingBase extends Binding  {
             retObjectMaxReceivedMessageSize = classInstance.Get("MaxReceivedMessageSize");
             return (long)retObjectMaxReceivedMessageSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxReceivedMessageSize_ToString = retObjectMaxReceivedMessageSize == null ? "null" : retObjectMaxReceivedMessageSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxReceivedMessageSizeNumber = (java.lang.Number)retObjectMaxReceivedMessageSize;
                 return retObjectMaxReceivedMessageSizeNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMaxReceivedMessageSize != null ? retObjectMaxReceivedMessageSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaxReceivedMessageSize != null ? retObjectMaxReceivedMessageSize.getClass() : "null", retObjectMaxReceivedMessageSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

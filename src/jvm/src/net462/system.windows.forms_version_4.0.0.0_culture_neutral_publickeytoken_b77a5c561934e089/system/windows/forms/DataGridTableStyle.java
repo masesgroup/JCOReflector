@@ -434,12 +434,13 @@ public class DataGridTableStyle extends Component  {
             retObjectPreferredColumnWidth = classInstance.Get("PreferredColumnWidth");
             return (int)retObjectPreferredColumnWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPreferredColumnWidth_ToString = retObjectPreferredColumnWidth == null ? "null" : retObjectPreferredColumnWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPreferredColumnWidthNumber = (java.lang.Number)retObjectPreferredColumnWidth;
                 return retObjectPreferredColumnWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPreferredColumnWidth != null ? retObjectPreferredColumnWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPreferredColumnWidth != null ? retObjectPreferredColumnWidth.getClass() : "null", retObjectPreferredColumnWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -464,12 +465,13 @@ public class DataGridTableStyle extends Component  {
             retObjectPreferredRowHeight = classInstance.Get("PreferredRowHeight");
             return (int)retObjectPreferredRowHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPreferredRowHeight_ToString = retObjectPreferredRowHeight == null ? "null" : retObjectPreferredRowHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPreferredRowHeightNumber = (java.lang.Number)retObjectPreferredRowHeight;
                 return retObjectPreferredRowHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPreferredRowHeight != null ? retObjectPreferredRowHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPreferredRowHeight != null ? retObjectPreferredRowHeight.getClass() : "null", retObjectPreferredRowHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -494,12 +496,13 @@ public class DataGridTableStyle extends Component  {
             retObjectRowHeaderWidth = classInstance.Get("RowHeaderWidth");
             return (int)retObjectRowHeaderWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowHeaderWidth_ToString = retObjectRowHeaderWidth == null ? "null" : retObjectRowHeaderWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRowHeaderWidthNumber = (java.lang.Number)retObjectRowHeaderWidth;
                 return retObjectRowHeaderWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRowHeaderWidth != null ? retObjectRowHeaderWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowHeaderWidth != null ? retObjectRowHeaderWidth.getClass() : "null", retObjectRowHeaderWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

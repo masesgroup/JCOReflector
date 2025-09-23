@@ -238,12 +238,13 @@ public class Argument extends NetObject  {
             retObjectEvaluationOrder = classInstance.Get("EvaluationOrder");
             return (int)retObjectEvaluationOrder;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEvaluationOrder_ToString = retObjectEvaluationOrder == null ? "null" : retObjectEvaluationOrder.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEvaluationOrderNumber = (java.lang.Number)retObjectEvaluationOrder;
                 return retObjectEvaluationOrderNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEvaluationOrder != null ? retObjectEvaluationOrder.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEvaluationOrder != null ? retObjectEvaluationOrder.getClass() : "null", retObjectEvaluationOrder_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

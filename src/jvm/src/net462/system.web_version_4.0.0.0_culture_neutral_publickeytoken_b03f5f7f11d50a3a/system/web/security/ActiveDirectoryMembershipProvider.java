@@ -244,12 +244,13 @@ public class ActiveDirectoryMembershipProvider extends MembershipProvider  {
             retObjectGetNumberOfUsersOnline = classInstance.Invoke("GetNumberOfUsersOnline");
             return (int)retObjectGetNumberOfUsersOnline;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetNumberOfUsersOnline_ToString = retObjectGetNumberOfUsersOnline == null ? "null" : retObjectGetNumberOfUsersOnline.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetNumberOfUsersOnlineNumber = (java.lang.Number)retObjectGetNumberOfUsersOnline;
                 return retObjectGetNumberOfUsersOnlineNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetNumberOfUsersOnline != null ? retObjectGetNumberOfUsersOnline.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNumberOfUsersOnline != null ? retObjectGetNumberOfUsersOnline.getClass() : "null", retObjectGetNumberOfUsersOnline_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -448,12 +449,13 @@ public class ActiveDirectoryMembershipProvider extends MembershipProvider  {
             retObjectPasswordAnswerAttemptLockoutDuration = classInstance.Get("PasswordAnswerAttemptLockoutDuration");
             return (int)retObjectPasswordAnswerAttemptLockoutDuration;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPasswordAnswerAttemptLockoutDuration_ToString = retObjectPasswordAnswerAttemptLockoutDuration == null ? "null" : retObjectPasswordAnswerAttemptLockoutDuration.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPasswordAnswerAttemptLockoutDurationNumber = (java.lang.Number)retObjectPasswordAnswerAttemptLockoutDuration;
                 return retObjectPasswordAnswerAttemptLockoutDurationNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPasswordAnswerAttemptLockoutDuration != null ? retObjectPasswordAnswerAttemptLockoutDuration.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPasswordAnswerAttemptLockoutDuration != null ? retObjectPasswordAnswerAttemptLockoutDuration.getClass() : "null", retObjectPasswordAnswerAttemptLockoutDuration_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -177,12 +177,13 @@ public class FieldMetadata extends ValueType  {
             retObjectOrdinal = classInstance.Get("Ordinal");
             return (int)retObjectOrdinal;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOrdinal_ToString = retObjectOrdinal == null ? "null" : retObjectOrdinal.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOrdinalNumber = (java.lang.Number)retObjectOrdinal;
                 return retObjectOrdinalNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOrdinal != null ? retObjectOrdinal.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOrdinal != null ? retObjectOrdinal.getClass() : "null", retObjectOrdinal_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -234,12 +234,13 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
             retObjectToDouble = classInstance.Invoke("ToDouble");
             return (double)retObjectToDouble;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToDouble_ToString = retObjectToDouble == null ? "null" : retObjectToDouble.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToDoubleNumber = (java.lang.Number)retObjectToDouble;
                 return retObjectToDoubleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null", retObjectToDouble_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -254,12 +255,13 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
             retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
             return (int)retObjectCompareTo;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
                 return retObjectCompareToNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -274,12 +276,13 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
             retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
             return (int)retObjectCompareTo;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
                 return retObjectCompareToNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -294,12 +297,13 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
             retObjectToInt32 = classInstance.Invoke("ToInt32");
             return (int)retObjectToInt32;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToInt32_ToString = retObjectToInt32 == null ? "null" : retObjectToInt32.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToInt32Number = (java.lang.Number)retObjectToInt32;
                 return retObjectToInt32Number.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectToInt32 != null ? retObjectToInt32.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToInt32 != null ? retObjectToInt32.getClass() : "null", retObjectToInt32_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -314,12 +318,13 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
             retObjectGetTdsValue = classInstance.Invoke("GetTdsValue");
             return (long)retObjectGetTdsValue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTdsValue_ToString = retObjectGetTdsValue == null ? "null" : retObjectGetTdsValue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTdsValueNumber = (java.lang.Number)retObjectGetTdsValue;
                 return retObjectGetTdsValueNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetTdsValue != null ? retObjectGetTdsValue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetTdsValue != null ? retObjectGetTdsValue.getClass() : "null", retObjectGetTdsValue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -334,12 +339,13 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
             retObjectToInt64 = classInstance.Invoke("ToInt64");
             return (long)retObjectToInt64;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToInt64_ToString = retObjectToInt64 == null ? "null" : retObjectToInt64.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToInt64Number = (java.lang.Number)retObjectToInt64;
                 return retObjectToInt64Number.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectToInt64 != null ? retObjectToInt64.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectToInt64 != null ? retObjectToInt64.getClass() : "null", retObjectToInt64_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

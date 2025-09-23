@@ -189,12 +189,13 @@ public class RichTextBox extends TextBoxBase  {
             retObjectFind = classInstance.Invoke("Find", characterSet, start, end);
             return (int)retObjectFind;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFind_ToString = retObjectFind == null ? "null" : retObjectFind.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
                 return retObjectFindNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null", retObjectFind_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -209,12 +210,13 @@ public class RichTextBox extends TextBoxBase  {
             retObjectFind = classInstance.Invoke("Find", dupParam0.getJCRefOut(), dupParam1, dupParam2);
             return (int)retObjectFind;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFind_ToString = retObjectFind == null ? "null" : retObjectFind.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
                 return retObjectFindNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null", retObjectFind_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -229,12 +231,13 @@ public class RichTextBox extends TextBoxBase  {
             retObjectFind = classInstance.Invoke("Find", characterSet, start);
             return (int)retObjectFind;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFind_ToString = retObjectFind == null ? "null" : retObjectFind.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
                 return retObjectFindNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null", retObjectFind_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -249,12 +252,13 @@ public class RichTextBox extends TextBoxBase  {
             retObjectFind = classInstance.Invoke("Find", dupParam0.getJCRefOut(), dupParam1);
             return (int)retObjectFind;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFind_ToString = retObjectFind == null ? "null" : retObjectFind.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
                 return retObjectFindNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null", retObjectFind_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -269,12 +273,13 @@ public class RichTextBox extends TextBoxBase  {
             retObjectFind = classInstance.Invoke("Find", (java.lang.Object)characterSet);
             return (int)retObjectFind;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFind_ToString = retObjectFind == null ? "null" : retObjectFind.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
                 return retObjectFindNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null", retObjectFind_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -289,12 +294,13 @@ public class RichTextBox extends TextBoxBase  {
             retObjectFind = classInstance.Invoke("Find", (java.lang.Object)dupParam0.getJCRefOut());
             return (int)retObjectFind;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFind_ToString = retObjectFind == null ? "null" : retObjectFind.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
                 return retObjectFindNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null", retObjectFind_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -309,12 +315,13 @@ public class RichTextBox extends TextBoxBase  {
             retObjectFind = classInstance.Invoke("Find", str, start, end, options == null ? null : options.getJCOInstance());
             return (int)retObjectFind;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFind_ToString = retObjectFind == null ? "null" : retObjectFind.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
                 return retObjectFindNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null", retObjectFind_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -329,12 +336,13 @@ public class RichTextBox extends TextBoxBase  {
             retObjectFind = classInstance.Invoke("Find", str, start, options == null ? null : options.getJCOInstance());
             return (int)retObjectFind;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFind_ToString = retObjectFind == null ? "null" : retObjectFind.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
                 return retObjectFindNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null", retObjectFind_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -349,12 +357,13 @@ public class RichTextBox extends TextBoxBase  {
             retObjectFind = classInstance.Invoke("Find", str, options == null ? null : options.getJCOInstance());
             return (int)retObjectFind;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFind_ToString = retObjectFind == null ? "null" : retObjectFind.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
                 return retObjectFindNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null", retObjectFind_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -369,12 +378,13 @@ public class RichTextBox extends TextBoxBase  {
             retObjectFind = classInstance.Invoke("Find", str);
             return (int)retObjectFind;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFind_ToString = retObjectFind == null ? "null" : retObjectFind.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
                 return retObjectFindNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null", retObjectFind_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -389,12 +399,13 @@ public class RichTextBox extends TextBoxBase  {
             retObjectGetCharIndexFromPosition = classInstance.Invoke("GetCharIndexFromPosition", pt == null ? null : pt.getJCOInstance());
             return (int)retObjectGetCharIndexFromPosition;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCharIndexFromPosition_ToString = retObjectGetCharIndexFromPosition == null ? "null" : retObjectGetCharIndexFromPosition.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetCharIndexFromPositionNumber = (java.lang.Number)retObjectGetCharIndexFromPosition;
                 return retObjectGetCharIndexFromPositionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCharIndexFromPosition != null ? retObjectGetCharIndexFromPosition.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCharIndexFromPosition != null ? retObjectGetCharIndexFromPosition.getClass() : "null", retObjectGetCharIndexFromPosition_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -409,12 +420,13 @@ public class RichTextBox extends TextBoxBase  {
             retObjectGetLineFromCharIndex = classInstance.Invoke("GetLineFromCharIndex", index);
             return (int)retObjectGetLineFromCharIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLineFromCharIndex_ToString = retObjectGetLineFromCharIndex == null ? "null" : retObjectGetLineFromCharIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetLineFromCharIndexNumber = (java.lang.Number)retObjectGetLineFromCharIndex;
                 return retObjectGetLineFromCharIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetLineFromCharIndex != null ? retObjectGetLineFromCharIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetLineFromCharIndex != null ? retObjectGetLineFromCharIndex.getClass() : "null", retObjectGetLineFromCharIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -710,12 +722,13 @@ public class RichTextBox extends TextBoxBase  {
             retObjectBulletIndent = classInstance.Get("BulletIndent");
             return (int)retObjectBulletIndent;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBulletIndent_ToString = retObjectBulletIndent == null ? "null" : retObjectBulletIndent.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBulletIndentNumber = (java.lang.Number)retObjectBulletIndent;
                 return retObjectBulletIndentNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBulletIndent != null ? retObjectBulletIndent.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBulletIndent != null ? retObjectBulletIndent.getClass() : "null", retObjectBulletIndent_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -740,12 +753,13 @@ public class RichTextBox extends TextBoxBase  {
             retObjectRightMargin = classInstance.Get("RightMargin");
             return (int)retObjectRightMargin;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRightMargin_ToString = retObjectRightMargin == null ? "null" : retObjectRightMargin.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRightMarginNumber = (java.lang.Number)retObjectRightMargin;
                 return retObjectRightMarginNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRightMargin != null ? retObjectRightMargin.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRightMargin != null ? retObjectRightMargin.getClass() : "null", retObjectRightMargin_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -770,12 +784,13 @@ public class RichTextBox extends TextBoxBase  {
             retObjectSelectionCharOffset = classInstance.Get("SelectionCharOffset");
             return (int)retObjectSelectionCharOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectionCharOffset_ToString = retObjectSelectionCharOffset == null ? "null" : retObjectSelectionCharOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSelectionCharOffsetNumber = (java.lang.Number)retObjectSelectionCharOffset;
                 return retObjectSelectionCharOffsetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSelectionCharOffset != null ? retObjectSelectionCharOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectionCharOffset != null ? retObjectSelectionCharOffset.getClass() : "null", retObjectSelectionCharOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -800,12 +815,13 @@ public class RichTextBox extends TextBoxBase  {
             retObjectSelectionHangingIndent = classInstance.Get("SelectionHangingIndent");
             return (int)retObjectSelectionHangingIndent;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectionHangingIndent_ToString = retObjectSelectionHangingIndent == null ? "null" : retObjectSelectionHangingIndent.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSelectionHangingIndentNumber = (java.lang.Number)retObjectSelectionHangingIndent;
                 return retObjectSelectionHangingIndentNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSelectionHangingIndent != null ? retObjectSelectionHangingIndent.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectionHangingIndent != null ? retObjectSelectionHangingIndent.getClass() : "null", retObjectSelectionHangingIndent_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -830,12 +846,13 @@ public class RichTextBox extends TextBoxBase  {
             retObjectSelectionIndent = classInstance.Get("SelectionIndent");
             return (int)retObjectSelectionIndent;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectionIndent_ToString = retObjectSelectionIndent == null ? "null" : retObjectSelectionIndent.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSelectionIndentNumber = (java.lang.Number)retObjectSelectionIndent;
                 return retObjectSelectionIndentNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSelectionIndent != null ? retObjectSelectionIndent.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectionIndent != null ? retObjectSelectionIndent.getClass() : "null", retObjectSelectionIndent_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -860,12 +877,13 @@ public class RichTextBox extends TextBoxBase  {
             retObjectSelectionRightIndent = classInstance.Get("SelectionRightIndent");
             return (int)retObjectSelectionRightIndent;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectionRightIndent_ToString = retObjectSelectionRightIndent == null ? "null" : retObjectSelectionRightIndent.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSelectionRightIndentNumber = (java.lang.Number)retObjectSelectionRightIndent;
                 return retObjectSelectionRightIndentNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSelectionRightIndent != null ? retObjectSelectionRightIndent.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectionRightIndent != null ? retObjectSelectionRightIndent.getClass() : "null", retObjectSelectionRightIndent_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -166,12 +166,13 @@ public class RuleFiringRecord extends NetObject  {
             retObjectTimesRaised = classInstance.Get("TimesRaised");
             return (int)retObjectTimesRaised;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTimesRaised_ToString = retObjectTimesRaised == null ? "null" : retObjectTimesRaised.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTimesRaisedNumber = (java.lang.Number)retObjectTimesRaised;
                 return retObjectTimesRaisedNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTimesRaised != null ? retObjectTimesRaised.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTimesRaised != null ? retObjectTimesRaised.getClass() : "null", retObjectTimesRaised_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

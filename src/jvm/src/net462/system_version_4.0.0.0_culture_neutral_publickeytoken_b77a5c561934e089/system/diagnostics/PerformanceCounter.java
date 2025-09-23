@@ -222,12 +222,13 @@ public class PerformanceCounter extends Component  {
             retObjectDecrement = classInstance.Invoke("Decrement");
             return (long)retObjectDecrement;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDecrement_ToString = retObjectDecrement == null ? "null" : retObjectDecrement.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDecrementNumber = (java.lang.Number)retObjectDecrement;
                 return retObjectDecrementNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectDecrement != null ? retObjectDecrement.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectDecrement != null ? retObjectDecrement.getClass() : "null", retObjectDecrement_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -242,12 +243,13 @@ public class PerformanceCounter extends Component  {
             retObjectIncrement = classInstance.Invoke("Increment");
             return (long)retObjectIncrement;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIncrement_ToString = retObjectIncrement == null ? "null" : retObjectIncrement.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIncrementNumber = (java.lang.Number)retObjectIncrement;
                 return retObjectIncrementNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectIncrement != null ? retObjectIncrement.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectIncrement != null ? retObjectIncrement.getClass() : "null", retObjectIncrement_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -262,12 +264,13 @@ public class PerformanceCounter extends Component  {
             retObjectIncrementBy = classInstance.Invoke("IncrementBy", value);
             return (long)retObjectIncrementBy;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIncrementBy_ToString = retObjectIncrementBy == null ? "null" : retObjectIncrementBy.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIncrementByNumber = (java.lang.Number)retObjectIncrementBy;
                 return retObjectIncrementByNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectIncrementBy != null ? retObjectIncrementBy.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectIncrementBy != null ? retObjectIncrementBy.getClass() : "null", retObjectIncrementBy_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -390,12 +393,13 @@ public class PerformanceCounter extends Component  {
             retObjectRawValue = classInstance.Get("RawValue");
             return (long)retObjectRawValue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRawValue_ToString = retObjectRawValue == null ? "null" : retObjectRawValue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRawValueNumber = (java.lang.Number)retObjectRawValue;
                 return retObjectRawValueNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectRawValue != null ? retObjectRawValue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectRawValue != null ? retObjectRawValue.getClass() : "null", retObjectRawValue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

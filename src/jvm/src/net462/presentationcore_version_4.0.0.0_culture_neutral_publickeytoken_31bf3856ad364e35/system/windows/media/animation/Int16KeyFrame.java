@@ -161,12 +161,13 @@ public class Int16KeyFrame extends Freezable  {
             retObjectInterpolateValue = classInstance.Invoke("InterpolateValue", baseValue, keyFrameProgress);
             return (short)retObjectInterpolateValue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInterpolateValue_ToString = retObjectInterpolateValue == null ? "null" : retObjectInterpolateValue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInterpolateValueNumber = (java.lang.Number)retObjectInterpolateValue;
                 return retObjectInterpolateValueNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectInterpolateValue != null ? retObjectInterpolateValue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectInterpolateValue != null ? retObjectInterpolateValue.getClass() : "null", retObjectInterpolateValue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -185,12 +186,13 @@ public class Int16KeyFrame extends Freezable  {
             retObjectValue = classInstance.Get("Value");
             return (short)retObjectValue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectValue_ToString = retObjectValue == null ? "null" : retObjectValue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectValueNumber = (java.lang.Number)retObjectValue;
                 return retObjectValueNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectValue != null ? retObjectValue.getClass() : "null", retObjectValue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

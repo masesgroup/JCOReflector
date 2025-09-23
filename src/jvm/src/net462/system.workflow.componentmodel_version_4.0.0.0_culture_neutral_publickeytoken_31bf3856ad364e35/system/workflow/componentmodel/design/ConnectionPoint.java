@@ -190,12 +190,13 @@ public class ConnectionPoint extends NetObject  {
             retObjectConnectionIndex = classInstance.Get("ConnectionIndex");
             return (int)retObjectConnectionIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConnectionIndex_ToString = retObjectConnectionIndex == null ? "null" : retObjectConnectionIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectConnectionIndexNumber = (java.lang.Number)retObjectConnectionIndex;
                 return retObjectConnectionIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectConnectionIndex != null ? retObjectConnectionIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectConnectionIndex != null ? retObjectConnectionIndex.getClass() : "null", retObjectConnectionIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

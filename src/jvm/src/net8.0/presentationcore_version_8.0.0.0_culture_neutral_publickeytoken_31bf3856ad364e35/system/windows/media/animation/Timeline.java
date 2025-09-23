@@ -254,12 +254,13 @@ public class Timeline extends Animatable  {
             retObjectAccelerationRatio = classInstance.Get("AccelerationRatio");
             return (double)retObjectAccelerationRatio;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAccelerationRatio_ToString = retObjectAccelerationRatio == null ? "null" : retObjectAccelerationRatio.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAccelerationRatioNumber = (java.lang.Number)retObjectAccelerationRatio;
                 return retObjectAccelerationRatioNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectAccelerationRatio != null ? retObjectAccelerationRatio.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectAccelerationRatio != null ? retObjectAccelerationRatio.getClass() : "null", retObjectAccelerationRatio_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -284,12 +285,13 @@ public class Timeline extends Animatable  {
             retObjectDecelerationRatio = classInstance.Get("DecelerationRatio");
             return (double)retObjectDecelerationRatio;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDecelerationRatio_ToString = retObjectDecelerationRatio == null ? "null" : retObjectDecelerationRatio.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDecelerationRatioNumber = (java.lang.Number)retObjectDecelerationRatio;
                 return retObjectDecelerationRatioNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectDecelerationRatio != null ? retObjectDecelerationRatio.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDecelerationRatio != null ? retObjectDecelerationRatio.getClass() : "null", retObjectDecelerationRatio_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -314,12 +316,13 @@ public class Timeline extends Animatable  {
             retObjectSpeedRatio = classInstance.Get("SpeedRatio");
             return (double)retObjectSpeedRatio;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSpeedRatio_ToString = retObjectSpeedRatio == null ? "null" : retObjectSpeedRatio.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSpeedRatioNumber = (java.lang.Number)retObjectSpeedRatio;
                 return retObjectSpeedRatioNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectSpeedRatio != null ? retObjectSpeedRatio.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSpeedRatio != null ? retObjectSpeedRatio.getClass() : "null", retObjectSpeedRatio_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

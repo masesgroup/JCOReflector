@@ -546,12 +546,13 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
             retObjectShadowDepth = classInstance.Get("ShadowDepth");
             return (int)retObjectShadowDepth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectShadowDepth_ToString = retObjectShadowDepth == null ? "null" : retObjectShadowDepth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectShadowDepthNumber = (java.lang.Number)retObjectShadowDepth;
                 return retObjectShadowDepthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectShadowDepth != null ? retObjectShadowDepth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectShadowDepth != null ? retObjectShadowDepth.getClass() : "null", retObjectShadowDepth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -576,12 +577,13 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
             retObjectZoom = classInstance.Get("Zoom");
             return (int)retObjectZoom;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectZoom_ToString = retObjectZoom == null ? "null" : retObjectZoom.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectZoomNumber = (java.lang.Number)retObjectZoom;
                 return retObjectZoomNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectZoom != null ? retObjectZoom.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectZoom != null ? retObjectZoom.getClass() : "null", retObjectZoom_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

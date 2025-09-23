@@ -245,12 +245,13 @@ public class DataContractJsonSerializerSettings extends NetObject  {
             retObjectMaxItemsInObjectGraph = classInstance.Get("MaxItemsInObjectGraph");
             return (int)retObjectMaxItemsInObjectGraph;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxItemsInObjectGraph_ToString = retObjectMaxItemsInObjectGraph == null ? "null" : retObjectMaxItemsInObjectGraph.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxItemsInObjectGraphNumber = (java.lang.Number)retObjectMaxItemsInObjectGraph;
                 return retObjectMaxItemsInObjectGraphNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxItemsInObjectGraph != null ? retObjectMaxItemsInObjectGraph.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxItemsInObjectGraph != null ? retObjectMaxItemsInObjectGraph.getClass() : "null", retObjectMaxItemsInObjectGraph_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

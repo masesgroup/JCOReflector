@@ -211,12 +211,13 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
             retObjectGetCellAscent = classInstance.Invoke("GetCellAscent", style == null ? null : style.getJCOInstance());
             return (int)retObjectGetCellAscent;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCellAscent_ToString = retObjectGetCellAscent == null ? "null" : retObjectGetCellAscent.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetCellAscentNumber = (java.lang.Number)retObjectGetCellAscent;
                 return retObjectGetCellAscentNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCellAscent != null ? retObjectGetCellAscent.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCellAscent != null ? retObjectGetCellAscent.getClass() : "null", retObjectGetCellAscent_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -231,12 +232,13 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
             retObjectGetCellDescent = classInstance.Invoke("GetCellDescent", style == null ? null : style.getJCOInstance());
             return (int)retObjectGetCellDescent;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCellDescent_ToString = retObjectGetCellDescent == null ? "null" : retObjectGetCellDescent.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetCellDescentNumber = (java.lang.Number)retObjectGetCellDescent;
                 return retObjectGetCellDescentNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCellDescent != null ? retObjectGetCellDescent.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCellDescent != null ? retObjectGetCellDescent.getClass() : "null", retObjectGetCellDescent_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -251,12 +253,13 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
             retObjectGetEmHeight = classInstance.Invoke("GetEmHeight", style == null ? null : style.getJCOInstance());
             return (int)retObjectGetEmHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetEmHeight_ToString = retObjectGetEmHeight == null ? "null" : retObjectGetEmHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetEmHeightNumber = (java.lang.Number)retObjectGetEmHeight;
                 return retObjectGetEmHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetEmHeight != null ? retObjectGetEmHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetEmHeight != null ? retObjectGetEmHeight.getClass() : "null", retObjectGetEmHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -271,12 +274,13 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
             retObjectGetLineSpacing = classInstance.Invoke("GetLineSpacing", style == null ? null : style.getJCOInstance());
             return (int)retObjectGetLineSpacing;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLineSpacing_ToString = retObjectGetLineSpacing == null ? "null" : retObjectGetLineSpacing.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetLineSpacingNumber = (java.lang.Number)retObjectGetLineSpacing;
                 return retObjectGetLineSpacingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetLineSpacing != null ? retObjectGetLineSpacing.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetLineSpacing != null ? retObjectGetLineSpacing.getClass() : "null", retObjectGetLineSpacing_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

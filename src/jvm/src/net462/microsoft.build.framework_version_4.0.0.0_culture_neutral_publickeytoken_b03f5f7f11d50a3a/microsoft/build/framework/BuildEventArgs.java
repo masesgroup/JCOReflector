@@ -166,12 +166,13 @@ public class BuildEventArgs extends EventArgs  {
             retObjectThreadId = classInstance.Get("ThreadId");
             return (int)retObjectThreadId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectThreadId_ToString = retObjectThreadId == null ? "null" : retObjectThreadId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectThreadIdNumber = (java.lang.Number)retObjectThreadId;
                 return retObjectThreadIdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectThreadId != null ? retObjectThreadId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectThreadId != null ? retObjectThreadId.getClass() : "null", retObjectThreadId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

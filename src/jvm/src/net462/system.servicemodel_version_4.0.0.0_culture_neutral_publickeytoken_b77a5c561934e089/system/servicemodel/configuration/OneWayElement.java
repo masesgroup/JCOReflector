@@ -219,12 +219,13 @@ public class OneWayElement extends BindingElementExtensionElement  {
             retObjectMaxAcceptedChannels = classInstance.Get("MaxAcceptedChannels");
             return (int)retObjectMaxAcceptedChannels;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxAcceptedChannels_ToString = retObjectMaxAcceptedChannels == null ? "null" : retObjectMaxAcceptedChannels.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxAcceptedChannelsNumber = (java.lang.Number)retObjectMaxAcceptedChannels;
                 return retObjectMaxAcceptedChannelsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxAcceptedChannels != null ? retObjectMaxAcceptedChannels.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxAcceptedChannels != null ? retObjectMaxAcceptedChannels.getClass() : "null", retObjectMaxAcceptedChannels_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

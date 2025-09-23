@@ -165,12 +165,13 @@ public class StringPrototype extends StringObject  {
             retObjectindexOf = classType.Invoke("indexOf", thisob == null ? null : thisob.getJCOInstance(), searchString == null ? null : searchString.getJCOInstance(), position);
             return (int)retObjectindexOf;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectindexOf_ToString = retObjectindexOf == null ? "null" : retObjectindexOf.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectindexOfNumber = (java.lang.Number)retObjectindexOf;
                 return retObjectindexOfNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectindexOf != null ? retObjectindexOf.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectindexOf != null ? retObjectindexOf.getClass() : "null", retObjectindexOf_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -185,12 +186,13 @@ public class StringPrototype extends StringObject  {
             retObjectlastIndexOf = classType.Invoke("lastIndexOf", thisob == null ? null : thisob.getJCOInstance(), searchString == null ? null : searchString.getJCOInstance(), position);
             return (int)retObjectlastIndexOf;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectlastIndexOf_ToString = retObjectlastIndexOf == null ? "null" : retObjectlastIndexOf.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectlastIndexOfNumber = (java.lang.Number)retObjectlastIndexOf;
                 return retObjectlastIndexOfNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectlastIndexOf != null ? retObjectlastIndexOf.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectlastIndexOf != null ? retObjectlastIndexOf.getClass() : "null", retObjectlastIndexOf_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -205,12 +207,13 @@ public class StringPrototype extends StringObject  {
             retObjectlocaleCompare = classType.Invoke("localeCompare", thisob == null ? null : thisob.getJCOInstance(), thatob == null ? null : thatob.getJCOInstance());
             return (int)retObjectlocaleCompare;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectlocaleCompare_ToString = retObjectlocaleCompare == null ? "null" : retObjectlocaleCompare.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectlocaleCompareNumber = (java.lang.Number)retObjectlocaleCompare;
                 return retObjectlocaleCompareNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectlocaleCompare != null ? retObjectlocaleCompare.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectlocaleCompare != null ? retObjectlocaleCompare.getClass() : "null", retObjectlocaleCompare_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -225,12 +228,13 @@ public class StringPrototype extends StringObject  {
             retObjectsearch = classType.Invoke("search", thisob == null ? null : thisob.getJCOInstance(), engine == null ? null : engine.getJCOInstance(), regExp == null ? null : regExp.getJCOInstance());
             return (int)retObjectsearch;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsearch_ToString = retObjectsearch == null ? "null" : retObjectsearch.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectsearchNumber = (java.lang.Number)retObjectsearch;
                 return retObjectsearchNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectsearch != null ? retObjectsearch.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectsearch != null ? retObjectsearch.getClass() : "null", retObjectsearch_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

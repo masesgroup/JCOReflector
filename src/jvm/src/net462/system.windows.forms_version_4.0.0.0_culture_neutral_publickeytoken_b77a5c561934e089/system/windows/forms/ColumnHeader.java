@@ -221,12 +221,13 @@ public class ColumnHeader extends Component  {
             retObjectDisplayIndex = classInstance.Get("DisplayIndex");
             return (int)retObjectDisplayIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDisplayIndex_ToString = retObjectDisplayIndex == null ? "null" : retObjectDisplayIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDisplayIndexNumber = (java.lang.Number)retObjectDisplayIndex;
                 return retObjectDisplayIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDisplayIndex != null ? retObjectDisplayIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDisplayIndex != null ? retObjectDisplayIndex.getClass() : "null", retObjectDisplayIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -251,12 +252,13 @@ public class ColumnHeader extends Component  {
             retObjectImageIndex = classInstance.Get("ImageIndex");
             return (int)retObjectImageIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectImageIndex_ToString = retObjectImageIndex == null ? "null" : retObjectImageIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectImageIndexNumber = (java.lang.Number)retObjectImageIndex;
                 return retObjectImageIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectImageIndex != null ? retObjectImageIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectImageIndex != null ? retObjectImageIndex.getClass() : "null", retObjectImageIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -281,12 +283,13 @@ public class ColumnHeader extends Component  {
             retObjectIndex = classInstance.Get("Index");
             return (int)retObjectIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndex_ToString = retObjectIndex == null ? "null" : retObjectIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIndexNumber = (java.lang.Number)retObjectIndex;
                 return retObjectIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndex != null ? retObjectIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndex != null ? retObjectIndex.getClass() : "null", retObjectIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -301,12 +304,13 @@ public class ColumnHeader extends Component  {
             retObjectWidth = classInstance.Get("Width");
             return (int)retObjectWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWidth_ToString = retObjectWidth == null ? "null" : retObjectWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWidthNumber = (java.lang.Number)retObjectWidth;
                 return retObjectWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWidth != null ? retObjectWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWidth != null ? retObjectWidth.getClass() : "null", retObjectWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

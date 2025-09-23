@@ -219,12 +219,13 @@ public class HtmlSelect extends HtmlContainerControl implements system.web.ui.IP
             retObjectSelectedIndex = classInstance.Get("SelectedIndex");
             return (int)retObjectSelectedIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectedIndex_ToString = retObjectSelectedIndex == null ? "null" : retObjectSelectedIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSelectedIndexNumber = (java.lang.Number)retObjectSelectedIndex;
                 return retObjectSelectedIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSelectedIndex != null ? retObjectSelectedIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectedIndex != null ? retObjectSelectedIndex.getClass() : "null", retObjectSelectedIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -249,12 +250,13 @@ public class HtmlSelect extends HtmlContainerControl implements system.web.ui.IP
             retObjectSize = classInstance.Get("Size");
             return (int)retObjectSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSize_ToString = retObjectSize == null ? "null" : retObjectSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSizeNumber = (java.lang.Number)retObjectSize;
                 return retObjectSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSize != null ? retObjectSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSize != null ? retObjectSize.getClass() : "null", retObjectSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

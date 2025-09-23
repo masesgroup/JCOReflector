@@ -176,12 +176,13 @@ public class MethodBodyStreamEncoder extends ValueType  {
             retObjectAddMethodBody = classInstance.Invoke("AddMethodBody", instructionEncoder == null ? null : instructionEncoder.getJCOInstance(), maxStack, localVariablesSignature == null ? null : localVariablesSignature.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance(), hasDynamicStackAllocation);
             return (int)retObjectAddMethodBody;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAddMethodBody_ToString = retObjectAddMethodBody == null ? "null" : retObjectAddMethodBody.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAddMethodBodyNumber = (java.lang.Number)retObjectAddMethodBody;
                 return retObjectAddMethodBodyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAddMethodBody != null ? retObjectAddMethodBody.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAddMethodBody != null ? retObjectAddMethodBody.getClass() : "null", retObjectAddMethodBody_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -196,12 +197,13 @@ public class MethodBodyStreamEncoder extends ValueType  {
             retObjectAddMethodBody = classInstance.Invoke("AddMethodBody", instructionEncoder == null ? null : instructionEncoder.getJCOInstance(), maxStack, localVariablesSignature == null ? null : localVariablesSignature.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance());
             return (int)retObjectAddMethodBody;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAddMethodBody_ToString = retObjectAddMethodBody == null ? "null" : retObjectAddMethodBody.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAddMethodBodyNumber = (java.lang.Number)retObjectAddMethodBody;
                 return retObjectAddMethodBodyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAddMethodBody != null ? retObjectAddMethodBody.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAddMethodBody != null ? retObjectAddMethodBody.getClass() : "null", retObjectAddMethodBody_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

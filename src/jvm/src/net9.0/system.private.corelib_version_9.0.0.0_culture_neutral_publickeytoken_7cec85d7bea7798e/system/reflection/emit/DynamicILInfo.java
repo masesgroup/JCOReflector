@@ -165,12 +165,13 @@ public class DynamicILInfo extends NetObject  {
             retObjectGetTokenFor = classInstance.Invoke("GetTokenFor", (java.lang.Object)signature);
             return (int)retObjectGetTokenFor;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTokenFor_ToString = retObjectGetTokenFor == null ? "null" : retObjectGetTokenFor.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTokenForNumber = (java.lang.Number)retObjectGetTokenFor;
                 return retObjectGetTokenForNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null", retObjectGetTokenFor_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -185,12 +186,13 @@ public class DynamicILInfo extends NetObject  {
             retObjectGetTokenFor = classInstance.Invoke("GetTokenFor", (java.lang.Object)dupParam0.getJCRefOut());
             return (int)retObjectGetTokenFor;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTokenFor_ToString = retObjectGetTokenFor == null ? "null" : retObjectGetTokenFor.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTokenForNumber = (java.lang.Number)retObjectGetTokenFor;
                 return retObjectGetTokenForNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null", retObjectGetTokenFor_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -205,12 +207,13 @@ public class DynamicILInfo extends NetObject  {
             retObjectGetTokenFor = classInstance.Invoke("GetTokenFor", method == null ? null : method.getJCOInstance());
             return (int)retObjectGetTokenFor;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTokenFor_ToString = retObjectGetTokenFor == null ? "null" : retObjectGetTokenFor.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTokenForNumber = (java.lang.Number)retObjectGetTokenFor;
                 return retObjectGetTokenForNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null", retObjectGetTokenFor_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -225,12 +228,13 @@ public class DynamicILInfo extends NetObject  {
             retObjectGetTokenFor = classInstance.Invoke("GetTokenFor", field == null ? null : field.getJCOInstance(), contextType == null ? null : contextType.getJCOInstance());
             return (int)retObjectGetTokenFor;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTokenFor_ToString = retObjectGetTokenFor == null ? "null" : retObjectGetTokenFor.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTokenForNumber = (java.lang.Number)retObjectGetTokenFor;
                 return retObjectGetTokenForNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null", retObjectGetTokenFor_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -245,12 +249,13 @@ public class DynamicILInfo extends NetObject  {
             retObjectGetTokenFor = classInstance.Invoke("GetTokenFor", field == null ? null : field.getJCOInstance());
             return (int)retObjectGetTokenFor;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTokenFor_ToString = retObjectGetTokenFor == null ? "null" : retObjectGetTokenFor.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTokenForNumber = (java.lang.Number)retObjectGetTokenFor;
                 return retObjectGetTokenForNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null", retObjectGetTokenFor_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -265,12 +270,13 @@ public class DynamicILInfo extends NetObject  {
             retObjectGetTokenFor = classInstance.Invoke("GetTokenFor", method == null ? null : method.getJCOInstance(), contextType == null ? null : contextType.getJCOInstance());
             return (int)retObjectGetTokenFor;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTokenFor_ToString = retObjectGetTokenFor == null ? "null" : retObjectGetTokenFor.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTokenForNumber = (java.lang.Number)retObjectGetTokenFor;
                 return retObjectGetTokenForNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null", retObjectGetTokenFor_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -285,12 +291,13 @@ public class DynamicILInfo extends NetObject  {
             retObjectGetTokenFor = classInstance.Invoke("GetTokenFor", method == null ? null : method.getJCOInstance());
             return (int)retObjectGetTokenFor;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTokenFor_ToString = retObjectGetTokenFor == null ? "null" : retObjectGetTokenFor.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTokenForNumber = (java.lang.Number)retObjectGetTokenFor;
                 return retObjectGetTokenForNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null", retObjectGetTokenFor_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -305,12 +312,13 @@ public class DynamicILInfo extends NetObject  {
             retObjectGetTokenFor = classInstance.Invoke("GetTokenFor", type == null ? null : type.getJCOInstance());
             return (int)retObjectGetTokenFor;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTokenFor_ToString = retObjectGetTokenFor == null ? "null" : retObjectGetTokenFor.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTokenForNumber = (java.lang.Number)retObjectGetTokenFor;
                 return retObjectGetTokenForNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null", retObjectGetTokenFor_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -325,12 +333,13 @@ public class DynamicILInfo extends NetObject  {
             retObjectGetTokenFor = classInstance.Invoke("GetTokenFor", literal);
             return (int)retObjectGetTokenFor;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTokenFor_ToString = retObjectGetTokenFor == null ? "null" : retObjectGetTokenFor.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTokenForNumber = (java.lang.Number)retObjectGetTokenFor;
                 return retObjectGetTokenForNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null", retObjectGetTokenFor_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

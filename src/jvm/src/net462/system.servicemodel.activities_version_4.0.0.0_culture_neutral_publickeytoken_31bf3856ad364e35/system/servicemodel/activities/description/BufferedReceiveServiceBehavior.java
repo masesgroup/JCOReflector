@@ -193,12 +193,13 @@ public class BufferedReceiveServiceBehavior extends NetObject  {
             retObjectMaxPendingMessagesPerChannel = classInstance.Get("MaxPendingMessagesPerChannel");
             return (int)retObjectMaxPendingMessagesPerChannel;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxPendingMessagesPerChannel_ToString = retObjectMaxPendingMessagesPerChannel == null ? "null" : retObjectMaxPendingMessagesPerChannel.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxPendingMessagesPerChannelNumber = (java.lang.Number)retObjectMaxPendingMessagesPerChannel;
                 return retObjectMaxPendingMessagesPerChannelNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxPendingMessagesPerChannel != null ? retObjectMaxPendingMessagesPerChannel.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxPendingMessagesPerChannel != null ? retObjectMaxPendingMessagesPerChannel.getClass() : "null", retObjectMaxPendingMessagesPerChannel_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

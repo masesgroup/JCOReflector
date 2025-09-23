@@ -285,12 +285,13 @@ public class SiteMapDataSource extends HierarchicalDataSourceControl  {
             retObjectStartingNodeOffset = classInstance.Get("StartingNodeOffset");
             return (int)retObjectStartingNodeOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartingNodeOffset_ToString = retObjectStartingNodeOffset == null ? "null" : retObjectStartingNodeOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStartingNodeOffsetNumber = (java.lang.Number)retObjectStartingNodeOffset;
                 return retObjectStartingNodeOffsetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStartingNodeOffset != null ? retObjectStartingNodeOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartingNodeOffset != null ? retObjectStartingNodeOffset.getClass() : "null", retObjectStartingNodeOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

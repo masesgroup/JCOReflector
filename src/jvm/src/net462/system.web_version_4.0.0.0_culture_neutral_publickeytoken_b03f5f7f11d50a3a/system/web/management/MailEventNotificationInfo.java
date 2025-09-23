@@ -169,12 +169,13 @@ public class MailEventNotificationInfo extends NetObject  {
             retObjectEventsDiscardedByBuffer = classInstance.Get("EventsDiscardedByBuffer");
             return (int)retObjectEventsDiscardedByBuffer;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEventsDiscardedByBuffer_ToString = retObjectEventsDiscardedByBuffer == null ? "null" : retObjectEventsDiscardedByBuffer.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEventsDiscardedByBufferNumber = (java.lang.Number)retObjectEventsDiscardedByBuffer;
                 return retObjectEventsDiscardedByBufferNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEventsDiscardedByBuffer != null ? retObjectEventsDiscardedByBuffer.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEventsDiscardedByBuffer != null ? retObjectEventsDiscardedByBuffer.getClass() : "null", retObjectEventsDiscardedByBuffer_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -189,12 +190,13 @@ public class MailEventNotificationInfo extends NetObject  {
             retObjectEventsDiscardedDueToMessageLimit = classInstance.Get("EventsDiscardedDueToMessageLimit");
             return (int)retObjectEventsDiscardedDueToMessageLimit;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEventsDiscardedDueToMessageLimit_ToString = retObjectEventsDiscardedDueToMessageLimit == null ? "null" : retObjectEventsDiscardedDueToMessageLimit.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEventsDiscardedDueToMessageLimitNumber = (java.lang.Number)retObjectEventsDiscardedDueToMessageLimit;
                 return retObjectEventsDiscardedDueToMessageLimitNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEventsDiscardedDueToMessageLimit != null ? retObjectEventsDiscardedDueToMessageLimit.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEventsDiscardedDueToMessageLimit != null ? retObjectEventsDiscardedDueToMessageLimit.getClass() : "null", retObjectEventsDiscardedDueToMessageLimit_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -209,12 +211,13 @@ public class MailEventNotificationInfo extends NetObject  {
             retObjectEventsInBuffer = classInstance.Get("EventsInBuffer");
             return (int)retObjectEventsInBuffer;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEventsInBuffer_ToString = retObjectEventsInBuffer == null ? "null" : retObjectEventsInBuffer.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEventsInBufferNumber = (java.lang.Number)retObjectEventsInBuffer;
                 return retObjectEventsInBufferNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEventsInBuffer != null ? retObjectEventsInBuffer.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEventsInBuffer != null ? retObjectEventsInBuffer.getClass() : "null", retObjectEventsInBuffer_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -229,12 +232,13 @@ public class MailEventNotificationInfo extends NetObject  {
             retObjectEventsInNotification = classInstance.Get("EventsInNotification");
             return (int)retObjectEventsInNotification;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEventsInNotification_ToString = retObjectEventsInNotification == null ? "null" : retObjectEventsInNotification.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEventsInNotificationNumber = (java.lang.Number)retObjectEventsInNotification;
                 return retObjectEventsInNotificationNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEventsInNotification != null ? retObjectEventsInNotification.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEventsInNotification != null ? retObjectEventsInNotification.getClass() : "null", retObjectEventsInNotification_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -249,12 +253,13 @@ public class MailEventNotificationInfo extends NetObject  {
             retObjectEventsRemaining = classInstance.Get("EventsRemaining");
             return (int)retObjectEventsRemaining;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEventsRemaining_ToString = retObjectEventsRemaining == null ? "null" : retObjectEventsRemaining.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEventsRemainingNumber = (java.lang.Number)retObjectEventsRemaining;
                 return retObjectEventsRemainingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEventsRemaining != null ? retObjectEventsRemaining.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEventsRemaining != null ? retObjectEventsRemaining.getClass() : "null", retObjectEventsRemaining_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -269,12 +274,13 @@ public class MailEventNotificationInfo extends NetObject  {
             retObjectMessageSequence = classInstance.Get("MessageSequence");
             return (int)retObjectMessageSequence;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMessageSequence_ToString = retObjectMessageSequence == null ? "null" : retObjectMessageSequence.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMessageSequenceNumber = (java.lang.Number)retObjectMessageSequence;
                 return retObjectMessageSequenceNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMessageSequence != null ? retObjectMessageSequence.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMessageSequence != null ? retObjectMessageSequence.getClass() : "null", retObjectMessageSequence_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -289,12 +295,13 @@ public class MailEventNotificationInfo extends NetObject  {
             retObjectMessagesInNotification = classInstance.Get("MessagesInNotification");
             return (int)retObjectMessagesInNotification;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMessagesInNotification_ToString = retObjectMessagesInNotification == null ? "null" : retObjectMessagesInNotification.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMessagesInNotificationNumber = (java.lang.Number)retObjectMessagesInNotification;
                 return retObjectMessagesInNotificationNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMessagesInNotification != null ? retObjectMessagesInNotification.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMessagesInNotification != null ? retObjectMessagesInNotification.getClass() : "null", retObjectMessagesInNotification_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -309,12 +316,13 @@ public class MailEventNotificationInfo extends NetObject  {
             retObjectNotificationSequence = classInstance.Get("NotificationSequence");
             return (int)retObjectNotificationSequence;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNotificationSequence_ToString = retObjectNotificationSequence == null ? "null" : retObjectNotificationSequence.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNotificationSequenceNumber = (java.lang.Number)retObjectNotificationSequence;
                 return retObjectNotificationSequenceNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNotificationSequence != null ? retObjectNotificationSequence.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNotificationSequence != null ? retObjectNotificationSequence.getClass() : "null", retObjectNotificationSequence_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

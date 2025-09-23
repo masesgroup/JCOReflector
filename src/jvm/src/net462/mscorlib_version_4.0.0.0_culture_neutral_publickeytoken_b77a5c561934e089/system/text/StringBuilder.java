@@ -244,12 +244,13 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
             retObjectEnsureCapacity = classInstance.Invoke("EnsureCapacity", capacity);
             return (int)retObjectEnsureCapacity;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEnsureCapacity_ToString = retObjectEnsureCapacity == null ? "null" : retObjectEnsureCapacity.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEnsureCapacityNumber = (java.lang.Number)retObjectEnsureCapacity;
                 return retObjectEnsureCapacityNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEnsureCapacity != null ? retObjectEnsureCapacity.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEnsureCapacity != null ? retObjectEnsureCapacity.getClass() : "null", retObjectEnsureCapacity_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1166,12 +1167,13 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
             retObjectCapacity = classInstance.Get("Capacity");
             return (int)retObjectCapacity;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCapacity_ToString = retObjectCapacity == null ? "null" : retObjectCapacity.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCapacityNumber = (java.lang.Number)retObjectCapacity;
                 return retObjectCapacityNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCapacity != null ? retObjectCapacity.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCapacity != null ? retObjectCapacity.getClass() : "null", retObjectCapacity_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1196,12 +1198,13 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
             retObjectLength = classInstance.Get("Length");
             return (int)retObjectLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLength_ToString = retObjectLength == null ? "null" : retObjectLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLengthNumber = (java.lang.Number)retObjectLength;
                 return retObjectLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null", retObjectLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1226,12 +1229,13 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
             retObjectMaxCapacity = classInstance.Get("MaxCapacity");
             return (int)retObjectMaxCapacity;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxCapacity_ToString = retObjectMaxCapacity == null ? "null" : retObjectMaxCapacity.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxCapacityNumber = (java.lang.Number)retObjectMaxCapacity;
                 return retObjectMaxCapacityNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxCapacity != null ? retObjectMaxCapacity.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxCapacity != null ? retObjectMaxCapacity.getClass() : "null", retObjectMaxCapacity_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

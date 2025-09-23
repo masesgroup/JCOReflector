@@ -162,12 +162,13 @@ public class Interlocked extends NetObject  {
             retObjectCompareExchange = classType.Invoke("CompareExchange", location1.getJCRefOut(), value, comparand);
             return (double)retObjectCompareExchange;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareExchange_ToString = retObjectCompareExchange == null ? "null" : retObjectCompareExchange.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareExchangeNumber = (java.lang.Number)retObjectCompareExchange;
                 return retObjectCompareExchangeNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectCompareExchange != null ? retObjectCompareExchange.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCompareExchange != null ? retObjectCompareExchange.getClass() : "null", retObjectCompareExchange_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -182,12 +183,13 @@ public class Interlocked extends NetObject  {
             retObjectExchange = classType.Invoke("Exchange", location1.getJCRefOut(), value);
             return (double)retObjectExchange;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExchange_ToString = retObjectExchange == null ? "null" : retObjectExchange.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExchangeNumber = (java.lang.Number)retObjectExchange;
                 return retObjectExchangeNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectExchange != null ? retObjectExchange.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectExchange != null ? retObjectExchange.getClass() : "null", retObjectExchange_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,12 +204,13 @@ public class Interlocked extends NetObject  {
             retObjectAdd = classType.Invoke("Add", location1.getJCRefOut(), value);
             return (int)retObjectAdd;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAdd_ToString = retObjectAdd == null ? "null" : retObjectAdd.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAddNumber = (java.lang.Number)retObjectAdd;
                 return retObjectAddNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -222,12 +225,13 @@ public class Interlocked extends NetObject  {
             retObjectAnd = classType.Invoke("And", location1.getJCRefOut(), value);
             return (int)retObjectAnd;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAnd_ToString = retObjectAnd == null ? "null" : retObjectAnd.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAndNumber = (java.lang.Number)retObjectAnd;
                 return retObjectAndNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAnd != null ? retObjectAnd.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAnd != null ? retObjectAnd.getClass() : "null", retObjectAnd_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -242,12 +246,13 @@ public class Interlocked extends NetObject  {
             retObjectCompareExchange = classType.Invoke("CompareExchange", location1.getJCRefOut(), value, comparand);
             return (int)retObjectCompareExchange;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareExchange_ToString = retObjectCompareExchange == null ? "null" : retObjectCompareExchange.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareExchangeNumber = (java.lang.Number)retObjectCompareExchange;
                 return retObjectCompareExchangeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareExchange != null ? retObjectCompareExchange.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareExchange != null ? retObjectCompareExchange.getClass() : "null", retObjectCompareExchange_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -262,12 +267,13 @@ public class Interlocked extends NetObject  {
             retObjectExchange = classType.Invoke("Exchange", location1.getJCRefOut(), value);
             return (int)retObjectExchange;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExchange_ToString = retObjectExchange == null ? "null" : retObjectExchange.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExchangeNumber = (java.lang.Number)retObjectExchange;
                 return retObjectExchangeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExchange != null ? retObjectExchange.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExchange != null ? retObjectExchange.getClass() : "null", retObjectExchange_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -282,12 +288,13 @@ public class Interlocked extends NetObject  {
             retObjectOr = classType.Invoke("Or", location1.getJCRefOut(), value);
             return (int)retObjectOr;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOr_ToString = retObjectOr == null ? "null" : retObjectOr.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOrNumber = (java.lang.Number)retObjectOr;
                 return retObjectOrNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOr != null ? retObjectOr.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOr != null ? retObjectOr.getClass() : "null", retObjectOr_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -302,12 +309,13 @@ public class Interlocked extends NetObject  {
             retObjectAdd = classType.Invoke("Add", location1.getJCRefOut(), value);
             return (long)retObjectAdd;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAdd_ToString = retObjectAdd == null ? "null" : retObjectAdd.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAddNumber = (java.lang.Number)retObjectAdd;
                 return retObjectAddNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -322,12 +330,13 @@ public class Interlocked extends NetObject  {
             retObjectAnd = classType.Invoke("And", location1.getJCRefOut(), value);
             return (long)retObjectAnd;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAnd_ToString = retObjectAnd == null ? "null" : retObjectAnd.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAndNumber = (java.lang.Number)retObjectAnd;
                 return retObjectAndNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectAnd != null ? retObjectAnd.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectAnd != null ? retObjectAnd.getClass() : "null", retObjectAnd_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -342,12 +351,13 @@ public class Interlocked extends NetObject  {
             retObjectCompareExchange = classType.Invoke("CompareExchange", location1.getJCRefOut(), value, comparand);
             return (long)retObjectCompareExchange;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareExchange_ToString = retObjectCompareExchange == null ? "null" : retObjectCompareExchange.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareExchangeNumber = (java.lang.Number)retObjectCompareExchange;
                 return retObjectCompareExchangeNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectCompareExchange != null ? retObjectCompareExchange.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectCompareExchange != null ? retObjectCompareExchange.getClass() : "null", retObjectCompareExchange_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -362,12 +372,13 @@ public class Interlocked extends NetObject  {
             retObjectExchange = classType.Invoke("Exchange", location1.getJCRefOut(), value);
             return (long)retObjectExchange;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExchange_ToString = retObjectExchange == null ? "null" : retObjectExchange.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExchangeNumber = (java.lang.Number)retObjectExchange;
                 return retObjectExchangeNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectExchange != null ? retObjectExchange.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectExchange != null ? retObjectExchange.getClass() : "null", retObjectExchange_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -382,12 +393,13 @@ public class Interlocked extends NetObject  {
             retObjectOr = classType.Invoke("Or", location1.getJCRefOut(), value);
             return (long)retObjectOr;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOr_ToString = retObjectOr == null ? "null" : retObjectOr.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOrNumber = (java.lang.Number)retObjectOr;
                 return retObjectOrNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectOr != null ? retObjectOr.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectOr != null ? retObjectOr.getClass() : "null", retObjectOr_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

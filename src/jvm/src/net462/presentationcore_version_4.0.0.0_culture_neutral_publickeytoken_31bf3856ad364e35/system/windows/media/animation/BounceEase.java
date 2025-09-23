@@ -172,12 +172,13 @@ public class BounceEase extends EasingFunctionBase  {
             retObjectBounciness = classInstance.Get("Bounciness");
             return (double)retObjectBounciness;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBounciness_ToString = retObjectBounciness == null ? "null" : retObjectBounciness.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBouncinessNumber = (java.lang.Number)retObjectBounciness;
                 return retObjectBouncinessNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectBounciness != null ? retObjectBounciness.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBounciness != null ? retObjectBounciness.getClass() : "null", retObjectBounciness_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,12 +203,13 @@ public class BounceEase extends EasingFunctionBase  {
             retObjectBounces = classInstance.Get("Bounces");
             return (int)retObjectBounces;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBounces_ToString = retObjectBounces == null ? "null" : retObjectBounces.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBouncesNumber = (java.lang.Number)retObjectBounces;
                 return retObjectBouncesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBounces != null ? retObjectBounces.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBounces != null ? retObjectBounces.getClass() : "null", retObjectBounces_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

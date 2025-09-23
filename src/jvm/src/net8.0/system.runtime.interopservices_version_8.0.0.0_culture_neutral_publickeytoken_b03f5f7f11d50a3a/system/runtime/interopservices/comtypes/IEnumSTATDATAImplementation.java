@@ -151,12 +151,13 @@ public class IEnumSTATDATAImplementation extends NetObject implements IEnumSTATD
             retObjectNext = classInstance.Invoke("Next", celt, rgelt.getJCRefOut(), pceltFetched.getJCRefOut());
             return (int)retObjectNext;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNext_ToString = retObjectNext == null ? "null" : retObjectNext.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNextNumber = (java.lang.Number)retObjectNext;
                 return retObjectNextNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNext != null ? retObjectNext.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNext != null ? retObjectNext.getClass() : "null", retObjectNext_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -171,12 +172,13 @@ public class IEnumSTATDATAImplementation extends NetObject implements IEnumSTATD
             retObjectReset = classInstance.Invoke("Reset");
             return (int)retObjectReset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReset_ToString = retObjectReset == null ? "null" : retObjectReset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectResetNumber = (java.lang.Number)retObjectReset;
                 return retObjectResetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReset != null ? retObjectReset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReset != null ? retObjectReset.getClass() : "null", retObjectReset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -191,12 +193,13 @@ public class IEnumSTATDATAImplementation extends NetObject implements IEnumSTATD
             retObjectSkip = classInstance.Invoke("Skip", celt);
             return (int)retObjectSkip;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSkip_ToString = retObjectSkip == null ? "null" : retObjectSkip.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSkipNumber = (java.lang.Number)retObjectSkip;
                 return retObjectSkipNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSkip != null ? retObjectSkip.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSkip != null ? retObjectSkip.getClass() : "null", retObjectSkip_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

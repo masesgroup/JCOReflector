@@ -182,12 +182,13 @@ public class MsmqMessageProperty extends NetObject  {
             retObjectAbortCount = classInstance.Get("AbortCount");
             return (int)retObjectAbortCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAbortCount_ToString = retObjectAbortCount == null ? "null" : retObjectAbortCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAbortCountNumber = (java.lang.Number)retObjectAbortCount;
                 return retObjectAbortCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAbortCount != null ? retObjectAbortCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAbortCount != null ? retObjectAbortCount.getClass() : "null", retObjectAbortCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -212,12 +213,13 @@ public class MsmqMessageProperty extends NetObject  {
             retObjectMoveCount = classInstance.Get("MoveCount");
             return (int)retObjectMoveCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMoveCount_ToString = retObjectMoveCount == null ? "null" : retObjectMoveCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMoveCountNumber = (java.lang.Number)retObjectMoveCount;
                 return retObjectMoveCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMoveCount != null ? retObjectMoveCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMoveCount != null ? retObjectMoveCount.getClass() : "null", retObjectMoveCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

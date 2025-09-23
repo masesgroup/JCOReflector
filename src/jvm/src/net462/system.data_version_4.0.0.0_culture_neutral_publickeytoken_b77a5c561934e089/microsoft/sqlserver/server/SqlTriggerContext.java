@@ -181,12 +181,13 @@ public class SqlTriggerContext extends NetObject  {
             retObjectColumnCount = classInstance.Get("ColumnCount");
             return (int)retObjectColumnCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnCount_ToString = retObjectColumnCount == null ? "null" : retObjectColumnCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectColumnCountNumber = (java.lang.Number)retObjectColumnCount;
                 return retObjectColumnCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectColumnCount != null ? retObjectColumnCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumnCount != null ? retObjectColumnCount.getClass() : "null", retObjectColumnCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

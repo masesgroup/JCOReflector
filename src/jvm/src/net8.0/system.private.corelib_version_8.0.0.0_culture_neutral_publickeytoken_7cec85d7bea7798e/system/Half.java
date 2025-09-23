@@ -419,12 +419,13 @@ public class Half extends ValueType  {
             retObjectCompareTo = classInstance.Invoke("CompareTo", other == null ? null : other.getJCOInstance());
             return (int)retObjectCompareTo;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
                 return retObjectCompareToNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -439,12 +440,13 @@ public class Half extends ValueType  {
             retObjectCompareTo = classInstance.Invoke("CompareTo", obj == null ? null : obj.getJCOInstance());
             return (int)retObjectCompareTo;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
                 return retObjectCompareToNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -459,12 +461,13 @@ public class Half extends ValueType  {
             retObjectILogB = classType.Invoke("ILogB", x == null ? null : x.getJCOInstance());
             return (int)retObjectILogB;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectILogB_ToString = retObjectILogB == null ? "null" : retObjectILogB.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectILogBNumber = (java.lang.Number)retObjectILogB;
                 return retObjectILogBNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectILogB != null ? retObjectILogB.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectILogB != null ? retObjectILogB.getClass() : "null", retObjectILogB_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -479,12 +482,13 @@ public class Half extends ValueType  {
             retObjectSign = classType.Invoke("Sign", value == null ? null : value.getJCOInstance());
             return (int)retObjectSign;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSign_ToString = retObjectSign == null ? "null" : retObjectSign.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSignNumber = (java.lang.Number)retObjectSign;
                 return retObjectSignNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSign != null ? retObjectSign.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSign != null ? retObjectSign.getClass() : "null", retObjectSign_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

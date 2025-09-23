@@ -177,12 +177,13 @@ public class SharedPersonalizationStateInfo extends PersonalizationStateInfo  {
             retObjectCountOfPersonalizations = classInstance.Get("CountOfPersonalizations");
             return (int)retObjectCountOfPersonalizations;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCountOfPersonalizations_ToString = retObjectCountOfPersonalizations == null ? "null" : retObjectCountOfPersonalizations.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCountOfPersonalizationsNumber = (java.lang.Number)retObjectCountOfPersonalizations;
                 return retObjectCountOfPersonalizationsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCountOfPersonalizations != null ? retObjectCountOfPersonalizations.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCountOfPersonalizations != null ? retObjectCountOfPersonalizations.getClass() : "null", retObjectCountOfPersonalizations_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -197,12 +198,13 @@ public class SharedPersonalizationStateInfo extends PersonalizationStateInfo  {
             retObjectSizeOfPersonalizations = classInstance.Get("SizeOfPersonalizations");
             return (int)retObjectSizeOfPersonalizations;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSizeOfPersonalizations_ToString = retObjectSizeOfPersonalizations == null ? "null" : retObjectSizeOfPersonalizations.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSizeOfPersonalizationsNumber = (java.lang.Number)retObjectSizeOfPersonalizations;
                 return retObjectSizeOfPersonalizationsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSizeOfPersonalizations != null ? retObjectSizeOfPersonalizations.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSizeOfPersonalizations != null ? retObjectSizeOfPersonalizations.getClass() : "null", retObjectSizeOfPersonalizations_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

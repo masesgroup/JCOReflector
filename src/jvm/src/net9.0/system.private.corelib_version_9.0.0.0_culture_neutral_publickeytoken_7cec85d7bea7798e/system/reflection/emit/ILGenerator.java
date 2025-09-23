@@ -576,12 +576,13 @@ public class ILGenerator extends NetObject  {
             retObjectILOffset = classInstance.Get("ILOffset");
             return (int)retObjectILOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectILOffset_ToString = retObjectILOffset == null ? "null" : retObjectILOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectILOffsetNumber = (java.lang.Number)retObjectILOffset;
                 return retObjectILOffsetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectILOffset != null ? retObjectILOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectILOffset != null ? retObjectILOffset.getClass() : "null", retObjectILOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

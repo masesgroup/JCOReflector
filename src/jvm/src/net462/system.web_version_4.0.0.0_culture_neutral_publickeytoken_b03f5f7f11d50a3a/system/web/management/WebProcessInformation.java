@@ -176,12 +176,13 @@ public class WebProcessInformation extends NetObject  {
             retObjectProcessID = classInstance.Get("ProcessID");
             return (int)retObjectProcessID;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectProcessID_ToString = retObjectProcessID == null ? "null" : retObjectProcessID.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectProcessIDNumber = (java.lang.Number)retObjectProcessID;
                 return retObjectProcessIDNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectProcessID != null ? retObjectProcessID.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectProcessID != null ? retObjectProcessID.getClass() : "null", retObjectProcessID_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

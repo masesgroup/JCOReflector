@@ -246,12 +246,13 @@ public class DataSetFieldSchema extends NetObject  {
             retObjectLength = classInstance.Get("Length");
             return (int)retObjectLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLength_ToString = retObjectLength == null ? "null" : retObjectLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLengthNumber = (java.lang.Number)retObjectLength;
                 return retObjectLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null", retObjectLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -266,12 +267,13 @@ public class DataSetFieldSchema extends NetObject  {
             retObjectPrecision = classInstance.Get("Precision");
             return (int)retObjectPrecision;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPrecision_ToString = retObjectPrecision == null ? "null" : retObjectPrecision.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPrecisionNumber = (java.lang.Number)retObjectPrecision;
                 return retObjectPrecisionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPrecision != null ? retObjectPrecision.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPrecision != null ? retObjectPrecision.getClass() : "null", retObjectPrecision_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -286,12 +288,13 @@ public class DataSetFieldSchema extends NetObject  {
             retObjectScale = classInstance.Get("Scale");
             return (int)retObjectScale;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScale_ToString = retObjectScale == null ? "null" : retObjectScale.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectScaleNumber = (java.lang.Number)retObjectScale;
                 return retObjectScaleNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectScale != null ? retObjectScale.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectScale != null ? retObjectScale.getClass() : "null", retObjectScale_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

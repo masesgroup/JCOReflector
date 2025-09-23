@@ -1280,12 +1280,13 @@ public class Assembly extends NetObject  {
             retObjectHostContext = classInstance.Get("HostContext");
             return (long)retObjectHostContext;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHostContext_ToString = retObjectHostContext == null ? "null" : retObjectHostContext.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHostContextNumber = (java.lang.Number)retObjectHostContext;
                 return retObjectHostContextNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectHostContext != null ? retObjectHostContext.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectHostContext != null ? retObjectHostContext.getClass() : "null", retObjectHostContext_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

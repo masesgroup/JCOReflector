@@ -322,12 +322,13 @@ public class HashAlgorithm extends NetObject implements AutoCloseable {
             retObjectTransformBlock = classInstance.Invoke("TransformBlock", inputBuffer, inputOffset, inputCount, outputBuffer, outputOffset);
             return (int)retObjectTransformBlock;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTransformBlock_ToString = retObjectTransformBlock == null ? "null" : retObjectTransformBlock.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTransformBlockNumber = (java.lang.Number)retObjectTransformBlock;
                 return retObjectTransformBlockNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTransformBlock != null ? retObjectTransformBlock.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTransformBlock != null ? retObjectTransformBlock.getClass() : "null", retObjectTransformBlock_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -342,12 +343,13 @@ public class HashAlgorithm extends NetObject implements AutoCloseable {
             retObjectTransformBlock = classInstance.Invoke("TransformBlock", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3.getJCRefOut(), dupParam4);
             return (int)retObjectTransformBlock;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTransformBlock_ToString = retObjectTransformBlock == null ? "null" : retObjectTransformBlock.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTransformBlockNumber = (java.lang.Number)retObjectTransformBlock;
                 return retObjectTransformBlockNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTransformBlock != null ? retObjectTransformBlock.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTransformBlock != null ? retObjectTransformBlock.getClass() : "null", retObjectTransformBlock_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -490,12 +492,13 @@ public class HashAlgorithm extends NetObject implements AutoCloseable {
             retObjectHashSize = classInstance.Get("HashSize");
             return (int)retObjectHashSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHashSize_ToString = retObjectHashSize == null ? "null" : retObjectHashSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHashSizeNumber = (java.lang.Number)retObjectHashSize;
                 return retObjectHashSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHashSize != null ? retObjectHashSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHashSize != null ? retObjectHashSize.getClass() : "null", retObjectHashSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -510,12 +513,13 @@ public class HashAlgorithm extends NetObject implements AutoCloseable {
             retObjectInputBlockSize = classInstance.Get("InputBlockSize");
             return (int)retObjectInputBlockSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInputBlockSize_ToString = retObjectInputBlockSize == null ? "null" : retObjectInputBlockSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInputBlockSizeNumber = (java.lang.Number)retObjectInputBlockSize;
                 return retObjectInputBlockSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectInputBlockSize != null ? retObjectInputBlockSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectInputBlockSize != null ? retObjectInputBlockSize.getClass() : "null", retObjectInputBlockSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -530,12 +534,13 @@ public class HashAlgorithm extends NetObject implements AutoCloseable {
             retObjectOutputBlockSize = classInstance.Get("OutputBlockSize");
             return (int)retObjectOutputBlockSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOutputBlockSize_ToString = retObjectOutputBlockSize == null ? "null" : retObjectOutputBlockSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOutputBlockSizeNumber = (java.lang.Number)retObjectOutputBlockSize;
                 return retObjectOutputBlockSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOutputBlockSize != null ? retObjectOutputBlockSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOutputBlockSize != null ? retObjectOutputBlockSize.getClass() : "null", retObjectOutputBlockSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

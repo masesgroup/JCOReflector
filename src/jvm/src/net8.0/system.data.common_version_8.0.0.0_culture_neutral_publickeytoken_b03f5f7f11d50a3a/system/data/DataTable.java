@@ -1058,12 +1058,13 @@ public class DataTable extends MarshalByValueComponent  {
             retObjectMinimumCapacity = classInstance.Get("MinimumCapacity");
             return (int)retObjectMinimumCapacity;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumCapacity_ToString = retObjectMinimumCapacity == null ? "null" : retObjectMinimumCapacity.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinimumCapacityNumber = (java.lang.Number)retObjectMinimumCapacity;
                 return retObjectMinimumCapacityNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinimumCapacity != null ? retObjectMinimumCapacity.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimumCapacity != null ? retObjectMinimumCapacity.getClass() : "null", retObjectMinimumCapacity_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

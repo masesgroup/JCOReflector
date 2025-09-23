@@ -256,12 +256,13 @@ public class OracleDateTime extends ValueType  {
             retObjectCompareTo = classInstance.Invoke("CompareTo", obj == null ? null : obj.getJCOInstance());
             return (int)retObjectCompareTo;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
                 return retObjectCompareToNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -399,12 +400,13 @@ public class OracleDateTime extends ValueType  {
             retObjectDay = classInstance.Get("Day");
             return (int)retObjectDay;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDay_ToString = retObjectDay == null ? "null" : retObjectDay.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDayNumber = (java.lang.Number)retObjectDay;
                 return retObjectDayNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDay != null ? retObjectDay.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDay != null ? retObjectDay.getClass() : "null", retObjectDay_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -419,12 +421,13 @@ public class OracleDateTime extends ValueType  {
             retObjectHour = classInstance.Get("Hour");
             return (int)retObjectHour;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHour_ToString = retObjectHour == null ? "null" : retObjectHour.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHourNumber = (java.lang.Number)retObjectHour;
                 return retObjectHourNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHour != null ? retObjectHour.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHour != null ? retObjectHour.getClass() : "null", retObjectHour_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -439,12 +442,13 @@ public class OracleDateTime extends ValueType  {
             retObjectMillisecond = classInstance.Get("Millisecond");
             return (int)retObjectMillisecond;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMillisecond_ToString = retObjectMillisecond == null ? "null" : retObjectMillisecond.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMillisecondNumber = (java.lang.Number)retObjectMillisecond;
                 return retObjectMillisecondNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMillisecond != null ? retObjectMillisecond.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMillisecond != null ? retObjectMillisecond.getClass() : "null", retObjectMillisecond_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -459,12 +463,13 @@ public class OracleDateTime extends ValueType  {
             retObjectMinute = classInstance.Get("Minute");
             return (int)retObjectMinute;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinute_ToString = retObjectMinute == null ? "null" : retObjectMinute.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinuteNumber = (java.lang.Number)retObjectMinute;
                 return retObjectMinuteNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinute != null ? retObjectMinute.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinute != null ? retObjectMinute.getClass() : "null", retObjectMinute_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -479,12 +484,13 @@ public class OracleDateTime extends ValueType  {
             retObjectMonth = classInstance.Get("Month");
             return (int)retObjectMonth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMonth_ToString = retObjectMonth == null ? "null" : retObjectMonth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMonthNumber = (java.lang.Number)retObjectMonth;
                 return retObjectMonthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMonth != null ? retObjectMonth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMonth != null ? retObjectMonth.getClass() : "null", retObjectMonth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -499,12 +505,13 @@ public class OracleDateTime extends ValueType  {
             retObjectSecond = classInstance.Get("Second");
             return (int)retObjectSecond;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSecond_ToString = retObjectSecond == null ? "null" : retObjectSecond.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSecondNumber = (java.lang.Number)retObjectSecond;
                 return retObjectSecondNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSecond != null ? retObjectSecond.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSecond != null ? retObjectSecond.getClass() : "null", retObjectSecond_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -519,12 +526,13 @@ public class OracleDateTime extends ValueType  {
             retObjectYear = classInstance.Get("Year");
             return (int)retObjectYear;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectYear_ToString = retObjectYear == null ? "null" : retObjectYear.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectYearNumber = (java.lang.Number)retObjectYear;
                 return retObjectYearNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectYear != null ? retObjectYear.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectYear != null ? retObjectYear.getClass() : "null", retObjectYear_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -164,12 +164,13 @@ public class QuicConnectionOptions extends NetObject  {
             retObjectMaxInboundBidirectionalStreams = classInstance.Get("MaxInboundBidirectionalStreams");
             return (int)retObjectMaxInboundBidirectionalStreams;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxInboundBidirectionalStreams_ToString = retObjectMaxInboundBidirectionalStreams == null ? "null" : retObjectMaxInboundBidirectionalStreams.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxInboundBidirectionalStreamsNumber = (java.lang.Number)retObjectMaxInboundBidirectionalStreams;
                 return retObjectMaxInboundBidirectionalStreamsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxInboundBidirectionalStreams != null ? retObjectMaxInboundBidirectionalStreams.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxInboundBidirectionalStreams != null ? retObjectMaxInboundBidirectionalStreams.getClass() : "null", retObjectMaxInboundBidirectionalStreams_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -194,12 +195,13 @@ public class QuicConnectionOptions extends NetObject  {
             retObjectMaxInboundUnidirectionalStreams = classInstance.Get("MaxInboundUnidirectionalStreams");
             return (int)retObjectMaxInboundUnidirectionalStreams;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxInboundUnidirectionalStreams_ToString = retObjectMaxInboundUnidirectionalStreams == null ? "null" : retObjectMaxInboundUnidirectionalStreams.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxInboundUnidirectionalStreamsNumber = (java.lang.Number)retObjectMaxInboundUnidirectionalStreams;
                 return retObjectMaxInboundUnidirectionalStreamsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxInboundUnidirectionalStreams != null ? retObjectMaxInboundUnidirectionalStreams.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxInboundUnidirectionalStreams != null ? retObjectMaxInboundUnidirectionalStreams.getClass() : "null", retObjectMaxInboundUnidirectionalStreams_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -224,12 +226,13 @@ public class QuicConnectionOptions extends NetObject  {
             retObjectDefaultCloseErrorCode = classInstance.Get("DefaultCloseErrorCode");
             return (long)retObjectDefaultCloseErrorCode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDefaultCloseErrorCode_ToString = retObjectDefaultCloseErrorCode == null ? "null" : retObjectDefaultCloseErrorCode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDefaultCloseErrorCodeNumber = (java.lang.Number)retObjectDefaultCloseErrorCode;
                 return retObjectDefaultCloseErrorCodeNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectDefaultCloseErrorCode != null ? retObjectDefaultCloseErrorCode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectDefaultCloseErrorCode != null ? retObjectDefaultCloseErrorCode.getClass() : "null", retObjectDefaultCloseErrorCode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -254,12 +257,13 @@ public class QuicConnectionOptions extends NetObject  {
             retObjectDefaultStreamErrorCode = classInstance.Get("DefaultStreamErrorCode");
             return (long)retObjectDefaultStreamErrorCode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDefaultStreamErrorCode_ToString = retObjectDefaultStreamErrorCode == null ? "null" : retObjectDefaultStreamErrorCode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDefaultStreamErrorCodeNumber = (java.lang.Number)retObjectDefaultStreamErrorCode;
                 return retObjectDefaultStreamErrorCodeNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectDefaultStreamErrorCode != null ? retObjectDefaultStreamErrorCode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectDefaultStreamErrorCode != null ? retObjectDefaultStreamErrorCode.getClass() : "null", retObjectDefaultStreamErrorCode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -245,12 +245,13 @@ public class Operators extends NetObject  {
             retObjectCompareString = classType.Invoke("CompareString", Left, Right, TextCompare);
             return (int)retObjectCompareString;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareString_ToString = retObjectCompareString == null ? "null" : retObjectCompareString.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareStringNumber = (java.lang.Number)retObjectCompareString;
                 return retObjectCompareStringNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareString != null ? retObjectCompareString.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareString != null ? retObjectCompareString.getClass() : "null", retObjectCompareString_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

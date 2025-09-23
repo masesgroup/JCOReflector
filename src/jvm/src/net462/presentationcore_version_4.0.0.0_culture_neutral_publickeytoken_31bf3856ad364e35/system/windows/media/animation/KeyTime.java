@@ -227,12 +227,13 @@ public class KeyTime extends ValueType  {
             retObjectPercent = classInstance.Get("Percent");
             return (double)retObjectPercent;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPercent_ToString = retObjectPercent == null ? "null" : retObjectPercent.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPercentNumber = (java.lang.Number)retObjectPercent;
                 return retObjectPercentNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectPercent != null ? retObjectPercent.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPercent != null ? retObjectPercent.getClass() : "null", retObjectPercent_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

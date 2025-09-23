@@ -171,12 +171,13 @@ public class Shape extends FrameworkElement  {
             retObjectStrokeDashOffset = classInstance.Get("StrokeDashOffset");
             return (double)retObjectStrokeDashOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStrokeDashOffset_ToString = retObjectStrokeDashOffset == null ? "null" : retObjectStrokeDashOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStrokeDashOffsetNumber = (java.lang.Number)retObjectStrokeDashOffset;
                 return retObjectStrokeDashOffsetNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectStrokeDashOffset != null ? retObjectStrokeDashOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStrokeDashOffset != null ? retObjectStrokeDashOffset.getClass() : "null", retObjectStrokeDashOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -201,12 +202,13 @@ public class Shape extends FrameworkElement  {
             retObjectStrokeMiterLimit = classInstance.Get("StrokeMiterLimit");
             return (double)retObjectStrokeMiterLimit;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStrokeMiterLimit_ToString = retObjectStrokeMiterLimit == null ? "null" : retObjectStrokeMiterLimit.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStrokeMiterLimitNumber = (java.lang.Number)retObjectStrokeMiterLimit;
                 return retObjectStrokeMiterLimitNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectStrokeMiterLimit != null ? retObjectStrokeMiterLimit.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStrokeMiterLimit != null ? retObjectStrokeMiterLimit.getClass() : "null", retObjectStrokeMiterLimit_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -231,12 +233,13 @@ public class Shape extends FrameworkElement  {
             retObjectStrokeThickness = classInstance.Get("StrokeThickness");
             return (double)retObjectStrokeThickness;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStrokeThickness_ToString = retObjectStrokeThickness == null ? "null" : retObjectStrokeThickness.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStrokeThicknessNumber = (java.lang.Number)retObjectStrokeThickness;
                 return retObjectStrokeThicknessNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectStrokeThickness != null ? retObjectStrokeThickness.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStrokeThickness != null ? retObjectStrokeThickness.getClass() : "null", retObjectStrokeThickness_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

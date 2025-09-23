@@ -192,12 +192,13 @@ public class Application extends DispatcherObject implements system.windows.mark
             retObjectRun = classInstance.Invoke("Run");
             return (int)retObjectRun;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRun_ToString = retObjectRun == null ? "null" : retObjectRun.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRunNumber = (java.lang.Number)retObjectRun;
                 return retObjectRunNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRun != null ? retObjectRun.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRun != null ? retObjectRun.getClass() : "null", retObjectRun_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -212,12 +213,13 @@ public class Application extends DispatcherObject implements system.windows.mark
             retObjectRun = classInstance.Invoke("Run", window == null ? null : window.getJCOInstance());
             return (int)retObjectRun;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRun_ToString = retObjectRun == null ? "null" : retObjectRun.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRunNumber = (java.lang.Number)retObjectRun;
                 return retObjectRunNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRun != null ? retObjectRun.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRun != null ? retObjectRun.getClass() : "null", retObjectRun_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

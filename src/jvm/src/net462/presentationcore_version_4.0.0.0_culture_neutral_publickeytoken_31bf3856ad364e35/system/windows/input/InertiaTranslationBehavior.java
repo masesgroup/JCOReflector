@@ -172,12 +172,13 @@ public class InertiaTranslationBehavior extends NetObject  {
             retObjectDesiredDeceleration = classInstance.Get("DesiredDeceleration");
             return (double)retObjectDesiredDeceleration;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDesiredDeceleration_ToString = retObjectDesiredDeceleration == null ? "null" : retObjectDesiredDeceleration.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDesiredDecelerationNumber = (java.lang.Number)retObjectDesiredDeceleration;
                 return retObjectDesiredDecelerationNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectDesiredDeceleration != null ? retObjectDesiredDeceleration.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDesiredDeceleration != null ? retObjectDesiredDeceleration.getClass() : "null", retObjectDesiredDeceleration_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,12 +203,13 @@ public class InertiaTranslationBehavior extends NetObject  {
             retObjectDesiredDisplacement = classInstance.Get("DesiredDisplacement");
             return (double)retObjectDesiredDisplacement;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDesiredDisplacement_ToString = retObjectDesiredDisplacement == null ? "null" : retObjectDesiredDisplacement.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDesiredDisplacementNumber = (java.lang.Number)retObjectDesiredDisplacement;
                 return retObjectDesiredDisplacementNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectDesiredDisplacement != null ? retObjectDesiredDisplacement.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDesiredDisplacement != null ? retObjectDesiredDisplacement.getClass() : "null", retObjectDesiredDisplacement_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

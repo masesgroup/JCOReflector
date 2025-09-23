@@ -391,12 +391,13 @@ public class Quaternion extends ValueType implements system.IFormattable {
             retObjectAngle = classInstance.Get("Angle");
             return (double)retObjectAngle;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAngle_ToString = retObjectAngle == null ? "null" : retObjectAngle.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAngleNumber = (java.lang.Number)retObjectAngle;
                 return retObjectAngleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectAngle != null ? retObjectAngle.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectAngle != null ? retObjectAngle.getClass() : "null", retObjectAngle_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -411,12 +412,13 @@ public class Quaternion extends ValueType implements system.IFormattable {
             retObjectW = classInstance.Get("W");
             return (double)retObjectW;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectW_ToString = retObjectW == null ? "null" : retObjectW.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWNumber = (java.lang.Number)retObjectW;
                 return retObjectWNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectW != null ? retObjectW.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectW != null ? retObjectW.getClass() : "null", retObjectW_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -441,12 +443,13 @@ public class Quaternion extends ValueType implements system.IFormattable {
             retObjectX = classInstance.Get("X");
             return (double)retObjectX;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectX_ToString = retObjectX == null ? "null" : retObjectX.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectXNumber = (java.lang.Number)retObjectX;
                 return retObjectXNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectX != null ? retObjectX.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectX != null ? retObjectX.getClass() : "null", retObjectX_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -471,12 +474,13 @@ public class Quaternion extends ValueType implements system.IFormattable {
             retObjectY = classInstance.Get("Y");
             return (double)retObjectY;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectY_ToString = retObjectY == null ? "null" : retObjectY.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectYNumber = (java.lang.Number)retObjectY;
                 return retObjectYNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectY != null ? retObjectY.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectY != null ? retObjectY.getClass() : "null", retObjectY_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -501,12 +505,13 @@ public class Quaternion extends ValueType implements system.IFormattable {
             retObjectZ = classInstance.Get("Z");
             return (double)retObjectZ;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectZ_ToString = retObjectZ == null ? "null" : retObjectZ.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectZNumber = (java.lang.Number)retObjectZ;
                 return retObjectZNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectZ != null ? retObjectZ.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectZ != null ? retObjectZ.getClass() : "null", retObjectZ_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

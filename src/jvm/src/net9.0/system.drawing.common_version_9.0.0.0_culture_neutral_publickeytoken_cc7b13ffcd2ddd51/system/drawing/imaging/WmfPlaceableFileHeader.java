@@ -171,12 +171,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
             retObjectBboxBottom = classInstance.Get("BboxBottom");
             return (short)retObjectBboxBottom;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBboxBottom_ToString = retObjectBboxBottom == null ? "null" : retObjectBboxBottom.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBboxBottomNumber = (java.lang.Number)retObjectBboxBottom;
                 return retObjectBboxBottomNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectBboxBottom != null ? retObjectBboxBottom.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectBboxBottom != null ? retObjectBboxBottom.getClass() : "null", retObjectBboxBottom_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -201,12 +202,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
             retObjectBboxLeft = classInstance.Get("BboxLeft");
             return (short)retObjectBboxLeft;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBboxLeft_ToString = retObjectBboxLeft == null ? "null" : retObjectBboxLeft.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBboxLeftNumber = (java.lang.Number)retObjectBboxLeft;
                 return retObjectBboxLeftNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectBboxLeft != null ? retObjectBboxLeft.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectBboxLeft != null ? retObjectBboxLeft.getClass() : "null", retObjectBboxLeft_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -231,12 +233,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
             retObjectBboxRight = classInstance.Get("BboxRight");
             return (short)retObjectBboxRight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBboxRight_ToString = retObjectBboxRight == null ? "null" : retObjectBboxRight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBboxRightNumber = (java.lang.Number)retObjectBboxRight;
                 return retObjectBboxRightNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectBboxRight != null ? retObjectBboxRight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectBboxRight != null ? retObjectBboxRight.getClass() : "null", retObjectBboxRight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -261,12 +264,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
             retObjectBboxTop = classInstance.Get("BboxTop");
             return (short)retObjectBboxTop;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBboxTop_ToString = retObjectBboxTop == null ? "null" : retObjectBboxTop.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBboxTopNumber = (java.lang.Number)retObjectBboxTop;
                 return retObjectBboxTopNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectBboxTop != null ? retObjectBboxTop.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectBboxTop != null ? retObjectBboxTop.getClass() : "null", retObjectBboxTop_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -291,12 +295,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
             retObjectChecksum = classInstance.Get("Checksum");
             return (short)retObjectChecksum;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectChecksum_ToString = retObjectChecksum == null ? "null" : retObjectChecksum.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectChecksumNumber = (java.lang.Number)retObjectChecksum;
                 return retObjectChecksumNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectChecksum != null ? retObjectChecksum.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectChecksum != null ? retObjectChecksum.getClass() : "null", retObjectChecksum_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -321,12 +326,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
             retObjectHmf = classInstance.Get("Hmf");
             return (short)retObjectHmf;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHmf_ToString = retObjectHmf == null ? "null" : retObjectHmf.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHmfNumber = (java.lang.Number)retObjectHmf;
                 return retObjectHmfNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectHmf != null ? retObjectHmf.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectHmf != null ? retObjectHmf.getClass() : "null", retObjectHmf_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -351,12 +357,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
             retObjectInch = classInstance.Get("Inch");
             return (short)retObjectInch;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInch_ToString = retObjectInch == null ? "null" : retObjectInch.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInchNumber = (java.lang.Number)retObjectInch;
                 return retObjectInchNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectInch != null ? retObjectInch.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectInch != null ? retObjectInch.getClass() : "null", retObjectInch_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -381,12 +388,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
             retObjectKey = classInstance.Get("Key");
             return (int)retObjectKey;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKey_ToString = retObjectKey == null ? "null" : retObjectKey.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectKeyNumber = (java.lang.Number)retObjectKey;
                 return retObjectKeyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectKey != null ? retObjectKey.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKey != null ? retObjectKey.getClass() : "null", retObjectKey_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -411,12 +419,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
             retObjectReserved = classInstance.Get("Reserved");
             return (int)retObjectReserved;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReserved_ToString = retObjectReserved == null ? "null" : retObjectReserved.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReservedNumber = (java.lang.Number)retObjectReserved;
                 return retObjectReservedNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReserved != null ? retObjectReserved.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReserved != null ? retObjectReserved.getClass() : "null", retObjectReserved_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

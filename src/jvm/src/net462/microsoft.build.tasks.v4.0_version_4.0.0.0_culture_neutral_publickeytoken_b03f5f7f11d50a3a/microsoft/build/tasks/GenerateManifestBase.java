@@ -180,12 +180,13 @@ public class GenerateManifestBase extends Task  {
             retObjectMaxTargetPath = classInstance.Get("MaxTargetPath");
             return (int)retObjectMaxTargetPath;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxTargetPath_ToString = retObjectMaxTargetPath == null ? "null" : retObjectMaxTargetPath.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxTargetPathNumber = (java.lang.Number)retObjectMaxTargetPath;
                 return retObjectMaxTargetPathNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxTargetPath != null ? retObjectMaxTargetPath.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxTargetPath != null ? retObjectMaxTargetPath.getClass() : "null", retObjectMaxTargetPath_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

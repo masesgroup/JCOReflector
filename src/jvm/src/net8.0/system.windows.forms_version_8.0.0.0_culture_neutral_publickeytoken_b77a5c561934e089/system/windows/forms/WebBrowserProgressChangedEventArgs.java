@@ -176,12 +176,13 @@ public class WebBrowserProgressChangedEventArgs extends EventArgs  {
             retObjectCurrentProgress = classInstance.Get("CurrentProgress");
             return (long)retObjectCurrentProgress;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCurrentProgress_ToString = retObjectCurrentProgress == null ? "null" : retObjectCurrentProgress.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCurrentProgressNumber = (java.lang.Number)retObjectCurrentProgress;
                 return retObjectCurrentProgressNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectCurrentProgress != null ? retObjectCurrentProgress.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectCurrentProgress != null ? retObjectCurrentProgress.getClass() : "null", retObjectCurrentProgress_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -196,12 +197,13 @@ public class WebBrowserProgressChangedEventArgs extends EventArgs  {
             retObjectMaximumProgress = classInstance.Get("MaximumProgress");
             return (long)retObjectMaximumProgress;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumProgress_ToString = retObjectMaximumProgress == null ? "null" : retObjectMaximumProgress.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumProgressNumber = (java.lang.Number)retObjectMaximumProgress;
                 return retObjectMaximumProgressNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMaximumProgress != null ? retObjectMaximumProgress.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaximumProgress != null ? retObjectMaximumProgress.getClass() : "null", retObjectMaximumProgress_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

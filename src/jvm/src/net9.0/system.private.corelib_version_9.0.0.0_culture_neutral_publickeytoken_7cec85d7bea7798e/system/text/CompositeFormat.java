@@ -181,12 +181,13 @@ public class CompositeFormat extends NetObject  {
             retObjectMinimumArgumentCount = classInstance.Get("MinimumArgumentCount");
             return (int)retObjectMinimumArgumentCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumArgumentCount_ToString = retObjectMinimumArgumentCount == null ? "null" : retObjectMinimumArgumentCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinimumArgumentCountNumber = (java.lang.Number)retObjectMinimumArgumentCount;
                 return retObjectMinimumArgumentCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinimumArgumentCount != null ? retObjectMinimumArgumentCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimumArgumentCount != null ? retObjectMinimumArgumentCount.getClass() : "null", retObjectMinimumArgumentCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

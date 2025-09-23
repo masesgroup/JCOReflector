@@ -176,12 +176,13 @@ public class SplitterEventArgs extends EventArgs  {
             retObjectSplitX = classInstance.Get("SplitX");
             return (int)retObjectSplitX;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSplitX_ToString = retObjectSplitX == null ? "null" : retObjectSplitX.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSplitXNumber = (java.lang.Number)retObjectSplitX;
                 return retObjectSplitXNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSplitX != null ? retObjectSplitX.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSplitX != null ? retObjectSplitX.getClass() : "null", retObjectSplitX_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -206,12 +207,13 @@ public class SplitterEventArgs extends EventArgs  {
             retObjectSplitY = classInstance.Get("SplitY");
             return (int)retObjectSplitY;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSplitY_ToString = retObjectSplitY == null ? "null" : retObjectSplitY.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSplitYNumber = (java.lang.Number)retObjectSplitY;
                 return retObjectSplitYNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSplitY != null ? retObjectSplitY.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSplitY != null ? retObjectSplitY.getClass() : "null", retObjectSplitY_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -236,12 +238,13 @@ public class SplitterEventArgs extends EventArgs  {
             retObjectX = classInstance.Get("X");
             return (int)retObjectX;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectX_ToString = retObjectX == null ? "null" : retObjectX.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectXNumber = (java.lang.Number)retObjectX;
                 return retObjectXNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectX != null ? retObjectX.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectX != null ? retObjectX.getClass() : "null", retObjectX_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -256,12 +259,13 @@ public class SplitterEventArgs extends EventArgs  {
             retObjectY = classInstance.Get("Y");
             return (int)retObjectY;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectY_ToString = retObjectY == null ? "null" : retObjectY.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectYNumber = (java.lang.Number)retObjectY;
                 return retObjectYNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectY != null ? retObjectY.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectY != null ? retObjectY.getClass() : "null", retObjectY_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

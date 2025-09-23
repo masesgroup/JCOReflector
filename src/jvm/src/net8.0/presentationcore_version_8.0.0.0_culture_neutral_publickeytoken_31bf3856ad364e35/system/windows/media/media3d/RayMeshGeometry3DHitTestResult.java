@@ -168,12 +168,13 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
             retObjectVertexWeight1 = classInstance.Get("VertexWeight1");
             return (double)retObjectVertexWeight1;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVertexWeight1_ToString = retObjectVertexWeight1 == null ? "null" : retObjectVertexWeight1.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVertexWeight1Number = (java.lang.Number)retObjectVertexWeight1;
                 return retObjectVertexWeight1Number.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectVertexWeight1 != null ? retObjectVertexWeight1.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVertexWeight1 != null ? retObjectVertexWeight1.getClass() : "null", retObjectVertexWeight1_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -188,12 +189,13 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
             retObjectVertexWeight2 = classInstance.Get("VertexWeight2");
             return (double)retObjectVertexWeight2;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVertexWeight2_ToString = retObjectVertexWeight2 == null ? "null" : retObjectVertexWeight2.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVertexWeight2Number = (java.lang.Number)retObjectVertexWeight2;
                 return retObjectVertexWeight2Number.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectVertexWeight2 != null ? retObjectVertexWeight2.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVertexWeight2 != null ? retObjectVertexWeight2.getClass() : "null", retObjectVertexWeight2_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -208,12 +210,13 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
             retObjectVertexWeight3 = classInstance.Get("VertexWeight3");
             return (double)retObjectVertexWeight3;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVertexWeight3_ToString = retObjectVertexWeight3 == null ? "null" : retObjectVertexWeight3.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVertexWeight3Number = (java.lang.Number)retObjectVertexWeight3;
                 return retObjectVertexWeight3Number.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectVertexWeight3 != null ? retObjectVertexWeight3.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVertexWeight3 != null ? retObjectVertexWeight3.getClass() : "null", retObjectVertexWeight3_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -228,12 +231,13 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
             retObjectVertexIndex1 = classInstance.Get("VertexIndex1");
             return (int)retObjectVertexIndex1;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVertexIndex1_ToString = retObjectVertexIndex1 == null ? "null" : retObjectVertexIndex1.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVertexIndex1Number = (java.lang.Number)retObjectVertexIndex1;
                 return retObjectVertexIndex1Number.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVertexIndex1 != null ? retObjectVertexIndex1.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVertexIndex1 != null ? retObjectVertexIndex1.getClass() : "null", retObjectVertexIndex1_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -248,12 +252,13 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
             retObjectVertexIndex2 = classInstance.Get("VertexIndex2");
             return (int)retObjectVertexIndex2;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVertexIndex2_ToString = retObjectVertexIndex2 == null ? "null" : retObjectVertexIndex2.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVertexIndex2Number = (java.lang.Number)retObjectVertexIndex2;
                 return retObjectVertexIndex2Number.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVertexIndex2 != null ? retObjectVertexIndex2.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVertexIndex2 != null ? retObjectVertexIndex2.getClass() : "null", retObjectVertexIndex2_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -268,12 +273,13 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
             retObjectVertexIndex3 = classInstance.Get("VertexIndex3");
             return (int)retObjectVertexIndex3;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVertexIndex3_ToString = retObjectVertexIndex3 == null ? "null" : retObjectVertexIndex3.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVertexIndex3Number = (java.lang.Number)retObjectVertexIndex3;
                 return retObjectVertexIndex3Number.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVertexIndex3 != null ? retObjectVertexIndex3.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVertexIndex3 != null ? retObjectVertexIndex3.getClass() : "null", retObjectVertexIndex3_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

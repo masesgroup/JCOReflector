@@ -231,12 +231,13 @@ public class X509BasicConstraintsExtension extends X509Extension  {
             retObjectPathLengthConstraint = classInstance.Get("PathLengthConstraint");
             return (int)retObjectPathLengthConstraint;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPathLengthConstraint_ToString = retObjectPathLengthConstraint == null ? "null" : retObjectPathLengthConstraint.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPathLengthConstraintNumber = (java.lang.Number)retObjectPathLengthConstraint;
                 return retObjectPathLengthConstraintNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPathLengthConstraint != null ? retObjectPathLengthConstraint.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPathLengthConstraint != null ? retObjectPathLengthConstraint.getClass() : "null", retObjectPathLengthConstraint_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

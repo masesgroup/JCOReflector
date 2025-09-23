@@ -272,12 +272,13 @@ public class Wizard extends CompositeControl  {
             retObjectActiveStepIndex = classInstance.Get("ActiveStepIndex");
             return (int)retObjectActiveStepIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectActiveStepIndex_ToString = retObjectActiveStepIndex == null ? "null" : retObjectActiveStepIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectActiveStepIndexNumber = (java.lang.Number)retObjectActiveStepIndex;
                 return retObjectActiveStepIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectActiveStepIndex != null ? retObjectActiveStepIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectActiveStepIndex != null ? retObjectActiveStepIndex.getClass() : "null", retObjectActiveStepIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -302,12 +303,13 @@ public class Wizard extends CompositeControl  {
             retObjectCellPadding = classInstance.Get("CellPadding");
             return (int)retObjectCellPadding;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCellPadding_ToString = retObjectCellPadding == null ? "null" : retObjectCellPadding.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCellPaddingNumber = (java.lang.Number)retObjectCellPadding;
                 return retObjectCellPaddingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCellPadding != null ? retObjectCellPadding.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCellPadding != null ? retObjectCellPadding.getClass() : "null", retObjectCellPadding_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -332,12 +334,13 @@ public class Wizard extends CompositeControl  {
             retObjectCellSpacing = classInstance.Get("CellSpacing");
             return (int)retObjectCellSpacing;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCellSpacing_ToString = retObjectCellSpacing == null ? "null" : retObjectCellSpacing.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCellSpacingNumber = (java.lang.Number)retObjectCellSpacing;
                 return retObjectCellSpacingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCellSpacing != null ? retObjectCellSpacing.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCellSpacing != null ? retObjectCellSpacing.getClass() : "null", retObjectCellSpacing_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

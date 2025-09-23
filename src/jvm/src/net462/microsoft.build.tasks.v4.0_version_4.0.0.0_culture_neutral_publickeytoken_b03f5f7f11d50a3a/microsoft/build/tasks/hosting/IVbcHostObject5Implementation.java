@@ -918,12 +918,13 @@ public class IVbcHostObject5Implementation extends NetObject implements IVbcHost
             retObjectEndCompile = classInstance.Invoke("EndCompile", buildSuccess);
             return (int)retObjectEndCompile;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndCompile_ToString = retObjectEndCompile == null ? "null" : retObjectEndCompile.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEndCompileNumber = (java.lang.Number)retObjectEndCompile;
                 return retObjectEndCompileNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEndCompile != null ? retObjectEndCompile.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndCompile != null ? retObjectEndCompile.getClass() : "null", retObjectEndCompile_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

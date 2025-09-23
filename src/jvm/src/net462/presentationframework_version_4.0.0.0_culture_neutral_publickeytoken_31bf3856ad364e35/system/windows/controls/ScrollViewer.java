@@ -201,12 +201,13 @@ public class ScrollViewer extends ContentControl  {
             retObjectGetPanningDeceleration = classType.Invoke("GetPanningDeceleration", element == null ? null : element.getJCOInstance());
             return (double)retObjectGetPanningDeceleration;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetPanningDeceleration_ToString = retObjectGetPanningDeceleration == null ? "null" : retObjectGetPanningDeceleration.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetPanningDecelerationNumber = (java.lang.Number)retObjectGetPanningDeceleration;
                 return retObjectGetPanningDecelerationNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetPanningDeceleration != null ? retObjectGetPanningDeceleration.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetPanningDeceleration != null ? retObjectGetPanningDeceleration.getClass() : "null", retObjectGetPanningDeceleration_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -221,12 +222,13 @@ public class ScrollViewer extends ContentControl  {
             retObjectGetPanningRatio = classType.Invoke("GetPanningRatio", element == null ? null : element.getJCOInstance());
             return (double)retObjectGetPanningRatio;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetPanningRatio_ToString = retObjectGetPanningRatio == null ? "null" : retObjectGetPanningRatio.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetPanningRatioNumber = (java.lang.Number)retObjectGetPanningRatio;
                 return retObjectGetPanningRatioNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetPanningRatio != null ? retObjectGetPanningRatio.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetPanningRatio != null ? retObjectGetPanningRatio.getClass() : "null", retObjectGetPanningRatio_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -588,12 +590,13 @@ public class ScrollViewer extends ContentControl  {
             retObjectContentHorizontalOffset = classInstance.Get("ContentHorizontalOffset");
             return (double)retObjectContentHorizontalOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectContentHorizontalOffset_ToString = retObjectContentHorizontalOffset == null ? "null" : retObjectContentHorizontalOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectContentHorizontalOffsetNumber = (java.lang.Number)retObjectContentHorizontalOffset;
                 return retObjectContentHorizontalOffsetNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectContentHorizontalOffset != null ? retObjectContentHorizontalOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectContentHorizontalOffset != null ? retObjectContentHorizontalOffset.getClass() : "null", retObjectContentHorizontalOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -618,12 +621,13 @@ public class ScrollViewer extends ContentControl  {
             retObjectContentVerticalOffset = classInstance.Get("ContentVerticalOffset");
             return (double)retObjectContentVerticalOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectContentVerticalOffset_ToString = retObjectContentVerticalOffset == null ? "null" : retObjectContentVerticalOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectContentVerticalOffsetNumber = (java.lang.Number)retObjectContentVerticalOffset;
                 return retObjectContentVerticalOffsetNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectContentVerticalOffset != null ? retObjectContentVerticalOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectContentVerticalOffset != null ? retObjectContentVerticalOffset.getClass() : "null", retObjectContentVerticalOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -648,12 +652,13 @@ public class ScrollViewer extends ContentControl  {
             retObjectExtentHeight = classInstance.Get("ExtentHeight");
             return (double)retObjectExtentHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExtentHeight_ToString = retObjectExtentHeight == null ? "null" : retObjectExtentHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExtentHeightNumber = (java.lang.Number)retObjectExtentHeight;
                 return retObjectExtentHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectExtentHeight != null ? retObjectExtentHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectExtentHeight != null ? retObjectExtentHeight.getClass() : "null", retObjectExtentHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -668,12 +673,13 @@ public class ScrollViewer extends ContentControl  {
             retObjectExtentWidth = classInstance.Get("ExtentWidth");
             return (double)retObjectExtentWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExtentWidth_ToString = retObjectExtentWidth == null ? "null" : retObjectExtentWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExtentWidthNumber = (java.lang.Number)retObjectExtentWidth;
                 return retObjectExtentWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectExtentWidth != null ? retObjectExtentWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectExtentWidth != null ? retObjectExtentWidth.getClass() : "null", retObjectExtentWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -688,12 +694,13 @@ public class ScrollViewer extends ContentControl  {
             retObjectHorizontalOffset = classInstance.Get("HorizontalOffset");
             return (double)retObjectHorizontalOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHorizontalOffset_ToString = retObjectHorizontalOffset == null ? "null" : retObjectHorizontalOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHorizontalOffsetNumber = (java.lang.Number)retObjectHorizontalOffset;
                 return retObjectHorizontalOffsetNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectHorizontalOffset != null ? retObjectHorizontalOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectHorizontalOffset != null ? retObjectHorizontalOffset.getClass() : "null", retObjectHorizontalOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -718,12 +725,13 @@ public class ScrollViewer extends ContentControl  {
             retObjectPanningDeceleration = classInstance.Get("PanningDeceleration");
             return (double)retObjectPanningDeceleration;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPanningDeceleration_ToString = retObjectPanningDeceleration == null ? "null" : retObjectPanningDeceleration.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPanningDecelerationNumber = (java.lang.Number)retObjectPanningDeceleration;
                 return retObjectPanningDecelerationNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectPanningDeceleration != null ? retObjectPanningDeceleration.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPanningDeceleration != null ? retObjectPanningDeceleration.getClass() : "null", retObjectPanningDeceleration_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -748,12 +756,13 @@ public class ScrollViewer extends ContentControl  {
             retObjectPanningRatio = classInstance.Get("PanningRatio");
             return (double)retObjectPanningRatio;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPanningRatio_ToString = retObjectPanningRatio == null ? "null" : retObjectPanningRatio.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPanningRatioNumber = (java.lang.Number)retObjectPanningRatio;
                 return retObjectPanningRatioNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectPanningRatio != null ? retObjectPanningRatio.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPanningRatio != null ? retObjectPanningRatio.getClass() : "null", retObjectPanningRatio_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -778,12 +787,13 @@ public class ScrollViewer extends ContentControl  {
             retObjectScrollableHeight = classInstance.Get("ScrollableHeight");
             return (double)retObjectScrollableHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScrollableHeight_ToString = retObjectScrollableHeight == null ? "null" : retObjectScrollableHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectScrollableHeightNumber = (java.lang.Number)retObjectScrollableHeight;
                 return retObjectScrollableHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectScrollableHeight != null ? retObjectScrollableHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectScrollableHeight != null ? retObjectScrollableHeight.getClass() : "null", retObjectScrollableHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -798,12 +808,13 @@ public class ScrollViewer extends ContentControl  {
             retObjectScrollableWidth = classInstance.Get("ScrollableWidth");
             return (double)retObjectScrollableWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScrollableWidth_ToString = retObjectScrollableWidth == null ? "null" : retObjectScrollableWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectScrollableWidthNumber = (java.lang.Number)retObjectScrollableWidth;
                 return retObjectScrollableWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectScrollableWidth != null ? retObjectScrollableWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectScrollableWidth != null ? retObjectScrollableWidth.getClass() : "null", retObjectScrollableWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -818,12 +829,13 @@ public class ScrollViewer extends ContentControl  {
             retObjectVerticalOffset = classInstance.Get("VerticalOffset");
             return (double)retObjectVerticalOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVerticalOffset_ToString = retObjectVerticalOffset == null ? "null" : retObjectVerticalOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVerticalOffsetNumber = (java.lang.Number)retObjectVerticalOffset;
                 return retObjectVerticalOffsetNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectVerticalOffset != null ? retObjectVerticalOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVerticalOffset != null ? retObjectVerticalOffset.getClass() : "null", retObjectVerticalOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -848,12 +860,13 @@ public class ScrollViewer extends ContentControl  {
             retObjectViewportHeight = classInstance.Get("ViewportHeight");
             return (double)retObjectViewportHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectViewportHeight_ToString = retObjectViewportHeight == null ? "null" : retObjectViewportHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectViewportHeightNumber = (java.lang.Number)retObjectViewportHeight;
                 return retObjectViewportHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectViewportHeight != null ? retObjectViewportHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectViewportHeight != null ? retObjectViewportHeight.getClass() : "null", retObjectViewportHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -868,12 +881,13 @@ public class ScrollViewer extends ContentControl  {
             retObjectViewportWidth = classInstance.Get("ViewportWidth");
             return (double)retObjectViewportWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectViewportWidth_ToString = retObjectViewportWidth == null ? "null" : retObjectViewportWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectViewportWidthNumber = (java.lang.Number)retObjectViewportWidth;
                 return retObjectViewportWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectViewportWidth != null ? retObjectViewportWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectViewportWidth != null ? retObjectViewportWidth.getClass() : "null", retObjectViewportWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

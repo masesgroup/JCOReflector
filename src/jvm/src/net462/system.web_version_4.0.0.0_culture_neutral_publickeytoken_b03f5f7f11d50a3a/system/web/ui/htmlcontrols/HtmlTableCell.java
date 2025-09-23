@@ -206,12 +206,13 @@ public class HtmlTableCell extends HtmlContainerControl  {
             retObjectColSpan = classInstance.Get("ColSpan");
             return (int)retObjectColSpan;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColSpan_ToString = retObjectColSpan == null ? "null" : retObjectColSpan.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectColSpanNumber = (java.lang.Number)retObjectColSpan;
                 return retObjectColSpanNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectColSpan != null ? retObjectColSpan.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColSpan != null ? retObjectColSpan.getClass() : "null", retObjectColSpan_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -236,12 +237,13 @@ public class HtmlTableCell extends HtmlContainerControl  {
             retObjectRowSpan = classInstance.Get("RowSpan");
             return (int)retObjectRowSpan;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowSpan_ToString = retObjectRowSpan == null ? "null" : retObjectRowSpan.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRowSpanNumber = (java.lang.Number)retObjectRowSpan;
                 return retObjectRowSpanNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRowSpan != null ? retObjectRowSpan.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowSpan != null ? retObjectRowSpan.getClass() : "null", retObjectRowSpan_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

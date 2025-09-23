@@ -197,12 +197,13 @@ public class TextParagraphProperties extends NetObject  {
             retObjectDefaultIncrementalTab = classInstance.Get("DefaultIncrementalTab");
             return (double)retObjectDefaultIncrementalTab;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDefaultIncrementalTab_ToString = retObjectDefaultIncrementalTab == null ? "null" : retObjectDefaultIncrementalTab.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDefaultIncrementalTabNumber = (java.lang.Number)retObjectDefaultIncrementalTab;
                 return retObjectDefaultIncrementalTabNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectDefaultIncrementalTab != null ? retObjectDefaultIncrementalTab.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDefaultIncrementalTab != null ? retObjectDefaultIncrementalTab.getClass() : "null", retObjectDefaultIncrementalTab_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -217,12 +218,13 @@ public class TextParagraphProperties extends NetObject  {
             retObjectIndent = classInstance.Get("Indent");
             return (double)retObjectIndent;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndent_ToString = retObjectIndent == null ? "null" : retObjectIndent.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIndentNumber = (java.lang.Number)retObjectIndent;
                 return retObjectIndentNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectIndent != null ? retObjectIndent.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectIndent != null ? retObjectIndent.getClass() : "null", retObjectIndent_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -237,12 +239,13 @@ public class TextParagraphProperties extends NetObject  {
             retObjectLineHeight = classInstance.Get("LineHeight");
             return (double)retObjectLineHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLineHeight_ToString = retObjectLineHeight == null ? "null" : retObjectLineHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLineHeightNumber = (java.lang.Number)retObjectLineHeight;
                 return retObjectLineHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectLineHeight != null ? retObjectLineHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLineHeight != null ? retObjectLineHeight.getClass() : "null", retObjectLineHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -257,12 +260,13 @@ public class TextParagraphProperties extends NetObject  {
             retObjectParagraphIndent = classInstance.Get("ParagraphIndent");
             return (double)retObjectParagraphIndent;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectParagraphIndent_ToString = retObjectParagraphIndent == null ? "null" : retObjectParagraphIndent.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectParagraphIndentNumber = (java.lang.Number)retObjectParagraphIndent;
                 return retObjectParagraphIndentNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectParagraphIndent != null ? retObjectParagraphIndent.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectParagraphIndent != null ? retObjectParagraphIndent.getClass() : "null", retObjectParagraphIndent_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

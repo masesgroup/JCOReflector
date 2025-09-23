@@ -164,12 +164,13 @@ public class ArrayPrototype extends ArrayObject  {
             retObjectpush = classType.Invoke("push", thisob == null ? null : thisob.getJCOInstance(), toObjectFromArray(args));
             return (long)retObjectpush;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectpush_ToString = retObjectpush == null ? "null" : retObjectpush.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectpushNumber = (java.lang.Number)retObjectpush;
                 return retObjectpushNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectpush != null ? retObjectpush.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectpush != null ? retObjectpush.getClass() : "null", retObjectpush_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

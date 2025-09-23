@@ -1306,12 +1306,13 @@ public class HttpCapabilitiesBase extends NetObject implements system.web.ui.IFi
             retObjectGatewayMinorVersion = classInstance.Get("GatewayMinorVersion");
             return (double)retObjectGatewayMinorVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGatewayMinorVersion_ToString = retObjectGatewayMinorVersion == null ? "null" : retObjectGatewayMinorVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGatewayMinorVersionNumber = (java.lang.Number)retObjectGatewayMinorVersion;
                 return retObjectGatewayMinorVersionNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGatewayMinorVersion != null ? retObjectGatewayMinorVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGatewayMinorVersion != null ? retObjectGatewayMinorVersion.getClass() : "null", retObjectGatewayMinorVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1326,12 +1327,13 @@ public class HttpCapabilitiesBase extends NetObject implements system.web.ui.IFi
             retObjectMinorVersion = classInstance.Get("MinorVersion");
             return (double)retObjectMinorVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinorVersion_ToString = retObjectMinorVersion == null ? "null" : retObjectMinorVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinorVersionNumber = (java.lang.Number)retObjectMinorVersion;
                 return retObjectMinorVersionNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMinorVersion != null ? retObjectMinorVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinorVersion != null ? retObjectMinorVersion.getClass() : "null", retObjectMinorVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1346,12 +1348,13 @@ public class HttpCapabilitiesBase extends NetObject implements system.web.ui.IFi
             retObjectDefaultSubmitButtonLimit = classInstance.Get("DefaultSubmitButtonLimit");
             return (int)retObjectDefaultSubmitButtonLimit;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDefaultSubmitButtonLimit_ToString = retObjectDefaultSubmitButtonLimit == null ? "null" : retObjectDefaultSubmitButtonLimit.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDefaultSubmitButtonLimitNumber = (java.lang.Number)retObjectDefaultSubmitButtonLimit;
                 return retObjectDefaultSubmitButtonLimitNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDefaultSubmitButtonLimit != null ? retObjectDefaultSubmitButtonLimit.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDefaultSubmitButtonLimit != null ? retObjectDefaultSubmitButtonLimit.getClass() : "null", retObjectDefaultSubmitButtonLimit_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1366,12 +1369,13 @@ public class HttpCapabilitiesBase extends NetObject implements system.web.ui.IFi
             retObjectGatewayMajorVersion = classInstance.Get("GatewayMajorVersion");
             return (int)retObjectGatewayMajorVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGatewayMajorVersion_ToString = retObjectGatewayMajorVersion == null ? "null" : retObjectGatewayMajorVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGatewayMajorVersionNumber = (java.lang.Number)retObjectGatewayMajorVersion;
                 return retObjectGatewayMajorVersionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGatewayMajorVersion != null ? retObjectGatewayMajorVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGatewayMajorVersion != null ? retObjectGatewayMajorVersion.getClass() : "null", retObjectGatewayMajorVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1386,12 +1390,13 @@ public class HttpCapabilitiesBase extends NetObject implements system.web.ui.IFi
             retObjectMajorVersion = classInstance.Get("MajorVersion");
             return (int)retObjectMajorVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMajorVersion_ToString = retObjectMajorVersion == null ? "null" : retObjectMajorVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMajorVersionNumber = (java.lang.Number)retObjectMajorVersion;
                 return retObjectMajorVersionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMajorVersion != null ? retObjectMajorVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMajorVersion != null ? retObjectMajorVersion.getClass() : "null", retObjectMajorVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1406,12 +1411,13 @@ public class HttpCapabilitiesBase extends NetObject implements system.web.ui.IFi
             retObjectMaximumHrefLength = classInstance.Get("MaximumHrefLength");
             return (int)retObjectMaximumHrefLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumHrefLength_ToString = retObjectMaximumHrefLength == null ? "null" : retObjectMaximumHrefLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumHrefLengthNumber = (java.lang.Number)retObjectMaximumHrefLength;
                 return retObjectMaximumHrefLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumHrefLength != null ? retObjectMaximumHrefLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumHrefLength != null ? retObjectMaximumHrefLength.getClass() : "null", retObjectMaximumHrefLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1426,12 +1432,13 @@ public class HttpCapabilitiesBase extends NetObject implements system.web.ui.IFi
             retObjectMaximumRenderedPageSize = classInstance.Get("MaximumRenderedPageSize");
             return (int)retObjectMaximumRenderedPageSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumRenderedPageSize_ToString = retObjectMaximumRenderedPageSize == null ? "null" : retObjectMaximumRenderedPageSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumRenderedPageSizeNumber = (java.lang.Number)retObjectMaximumRenderedPageSize;
                 return retObjectMaximumRenderedPageSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumRenderedPageSize != null ? retObjectMaximumRenderedPageSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumRenderedPageSize != null ? retObjectMaximumRenderedPageSize.getClass() : "null", retObjectMaximumRenderedPageSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1446,12 +1453,13 @@ public class HttpCapabilitiesBase extends NetObject implements system.web.ui.IFi
             retObjectMaximumSoftkeyLabelLength = classInstance.Get("MaximumSoftkeyLabelLength");
             return (int)retObjectMaximumSoftkeyLabelLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumSoftkeyLabelLength_ToString = retObjectMaximumSoftkeyLabelLength == null ? "null" : retObjectMaximumSoftkeyLabelLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumSoftkeyLabelLengthNumber = (java.lang.Number)retObjectMaximumSoftkeyLabelLength;
                 return retObjectMaximumSoftkeyLabelLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumSoftkeyLabelLength != null ? retObjectMaximumSoftkeyLabelLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumSoftkeyLabelLength != null ? retObjectMaximumSoftkeyLabelLength.getClass() : "null", retObjectMaximumSoftkeyLabelLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1466,12 +1474,13 @@ public class HttpCapabilitiesBase extends NetObject implements system.web.ui.IFi
             retObjectNumberOfSoftkeys = classInstance.Get("NumberOfSoftkeys");
             return (int)retObjectNumberOfSoftkeys;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNumberOfSoftkeys_ToString = retObjectNumberOfSoftkeys == null ? "null" : retObjectNumberOfSoftkeys.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNumberOfSoftkeysNumber = (java.lang.Number)retObjectNumberOfSoftkeys;
                 return retObjectNumberOfSoftkeysNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNumberOfSoftkeys != null ? retObjectNumberOfSoftkeys.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumberOfSoftkeys != null ? retObjectNumberOfSoftkeys.getClass() : "null", retObjectNumberOfSoftkeys_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1486,12 +1495,13 @@ public class HttpCapabilitiesBase extends NetObject implements system.web.ui.IFi
             retObjectScreenBitDepth = classInstance.Get("ScreenBitDepth");
             return (int)retObjectScreenBitDepth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScreenBitDepth_ToString = retObjectScreenBitDepth == null ? "null" : retObjectScreenBitDepth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectScreenBitDepthNumber = (java.lang.Number)retObjectScreenBitDepth;
                 return retObjectScreenBitDepthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectScreenBitDepth != null ? retObjectScreenBitDepth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectScreenBitDepth != null ? retObjectScreenBitDepth.getClass() : "null", retObjectScreenBitDepth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1506,12 +1516,13 @@ public class HttpCapabilitiesBase extends NetObject implements system.web.ui.IFi
             retObjectScreenCharactersHeight = classInstance.Get("ScreenCharactersHeight");
             return (int)retObjectScreenCharactersHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScreenCharactersHeight_ToString = retObjectScreenCharactersHeight == null ? "null" : retObjectScreenCharactersHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectScreenCharactersHeightNumber = (java.lang.Number)retObjectScreenCharactersHeight;
                 return retObjectScreenCharactersHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectScreenCharactersHeight != null ? retObjectScreenCharactersHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectScreenCharactersHeight != null ? retObjectScreenCharactersHeight.getClass() : "null", retObjectScreenCharactersHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1526,12 +1537,13 @@ public class HttpCapabilitiesBase extends NetObject implements system.web.ui.IFi
             retObjectScreenCharactersWidth = classInstance.Get("ScreenCharactersWidth");
             return (int)retObjectScreenCharactersWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScreenCharactersWidth_ToString = retObjectScreenCharactersWidth == null ? "null" : retObjectScreenCharactersWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectScreenCharactersWidthNumber = (java.lang.Number)retObjectScreenCharactersWidth;
                 return retObjectScreenCharactersWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectScreenCharactersWidth != null ? retObjectScreenCharactersWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectScreenCharactersWidth != null ? retObjectScreenCharactersWidth.getClass() : "null", retObjectScreenCharactersWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1546,12 +1558,13 @@ public class HttpCapabilitiesBase extends NetObject implements system.web.ui.IFi
             retObjectScreenPixelsHeight = classInstance.Get("ScreenPixelsHeight");
             return (int)retObjectScreenPixelsHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScreenPixelsHeight_ToString = retObjectScreenPixelsHeight == null ? "null" : retObjectScreenPixelsHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectScreenPixelsHeightNumber = (java.lang.Number)retObjectScreenPixelsHeight;
                 return retObjectScreenPixelsHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectScreenPixelsHeight != null ? retObjectScreenPixelsHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectScreenPixelsHeight != null ? retObjectScreenPixelsHeight.getClass() : "null", retObjectScreenPixelsHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1566,12 +1579,13 @@ public class HttpCapabilitiesBase extends NetObject implements system.web.ui.IFi
             retObjectScreenPixelsWidth = classInstance.Get("ScreenPixelsWidth");
             return (int)retObjectScreenPixelsWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScreenPixelsWidth_ToString = retObjectScreenPixelsWidth == null ? "null" : retObjectScreenPixelsWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectScreenPixelsWidthNumber = (java.lang.Number)retObjectScreenPixelsWidth;
                 return retObjectScreenPixelsWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectScreenPixelsWidth != null ? retObjectScreenPixelsWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectScreenPixelsWidth != null ? retObjectScreenPixelsWidth.getClass() : "null", retObjectScreenPixelsWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

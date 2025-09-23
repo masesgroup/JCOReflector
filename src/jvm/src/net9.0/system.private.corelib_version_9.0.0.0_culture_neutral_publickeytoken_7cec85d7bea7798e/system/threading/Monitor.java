@@ -370,12 +370,13 @@ public class Monitor extends NetObject  {
             retObjectLockContentionCount = classType.Get("LockContentionCount");
             return (long)retObjectLockContentionCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLockContentionCount_ToString = retObjectLockContentionCount == null ? "null" : retObjectLockContentionCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLockContentionCountNumber = (java.lang.Number)retObjectLockContentionCount;
                 return retObjectLockContentionCountNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectLockContentionCount != null ? retObjectLockContentionCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectLockContentionCount != null ? retObjectLockContentionCount.getClass() : "null", retObjectLockContentionCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

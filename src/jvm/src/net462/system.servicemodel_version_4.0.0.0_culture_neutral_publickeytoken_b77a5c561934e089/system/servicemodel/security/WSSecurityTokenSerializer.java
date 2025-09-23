@@ -264,12 +264,13 @@ public class WSSecurityTokenSerializer extends SecurityTokenSerializer  {
             retObjectMaximumKeyDerivationLabelLength = classInstance.Get("MaximumKeyDerivationLabelLength");
             return (int)retObjectMaximumKeyDerivationLabelLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumKeyDerivationLabelLength_ToString = retObjectMaximumKeyDerivationLabelLength == null ? "null" : retObjectMaximumKeyDerivationLabelLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumKeyDerivationLabelLengthNumber = (java.lang.Number)retObjectMaximumKeyDerivationLabelLength;
                 return retObjectMaximumKeyDerivationLabelLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumKeyDerivationLabelLength != null ? retObjectMaximumKeyDerivationLabelLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumKeyDerivationLabelLength != null ? retObjectMaximumKeyDerivationLabelLength.getClass() : "null", retObjectMaximumKeyDerivationLabelLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -284,12 +285,13 @@ public class WSSecurityTokenSerializer extends SecurityTokenSerializer  {
             retObjectMaximumKeyDerivationNonceLength = classInstance.Get("MaximumKeyDerivationNonceLength");
             return (int)retObjectMaximumKeyDerivationNonceLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumKeyDerivationNonceLength_ToString = retObjectMaximumKeyDerivationNonceLength == null ? "null" : retObjectMaximumKeyDerivationNonceLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumKeyDerivationNonceLengthNumber = (java.lang.Number)retObjectMaximumKeyDerivationNonceLength;
                 return retObjectMaximumKeyDerivationNonceLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumKeyDerivationNonceLength != null ? retObjectMaximumKeyDerivationNonceLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumKeyDerivationNonceLength != null ? retObjectMaximumKeyDerivationNonceLength.getClass() : "null", retObjectMaximumKeyDerivationNonceLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -304,12 +306,13 @@ public class WSSecurityTokenSerializer extends SecurityTokenSerializer  {
             retObjectMaximumKeyDerivationOffset = classInstance.Get("MaximumKeyDerivationOffset");
             return (int)retObjectMaximumKeyDerivationOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumKeyDerivationOffset_ToString = retObjectMaximumKeyDerivationOffset == null ? "null" : retObjectMaximumKeyDerivationOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumKeyDerivationOffsetNumber = (java.lang.Number)retObjectMaximumKeyDerivationOffset;
                 return retObjectMaximumKeyDerivationOffsetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumKeyDerivationOffset != null ? retObjectMaximumKeyDerivationOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumKeyDerivationOffset != null ? retObjectMaximumKeyDerivationOffset.getClass() : "null", retObjectMaximumKeyDerivationOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

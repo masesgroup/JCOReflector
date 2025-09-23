@@ -166,12 +166,13 @@ public class FlatButtonAppearance extends NetObject  {
             retObjectBorderSize = classInstance.Get("BorderSize");
             return (int)retObjectBorderSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBorderSize_ToString = retObjectBorderSize == null ? "null" : retObjectBorderSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBorderSizeNumber = (java.lang.Number)retObjectBorderSize;
                 return retObjectBorderSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBorderSize != null ? retObjectBorderSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBorderSize != null ? retObjectBorderSize.getClass() : "null", retObjectBorderSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

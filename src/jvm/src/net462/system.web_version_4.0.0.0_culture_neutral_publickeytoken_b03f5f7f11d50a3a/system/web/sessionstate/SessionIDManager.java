@@ -286,12 +286,13 @@ public class SessionIDManager extends NetObject  {
             retObjectSessionIDMaxLength = classType.Get("SessionIDMaxLength");
             return (int)retObjectSessionIDMaxLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSessionIDMaxLength_ToString = retObjectSessionIDMaxLength == null ? "null" : retObjectSessionIDMaxLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSessionIDMaxLengthNumber = (java.lang.Number)retObjectSessionIDMaxLength;
                 return retObjectSessionIDMaxLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSessionIDMaxLength != null ? retObjectSessionIDMaxLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSessionIDMaxLength != null ? retObjectSessionIDMaxLength.getClass() : "null", retObjectSessionIDMaxLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

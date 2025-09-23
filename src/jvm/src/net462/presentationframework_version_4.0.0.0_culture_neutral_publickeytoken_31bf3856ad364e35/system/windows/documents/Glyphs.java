@@ -215,12 +215,13 @@ public class Glyphs extends FrameworkElement  {
             retObjectFontRenderingEmSize = classInstance.Get("FontRenderingEmSize");
             return (double)retObjectFontRenderingEmSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFontRenderingEmSize_ToString = retObjectFontRenderingEmSize == null ? "null" : retObjectFontRenderingEmSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFontRenderingEmSizeNumber = (java.lang.Number)retObjectFontRenderingEmSize;
                 return retObjectFontRenderingEmSizeNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectFontRenderingEmSize != null ? retObjectFontRenderingEmSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFontRenderingEmSize != null ? retObjectFontRenderingEmSize.getClass() : "null", retObjectFontRenderingEmSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -245,12 +246,13 @@ public class Glyphs extends FrameworkElement  {
             retObjectOriginX = classInstance.Get("OriginX");
             return (double)retObjectOriginX;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOriginX_ToString = retObjectOriginX == null ? "null" : retObjectOriginX.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOriginXNumber = (java.lang.Number)retObjectOriginX;
                 return retObjectOriginXNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOriginX != null ? retObjectOriginX.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOriginX != null ? retObjectOriginX.getClass() : "null", retObjectOriginX_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -275,12 +277,13 @@ public class Glyphs extends FrameworkElement  {
             retObjectOriginY = classInstance.Get("OriginY");
             return (double)retObjectOriginY;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOriginY_ToString = retObjectOriginY == null ? "null" : retObjectOriginY.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOriginYNumber = (java.lang.Number)retObjectOriginY;
                 return retObjectOriginYNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOriginY != null ? retObjectOriginY.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOriginY != null ? retObjectOriginY.getClass() : "null", retObjectOriginY_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -305,12 +308,13 @@ public class Glyphs extends FrameworkElement  {
             retObjectBidiLevel = classInstance.Get("BidiLevel");
             return (int)retObjectBidiLevel;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBidiLevel_ToString = retObjectBidiLevel == null ? "null" : retObjectBidiLevel.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBidiLevelNumber = (java.lang.Number)retObjectBidiLevel;
                 return retObjectBidiLevelNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBidiLevel != null ? retObjectBidiLevel.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBidiLevel != null ? retObjectBidiLevel.getClass() : "null", retObjectBidiLevel_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -161,12 +161,13 @@ public class ISOWeek extends NetObject  {
             retObjectGetWeekOfYear = classType.Invoke("GetWeekOfYear", date == null ? null : date.getJCOInstance());
             return (int)retObjectGetWeekOfYear;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetWeekOfYear_ToString = retObjectGetWeekOfYear == null ? "null" : retObjectGetWeekOfYear.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetWeekOfYearNumber = (java.lang.Number)retObjectGetWeekOfYear;
                 return retObjectGetWeekOfYearNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetWeekOfYear != null ? retObjectGetWeekOfYear.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetWeekOfYear != null ? retObjectGetWeekOfYear.getClass() : "null", retObjectGetWeekOfYear_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -181,12 +182,13 @@ public class ISOWeek extends NetObject  {
             retObjectGetWeeksInYear = classType.Invoke("GetWeeksInYear", year);
             return (int)retObjectGetWeeksInYear;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetWeeksInYear_ToString = retObjectGetWeeksInYear == null ? "null" : retObjectGetWeeksInYear.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetWeeksInYearNumber = (java.lang.Number)retObjectGetWeeksInYear;
                 return retObjectGetWeeksInYearNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetWeeksInYear != null ? retObjectGetWeeksInYear.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetWeeksInYear != null ? retObjectGetWeeksInYear.getClass() : "null", retObjectGetWeeksInYear_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -201,12 +203,13 @@ public class ISOWeek extends NetObject  {
             retObjectGetYear = classType.Invoke("GetYear", date == null ? null : date.getJCOInstance());
             return (int)retObjectGetYear;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetYear_ToString = retObjectGetYear == null ? "null" : retObjectGetYear.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetYearNumber = (java.lang.Number)retObjectGetYear;
                 return retObjectGetYearNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetYear != null ? retObjectGetYear.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetYear != null ? retObjectGetYear.getClass() : "null", retObjectGetYear_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

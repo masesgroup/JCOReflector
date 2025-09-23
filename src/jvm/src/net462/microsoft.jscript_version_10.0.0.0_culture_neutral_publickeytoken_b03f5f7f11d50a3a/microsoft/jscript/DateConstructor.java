@@ -163,12 +163,13 @@ public class DateConstructor extends ScriptFunction  {
             retObjectparse = classType.Invoke("parse", str);
             return (double)retObjectparse;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectparse_ToString = retObjectparse == null ? "null" : retObjectparse.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectparseNumber = (java.lang.Number)retObjectparse;
                 return retObjectparseNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectparse != null ? retObjectparse.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectparse != null ? retObjectparse.getClass() : "null", retObjectparse_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -183,12 +184,13 @@ public class DateConstructor extends ScriptFunction  {
             retObjectUTC = classType.Invoke("UTC", year == null ? null : year.getJCOInstance(), month == null ? null : month.getJCOInstance(), date == null ? null : date.getJCOInstance(), hours == null ? null : hours.getJCOInstance(), minutes == null ? null : minutes.getJCOInstance(), seconds == null ? null : seconds.getJCOInstance(), ms == null ? null : ms.getJCOInstance());
             return (double)retObjectUTC;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUTC_ToString = retObjectUTC == null ? "null" : retObjectUTC.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectUTCNumber = (java.lang.Number)retObjectUTC;
                 return retObjectUTCNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectUTC != null ? retObjectUTC.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectUTC != null ? retObjectUTC.getClass() : "null", retObjectUTC_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

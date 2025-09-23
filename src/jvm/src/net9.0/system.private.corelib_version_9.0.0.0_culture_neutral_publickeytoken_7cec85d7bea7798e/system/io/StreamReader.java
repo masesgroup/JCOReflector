@@ -295,12 +295,13 @@ public class StreamReader extends TextReader  {
             retObjectPeek = classInstance.Invoke("Peek");
             return (int)retObjectPeek;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPeek_ToString = retObjectPeek == null ? "null" : retObjectPeek.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPeekNumber = (java.lang.Number)retObjectPeek;
                 return retObjectPeekNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPeek != null ? retObjectPeek.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPeek != null ? retObjectPeek.getClass() : "null", retObjectPeek_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -315,12 +316,13 @@ public class StreamReader extends TextReader  {
             retObjectRead = classInstance.Invoke("Read");
             return (int)retObjectRead;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRead_ToString = retObjectRead == null ? "null" : retObjectRead.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
                 return retObjectReadNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null", retObjectRead_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -335,12 +337,13 @@ public class StreamReader extends TextReader  {
             retObjectRead = classInstance.Invoke("Read", buffer, index, count);
             return (int)retObjectRead;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRead_ToString = retObjectRead == null ? "null" : retObjectRead.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
                 return retObjectReadNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null", retObjectRead_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -355,12 +358,13 @@ public class StreamReader extends TextReader  {
             retObjectRead = classInstance.Invoke("Read", dupParam0.getJCRefOut(), dupParam1, dupParam2);
             return (int)retObjectRead;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRead_ToString = retObjectRead == null ? "null" : retObjectRead.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
                 return retObjectReadNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null", retObjectRead_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -375,12 +379,13 @@ public class StreamReader extends TextReader  {
             retObjectReadBlock = classInstance.Invoke("ReadBlock", buffer, index, count);
             return (int)retObjectReadBlock;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadBlock_ToString = retObjectReadBlock == null ? "null" : retObjectReadBlock.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadBlockNumber = (java.lang.Number)retObjectReadBlock;
                 return retObjectReadBlockNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadBlock != null ? retObjectReadBlock.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadBlock != null ? retObjectReadBlock.getClass() : "null", retObjectReadBlock_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -395,12 +400,13 @@ public class StreamReader extends TextReader  {
             retObjectReadBlock = classInstance.Invoke("ReadBlock", dupParam0.getJCRefOut(), dupParam1, dupParam2);
             return (int)retObjectReadBlock;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadBlock_ToString = retObjectReadBlock == null ? "null" : retObjectReadBlock.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadBlockNumber = (java.lang.Number)retObjectReadBlock;
                 return retObjectReadBlockNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadBlock != null ? retObjectReadBlock.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadBlock != null ? retObjectReadBlock.getClass() : "null", retObjectReadBlock_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -164,12 +164,13 @@ public class PosixTarEntry extends TarEntry  {
             retObjectDeviceMajor = classInstance.Get("DeviceMajor");
             return (int)retObjectDeviceMajor;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeviceMajor_ToString = retObjectDeviceMajor == null ? "null" : retObjectDeviceMajor.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDeviceMajorNumber = (java.lang.Number)retObjectDeviceMajor;
                 return retObjectDeviceMajorNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDeviceMajor != null ? retObjectDeviceMajor.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeviceMajor != null ? retObjectDeviceMajor.getClass() : "null", retObjectDeviceMajor_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -194,12 +195,13 @@ public class PosixTarEntry extends TarEntry  {
             retObjectDeviceMinor = classInstance.Get("DeviceMinor");
             return (int)retObjectDeviceMinor;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeviceMinor_ToString = retObjectDeviceMinor == null ? "null" : retObjectDeviceMinor.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDeviceMinorNumber = (java.lang.Number)retObjectDeviceMinor;
                 return retObjectDeviceMinorNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDeviceMinor != null ? retObjectDeviceMinor.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeviceMinor != null ? retObjectDeviceMinor.getClass() : "null", retObjectDeviceMinor_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

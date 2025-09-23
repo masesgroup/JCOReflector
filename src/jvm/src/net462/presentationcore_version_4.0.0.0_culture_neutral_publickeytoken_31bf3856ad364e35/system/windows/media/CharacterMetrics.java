@@ -181,12 +181,13 @@ public class CharacterMetrics extends NetObject  {
             retObjectBaseline = classInstance.Get("Baseline");
             return (double)retObjectBaseline;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBaseline_ToString = retObjectBaseline == null ? "null" : retObjectBaseline.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBaselineNumber = (java.lang.Number)retObjectBaseline;
                 return retObjectBaselineNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectBaseline != null ? retObjectBaseline.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBaseline != null ? retObjectBaseline.getClass() : "null", retObjectBaseline_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -201,12 +202,13 @@ public class CharacterMetrics extends NetObject  {
             retObjectBlackBoxHeight = classInstance.Get("BlackBoxHeight");
             return (double)retObjectBlackBoxHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBlackBoxHeight_ToString = retObjectBlackBoxHeight == null ? "null" : retObjectBlackBoxHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBlackBoxHeightNumber = (java.lang.Number)retObjectBlackBoxHeight;
                 return retObjectBlackBoxHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectBlackBoxHeight != null ? retObjectBlackBoxHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBlackBoxHeight != null ? retObjectBlackBoxHeight.getClass() : "null", retObjectBlackBoxHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -221,12 +223,13 @@ public class CharacterMetrics extends NetObject  {
             retObjectBlackBoxWidth = classInstance.Get("BlackBoxWidth");
             return (double)retObjectBlackBoxWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBlackBoxWidth_ToString = retObjectBlackBoxWidth == null ? "null" : retObjectBlackBoxWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBlackBoxWidthNumber = (java.lang.Number)retObjectBlackBoxWidth;
                 return retObjectBlackBoxWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectBlackBoxWidth != null ? retObjectBlackBoxWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBlackBoxWidth != null ? retObjectBlackBoxWidth.getClass() : "null", retObjectBlackBoxWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -241,12 +244,13 @@ public class CharacterMetrics extends NetObject  {
             retObjectBottomSideBearing = classInstance.Get("BottomSideBearing");
             return (double)retObjectBottomSideBearing;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBottomSideBearing_ToString = retObjectBottomSideBearing == null ? "null" : retObjectBottomSideBearing.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBottomSideBearingNumber = (java.lang.Number)retObjectBottomSideBearing;
                 return retObjectBottomSideBearingNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectBottomSideBearing != null ? retObjectBottomSideBearing.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBottomSideBearing != null ? retObjectBottomSideBearing.getClass() : "null", retObjectBottomSideBearing_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -261,12 +265,13 @@ public class CharacterMetrics extends NetObject  {
             retObjectLeftSideBearing = classInstance.Get("LeftSideBearing");
             return (double)retObjectLeftSideBearing;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLeftSideBearing_ToString = retObjectLeftSideBearing == null ? "null" : retObjectLeftSideBearing.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLeftSideBearingNumber = (java.lang.Number)retObjectLeftSideBearing;
                 return retObjectLeftSideBearingNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectLeftSideBearing != null ? retObjectLeftSideBearing.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLeftSideBearing != null ? retObjectLeftSideBearing.getClass() : "null", retObjectLeftSideBearing_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -281,12 +286,13 @@ public class CharacterMetrics extends NetObject  {
             retObjectRightSideBearing = classInstance.Get("RightSideBearing");
             return (double)retObjectRightSideBearing;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRightSideBearing_ToString = retObjectRightSideBearing == null ? "null" : retObjectRightSideBearing.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRightSideBearingNumber = (java.lang.Number)retObjectRightSideBearing;
                 return retObjectRightSideBearingNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectRightSideBearing != null ? retObjectRightSideBearing.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRightSideBearing != null ? retObjectRightSideBearing.getClass() : "null", retObjectRightSideBearing_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -301,12 +307,13 @@ public class CharacterMetrics extends NetObject  {
             retObjectTopSideBearing = classInstance.Get("TopSideBearing");
             return (double)retObjectTopSideBearing;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTopSideBearing_ToString = retObjectTopSideBearing == null ? "null" : retObjectTopSideBearing.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTopSideBearingNumber = (java.lang.Number)retObjectTopSideBearing;
                 return retObjectTopSideBearingNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectTopSideBearing != null ? retObjectTopSideBearing.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectTopSideBearing != null ? retObjectTopSideBearing.getClass() : "null", retObjectTopSideBearing_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

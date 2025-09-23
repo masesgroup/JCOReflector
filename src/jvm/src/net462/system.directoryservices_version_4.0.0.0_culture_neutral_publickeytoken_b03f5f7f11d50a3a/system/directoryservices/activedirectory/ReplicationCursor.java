@@ -167,12 +167,13 @@ public class ReplicationCursor extends NetObject  {
             retObjectUpToDatenessUsn = classInstance.Get("UpToDatenessUsn");
             return (long)retObjectUpToDatenessUsn;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUpToDatenessUsn_ToString = retObjectUpToDatenessUsn == null ? "null" : retObjectUpToDatenessUsn.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectUpToDatenessUsnNumber = (java.lang.Number)retObjectUpToDatenessUsn;
                 return retObjectUpToDatenessUsnNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectUpToDatenessUsn != null ? retObjectUpToDatenessUsn.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectUpToDatenessUsn != null ? retObjectUpToDatenessUsn.getClass() : "null", retObjectUpToDatenessUsn_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

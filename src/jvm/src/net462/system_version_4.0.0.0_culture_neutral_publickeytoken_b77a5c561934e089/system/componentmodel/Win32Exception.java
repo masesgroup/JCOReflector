@@ -212,12 +212,13 @@ public class Win32Exception extends ExternalException {
             retObjectNativeErrorCode = classInstance.Get("NativeErrorCode");
             return (int)retObjectNativeErrorCode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNativeErrorCode_ToString = retObjectNativeErrorCode == null ? "null" : retObjectNativeErrorCode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNativeErrorCodeNumber = (java.lang.Number)retObjectNativeErrorCode;
                 return retObjectNativeErrorCodeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNativeErrorCode != null ? retObjectNativeErrorCode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNativeErrorCode != null ? retObjectNativeErrorCode.getClass() : "null", retObjectNativeErrorCode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

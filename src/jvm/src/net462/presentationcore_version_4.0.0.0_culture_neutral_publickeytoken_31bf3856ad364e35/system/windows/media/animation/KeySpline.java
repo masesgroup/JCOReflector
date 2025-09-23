@@ -193,12 +193,13 @@ public class KeySpline extends Freezable implements system.IFormattable {
             retObjectGetSplineProgress = classInstance.Invoke("GetSplineProgress", linearProgress);
             return (double)retObjectGetSplineProgress;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetSplineProgress_ToString = retObjectGetSplineProgress == null ? "null" : retObjectGetSplineProgress.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetSplineProgressNumber = (java.lang.Number)retObjectGetSplineProgress;
                 return retObjectGetSplineProgressNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetSplineProgress != null ? retObjectGetSplineProgress.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetSplineProgress != null ? retObjectGetSplineProgress.getClass() : "null", retObjectGetSplineProgress_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

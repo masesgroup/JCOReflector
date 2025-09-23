@@ -161,12 +161,13 @@ public class Encoder extends NetObject  {
             retObjectGetByteCount = classInstance.Invoke("GetByteCount", chars, index, count, flush);
             return (int)retObjectGetByteCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetByteCount_ToString = retObjectGetByteCount == null ? "null" : retObjectGetByteCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetByteCountNumber = (java.lang.Number)retObjectGetByteCount;
                 return retObjectGetByteCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetByteCount != null ? retObjectGetByteCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetByteCount != null ? retObjectGetByteCount.getClass() : "null", retObjectGetByteCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -181,12 +182,13 @@ public class Encoder extends NetObject  {
             retObjectGetByteCount = classInstance.Invoke("GetByteCount", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3);
             return (int)retObjectGetByteCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetByteCount_ToString = retObjectGetByteCount == null ? "null" : retObjectGetByteCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetByteCountNumber = (java.lang.Number)retObjectGetByteCount;
                 return retObjectGetByteCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetByteCount != null ? retObjectGetByteCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetByteCount != null ? retObjectGetByteCount.getClass() : "null", retObjectGetByteCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -201,12 +203,13 @@ public class Encoder extends NetObject  {
             retObjectGetBytes = classInstance.Invoke("GetBytes", chars, charIndex, charCount, bytes, byteIndex, flush);
             return (int)retObjectGetBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetBytes_ToString = retObjectGetBytes == null ? "null" : retObjectGetBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetBytesNumber = (java.lang.Number)retObjectGetBytes;
                 return retObjectGetBytesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetBytes != null ? retObjectGetBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetBytes != null ? retObjectGetBytes.getClass() : "null", retObjectGetBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -221,12 +224,13 @@ public class Encoder extends NetObject  {
             retObjectGetBytes = classInstance.Invoke("GetBytes", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3.getJCRefOut(), dupParam4, dupParam5);
             return (int)retObjectGetBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetBytes_ToString = retObjectGetBytes == null ? "null" : retObjectGetBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetBytesNumber = (java.lang.Number)retObjectGetBytes;
                 return retObjectGetBytesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetBytes != null ? retObjectGetBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetBytes != null ? retObjectGetBytes.getClass() : "null", retObjectGetBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

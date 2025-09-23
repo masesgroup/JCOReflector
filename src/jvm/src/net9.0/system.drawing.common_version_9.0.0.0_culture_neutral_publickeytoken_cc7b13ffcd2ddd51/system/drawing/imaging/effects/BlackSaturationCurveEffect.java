@@ -177,12 +177,13 @@ public class BlackSaturationCurveEffect extends ColorCurveEffect  {
             retObjectBlackSaturation = classInstance.Get("BlackSaturation");
             return (int)retObjectBlackSaturation;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBlackSaturation_ToString = retObjectBlackSaturation == null ? "null" : retObjectBlackSaturation.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBlackSaturationNumber = (java.lang.Number)retObjectBlackSaturation;
                 return retObjectBlackSaturationNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBlackSaturation != null ? retObjectBlackSaturation.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBlackSaturation != null ? retObjectBlackSaturation.getClass() : "null", retObjectBlackSaturation_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

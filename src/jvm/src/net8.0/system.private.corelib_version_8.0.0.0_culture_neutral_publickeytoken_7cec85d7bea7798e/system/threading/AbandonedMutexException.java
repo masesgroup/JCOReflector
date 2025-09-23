@@ -212,12 +212,13 @@ public class AbandonedMutexException extends SystemException {
             retObjectMutexIndex = classInstance.Get("MutexIndex");
             return (int)retObjectMutexIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMutexIndex_ToString = retObjectMutexIndex == null ? "null" : retObjectMutexIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMutexIndexNumber = (java.lang.Number)retObjectMutexIndex;
                 return retObjectMutexIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMutexIndex != null ? retObjectMutexIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMutexIndex != null ? retObjectMutexIndex.getClass() : "null", retObjectMutexIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

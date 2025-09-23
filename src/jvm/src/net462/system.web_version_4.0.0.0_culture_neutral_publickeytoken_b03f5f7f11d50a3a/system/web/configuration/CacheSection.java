@@ -222,12 +222,13 @@ public class CacheSection extends ConfigurationSection  {
             retObjectPercentagePhysicalMemoryUsedLimit = classInstance.Get("PercentagePhysicalMemoryUsedLimit");
             return (int)retObjectPercentagePhysicalMemoryUsedLimit;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPercentagePhysicalMemoryUsedLimit_ToString = retObjectPercentagePhysicalMemoryUsedLimit == null ? "null" : retObjectPercentagePhysicalMemoryUsedLimit.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPercentagePhysicalMemoryUsedLimitNumber = (java.lang.Number)retObjectPercentagePhysicalMemoryUsedLimit;
                 return retObjectPercentagePhysicalMemoryUsedLimitNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPercentagePhysicalMemoryUsedLimit != null ? retObjectPercentagePhysicalMemoryUsedLimit.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPercentagePhysicalMemoryUsedLimit != null ? retObjectPercentagePhysicalMemoryUsedLimit.getClass() : "null", retObjectPercentagePhysicalMemoryUsedLimit_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -252,12 +253,13 @@ public class CacheSection extends ConfigurationSection  {
             retObjectPrivateBytesLimit = classInstance.Get("PrivateBytesLimit");
             return (long)retObjectPrivateBytesLimit;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPrivateBytesLimit_ToString = retObjectPrivateBytesLimit == null ? "null" : retObjectPrivateBytesLimit.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPrivateBytesLimitNumber = (java.lang.Number)retObjectPrivateBytesLimit;
                 return retObjectPrivateBytesLimitNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectPrivateBytesLimit != null ? retObjectPrivateBytesLimit.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectPrivateBytesLimit != null ? retObjectPrivateBytesLimit.getClass() : "null", retObjectPrivateBytesLimit_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

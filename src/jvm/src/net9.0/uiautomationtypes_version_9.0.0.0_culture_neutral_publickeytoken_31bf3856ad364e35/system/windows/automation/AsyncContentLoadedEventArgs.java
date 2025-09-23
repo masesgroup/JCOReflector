@@ -177,12 +177,13 @@ public class AsyncContentLoadedEventArgs extends AutomationEventArgs  {
             retObjectPercentComplete = classInstance.Get("PercentComplete");
             return (double)retObjectPercentComplete;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPercentComplete_ToString = retObjectPercentComplete == null ? "null" : retObjectPercentComplete.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPercentCompleteNumber = (java.lang.Number)retObjectPercentComplete;
                 return retObjectPercentCompleteNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectPercentComplete != null ? retObjectPercentComplete.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPercentComplete != null ? retObjectPercentComplete.getClass() : "null", retObjectPercentComplete_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

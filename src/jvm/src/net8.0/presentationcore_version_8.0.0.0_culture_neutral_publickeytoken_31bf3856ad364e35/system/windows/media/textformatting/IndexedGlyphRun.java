@@ -166,12 +166,13 @@ public class IndexedGlyphRun extends NetObject  {
             retObjectTextSourceCharacterIndex = classInstance.Get("TextSourceCharacterIndex");
             return (int)retObjectTextSourceCharacterIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTextSourceCharacterIndex_ToString = retObjectTextSourceCharacterIndex == null ? "null" : retObjectTextSourceCharacterIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTextSourceCharacterIndexNumber = (java.lang.Number)retObjectTextSourceCharacterIndex;
                 return retObjectTextSourceCharacterIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTextSourceCharacterIndex != null ? retObjectTextSourceCharacterIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTextSourceCharacterIndex != null ? retObjectTextSourceCharacterIndex.getClass() : "null", retObjectTextSourceCharacterIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -186,12 +187,13 @@ public class IndexedGlyphRun extends NetObject  {
             retObjectTextSourceLength = classInstance.Get("TextSourceLength");
             return (int)retObjectTextSourceLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTextSourceLength_ToString = retObjectTextSourceLength == null ? "null" : retObjectTextSourceLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTextSourceLengthNumber = (java.lang.Number)retObjectTextSourceLength;
                 return retObjectTextSourceLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTextSourceLength != null ? retObjectTextSourceLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTextSourceLength != null ? retObjectTextSourceLength.getClass() : "null", retObjectTextSourceLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

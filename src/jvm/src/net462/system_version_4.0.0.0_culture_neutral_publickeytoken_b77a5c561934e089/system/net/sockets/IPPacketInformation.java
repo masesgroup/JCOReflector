@@ -167,12 +167,13 @@ public class IPPacketInformation extends ValueType  {
             retObjectInterface = classInstance.Get("Interface");
             return (int)retObjectInterface;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInterface_ToString = retObjectInterface == null ? "null" : retObjectInterface.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInterfaceNumber = (java.lang.Number)retObjectInterface;
                 return retObjectInterfaceNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectInterface != null ? retObjectInterface.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectInterface != null ? retObjectInterface.getClass() : "null", retObjectInterface_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

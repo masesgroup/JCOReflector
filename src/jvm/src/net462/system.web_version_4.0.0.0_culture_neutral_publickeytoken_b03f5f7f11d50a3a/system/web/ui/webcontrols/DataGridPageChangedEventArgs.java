@@ -176,12 +176,13 @@ public class DataGridPageChangedEventArgs extends EventArgs  {
             retObjectNewPageIndex = classInstance.Get("NewPageIndex");
             return (int)retObjectNewPageIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNewPageIndex_ToString = retObjectNewPageIndex == null ? "null" : retObjectNewPageIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNewPageIndexNumber = (java.lang.Number)retObjectNewPageIndex;
                 return retObjectNewPageIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNewPageIndex != null ? retObjectNewPageIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNewPageIndex != null ? retObjectNewPageIndex.getClass() : "null", retObjectNewPageIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -171,12 +171,13 @@ public class TextImage extends NetObject  {
             retObjectStartLineIndex = classInstance.Get("StartLineIndex");
             return (int)retObjectStartLineIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartLineIndex_ToString = retObjectStartLineIndex == null ? "null" : retObjectStartLineIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStartLineIndexNumber = (java.lang.Number)retObjectStartLineIndex;
                 return retObjectStartLineIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStartLineIndex != null ? retObjectStartLineIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartLineIndex != null ? retObjectStartLineIndex.getClass() : "null", retObjectStartLineIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

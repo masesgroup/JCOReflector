@@ -1201,12 +1201,13 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
             retObjectPointCount = classInstance.Get("PointCount");
             return (int)retObjectPointCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPointCount_ToString = retObjectPointCount == null ? "null" : retObjectPointCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPointCountNumber = (java.lang.Number)retObjectPointCount;
                 return retObjectPointCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPointCount != null ? retObjectPointCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPointCount != null ? retObjectPointCount.getClass() : "null", retObjectPointCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

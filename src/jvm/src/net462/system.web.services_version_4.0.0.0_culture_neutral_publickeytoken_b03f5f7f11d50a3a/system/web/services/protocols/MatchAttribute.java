@@ -200,12 +200,13 @@ public class MatchAttribute extends Attribute  {
             retObjectCapture = classInstance.Get("Capture");
             return (int)retObjectCapture;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCapture_ToString = retObjectCapture == null ? "null" : retObjectCapture.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCaptureNumber = (java.lang.Number)retObjectCapture;
                 return retObjectCaptureNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCapture != null ? retObjectCapture.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCapture != null ? retObjectCapture.getClass() : "null", retObjectCapture_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -230,12 +231,13 @@ public class MatchAttribute extends Attribute  {
             retObjectGroup = classInstance.Get("Group");
             return (int)retObjectGroup;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGroup_ToString = retObjectGroup == null ? "null" : retObjectGroup.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGroupNumber = (java.lang.Number)retObjectGroup;
                 return retObjectGroupNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGroup != null ? retObjectGroup.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGroup != null ? retObjectGroup.getClass() : "null", retObjectGroup_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -260,12 +262,13 @@ public class MatchAttribute extends Attribute  {
             retObjectMaxRepeats = classInstance.Get("MaxRepeats");
             return (int)retObjectMaxRepeats;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxRepeats_ToString = retObjectMaxRepeats == null ? "null" : retObjectMaxRepeats.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxRepeatsNumber = (java.lang.Number)retObjectMaxRepeats;
                 return retObjectMaxRepeatsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxRepeats != null ? retObjectMaxRepeats.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxRepeats != null ? retObjectMaxRepeats.getClass() : "null", retObjectMaxRepeats_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

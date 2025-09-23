@@ -177,12 +177,13 @@ public class ColumnReorderedEventArgs extends CancelEventArgs  {
             retObjectNewDisplayIndex = classInstance.Get("NewDisplayIndex");
             return (int)retObjectNewDisplayIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNewDisplayIndex_ToString = retObjectNewDisplayIndex == null ? "null" : retObjectNewDisplayIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNewDisplayIndexNumber = (java.lang.Number)retObjectNewDisplayIndex;
                 return retObjectNewDisplayIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNewDisplayIndex != null ? retObjectNewDisplayIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNewDisplayIndex != null ? retObjectNewDisplayIndex.getClass() : "null", retObjectNewDisplayIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -197,12 +198,13 @@ public class ColumnReorderedEventArgs extends CancelEventArgs  {
             retObjectOldDisplayIndex = classInstance.Get("OldDisplayIndex");
             return (int)retObjectOldDisplayIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOldDisplayIndex_ToString = retObjectOldDisplayIndex == null ? "null" : retObjectOldDisplayIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOldDisplayIndexNumber = (java.lang.Number)retObjectOldDisplayIndex;
                 return retObjectOldDisplayIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOldDisplayIndex != null ? retObjectOldDisplayIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOldDisplayIndex != null ? retObjectOldDisplayIndex.getClass() : "null", retObjectOldDisplayIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

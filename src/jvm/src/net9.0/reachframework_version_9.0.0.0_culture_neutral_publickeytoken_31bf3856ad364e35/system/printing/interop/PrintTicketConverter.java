@@ -307,12 +307,13 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
             retObjectMaxPrintSchemaVersion = classType.Get("MaxPrintSchemaVersion");
             return (int)retObjectMaxPrintSchemaVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxPrintSchemaVersion_ToString = retObjectMaxPrintSchemaVersion == null ? "null" : retObjectMaxPrintSchemaVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxPrintSchemaVersionNumber = (java.lang.Number)retObjectMaxPrintSchemaVersion;
                 return retObjectMaxPrintSchemaVersionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxPrintSchemaVersion != null ? retObjectMaxPrintSchemaVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxPrintSchemaVersion != null ? retObjectMaxPrintSchemaVersion.getClass() : "null", retObjectMaxPrintSchemaVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

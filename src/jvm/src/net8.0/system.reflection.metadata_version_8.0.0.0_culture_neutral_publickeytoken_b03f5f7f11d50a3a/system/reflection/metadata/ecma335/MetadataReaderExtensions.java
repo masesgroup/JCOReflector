@@ -167,12 +167,13 @@ public class MetadataReaderExtensions extends NetObject  {
             retObjectGetHeapMetadataOffset = classType.Invoke("GetHeapMetadataOffset", reader == null ? null : reader.getJCOInstance(), heapIndex == null ? null : heapIndex.getJCOInstance());
             return (int)retObjectGetHeapMetadataOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetHeapMetadataOffset_ToString = retObjectGetHeapMetadataOffset == null ? "null" : retObjectGetHeapMetadataOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetHeapMetadataOffsetNumber = (java.lang.Number)retObjectGetHeapMetadataOffset;
                 return retObjectGetHeapMetadataOffsetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetHeapMetadataOffset != null ? retObjectGetHeapMetadataOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHeapMetadataOffset != null ? retObjectGetHeapMetadataOffset.getClass() : "null", retObjectGetHeapMetadataOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -187,12 +188,13 @@ public class MetadataReaderExtensions extends NetObject  {
             retObjectGetHeapSize = classType.Invoke("GetHeapSize", reader == null ? null : reader.getJCOInstance(), heapIndex == null ? null : heapIndex.getJCOInstance());
             return (int)retObjectGetHeapSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetHeapSize_ToString = retObjectGetHeapSize == null ? "null" : retObjectGetHeapSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetHeapSizeNumber = (java.lang.Number)retObjectGetHeapSize;
                 return retObjectGetHeapSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetHeapSize != null ? retObjectGetHeapSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHeapSize != null ? retObjectGetHeapSize.getClass() : "null", retObjectGetHeapSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -207,12 +209,13 @@ public class MetadataReaderExtensions extends NetObject  {
             retObjectGetTableMetadataOffset = classType.Invoke("GetTableMetadataOffset", reader == null ? null : reader.getJCOInstance(), tableIndex == null ? null : tableIndex.getJCOInstance());
             return (int)retObjectGetTableMetadataOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTableMetadataOffset_ToString = retObjectGetTableMetadataOffset == null ? "null" : retObjectGetTableMetadataOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTableMetadataOffsetNumber = (java.lang.Number)retObjectGetTableMetadataOffset;
                 return retObjectGetTableMetadataOffsetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTableMetadataOffset != null ? retObjectGetTableMetadataOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTableMetadataOffset != null ? retObjectGetTableMetadataOffset.getClass() : "null", retObjectGetTableMetadataOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -227,12 +230,13 @@ public class MetadataReaderExtensions extends NetObject  {
             retObjectGetTableRowCount = classType.Invoke("GetTableRowCount", reader == null ? null : reader.getJCOInstance(), tableIndex == null ? null : tableIndex.getJCOInstance());
             return (int)retObjectGetTableRowCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTableRowCount_ToString = retObjectGetTableRowCount == null ? "null" : retObjectGetTableRowCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTableRowCountNumber = (java.lang.Number)retObjectGetTableRowCount;
                 return retObjectGetTableRowCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTableRowCount != null ? retObjectGetTableRowCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTableRowCount != null ? retObjectGetTableRowCount.getClass() : "null", retObjectGetTableRowCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -247,12 +251,13 @@ public class MetadataReaderExtensions extends NetObject  {
             retObjectGetTableRowSize = classType.Invoke("GetTableRowSize", reader == null ? null : reader.getJCOInstance(), tableIndex == null ? null : tableIndex.getJCOInstance());
             return (int)retObjectGetTableRowSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTableRowSize_ToString = retObjectGetTableRowSize == null ? "null" : retObjectGetTableRowSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTableRowSizeNumber = (java.lang.Number)retObjectGetTableRowSize;
                 return retObjectGetTableRowSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTableRowSize != null ? retObjectGetTableRowSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTableRowSize != null ? retObjectGetTableRowSize.getClass() : "null", retObjectGetTableRowSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

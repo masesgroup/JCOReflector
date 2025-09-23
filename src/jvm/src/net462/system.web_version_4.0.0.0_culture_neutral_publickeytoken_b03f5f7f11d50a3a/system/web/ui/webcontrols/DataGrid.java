@@ -327,12 +327,13 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
             retObjectCurrentPageIndex = classInstance.Get("CurrentPageIndex");
             return (int)retObjectCurrentPageIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCurrentPageIndex_ToString = retObjectCurrentPageIndex == null ? "null" : retObjectCurrentPageIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCurrentPageIndexNumber = (java.lang.Number)retObjectCurrentPageIndex;
                 return retObjectCurrentPageIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCurrentPageIndex != null ? retObjectCurrentPageIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentPageIndex != null ? retObjectCurrentPageIndex.getClass() : "null", retObjectCurrentPageIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -357,12 +358,13 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
             retObjectEditItemIndex = classInstance.Get("EditItemIndex");
             return (int)retObjectEditItemIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEditItemIndex_ToString = retObjectEditItemIndex == null ? "null" : retObjectEditItemIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEditItemIndexNumber = (java.lang.Number)retObjectEditItemIndex;
                 return retObjectEditItemIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEditItemIndex != null ? retObjectEditItemIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEditItemIndex != null ? retObjectEditItemIndex.getClass() : "null", retObjectEditItemIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -387,12 +389,13 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
             retObjectPageCount = classInstance.Get("PageCount");
             return (int)retObjectPageCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageCount_ToString = retObjectPageCount == null ? "null" : retObjectPageCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPageCountNumber = (java.lang.Number)retObjectPageCount;
                 return retObjectPageCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageCount != null ? retObjectPageCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageCount != null ? retObjectPageCount.getClass() : "null", retObjectPageCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -407,12 +410,13 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
             retObjectPageSize = classInstance.Get("PageSize");
             return (int)retObjectPageSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageSize_ToString = retObjectPageSize == null ? "null" : retObjectPageSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPageSizeNumber = (java.lang.Number)retObjectPageSize;
                 return retObjectPageSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageSize != null ? retObjectPageSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageSize != null ? retObjectPageSize.getClass() : "null", retObjectPageSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -437,12 +441,13 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
             retObjectSelectedIndex = classInstance.Get("SelectedIndex");
             return (int)retObjectSelectedIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectedIndex_ToString = retObjectSelectedIndex == null ? "null" : retObjectSelectedIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSelectedIndexNumber = (java.lang.Number)retObjectSelectedIndex;
                 return retObjectSelectedIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSelectedIndex != null ? retObjectSelectedIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectedIndex != null ? retObjectSelectedIndex.getClass() : "null", retObjectSelectedIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -467,12 +472,13 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
             retObjectVirtualItemCount = classInstance.Get("VirtualItemCount");
             return (int)retObjectVirtualItemCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVirtualItemCount_ToString = retObjectVirtualItemCount == null ? "null" : retObjectVirtualItemCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVirtualItemCountNumber = (java.lang.Number)retObjectVirtualItemCount;
                 return retObjectVirtualItemCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVirtualItemCount != null ? retObjectVirtualItemCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVirtualItemCount != null ? retObjectVirtualItemCount.getClass() : "null", retObjectVirtualItemCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

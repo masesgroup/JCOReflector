@@ -167,12 +167,13 @@ public class ProcessModule extends Component  {
             retObjectModuleMemorySize = classInstance.Get("ModuleMemorySize");
             return (int)retObjectModuleMemorySize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectModuleMemorySize_ToString = retObjectModuleMemorySize == null ? "null" : retObjectModuleMemorySize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectModuleMemorySizeNumber = (java.lang.Number)retObjectModuleMemorySize;
                 return retObjectModuleMemorySizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectModuleMemorySize != null ? retObjectModuleMemorySize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectModuleMemorySize != null ? retObjectModuleMemorySize.getClass() : "null", retObjectModuleMemorySize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

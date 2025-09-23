@@ -326,12 +326,13 @@ public class SplitContainer extends ContainerControl  {
             retObjectPanel1MinSize = classInstance.Get("Panel1MinSize");
             return (int)retObjectPanel1MinSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPanel1MinSize_ToString = retObjectPanel1MinSize == null ? "null" : retObjectPanel1MinSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPanel1MinSizeNumber = (java.lang.Number)retObjectPanel1MinSize;
                 return retObjectPanel1MinSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPanel1MinSize != null ? retObjectPanel1MinSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPanel1MinSize != null ? retObjectPanel1MinSize.getClass() : "null", retObjectPanel1MinSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -356,12 +357,13 @@ public class SplitContainer extends ContainerControl  {
             retObjectPanel2MinSize = classInstance.Get("Panel2MinSize");
             return (int)retObjectPanel2MinSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPanel2MinSize_ToString = retObjectPanel2MinSize == null ? "null" : retObjectPanel2MinSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPanel2MinSizeNumber = (java.lang.Number)retObjectPanel2MinSize;
                 return retObjectPanel2MinSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPanel2MinSize != null ? retObjectPanel2MinSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPanel2MinSize != null ? retObjectPanel2MinSize.getClass() : "null", retObjectPanel2MinSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -386,12 +388,13 @@ public class SplitContainer extends ContainerControl  {
             retObjectSplitterDistance = classInstance.Get("SplitterDistance");
             return (int)retObjectSplitterDistance;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSplitterDistance_ToString = retObjectSplitterDistance == null ? "null" : retObjectSplitterDistance.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSplitterDistanceNumber = (java.lang.Number)retObjectSplitterDistance;
                 return retObjectSplitterDistanceNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSplitterDistance != null ? retObjectSplitterDistance.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSplitterDistance != null ? retObjectSplitterDistance.getClass() : "null", retObjectSplitterDistance_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -416,12 +419,13 @@ public class SplitContainer extends ContainerControl  {
             retObjectSplitterIncrement = classInstance.Get("SplitterIncrement");
             return (int)retObjectSplitterIncrement;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSplitterIncrement_ToString = retObjectSplitterIncrement == null ? "null" : retObjectSplitterIncrement.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSplitterIncrementNumber = (java.lang.Number)retObjectSplitterIncrement;
                 return retObjectSplitterIncrementNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSplitterIncrement != null ? retObjectSplitterIncrement.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSplitterIncrement != null ? retObjectSplitterIncrement.getClass() : "null", retObjectSplitterIncrement_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -446,12 +450,13 @@ public class SplitContainer extends ContainerControl  {
             retObjectSplitterWidth = classInstance.Get("SplitterWidth");
             return (int)retObjectSplitterWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSplitterWidth_ToString = retObjectSplitterWidth == null ? "null" : retObjectSplitterWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSplitterWidthNumber = (java.lang.Number)retObjectSplitterWidth;
                 return retObjectSplitterWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSplitterWidth != null ? retObjectSplitterWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSplitterWidth != null ? retObjectSplitterWidth.getClass() : "null", retObjectSplitterWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -172,12 +172,13 @@ public class XmlDictionaryReaderQuotasElement extends ServiceModelConfigurationE
             retObjectMaxArrayLength = classInstance.Get("MaxArrayLength");
             return (int)retObjectMaxArrayLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxArrayLength_ToString = retObjectMaxArrayLength == null ? "null" : retObjectMaxArrayLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxArrayLengthNumber = (java.lang.Number)retObjectMaxArrayLength;
                 return retObjectMaxArrayLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxArrayLength != null ? retObjectMaxArrayLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxArrayLength != null ? retObjectMaxArrayLength.getClass() : "null", retObjectMaxArrayLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,12 +203,13 @@ public class XmlDictionaryReaderQuotasElement extends ServiceModelConfigurationE
             retObjectMaxBytesPerRead = classInstance.Get("MaxBytesPerRead");
             return (int)retObjectMaxBytesPerRead;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxBytesPerRead_ToString = retObjectMaxBytesPerRead == null ? "null" : retObjectMaxBytesPerRead.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxBytesPerReadNumber = (java.lang.Number)retObjectMaxBytesPerRead;
                 return retObjectMaxBytesPerReadNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxBytesPerRead != null ? retObjectMaxBytesPerRead.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxBytesPerRead != null ? retObjectMaxBytesPerRead.getClass() : "null", retObjectMaxBytesPerRead_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -232,12 +234,13 @@ public class XmlDictionaryReaderQuotasElement extends ServiceModelConfigurationE
             retObjectMaxDepth = classInstance.Get("MaxDepth");
             return (int)retObjectMaxDepth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxDepth_ToString = retObjectMaxDepth == null ? "null" : retObjectMaxDepth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxDepthNumber = (java.lang.Number)retObjectMaxDepth;
                 return retObjectMaxDepthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxDepth != null ? retObjectMaxDepth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxDepth != null ? retObjectMaxDepth.getClass() : "null", retObjectMaxDepth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -262,12 +265,13 @@ public class XmlDictionaryReaderQuotasElement extends ServiceModelConfigurationE
             retObjectMaxNameTableCharCount = classInstance.Get("MaxNameTableCharCount");
             return (int)retObjectMaxNameTableCharCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxNameTableCharCount_ToString = retObjectMaxNameTableCharCount == null ? "null" : retObjectMaxNameTableCharCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxNameTableCharCountNumber = (java.lang.Number)retObjectMaxNameTableCharCount;
                 return retObjectMaxNameTableCharCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxNameTableCharCount != null ? retObjectMaxNameTableCharCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxNameTableCharCount != null ? retObjectMaxNameTableCharCount.getClass() : "null", retObjectMaxNameTableCharCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -292,12 +296,13 @@ public class XmlDictionaryReaderQuotasElement extends ServiceModelConfigurationE
             retObjectMaxStringContentLength = classInstance.Get("MaxStringContentLength");
             return (int)retObjectMaxStringContentLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxStringContentLength_ToString = retObjectMaxStringContentLength == null ? "null" : retObjectMaxStringContentLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxStringContentLengthNumber = (java.lang.Number)retObjectMaxStringContentLength;
                 return retObjectMaxStringContentLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxStringContentLength != null ? retObjectMaxStringContentLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxStringContentLength != null ? retObjectMaxStringContentLength.getClass() : "null", retObjectMaxStringContentLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

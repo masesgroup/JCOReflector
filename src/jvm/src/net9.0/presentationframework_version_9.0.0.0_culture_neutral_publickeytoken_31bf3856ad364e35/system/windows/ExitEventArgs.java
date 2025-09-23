@@ -166,12 +166,13 @@ public class ExitEventArgs extends EventArgs  {
             retObjectApplicationExitCode = classInstance.Get("ApplicationExitCode");
             return (int)retObjectApplicationExitCode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectApplicationExitCode_ToString = retObjectApplicationExitCode == null ? "null" : retObjectApplicationExitCode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectApplicationExitCodeNumber = (java.lang.Number)retObjectApplicationExitCode;
                 return retObjectApplicationExitCodeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectApplicationExitCode != null ? retObjectApplicationExitCode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectApplicationExitCode != null ? retObjectApplicationExitCode.getClass() : "null", retObjectApplicationExitCode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

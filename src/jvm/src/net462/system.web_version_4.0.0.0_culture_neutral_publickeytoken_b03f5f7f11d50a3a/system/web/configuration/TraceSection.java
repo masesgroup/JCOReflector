@@ -293,12 +293,13 @@ public class TraceSection extends ConfigurationSection  {
             retObjectRequestLimit = classInstance.Get("RequestLimit");
             return (int)retObjectRequestLimit;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRequestLimit_ToString = retObjectRequestLimit == null ? "null" : retObjectRequestLimit.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRequestLimitNumber = (java.lang.Number)retObjectRequestLimit;
                 return retObjectRequestLimitNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRequestLimit != null ? retObjectRequestLimit.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRequestLimit != null ? retObjectRequestLimit.getClass() : "null", retObjectRequestLimit_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

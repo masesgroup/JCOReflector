@@ -174,12 +174,13 @@ public class ILOpCodeExtensions extends NetObject  {
             retObjectGetBranchOperandSize = classType.Invoke("GetBranchOperandSize", opCode == null ? null : opCode.getJCOInstance());
             return (int)retObjectGetBranchOperandSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetBranchOperandSize_ToString = retObjectGetBranchOperandSize == null ? "null" : retObjectGetBranchOperandSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetBranchOperandSizeNumber = (java.lang.Number)retObjectGetBranchOperandSize;
                 return retObjectGetBranchOperandSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetBranchOperandSize != null ? retObjectGetBranchOperandSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetBranchOperandSize != null ? retObjectGetBranchOperandSize.getClass() : "null", retObjectGetBranchOperandSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

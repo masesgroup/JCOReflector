@@ -176,12 +176,13 @@ public class NumericUpDownAcceleration extends NetObject  {
             retObjectSeconds = classInstance.Get("Seconds");
             return (int)retObjectSeconds;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSeconds_ToString = retObjectSeconds == null ? "null" : retObjectSeconds.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSecondsNumber = (java.lang.Number)retObjectSeconds;
                 return retObjectSecondsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSeconds != null ? retObjectSeconds.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSeconds != null ? retObjectSeconds.getClass() : "null", retObjectSeconds_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

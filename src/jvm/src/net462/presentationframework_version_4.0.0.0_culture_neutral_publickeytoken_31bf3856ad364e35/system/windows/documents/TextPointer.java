@@ -182,12 +182,13 @@ public class TextPointer extends ContentPosition  {
             retObjectCompareTo = classInstance.Invoke("CompareTo", position == null ? null : position.getJCOInstance());
             return (int)retObjectCompareTo;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
                 return retObjectCompareToNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,12 +203,13 @@ public class TextPointer extends ContentPosition  {
             retObjectDeleteTextInRun = classInstance.Invoke("DeleteTextInRun", count);
             return (int)retObjectDeleteTextInRun;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeleteTextInRun_ToString = retObjectDeleteTextInRun == null ? "null" : retObjectDeleteTextInRun.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDeleteTextInRunNumber = (java.lang.Number)retObjectDeleteTextInRun;
                 return retObjectDeleteTextInRunNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDeleteTextInRun != null ? retObjectDeleteTextInRun.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteTextInRun != null ? retObjectDeleteTextInRun.getClass() : "null", retObjectDeleteTextInRun_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -222,12 +224,13 @@ public class TextPointer extends ContentPosition  {
             retObjectGetOffsetToPosition = classInstance.Invoke("GetOffsetToPosition", position == null ? null : position.getJCOInstance());
             return (int)retObjectGetOffsetToPosition;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetOffsetToPosition_ToString = retObjectGetOffsetToPosition == null ? "null" : retObjectGetOffsetToPosition.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetOffsetToPositionNumber = (java.lang.Number)retObjectGetOffsetToPosition;
                 return retObjectGetOffsetToPositionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetOffsetToPosition != null ? retObjectGetOffsetToPosition.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetOffsetToPosition != null ? retObjectGetOffsetToPosition.getClass() : "null", retObjectGetOffsetToPosition_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -242,12 +245,13 @@ public class TextPointer extends ContentPosition  {
             retObjectGetTextInRun = classInstance.Invoke("GetTextInRun", direction == null ? null : direction.getJCOInstance(), textBuffer, startIndex, count);
             return (int)retObjectGetTextInRun;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTextInRun_ToString = retObjectGetTextInRun == null ? "null" : retObjectGetTextInRun.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTextInRunNumber = (java.lang.Number)retObjectGetTextInRun;
                 return retObjectGetTextInRunNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTextInRun != null ? retObjectGetTextInRun.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTextInRun != null ? retObjectGetTextInRun.getClass() : "null", retObjectGetTextInRun_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -262,12 +266,13 @@ public class TextPointer extends ContentPosition  {
             retObjectGetTextInRun = classInstance.Invoke("GetTextInRun", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2, dupParam3);
             return (int)retObjectGetTextInRun;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTextInRun_ToString = retObjectGetTextInRun == null ? "null" : retObjectGetTextInRun.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTextInRunNumber = (java.lang.Number)retObjectGetTextInRun;
                 return retObjectGetTextInRunNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTextInRun != null ? retObjectGetTextInRun.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTextInRun != null ? retObjectGetTextInRun.getClass() : "null", retObjectGetTextInRun_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -282,12 +287,13 @@ public class TextPointer extends ContentPosition  {
             retObjectGetTextRunLength = classInstance.Invoke("GetTextRunLength", direction == null ? null : direction.getJCOInstance());
             return (int)retObjectGetTextRunLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTextRunLength_ToString = retObjectGetTextRunLength == null ? "null" : retObjectGetTextRunLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTextRunLengthNumber = (java.lang.Number)retObjectGetTextRunLength;
                 return retObjectGetTextRunLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTextRunLength != null ? retObjectGetTextRunLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTextRunLength != null ? retObjectGetTextRunLength.getClass() : "null", retObjectGetTextRunLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

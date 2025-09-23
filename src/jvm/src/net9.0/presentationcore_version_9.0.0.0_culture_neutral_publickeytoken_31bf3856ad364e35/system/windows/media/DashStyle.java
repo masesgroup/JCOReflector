@@ -204,12 +204,13 @@ public class DashStyle extends Animatable  {
             retObjectOffset = classInstance.Get("Offset");
             return (double)retObjectOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffset_ToString = retObjectOffset == null ? "null" : retObjectOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOffsetNumber = (java.lang.Number)retObjectOffset;
                 return retObjectOffsetNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null", retObjectOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

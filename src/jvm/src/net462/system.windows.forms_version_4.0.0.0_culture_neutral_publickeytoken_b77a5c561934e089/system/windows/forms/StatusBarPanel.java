@@ -198,12 +198,13 @@ public class StatusBarPanel extends Component  {
             retObjectMinWidth = classInstance.Get("MinWidth");
             return (int)retObjectMinWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinWidth_ToString = retObjectMinWidth == null ? "null" : retObjectMinWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinWidthNumber = (java.lang.Number)retObjectMinWidth;
                 return retObjectMinWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinWidth != null ? retObjectMinWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinWidth != null ? retObjectMinWidth.getClass() : "null", retObjectMinWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -228,12 +229,13 @@ public class StatusBarPanel extends Component  {
             retObjectWidth = classInstance.Get("Width");
             return (int)retObjectWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWidth_ToString = retObjectWidth == null ? "null" : retObjectWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWidthNumber = (java.lang.Number)retObjectWidth;
                 return retObjectWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWidth != null ? retObjectWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWidth != null ? retObjectWidth.getClass() : "null", retObjectWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

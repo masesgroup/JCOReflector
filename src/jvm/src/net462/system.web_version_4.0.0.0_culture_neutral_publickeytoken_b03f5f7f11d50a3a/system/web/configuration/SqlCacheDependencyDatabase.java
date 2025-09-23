@@ -186,12 +186,13 @@ public class SqlCacheDependencyDatabase extends ConfigurationElement  {
             retObjectPollTime = classInstance.Get("PollTime");
             return (int)retObjectPollTime;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPollTime_ToString = retObjectPollTime == null ? "null" : retObjectPollTime.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPollTimeNumber = (java.lang.Number)retObjectPollTime;
                 return retObjectPollTimeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPollTime != null ? retObjectPollTime.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPollTime != null ? retObjectPollTime.getClass() : "null", retObjectPollTime_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

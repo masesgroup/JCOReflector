@@ -171,12 +171,13 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
             retObjectGetColumn = classInstance.Invoke("GetColumn", control == null ? null : control.getJCOInstance());
             return (int)retObjectGetColumn;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetColumn_ToString = retObjectGetColumn == null ? "null" : retObjectGetColumn.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetColumnNumber = (java.lang.Number)retObjectGetColumn;
                 return retObjectGetColumnNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetColumn != null ? retObjectGetColumn.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetColumn != null ? retObjectGetColumn.getClass() : "null", retObjectGetColumn_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -191,12 +192,13 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
             retObjectGetColumnSpan = classInstance.Invoke("GetColumnSpan", control == null ? null : control.getJCOInstance());
             return (int)retObjectGetColumnSpan;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetColumnSpan_ToString = retObjectGetColumnSpan == null ? "null" : retObjectGetColumnSpan.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetColumnSpanNumber = (java.lang.Number)retObjectGetColumnSpan;
                 return retObjectGetColumnSpanNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetColumnSpan != null ? retObjectGetColumnSpan.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetColumnSpan != null ? retObjectGetColumnSpan.getClass() : "null", retObjectGetColumnSpan_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -211,12 +213,13 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
             retObjectGetRow = classInstance.Invoke("GetRow", control == null ? null : control.getJCOInstance());
             return (int)retObjectGetRow;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetRow_ToString = retObjectGetRow == null ? "null" : retObjectGetRow.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetRowNumber = (java.lang.Number)retObjectGetRow;
                 return retObjectGetRowNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetRow != null ? retObjectGetRow.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetRow != null ? retObjectGetRow.getClass() : "null", retObjectGetRow_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -231,12 +234,13 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
             retObjectGetRowSpan = classInstance.Invoke("GetRowSpan", control == null ? null : control.getJCOInstance());
             return (int)retObjectGetRowSpan;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetRowSpan_ToString = retObjectGetRowSpan == null ? "null" : retObjectGetRowSpan.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetRowSpanNumber = (java.lang.Number)retObjectGetRowSpan;
                 return retObjectGetRowSpanNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetRowSpan != null ? retObjectGetRowSpan.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetRowSpan != null ? retObjectGetRowSpan.getClass() : "null", retObjectGetRowSpan_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -329,12 +333,13 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
             retObjectColumnCount = classInstance.Get("ColumnCount");
             return (int)retObjectColumnCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnCount_ToString = retObjectColumnCount == null ? "null" : retObjectColumnCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectColumnCountNumber = (java.lang.Number)retObjectColumnCount;
                 return retObjectColumnCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectColumnCount != null ? retObjectColumnCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumnCount != null ? retObjectColumnCount.getClass() : "null", retObjectColumnCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -359,12 +364,13 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
             retObjectRowCount = classInstance.Get("RowCount");
             return (int)retObjectRowCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowCount_ToString = retObjectRowCount == null ? "null" : retObjectRowCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRowCountNumber = (java.lang.Number)retObjectRowCount;
                 return retObjectRowCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRowCount != null ? retObjectRowCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowCount != null ? retObjectRowCount.getClass() : "null", retObjectRowCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

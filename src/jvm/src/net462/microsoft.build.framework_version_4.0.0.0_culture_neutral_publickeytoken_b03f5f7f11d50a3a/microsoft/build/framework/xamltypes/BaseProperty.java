@@ -305,12 +305,13 @@ public class BaseProperty extends NetObject  {
             retObjectHelpContext = classInstance.Get("HelpContext");
             return (int)retObjectHelpContext;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHelpContext_ToString = retObjectHelpContext == null ? "null" : retObjectHelpContext.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHelpContextNumber = (java.lang.Number)retObjectHelpContext;
                 return retObjectHelpContextNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHelpContext != null ? retObjectHelpContext.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHelpContext != null ? retObjectHelpContext.getClass() : "null", retObjectHelpContext_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

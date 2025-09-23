@@ -172,12 +172,13 @@ public class ChannelPoolSettings extends NetObject  {
             retObjectMaxOutboundChannelsPerEndpoint = classInstance.Get("MaxOutboundChannelsPerEndpoint");
             return (int)retObjectMaxOutboundChannelsPerEndpoint;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxOutboundChannelsPerEndpoint_ToString = retObjectMaxOutboundChannelsPerEndpoint == null ? "null" : retObjectMaxOutboundChannelsPerEndpoint.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxOutboundChannelsPerEndpointNumber = (java.lang.Number)retObjectMaxOutboundChannelsPerEndpoint;
                 return retObjectMaxOutboundChannelsPerEndpointNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxOutboundChannelsPerEndpoint != null ? retObjectMaxOutboundChannelsPerEndpoint.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxOutboundChannelsPerEndpoint != null ? retObjectMaxOutboundChannelsPerEndpoint.getClass() : "null", retObjectMaxOutboundChannelsPerEndpoint_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

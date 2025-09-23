@@ -225,12 +225,13 @@ public class Cloud extends NetObject implements system.runtime.serialization.ISe
             retObjectScopeId = classInstance.Get("ScopeId");
             return (int)retObjectScopeId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScopeId_ToString = retObjectScopeId == null ? "null" : retObjectScopeId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectScopeIdNumber = (java.lang.Number)retObjectScopeId;
                 return retObjectScopeIdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectScopeId != null ? retObjectScopeId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectScopeId != null ? retObjectScopeId.getClass() : "null", retObjectScopeId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

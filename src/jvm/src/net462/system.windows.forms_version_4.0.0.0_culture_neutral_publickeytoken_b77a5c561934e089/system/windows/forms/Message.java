@@ -182,12 +182,13 @@ public class Message extends ValueType  {
             retObjectMsg = classInstance.Get("Msg");
             return (int)retObjectMsg;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMsg_ToString = retObjectMsg == null ? "null" : retObjectMsg.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMsgNumber = (java.lang.Number)retObjectMsg;
                 return retObjectMsgNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMsg != null ? retObjectMsg.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMsg != null ? retObjectMsg.getClass() : "null", retObjectMsg_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

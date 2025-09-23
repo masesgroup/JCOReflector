@@ -210,12 +210,13 @@ public class TouchFrameEventArgs extends EventArgs  {
             retObjectTimestamp = classInstance.Get("Timestamp");
             return (int)retObjectTimestamp;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTimestamp_ToString = retObjectTimestamp == null ? "null" : retObjectTimestamp.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTimestampNumber = (java.lang.Number)retObjectTimestamp;
                 return retObjectTimestampNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTimestamp != null ? retObjectTimestamp.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTimestamp != null ? retObjectTimestamp.getClass() : "null", retObjectTimestamp_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

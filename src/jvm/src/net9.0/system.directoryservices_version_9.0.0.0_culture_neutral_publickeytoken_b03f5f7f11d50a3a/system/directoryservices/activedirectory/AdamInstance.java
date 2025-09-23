@@ -385,12 +385,13 @@ public class AdamInstance extends DirectoryServer  {
             retObjectLdapPort = classInstance.Get("LdapPort");
             return (int)retObjectLdapPort;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLdapPort_ToString = retObjectLdapPort == null ? "null" : retObjectLdapPort.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLdapPortNumber = (java.lang.Number)retObjectLdapPort;
                 return retObjectLdapPortNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLdapPort != null ? retObjectLdapPort.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLdapPort != null ? retObjectLdapPort.getClass() : "null", retObjectLdapPort_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -405,12 +406,13 @@ public class AdamInstance extends DirectoryServer  {
             retObjectSslPort = classInstance.Get("SslPort");
             return (int)retObjectSslPort;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSslPort_ToString = retObjectSslPort == null ? "null" : retObjectSslPort.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSslPortNumber = (java.lang.Number)retObjectSslPort;
                 return retObjectSslPortNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSslPort != null ? retObjectSslPort.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSslPort != null ? retObjectSslPort.getClass() : "null", retObjectSslPort_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

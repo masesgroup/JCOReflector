@@ -213,12 +213,13 @@ public class Asn1Tag extends ValueType  {
             retObjectCalculateEncodedSize = classInstance.Invoke("CalculateEncodedSize");
             return (int)retObjectCalculateEncodedSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCalculateEncodedSize_ToString = retObjectCalculateEncodedSize == null ? "null" : retObjectCalculateEncodedSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCalculateEncodedSizeNumber = (java.lang.Number)retObjectCalculateEncodedSize;
                 return retObjectCalculateEncodedSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCalculateEncodedSize != null ? retObjectCalculateEncodedSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCalculateEncodedSize != null ? retObjectCalculateEncodedSize.getClass() : "null", retObjectCalculateEncodedSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -281,12 +282,13 @@ public class Asn1Tag extends ValueType  {
             retObjectTagValue = classInstance.Get("TagValue");
             return (int)retObjectTagValue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTagValue_ToString = retObjectTagValue == null ? "null" : retObjectTagValue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTagValueNumber = (java.lang.Number)retObjectTagValue;
                 return retObjectTagValueNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTagValue != null ? retObjectTagValue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTagValue != null ? retObjectTagValue.getClass() : "null", retObjectTagValue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

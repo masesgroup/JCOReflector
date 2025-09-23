@@ -186,12 +186,13 @@ public class EventMappingSettings extends ConfigurationElement  {
             retObjectEndEventCode = classInstance.Get("EndEventCode");
             return (int)retObjectEndEventCode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndEventCode_ToString = retObjectEndEventCode == null ? "null" : retObjectEndEventCode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEndEventCodeNumber = (java.lang.Number)retObjectEndEventCode;
                 return retObjectEndEventCodeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEndEventCode != null ? retObjectEndEventCode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndEventCode != null ? retObjectEndEventCode.getClass() : "null", retObjectEndEventCode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -216,12 +217,13 @@ public class EventMappingSettings extends ConfigurationElement  {
             retObjectStartEventCode = classInstance.Get("StartEventCode");
             return (int)retObjectStartEventCode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartEventCode_ToString = retObjectStartEventCode == null ? "null" : retObjectStartEventCode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStartEventCodeNumber = (java.lang.Number)retObjectStartEventCode;
                 return retObjectStartEventCodeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStartEventCode != null ? retObjectStartEventCode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartEventCode != null ? retObjectStartEventCode.getClass() : "null", retObjectStartEventCode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

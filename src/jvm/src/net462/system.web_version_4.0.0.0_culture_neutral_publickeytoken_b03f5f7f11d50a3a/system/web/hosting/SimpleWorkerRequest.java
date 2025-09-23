@@ -183,12 +183,13 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
             retObjectGetLocalPort = classInstance.Invoke("GetLocalPort");
             return (int)retObjectGetLocalPort;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLocalPort_ToString = retObjectGetLocalPort == null ? "null" : retObjectGetLocalPort.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetLocalPortNumber = (java.lang.Number)retObjectGetLocalPort;
                 return retObjectGetLocalPortNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetLocalPort != null ? retObjectGetLocalPort.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetLocalPort != null ? retObjectGetLocalPort.getClass() : "null", retObjectGetLocalPort_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -203,12 +204,13 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
             retObjectGetRemotePort = classInstance.Invoke("GetRemotePort");
             return (int)retObjectGetRemotePort;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetRemotePort_ToString = retObjectGetRemotePort == null ? "null" : retObjectGetRemotePort.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetRemotePortNumber = (java.lang.Number)retObjectGetRemotePort;
                 return retObjectGetRemotePortNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetRemotePort != null ? retObjectGetRemotePort.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetRemotePort != null ? retObjectGetRemotePort.getClass() : "null", retObjectGetRemotePort_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

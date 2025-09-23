@@ -193,12 +193,13 @@ public class DebugDirectoryEntry extends ValueType  {
             retObjectDataPointer = classInstance.Get("DataPointer");
             return (int)retObjectDataPointer;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDataPointer_ToString = retObjectDataPointer == null ? "null" : retObjectDataPointer.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDataPointerNumber = (java.lang.Number)retObjectDataPointer;
                 return retObjectDataPointerNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDataPointer != null ? retObjectDataPointer.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDataPointer != null ? retObjectDataPointer.getClass() : "null", retObjectDataPointer_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -213,12 +214,13 @@ public class DebugDirectoryEntry extends ValueType  {
             retObjectDataRelativeVirtualAddress = classInstance.Get("DataRelativeVirtualAddress");
             return (int)retObjectDataRelativeVirtualAddress;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDataRelativeVirtualAddress_ToString = retObjectDataRelativeVirtualAddress == null ? "null" : retObjectDataRelativeVirtualAddress.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDataRelativeVirtualAddressNumber = (java.lang.Number)retObjectDataRelativeVirtualAddress;
                 return retObjectDataRelativeVirtualAddressNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDataRelativeVirtualAddress != null ? retObjectDataRelativeVirtualAddress.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDataRelativeVirtualAddress != null ? retObjectDataRelativeVirtualAddress.getClass() : "null", retObjectDataRelativeVirtualAddress_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -233,12 +235,13 @@ public class DebugDirectoryEntry extends ValueType  {
             retObjectDataSize = classInstance.Get("DataSize");
             return (int)retObjectDataSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDataSize_ToString = retObjectDataSize == null ? "null" : retObjectDataSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDataSizeNumber = (java.lang.Number)retObjectDataSize;
                 return retObjectDataSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDataSize != null ? retObjectDataSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDataSize != null ? retObjectDataSize.getClass() : "null", retObjectDataSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -204,12 +204,13 @@ public class OleDbDataAdapter extends DbDataAdapter  {
             retObjectFill = classInstance.Invoke("Fill", dataSet == null ? null : dataSet.getJCOInstance(), ADODBRecordSet == null ? null : ADODBRecordSet.getJCOInstance(), srcTable);
             return (int)retObjectFill;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFill_ToString = retObjectFill == null ? "null" : retObjectFill.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFillNumber = (java.lang.Number)retObjectFill;
                 return retObjectFillNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFill != null ? retObjectFill.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFill != null ? retObjectFill.getClass() : "null", retObjectFill_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -224,12 +225,13 @@ public class OleDbDataAdapter extends DbDataAdapter  {
             retObjectFill = classInstance.Invoke("Fill", dataTable == null ? null : dataTable.getJCOInstance(), ADODBRecordSet == null ? null : ADODBRecordSet.getJCOInstance());
             return (int)retObjectFill;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFill_ToString = retObjectFill == null ? "null" : retObjectFill.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFillNumber = (java.lang.Number)retObjectFill;
                 return retObjectFillNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFill != null ? retObjectFill.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFill != null ? retObjectFill.getClass() : "null", retObjectFill_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

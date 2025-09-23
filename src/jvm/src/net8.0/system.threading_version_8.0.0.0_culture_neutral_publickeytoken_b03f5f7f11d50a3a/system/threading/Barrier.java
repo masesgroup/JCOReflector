@@ -229,12 +229,13 @@ public class Barrier extends NetObject implements AutoCloseable {
             retObjectAddParticipant = classInstance.Invoke("AddParticipant");
             return (long)retObjectAddParticipant;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAddParticipant_ToString = retObjectAddParticipant == null ? "null" : retObjectAddParticipant.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAddParticipantNumber = (java.lang.Number)retObjectAddParticipant;
                 return retObjectAddParticipantNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectAddParticipant != null ? retObjectAddParticipant.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectAddParticipant != null ? retObjectAddParticipant.getClass() : "null", retObjectAddParticipant_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -249,12 +250,13 @@ public class Barrier extends NetObject implements AutoCloseable {
             retObjectAddParticipants = classInstance.Invoke("AddParticipants", participantCount);
             return (long)retObjectAddParticipants;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAddParticipants_ToString = retObjectAddParticipants == null ? "null" : retObjectAddParticipants.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAddParticipantsNumber = (java.lang.Number)retObjectAddParticipants;
                 return retObjectAddParticipantsNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectAddParticipants != null ? retObjectAddParticipants.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectAddParticipants != null ? retObjectAddParticipants.getClass() : "null", retObjectAddParticipants_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -336,12 +338,13 @@ public class Barrier extends NetObject implements AutoCloseable {
             retObjectParticipantCount = classInstance.Get("ParticipantCount");
             return (int)retObjectParticipantCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectParticipantCount_ToString = retObjectParticipantCount == null ? "null" : retObjectParticipantCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectParticipantCountNumber = (java.lang.Number)retObjectParticipantCount;
                 return retObjectParticipantCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectParticipantCount != null ? retObjectParticipantCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectParticipantCount != null ? retObjectParticipantCount.getClass() : "null", retObjectParticipantCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -356,12 +359,13 @@ public class Barrier extends NetObject implements AutoCloseable {
             retObjectParticipantsRemaining = classInstance.Get("ParticipantsRemaining");
             return (int)retObjectParticipantsRemaining;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectParticipantsRemaining_ToString = retObjectParticipantsRemaining == null ? "null" : retObjectParticipantsRemaining.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectParticipantsRemainingNumber = (java.lang.Number)retObjectParticipantsRemaining;
                 return retObjectParticipantsRemainingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectParticipantsRemaining != null ? retObjectParticipantsRemaining.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectParticipantsRemaining != null ? retObjectParticipantsRemaining.getClass() : "null", retObjectParticipantsRemaining_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -376,12 +380,13 @@ public class Barrier extends NetObject implements AutoCloseable {
             retObjectCurrentPhaseNumber = classInstance.Get("CurrentPhaseNumber");
             return (long)retObjectCurrentPhaseNumber;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCurrentPhaseNumber_ToString = retObjectCurrentPhaseNumber == null ? "null" : retObjectCurrentPhaseNumber.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCurrentPhaseNumberNumber = (java.lang.Number)retObjectCurrentPhaseNumber;
                 return retObjectCurrentPhaseNumberNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectCurrentPhaseNumber != null ? retObjectCurrentPhaseNumber.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectCurrentPhaseNumber != null ? retObjectCurrentPhaseNumber.getClass() : "null", retObjectCurrentPhaseNumber_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

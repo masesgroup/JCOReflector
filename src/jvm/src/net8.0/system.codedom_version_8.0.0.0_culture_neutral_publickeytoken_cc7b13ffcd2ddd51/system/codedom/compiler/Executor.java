@@ -160,12 +160,13 @@ public class Executor extends NetObject  {
             retObjectExecWaitWithCapture = classType.Invoke("ExecWaitWithCapture", cmd, tempFiles == null ? null : tempFiles.getJCOInstance(), outputName.getJCRefOut(), errorName.getJCRefOut());
             return (int)retObjectExecWaitWithCapture;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExecWaitWithCapture_ToString = retObjectExecWaitWithCapture == null ? "null" : retObjectExecWaitWithCapture.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExecWaitWithCaptureNumber = (java.lang.Number)retObjectExecWaitWithCapture;
                 return retObjectExecWaitWithCaptureNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecWaitWithCapture != null ? retObjectExecWaitWithCapture.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExecWaitWithCapture != null ? retObjectExecWaitWithCapture.getClass() : "null", retObjectExecWaitWithCapture_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -180,12 +181,13 @@ public class Executor extends NetObject  {
             retObjectExecWaitWithCapture = classType.Invoke("ExecWaitWithCapture", cmd, currentDir, tempFiles == null ? null : tempFiles.getJCOInstance(), outputName.getJCRefOut(), errorName.getJCRefOut());
             return (int)retObjectExecWaitWithCapture;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExecWaitWithCapture_ToString = retObjectExecWaitWithCapture == null ? "null" : retObjectExecWaitWithCapture.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExecWaitWithCaptureNumber = (java.lang.Number)retObjectExecWaitWithCapture;
                 return retObjectExecWaitWithCaptureNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecWaitWithCapture != null ? retObjectExecWaitWithCapture.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExecWaitWithCapture != null ? retObjectExecWaitWithCapture.getClass() : "null", retObjectExecWaitWithCapture_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

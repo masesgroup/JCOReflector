@@ -201,12 +201,13 @@ public class VirtualizationCacheLength extends ValueType  {
             retObjectCacheAfterViewport = classInstance.Get("CacheAfterViewport");
             return (double)retObjectCacheAfterViewport;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCacheAfterViewport_ToString = retObjectCacheAfterViewport == null ? "null" : retObjectCacheAfterViewport.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCacheAfterViewportNumber = (java.lang.Number)retObjectCacheAfterViewport;
                 return retObjectCacheAfterViewportNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectCacheAfterViewport != null ? retObjectCacheAfterViewport.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCacheAfterViewport != null ? retObjectCacheAfterViewport.getClass() : "null", retObjectCacheAfterViewport_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -221,12 +222,13 @@ public class VirtualizationCacheLength extends ValueType  {
             retObjectCacheBeforeViewport = classInstance.Get("CacheBeforeViewport");
             return (double)retObjectCacheBeforeViewport;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCacheBeforeViewport_ToString = retObjectCacheBeforeViewport == null ? "null" : retObjectCacheBeforeViewport.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCacheBeforeViewportNumber = (java.lang.Number)retObjectCacheBeforeViewport;
                 return retObjectCacheBeforeViewportNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectCacheBeforeViewport != null ? retObjectCacheBeforeViewport.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCacheBeforeViewport != null ? retObjectCacheBeforeViewport.getClass() : "null", retObjectCacheBeforeViewport_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

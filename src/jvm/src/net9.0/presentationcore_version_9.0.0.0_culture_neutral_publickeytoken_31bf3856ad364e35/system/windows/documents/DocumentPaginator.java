@@ -259,12 +259,13 @@ public class DocumentPaginator extends NetObject  {
             retObjectPageCount = classInstance.Get("PageCount");
             return (int)retObjectPageCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageCount_ToString = retObjectPageCount == null ? "null" : retObjectPageCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPageCountNumber = (java.lang.Number)retObjectPageCount;
                 return retObjectPageCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageCount != null ? retObjectPageCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageCount != null ? retObjectPageCount.getClass() : "null", retObjectPageCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

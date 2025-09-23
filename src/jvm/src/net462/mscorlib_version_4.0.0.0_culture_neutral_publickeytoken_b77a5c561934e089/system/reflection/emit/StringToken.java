@@ -181,12 +181,13 @@ public class StringToken extends ValueType  {
             retObjectToken = classInstance.Get("Token");
             return (int)retObjectToken;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToken_ToString = retObjectToken == null ? "null" : retObjectToken.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTokenNumber = (java.lang.Number)retObjectToken;
                 return retObjectTokenNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectToken != null ? retObjectToken.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToken != null ? retObjectToken.getClass() : "null", retObjectToken_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

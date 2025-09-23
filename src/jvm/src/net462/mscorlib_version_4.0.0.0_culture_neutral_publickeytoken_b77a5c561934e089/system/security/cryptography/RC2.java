@@ -195,12 +195,13 @@ public class RC2 extends SymmetricAlgorithm  {
             retObjectEffectiveKeySize = classInstance.Get("EffectiveKeySize");
             return (int)retObjectEffectiveKeySize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEffectiveKeySize_ToString = retObjectEffectiveKeySize == null ? "null" : retObjectEffectiveKeySize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEffectiveKeySizeNumber = (java.lang.Number)retObjectEffectiveKeySize;
                 return retObjectEffectiveKeySizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEffectiveKeySize != null ? retObjectEffectiveKeySize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEffectiveKeySize != null ? retObjectEffectiveKeySize.getClass() : "null", retObjectEffectiveKeySize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

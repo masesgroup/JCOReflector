@@ -166,12 +166,13 @@ public class ArrayShape extends ValueType  {
             retObjectRank = classInstance.Get("Rank");
             return (int)retObjectRank;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRank_ToString = retObjectRank == null ? "null" : retObjectRank.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRankNumber = (java.lang.Number)retObjectRank;
                 return retObjectRankNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRank != null ? retObjectRank.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRank != null ? retObjectRank.getClass() : "null", retObjectRank_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

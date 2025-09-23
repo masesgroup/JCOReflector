@@ -197,12 +197,13 @@ public class TextMessageEncodingElement extends BindingElementExtensionElement  
             retObjectMaxReadPoolSize = classInstance.Get("MaxReadPoolSize");
             return (int)retObjectMaxReadPoolSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxReadPoolSize_ToString = retObjectMaxReadPoolSize == null ? "null" : retObjectMaxReadPoolSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxReadPoolSizeNumber = (java.lang.Number)retObjectMaxReadPoolSize;
                 return retObjectMaxReadPoolSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxReadPoolSize != null ? retObjectMaxReadPoolSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxReadPoolSize != null ? retObjectMaxReadPoolSize.getClass() : "null", retObjectMaxReadPoolSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -227,12 +228,13 @@ public class TextMessageEncodingElement extends BindingElementExtensionElement  
             retObjectMaxWritePoolSize = classInstance.Get("MaxWritePoolSize");
             return (int)retObjectMaxWritePoolSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxWritePoolSize_ToString = retObjectMaxWritePoolSize == null ? "null" : retObjectMaxWritePoolSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxWritePoolSizeNumber = (java.lang.Number)retObjectMaxWritePoolSize;
                 return retObjectMaxWritePoolSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxWritePoolSize != null ? retObjectMaxWritePoolSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxWritePoolSize != null ? retObjectMaxWritePoolSize.getClass() : "null", retObjectMaxWritePoolSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

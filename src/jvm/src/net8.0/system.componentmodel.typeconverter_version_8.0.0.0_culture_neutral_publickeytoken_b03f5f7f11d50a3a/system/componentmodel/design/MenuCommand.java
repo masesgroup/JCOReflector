@@ -295,12 +295,13 @@ public class MenuCommand extends NetObject  {
             retObjectOleStatus = classInstance.Get("OleStatus");
             return (int)retObjectOleStatus;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOleStatus_ToString = retObjectOleStatus == null ? "null" : retObjectOleStatus.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOleStatusNumber = (java.lang.Number)retObjectOleStatus;
                 return retObjectOleStatusNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOleStatus != null ? retObjectOleStatus.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOleStatus != null ? retObjectOleStatus.getClass() : "null", retObjectOleStatus_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

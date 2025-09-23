@@ -168,12 +168,13 @@ public class ItemsChangedEventArgs extends EventArgs  {
             retObjectItemCount = classInstance.Get("ItemCount");
             return (int)retObjectItemCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectItemCount_ToString = retObjectItemCount == null ? "null" : retObjectItemCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectItemCountNumber = (java.lang.Number)retObjectItemCount;
                 return retObjectItemCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectItemCount != null ? retObjectItemCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectItemCount != null ? retObjectItemCount.getClass() : "null", retObjectItemCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -188,12 +189,13 @@ public class ItemsChangedEventArgs extends EventArgs  {
             retObjectItemUICount = classInstance.Get("ItemUICount");
             return (int)retObjectItemUICount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectItemUICount_ToString = retObjectItemUICount == null ? "null" : retObjectItemUICount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectItemUICountNumber = (java.lang.Number)retObjectItemUICount;
                 return retObjectItemUICountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectItemUICount != null ? retObjectItemUICount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectItemUICount != null ? retObjectItemUICount.getClass() : "null", retObjectItemUICount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

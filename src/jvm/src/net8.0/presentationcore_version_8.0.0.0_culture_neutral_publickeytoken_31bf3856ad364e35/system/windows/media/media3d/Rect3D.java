@@ -455,12 +455,13 @@ public class Rect3D extends ValueType implements system.IFormattable {
             retObjectSizeX = classInstance.Get("SizeX");
             return (double)retObjectSizeX;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSizeX_ToString = retObjectSizeX == null ? "null" : retObjectSizeX.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSizeXNumber = (java.lang.Number)retObjectSizeX;
                 return retObjectSizeXNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectSizeX != null ? retObjectSizeX.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSizeX != null ? retObjectSizeX.getClass() : "null", retObjectSizeX_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -485,12 +486,13 @@ public class Rect3D extends ValueType implements system.IFormattable {
             retObjectSizeY = classInstance.Get("SizeY");
             return (double)retObjectSizeY;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSizeY_ToString = retObjectSizeY == null ? "null" : retObjectSizeY.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSizeYNumber = (java.lang.Number)retObjectSizeY;
                 return retObjectSizeYNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectSizeY != null ? retObjectSizeY.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSizeY != null ? retObjectSizeY.getClass() : "null", retObjectSizeY_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -515,12 +517,13 @@ public class Rect3D extends ValueType implements system.IFormattable {
             retObjectSizeZ = classInstance.Get("SizeZ");
             return (double)retObjectSizeZ;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSizeZ_ToString = retObjectSizeZ == null ? "null" : retObjectSizeZ.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSizeZNumber = (java.lang.Number)retObjectSizeZ;
                 return retObjectSizeZNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectSizeZ != null ? retObjectSizeZ.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSizeZ != null ? retObjectSizeZ.getClass() : "null", retObjectSizeZ_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -545,12 +548,13 @@ public class Rect3D extends ValueType implements system.IFormattable {
             retObjectX = classInstance.Get("X");
             return (double)retObjectX;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectX_ToString = retObjectX == null ? "null" : retObjectX.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectXNumber = (java.lang.Number)retObjectX;
                 return retObjectXNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectX != null ? retObjectX.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectX != null ? retObjectX.getClass() : "null", retObjectX_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -575,12 +579,13 @@ public class Rect3D extends ValueType implements system.IFormattable {
             retObjectY = classInstance.Get("Y");
             return (double)retObjectY;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectY_ToString = retObjectY == null ? "null" : retObjectY.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectYNumber = (java.lang.Number)retObjectY;
                 return retObjectYNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectY != null ? retObjectY.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectY != null ? retObjectY.getClass() : "null", retObjectY_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -605,12 +610,13 @@ public class Rect3D extends ValueType implements system.IFormattable {
             retObjectZ = classInstance.Get("Z");
             return (double)retObjectZ;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectZ_ToString = retObjectZ == null ? "null" : retObjectZ.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectZNumber = (java.lang.Number)retObjectZ;
                 return retObjectZNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectZ != null ? retObjectZ.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectZ != null ? retObjectZ.getClass() : "null", retObjectZ_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -234,12 +234,13 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
             retObjectMarqueeAnimationSpeed = classInstance.Get("MarqueeAnimationSpeed");
             return (int)retObjectMarqueeAnimationSpeed;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMarqueeAnimationSpeed_ToString = retObjectMarqueeAnimationSpeed == null ? "null" : retObjectMarqueeAnimationSpeed.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMarqueeAnimationSpeedNumber = (java.lang.Number)retObjectMarqueeAnimationSpeed;
                 return retObjectMarqueeAnimationSpeedNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMarqueeAnimationSpeed != null ? retObjectMarqueeAnimationSpeed.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMarqueeAnimationSpeed != null ? retObjectMarqueeAnimationSpeed.getClass() : "null", retObjectMarqueeAnimationSpeed_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -264,12 +265,13 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
             retObjectMaximum = classInstance.Get("Maximum");
             return (int)retObjectMaximum;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximum_ToString = retObjectMaximum == null ? "null" : retObjectMaximum.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumNumber = (java.lang.Number)retObjectMaximum;
                 return retObjectMaximumNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximum != null ? retObjectMaximum.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximum != null ? retObjectMaximum.getClass() : "null", retObjectMaximum_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -294,12 +296,13 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
             retObjectMinimum = classInstance.Get("Minimum");
             return (int)retObjectMinimum;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimum_ToString = retObjectMinimum == null ? "null" : retObjectMinimum.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinimumNumber = (java.lang.Number)retObjectMinimum;
                 return retObjectMinimumNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinimum != null ? retObjectMinimum.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimum != null ? retObjectMinimum.getClass() : "null", retObjectMinimum_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -324,12 +327,13 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
             retObjectStep = classInstance.Get("Step");
             return (int)retObjectStep;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStep_ToString = retObjectStep == null ? "null" : retObjectStep.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStepNumber = (java.lang.Number)retObjectStep;
                 return retObjectStepNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStep != null ? retObjectStep.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStep != null ? retObjectStep.getClass() : "null", retObjectStep_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -354,12 +358,13 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
             retObjectValue = classInstance.Get("Value");
             return (int)retObjectValue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectValue_ToString = retObjectValue == null ? "null" : retObjectValue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectValueNumber = (java.lang.Number)retObjectValue;
                 return retObjectValueNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectValue != null ? retObjectValue.getClass() : "null", retObjectValue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

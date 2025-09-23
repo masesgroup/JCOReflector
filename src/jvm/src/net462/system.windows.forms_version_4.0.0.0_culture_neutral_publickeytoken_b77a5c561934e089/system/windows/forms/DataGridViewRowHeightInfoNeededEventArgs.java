@@ -166,12 +166,13 @@ public class DataGridViewRowHeightInfoNeededEventArgs extends EventArgs  {
             retObjectHeight = classInstance.Get("Height");
             return (int)retObjectHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHeight_ToString = retObjectHeight == null ? "null" : retObjectHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHeightNumber = (java.lang.Number)retObjectHeight;
                 return retObjectHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null", retObjectHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -196,12 +197,13 @@ public class DataGridViewRowHeightInfoNeededEventArgs extends EventArgs  {
             retObjectMinimumHeight = classInstance.Get("MinimumHeight");
             return (int)retObjectMinimumHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumHeight_ToString = retObjectMinimumHeight == null ? "null" : retObjectMinimumHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinimumHeightNumber = (java.lang.Number)retObjectMinimumHeight;
                 return retObjectMinimumHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinimumHeight != null ? retObjectMinimumHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimumHeight != null ? retObjectMinimumHeight.getClass() : "null", retObjectMinimumHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -226,12 +228,13 @@ public class DataGridViewRowHeightInfoNeededEventArgs extends EventArgs  {
             retObjectRowIndex = classInstance.Get("RowIndex");
             return (int)retObjectRowIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowIndex_ToString = retObjectRowIndex == null ? "null" : retObjectRowIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRowIndexNumber = (java.lang.Number)retObjectRowIndex;
                 return retObjectRowIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRowIndex != null ? retObjectRowIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowIndex != null ? retObjectRowIndex.getClass() : "null", retObjectRowIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

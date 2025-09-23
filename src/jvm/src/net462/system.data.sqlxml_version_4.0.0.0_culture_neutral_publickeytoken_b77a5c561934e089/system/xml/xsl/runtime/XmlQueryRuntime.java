@@ -273,12 +273,13 @@ public class XmlQueryRuntime extends NetObject  {
             retObjectComparePosition = classInstance.Invoke("ComparePosition", navigatorThis == null ? null : navigatorThis.getJCOInstance(), navigatorThat == null ? null : navigatorThat.getJCOInstance());
             return (int)retObjectComparePosition;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectComparePosition_ToString = retObjectComparePosition == null ? "null" : retObjectComparePosition.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectComparePositionNumber = (java.lang.Number)retObjectComparePosition;
                 return retObjectComparePositionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectComparePosition != null ? retObjectComparePosition.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectComparePosition != null ? retObjectComparePosition.getClass() : "null", retObjectComparePosition_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -293,12 +294,13 @@ public class XmlQueryRuntime extends NetObject  {
             retObjectOnCurrentNodeChanged = classType.Invoke("OnCurrentNodeChanged", currentNode == null ? null : currentNode.getJCOInstance());
             return (int)retObjectOnCurrentNodeChanged;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOnCurrentNodeChanged_ToString = retObjectOnCurrentNodeChanged == null ? "null" : retObjectOnCurrentNodeChanged.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOnCurrentNodeChangedNumber = (java.lang.Number)retObjectOnCurrentNodeChanged;
                 return retObjectOnCurrentNodeChangedNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOnCurrentNodeChanged != null ? retObjectOnCurrentNodeChanged.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOnCurrentNodeChanged != null ? retObjectOnCurrentNodeChanged.getClass() : "null", retObjectOnCurrentNodeChanged_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

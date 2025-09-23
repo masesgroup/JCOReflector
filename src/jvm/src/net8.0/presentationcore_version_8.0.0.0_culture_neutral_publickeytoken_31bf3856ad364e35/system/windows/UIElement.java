@@ -986,12 +986,13 @@ public class UIElement extends Visual  {
             retObjectOpacity = classInstance.Get("Opacity");
             return (double)retObjectOpacity;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOpacity_ToString = retObjectOpacity == null ? "null" : retObjectOpacity.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOpacityNumber = (java.lang.Number)retObjectOpacity;
                 return retObjectOpacityNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOpacity != null ? retObjectOpacity.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOpacity != null ? retObjectOpacity.getClass() : "null", retObjectOpacity_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1016,12 +1017,13 @@ public class UIElement extends Visual  {
             retObjectPersistId = classInstance.Get("PersistId");
             return (int)retObjectPersistId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPersistId_ToString = retObjectPersistId == null ? "null" : retObjectPersistId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPersistIdNumber = (java.lang.Number)retObjectPersistId;
                 return retObjectPersistIdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPersistId != null ? retObjectPersistId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPersistId != null ? retObjectPersistId.getClass() : "null", retObjectPersistId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

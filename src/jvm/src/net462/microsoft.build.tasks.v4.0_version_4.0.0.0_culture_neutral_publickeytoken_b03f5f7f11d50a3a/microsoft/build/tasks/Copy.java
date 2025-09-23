@@ -270,12 +270,13 @@ public class Copy extends TaskExtension  {
             retObjectRetries = classInstance.Get("Retries");
             return (int)retObjectRetries;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRetries_ToString = retObjectRetries == null ? "null" : retObjectRetries.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRetriesNumber = (java.lang.Number)retObjectRetries;
                 return retObjectRetriesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRetries != null ? retObjectRetries.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRetries != null ? retObjectRetries.getClass() : "null", retObjectRetries_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -300,12 +301,13 @@ public class Copy extends TaskExtension  {
             retObjectRetryDelayMilliseconds = classInstance.Get("RetryDelayMilliseconds");
             return (int)retObjectRetryDelayMilliseconds;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRetryDelayMilliseconds_ToString = retObjectRetryDelayMilliseconds == null ? "null" : retObjectRetryDelayMilliseconds.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRetryDelayMillisecondsNumber = (java.lang.Number)retObjectRetryDelayMilliseconds;
                 return retObjectRetryDelayMillisecondsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRetryDelayMilliseconds != null ? retObjectRetryDelayMilliseconds.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRetryDelayMilliseconds != null ? retObjectRetryDelayMilliseconds.getClass() : "null", retObjectRetryDelayMilliseconds_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

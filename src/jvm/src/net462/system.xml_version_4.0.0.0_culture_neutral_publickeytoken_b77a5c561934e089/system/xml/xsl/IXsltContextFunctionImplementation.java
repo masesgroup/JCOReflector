@@ -170,12 +170,13 @@ public class IXsltContextFunctionImplementation extends NetObject implements IXs
             retObjectMaxargs = classInstance.Get("Maxargs");
             return (int)retObjectMaxargs;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxargs_ToString = retObjectMaxargs == null ? "null" : retObjectMaxargs.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxargsNumber = (java.lang.Number)retObjectMaxargs;
                 return retObjectMaxargsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxargs != null ? retObjectMaxargs.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxargs != null ? retObjectMaxargs.getClass() : "null", retObjectMaxargs_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -190,12 +191,13 @@ public class IXsltContextFunctionImplementation extends NetObject implements IXs
             retObjectMinargs = classInstance.Get("Minargs");
             return (int)retObjectMinargs;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinargs_ToString = retObjectMinargs == null ? "null" : retObjectMinargs.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinargsNumber = (java.lang.Number)retObjectMinargs;
                 return retObjectMinargsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinargs != null ? retObjectMinargs.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinargs != null ? retObjectMinargs.getClass() : "null", retObjectMinargs_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

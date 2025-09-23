@@ -176,12 +176,13 @@ public class StatementCompletedEventArgs extends EventArgs  {
             retObjectRecordCount = classInstance.Get("RecordCount");
             return (int)retObjectRecordCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRecordCount_ToString = retObjectRecordCount == null ? "null" : retObjectRecordCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRecordCountNumber = (java.lang.Number)retObjectRecordCount;
                 return retObjectRecordCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRecordCount != null ? retObjectRecordCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRecordCount != null ? retObjectRecordCount.getClass() : "null", retObjectRecordCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

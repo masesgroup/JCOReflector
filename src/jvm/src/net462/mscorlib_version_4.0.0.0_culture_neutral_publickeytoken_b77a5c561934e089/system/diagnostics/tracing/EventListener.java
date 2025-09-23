@@ -170,12 +170,13 @@ public class EventListener extends NetObject implements AutoCloseable {
             retObjectEventSourceIndex = classType.Invoke("EventSourceIndex", eventSource == null ? null : eventSource.getJCOInstance());
             return (int)retObjectEventSourceIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEventSourceIndex_ToString = retObjectEventSourceIndex == null ? "null" : retObjectEventSourceIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEventSourceIndexNumber = (java.lang.Number)retObjectEventSourceIndex;
                 return retObjectEventSourceIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEventSourceIndex != null ? retObjectEventSourceIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEventSourceIndex != null ? retObjectEventSourceIndex.getClass() : "null", retObjectEventSourceIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -190,12 +190,13 @@ public class DataGridViewCell extends DataGridViewElement implements AutoCloseab
             retObjectMeasureTextHeight = classType.Invoke("MeasureTextHeight", graphics == null ? null : graphics.getJCOInstance(), text, font == null ? null : font.getJCOInstance(), maxWidth, flags == null ? null : flags.getJCOInstance(), widthTruncated.getJCRefOut());
             return (int)retObjectMeasureTextHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMeasureTextHeight_ToString = retObjectMeasureTextHeight == null ? "null" : retObjectMeasureTextHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMeasureTextHeightNumber = (java.lang.Number)retObjectMeasureTextHeight;
                 return retObjectMeasureTextHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMeasureTextHeight != null ? retObjectMeasureTextHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMeasureTextHeight != null ? retObjectMeasureTextHeight.getClass() : "null", retObjectMeasureTextHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -210,12 +211,13 @@ public class DataGridViewCell extends DataGridViewElement implements AutoCloseab
             retObjectMeasureTextHeight = classType.Invoke("MeasureTextHeight", graphics == null ? null : graphics.getJCOInstance(), text, font == null ? null : font.getJCOInstance(), maxWidth, flags == null ? null : flags.getJCOInstance());
             return (int)retObjectMeasureTextHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMeasureTextHeight_ToString = retObjectMeasureTextHeight == null ? "null" : retObjectMeasureTextHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMeasureTextHeightNumber = (java.lang.Number)retObjectMeasureTextHeight;
                 return retObjectMeasureTextHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMeasureTextHeight != null ? retObjectMeasureTextHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMeasureTextHeight != null ? retObjectMeasureTextHeight.getClass() : "null", retObjectMeasureTextHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -230,12 +232,13 @@ public class DataGridViewCell extends DataGridViewElement implements AutoCloseab
             retObjectMeasureTextWidth = classType.Invoke("MeasureTextWidth", graphics == null ? null : graphics.getJCOInstance(), text, font == null ? null : font.getJCOInstance(), maxHeight, flags == null ? null : flags.getJCOInstance());
             return (int)retObjectMeasureTextWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMeasureTextWidth_ToString = retObjectMeasureTextWidth == null ? "null" : retObjectMeasureTextWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMeasureTextWidthNumber = (java.lang.Number)retObjectMeasureTextWidth;
                 return retObjectMeasureTextWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMeasureTextWidth != null ? retObjectMeasureTextWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMeasureTextWidth != null ? retObjectMeasureTextWidth.getClass() : "null", retObjectMeasureTextWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -604,12 +607,13 @@ public class DataGridViewCell extends DataGridViewElement implements AutoCloseab
             retObjectColumnIndex = classInstance.Get("ColumnIndex");
             return (int)retObjectColumnIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnIndex_ToString = retObjectColumnIndex == null ? "null" : retObjectColumnIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectColumnIndexNumber = (java.lang.Number)retObjectColumnIndex;
                 return retObjectColumnIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectColumnIndex != null ? retObjectColumnIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumnIndex != null ? retObjectColumnIndex.getClass() : "null", retObjectColumnIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -624,12 +628,13 @@ public class DataGridViewCell extends DataGridViewElement implements AutoCloseab
             retObjectRowIndex = classInstance.Get("RowIndex");
             return (int)retObjectRowIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowIndex_ToString = retObjectRowIndex == null ? "null" : retObjectRowIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRowIndexNumber = (java.lang.Number)retObjectRowIndex;
                 return retObjectRowIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRowIndex != null ? retObjectRowIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowIndex != null ? retObjectRowIndex.getClass() : "null", retObjectRowIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

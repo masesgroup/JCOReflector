@@ -435,12 +435,13 @@ public class HttpRequest extends NetObject  {
             retObjectContentLength = classInstance.Get("ContentLength");
             return (int)retObjectContentLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectContentLength_ToString = retObjectContentLength == null ? "null" : retObjectContentLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectContentLengthNumber = (java.lang.Number)retObjectContentLength;
                 return retObjectContentLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectContentLength != null ? retObjectContentLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectContentLength != null ? retObjectContentLength.getClass() : "null", retObjectContentLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -455,12 +456,13 @@ public class HttpRequest extends NetObject  {
             retObjectTotalBytes = classInstance.Get("TotalBytes");
             return (int)retObjectTotalBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTotalBytes_ToString = retObjectTotalBytes == null ? "null" : retObjectTotalBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTotalBytesNumber = (java.lang.Number)retObjectTotalBytes;
                 return retObjectTotalBytesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTotalBytes != null ? retObjectTotalBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTotalBytes != null ? retObjectTotalBytes.getClass() : "null", retObjectTotalBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

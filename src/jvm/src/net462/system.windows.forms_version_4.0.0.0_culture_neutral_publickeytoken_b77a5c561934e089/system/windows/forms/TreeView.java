@@ -190,12 +190,13 @@ public class TreeView extends Control  {
             retObjectGetNodeCount = classInstance.Invoke("GetNodeCount", includeSubTrees);
             return (int)retObjectGetNodeCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetNodeCount_ToString = retObjectGetNodeCount == null ? "null" : retObjectGetNodeCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetNodeCountNumber = (java.lang.Number)retObjectGetNodeCount;
                 return retObjectGetNodeCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetNodeCount != null ? retObjectGetNodeCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNodeCount != null ? retObjectGetNodeCount.getClass() : "null", retObjectGetNodeCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -612,12 +613,13 @@ public class TreeView extends Control  {
             retObjectImageIndex = classInstance.Get("ImageIndex");
             return (int)retObjectImageIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectImageIndex_ToString = retObjectImageIndex == null ? "null" : retObjectImageIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectImageIndexNumber = (java.lang.Number)retObjectImageIndex;
                 return retObjectImageIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectImageIndex != null ? retObjectImageIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectImageIndex != null ? retObjectImageIndex.getClass() : "null", retObjectImageIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -642,12 +644,13 @@ public class TreeView extends Control  {
             retObjectIndent = classInstance.Get("Indent");
             return (int)retObjectIndent;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndent_ToString = retObjectIndent == null ? "null" : retObjectIndent.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIndentNumber = (java.lang.Number)retObjectIndent;
                 return retObjectIndentNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndent != null ? retObjectIndent.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndent != null ? retObjectIndent.getClass() : "null", retObjectIndent_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -672,12 +675,13 @@ public class TreeView extends Control  {
             retObjectItemHeight = classInstance.Get("ItemHeight");
             return (int)retObjectItemHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectItemHeight_ToString = retObjectItemHeight == null ? "null" : retObjectItemHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectItemHeightNumber = (java.lang.Number)retObjectItemHeight;
                 return retObjectItemHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectItemHeight != null ? retObjectItemHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectItemHeight != null ? retObjectItemHeight.getClass() : "null", retObjectItemHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -702,12 +706,13 @@ public class TreeView extends Control  {
             retObjectSelectedImageIndex = classInstance.Get("SelectedImageIndex");
             return (int)retObjectSelectedImageIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectedImageIndex_ToString = retObjectSelectedImageIndex == null ? "null" : retObjectSelectedImageIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSelectedImageIndexNumber = (java.lang.Number)retObjectSelectedImageIndex;
                 return retObjectSelectedImageIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSelectedImageIndex != null ? retObjectSelectedImageIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectedImageIndex != null ? retObjectSelectedImageIndex.getClass() : "null", retObjectSelectedImageIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -732,12 +737,13 @@ public class TreeView extends Control  {
             retObjectVisibleCount = classInstance.Get("VisibleCount");
             return (int)retObjectVisibleCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVisibleCount_ToString = retObjectVisibleCount == null ? "null" : retObjectVisibleCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVisibleCountNumber = (java.lang.Number)retObjectVisibleCount;
                 return retObjectVisibleCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVisibleCount != null ? retObjectVisibleCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVisibleCount != null ? retObjectVisibleCount.getClass() : "null", retObjectVisibleCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

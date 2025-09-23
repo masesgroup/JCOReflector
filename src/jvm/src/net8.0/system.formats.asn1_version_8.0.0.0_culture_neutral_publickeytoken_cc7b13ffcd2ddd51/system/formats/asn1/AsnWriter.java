@@ -226,12 +226,13 @@ public class AsnWriter extends NetObject  {
             retObjectGetEncodedLength = classInstance.Invoke("GetEncodedLength");
             return (int)retObjectGetEncodedLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetEncodedLength_ToString = retObjectGetEncodedLength == null ? "null" : retObjectGetEncodedLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetEncodedLengthNumber = (java.lang.Number)retObjectGetEncodedLength;
                 return retObjectGetEncodedLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetEncodedLength != null ? retObjectGetEncodedLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetEncodedLength != null ? retObjectGetEncodedLength.getClass() : "null", retObjectGetEncodedLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

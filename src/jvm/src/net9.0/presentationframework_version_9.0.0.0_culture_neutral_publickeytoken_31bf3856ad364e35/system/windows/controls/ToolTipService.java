@@ -220,12 +220,13 @@ public class ToolTipService extends NetObject  {
             retObjectGetHorizontalOffset = classType.Invoke("GetHorizontalOffset", element == null ? null : element.getJCOInstance());
             return (double)retObjectGetHorizontalOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetHorizontalOffset_ToString = retObjectGetHorizontalOffset == null ? "null" : retObjectGetHorizontalOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetHorizontalOffsetNumber = (java.lang.Number)retObjectGetHorizontalOffset;
                 return retObjectGetHorizontalOffsetNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetHorizontalOffset != null ? retObjectGetHorizontalOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetHorizontalOffset != null ? retObjectGetHorizontalOffset.getClass() : "null", retObjectGetHorizontalOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -240,12 +241,13 @@ public class ToolTipService extends NetObject  {
             retObjectGetVerticalOffset = classType.Invoke("GetVerticalOffset", element == null ? null : element.getJCOInstance());
             return (double)retObjectGetVerticalOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetVerticalOffset_ToString = retObjectGetVerticalOffset == null ? "null" : retObjectGetVerticalOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetVerticalOffsetNumber = (java.lang.Number)retObjectGetVerticalOffset;
                 return retObjectGetVerticalOffsetNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetVerticalOffset != null ? retObjectGetVerticalOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetVerticalOffset != null ? retObjectGetVerticalOffset.getClass() : "null", retObjectGetVerticalOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -260,12 +262,13 @@ public class ToolTipService extends NetObject  {
             retObjectGetBetweenShowDelay = classType.Invoke("GetBetweenShowDelay", element == null ? null : element.getJCOInstance());
             return (int)retObjectGetBetweenShowDelay;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetBetweenShowDelay_ToString = retObjectGetBetweenShowDelay == null ? "null" : retObjectGetBetweenShowDelay.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetBetweenShowDelayNumber = (java.lang.Number)retObjectGetBetweenShowDelay;
                 return retObjectGetBetweenShowDelayNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetBetweenShowDelay != null ? retObjectGetBetweenShowDelay.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetBetweenShowDelay != null ? retObjectGetBetweenShowDelay.getClass() : "null", retObjectGetBetweenShowDelay_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -280,12 +283,13 @@ public class ToolTipService extends NetObject  {
             retObjectGetInitialShowDelay = classType.Invoke("GetInitialShowDelay", element == null ? null : element.getJCOInstance());
             return (int)retObjectGetInitialShowDelay;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetInitialShowDelay_ToString = retObjectGetInitialShowDelay == null ? "null" : retObjectGetInitialShowDelay.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetInitialShowDelayNumber = (java.lang.Number)retObjectGetInitialShowDelay;
                 return retObjectGetInitialShowDelayNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetInitialShowDelay != null ? retObjectGetInitialShowDelay.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetInitialShowDelay != null ? retObjectGetInitialShowDelay.getClass() : "null", retObjectGetInitialShowDelay_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -300,12 +304,13 @@ public class ToolTipService extends NetObject  {
             retObjectGetShowDuration = classType.Invoke("GetShowDuration", element == null ? null : element.getJCOInstance());
             return (int)retObjectGetShowDuration;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetShowDuration_ToString = retObjectGetShowDuration == null ? "null" : retObjectGetShowDuration.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetShowDurationNumber = (java.lang.Number)retObjectGetShowDuration;
                 return retObjectGetShowDurationNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetShowDuration != null ? retObjectGetShowDuration.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetShowDuration != null ? retObjectGetShowDuration.getClass() : "null", retObjectGetShowDuration_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

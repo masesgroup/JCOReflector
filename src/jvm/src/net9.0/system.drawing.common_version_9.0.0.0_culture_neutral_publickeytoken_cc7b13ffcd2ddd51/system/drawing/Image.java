@@ -223,12 +223,13 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
             retObjectGetFrameCount = classInstance.Invoke("GetFrameCount", dimension == null ? null : dimension.getJCOInstance());
             return (int)retObjectGetFrameCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetFrameCount_ToString = retObjectGetFrameCount == null ? "null" : retObjectGetFrameCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetFrameCountNumber = (java.lang.Number)retObjectGetFrameCount;
                 return retObjectGetFrameCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetFrameCount != null ? retObjectGetFrameCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetFrameCount != null ? retObjectGetFrameCount.getClass() : "null", retObjectGetFrameCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -243,12 +244,13 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
             retObjectGetPixelFormatSize = classType.Invoke("GetPixelFormatSize", pixfmt == null ? null : pixfmt.getJCOInstance());
             return (int)retObjectGetPixelFormatSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetPixelFormatSize_ToString = retObjectGetPixelFormatSize == null ? "null" : retObjectGetPixelFormatSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetPixelFormatSizeNumber = (java.lang.Number)retObjectGetPixelFormatSize;
                 return retObjectGetPixelFormatSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetPixelFormatSize != null ? retObjectGetPixelFormatSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetPixelFormatSize != null ? retObjectGetPixelFormatSize.getClass() : "null", retObjectGetPixelFormatSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -263,12 +265,13 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
             retObjectSelectActiveFrame = classInstance.Invoke("SelectActiveFrame", dimension == null ? null : dimension.getJCOInstance(), frameIndex);
             return (int)retObjectSelectActiveFrame;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectActiveFrame_ToString = retObjectSelectActiveFrame == null ? "null" : retObjectSelectActiveFrame.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSelectActiveFrameNumber = (java.lang.Number)retObjectSelectActiveFrame;
                 return retObjectSelectActiveFrameNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSelectActiveFrame != null ? retObjectSelectActiveFrame.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectActiveFrame != null ? retObjectSelectActiveFrame.getClass() : "null", retObjectSelectActiveFrame_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -554,12 +557,13 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
             retObjectFlags = classInstance.Get("Flags");
             return (int)retObjectFlags;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFlags_ToString = retObjectFlags == null ? "null" : retObjectFlags.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFlagsNumber = (java.lang.Number)retObjectFlags;
                 return retObjectFlagsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFlags != null ? retObjectFlags.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFlags != null ? retObjectFlags.getClass() : "null", retObjectFlags_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -574,12 +578,13 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
             retObjectHeight = classInstance.Get("Height");
             return (int)retObjectHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHeight_ToString = retObjectHeight == null ? "null" : retObjectHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHeightNumber = (java.lang.Number)retObjectHeight;
                 return retObjectHeightNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null", retObjectHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -594,12 +599,13 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
             retObjectWidth = classInstance.Get("Width");
             return (int)retObjectWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWidth_ToString = retObjectWidth == null ? "null" : retObjectWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWidthNumber = (java.lang.Number)retObjectWidth;
                 return retObjectWidthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWidth != null ? retObjectWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWidth != null ? retObjectWidth.getClass() : "null", retObjectWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -166,12 +166,13 @@ public class TimeProvider extends NetObject  {
             retObjectGetTimestamp = classInstance.Invoke("GetTimestamp");
             return (long)retObjectGetTimestamp;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTimestamp_ToString = retObjectGetTimestamp == null ? "null" : retObjectGetTimestamp.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTimestampNumber = (java.lang.Number)retObjectGetTimestamp;
                 return retObjectGetTimestampNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetTimestamp != null ? retObjectGetTimestamp.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetTimestamp != null ? retObjectGetTimestamp.getClass() : "null", retObjectGetTimestamp_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -265,12 +266,13 @@ public class TimeProvider extends NetObject  {
             retObjectTimestampFrequency = classInstance.Get("TimestampFrequency");
             return (long)retObjectTimestampFrequency;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTimestampFrequency_ToString = retObjectTimestampFrequency == null ? "null" : retObjectTimestampFrequency.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTimestampFrequencyNumber = (java.lang.Number)retObjectTimestampFrequency;
                 return retObjectTimestampFrequencyNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTimestampFrequency != null ? retObjectTimestampFrequency.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectTimestampFrequency != null ? retObjectTimestampFrequency.getClass() : "null", retObjectTimestampFrequency_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -345,12 +345,13 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
             retObjectWaitAny = classType.Invoke("WaitAny", toObjectFromArray(waitHandles), millisecondsTimeout, exitContext);
             return (int)retObjectWaitAny;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
                 return retObjectWaitAnyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -365,12 +366,13 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
             retObjectWaitAny = classType.Invoke("WaitAny", toObjectFromArray(waitHandles), millisecondsTimeout);
             return (int)retObjectWaitAny;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
                 return retObjectWaitAnyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -385,12 +387,13 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
             retObjectWaitAny = classType.Invoke("WaitAny", toObjectFromArray(waitHandles), timeout == null ? null : timeout.getJCOInstance(), exitContext);
             return (int)retObjectWaitAny;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
                 return retObjectWaitAnyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -405,12 +408,13 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
             retObjectWaitAny = classType.Invoke("WaitAny", toObjectFromArray(waitHandles), timeout == null ? null : timeout.getJCOInstance());
             return (int)retObjectWaitAny;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
                 return retObjectWaitAnyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -425,12 +429,13 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
             retObjectWaitAny = classType.Invoke("WaitAny", (java.lang.Object)toObjectFromArray(waitHandles));
             return (int)retObjectWaitAny;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
                 return retObjectWaitAnyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

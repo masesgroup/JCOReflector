@@ -177,12 +177,13 @@ public class MemoryMappedViewAccessor extends UnmanagedMemoryAccessor  {
             retObjectPointerOffset = classInstance.Get("PointerOffset");
             return (long)retObjectPointerOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPointerOffset_ToString = retObjectPointerOffset == null ? "null" : retObjectPointerOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPointerOffsetNumber = (java.lang.Number)retObjectPointerOffset;
                 return retObjectPointerOffsetNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectPointerOffset != null ? retObjectPointerOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectPointerOffset != null ? retObjectPointerOffset.getClass() : "null", retObjectPointerOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

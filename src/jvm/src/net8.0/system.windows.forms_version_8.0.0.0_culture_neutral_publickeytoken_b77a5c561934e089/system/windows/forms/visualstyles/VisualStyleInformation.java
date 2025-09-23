@@ -206,12 +206,13 @@ public class VisualStyleInformation extends NetObject  {
             retObjectMinimumColorDepth = classType.Get("MinimumColorDepth");
             return (int)retObjectMinimumColorDepth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumColorDepth_ToString = retObjectMinimumColorDepth == null ? "null" : retObjectMinimumColorDepth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinimumColorDepthNumber = (java.lang.Number)retObjectMinimumColorDepth;
                 return retObjectMinimumColorDepthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinimumColorDepth != null ? retObjectMinimumColorDepth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimumColorDepth != null ? retObjectMinimumColorDepth.getClass() : "null", retObjectMinimumColorDepth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

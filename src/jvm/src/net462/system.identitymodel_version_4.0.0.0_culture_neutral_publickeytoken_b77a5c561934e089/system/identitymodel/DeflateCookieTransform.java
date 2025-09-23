@@ -264,12 +264,13 @@ public class DeflateCookieTransform extends CookieTransform  {
             retObjectMaxDecompressedSize = classInstance.Get("MaxDecompressedSize");
             return (int)retObjectMaxDecompressedSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxDecompressedSize_ToString = retObjectMaxDecompressedSize == null ? "null" : retObjectMaxDecompressedSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxDecompressedSizeNumber = (java.lang.Number)retObjectMaxDecompressedSize;
                 return retObjectMaxDecompressedSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxDecompressedSize != null ? retObjectMaxDecompressedSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxDecompressedSize != null ? retObjectMaxDecompressedSize.getClass() : "null", retObjectMaxDecompressedSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -444,12 +444,13 @@ public class PrintSystemJobInfo extends PrintSystemObject  {
             retObjectJobIdentifier = classInstance.Get("JobIdentifier");
             return (int)retObjectJobIdentifier;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectJobIdentifier_ToString = retObjectJobIdentifier == null ? "null" : retObjectJobIdentifier.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectJobIdentifierNumber = (java.lang.Number)retObjectJobIdentifier;
                 return retObjectJobIdentifierNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectJobIdentifier != null ? retObjectJobIdentifier.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectJobIdentifier != null ? retObjectJobIdentifier.getClass() : "null", retObjectJobIdentifier_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -474,12 +475,13 @@ public class PrintSystemJobInfo extends PrintSystemObject  {
             retObjectJobSize = classInstance.Get("JobSize");
             return (int)retObjectJobSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectJobSize_ToString = retObjectJobSize == null ? "null" : retObjectJobSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectJobSizeNumber = (java.lang.Number)retObjectJobSize;
                 return retObjectJobSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectJobSize != null ? retObjectJobSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectJobSize != null ? retObjectJobSize.getClass() : "null", retObjectJobSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -504,12 +506,13 @@ public class PrintSystemJobInfo extends PrintSystemObject  {
             retObjectNumberOfPages = classInstance.Get("NumberOfPages");
             return (int)retObjectNumberOfPages;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNumberOfPages_ToString = retObjectNumberOfPages == null ? "null" : retObjectNumberOfPages.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNumberOfPagesNumber = (java.lang.Number)retObjectNumberOfPages;
                 return retObjectNumberOfPagesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNumberOfPages != null ? retObjectNumberOfPages.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumberOfPages != null ? retObjectNumberOfPages.getClass() : "null", retObjectNumberOfPages_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -534,12 +537,13 @@ public class PrintSystemJobInfo extends PrintSystemObject  {
             retObjectNumberOfPagesPrinted = classInstance.Get("NumberOfPagesPrinted");
             return (int)retObjectNumberOfPagesPrinted;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNumberOfPagesPrinted_ToString = retObjectNumberOfPagesPrinted == null ? "null" : retObjectNumberOfPagesPrinted.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNumberOfPagesPrintedNumber = (java.lang.Number)retObjectNumberOfPagesPrinted;
                 return retObjectNumberOfPagesPrintedNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNumberOfPagesPrinted != null ? retObjectNumberOfPagesPrinted.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumberOfPagesPrinted != null ? retObjectNumberOfPagesPrinted.getClass() : "null", retObjectNumberOfPagesPrinted_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -564,12 +568,13 @@ public class PrintSystemJobInfo extends PrintSystemObject  {
             retObjectPositionInPrintQueue = classInstance.Get("PositionInPrintQueue");
             return (int)retObjectPositionInPrintQueue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPositionInPrintQueue_ToString = retObjectPositionInPrintQueue == null ? "null" : retObjectPositionInPrintQueue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPositionInPrintQueueNumber = (java.lang.Number)retObjectPositionInPrintQueue;
                 return retObjectPositionInPrintQueueNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPositionInPrintQueue != null ? retObjectPositionInPrintQueue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPositionInPrintQueue != null ? retObjectPositionInPrintQueue.getClass() : "null", retObjectPositionInPrintQueue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -594,12 +599,13 @@ public class PrintSystemJobInfo extends PrintSystemObject  {
             retObjectStartTimeOfDay = classInstance.Get("StartTimeOfDay");
             return (int)retObjectStartTimeOfDay;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartTimeOfDay_ToString = retObjectStartTimeOfDay == null ? "null" : retObjectStartTimeOfDay.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStartTimeOfDayNumber = (java.lang.Number)retObjectStartTimeOfDay;
                 return retObjectStartTimeOfDayNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStartTimeOfDay != null ? retObjectStartTimeOfDay.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartTimeOfDay != null ? retObjectStartTimeOfDay.getClass() : "null", retObjectStartTimeOfDay_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -624,12 +630,13 @@ public class PrintSystemJobInfo extends PrintSystemObject  {
             retObjectTimeSinceStartedPrinting = classInstance.Get("TimeSinceStartedPrinting");
             return (int)retObjectTimeSinceStartedPrinting;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTimeSinceStartedPrinting_ToString = retObjectTimeSinceStartedPrinting == null ? "null" : retObjectTimeSinceStartedPrinting.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTimeSinceStartedPrintingNumber = (java.lang.Number)retObjectTimeSinceStartedPrinting;
                 return retObjectTimeSinceStartedPrintingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTimeSinceStartedPrinting != null ? retObjectTimeSinceStartedPrinting.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTimeSinceStartedPrinting != null ? retObjectTimeSinceStartedPrinting.getClass() : "null", retObjectTimeSinceStartedPrinting_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -644,12 +651,13 @@ public class PrintSystemJobInfo extends PrintSystemObject  {
             retObjectUntilTimeOfDay = classInstance.Get("UntilTimeOfDay");
             return (int)retObjectUntilTimeOfDay;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUntilTimeOfDay_ToString = retObjectUntilTimeOfDay == null ? "null" : retObjectUntilTimeOfDay.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectUntilTimeOfDayNumber = (java.lang.Number)retObjectUntilTimeOfDay;
                 return retObjectUntilTimeOfDayNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectUntilTimeOfDay != null ? retObjectUntilTimeOfDay.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUntilTimeOfDay != null ? retObjectUntilTimeOfDay.getClass() : "null", retObjectUntilTimeOfDay_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

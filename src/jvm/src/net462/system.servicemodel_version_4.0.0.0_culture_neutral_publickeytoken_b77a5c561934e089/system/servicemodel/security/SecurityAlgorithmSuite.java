@@ -318,12 +318,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
             retObjectDefaultEncryptionKeyDerivationLength = classInstance.Get("DefaultEncryptionKeyDerivationLength");
             return (int)retObjectDefaultEncryptionKeyDerivationLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDefaultEncryptionKeyDerivationLength_ToString = retObjectDefaultEncryptionKeyDerivationLength == null ? "null" : retObjectDefaultEncryptionKeyDerivationLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDefaultEncryptionKeyDerivationLengthNumber = (java.lang.Number)retObjectDefaultEncryptionKeyDerivationLength;
                 return retObjectDefaultEncryptionKeyDerivationLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDefaultEncryptionKeyDerivationLength != null ? retObjectDefaultEncryptionKeyDerivationLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDefaultEncryptionKeyDerivationLength != null ? retObjectDefaultEncryptionKeyDerivationLength.getClass() : "null", retObjectDefaultEncryptionKeyDerivationLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -338,12 +339,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
             retObjectDefaultSignatureKeyDerivationLength = classInstance.Get("DefaultSignatureKeyDerivationLength");
             return (int)retObjectDefaultSignatureKeyDerivationLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDefaultSignatureKeyDerivationLength_ToString = retObjectDefaultSignatureKeyDerivationLength == null ? "null" : retObjectDefaultSignatureKeyDerivationLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDefaultSignatureKeyDerivationLengthNumber = (java.lang.Number)retObjectDefaultSignatureKeyDerivationLength;
                 return retObjectDefaultSignatureKeyDerivationLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDefaultSignatureKeyDerivationLength != null ? retObjectDefaultSignatureKeyDerivationLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDefaultSignatureKeyDerivationLength != null ? retObjectDefaultSignatureKeyDerivationLength.getClass() : "null", retObjectDefaultSignatureKeyDerivationLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -358,12 +360,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
             retObjectDefaultSymmetricKeyLength = classInstance.Get("DefaultSymmetricKeyLength");
             return (int)retObjectDefaultSymmetricKeyLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDefaultSymmetricKeyLength_ToString = retObjectDefaultSymmetricKeyLength == null ? "null" : retObjectDefaultSymmetricKeyLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDefaultSymmetricKeyLengthNumber = (java.lang.Number)retObjectDefaultSymmetricKeyLength;
                 return retObjectDefaultSymmetricKeyLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDefaultSymmetricKeyLength != null ? retObjectDefaultSymmetricKeyLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDefaultSymmetricKeyLength != null ? retObjectDefaultSymmetricKeyLength.getClass() : "null", retObjectDefaultSymmetricKeyLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

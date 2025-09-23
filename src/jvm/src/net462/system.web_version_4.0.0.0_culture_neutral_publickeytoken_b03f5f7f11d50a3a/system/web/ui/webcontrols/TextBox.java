@@ -292,12 +292,13 @@ public class TextBox extends WebControl implements system.web.ui.IPostBackDataHa
             retObjectColumns = classInstance.Get("Columns");
             return (int)retObjectColumns;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumns_ToString = retObjectColumns == null ? "null" : retObjectColumns.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectColumnsNumber = (java.lang.Number)retObjectColumns;
                 return retObjectColumnsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectColumns != null ? retObjectColumns.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumns != null ? retObjectColumns.getClass() : "null", retObjectColumns_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -322,12 +323,13 @@ public class TextBox extends WebControl implements system.web.ui.IPostBackDataHa
             retObjectMaxLength = classInstance.Get("MaxLength");
             return (int)retObjectMaxLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxLength_ToString = retObjectMaxLength == null ? "null" : retObjectMaxLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxLengthNumber = (java.lang.Number)retObjectMaxLength;
                 return retObjectMaxLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null", retObjectMaxLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -352,12 +354,13 @@ public class TextBox extends WebControl implements system.web.ui.IPostBackDataHa
             retObjectRows = classInstance.Get("Rows");
             return (int)retObjectRows;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRows_ToString = retObjectRows == null ? "null" : retObjectRows.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRowsNumber = (java.lang.Number)retObjectRows;
                 return retObjectRowsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRows != null ? retObjectRows.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRows != null ? retObjectRows.getClass() : "null", retObjectRows_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

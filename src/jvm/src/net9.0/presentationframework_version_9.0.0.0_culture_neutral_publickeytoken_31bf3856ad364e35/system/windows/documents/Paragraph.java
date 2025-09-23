@@ -248,12 +248,13 @@ public class Paragraph extends Block  {
             retObjectTextIndent = classInstance.Get("TextIndent");
             return (double)retObjectTextIndent;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTextIndent_ToString = retObjectTextIndent == null ? "null" : retObjectTextIndent.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTextIndentNumber = (java.lang.Number)retObjectTextIndent;
                 return retObjectTextIndentNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectTextIndent != null ? retObjectTextIndent.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectTextIndent != null ? retObjectTextIndent.getClass() : "null", retObjectTextIndent_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -278,12 +279,13 @@ public class Paragraph extends Block  {
             retObjectMinOrphanLines = classInstance.Get("MinOrphanLines");
             return (int)retObjectMinOrphanLines;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinOrphanLines_ToString = retObjectMinOrphanLines == null ? "null" : retObjectMinOrphanLines.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinOrphanLinesNumber = (java.lang.Number)retObjectMinOrphanLines;
                 return retObjectMinOrphanLinesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinOrphanLines != null ? retObjectMinOrphanLines.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinOrphanLines != null ? retObjectMinOrphanLines.getClass() : "null", retObjectMinOrphanLines_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -308,12 +310,13 @@ public class Paragraph extends Block  {
             retObjectMinWidowLines = classInstance.Get("MinWidowLines");
             return (int)retObjectMinWidowLines;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinWidowLines_ToString = retObjectMinWidowLines == null ? "null" : retObjectMinWidowLines.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinWidowLinesNumber = (java.lang.Number)retObjectMinWidowLines;
                 return retObjectMinWidowLinesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinWidowLines != null ? retObjectMinWidowLines.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinWidowLines != null ? retObjectMinWidowLines.getClass() : "null", retObjectMinWidowLines_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

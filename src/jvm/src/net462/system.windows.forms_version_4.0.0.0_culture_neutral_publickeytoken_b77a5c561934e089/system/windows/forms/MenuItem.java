@@ -542,12 +542,13 @@ public class MenuItem extends Menu  {
             retObjectIndex = classInstance.Get("Index");
             return (int)retObjectIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndex_ToString = retObjectIndex == null ? "null" : retObjectIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIndexNumber = (java.lang.Number)retObjectIndex;
                 return retObjectIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndex != null ? retObjectIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndex != null ? retObjectIndex.getClass() : "null", retObjectIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -572,12 +573,13 @@ public class MenuItem extends Menu  {
             retObjectMergeOrder = classInstance.Get("MergeOrder");
             return (int)retObjectMergeOrder;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMergeOrder_ToString = retObjectMergeOrder == null ? "null" : retObjectMergeOrder.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMergeOrderNumber = (java.lang.Number)retObjectMergeOrder;
                 return retObjectMergeOrderNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMergeOrder != null ? retObjectMergeOrder.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMergeOrder != null ? retObjectMergeOrder.getClass() : "null", retObjectMergeOrder_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

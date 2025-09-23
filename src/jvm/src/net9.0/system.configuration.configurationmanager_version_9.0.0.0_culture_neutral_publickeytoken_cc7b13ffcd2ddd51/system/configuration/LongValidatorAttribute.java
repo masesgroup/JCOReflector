@@ -197,12 +197,13 @@ public class LongValidatorAttribute extends ConfigurationValidatorAttribute  {
             retObjectMaxValue = classInstance.Get("MaxValue");
             return (long)retObjectMaxValue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxValue_ToString = retObjectMaxValue == null ? "null" : retObjectMaxValue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxValueNumber = (java.lang.Number)retObjectMaxValue;
                 return retObjectMaxValueNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMaxValue != null ? retObjectMaxValue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaxValue != null ? retObjectMaxValue.getClass() : "null", retObjectMaxValue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -227,12 +228,13 @@ public class LongValidatorAttribute extends ConfigurationValidatorAttribute  {
             retObjectMinValue = classInstance.Get("MinValue");
             return (long)retObjectMinValue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinValue_ToString = retObjectMinValue == null ? "null" : retObjectMinValue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinValueNumber = (java.lang.Number)retObjectMinValue;
                 return retObjectMinValueNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMinValue != null ? retObjectMinValue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMinValue != null ? retObjectMinValue.getClass() : "null", retObjectMinValue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

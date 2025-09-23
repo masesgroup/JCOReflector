@@ -242,12 +242,13 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
             retObjectStartColumn = classInstance.Get("StartColumn");
             return (int)retObjectStartColumn;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartColumn_ToString = retObjectStartColumn == null ? "null" : retObjectStartColumn.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStartColumnNumber = (java.lang.Number)retObjectStartColumn;
                 return retObjectStartColumnNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStartColumn != null ? retObjectStartColumn.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartColumn != null ? retObjectStartColumn.getClass() : "null", retObjectStartColumn_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -272,12 +273,13 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
             retObjectStartLine = classInstance.Get("StartLine");
             return (int)retObjectStartLine;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartLine_ToString = retObjectStartLine == null ? "null" : retObjectStartLine.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStartLineNumber = (java.lang.Number)retObjectStartLine;
                 return retObjectStartLineNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStartLine != null ? retObjectStartLine.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartLine != null ? retObjectStartLine.getClass() : "null", retObjectStartLine_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

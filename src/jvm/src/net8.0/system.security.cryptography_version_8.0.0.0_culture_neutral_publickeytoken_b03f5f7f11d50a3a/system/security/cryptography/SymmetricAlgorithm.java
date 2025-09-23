@@ -455,12 +455,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
             retObjectGetCiphertextLengthCbc = classInstance.Invoke("GetCiphertextLengthCbc", plaintextLength, paddingMode == null ? null : paddingMode.getJCOInstance());
             return (int)retObjectGetCiphertextLengthCbc;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCiphertextLengthCbc_ToString = retObjectGetCiphertextLengthCbc == null ? "null" : retObjectGetCiphertextLengthCbc.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetCiphertextLengthCbcNumber = (java.lang.Number)retObjectGetCiphertextLengthCbc;
                 return retObjectGetCiphertextLengthCbcNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCiphertextLengthCbc != null ? retObjectGetCiphertextLengthCbc.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCiphertextLengthCbc != null ? retObjectGetCiphertextLengthCbc.getClass() : "null", retObjectGetCiphertextLengthCbc_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -475,12 +476,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
             retObjectGetCiphertextLengthCfb = classInstance.Invoke("GetCiphertextLengthCfb", plaintextLength, paddingMode == null ? null : paddingMode.getJCOInstance(), feedbackSizeInBits);
             return (int)retObjectGetCiphertextLengthCfb;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCiphertextLengthCfb_ToString = retObjectGetCiphertextLengthCfb == null ? "null" : retObjectGetCiphertextLengthCfb.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetCiphertextLengthCfbNumber = (java.lang.Number)retObjectGetCiphertextLengthCfb;
                 return retObjectGetCiphertextLengthCfbNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCiphertextLengthCfb != null ? retObjectGetCiphertextLengthCfb.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCiphertextLengthCfb != null ? retObjectGetCiphertextLengthCfb.getClass() : "null", retObjectGetCiphertextLengthCfb_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -495,12 +497,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
             retObjectGetCiphertextLengthEcb = classInstance.Invoke("GetCiphertextLengthEcb", plaintextLength, paddingMode == null ? null : paddingMode.getJCOInstance());
             return (int)retObjectGetCiphertextLengthEcb;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCiphertextLengthEcb_ToString = retObjectGetCiphertextLengthEcb == null ? "null" : retObjectGetCiphertextLengthEcb.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetCiphertextLengthEcbNumber = (java.lang.Number)retObjectGetCiphertextLengthEcb;
                 return retObjectGetCiphertextLengthEcbNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCiphertextLengthEcb != null ? retObjectGetCiphertextLengthEcb.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCiphertextLengthEcb != null ? retObjectGetCiphertextLengthEcb.getClass() : "null", retObjectGetCiphertextLengthEcb_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -758,12 +761,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
             retObjectBlockSize = classInstance.Get("BlockSize");
             return (int)retObjectBlockSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBlockSize_ToString = retObjectBlockSize == null ? "null" : retObjectBlockSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBlockSizeNumber = (java.lang.Number)retObjectBlockSize;
                 return retObjectBlockSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBlockSize != null ? retObjectBlockSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBlockSize != null ? retObjectBlockSize.getClass() : "null", retObjectBlockSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -788,12 +792,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
             retObjectFeedbackSize = classInstance.Get("FeedbackSize");
             return (int)retObjectFeedbackSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFeedbackSize_ToString = retObjectFeedbackSize == null ? "null" : retObjectFeedbackSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFeedbackSizeNumber = (java.lang.Number)retObjectFeedbackSize;
                 return retObjectFeedbackSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFeedbackSize != null ? retObjectFeedbackSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFeedbackSize != null ? retObjectFeedbackSize.getClass() : "null", retObjectFeedbackSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -818,12 +823,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
             retObjectKeySize = classInstance.Get("KeySize");
             return (int)retObjectKeySize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKeySize_ToString = retObjectKeySize == null ? "null" : retObjectKeySize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectKeySizeNumber = (java.lang.Number)retObjectKeySize;
                 return retObjectKeySizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectKeySize != null ? retObjectKeySize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeySize != null ? retObjectKeySize.getClass() : "null", retObjectKeySize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -243,12 +243,13 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
             retObjectMaxFaultSize = classInstance.Get("MaxFaultSize");
             return (int)retObjectMaxFaultSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxFaultSize_ToString = retObjectMaxFaultSize == null ? "null" : retObjectMaxFaultSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxFaultSizeNumber = (java.lang.Number)retObjectMaxFaultSize;
                 return retObjectMaxFaultSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxFaultSize != null ? retObjectMaxFaultSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxFaultSize != null ? retObjectMaxFaultSize.getClass() : "null", retObjectMaxFaultSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

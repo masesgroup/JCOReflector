@@ -225,12 +225,13 @@ public class PagerSettings extends NetObject  {
             retObjectPageButtonCount = classInstance.Get("PageButtonCount");
             return (int)retObjectPageButtonCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageButtonCount_ToString = retObjectPageButtonCount == null ? "null" : retObjectPageButtonCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPageButtonCountNumber = (java.lang.Number)retObjectPageButtonCount;
                 return retObjectPageButtonCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageButtonCount != null ? retObjectPageButtonCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageButtonCount != null ? retObjectPageButtonCount.getClass() : "null", retObjectPageButtonCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

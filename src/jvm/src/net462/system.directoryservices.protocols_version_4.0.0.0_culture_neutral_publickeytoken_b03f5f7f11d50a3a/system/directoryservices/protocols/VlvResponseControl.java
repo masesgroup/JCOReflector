@@ -190,12 +190,13 @@ public class VlvResponseControl extends DirectoryControl  {
             retObjectContentCount = classInstance.Get("ContentCount");
             return (int)retObjectContentCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectContentCount_ToString = retObjectContentCount == null ? "null" : retObjectContentCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectContentCountNumber = (java.lang.Number)retObjectContentCount;
                 return retObjectContentCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectContentCount != null ? retObjectContentCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectContentCount != null ? retObjectContentCount.getClass() : "null", retObjectContentCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -210,12 +211,13 @@ public class VlvResponseControl extends DirectoryControl  {
             retObjectTargetPosition = classInstance.Get("TargetPosition");
             return (int)retObjectTargetPosition;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTargetPosition_ToString = retObjectTargetPosition == null ? "null" : retObjectTargetPosition.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTargetPositionNumber = (java.lang.Number)retObjectTargetPosition;
                 return retObjectTargetPositionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTargetPosition != null ? retObjectTargetPosition.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTargetPosition != null ? retObjectTargetPosition.getClass() : "null", retObjectTargetPosition_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -196,12 +196,13 @@ public class ResolveInfo extends NetObject  {
             retObjectMaxAddresses = classInstance.Get("MaxAddresses");
             return (int)retObjectMaxAddresses;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxAddresses_ToString = retObjectMaxAddresses == null ? "null" : retObjectMaxAddresses.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxAddressesNumber = (java.lang.Number)retObjectMaxAddresses;
                 return retObjectMaxAddressesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxAddresses != null ? retObjectMaxAddresses.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxAddresses != null ? retObjectMaxAddresses.getClass() : "null", retObjectMaxAddresses_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

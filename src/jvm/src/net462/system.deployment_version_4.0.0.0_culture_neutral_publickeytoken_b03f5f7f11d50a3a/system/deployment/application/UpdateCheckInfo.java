@@ -194,12 +194,13 @@ public class UpdateCheckInfo extends NetObject  {
             retObjectUpdateSizeBytes = classInstance.Get("UpdateSizeBytes");
             return (long)retObjectUpdateSizeBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUpdateSizeBytes_ToString = retObjectUpdateSizeBytes == null ? "null" : retObjectUpdateSizeBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectUpdateSizeBytesNumber = (java.lang.Number)retObjectUpdateSizeBytes;
                 return retObjectUpdateSizeBytesNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectUpdateSizeBytes != null ? retObjectUpdateSizeBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectUpdateSizeBytes != null ? retObjectUpdateSizeBytes.getClass() : "null", retObjectUpdateSizeBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

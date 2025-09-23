@@ -226,12 +226,13 @@ public class DriveInfo extends NetObject implements system.runtime.serialization
             retObjectAvailableFreeSpace = classInstance.Get("AvailableFreeSpace");
             return (long)retObjectAvailableFreeSpace;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAvailableFreeSpace_ToString = retObjectAvailableFreeSpace == null ? "null" : retObjectAvailableFreeSpace.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAvailableFreeSpaceNumber = (java.lang.Number)retObjectAvailableFreeSpace;
                 return retObjectAvailableFreeSpaceNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectAvailableFreeSpace != null ? retObjectAvailableFreeSpace.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectAvailableFreeSpace != null ? retObjectAvailableFreeSpace.getClass() : "null", retObjectAvailableFreeSpace_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -246,12 +247,13 @@ public class DriveInfo extends NetObject implements system.runtime.serialization
             retObjectTotalFreeSpace = classInstance.Get("TotalFreeSpace");
             return (long)retObjectTotalFreeSpace;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTotalFreeSpace_ToString = retObjectTotalFreeSpace == null ? "null" : retObjectTotalFreeSpace.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTotalFreeSpaceNumber = (java.lang.Number)retObjectTotalFreeSpace;
                 return retObjectTotalFreeSpaceNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTotalFreeSpace != null ? retObjectTotalFreeSpace.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectTotalFreeSpace != null ? retObjectTotalFreeSpace.getClass() : "null", retObjectTotalFreeSpace_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -266,12 +268,13 @@ public class DriveInfo extends NetObject implements system.runtime.serialization
             retObjectTotalSize = classInstance.Get("TotalSize");
             return (long)retObjectTotalSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTotalSize_ToString = retObjectTotalSize == null ? "null" : retObjectTotalSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTotalSizeNumber = (java.lang.Number)retObjectTotalSize;
                 return retObjectTotalSizeNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTotalSize != null ? retObjectTotalSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectTotalSize != null ? retObjectTotalSize.getClass() : "null", retObjectTotalSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

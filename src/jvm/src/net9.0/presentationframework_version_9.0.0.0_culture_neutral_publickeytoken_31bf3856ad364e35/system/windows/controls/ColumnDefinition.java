@@ -173,12 +173,13 @@ public class ColumnDefinition extends DefinitionBase  {
             retObjectActualWidth = classInstance.Get("ActualWidth");
             return (double)retObjectActualWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectActualWidth_ToString = retObjectActualWidth == null ? "null" : retObjectActualWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectActualWidthNumber = (java.lang.Number)retObjectActualWidth;
                 return retObjectActualWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectActualWidth != null ? retObjectActualWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectActualWidth != null ? retObjectActualWidth.getClass() : "null", retObjectActualWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -193,12 +194,13 @@ public class ColumnDefinition extends DefinitionBase  {
             retObjectMaxWidth = classInstance.Get("MaxWidth");
             return (double)retObjectMaxWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxWidth_ToString = retObjectMaxWidth == null ? "null" : retObjectMaxWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxWidthNumber = (java.lang.Number)retObjectMaxWidth;
                 return retObjectMaxWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMaxWidth != null ? retObjectMaxWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaxWidth != null ? retObjectMaxWidth.getClass() : "null", retObjectMaxWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -223,12 +225,13 @@ public class ColumnDefinition extends DefinitionBase  {
             retObjectMinWidth = classInstance.Get("MinWidth");
             return (double)retObjectMinWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinWidth_ToString = retObjectMinWidth == null ? "null" : retObjectMinWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinWidthNumber = (java.lang.Number)retObjectMinWidth;
                 return retObjectMinWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMinWidth != null ? retObjectMinWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinWidth != null ? retObjectMinWidth.getClass() : "null", retObjectMinWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -253,12 +256,13 @@ public class ColumnDefinition extends DefinitionBase  {
             retObjectOffset = classInstance.Get("Offset");
             return (double)retObjectOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffset_ToString = retObjectOffset == null ? "null" : retObjectOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOffsetNumber = (java.lang.Number)retObjectOffset;
                 return retObjectOffsetNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null", retObjectOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

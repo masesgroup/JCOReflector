@@ -233,12 +233,13 @@ public class SafeEvpPKeyHandle extends SafeHandle  {
             retObjectOpenSslVersion = classType.Get("OpenSslVersion");
             return (long)retObjectOpenSslVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOpenSslVersion_ToString = retObjectOpenSslVersion == null ? "null" : retObjectOpenSslVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectOpenSslVersionNumber = (java.lang.Number)retObjectOpenSslVersion;
                 return retObjectOpenSslVersionNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectOpenSslVersion != null ? retObjectOpenSslVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectOpenSslVersion != null ? retObjectOpenSslVersion.getClass() : "null", retObjectOpenSslVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

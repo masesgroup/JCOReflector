@@ -334,12 +334,13 @@ public class NamedPipeClientStream extends PipeStream  {
             retObjectNumberOfServerInstances = classInstance.Get("NumberOfServerInstances");
             return (int)retObjectNumberOfServerInstances;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNumberOfServerInstances_ToString = retObjectNumberOfServerInstances == null ? "null" : retObjectNumberOfServerInstances.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNumberOfServerInstancesNumber = (java.lang.Number)retObjectNumberOfServerInstances;
                 return retObjectNumberOfServerInstancesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNumberOfServerInstances != null ? retObjectNumberOfServerInstances.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumberOfServerInstances != null ? retObjectNumberOfServerInstances.getClass() : "null", retObjectNumberOfServerInstances_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

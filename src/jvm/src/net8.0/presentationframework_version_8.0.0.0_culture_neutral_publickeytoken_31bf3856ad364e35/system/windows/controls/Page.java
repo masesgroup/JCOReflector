@@ -314,12 +314,13 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
             retObjectFontSize = classInstance.Get("FontSize");
             return (double)retObjectFontSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFontSize_ToString = retObjectFontSize == null ? "null" : retObjectFontSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectFontSizeNumber = (java.lang.Number)retObjectFontSize;
                 return retObjectFontSizeNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectFontSize != null ? retObjectFontSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFontSize != null ? retObjectFontSize.getClass() : "null", retObjectFontSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -344,12 +345,13 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
             retObjectWindowHeight = classInstance.Get("WindowHeight");
             return (double)retObjectWindowHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWindowHeight_ToString = retObjectWindowHeight == null ? "null" : retObjectWindowHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWindowHeightNumber = (java.lang.Number)retObjectWindowHeight;
                 return retObjectWindowHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectWindowHeight != null ? retObjectWindowHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectWindowHeight != null ? retObjectWindowHeight.getClass() : "null", retObjectWindowHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -374,12 +376,13 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
             retObjectWindowWidth = classInstance.Get("WindowWidth");
             return (double)retObjectWindowWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWindowWidth_ToString = retObjectWindowWidth == null ? "null" : retObjectWindowWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWindowWidthNumber = (java.lang.Number)retObjectWindowWidth;
                 return retObjectWindowWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectWindowWidth != null ? retObjectWindowWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectWindowWidth != null ? retObjectWindowWidth.getClass() : "null", retObjectWindowWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

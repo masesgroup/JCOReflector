@@ -183,12 +183,13 @@ public class WebProcessStatistics extends NetObject  {
             retObjectAppDomainCount = classInstance.Get("AppDomainCount");
             return (int)retObjectAppDomainCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAppDomainCount_ToString = retObjectAppDomainCount == null ? "null" : retObjectAppDomainCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAppDomainCountNumber = (java.lang.Number)retObjectAppDomainCount;
                 return retObjectAppDomainCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAppDomainCount != null ? retObjectAppDomainCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAppDomainCount != null ? retObjectAppDomainCount.getClass() : "null", retObjectAppDomainCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -203,12 +204,13 @@ public class WebProcessStatistics extends NetObject  {
             retObjectRequestsExecuting = classInstance.Get("RequestsExecuting");
             return (int)retObjectRequestsExecuting;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRequestsExecuting_ToString = retObjectRequestsExecuting == null ? "null" : retObjectRequestsExecuting.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRequestsExecutingNumber = (java.lang.Number)retObjectRequestsExecuting;
                 return retObjectRequestsExecutingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRequestsExecuting != null ? retObjectRequestsExecuting.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRequestsExecuting != null ? retObjectRequestsExecuting.getClass() : "null", retObjectRequestsExecuting_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -223,12 +225,13 @@ public class WebProcessStatistics extends NetObject  {
             retObjectRequestsQueued = classInstance.Get("RequestsQueued");
             return (int)retObjectRequestsQueued;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRequestsQueued_ToString = retObjectRequestsQueued == null ? "null" : retObjectRequestsQueued.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRequestsQueuedNumber = (java.lang.Number)retObjectRequestsQueued;
                 return retObjectRequestsQueuedNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRequestsQueued != null ? retObjectRequestsQueued.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRequestsQueued != null ? retObjectRequestsQueued.getClass() : "null", retObjectRequestsQueued_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -243,12 +246,13 @@ public class WebProcessStatistics extends NetObject  {
             retObjectRequestsRejected = classInstance.Get("RequestsRejected");
             return (int)retObjectRequestsRejected;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRequestsRejected_ToString = retObjectRequestsRejected == null ? "null" : retObjectRequestsRejected.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRequestsRejectedNumber = (java.lang.Number)retObjectRequestsRejected;
                 return retObjectRequestsRejectedNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRequestsRejected != null ? retObjectRequestsRejected.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRequestsRejected != null ? retObjectRequestsRejected.getClass() : "null", retObjectRequestsRejected_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -263,12 +267,13 @@ public class WebProcessStatistics extends NetObject  {
             retObjectThreadCount = classInstance.Get("ThreadCount");
             return (int)retObjectThreadCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectThreadCount_ToString = retObjectThreadCount == null ? "null" : retObjectThreadCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectThreadCountNumber = (java.lang.Number)retObjectThreadCount;
                 return retObjectThreadCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectThreadCount != null ? retObjectThreadCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectThreadCount != null ? retObjectThreadCount.getClass() : "null", retObjectThreadCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -283,12 +288,13 @@ public class WebProcessStatistics extends NetObject  {
             retObjectManagedHeapSize = classInstance.Get("ManagedHeapSize");
             return (long)retObjectManagedHeapSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectManagedHeapSize_ToString = retObjectManagedHeapSize == null ? "null" : retObjectManagedHeapSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectManagedHeapSizeNumber = (java.lang.Number)retObjectManagedHeapSize;
                 return retObjectManagedHeapSizeNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectManagedHeapSize != null ? retObjectManagedHeapSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectManagedHeapSize != null ? retObjectManagedHeapSize.getClass() : "null", retObjectManagedHeapSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -303,12 +309,13 @@ public class WebProcessStatistics extends NetObject  {
             retObjectPeakWorkingSet = classInstance.Get("PeakWorkingSet");
             return (long)retObjectPeakWorkingSet;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPeakWorkingSet_ToString = retObjectPeakWorkingSet == null ? "null" : retObjectPeakWorkingSet.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPeakWorkingSetNumber = (java.lang.Number)retObjectPeakWorkingSet;
                 return retObjectPeakWorkingSetNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectPeakWorkingSet != null ? retObjectPeakWorkingSet.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectPeakWorkingSet != null ? retObjectPeakWorkingSet.getClass() : "null", retObjectPeakWorkingSet_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -323,12 +330,13 @@ public class WebProcessStatistics extends NetObject  {
             retObjectWorkingSet = classInstance.Get("WorkingSet");
             return (long)retObjectWorkingSet;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWorkingSet_ToString = retObjectWorkingSet == null ? "null" : retObjectWorkingSet.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWorkingSetNumber = (java.lang.Number)retObjectWorkingSet;
                 return retObjectWorkingSetNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectWorkingSet != null ? retObjectWorkingSet.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectWorkingSet != null ? retObjectWorkingSet.getClass() : "null", retObjectWorkingSet_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -183,12 +183,13 @@ public class TaskDialogProgressBar extends TaskDialogControl  {
             retObjectMarqueeSpeed = classInstance.Get("MarqueeSpeed");
             return (int)retObjectMarqueeSpeed;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMarqueeSpeed_ToString = retObjectMarqueeSpeed == null ? "null" : retObjectMarqueeSpeed.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMarqueeSpeedNumber = (java.lang.Number)retObjectMarqueeSpeed;
                 return retObjectMarqueeSpeedNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMarqueeSpeed != null ? retObjectMarqueeSpeed.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMarqueeSpeed != null ? retObjectMarqueeSpeed.getClass() : "null", retObjectMarqueeSpeed_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -213,12 +214,13 @@ public class TaskDialogProgressBar extends TaskDialogControl  {
             retObjectMaximum = classInstance.Get("Maximum");
             return (int)retObjectMaximum;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximum_ToString = retObjectMaximum == null ? "null" : retObjectMaximum.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaximumNumber = (java.lang.Number)retObjectMaximum;
                 return retObjectMaximumNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximum != null ? retObjectMaximum.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximum != null ? retObjectMaximum.getClass() : "null", retObjectMaximum_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -243,12 +245,13 @@ public class TaskDialogProgressBar extends TaskDialogControl  {
             retObjectMinimum = classInstance.Get("Minimum");
             return (int)retObjectMinimum;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimum_ToString = retObjectMinimum == null ? "null" : retObjectMinimum.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinimumNumber = (java.lang.Number)retObjectMinimum;
                 return retObjectMinimumNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinimum != null ? retObjectMinimum.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimum != null ? retObjectMinimum.getClass() : "null", retObjectMinimum_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -273,12 +276,13 @@ public class TaskDialogProgressBar extends TaskDialogControl  {
             retObjectValue = classInstance.Get("Value");
             return (int)retObjectValue;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectValue_ToString = retObjectValue == null ? "null" : retObjectValue.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectValueNumber = (java.lang.Number)retObjectValue;
                 return retObjectValueNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectValue != null ? retObjectValue.getClass() : "null", retObjectValue_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

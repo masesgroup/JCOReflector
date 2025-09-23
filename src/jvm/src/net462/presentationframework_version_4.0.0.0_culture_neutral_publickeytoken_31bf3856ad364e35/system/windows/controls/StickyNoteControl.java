@@ -235,12 +235,13 @@ public class StickyNoteControl extends Control  {
             retObjectCaptionFontSize = classInstance.Get("CaptionFontSize");
             return (double)retObjectCaptionFontSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCaptionFontSize_ToString = retObjectCaptionFontSize == null ? "null" : retObjectCaptionFontSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCaptionFontSizeNumber = (java.lang.Number)retObjectCaptionFontSize;
                 return retObjectCaptionFontSizeNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectCaptionFontSize != null ? retObjectCaptionFontSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCaptionFontSize != null ? retObjectCaptionFontSize.getClass() : "null", retObjectCaptionFontSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -265,12 +266,13 @@ public class StickyNoteControl extends Control  {
             retObjectPenWidth = classInstance.Get("PenWidth");
             return (double)retObjectPenWidth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPenWidth_ToString = retObjectPenWidth == null ? "null" : retObjectPenWidth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPenWidthNumber = (java.lang.Number)retObjectPenWidth;
                 return retObjectPenWidthNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectPenWidth != null ? retObjectPenWidth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPenWidth != null ? retObjectPenWidth.getClass() : "null", retObjectPenWidth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

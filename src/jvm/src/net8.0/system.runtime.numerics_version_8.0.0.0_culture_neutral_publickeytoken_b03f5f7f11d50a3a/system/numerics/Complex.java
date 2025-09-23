@@ -428,12 +428,13 @@ public class Complex extends ValueType  {
             retObjectAbs = classType.Invoke("Abs", value == null ? null : value.getJCOInstance());
             return (double)retObjectAbs;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAbs_ToString = retObjectAbs == null ? "null" : retObjectAbs.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAbsNumber = (java.lang.Number)retObjectAbs;
                 return retObjectAbsNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectAbs != null ? retObjectAbs.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectAbs != null ? retObjectAbs.getClass() : "null", retObjectAbs_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1034,12 +1035,13 @@ public class Complex extends ValueType  {
             retObjectImaginary = classInstance.Get("Imaginary");
             return (double)retObjectImaginary;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectImaginary_ToString = retObjectImaginary == null ? "null" : retObjectImaginary.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectImaginaryNumber = (java.lang.Number)retObjectImaginary;
                 return retObjectImaginaryNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectImaginary != null ? retObjectImaginary.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectImaginary != null ? retObjectImaginary.getClass() : "null", retObjectImaginary_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1054,12 +1056,13 @@ public class Complex extends ValueType  {
             retObjectMagnitude = classInstance.Get("Magnitude");
             return (double)retObjectMagnitude;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMagnitude_ToString = retObjectMagnitude == null ? "null" : retObjectMagnitude.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMagnitudeNumber = (java.lang.Number)retObjectMagnitude;
                 return retObjectMagnitudeNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMagnitude != null ? retObjectMagnitude.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMagnitude != null ? retObjectMagnitude.getClass() : "null", retObjectMagnitude_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1074,12 +1077,13 @@ public class Complex extends ValueType  {
             retObjectPhase = classInstance.Get("Phase");
             return (double)retObjectPhase;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPhase_ToString = retObjectPhase == null ? "null" : retObjectPhase.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPhaseNumber = (java.lang.Number)retObjectPhase;
                 return retObjectPhaseNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectPhase != null ? retObjectPhase.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPhase != null ? retObjectPhase.getClass() : "null", retObjectPhase_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1094,12 +1098,13 @@ public class Complex extends ValueType  {
             retObjectReal = classInstance.Get("Real");
             return (double)retObjectReal;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReal_ToString = retObjectReal == null ? "null" : retObjectReal.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRealNumber = (java.lang.Number)retObjectReal;
                 return retObjectRealNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectReal != null ? retObjectReal.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectReal != null ? retObjectReal.getClass() : "null", retObjectReal_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

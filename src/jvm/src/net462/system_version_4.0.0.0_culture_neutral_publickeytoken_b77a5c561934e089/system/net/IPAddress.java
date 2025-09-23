@@ -244,12 +244,13 @@ public class IPAddress extends NetObject  {
             retObjectHostToNetworkOrder = classType.Invoke("HostToNetworkOrder", host);
             return (short)retObjectHostToNetworkOrder;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHostToNetworkOrder_ToString = retObjectHostToNetworkOrder == null ? "null" : retObjectHostToNetworkOrder.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHostToNetworkOrderNumber = (java.lang.Number)retObjectHostToNetworkOrder;
                 return retObjectHostToNetworkOrderNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectHostToNetworkOrder != null ? retObjectHostToNetworkOrder.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectHostToNetworkOrder != null ? retObjectHostToNetworkOrder.getClass() : "null", retObjectHostToNetworkOrder_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -264,12 +265,13 @@ public class IPAddress extends NetObject  {
             retObjectNetworkToHostOrder = classType.Invoke("NetworkToHostOrder", network);
             return (short)retObjectNetworkToHostOrder;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNetworkToHostOrder_ToString = retObjectNetworkToHostOrder == null ? "null" : retObjectNetworkToHostOrder.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNetworkToHostOrderNumber = (java.lang.Number)retObjectNetworkToHostOrder;
                 return retObjectNetworkToHostOrderNumber.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectNetworkToHostOrder != null ? retObjectNetworkToHostOrder.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectNetworkToHostOrder != null ? retObjectNetworkToHostOrder.getClass() : "null", retObjectNetworkToHostOrder_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -284,12 +286,13 @@ public class IPAddress extends NetObject  {
             retObjectHostToNetworkOrder = classType.Invoke("HostToNetworkOrder", host);
             return (int)retObjectHostToNetworkOrder;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHostToNetworkOrder_ToString = retObjectHostToNetworkOrder == null ? "null" : retObjectHostToNetworkOrder.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHostToNetworkOrderNumber = (java.lang.Number)retObjectHostToNetworkOrder;
                 return retObjectHostToNetworkOrderNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHostToNetworkOrder != null ? retObjectHostToNetworkOrder.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHostToNetworkOrder != null ? retObjectHostToNetworkOrder.getClass() : "null", retObjectHostToNetworkOrder_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -304,12 +307,13 @@ public class IPAddress extends NetObject  {
             retObjectNetworkToHostOrder = classType.Invoke("NetworkToHostOrder", network);
             return (int)retObjectNetworkToHostOrder;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNetworkToHostOrder_ToString = retObjectNetworkToHostOrder == null ? "null" : retObjectNetworkToHostOrder.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNetworkToHostOrderNumber = (java.lang.Number)retObjectNetworkToHostOrder;
                 return retObjectNetworkToHostOrderNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNetworkToHostOrder != null ? retObjectNetworkToHostOrder.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNetworkToHostOrder != null ? retObjectNetworkToHostOrder.getClass() : "null", retObjectNetworkToHostOrder_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -324,12 +328,13 @@ public class IPAddress extends NetObject  {
             retObjectHostToNetworkOrder = classType.Invoke("HostToNetworkOrder", host);
             return (long)retObjectHostToNetworkOrder;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHostToNetworkOrder_ToString = retObjectHostToNetworkOrder == null ? "null" : retObjectHostToNetworkOrder.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHostToNetworkOrderNumber = (java.lang.Number)retObjectHostToNetworkOrder;
                 return retObjectHostToNetworkOrderNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectHostToNetworkOrder != null ? retObjectHostToNetworkOrder.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectHostToNetworkOrder != null ? retObjectHostToNetworkOrder.getClass() : "null", retObjectHostToNetworkOrder_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -344,12 +349,13 @@ public class IPAddress extends NetObject  {
             retObjectNetworkToHostOrder = classType.Invoke("NetworkToHostOrder", network);
             return (long)retObjectNetworkToHostOrder;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNetworkToHostOrder_ToString = retObjectNetworkToHostOrder == null ? "null" : retObjectNetworkToHostOrder.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectNetworkToHostOrderNumber = (java.lang.Number)retObjectNetworkToHostOrder;
                 return retObjectNetworkToHostOrderNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectNetworkToHostOrder != null ? retObjectNetworkToHostOrder.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectNetworkToHostOrder != null ? retObjectNetworkToHostOrder.getClass() : "null", retObjectNetworkToHostOrder_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -483,12 +489,13 @@ public class IPAddress extends NetObject  {
             retObjectAddress = classInstance.Get("Address");
             return (long)retObjectAddress;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAddress_ToString = retObjectAddress == null ? "null" : retObjectAddress.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectAddressNumber = (java.lang.Number)retObjectAddress;
                 return retObjectAddressNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectAddress != null ? retObjectAddress.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectAddress != null ? retObjectAddress.getClass() : "null", retObjectAddress_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -513,12 +520,13 @@ public class IPAddress extends NetObject  {
             retObjectScopeId = classInstance.Get("ScopeId");
             return (long)retObjectScopeId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScopeId_ToString = retObjectScopeId == null ? "null" : retObjectScopeId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectScopeIdNumber = (java.lang.Number)retObjectScopeId;
                 return retObjectScopeIdNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectScopeId != null ? retObjectScopeId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectScopeId != null ? retObjectScopeId.getClass() : "null", retObjectScopeId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

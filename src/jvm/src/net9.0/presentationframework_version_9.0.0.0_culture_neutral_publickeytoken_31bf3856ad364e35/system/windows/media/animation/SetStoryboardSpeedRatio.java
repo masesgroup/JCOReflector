@@ -172,12 +172,13 @@ public class SetStoryboardSpeedRatio extends ControllableStoryboardAction  {
             retObjectSpeedRatio = classInstance.Get("SpeedRatio");
             return (double)retObjectSpeedRatio;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSpeedRatio_ToString = retObjectSpeedRatio == null ? "null" : retObjectSpeedRatio.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSpeedRatioNumber = (java.lang.Number)retObjectSpeedRatio;
                 return retObjectSpeedRatioNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectSpeedRatio != null ? retObjectSpeedRatio.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSpeedRatio != null ? retObjectSpeedRatio.getClass() : "null", retObjectSpeedRatio_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

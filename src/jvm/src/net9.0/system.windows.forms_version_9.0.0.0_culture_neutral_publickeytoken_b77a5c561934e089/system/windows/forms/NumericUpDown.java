@@ -264,12 +264,13 @@ public class NumericUpDown extends UpDownBase  {
             retObjectDecimalPlaces = classInstance.Get("DecimalPlaces");
             return (int)retObjectDecimalPlaces;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDecimalPlaces_ToString = retObjectDecimalPlaces == null ? "null" : retObjectDecimalPlaces.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDecimalPlacesNumber = (java.lang.Number)retObjectDecimalPlaces;
                 return retObjectDecimalPlacesNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDecimalPlaces != null ? retObjectDecimalPlaces.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDecimalPlaces != null ? retObjectDecimalPlaces.getClass() : "null", retObjectDecimalPlaces_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

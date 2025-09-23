@@ -300,12 +300,13 @@ public class FileSystemWatcher extends Component  {
             retObjectInternalBufferSize = classInstance.Get("InternalBufferSize");
             return (int)retObjectInternalBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInternalBufferSize_ToString = retObjectInternalBufferSize == null ? "null" : retObjectInternalBufferSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInternalBufferSizeNumber = (java.lang.Number)retObjectInternalBufferSize;
                 return retObjectInternalBufferSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectInternalBufferSize != null ? retObjectInternalBufferSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectInternalBufferSize != null ? retObjectInternalBufferSize.getClass() : "null", retObjectInternalBufferSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

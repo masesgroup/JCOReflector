@@ -217,12 +217,13 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
             retObjectWorkflowInstanceInternalId = classInstance.Get("WorkflowInstanceInternalId");
             return (long)retObjectWorkflowInstanceInternalId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWorkflowInstanceInternalId_ToString = retObjectWorkflowInstanceInternalId == null ? "null" : retObjectWorkflowInstanceInternalId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectWorkflowInstanceInternalIdNumber = (java.lang.Number)retObjectWorkflowInstanceInternalId;
                 return retObjectWorkflowInstanceInternalIdNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectWorkflowInstanceInternalId != null ? retObjectWorkflowInstanceInternalId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectWorkflowInstanceInternalId != null ? retObjectWorkflowInstanceInternalId.getClass() : "null", retObjectWorkflowInstanceInternalId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

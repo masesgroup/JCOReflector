@@ -196,12 +196,13 @@ public class MimeTextMatch extends NetObject  {
             retObjectCapture = classInstance.Get("Capture");
             return (int)retObjectCapture;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCapture_ToString = retObjectCapture == null ? "null" : retObjectCapture.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCaptureNumber = (java.lang.Number)retObjectCapture;
                 return retObjectCaptureNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCapture != null ? retObjectCapture.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCapture != null ? retObjectCapture.getClass() : "null", retObjectCapture_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -226,12 +227,13 @@ public class MimeTextMatch extends NetObject  {
             retObjectGroup = classInstance.Get("Group");
             return (int)retObjectGroup;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGroup_ToString = retObjectGroup == null ? "null" : retObjectGroup.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGroupNumber = (java.lang.Number)retObjectGroup;
                 return retObjectGroupNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGroup != null ? retObjectGroup.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGroup != null ? retObjectGroup.getClass() : "null", retObjectGroup_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -256,12 +258,13 @@ public class MimeTextMatch extends NetObject  {
             retObjectRepeats = classInstance.Get("Repeats");
             return (int)retObjectRepeats;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRepeats_ToString = retObjectRepeats == null ? "null" : retObjectRepeats.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRepeatsNumber = (java.lang.Number)retObjectRepeats;
                 return retObjectRepeatsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRepeats != null ? retObjectRepeats.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRepeats != null ? retObjectRepeats.getClass() : "null", retObjectRepeats_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

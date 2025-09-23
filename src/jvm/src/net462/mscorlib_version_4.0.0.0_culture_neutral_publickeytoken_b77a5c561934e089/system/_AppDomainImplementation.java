@@ -169,12 +169,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
             retObjectExecuteAssembly = classInstance.Invoke("ExecuteAssembly", assemblyFile);
             return (int)retObjectExecuteAssembly;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExecuteAssembly_ToString = retObjectExecuteAssembly == null ? "null" : retObjectExecuteAssembly.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExecuteAssemblyNumber = (java.lang.Number)retObjectExecuteAssembly;
                 return retObjectExecuteAssemblyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteAssembly != null ? retObjectExecuteAssembly.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExecuteAssembly != null ? retObjectExecuteAssembly.getClass() : "null", retObjectExecuteAssembly_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -189,12 +190,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
             retObjectExecuteAssembly = classInstance.Invoke("ExecuteAssembly", assemblyFile, assemblySecurity == null ? null : assemblySecurity.getJCOInstance());
             return (int)retObjectExecuteAssembly;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExecuteAssembly_ToString = retObjectExecuteAssembly == null ? "null" : retObjectExecuteAssembly.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExecuteAssemblyNumber = (java.lang.Number)retObjectExecuteAssembly;
                 return retObjectExecuteAssemblyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteAssembly != null ? retObjectExecuteAssembly.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExecuteAssembly != null ? retObjectExecuteAssembly.getClass() : "null", retObjectExecuteAssembly_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -209,12 +211,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
             retObjectExecuteAssembly = classInstance.Invoke("ExecuteAssembly", assemblyFile, assemblySecurity == null ? null : assemblySecurity.getJCOInstance(), args);
             return (int)retObjectExecuteAssembly;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExecuteAssembly_ToString = retObjectExecuteAssembly == null ? "null" : retObjectExecuteAssembly.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExecuteAssemblyNumber = (java.lang.Number)retObjectExecuteAssembly;
                 return retObjectExecuteAssemblyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteAssembly != null ? retObjectExecuteAssembly.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExecuteAssembly != null ? retObjectExecuteAssembly.getClass() : "null", retObjectExecuteAssembly_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -229,12 +232,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
             retObjectExecuteAssembly = classInstance.Invoke("ExecuteAssembly", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut());
             return (int)retObjectExecuteAssembly;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExecuteAssembly_ToString = retObjectExecuteAssembly == null ? "null" : retObjectExecuteAssembly.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectExecuteAssemblyNumber = (java.lang.Number)retObjectExecuteAssembly;
                 return retObjectExecuteAssemblyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteAssembly != null ? retObjectExecuteAssembly.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExecuteAssembly != null ? retObjectExecuteAssembly.getClass() : "null", retObjectExecuteAssembly_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

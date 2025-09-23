@@ -189,12 +189,13 @@ public class TableCell extends TextElement  {
             retObjectLineHeight = classInstance.Get("LineHeight");
             return (double)retObjectLineHeight;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLineHeight_ToString = retObjectLineHeight == null ? "null" : retObjectLineHeight.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLineHeightNumber = (java.lang.Number)retObjectLineHeight;
                 return retObjectLineHeightNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectLineHeight != null ? retObjectLineHeight.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLineHeight != null ? retObjectLineHeight.getClass() : "null", retObjectLineHeight_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -219,12 +220,13 @@ public class TableCell extends TextElement  {
             retObjectColumnSpan = classInstance.Get("ColumnSpan");
             return (int)retObjectColumnSpan;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnSpan_ToString = retObjectColumnSpan == null ? "null" : retObjectColumnSpan.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectColumnSpanNumber = (java.lang.Number)retObjectColumnSpan;
                 return retObjectColumnSpanNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectColumnSpan != null ? retObjectColumnSpan.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumnSpan != null ? retObjectColumnSpan.getClass() : "null", retObjectColumnSpan_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -249,12 +251,13 @@ public class TableCell extends TextElement  {
             retObjectRowSpan = classInstance.Get("RowSpan");
             return (int)retObjectRowSpan;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowSpan_ToString = retObjectRowSpan == null ? "null" : retObjectRowSpan.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRowSpanNumber = (java.lang.Number)retObjectRowSpan;
                 return retObjectRowSpanNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRowSpan != null ? retObjectRowSpan.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowSpan != null ? retObjectRowSpan.getClass() : "null", retObjectRowSpan_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -228,12 +228,13 @@ public class RegistrationServices extends NetObject  {
             retObjectRegisterTypeForComClients = classInstance.Invoke("RegisterTypeForComClients", type == null ? null : type.getJCOInstance(), classContext == null ? null : classContext.getJCOInstance(), flags == null ? null : flags.getJCOInstance());
             return (int)retObjectRegisterTypeForComClients;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRegisterTypeForComClients_ToString = retObjectRegisterTypeForComClients == null ? "null" : retObjectRegisterTypeForComClients.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRegisterTypeForComClientsNumber = (java.lang.Number)retObjectRegisterTypeForComClients;
                 return retObjectRegisterTypeForComClientsNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRegisterTypeForComClients != null ? retObjectRegisterTypeForComClients.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRegisterTypeForComClients != null ? retObjectRegisterTypeForComClients.getClass() : "null", retObjectRegisterTypeForComClients_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

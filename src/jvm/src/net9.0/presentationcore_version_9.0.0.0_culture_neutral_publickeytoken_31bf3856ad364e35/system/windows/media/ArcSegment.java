@@ -240,12 +240,13 @@ public class ArcSegment extends PathSegment  {
             retObjectRotationAngle = classInstance.Get("RotationAngle");
             return (double)retObjectRotationAngle;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRotationAngle_ToString = retObjectRotationAngle == null ? "null" : retObjectRotationAngle.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRotationAngleNumber = (java.lang.Number)retObjectRotationAngle;
                 return retObjectRotationAngleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectRotationAngle != null ? retObjectRotationAngle.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRotationAngle != null ? retObjectRotationAngle.getClass() : "null", retObjectRotationAngle_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -167,12 +167,13 @@ public class DpiChangedEventArgs extends CancelEventArgs  {
             retObjectDeviceDpiNew = classInstance.Get("DeviceDpiNew");
             return (int)retObjectDeviceDpiNew;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeviceDpiNew_ToString = retObjectDeviceDpiNew == null ? "null" : retObjectDeviceDpiNew.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDeviceDpiNewNumber = (java.lang.Number)retObjectDeviceDpiNew;
                 return retObjectDeviceDpiNewNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDeviceDpiNew != null ? retObjectDeviceDpiNew.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeviceDpiNew != null ? retObjectDeviceDpiNew.getClass() : "null", retObjectDeviceDpiNew_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -197,12 +198,13 @@ public class DpiChangedEventArgs extends CancelEventArgs  {
             retObjectDeviceDpiOld = classInstance.Get("DeviceDpiOld");
             return (int)retObjectDeviceDpiOld;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeviceDpiOld_ToString = retObjectDeviceDpiOld == null ? "null" : retObjectDeviceDpiOld.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDeviceDpiOldNumber = (java.lang.Number)retObjectDeviceDpiOld;
                 return retObjectDeviceDpiOldNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDeviceDpiOld != null ? retObjectDeviceDpiOld.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeviceDpiOld != null ? retObjectDeviceDpiOld.getClass() : "null", retObjectDeviceDpiOld_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

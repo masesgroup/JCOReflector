@@ -172,12 +172,13 @@ public class ZLibCompressionOptions extends NetObject  {
             retObjectCompressionLevel = classInstance.Get("CompressionLevel");
             return (int)retObjectCompressionLevel;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompressionLevel_ToString = retObjectCompressionLevel == null ? "null" : retObjectCompressionLevel.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompressionLevelNumber = (java.lang.Number)retObjectCompressionLevel;
                 return retObjectCompressionLevelNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompressionLevel != null ? retObjectCompressionLevel.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompressionLevel != null ? retObjectCompressionLevel.getClass() : "null", retObjectCompressionLevel_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -178,12 +178,13 @@ public class WritingPrintTicketRequiredEventArgs extends EventArgs  {
             retObjectSequence = classInstance.Get("Sequence");
             return (int)retObjectSequence;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSequence_ToString = retObjectSequence == null ? "null" : retObjectSequence.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSequenceNumber = (java.lang.Number)retObjectSequence;
                 return retObjectSequenceNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSequence != null ? retObjectSequence.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSequence != null ? retObjectSequence.getClass() : "null", retObjectSequence_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

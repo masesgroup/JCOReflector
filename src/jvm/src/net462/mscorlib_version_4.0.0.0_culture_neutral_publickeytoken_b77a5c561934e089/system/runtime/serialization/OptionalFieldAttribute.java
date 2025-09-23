@@ -172,12 +172,13 @@ public class OptionalFieldAttribute extends Attribute  {
             retObjectVersionAdded = classInstance.Get("VersionAdded");
             return (int)retObjectVersionAdded;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVersionAdded_ToString = retObjectVersionAdded == null ? "null" : retObjectVersionAdded.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectVersionAddedNumber = (java.lang.Number)retObjectVersionAdded;
                 return retObjectVersionAddedNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVersionAdded != null ? retObjectVersionAdded.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVersionAdded != null ? retObjectVersionAdded.getClass() : "null", retObjectVersionAdded_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

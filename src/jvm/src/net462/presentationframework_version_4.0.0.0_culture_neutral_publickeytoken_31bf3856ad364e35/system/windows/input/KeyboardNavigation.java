@@ -191,12 +191,13 @@ public class KeyboardNavigation extends NetObject  {
             retObjectGetTabIndex = classType.Invoke("GetTabIndex", element == null ? null : element.getJCOInstance());
             return (int)retObjectGetTabIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTabIndex_ToString = retObjectGetTabIndex == null ? "null" : retObjectGetTabIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTabIndexNumber = (java.lang.Number)retObjectGetTabIndex;
                 return retObjectGetTabIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTabIndex != null ? retObjectGetTabIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTabIndex != null ? retObjectGetTabIndex.getClass() : "null", retObjectGetTabIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -222,12 +222,13 @@ public class GC extends NetObject  {
             retObjectCollectionCount = classType.Invoke("CollectionCount", generation);
             return (int)retObjectCollectionCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCollectionCount_ToString = retObjectCollectionCount == null ? "null" : retObjectCollectionCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCollectionCountNumber = (java.lang.Number)retObjectCollectionCount;
                 return retObjectCollectionCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCollectionCount != null ? retObjectCollectionCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCollectionCount != null ? retObjectCollectionCount.getClass() : "null", retObjectCollectionCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -242,12 +243,13 @@ public class GC extends NetObject  {
             retObjectGetGeneration = classType.Invoke("GetGeneration", obj == null ? null : obj.getJCOInstance());
             return (int)retObjectGetGeneration;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetGeneration_ToString = retObjectGetGeneration == null ? "null" : retObjectGetGeneration.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetGenerationNumber = (java.lang.Number)retObjectGetGeneration;
                 return retObjectGetGenerationNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetGeneration != null ? retObjectGetGeneration.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetGeneration != null ? retObjectGetGeneration.getClass() : "null", retObjectGetGeneration_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -262,12 +264,13 @@ public class GC extends NetObject  {
             retObjectGetGeneration = classType.Invoke("GetGeneration", wo == null ? null : wo.getJCOInstance());
             return (int)retObjectGetGeneration;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetGeneration_ToString = retObjectGetGeneration == null ? "null" : retObjectGetGeneration.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetGenerationNumber = (java.lang.Number)retObjectGetGeneration;
                 return retObjectGetGenerationNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetGeneration != null ? retObjectGetGeneration.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetGeneration != null ? retObjectGetGeneration.getClass() : "null", retObjectGetGeneration_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -282,12 +285,13 @@ public class GC extends NetObject  {
             retObjectGetAllocatedBytesForCurrentThread = classType.Invoke("GetAllocatedBytesForCurrentThread");
             return (long)retObjectGetAllocatedBytesForCurrentThread;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetAllocatedBytesForCurrentThread_ToString = retObjectGetAllocatedBytesForCurrentThread == null ? "null" : retObjectGetAllocatedBytesForCurrentThread.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetAllocatedBytesForCurrentThreadNumber = (java.lang.Number)retObjectGetAllocatedBytesForCurrentThread;
                 return retObjectGetAllocatedBytesForCurrentThreadNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetAllocatedBytesForCurrentThread != null ? retObjectGetAllocatedBytesForCurrentThread.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetAllocatedBytesForCurrentThread != null ? retObjectGetAllocatedBytesForCurrentThread.getClass() : "null", retObjectGetAllocatedBytesForCurrentThread_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -302,12 +306,13 @@ public class GC extends NetObject  {
             retObjectGetTotalAllocatedBytes = classType.Invoke("GetTotalAllocatedBytes", precise);
             return (long)retObjectGetTotalAllocatedBytes;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTotalAllocatedBytes_ToString = retObjectGetTotalAllocatedBytes == null ? "null" : retObjectGetTotalAllocatedBytes.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTotalAllocatedBytesNumber = (java.lang.Number)retObjectGetTotalAllocatedBytes;
                 return retObjectGetTotalAllocatedBytesNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetTotalAllocatedBytes != null ? retObjectGetTotalAllocatedBytes.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetTotalAllocatedBytes != null ? retObjectGetTotalAllocatedBytes.getClass() : "null", retObjectGetTotalAllocatedBytes_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -322,12 +327,13 @@ public class GC extends NetObject  {
             retObjectGetTotalMemory = classType.Invoke("GetTotalMemory", forceFullCollection);
             return (long)retObjectGetTotalMemory;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTotalMemory_ToString = retObjectGetTotalMemory == null ? "null" : retObjectGetTotalMemory.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTotalMemoryNumber = (java.lang.Number)retObjectGetTotalMemory;
                 return retObjectGetTotalMemoryNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetTotalMemory != null ? retObjectGetTotalMemory.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetTotalMemory != null ? retObjectGetTotalMemory.getClass() : "null", retObjectGetTotalMemory_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -641,12 +647,13 @@ public class GC extends NetObject  {
             retObjectMaxGeneration = classType.Get("MaxGeneration");
             return (int)retObjectMaxGeneration;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxGeneration_ToString = retObjectMaxGeneration == null ? "null" : retObjectMaxGeneration.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxGenerationNumber = (java.lang.Number)retObjectMaxGeneration;
                 return retObjectMaxGenerationNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxGeneration != null ? retObjectMaxGeneration.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxGeneration != null ? retObjectMaxGeneration.getClass() : "null", retObjectMaxGeneration_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

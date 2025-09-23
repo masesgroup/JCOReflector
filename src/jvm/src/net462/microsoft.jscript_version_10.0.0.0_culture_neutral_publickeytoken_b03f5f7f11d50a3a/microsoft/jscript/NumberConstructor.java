@@ -163,12 +163,13 @@ public class NumberConstructor extends ScriptFunction  {
             retObjectInvoke = classInstance.Invoke("Invoke", arg == null ? null : arg.getJCOInstance());
             return (double)retObjectInvoke;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInvoke_ToString = retObjectInvoke == null ? "null" : retObjectInvoke.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectInvokeNumber = (java.lang.Number)retObjectInvoke;
                 return retObjectInvokeNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectInvoke != null ? retObjectInvoke.getClass() : "null", retObjectInvoke_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

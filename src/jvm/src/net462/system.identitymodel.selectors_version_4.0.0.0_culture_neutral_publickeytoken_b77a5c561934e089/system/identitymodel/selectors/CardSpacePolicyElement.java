@@ -191,12 +191,13 @@ public class CardSpacePolicyElement extends NetObject  {
             retObjectPolicyNoticeVersion = classInstance.Get("PolicyNoticeVersion");
             return (int)retObjectPolicyNoticeVersion;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPolicyNoticeVersion_ToString = retObjectPolicyNoticeVersion == null ? "null" : retObjectPolicyNoticeVersion.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectPolicyNoticeVersionNumber = (java.lang.Number)retObjectPolicyNoticeVersion;
                 return retObjectPolicyNoticeVersionNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPolicyNoticeVersion != null ? retObjectPolicyNoticeVersion.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPolicyNoticeVersion != null ? retObjectPolicyNoticeVersion.getClass() : "null", retObjectPolicyNoticeVersion_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

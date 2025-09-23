@@ -269,12 +269,13 @@ public class ObjectPoolingAttribute extends Attribute  {
             retObjectCreationTimeout = classInstance.Get("CreationTimeout");
             return (int)retObjectCreationTimeout;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCreationTimeout_ToString = retObjectCreationTimeout == null ? "null" : retObjectCreationTimeout.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCreationTimeoutNumber = (java.lang.Number)retObjectCreationTimeout;
                 return retObjectCreationTimeoutNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCreationTimeout != null ? retObjectCreationTimeout.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCreationTimeout != null ? retObjectCreationTimeout.getClass() : "null", retObjectCreationTimeout_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -299,12 +300,13 @@ public class ObjectPoolingAttribute extends Attribute  {
             retObjectMaxPoolSize = classInstance.Get("MaxPoolSize");
             return (int)retObjectMaxPoolSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxPoolSize_ToString = retObjectMaxPoolSize == null ? "null" : retObjectMaxPoolSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxPoolSizeNumber = (java.lang.Number)retObjectMaxPoolSize;
                 return retObjectMaxPoolSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxPoolSize != null ? retObjectMaxPoolSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxPoolSize != null ? retObjectMaxPoolSize.getClass() : "null", retObjectMaxPoolSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -329,12 +331,13 @@ public class ObjectPoolingAttribute extends Attribute  {
             retObjectMinPoolSize = classInstance.Get("MinPoolSize");
             return (int)retObjectMinPoolSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinPoolSize_ToString = retObjectMinPoolSize == null ? "null" : retObjectMinPoolSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinPoolSizeNumber = (java.lang.Number)retObjectMinPoolSize;
                 return retObjectMinPoolSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinPoolSize != null ? retObjectMinPoolSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinPoolSize != null ? retObjectMinPoolSize.getClass() : "null", retObjectMinPoolSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

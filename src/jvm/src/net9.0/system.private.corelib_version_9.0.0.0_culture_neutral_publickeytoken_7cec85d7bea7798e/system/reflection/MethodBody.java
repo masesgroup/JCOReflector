@@ -202,12 +202,13 @@ public class MethodBody extends NetObject  {
             retObjectLocalSignatureMetadataToken = classInstance.Get("LocalSignatureMetadataToken");
             return (int)retObjectLocalSignatureMetadataToken;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLocalSignatureMetadataToken_ToString = retObjectLocalSignatureMetadataToken == null ? "null" : retObjectLocalSignatureMetadataToken.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLocalSignatureMetadataTokenNumber = (java.lang.Number)retObjectLocalSignatureMetadataToken;
                 return retObjectLocalSignatureMetadataTokenNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLocalSignatureMetadataToken != null ? retObjectLocalSignatureMetadataToken.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLocalSignatureMetadataToken != null ? retObjectLocalSignatureMetadataToken.getClass() : "null", retObjectLocalSignatureMetadataToken_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -222,12 +223,13 @@ public class MethodBody extends NetObject  {
             retObjectMaxStackSize = classInstance.Get("MaxStackSize");
             return (int)retObjectMaxStackSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxStackSize_ToString = retObjectMaxStackSize == null ? "null" : retObjectMaxStackSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxStackSizeNumber = (java.lang.Number)retObjectMaxStackSize;
                 return retObjectMaxStackSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxStackSize != null ? retObjectMaxStackSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxStackSize != null ? retObjectMaxStackSize.getClass() : "null", retObjectMaxStackSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

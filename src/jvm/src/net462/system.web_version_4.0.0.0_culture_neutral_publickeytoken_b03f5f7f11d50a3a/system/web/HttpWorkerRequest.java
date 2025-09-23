@@ -349,12 +349,13 @@ public class HttpWorkerRequest extends NetObject  {
             retObjectEndRead = classInstance.Invoke("EndRead", asyncResult == null ? null : asyncResult.getJCOInstance());
             return (int)retObjectEndRead;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndRead_ToString = retObjectEndRead == null ? "null" : retObjectEndRead.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEndReadNumber = (java.lang.Number)retObjectEndRead;
                 return retObjectEndReadNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEndRead != null ? retObjectEndRead.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndRead != null ? retObjectEndRead.getClass() : "null", retObjectEndRead_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -369,12 +370,13 @@ public class HttpWorkerRequest extends NetObject  {
             retObjectGetClientCertificateEncoding = classInstance.Invoke("GetClientCertificateEncoding");
             return (int)retObjectGetClientCertificateEncoding;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetClientCertificateEncoding_ToString = retObjectGetClientCertificateEncoding == null ? "null" : retObjectGetClientCertificateEncoding.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetClientCertificateEncodingNumber = (java.lang.Number)retObjectGetClientCertificateEncoding;
                 return retObjectGetClientCertificateEncodingNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetClientCertificateEncoding != null ? retObjectGetClientCertificateEncoding.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetClientCertificateEncoding != null ? retObjectGetClientCertificateEncoding.getClass() : "null", retObjectGetClientCertificateEncoding_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -389,12 +391,13 @@ public class HttpWorkerRequest extends NetObject  {
             retObjectGetKnownRequestHeaderIndex = classType.Invoke("GetKnownRequestHeaderIndex", header);
             return (int)retObjectGetKnownRequestHeaderIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetKnownRequestHeaderIndex_ToString = retObjectGetKnownRequestHeaderIndex == null ? "null" : retObjectGetKnownRequestHeaderIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetKnownRequestHeaderIndexNumber = (java.lang.Number)retObjectGetKnownRequestHeaderIndex;
                 return retObjectGetKnownRequestHeaderIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetKnownRequestHeaderIndex != null ? retObjectGetKnownRequestHeaderIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetKnownRequestHeaderIndex != null ? retObjectGetKnownRequestHeaderIndex.getClass() : "null", retObjectGetKnownRequestHeaderIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -409,12 +412,13 @@ public class HttpWorkerRequest extends NetObject  {
             retObjectGetKnownResponseHeaderIndex = classType.Invoke("GetKnownResponseHeaderIndex", header);
             return (int)retObjectGetKnownResponseHeaderIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetKnownResponseHeaderIndex_ToString = retObjectGetKnownResponseHeaderIndex == null ? "null" : retObjectGetKnownResponseHeaderIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetKnownResponseHeaderIndexNumber = (java.lang.Number)retObjectGetKnownResponseHeaderIndex;
                 return retObjectGetKnownResponseHeaderIndexNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetKnownResponseHeaderIndex != null ? retObjectGetKnownResponseHeaderIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetKnownResponseHeaderIndex != null ? retObjectGetKnownResponseHeaderIndex.getClass() : "null", retObjectGetKnownResponseHeaderIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -429,12 +433,13 @@ public class HttpWorkerRequest extends NetObject  {
             retObjectGetLocalPort = classInstance.Invoke("GetLocalPort");
             return (int)retObjectGetLocalPort;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLocalPort_ToString = retObjectGetLocalPort == null ? "null" : retObjectGetLocalPort.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetLocalPortNumber = (java.lang.Number)retObjectGetLocalPort;
                 return retObjectGetLocalPortNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetLocalPort != null ? retObjectGetLocalPort.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetLocalPort != null ? retObjectGetLocalPort.getClass() : "null", retObjectGetLocalPort_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -449,12 +454,13 @@ public class HttpWorkerRequest extends NetObject  {
             retObjectGetPreloadedEntityBody = classInstance.Invoke("GetPreloadedEntityBody", buffer, offset);
             return (int)retObjectGetPreloadedEntityBody;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetPreloadedEntityBody_ToString = retObjectGetPreloadedEntityBody == null ? "null" : retObjectGetPreloadedEntityBody.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetPreloadedEntityBodyNumber = (java.lang.Number)retObjectGetPreloadedEntityBody;
                 return retObjectGetPreloadedEntityBodyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetPreloadedEntityBody != null ? retObjectGetPreloadedEntityBody.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetPreloadedEntityBody != null ? retObjectGetPreloadedEntityBody.getClass() : "null", retObjectGetPreloadedEntityBody_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -469,12 +475,13 @@ public class HttpWorkerRequest extends NetObject  {
             retObjectGetPreloadedEntityBody = classInstance.Invoke("GetPreloadedEntityBody", dupParam0.getJCRefOut(), dupParam1);
             return (int)retObjectGetPreloadedEntityBody;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetPreloadedEntityBody_ToString = retObjectGetPreloadedEntityBody == null ? "null" : retObjectGetPreloadedEntityBody.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetPreloadedEntityBodyNumber = (java.lang.Number)retObjectGetPreloadedEntityBody;
                 return retObjectGetPreloadedEntityBodyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetPreloadedEntityBody != null ? retObjectGetPreloadedEntityBody.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetPreloadedEntityBody != null ? retObjectGetPreloadedEntityBody.getClass() : "null", retObjectGetPreloadedEntityBody_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -489,12 +496,13 @@ public class HttpWorkerRequest extends NetObject  {
             retObjectGetPreloadedEntityBodyLength = classInstance.Invoke("GetPreloadedEntityBodyLength");
             return (int)retObjectGetPreloadedEntityBodyLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetPreloadedEntityBodyLength_ToString = retObjectGetPreloadedEntityBodyLength == null ? "null" : retObjectGetPreloadedEntityBodyLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetPreloadedEntityBodyLengthNumber = (java.lang.Number)retObjectGetPreloadedEntityBodyLength;
                 return retObjectGetPreloadedEntityBodyLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetPreloadedEntityBodyLength != null ? retObjectGetPreloadedEntityBodyLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetPreloadedEntityBodyLength != null ? retObjectGetPreloadedEntityBodyLength.getClass() : "null", retObjectGetPreloadedEntityBodyLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -509,12 +517,13 @@ public class HttpWorkerRequest extends NetObject  {
             retObjectGetRemotePort = classInstance.Invoke("GetRemotePort");
             return (int)retObjectGetRemotePort;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetRemotePort_ToString = retObjectGetRemotePort == null ? "null" : retObjectGetRemotePort.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetRemotePortNumber = (java.lang.Number)retObjectGetRemotePort;
                 return retObjectGetRemotePortNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetRemotePort != null ? retObjectGetRemotePort.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetRemotePort != null ? retObjectGetRemotePort.getClass() : "null", retObjectGetRemotePort_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -529,12 +538,13 @@ public class HttpWorkerRequest extends NetObject  {
             retObjectGetRequestReason = classInstance.Invoke("GetRequestReason");
             return (int)retObjectGetRequestReason;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetRequestReason_ToString = retObjectGetRequestReason == null ? "null" : retObjectGetRequestReason.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetRequestReasonNumber = (java.lang.Number)retObjectGetRequestReason;
                 return retObjectGetRequestReasonNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetRequestReason != null ? retObjectGetRequestReason.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetRequestReason != null ? retObjectGetRequestReason.getClass() : "null", retObjectGetRequestReason_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -549,12 +559,13 @@ public class HttpWorkerRequest extends NetObject  {
             retObjectGetTotalEntityBodyLength = classInstance.Invoke("GetTotalEntityBodyLength");
             return (int)retObjectGetTotalEntityBodyLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTotalEntityBodyLength_ToString = retObjectGetTotalEntityBodyLength == null ? "null" : retObjectGetTotalEntityBodyLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetTotalEntityBodyLengthNumber = (java.lang.Number)retObjectGetTotalEntityBodyLength;
                 return retObjectGetTotalEntityBodyLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTotalEntityBodyLength != null ? retObjectGetTotalEntityBodyLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTotalEntityBodyLength != null ? retObjectGetTotalEntityBodyLength.getClass() : "null", retObjectGetTotalEntityBodyLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -569,12 +580,13 @@ public class HttpWorkerRequest extends NetObject  {
             retObjectReadEntityBody = classInstance.Invoke("ReadEntityBody", buffer, size);
             return (int)retObjectReadEntityBody;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadEntityBody_ToString = retObjectReadEntityBody == null ? "null" : retObjectReadEntityBody.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadEntityBodyNumber = (java.lang.Number)retObjectReadEntityBody;
                 return retObjectReadEntityBodyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadEntityBody != null ? retObjectReadEntityBody.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadEntityBody != null ? retObjectReadEntityBody.getClass() : "null", retObjectReadEntityBody_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -589,12 +601,13 @@ public class HttpWorkerRequest extends NetObject  {
             retObjectReadEntityBody = classInstance.Invoke("ReadEntityBody", dupParam0.getJCRefOut(), dupParam1);
             return (int)retObjectReadEntityBody;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadEntityBody_ToString = retObjectReadEntityBody == null ? "null" : retObjectReadEntityBody.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadEntityBodyNumber = (java.lang.Number)retObjectReadEntityBody;
                 return retObjectReadEntityBodyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadEntityBody != null ? retObjectReadEntityBody.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadEntityBody != null ? retObjectReadEntityBody.getClass() : "null", retObjectReadEntityBody_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -609,12 +622,13 @@ public class HttpWorkerRequest extends NetObject  {
             retObjectReadEntityBody = classInstance.Invoke("ReadEntityBody", buffer, offset, size);
             return (int)retObjectReadEntityBody;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadEntityBody_ToString = retObjectReadEntityBody == null ? "null" : retObjectReadEntityBody.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadEntityBodyNumber = (java.lang.Number)retObjectReadEntityBody;
                 return retObjectReadEntityBodyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadEntityBody != null ? retObjectReadEntityBody.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadEntityBody != null ? retObjectReadEntityBody.getClass() : "null", retObjectReadEntityBody_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -629,12 +643,13 @@ public class HttpWorkerRequest extends NetObject  {
             retObjectReadEntityBody = classInstance.Invoke("ReadEntityBody", dupParam0.getJCRefOut(), dupParam1, dupParam2);
             return (int)retObjectReadEntityBody;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadEntityBody_ToString = retObjectReadEntityBody == null ? "null" : retObjectReadEntityBody.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectReadEntityBodyNumber = (java.lang.Number)retObjectReadEntityBody;
                 return retObjectReadEntityBodyNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadEntityBody != null ? retObjectReadEntityBody.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadEntityBody != null ? retObjectReadEntityBody.getClass() : "null", retObjectReadEntityBody_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -649,12 +664,13 @@ public class HttpWorkerRequest extends NetObject  {
             retObjectGetBytesRead = classInstance.Invoke("GetBytesRead");
             return (long)retObjectGetBytesRead;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetBytesRead_ToString = retObjectGetBytesRead == null ? "null" : retObjectGetBytesRead.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetBytesReadNumber = (java.lang.Number)retObjectGetBytesRead;
                 return retObjectGetBytesReadNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetBytesRead != null ? retObjectGetBytesRead.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetBytesRead != null ? retObjectGetBytesRead.getClass() : "null", retObjectGetBytesRead_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -669,12 +685,13 @@ public class HttpWorkerRequest extends NetObject  {
             retObjectGetConnectionID = classInstance.Invoke("GetConnectionID");
             return (long)retObjectGetConnectionID;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetConnectionID_ToString = retObjectGetConnectionID == null ? "null" : retObjectGetConnectionID.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetConnectionIDNumber = (java.lang.Number)retObjectGetConnectionID;
                 return retObjectGetConnectionIDNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetConnectionID != null ? retObjectGetConnectionID.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetConnectionID != null ? retObjectGetConnectionID.getClass() : "null", retObjectGetConnectionID_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -689,12 +706,13 @@ public class HttpWorkerRequest extends NetObject  {
             retObjectGetUrlContextID = classInstance.Invoke("GetUrlContextID");
             return (long)retObjectGetUrlContextID;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetUrlContextID_ToString = retObjectGetUrlContextID == null ? "null" : retObjectGetUrlContextID.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetUrlContextIDNumber = (java.lang.Number)retObjectGetUrlContextID;
                 return retObjectGetUrlContextIDNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetUrlContextID != null ? retObjectGetUrlContextID.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetUrlContextID != null ? retObjectGetUrlContextID.getClass() : "null", retObjectGetUrlContextID_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

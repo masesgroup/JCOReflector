@@ -207,12 +207,13 @@ public class ContextMenuService extends NetObject  {
             retObjectGetHorizontalOffset = classType.Invoke("GetHorizontalOffset", element == null ? null : element.getJCOInstance());
             return (double)retObjectGetHorizontalOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetHorizontalOffset_ToString = retObjectGetHorizontalOffset == null ? "null" : retObjectGetHorizontalOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetHorizontalOffsetNumber = (java.lang.Number)retObjectGetHorizontalOffset;
                 return retObjectGetHorizontalOffsetNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetHorizontalOffset != null ? retObjectGetHorizontalOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetHorizontalOffset != null ? retObjectGetHorizontalOffset.getClass() : "null", retObjectGetHorizontalOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -227,12 +228,13 @@ public class ContextMenuService extends NetObject  {
             retObjectGetVerticalOffset = classType.Invoke("GetVerticalOffset", element == null ? null : element.getJCOInstance());
             return (double)retObjectGetVerticalOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetVerticalOffset_ToString = retObjectGetVerticalOffset == null ? "null" : retObjectGetVerticalOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetVerticalOffsetNumber = (java.lang.Number)retObjectGetVerticalOffset;
                 return retObjectGetVerticalOffsetNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetVerticalOffset != null ? retObjectGetVerticalOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetVerticalOffset != null ? retObjectGetVerticalOffset.getClass() : "null", retObjectGetVerticalOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -188,12 +188,13 @@ public class AttachablePropertyServices extends NetObject  {
             retObjectGetAttachedPropertyCount = classType.Invoke("GetAttachedPropertyCount", instance == null ? null : instance.getJCOInstance());
             return (int)retObjectGetAttachedPropertyCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetAttachedPropertyCount_ToString = retObjectGetAttachedPropertyCount == null ? "null" : retObjectGetAttachedPropertyCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetAttachedPropertyCountNumber = (java.lang.Number)retObjectGetAttachedPropertyCount;
                 return retObjectGetAttachedPropertyCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetAttachedPropertyCount != null ? retObjectGetAttachedPropertyCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetAttachedPropertyCount != null ? retObjectGetAttachedPropertyCount.getClass() : "null", retObjectGetAttachedPropertyCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

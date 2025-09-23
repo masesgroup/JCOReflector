@@ -403,12 +403,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
             retObjectToOADate = classInstance.Invoke("ToOADate");
             return (double)retObjectToOADate;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToOADate_ToString = retObjectToOADate == null ? "null" : retObjectToOADate.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToOADateNumber = (java.lang.Number)retObjectToOADate;
                 return retObjectToOADateNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectToOADate != null ? retObjectToOADate.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectToOADate != null ? retObjectToOADate.getClass() : "null", retObjectToOADate_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -423,12 +424,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
             retObjectCompare = classType.Invoke("Compare", t1 == null ? null : t1.getJCOInstance(), t2 == null ? null : t2.getJCOInstance());
             return (int)retObjectCompare;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompare_ToString = retObjectCompare == null ? "null" : retObjectCompare.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareNumber = (java.lang.Number)retObjectCompare;
                 return retObjectCompareNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompare != null ? retObjectCompare.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompare != null ? retObjectCompare.getClass() : "null", retObjectCompare_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -443,12 +445,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
             retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
             return (int)retObjectCompareTo;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
                 return retObjectCompareToNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -463,12 +466,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
             retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
             return (int)retObjectCompareTo;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
                 return retObjectCompareToNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -483,12 +487,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
             retObjectDaysInMonth = classType.Invoke("DaysInMonth", year, month);
             return (int)retObjectDaysInMonth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDaysInMonth_ToString = retObjectDaysInMonth == null ? "null" : retObjectDaysInMonth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDaysInMonthNumber = (java.lang.Number)retObjectDaysInMonth;
                 return retObjectDaysInMonthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDaysInMonth != null ? retObjectDaysInMonth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDaysInMonth != null ? retObjectDaysInMonth.getClass() : "null", retObjectDaysInMonth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -503,12 +508,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
             retObjectToBinary = classInstance.Invoke("ToBinary");
             return (long)retObjectToBinary;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToBinary_ToString = retObjectToBinary == null ? "null" : retObjectToBinary.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToBinaryNumber = (java.lang.Number)retObjectToBinary;
                 return retObjectToBinaryNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectToBinary != null ? retObjectToBinary.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectToBinary != null ? retObjectToBinary.getClass() : "null", retObjectToBinary_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -523,12 +529,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
             retObjectToFileTime = classInstance.Invoke("ToFileTime");
             return (long)retObjectToFileTime;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToFileTime_ToString = retObjectToFileTime == null ? "null" : retObjectToFileTime.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToFileTimeNumber = (java.lang.Number)retObjectToFileTime;
                 return retObjectToFileTimeNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectToFileTime != null ? retObjectToFileTime.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectToFileTime != null ? retObjectToFileTime.getClass() : "null", retObjectToFileTime_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -543,12 +550,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
             retObjectToFileTimeUtc = classInstance.Invoke("ToFileTimeUtc");
             return (long)retObjectToFileTimeUtc;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToFileTimeUtc_ToString = retObjectToFileTimeUtc == null ? "null" : retObjectToFileTimeUtc.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectToFileTimeUtcNumber = (java.lang.Number)retObjectToFileTimeUtc;
                 return retObjectToFileTimeUtcNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectToFileTimeUtc != null ? retObjectToFileTimeUtc.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectToFileTimeUtc != null ? retObjectToFileTimeUtc.getClass() : "null", retObjectToFileTimeUtc_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1291,12 +1299,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
             retObjectDay = classInstance.Get("Day");
             return (int)retObjectDay;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDay_ToString = retObjectDay == null ? "null" : retObjectDay.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDayNumber = (java.lang.Number)retObjectDay;
                 return retObjectDayNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDay != null ? retObjectDay.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDay != null ? retObjectDay.getClass() : "null", retObjectDay_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1311,12 +1320,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
             retObjectDayOfYear = classInstance.Get("DayOfYear");
             return (int)retObjectDayOfYear;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDayOfYear_ToString = retObjectDayOfYear == null ? "null" : retObjectDayOfYear.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectDayOfYearNumber = (java.lang.Number)retObjectDayOfYear;
                 return retObjectDayOfYearNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDayOfYear != null ? retObjectDayOfYear.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDayOfYear != null ? retObjectDayOfYear.getClass() : "null", retObjectDayOfYear_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1331,12 +1341,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
             retObjectHour = classInstance.Get("Hour");
             return (int)retObjectHour;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHour_ToString = retObjectHour == null ? "null" : retObjectHour.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectHourNumber = (java.lang.Number)retObjectHour;
                 return retObjectHourNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectHour != null ? retObjectHour.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHour != null ? retObjectHour.getClass() : "null", retObjectHour_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1351,12 +1362,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
             retObjectMillisecond = classInstance.Get("Millisecond");
             return (int)retObjectMillisecond;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMillisecond_ToString = retObjectMillisecond == null ? "null" : retObjectMillisecond.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMillisecondNumber = (java.lang.Number)retObjectMillisecond;
                 return retObjectMillisecondNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMillisecond != null ? retObjectMillisecond.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMillisecond != null ? retObjectMillisecond.getClass() : "null", retObjectMillisecond_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1371,12 +1383,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
             retObjectMinute = classInstance.Get("Minute");
             return (int)retObjectMinute;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinute_ToString = retObjectMinute == null ? "null" : retObjectMinute.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMinuteNumber = (java.lang.Number)retObjectMinute;
                 return retObjectMinuteNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinute != null ? retObjectMinute.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinute != null ? retObjectMinute.getClass() : "null", retObjectMinute_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1391,12 +1404,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
             retObjectMonth = classInstance.Get("Month");
             return (int)retObjectMonth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMonth_ToString = retObjectMonth == null ? "null" : retObjectMonth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMonthNumber = (java.lang.Number)retObjectMonth;
                 return retObjectMonthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMonth != null ? retObjectMonth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMonth != null ? retObjectMonth.getClass() : "null", retObjectMonth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1411,12 +1425,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
             retObjectSecond = classInstance.Get("Second");
             return (int)retObjectSecond;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSecond_ToString = retObjectSecond == null ? "null" : retObjectSecond.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectSecondNumber = (java.lang.Number)retObjectSecond;
                 return retObjectSecondNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSecond != null ? retObjectSecond.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSecond != null ? retObjectSecond.getClass() : "null", retObjectSecond_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1431,12 +1446,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
             retObjectYear = classInstance.Get("Year");
             return (int)retObjectYear;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectYear_ToString = retObjectYear == null ? "null" : retObjectYear.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectYearNumber = (java.lang.Number)retObjectYear;
                 return retObjectYearNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectYear != null ? retObjectYear.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectYear != null ? retObjectYear.getClass() : "null", retObjectYear_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1451,12 +1467,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
             retObjectTicks = classInstance.Get("Ticks");
             return (long)retObjectTicks;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTicks_ToString = retObjectTicks == null ? "null" : retObjectTicks.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTicksNumber = (java.lang.Number)retObjectTicks;
                 return retObjectTicksNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTicks != null ? retObjectTicks.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectTicks != null ? retObjectTicks.getClass() : "null", retObjectTicks_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

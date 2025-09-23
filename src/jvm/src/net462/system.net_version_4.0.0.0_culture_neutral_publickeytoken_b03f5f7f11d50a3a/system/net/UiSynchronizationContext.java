@@ -164,12 +164,13 @@ public class UiSynchronizationContext extends NetObject  {
             retObjectManagedUiThreadId = classType.Get("ManagedUiThreadId");
             return (int)retObjectManagedUiThreadId;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectManagedUiThreadId_ToString = retObjectManagedUiThreadId == null ? "null" : retObjectManagedUiThreadId.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectManagedUiThreadIdNumber = (java.lang.Number)retObjectManagedUiThreadId;
                 return retObjectManagedUiThreadIdNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectManagedUiThreadId != null ? retObjectManagedUiThreadId.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectManagedUiThreadId != null ? retObjectManagedUiThreadId.getClass() : "null", retObjectManagedUiThreadId_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

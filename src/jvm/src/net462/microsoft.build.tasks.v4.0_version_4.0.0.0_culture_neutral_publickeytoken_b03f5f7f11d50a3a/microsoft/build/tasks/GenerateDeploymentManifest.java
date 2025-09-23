@@ -316,12 +316,13 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
             retObjectUpdateInterval = classInstance.Get("UpdateInterval");
             return (int)retObjectUpdateInterval;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUpdateInterval_ToString = retObjectUpdateInterval == null ? "null" : retObjectUpdateInterval.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectUpdateIntervalNumber = (java.lang.Number)retObjectUpdateInterval;
                 return retObjectUpdateIntervalNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectUpdateInterval != null ? retObjectUpdateInterval.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUpdateInterval != null ? retObjectUpdateInterval.getClass() : "null", retObjectUpdateInterval_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

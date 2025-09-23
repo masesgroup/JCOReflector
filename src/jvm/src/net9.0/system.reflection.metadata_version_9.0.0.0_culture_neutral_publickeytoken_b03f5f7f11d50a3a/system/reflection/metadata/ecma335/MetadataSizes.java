@@ -162,12 +162,13 @@ public class MetadataSizes extends NetObject  {
             retObjectGetAlignedHeapSize = classInstance.Invoke("GetAlignedHeapSize", index == null ? null : index.getJCOInstance());
             return (int)retObjectGetAlignedHeapSize;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetAlignedHeapSize_ToString = retObjectGetAlignedHeapSize == null ? "null" : retObjectGetAlignedHeapSize.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetAlignedHeapSizeNumber = (java.lang.Number)retObjectGetAlignedHeapSize;
                 return retObjectGetAlignedHeapSizeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetAlignedHeapSize != null ? retObjectGetAlignedHeapSize.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetAlignedHeapSize != null ? retObjectGetAlignedHeapSize.getClass() : "null", retObjectGetAlignedHeapSize_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

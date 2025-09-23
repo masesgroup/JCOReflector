@@ -368,12 +368,13 @@ public class HostingEnvironment extends MarshalByRefObject  {
             retObjectMaxConcurrentRequestsPerCPU = classType.Get("MaxConcurrentRequestsPerCPU");
             return (int)retObjectMaxConcurrentRequestsPerCPU;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxConcurrentRequestsPerCPU_ToString = retObjectMaxConcurrentRequestsPerCPU == null ? "null" : retObjectMaxConcurrentRequestsPerCPU.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxConcurrentRequestsPerCPUNumber = (java.lang.Number)retObjectMaxConcurrentRequestsPerCPU;
                 return retObjectMaxConcurrentRequestsPerCPUNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxConcurrentRequestsPerCPU != null ? retObjectMaxConcurrentRequestsPerCPU.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxConcurrentRequestsPerCPU != null ? retObjectMaxConcurrentRequestsPerCPU.getClass() : "null", retObjectMaxConcurrentRequestsPerCPU_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -398,12 +399,13 @@ public class HostingEnvironment extends MarshalByRefObject  {
             retObjectMaxConcurrentThreadsPerCPU = classType.Get("MaxConcurrentThreadsPerCPU");
             return (int)retObjectMaxConcurrentThreadsPerCPU;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxConcurrentThreadsPerCPU_ToString = retObjectMaxConcurrentThreadsPerCPU == null ? "null" : retObjectMaxConcurrentThreadsPerCPU.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxConcurrentThreadsPerCPUNumber = (java.lang.Number)retObjectMaxConcurrentThreadsPerCPU;
                 return retObjectMaxConcurrentThreadsPerCPUNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxConcurrentThreadsPerCPU != null ? retObjectMaxConcurrentThreadsPerCPU.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxConcurrentThreadsPerCPU != null ? retObjectMaxConcurrentThreadsPerCPU.getClass() : "null", retObjectMaxConcurrentThreadsPerCPU_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

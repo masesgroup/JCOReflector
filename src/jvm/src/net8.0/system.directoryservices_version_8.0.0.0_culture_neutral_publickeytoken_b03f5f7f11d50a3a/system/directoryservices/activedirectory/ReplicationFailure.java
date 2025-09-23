@@ -166,12 +166,13 @@ public class ReplicationFailure extends NetObject  {
             retObjectConsecutiveFailureCount = classInstance.Get("ConsecutiveFailureCount");
             return (int)retObjectConsecutiveFailureCount;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConsecutiveFailureCount_ToString = retObjectConsecutiveFailureCount == null ? "null" : retObjectConsecutiveFailureCount.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectConsecutiveFailureCountNumber = (java.lang.Number)retObjectConsecutiveFailureCount;
                 return retObjectConsecutiveFailureCountNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectConsecutiveFailureCount != null ? retObjectConsecutiveFailureCount.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectConsecutiveFailureCount != null ? retObjectConsecutiveFailureCount.getClass() : "null", retObjectConsecutiveFailureCount_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -186,12 +187,13 @@ public class ReplicationFailure extends NetObject  {
             retObjectLastErrorCode = classInstance.Get("LastErrorCode");
             return (int)retObjectLastErrorCode;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLastErrorCode_ToString = retObjectLastErrorCode == null ? "null" : retObjectLastErrorCode.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLastErrorCodeNumber = (java.lang.Number)retObjectLastErrorCode;
                 return retObjectLastErrorCodeNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLastErrorCode != null ? retObjectLastErrorCode.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLastErrorCode != null ? retObjectLastErrorCode.getClass() : "null", retObjectLastErrorCode_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

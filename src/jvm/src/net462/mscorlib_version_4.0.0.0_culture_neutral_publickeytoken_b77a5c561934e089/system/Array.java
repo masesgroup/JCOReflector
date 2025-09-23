@@ -168,12 +168,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
             retObjectBinarySearch = classType.Invoke("BinarySearch", array == null ? null : array.getJCOInstance(), index, length, value == null ? null : value.getJCOInstance());
             return (int)retObjectBinarySearch;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBinarySearch_ToString = retObjectBinarySearch == null ? "null" : retObjectBinarySearch.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBinarySearchNumber = (java.lang.Number)retObjectBinarySearch;
                 return retObjectBinarySearchNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBinarySearch != null ? retObjectBinarySearch.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBinarySearch != null ? retObjectBinarySearch.getClass() : "null", retObjectBinarySearch_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -188,12 +189,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
             retObjectBinarySearch = classType.Invoke("BinarySearch", array == null ? null : array.getJCOInstance(), index, length, value == null ? null : value.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
             return (int)retObjectBinarySearch;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBinarySearch_ToString = retObjectBinarySearch == null ? "null" : retObjectBinarySearch.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBinarySearchNumber = (java.lang.Number)retObjectBinarySearch;
                 return retObjectBinarySearchNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBinarySearch != null ? retObjectBinarySearch.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBinarySearch != null ? retObjectBinarySearch.getClass() : "null", retObjectBinarySearch_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -208,12 +210,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
             retObjectBinarySearch = classType.Invoke("BinarySearch", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance());
             return (int)retObjectBinarySearch;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBinarySearch_ToString = retObjectBinarySearch == null ? "null" : retObjectBinarySearch.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBinarySearchNumber = (java.lang.Number)retObjectBinarySearch;
                 return retObjectBinarySearchNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBinarySearch != null ? retObjectBinarySearch.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBinarySearch != null ? retObjectBinarySearch.getClass() : "null", retObjectBinarySearch_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -228,12 +231,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
             retObjectBinarySearch = classType.Invoke("BinarySearch", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
             return (int)retObjectBinarySearch;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBinarySearch_ToString = retObjectBinarySearch == null ? "null" : retObjectBinarySearch.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBinarySearchNumber = (java.lang.Number)retObjectBinarySearch;
                 return retObjectBinarySearchNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBinarySearch != null ? retObjectBinarySearch.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBinarySearch != null ? retObjectBinarySearch.getClass() : "null", retObjectBinarySearch_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -248,12 +252,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
             retObjectGetLength = classInstance.Invoke("GetLength", dimension);
             return (int)retObjectGetLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLength_ToString = retObjectGetLength == null ? "null" : retObjectGetLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetLengthNumber = (java.lang.Number)retObjectGetLength;
                 return retObjectGetLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetLength != null ? retObjectGetLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetLength != null ? retObjectGetLength.getClass() : "null", retObjectGetLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -268,12 +273,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
             retObjectGetLowerBound = classInstance.Invoke("GetLowerBound", dimension);
             return (int)retObjectGetLowerBound;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLowerBound_ToString = retObjectGetLowerBound == null ? "null" : retObjectGetLowerBound.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetLowerBoundNumber = (java.lang.Number)retObjectGetLowerBound;
                 return retObjectGetLowerBoundNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetLowerBound != null ? retObjectGetLowerBound.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetLowerBound != null ? retObjectGetLowerBound.getClass() : "null", retObjectGetLowerBound_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -288,12 +294,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
             retObjectGetUpperBound = classInstance.Invoke("GetUpperBound", dimension);
             return (int)retObjectGetUpperBound;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetUpperBound_ToString = retObjectGetUpperBound == null ? "null" : retObjectGetUpperBound.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetUpperBoundNumber = (java.lang.Number)retObjectGetUpperBound;
                 return retObjectGetUpperBoundNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetUpperBound != null ? retObjectGetUpperBound.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetUpperBound != null ? retObjectGetUpperBound.getClass() : "null", retObjectGetUpperBound_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -308,12 +315,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
             retObjectIndexOf = classType.Invoke("IndexOf", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance());
             return (int)retObjectIndexOf;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
                 return retObjectIndexOfNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -328,12 +336,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
             retObjectIndexOf = classType.Invoke("IndexOf", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance(), startIndex);
             return (int)retObjectIndexOf;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
                 return retObjectIndexOfNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -348,12 +357,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
             retObjectIndexOf = classType.Invoke("IndexOf", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance(), startIndex, count);
             return (int)retObjectIndexOf;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
                 return retObjectIndexOfNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -368,12 +378,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
             retObjectLastIndexOf = classType.Invoke("LastIndexOf", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance());
             return (int)retObjectLastIndexOf;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLastIndexOf_ToString = retObjectLastIndexOf == null ? "null" : retObjectLastIndexOf.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLastIndexOfNumber = (java.lang.Number)retObjectLastIndexOf;
                 return retObjectLastIndexOfNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLastIndexOf != null ? retObjectLastIndexOf.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLastIndexOf != null ? retObjectLastIndexOf.getClass() : "null", retObjectLastIndexOf_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -388,12 +399,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
             retObjectLastIndexOf = classType.Invoke("LastIndexOf", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance(), startIndex);
             return (int)retObjectLastIndexOf;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLastIndexOf_ToString = retObjectLastIndexOf == null ? "null" : retObjectLastIndexOf.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLastIndexOfNumber = (java.lang.Number)retObjectLastIndexOf;
                 return retObjectLastIndexOfNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLastIndexOf != null ? retObjectLastIndexOf.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLastIndexOf != null ? retObjectLastIndexOf.getClass() : "null", retObjectLastIndexOf_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -408,12 +420,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
             retObjectLastIndexOf = classType.Invoke("LastIndexOf", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance(), startIndex, count);
             return (int)retObjectLastIndexOf;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLastIndexOf_ToString = retObjectLastIndexOf == null ? "null" : retObjectLastIndexOf.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLastIndexOfNumber = (java.lang.Number)retObjectLastIndexOf;
                 return retObjectLastIndexOfNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLastIndexOf != null ? retObjectLastIndexOf.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLastIndexOf != null ? retObjectLastIndexOf.getClass() : "null", retObjectLastIndexOf_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -428,12 +441,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
             retObjectGetLongLength = classInstance.Invoke("GetLongLength", dimension);
             return (long)retObjectGetLongLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLongLength_ToString = retObjectGetLongLength == null ? "null" : retObjectGetLongLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetLongLengthNumber = (java.lang.Number)retObjectGetLongLength;
                 return retObjectGetLongLengthNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetLongLength != null ? retObjectGetLongLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetLongLength != null ? retObjectGetLongLength.getClass() : "null", retObjectGetLongLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1134,12 +1148,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
             retObjectLength = classInstance.Get("Length");
             return (int)retObjectLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLength_ToString = retObjectLength == null ? "null" : retObjectLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLengthNumber = (java.lang.Number)retObjectLength;
                 return retObjectLengthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null", retObjectLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1154,12 +1169,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
             retObjectRank = classInstance.Get("Rank");
             return (int)retObjectRank;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRank_ToString = retObjectRank == null ? "null" : retObjectRank.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRankNumber = (java.lang.Number)retObjectRank;
                 return retObjectRankNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRank != null ? retObjectRank.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRank != null ? retObjectRank.getClass() : "null", retObjectRank_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1174,12 +1190,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
             retObjectLongLength = classInstance.Get("LongLength");
             return (long)retObjectLongLength;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLongLength_ToString = retObjectLongLength == null ? "null" : retObjectLongLength.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLongLengthNumber = (java.lang.Number)retObjectLongLength;
                 return retObjectLongLengthNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectLongLength != null ? retObjectLongLength.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectLongLength != null ? retObjectLongLength.getClass() : "null", retObjectLongLength_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

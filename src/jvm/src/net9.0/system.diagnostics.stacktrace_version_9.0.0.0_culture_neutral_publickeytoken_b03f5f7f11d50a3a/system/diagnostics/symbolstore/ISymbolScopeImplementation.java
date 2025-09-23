@@ -223,12 +223,13 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
             retObjectEndOffset = classInstance.Get("EndOffset");
             return (int)retObjectEndOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndOffset_ToString = retObjectEndOffset == null ? "null" : retObjectEndOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectEndOffsetNumber = (java.lang.Number)retObjectEndOffset;
                 return retObjectEndOffsetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectEndOffset != null ? retObjectEndOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndOffset != null ? retObjectEndOffset.getClass() : "null", retObjectEndOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -243,12 +244,13 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
             retObjectStartOffset = classInstance.Get("StartOffset");
             return (int)retObjectStartOffset;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartOffset_ToString = retObjectStartOffset == null ? "null" : retObjectStartOffset.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectStartOffsetNumber = (java.lang.Number)retObjectStartOffset;
                 return retObjectStartOffsetNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStartOffset != null ? retObjectStartOffset.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartOffset != null ? retObjectStartOffset.getClass() : "null", retObjectStartOffset_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

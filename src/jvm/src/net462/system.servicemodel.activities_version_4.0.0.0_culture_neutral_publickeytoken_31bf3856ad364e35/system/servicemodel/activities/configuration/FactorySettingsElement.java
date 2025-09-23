@@ -173,12 +173,13 @@ public class FactorySettingsElement extends ConfigurationElement  {
             retObjectMaxItemsInCache = classInstance.Get("MaxItemsInCache");
             return (int)retObjectMaxItemsInCache;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxItemsInCache_ToString = retObjectMaxItemsInCache == null ? "null" : retObjectMaxItemsInCache.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectMaxItemsInCacheNumber = (java.lang.Number)retObjectMaxItemsInCache;
                 return retObjectMaxItemsInCacheNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxItemsInCache != null ? retObjectMaxItemsInCache.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxItemsInCache != null ? retObjectMaxItemsInCache.getClass() : "null", retObjectMaxItemsInCache_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

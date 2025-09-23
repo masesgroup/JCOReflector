@@ -167,12 +167,13 @@ public class DeploymentProgressChangedEventArgs extends ProgressChangedEventArgs
             retObjectBytesCompleted = classInstance.Get("BytesCompleted");
             return (long)retObjectBytesCompleted;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBytesCompleted_ToString = retObjectBytesCompleted == null ? "null" : retObjectBytesCompleted.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBytesCompletedNumber = (java.lang.Number)retObjectBytesCompleted;
                 return retObjectBytesCompletedNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectBytesCompleted != null ? retObjectBytesCompleted.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectBytesCompleted != null ? retObjectBytesCompleted.getClass() : "null", retObjectBytesCompleted_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -187,12 +188,13 @@ public class DeploymentProgressChangedEventArgs extends ProgressChangedEventArgs
             retObjectBytesTotal = classInstance.Get("BytesTotal");
             return (long)retObjectBytesTotal;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBytesTotal_ToString = retObjectBytesTotal == null ? "null" : retObjectBytesTotal.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBytesTotalNumber = (java.lang.Number)retObjectBytesTotal;
                 return retObjectBytesTotalNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectBytesTotal != null ? retObjectBytesTotal.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectBytesTotal != null ? retObjectBytesTotal.getClass() : "null", retObjectBytesTotal_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

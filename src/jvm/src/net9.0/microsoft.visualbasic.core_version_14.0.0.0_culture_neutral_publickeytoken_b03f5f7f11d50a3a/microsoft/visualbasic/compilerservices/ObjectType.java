@@ -182,12 +182,13 @@ public class ObjectType extends NetObject  {
             retObjectObjTst = classType.Invoke("ObjTst", o1 == null ? null : o1.getJCOInstance(), o2 == null ? null : o2.getJCOInstance(), TextCompare);
             return (int)retObjectObjTst;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectObjTst_ToString = retObjectObjTst == null ? "null" : retObjectObjTst.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectObjTstNumber = (java.lang.Number)retObjectObjTst;
                 return retObjectObjTstNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectObjTst != null ? retObjectObjTst.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectObjTst != null ? retObjectObjTst.getClass() : "null", retObjectObjTst_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -440,12 +440,13 @@ public class Utf8JsonReader extends ValueType  {
             retObjectGetByte = classInstance.Invoke("GetByte");
             return (byte)retObjectGetByte;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetByte_ToString = retObjectGetByte == null ? "null" : retObjectGetByte.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetByteNumber = (java.lang.Number)retObjectGetByte;
                 return retObjectGetByteNumber.byteValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectGetByte != null ? retObjectGetByte.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectGetByte != null ? retObjectGetByte.getClass() : "null", retObjectGetByte_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -483,12 +484,13 @@ public class Utf8JsonReader extends ValueType  {
             retObjectGetDouble = classInstance.Invoke("GetDouble");
             return (double)retObjectGetDouble;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetDouble_ToString = retObjectGetDouble == null ? "null" : retObjectGetDouble.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetDoubleNumber = (java.lang.Number)retObjectGetDouble;
                 return retObjectGetDoubleNumber.doubleValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetDouble != null ? retObjectGetDouble.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetDouble != null ? retObjectGetDouble.getClass() : "null", retObjectGetDouble_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -503,12 +505,13 @@ public class Utf8JsonReader extends ValueType  {
             retObjectGetInt16 = classInstance.Invoke("GetInt16");
             return (short)retObjectGetInt16;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetInt16_ToString = retObjectGetInt16 == null ? "null" : retObjectGetInt16.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetInt16Number = (java.lang.Number)retObjectGetInt16;
                 return retObjectGetInt16Number.shortValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectGetInt16 != null ? retObjectGetInt16.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectGetInt16 != null ? retObjectGetInt16.getClass() : "null", retObjectGetInt16_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -523,12 +526,13 @@ public class Utf8JsonReader extends ValueType  {
             retObjectGetInt32 = classInstance.Invoke("GetInt32");
             return (int)retObjectGetInt32;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetInt32_ToString = retObjectGetInt32 == null ? "null" : retObjectGetInt32.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetInt32Number = (java.lang.Number)retObjectGetInt32;
                 return retObjectGetInt32Number.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetInt32 != null ? retObjectGetInt32.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetInt32 != null ? retObjectGetInt32.getClass() : "null", retObjectGetInt32_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -543,12 +547,13 @@ public class Utf8JsonReader extends ValueType  {
             retObjectGetInt64 = classInstance.Invoke("GetInt64");
             return (long)retObjectGetInt64;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetInt64_ToString = retObjectGetInt64 == null ? "null" : retObjectGetInt64.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectGetInt64Number = (java.lang.Number)retObjectGetInt64;
                 return retObjectGetInt64Number.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetInt64 != null ? retObjectGetInt64.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetInt64 != null ? retObjectGetInt64.getClass() : "null", retObjectGetInt64_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -802,12 +807,13 @@ public class Utf8JsonReader extends ValueType  {
             retObjectCurrentDepth = classInstance.Get("CurrentDepth");
             return (int)retObjectCurrentDepth;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCurrentDepth_ToString = retObjectCurrentDepth == null ? "null" : retObjectCurrentDepth.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectCurrentDepthNumber = (java.lang.Number)retObjectCurrentDepth;
                 return retObjectCurrentDepthNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCurrentDepth != null ? retObjectCurrentDepth.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentDepth != null ? retObjectCurrentDepth.getClass() : "null", retObjectCurrentDepth_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -822,12 +828,13 @@ public class Utf8JsonReader extends ValueType  {
             retObjectBytesConsumed = classInstance.Get("BytesConsumed");
             return (long)retObjectBytesConsumed;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBytesConsumed_ToString = retObjectBytesConsumed == null ? "null" : retObjectBytesConsumed.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectBytesConsumedNumber = (java.lang.Number)retObjectBytesConsumed;
                 return retObjectBytesConsumedNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectBytesConsumed != null ? retObjectBytesConsumed.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectBytesConsumed != null ? retObjectBytesConsumed.getClass() : "null", retObjectBytesConsumed_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -842,12 +849,13 @@ public class Utf8JsonReader extends ValueType  {
             retObjectTokenStartIndex = classInstance.Get("TokenStartIndex");
             return (long)retObjectTokenStartIndex;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTokenStartIndex_ToString = retObjectTokenStartIndex == null ? "null" : retObjectTokenStartIndex.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectTokenStartIndexNumber = (java.lang.Number)retObjectTokenStartIndex;
                 return retObjectTokenStartIndexNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTokenStartIndex != null ? retObjectTokenStartIndex.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectTokenStartIndex != null ? retObjectTokenStartIndex.getClass() : "null", retObjectTokenStartIndex_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

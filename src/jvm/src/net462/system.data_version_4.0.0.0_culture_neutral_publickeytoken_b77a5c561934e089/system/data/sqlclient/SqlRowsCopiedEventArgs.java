@@ -200,12 +200,13 @@ public class SqlRowsCopiedEventArgs extends EventArgs  {
             retObjectRowsCopied = classInstance.Get("RowsCopied");
             return (long)retObjectRowsCopied;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowsCopied_ToString = retObjectRowsCopied == null ? "null" : retObjectRowsCopied.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRowsCopiedNumber = (java.lang.Number)retObjectRowsCopied;
                 return retObjectRowsCopiedNumber.longValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectRowsCopied != null ? retObjectRowsCopied.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectRowsCopied != null ? retObjectRowsCopied.getClass() : "null", retObjectRowsCopied_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

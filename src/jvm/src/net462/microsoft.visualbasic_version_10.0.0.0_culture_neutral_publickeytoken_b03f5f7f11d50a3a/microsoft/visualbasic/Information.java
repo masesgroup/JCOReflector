@@ -262,12 +262,13 @@ public class Information extends NetObject  {
             retObjectErl = classType.Invoke("Erl");
             return (int)retObjectErl;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectErl_ToString = retObjectErl == null ? "null" : retObjectErl.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectErlNumber = (java.lang.Number)retObjectErl;
                 return retObjectErlNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectErl != null ? retObjectErl.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectErl != null ? retObjectErl.getClass() : "null", retObjectErl_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -282,12 +283,13 @@ public class Information extends NetObject  {
             retObjectLBound = classType.Invoke("LBound", Array == null ? null : Array.getJCOInstance(), Rank);
             return (int)retObjectLBound;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLBound_ToString = retObjectLBound == null ? "null" : retObjectLBound.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectLBoundNumber = (java.lang.Number)retObjectLBound;
                 return retObjectLBoundNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLBound != null ? retObjectLBound.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLBound != null ? retObjectLBound.getClass() : "null", retObjectLBound_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -302,12 +304,13 @@ public class Information extends NetObject  {
             retObjectQBColor = classType.Invoke("QBColor", Color);
             return (int)retObjectQBColor;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectQBColor_ToString = retObjectQBColor == null ? "null" : retObjectQBColor.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectQBColorNumber = (java.lang.Number)retObjectQBColor;
                 return retObjectQBColorNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectQBColor != null ? retObjectQBColor.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectQBColor != null ? retObjectQBColor.getClass() : "null", retObjectQBColor_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -322,12 +325,13 @@ public class Information extends NetObject  {
             retObjectRGB = classType.Invoke("RGB", Red, Green, Blue);
             return (int)retObjectRGB;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRGB_ToString = retObjectRGB == null ? "null" : retObjectRGB.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectRGBNumber = (java.lang.Number)retObjectRGB;
                 return retObjectRGBNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRGB != null ? retObjectRGB.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRGB != null ? retObjectRGB.getClass() : "null", retObjectRGB_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -342,12 +346,13 @@ public class Information extends NetObject  {
             retObjectUBound = classType.Invoke("UBound", Array == null ? null : Array.getJCOInstance(), Rank);
             return (int)retObjectUBound;
         } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUBound_ToString = retObjectUBound == null ? "null" : retObjectUBound.toString();
             // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
                 java.lang.Number retObjectUBoundNumber = (java.lang.Number)retObjectUBound;
                 return retObjectUBoundNumber.intValue();
             } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectUBound != null ? retObjectUBound.getClass() : "null"), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUBound != null ? retObjectUBound.getClass() : "null", retObjectUBound_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

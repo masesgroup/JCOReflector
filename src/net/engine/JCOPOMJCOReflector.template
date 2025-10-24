@@ -37,7 +37,7 @@
 	</developers>
 	<properties>
 		<!-- see https://stackoverflow.com/questions/3017695/how-can-i-configure-encoding-in-maven -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>POM_JDK_TARGET</java.version>
 		<maven.compiler.release>${java.version}</maven.compiler.release>
@@ -221,6 +221,16 @@
 					<serverId>ossrh</serverId>
 					<nexusUrl>https://ossrh-staging-api.central.sonatype.com/</nexusUrl>
 					<autoReleaseAfterClose>false</autoReleaseAfterClose>
+				</configuration>
+			</plugin>
+			<plugin>
+				<!-- see https://central.sonatype.org/publish/publish-portal-maven/ -->
+				<groupId>org.sonatype.central</groupId>
+				<artifactId>central-publishing-maven-plugin</artifactId>
+				<version>0.9.0</version>
+				<extensions>true</extensions>
+				<configuration>
+					<publishingServerId>central</publishingServerId>
 				</configuration>
 			</plugin>
 		</plugins>

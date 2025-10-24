@@ -101,11 +101,11 @@ jobs:
           distribution: temurin
           java-version: 11
           cache: 'maven'
-          server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
-          server-username: MAVEN_USERNAME_CHANGE_2025 # env variable for username in deploy
-          server-password: MAVEN_CENTRAL_TOKEN_CHANGE_2025 # env variable for token in deploy
+          server-id: central # Value of the distributionManagement/repository/id field of the pom.xml, old value was ossrh
+          server-username: ${{ secrets.MAVEN_USERNAME_CHANGE_2025 }} # env variable for username in deploy
+          server-password: ${{ secrets.MAVEN_CENTRAL_TOKEN_CHANGE_2025 }} # env variable for token in deploy
           gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }} # Value of the GPG private key to import
-          gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
+          gpg-passphrase: ${{ secrets.MAVEN_GPG_PASSPHRASE }} # env variable for GPG private key passphrase
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash

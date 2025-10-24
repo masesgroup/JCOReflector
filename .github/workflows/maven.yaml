@@ -8,7 +8,9 @@ on:
   push:
     # only trigger on branches, not on tags
     branches: 'master'
-
+  workflow_dispatch:
+    inputs:
+    
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   check:

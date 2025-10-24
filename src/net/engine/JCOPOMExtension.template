@@ -200,7 +200,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
+			<!--plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
 				<version>1.6.7</version>
@@ -210,7 +210,7 @@
 					<nexusUrl>https://ossrh-staging-api.central.sonatype.com/</nexusUrl>
 					<autoReleaseAfterClose>false</autoReleaseAfterClose>
 				</configuration>
-			</plugin>
+			</plugin-->
 			<plugin>
 				<!-- see https://central.sonatype.org/publish/publish-portal-maven/ -->
 				<groupId>org.sonatype.central</groupId>

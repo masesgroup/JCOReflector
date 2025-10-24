@@ -67,6 +67,7 @@ jobs:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME_CHANGE_2025 }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN_CHANGE_2025 }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+          JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8 # see https://stackoverflow.com/questions/3017695/how-can-i-configure-encoding-in-maven
 
   build_release:
     needs: [build_maven_and_deploy]

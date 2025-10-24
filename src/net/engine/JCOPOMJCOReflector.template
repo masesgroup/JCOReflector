@@ -36,8 +36,13 @@
 		</developer>
 	</developers>
 	<properties>
-		<maven.compiler.source>POM_JDK_TARGET</maven.compiler.source>
-		<maven.compiler.target>POM_JDK_TARGET</maven.compiler.target>
+		<!-- see https://stackoverflow.com/questions/3017695/how-can-i-configure-encoding-in-maven -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>POM_JDK_TARGET</java.version>
+		<maven.compiler.release>${java.version}</maven.compiler.release>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<binFolderName>bin</binFolderName>
 		<runtimeFolderName>POM_RUNTIME_PLACEHOLDER</runtimeFolderName>
 		<rootDir>${basedir}/../../../</rootDir>
@@ -111,12 +116,15 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
+				<version>3.14.1</version>
 				<configuration>
 					<compilerArgs>
 						<arg>-cp</arg>
-						<arg>${originalClassPath};${jcobridgepath}</arg>
+						<arg>${originalClassPath}${path.separator}${jcobridgepath}</arg>
 					</compilerArgs>
+					<release>${maven.compiler.release}</release>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
 				</configuration>
 			</plugin>
 			<plugin>
